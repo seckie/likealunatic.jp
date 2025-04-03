@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Accessibility &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/accessibility/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:54 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Accessibility &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>パンくずリストのマークアップ考察</title>
+		<link>/2007/03/24_locus_markup</link>
+					<comments>/2007/03/24_locus_markup#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Fri, 23 Mar 2007 14:44:52 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Accessibility]]></category>
+		<category><![CDATA[XHTML]]></category>
+		<guid isPermaLink="false">/wptest/2007/03/%e3%83%91%e3%83%b3%e3%81%8f%e3%81%9a%e3%83%aa%e3%82%b9%e3%83%88%e3%81%ae%e3%83%9e%e3%83%bc%e3%82%af%e3%82%a2%e3%83%83%e3%83%97%e8%80%83%e5%af%9f.php</guid>
+
+					<description><![CDATA[とある案件でパンくずリストをどうやってマークアップするのが最適解なのか悩んでいました。まずどんなブロック要素で囲むか？そして <code>&#62;</code> 部分はどうするか？<code>&#38;gt;</code> というのが真っ先に思いつきますが、これはスマートとは言えないのでは・・・などなど。 <a href="/2007/03/24_locus_markup">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>とある案件でパンくずリストをどうやってマークアップするのが最適解なのか悩んでいました。例えば、以下のようなヴィジュアルデザインのパンくずリストをマークアップするとします。</p>
+
+<p class="example"><img decoding="async" src="/img/2007/03/23_locus_pic.gif" alt="とあるパンくずリストのヴィジュアルデザイン例" width="267" height="20" /></p>
+
+<p>まずどんなブロック要素で囲むか？そして <code>&gt;</code> 部分はどうするか？<code>&amp;gt;</code> というのが真っ先に思いつきますが、これはスマートとは言えないのでは・・・などなど。そこでGoogleで情報検索したところ、次の記事を見つけました。</p>
+
+<p class="presentation"><a href="http://necoze.jugem.cc/?eid=211">日々のネコゼログログ: アクセシブルな「パンくずリスト」</a></p>
+
+<p>こちらの記事によると、<a href="http://www.infoaxia.com/">インフォアクシア</a>の植木さんのインタビューからの抜粋があります。<a href="http://blog.mag2.com/m/log/0000157597/105548485.html">そのインタビューの様子はこちら</a>。アクセシビリティを言い出すと・・・結局はこの人にたどり着くようです。頭が下がります。</p>
+
+<blockquote title="まぐまぐ！『ウェブアクセシビリティ実例見聞録』バックナンバー" cite="http://blog.mag2.com/m/log/0000157597/105548485.html">あとは、試しにやってみているのですが、<em>パンくずリストの間に挟む矢印を画像にして、「の中の」という代替テキストを入れてあります。</em>こうすると例えば「ホームの中のニュース」と読み上げられるので、ユーザーテストでもサイトの階層が分かりやすいとの声をいただいています。
+
+・・・中略・・・
+
+いわゆるパンくずリストは、ユーザーテストをやっていると、画面を見ているユーザーにも意外とその意味が分からないという人が多いんです。確かに、ヘッダーにいきなり「ホーム&gt;&gt;ニュース&gt;&gt;過去記事」なんて書いてあっても初めて見た人はなんだろう？と思いますよね。
+
+<em>そこで、少しでも分かりやすくするために一番最初に「現在位置」と入れてみました。</em></blockquote>
+
+<p>なるほど確かに、インフォアクシアのソースは既にそうなっていました・・・ってそれは本人ですから当たり前ですよね。インフォアクシア式のやり方の他に、私は以下のマークアップを思いつきました。</p>
+
+<pre><code>&lt;dl id="locus"&gt;
+&lt;dt&gt;現在位置:&lt;/dt&gt;
+&lt;dd&gt;ホーム &lt;img src="/common/img/icon_arrow.gif" alt="の中の" /&gt;&lt;/dd&gt;
+&lt;dd&gt;キャンペーン &lt;img src="/common/img/icon_arrow.gif" alt="の中の" /&gt;&lt;/dd&gt;
+&lt;dd&gt;おにぎり100円セール&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+<p>dl要素を使用したやり方です。「現在位置」をdt要素に指定しています。ただ、ヴィジュアルデザインの都合上、「現在位置」表示を入れられない場合、どうするか。</p>
+
+<p class="memo">（私の現在の仕事のように、既に決定されているヴィジュアルデザインをコーディングするという作業の場合、デザイナーと事前に打ち合わせておかない限り、ヴィジュアルデザインに「現在位置」表示が入っていることはまずないでしょう。）</p>
+
+<p>こういった場合、dt要素に <code>position:absolute</code> を指定するなどして、画面外に飛ばしてしまいます。通常のブラウザでは見ることができなくとも、音声ブラウザでは読み上げられるはずです。</p>
+
+<p>ただ、不覚にも私は音声ブラウザを利用したことがないので、dl要素を使用したマークアップと、インフォアクシ式のp要素を使用したマークアップが、それぞれどのように読み上げられるかがわかりません。</p>
+
+<p>また、パンくずリストに付ける適切な <abbr title="identification">id</abbr> は何か、こちらもリサーチしてみました。インフォアクシアでは <code>id="breadcrumbs"</code> で「パンくず」をそのまま英語化したものです。また、<a href="http://css-happylife.com/">CSS HappyLife</a>さんの<cite><a href="http://css-happylife.com/log/memo/000100.shtml">こちらの記事（もう、class名やid名で悩まないんだからっ！！）</a></cite>では以下のようなご紹介があります。</p>
+
+<blockquote cite="http://css-happylife.com/log/memo/000100.shtml"><dl class="squarelist"> <dt>パンくずっぽいの</dt> <dd>topicpath</dd> <dd>topic-path</dd> <dd>topicPath</dd> <dd>pan</dd> <dd>pankuzu</dd> </dl></blockquote>
+
+<p>・・・がどれもいまいちピンとこなかったので、その筋のサイトをいくつか続けて見て行ったところ、ありました。カッコイイのが。<a href="http://www.acc04.jp/">アックゼロヨン</a>の <code>id="locus"</code> です。</p>
+
+<p><cite><a href="http://dictionary.www.infoseek.co.jp/">Infoseek マルチ辞書</a></cite>で「locus」をひいてみると <q cite="http://dictionary.www.infoseek.co.jp/">場所, 所在地; 【遺伝】遺伝子座; 【数】軌跡.</q> とあります。これだ！と思いました。</p>
+
+<p>パンくずリストは大概がサイトのメインコンテンツより上にあるものであるだけに、テキトーにマークアップしてしまうのはアクセシビリティの観点から避けたいところです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2007/03/24_locus_markup/feed</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

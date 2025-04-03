@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Delicious &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/delicious/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:54 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Delicious &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Recommended Tags について</title>
+		<link>/2007/04/16_delicious</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Mon, 16 Apr 2007 05:49:45 +0000</pubDate>
+				<category><![CDATA[Miscellany]]></category>
+		<category><![CDATA[Delicious]]></category>
+		<guid isPermaLink="false">/wptest/2007/04/recommended-tags-%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6.php</guid>
+
+					<description><![CDATA[Recommended Tags に「joke」と表示されてしまうのは、いくらなんでもあんまりだと思いました・・・。 <a href="/2007/04/16_delicious">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><img fetchpriority="high" decoding="async" alt="デリシャスのタグ付け画面のスクリーンショット" src="/img/2007/04/11_w2c.gif" width="350" height="300" /><br />
+Recommended Tags に「joke」と表示されてしまうのは、いくらなんでもあんまりだと思いました・・・。
+</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

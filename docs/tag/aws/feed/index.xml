@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>AWS &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/aws/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:11:38 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>AWS &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>さくらのVPSから Lightsail へ引っ越した</title>
+		<link>/2021/01/lightsail</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Sun, 03 Jan 2021 15:18:52 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[AWS]]></category>
+		<guid isPermaLink="false">/?p=1462</guid>
+
+					<description><![CDATA[さくらのVPSを使ってこのサイトをホスティングしてきた のだが、この度 AWS の Lightsail に引っ越した。 引っ越しした最大の理由は、契約して以降長らく使いっぱなしのマシンの OS が CentOS 6 だったから。 CentOS 6 は11月30日でサポートが終了 しており、そのまま運用するわけにもいかないぞ…と目下の課題だった。 それに、さくらのVPSを使っていたことには積極的な理由はなく惰性でそうしていただけだ。2020年12月時点でこのサイトのホスティングと、likealunatic.jp ドメインに紐づいたメールアドレスを Gmail に転送することにしか利用していなかった。メールは現在 Gmail のアドレスしか使っていないので、独自ドメインのメールアドレスは捨てることにした。引越し先では WordPress サイトのホスティングだけできればよい。 移転先として Lightsail を選んだのは、現在の仕事で AWS を利用しているため、少しでもサービスに触る機会を増やしたかったから。まあ、業務で Lightsail は使わないわけだけど…。それに調べてみると Lightsail の方がさくらのVPSよりコストが安いし、スペックも見劣りすることもなかったので。 年末年始の宿題として取り組むつもりだったのだが、思いのほか簡単に済んでしまって拍子抜けだった。 ほぼ こちらの記事（［Lightsail］さくらインターネットからAWS LightsailにWordPressを最速で移行する – スモールスタート編 &#124; ma-ya&#8217;s CREATE / WEB DESIGN） で紹介されている手順で作業は完了した。とても有用な記事をありがとうございます。 つまづいたポイントとしては HTTPS 化の作業で sudo /opt/bitnami/bncert-tool した際に、 Warning: The domain 'mydomain.com' resolves to a different IP address than the one detected for this machine, which is 'aa.bb.ccc.dddd'. Please fix its DNS entries or remove it. For more info see: https://docs.bitnami.com/general/faq/configuration/configure-custom-domain/ というようなメッセージが表示され、それ以上設定が進められなくなったこと。 これはドメインのゾーン情報に、旧サーバーを指すAレコードが残っているからだった。さくらインターネット会員メニューのドメイン設定画面からAレコードを削除したら解決。 &#8230; というわけで2021年も始まりましたが、こちらはのらりくらりとやっていこうと思っています。 改めまして、明けましておめでとうございます。本年もよろしくお願いいたします。 References ［Lightsail］さくらインターネットからAWS LightsailにWordPressを最速で移行する – スモールスタート編 &#124; ma-ya&#8217;s CREATE / WEB DESIGN SFTP を使用して Amazon Lightsail の Linux または UNIX インスタンスに接続する &#8230; <a href="/2021/01/lightsail">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/2015/07/server-moving">さくらのVPSを使ってこのサイトをホスティングしてきた</a> のだが、この度 AWS の <a href="https://aws.amazon.com/jp/lightsail/">Lightsail</a> に引っ越した。</p>
+
+<p>引っ越しした最大の理由は、契約して以降長らく使いっぱなしのマシンの OS が CentOS 6 だったから。 <a href="https://cybersecurity-tokyo.jp/security/cyberthreat/259/">CentOS 6 は11月30日でサポートが終了</a> しており、そのまま運用するわけにもいかないぞ…と目下の課題だった。<br />
+それに、さくらのVPSを使っていたことには積極的な理由はなく惰性でそうしていただけだ。2020年12月時点でこのサイトのホスティングと、likealunatic.jp ドメインに紐づいたメールアドレスを Gmail に転送することにしか利用していなかった。メールは現在 Gmail のアドレスしか使っていないので、独自ドメインのメールアドレスは捨てることにした。引越し先では WordPress サイトのホスティングだけできればよい。</p>
+
+<p>移転先として Lightsail を選んだのは、現在の仕事で AWS を利用しているため、少しでもサービスに触る機会を増やしたかったから。まあ、業務で Lightsail は使わないわけだけど…。それに調べてみると Lightsail の方がさくらのVPSよりコストが安いし、スペックも見劣りすることもなかったので。</p>
+
+<p>年末年始の宿題として取り組むつもりだったのだが、思いのほか簡単に済んでしまって拍子抜けだった。</p>
+
+<p>ほぼ <a href="https://myscreate.com/migration-sakura-from-aws/">こちらの記事（［Lightsail］さくらインターネットからAWS LightsailにWordPressを最速で移行する – スモールスタート編 | ma-ya&#8217;s CREATE / WEB DESIGN）</a> で紹介されている手順で作業は完了した。とても有用な記事をありがとうございます。</p>
+
+<p>つまづいたポイントとしては HTTPS 化の作業で <code>sudo /opt/bitnami/bncert-tool</code> した際に、</p>
+
+<pre><code>Warning: The domain 'mydomain.com' resolves to a different IP address than the
+one detected for this machine, which is 'aa.bb.ccc.dddd'. Please fix its DNS
+entries or remove it. For more info see:
+https://docs.bitnami.com/general/faq/configuration/configure-custom-domain/
+</code></pre>
+
+<p>というようなメッセージが表示され、それ以上設定が進められなくなったこと。
+これはドメインのゾーン情報に、旧サーバーを指すAレコードが残っているからだった。さくらインターネット会員メニューのドメイン設定画面からAレコードを削除したら解決。</p>
+
+<p>&#8230;</p>
+
+<p>というわけで2021年も始まりましたが、こちらはのらりくらりとやっていこうと思っています。
+改めまして、明けましておめでとうございます。本年もよろしくお願いいたします。</p>
+
+<h2>References</h2>
+
+<ul>
+<li><a href="https://myscreate.com/migration-sakura-from-aws/">［Lightsail］さくらインターネットからAWS LightsailにWordPressを最速で移行する – スモールスタート編 | ma-ya&#8217;s CREATE / WEB DESIGN</a></li>
+<li><a href="https://lightsail.aws.amazon.com/ls/docs/ja_jp/articles/amazon-lightsail-connecting-to-linux-unix-instance-using-sftp">SFTP を使用して Amazon Lightsail の Linux または UNIX インスタンスに接続する &#124; Lightsail ドキュメント</a></li>
+<li><a href="https://help.sakura.ad.jp/206207381/">ネームサーバ利用申請 – さくらのサポート情報</a></li>
+<li><a href="https://oji-cloud.net/2018/06/10/post-43/">WordPressサイトアドレスをhttpsに変更する（Really Simple SSL） &#124; Oji&#45;Cloud</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

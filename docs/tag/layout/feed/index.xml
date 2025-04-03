@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Layout &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/layout/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:54 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Layout &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>段組レイアウトのお約束：段組ボックスの底辺を揃える（揃っているように見せる）</title>
+		<link>/2007/04/04_column_layout</link>
+					<comments>/2007/04/04_column_layout#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 03 Apr 2007 13:38:01 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[Layout]]></category>
+		<category><![CDATA[XHTML]]></category>
+		<guid isPermaLink="false">/wptest/2007/04/%e6%ae%b5%e7%b5%84%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%81%ae%e3%81%8a%e7%b4%84%e6%9d%9f%ef%bc%9a%e6%ae%b5%e7%b5%84%e3%83%9c%e3%83%83%e3%82%af%e3%82%b9%e3%81%ae%e5%ba%95%e8%be%ba%e3%82%92.php</guid>
+
+					<description><![CDATA[使い古されたネタで申し訳ないのですが、自分が復習するという意味も含め、CSSで段組レイアウトをする際のお約束をまとめてみることにしました。まず第一回は「段組ボックスの底辺を揃える（揃っているように見せる）」です。 <a href="/2007/04/04_column_layout">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>使い古されたネタで申し訳ないのですが、自分が復習するという意味も含め、<abbr title="Cascading Style Sheet">CSS</abbr>で段組レイアウトをする際のお約束をまとめてみることにしました。まず第一回は「段組ボックスの底辺を揃える（揃っているように見せる）」です。</p>
+
+<p>以下の画像のような見た目の段組を、実現することを目標とします。</p>
+
+<p class="example"><img fetchpriority="high" decoding="async" src="/img/2007/04/04_img01.gif" alt="目標とする段組レイアウト図" width="354" height="250" /></p>
+
+<p>普通に考えると、float を使って横に並べたボックス各々に border を適用したくなります。が、このやり方ですと各ボックスの内容量が異なる場合、各々の高さが異なってしまい、ボックスの底辺が揃わなくなります。このように。</p>
+
+<p class="example"><img decoding="async" src="/img/2007/04/04_img02.gif" alt="各段組ボックスの底辺が揃わないの図" width="354" height="250" /></p>
+
+<p>そこで、border を使わずに目標の見た目を実現します。</p>
+
+<p class="memo">以下に示す方法は、例として2カラムの段組を取り上げていますが、3カラム以上の段組でも同じように利用することができます。ただし、横幅固定デザインでのみ有効です。リキッドレイアウトやエラスティックレイアウトでは手法を変えないと利用できません。</p>
+
+<p>まず以下のような画像を作り、スライスを切ります。</p>
+
+<p class="example"><img decoding="async" src="/img/2007/04/04_img03.gif" alt="作成する画像と、それにスライスを切った図" width="354" height="250" /></p>
+
+<p>緑色の部分がスライスと思ってください。段組中段の部分を実現するためのスライスと、段組底辺を実現するためのスライスです。わかりやすいように高さ10ピクセル程度のスライスにしていますが、実際は中段部分は高さ1ピクセル、底辺は線の太さと同じで大丈夫です。</p>
+
+<p>で、次のようなソースを書きます。あくまで一例です。</p>
+
+<div class="section">
+<h3><abbr title="Extensive HyperText Markup Language">XHTML</abbr>のコード</h3>
+<pre><code>&lt;div id="container"&gt;
+&lt;div class="section" id="columnAlpha"&gt;
+&lt;h2&gt;コラムA&lt;/h2&gt;
+&lt;p&gt;サンプルテキストサンプルテキストサンプルテキスト...&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="columnBeta"&gt;
+&lt;h2>コラムB&lt;/h2&gt;
+&lt;p&gt;サンプルテキストサンプルテキストサンプルテキスト...&lt;/p&gt;
+&lt;/div&gt;
+&lt;p id="containerBtm"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="section">
+<h3><abbr title="Cascading Style Sheet">CSS</abbr>のコード</h3>
+<pre><code>div#container {background:url(中段部分の画像.gif) repeat-y;}
+div#columnAlpha {
+float: left;
+width: 162px;
+border-top: 2px solid #339;
+margin-right: 10px;
+}
+div#columnBeta {
+float: left;
+width: 162px;
+border-top: 2px solid #339;
+}
+p#containerBtm {
+clear: both;
+height: 2px;
+background: url(底辺部分の画像.gif) no-repeat bottom;
+font-size: 2px;
+line-height: 2px;
+}</code></pre>
+</div>
+
+<p>段組しているボックスには上辺のみ border を指定し、親のコンテナボックスに対して段組中段部分の画像をY軸リピートで指定します。そして、段組ボックスの直後に、底辺となる p#containerBtm を挿入し clear:both と、底辺部分の画像を背景に指定します。height と font-size、line-height の指定は、このボックスを底辺画像の高さピッタリにするためのものです。</p>
+
+<p>p#containerBtm にあたるものは、clear ができてかつ底辺画像が表示できれば、なんでもいいです。底辺画像は背景ではなくて、img 要素で埋め込んでも構いませんし。p#containerBtm 自体入れたくない方は、コンテナdivをもうひとつ追加して、そちらに底辺画像を背景で指定 ＆ clearfix を使う、というやり方でもいいです。また、きちんと内容を持っているフッター的なボックスを持ってきてもいいでしょう。</p>
+
+<p>以上のような方法で底辺を「揃っているように見せる」ことができます。（実際は揃ってないです）</p>
+
+<div class="memo">
+<p>JavaScriptを使って強引に揃えちゃったサイトを先日、<a href="http://www.projectdd.jp/">はやしさん</a>に教えていただきました。</p>
+<p class="ref"><a href="http://www.oks-delica.jp/menu/index.php?action=list&amp;date=2007-3&amp;category=school">オーケーズデリカ株式会社: お弁当</a></p>
+<p>お弁当一覧のところです。なんとまあ・・・</p>
+</div>
+
+<p>なお、クロスブラウザな表示を実現する際に border は障害となる場合がありますので注意が必要です。この点は <cite><a href="http://adp.daa.jp/archives/000571.html">ADP: ピクセル単位で合わせるところではborderを使わない（IE7でも！）</a></cite> においてよくまとめられています。</p>
+
+<p>段組ボックスでは上辺のみを表現し、親コンテナボックスで中段部分を表現するのがミソですね。この点を抑えて工夫すれば、リキッドレイアウトやエラスティックレイアウトにおいても実現する方法はありそうです。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2007/04/04_column_layout/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>エラスティックレイアウトを採用してみました</title>
+		<link>/2007/03/elastic_layout_01</link>
+					<comments>/2007/03/elastic_layout_01#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 21 Mar 2007 10:44:13 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[Layout]]></category>
+		<category><![CDATA[XHTML]]></category>
+		<guid isPermaLink="false">/wptest/2007/03/%e3%82%a8%e3%83%a9%e3%82%b9%e3%83%86%e3%82%a3%e3%83%83%e3%82%af%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%82%92%e6%8e%a1%e7%94%a8%e3%81%97%e3%81%a6%e3%81%bf%e3%81%be%e3%81%97%e3%81%9f.php</guid>
+
+					<description><![CDATA[当サイトのレイアウトにはエラスティックレイアウトという手法を使いました。コンテナ要素の幅をem単位で指定しています。 <a href="/2007/03/elastic_layout_01">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>当サイトのレイアウトにはエラスティックレイアウトという手法を使いました。コンテナ要素の幅をem単位で指定しています。該当部分の記述は以下の通り。</p>
+
+<pre><code>div#container {
+width: 90%;
+max-width: 60em;
+min-width: 46em;
+margin: 0 auto;
+}</code></pre>
+
+<p>コンテンツ全体を囲む div#container に対して max-width と min-width をem単位で指定しています。そうすることで、ブラウザで文字サイズを変更すると div#container の幅が変わるようになります。なお、 max-width/min-width プロパティに対応していない<abbr title="Internet Explorer">IE</abbr>6以前などのブラウザでは単に width:90% になるだけです。</p>
+
+<p>また、エラスティックレイアウトで2カラムを実現するためにネガティブマージンをレイアウトに使っています。ネガティブマージンというのは文字通り、マイナス値を指定した margin プロパティのこと。</p>
+
+<pre><code>div#main {
+float: left;
+width: 100%;
+margin: 0 -16em 20px 0;
+}
+div#sidebar {
+float: right;
+width: 15em;
+margin-bottom: 30px;
+}</code></pre>
+
+<p>div#sidebar の幅が15emで、残りの領域は div#main という割り当てとなっています。div#sidebar の width:15em に対して div#main の右 margin:16em 。差分の1emは間のマージン。これだけだと、div#main の右端が div#sidebar に潜ってしまうため、div#main の中身のブロック要素に右 margin を設定します。</p>
+
+<pre><code>div.entry {
+margin: 0 16em 30px 0;
+}
+</code></pre>
+
+<p>これで完成。</p>
+
+<dl class="disclist"> <dt>なお、このレイアウトには以下のサイトを参考にさせていただきました。</dt> <dd><a href="http://2xup.org/log/2006/12/20-0212">2xup.org: 一行あたりの文字数を制限する elastic layout （エラステックレイアウト）</a></dd> <dd><a href="http://adp.daa.jp/archives/000399.html">Alternative Design Project: デザインテンプレート1110とネガティブマージン</a></dd> </dl>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2007/03/elastic_layout_01/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

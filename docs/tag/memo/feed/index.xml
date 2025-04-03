@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Memo &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/memo/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Memo &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>[memo]Git Bash内でコピペ</title>
+		<link>/2010/06/gitbashcopypaste</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Mon, 07 Jun 2010 10:41:05 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[git]]></category>
+		<category><![CDATA[Memo]]></category>
+		<guid isPermaLink="false">/?p=687</guid>
+
+					<description><![CDATA[タイトルバーを右クリックして出るコンテキストメニューで「編集」から範囲選択し、コピーができる。 <a href="/2010/06/gitbashcopypaste">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<blockquote cite="http://magpad.jugem.jp/?eid=82"><p>Git Bashのタイトルバーを右クリックすると、編集や範囲指定のメニューが出てくる。</p></blockquote>
+
+<p class="cite"><a href="http://magpad.jugem.jp/?eid=82">Git Bash内でコピペをする方法 | public static void main</a></p>
+
+<p>助かりました！<br />
+データ納品型の案件だと、ファイルの修正箇所を差分として伝えなくてはならないことが多々あります。そういう時にコミットのログやdiffを差分として納品すりゃ楽チンですねー。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[memo]MTEntriesタグのlastnモディファイア</title>
+		<link>/2009/05/13_mtentries_lastn</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 13 May 2009 04:12:15 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Memo]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<guid isPermaLink="false">/wptest/2009/05/memomtentries%e3%82%bf%e3%82%b0%e3%81%aelastn%e3%83%a2%e3%83%87%e3%82%a3%e3%83%95%e3%82%a1%e3%82%a4%e3%82%a2.php</guid>
+
+					<description><![CDATA[lastn=&#8221;N&#8221; 出力するブログ記事の件数を制限します。lastn モディファイアは、つねに降順 (新しいものから古いものに並ぶ) で処理します。 &#60;mt:Entries lastn=&#34;5&#34; sort_by=&#34;title&#34; sort_order=&#34;ascend&#34;&#62; サンプルのように、たとえ sort_by モディファイアでタイトル順、かつ、sort_order モディファイアで ascend (昇順) を指定しても、出力する結果は、最新 5 件のブログ記事です。 これは、recently_commented_on モディファイアを同時に設定しているときも同じです。これらは lastn モディファイアと同時に使用しても効果はありません。 MTEntries &#124; テンプレートタグリファレンス ということだそうで、sort_by・sort_order・recently_commented_onモディファイアはlastnモディファイアと同時に指定しても効果がないそうです。これらのモディファイアを使う場合はlastnモディファイアではなくlimitモディファイアと一緒に使いましょう。]]></description>
+										<content:encoded><![CDATA[<blockquote cite="http://www.movabletype.jp/documentation/appendices/tags/entries.html">
+<h3>lastn=&#8221;N&#8221;</h3>
+<p>出力するブログ記事の件数を制限します。lastn モディファイアは、つねに降順 (新しいものから古いものに並ぶ) で処理します。</p>
+<p><code>&lt;mt:Entries lastn=&quot;5&quot; sort_by=&quot;title&quot; sort_order=&quot;ascend&quot;&gt;</code></p>
+<p>サンプルのように、たとえ sort_by モディファイアでタイトル順、かつ、sort_order モディファイアで ascend (昇順) を指定しても、出力する結果は、最新 5 件のブログ記事です。</p>
+<p>これは、recently_commented_on モディファイアを同時に設定しているときも同じです。これらは lastn モディファイアと同時に使用しても効果はありません。</p>
+</blockquote>
+
+<p class="cite"><a href="http://www.movabletype.jp/documentation/appendices/tags/entries.html">MTEntries | テンプレートタグリファレンス</a></p>
+
+<p>ということだそうで、<code>sort_by</code>・<code>sort_order</code>・<code>recently_commented_on</code>モディファイアは<code>lastn</code>モディファイアと同時に指定しても効果がないそうです。これらのモディファイアを使う場合は<code>lastn</code>モディファイアではなく<code>limit</code>モディファイアと一緒に使いましょう。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[memo]auケータイではプログレッシブjpgはNG</title>
+		<link>/2009/02/memoaujpgng</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 12 Feb 2009 02:30:02 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Memo]]></category>
+		<category><![CDATA[Mobile]]></category>
+		<guid isPermaLink="false">/wptest/2009/02/memoau%e3%82%b1%e3%83%bc%e3%82%bf%e3%82%a4%e3%81%a7%e3%81%af%e3%83%97%e3%83%ad%e3%82%b0%e3%83%ac%e3%83%83%e3%82%b7%e3%83%96jpg%e3%81%afng.php</guid>
+
+					<description><![CDATA[一部のauケータイではプログレッシブJPGが表示できないようです。 <a href="/2009/02/memoaujpgng">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>一部のauケータイではプログレッシブJPGが表示できないようです。書き出す際に注意ですね。</p>
+
+<p>一昔前は<a href="http://support.adobe.co.jp/faq/faq/qadoc.sv?228660+002">FlashでもプログレッシブJPGの取扱いに問題があった</a>ようです。同じJPGでも結構違うものなのかなぁ。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[memo]Flashより全面に、HTMLの要素を表示したい場合の指定</title>
+		<link>/2008/11/11_memo_flashobjecthtml</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 11 Nov 2008 02:46:02 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[Memo]]></category>
+		<guid isPermaLink="false">/wptest/2008/11/memoflash%e3%82%88%e3%82%8a%e5%85%a8%e9%9d%a2%e3%81%ab%e3%80%81html%e3%81%ae%e8%a6%81%e7%b4%a0%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%97%e3%81%9f%e3%81%84%e5%a0%b4%e5%90%88%e3%81%ae%e6%8c%87%e5%ae%9a.php</guid>
+
+					<description><![CDATA[Flash呼び出しのobjectタグに &#60;param name=&#34;wmode&#34; value=&#34;transparent&#34; /&#62; を加える。あとはz-indexプロパティの調整など。]]></description>
+										<content:encoded><![CDATA[<p>Flash呼び出しのobjectタグに</p>
+
+<pre><code>&lt;param name=&quot;wmode&quot; value=&quot;transparent&quot; /&gt;</code></pre>
+
+<p>を加える。あとはz-indexプロパティの調整など。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

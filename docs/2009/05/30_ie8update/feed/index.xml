@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: IE8の自動更新はまだ始まっていない・・・のか	</title>
+	<atom:link href="/2009/05/30_ie8update/feed" rel="self" type="application/rss+xml" />
+	<link>/2009/05/30_ie8update</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:18:24 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By:  Pedestal Table		</title>
+		<link>/2009/05/30_ie8update/comment-page-1#comment-326</link>
+
+		<dc:creator><![CDATA[ Pedestal Table]]></dc:creator>
+		<pubDate>Mon, 16 Aug 2010 04:49:56 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2009/05/ie8%e3%81%ae%e8%87%aa%e5%8b%95%e6%9b%b4%e6%96%b0%e3%81%af%e3%81%be%e3%81%a0%e5%a7%8b%e3%81%be%e3%81%a3%e3%81%a6%e3%81%84%e3%81%aa%e3%81%84%e3%83%bb%e3%83%bb%e3%83%bb%e3%81%ae%e3%81%8b.php#comment-326</guid>
+
+					<description><![CDATA[&lt;p&gt;IE8 has some bugs too although it is more stable than IE7 and IE6~`;&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>IE8 has some bugs too although it is more stable than IE7 and IE6~`;</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

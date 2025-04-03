@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Perl | Like@Lunatic</title>
+<meta name="description" content="Naoki Sekiguchi&#039;s personal Web site.">
+<meta name="keywords" content="Like@Lunatic">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Perl | Like@Lunatic">
+<meta property="og:description" content="Naoki Sekiguchi&#039;s personal Web site.">
+<meta property="og:url" content="/">
+<meta property="og:image" content="/wp-content/themes/likealunatic30/assets/og.png">
+<link rel="stylesheet" href="/wp-content/themes/likealunatic30/libs/bootstrap.min.css">
+<link rel="stylesheet" href="/wp-content/themes/likealunatic30/style.css">
+<link rel="pingback" href="/xmlrpc.php">
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-1534567-1','auto');ga('send','pageview');</script>
+<script>window.STYLESHEET_DIRECTORY='/wp-content/themes/likealunatic30';</script>
+<script src="/wp-content/themes/likealunatic30/libs/jquery.min.js"></script>
+<script src="/wp-content/themes/likealunatic30/libs/jquery.masonry.min.js"></script>
+<script src="/wp-content/themes/likealunatic30/libs/bootstrap.min.js"></script>
+<script src="/wp-content/themes/likealunatic30/script.js"></script>
+<meta name="robots" content="max-image-preview:large">
+<link rel="alternate" type="application/rss+xml" title="Like@Lunatic &raquo; Feed" href="/feed">
+<link rel="alternate" type="application/rss+xml" title="Like@Lunatic &raquo; Comments Feed" href="/comments/feed">
+<link rel="alternate" type="application/rss+xml" title="Like@Lunatic &raquo; Perl Tag Feed" href="/tag/perl/feed">
+<script type="text/javascript">//<![CDATA[
+window._wpemojiSettings={"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.5"}};!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🫱🏻‍🫲🏿","🫱🏻​🫲🏿")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+//]]></script>
+<style id="wp-emoji-styles-inline-css" type="text/css">img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-.1em!important;background:none!important;padding:0!important}</style>
+<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.4.5" type="text/css" media="all">
+<style id="classic-theme-styles-inline-css" type="text/css">.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black:#000;--wp--preset--color--cyan-bluish-gray:#abb8c3;--wp--preset--color--white:#fff;--wp--preset--color--pale-pink:#f78da7;--wp--preset--color--vivid-red:#cf2e2e;--wp--preset--color--luminous-vivid-orange:#ff6900;--wp--preset--color--luminous-vivid-amber:#fcb900;--wp--preset--color--light-green-cyan:#7bdcb5;--wp--preset--color--vivid-green-cyan:#00d084;--wp--preset--color--pale-cyan-blue:#8ed1fc;--wp--preset--color--vivid-cyan-blue:#0693e3;--wp--preset--color--vivid-purple:#9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple:linear-gradient(135deg,rgba(6,147,227,1) 0%,#9b51e0 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan:linear-gradient(135deg,#7adcb4 0%,#00d082 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange:linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red:linear-gradient(135deg,rgba(255,105,0,1) 0%,#cf2e2e 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray:linear-gradient(135deg,#eee 0%,#a9b8c3 100%);--wp--preset--gradient--cool-to-warm-spectrum:linear-gradient(135deg,#4aeadc 0%,#9778d1 20%,#cf2aba 40%,#ee2c82 60%,#fb6962 80%,#fef84c 100%);--wp--preset--gradient--blush-light-purple:linear-gradient(135deg,#ffceec 0%,#9896f0 100%);--wp--preset--gradient--blush-bordeaux:linear-gradient(135deg,#fecda5 0%,#fe2d2d 50%,#6b003e 100%);--wp--preset--gradient--luminous-dusk:linear-gradient(135deg,#ffcb70 0%,#c751c0 50%,#4158d0 100%);--wp--preset--gradient--pale-ocean:linear-gradient(135deg,#fff5cb 0%,#b6e3d4 50%,#33a7b5 100%);--wp--preset--gradient--electric-grass:linear-gradient(135deg,#caf880 0%,#71ce7e 100%);--wp--preset--gradient--midnight:linear-gradient(135deg,#020381 0%,#2874fc 100%);--wp--preset--font-size--small:13px;--wp--preset--font-size--medium:20px;--wp--preset--font-size--large:36px;--wp--preset--font-size--x-large:42px;--wp--preset--spacing--20:.44rem;--wp--preset--spacing--30:.67rem;--wp--preset--spacing--40:1rem;--wp--preset--spacing--50:1.5rem;--wp--preset--spacing--60:2.25rem;--wp--preset--spacing--70:3.38rem;--wp--preset--spacing--80:5.06rem;--wp--preset--shadow--natural:6px 6px 9px rgba(0,0,0,.2);--wp--preset--shadow--deep:12px 12px 50px rgba(0,0,0,.4);--wp--preset--shadow--sharp:6px 6px 0 rgba(0,0,0,.2);--wp--preset--shadow--outlined:6px 6px 0 -3px rgba(255,255,255,1) , 6px 6px rgba(0,0,0,1);--wp--preset--shadow--crisp:6px 6px 0 rgba(0,0,0,1)}:where(.is-layout-flex){gap:.5em}:where(.is-layout-grid){gap:.5em}body .is-layout-flow>.alignleft{float:left;margin-inline-start:0;margin-inline-end:2em}body .is-layout-flow>.alignright{float:right;margin-inline-start:2em;margin-inline-end:0}body .is-layout-flow>.aligncenter{margin-left:auto!important;margin-right:auto!important}body .is-layout-constrained>.alignleft{float:left;margin-inline-start:0;margin-inline-end:2em}body .is-layout-constrained>.alignright{float:right;margin-inline-start:2em;margin-inline-end:0}body .is-layout-constrained>.aligncenter{margin-left:auto!important;margin-right:auto!important}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width:var(--wp--style--global--content-size);margin-left:auto!important;margin-right:auto!important}body .is-layout-constrained>.alignwide{max-width:var(--wp--style--global--wide-size)}body .is-layout-flex{display:flex}body .is-layout-flex{flex-wrap:wrap;align-items:center}body .is-layout-flex>*{margin:0}body .is-layout-grid{display:grid}body .is-layout-grid>*{margin:0}:where(.wp-block-columns.is-layout-flex){gap:2em}:where(.wp-block-columns.is-layout-grid){gap:2em}:where(.wp-block-post-template.is-layout-flex){gap:1.25em}:where(.wp-block-post-template.is-layout-grid){gap:1.25em}.has-black-color{color:var(--wp--preset--color--black)!important}.has-cyan-bluish-gray-color{color:var(--wp--preset--color--cyan-bluish-gray)!important}.has-white-color{color:var(--wp--preset--color--white)!important}.has-pale-pink-color{color:var(--wp--preset--color--pale-pink)!important}.has-vivid-red-color{color:var(--wp--preset--color--vivid-red)!important}.has-luminous-vivid-orange-color{color:var(--wp--preset--color--luminous-vivid-orange)!important}.has-luminous-vivid-amber-color{color:var(--wp--preset--color--luminous-vivid-amber)!important}.has-light-green-cyan-color{color:var(--wp--preset--color--light-green-cyan)!important}.has-vivid-green-cyan-color{color:var(--wp--preset--color--vivid-green-cyan)!important}.has-pale-cyan-blue-color{color:var(--wp--preset--color--pale-cyan-blue)!important}.has-vivid-cyan-blue-color{color:var(--wp--preset--color--vivid-cyan-blue)!important}.has-vivid-purple-color{color:var(--wp--preset--color--vivid-purple)!important}.has-black-background-color{background-color:var(--wp--preset--color--black)!important}.has-cyan-bluish-gray-background-color{background-color:var(--wp--preset--color--cyan-bluish-gray)!important}.has-white-background-color{background-color:var(--wp--preset--color--white)!important}.has-pale-pink-background-color{background-color:var(--wp--preset--color--pale-pink)!important}.has-vivid-red-background-color{background-color:var(--wp--preset--color--vivid-red)!important}.has-luminous-vivid-orange-background-color{background-color:var(--wp--preset--color--luminous-vivid-orange)!important}.has-luminous-vivid-amber-background-color{background-color:var(--wp--preset--color--luminous-vivid-amber)!important}.has-light-green-cyan-background-color{background-color:var(--wp--preset--color--light-green-cyan)!important}.has-vivid-green-cyan-background-color{background-color:var(--wp--preset--color--vivid-green-cyan)!important}.has-pale-cyan-blue-background-color{background-color:var(--wp--preset--color--pale-cyan-blue)!important}.has-vivid-cyan-blue-background-color{background-color:var(--wp--preset--color--vivid-cyan-blue)!important}.has-vivid-purple-background-color{background-color:var(--wp--preset--color--vivid-purple)!important}.has-black-border-color{border-color:var(--wp--preset--color--black)!important}.has-cyan-bluish-gray-border-color{border-color:var(--wp--preset--color--cyan-bluish-gray)!important}.has-white-border-color{border-color:var(--wp--preset--color--white)!important}.has-pale-pink-border-color{border-color:var(--wp--preset--color--pale-pink)!important}.has-vivid-red-border-color{border-color:var(--wp--preset--color--vivid-red)!important}.has-luminous-vivid-orange-border-color{border-color:var(--wp--preset--color--luminous-vivid-orange)!important}.has-luminous-vivid-amber-border-color{border-color:var(--wp--preset--color--luminous-vivid-amber)!important}.has-light-green-cyan-border-color{border-color:var(--wp--preset--color--light-green-cyan)!important}.has-vivid-green-cyan-border-color{border-color:var(--wp--preset--color--vivid-green-cyan)!important}.has-pale-cyan-blue-border-color{border-color:var(--wp--preset--color--pale-cyan-blue)!important}.has-vivid-cyan-blue-border-color{border-color:var(--wp--preset--color--vivid-cyan-blue)!important}.has-vivid-purple-border-color{border-color:var(--wp--preset--color--vivid-purple)!important}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background:var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple)!important}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background:var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan)!important}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background:var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange)!important}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background:var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red)!important}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background:var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray)!important}.has-cool-to-warm-spectrum-gradient-background{background:var(--wp--preset--gradient--cool-to-warm-spectrum)!important}.has-blush-light-purple-gradient-background{background:var(--wp--preset--gradient--blush-light-purple)!important}.has-blush-bordeaux-gradient-background{background:var(--wp--preset--gradient--blush-bordeaux)!important}.has-luminous-dusk-gradient-background{background:var(--wp--preset--gradient--luminous-dusk)!important}.has-pale-ocean-gradient-background{background:var(--wp--preset--gradient--pale-ocean)!important}.has-electric-grass-gradient-background{background:var(--wp--preset--gradient--electric-grass)!important}.has-midnight-gradient-background{background:var(--wp--preset--gradient--midnight)!important}.has-small-font-size{font-size:var(--wp--preset--font-size--small)!important}.has-medium-font-size{font-size:var(--wp--preset--font-size--medium)!important}.has-large-font-size{font-size:var(--wp--preset--font-size--large)!important}.has-x-large-font-size{font-size:var(--wp--preset--font-size--x-large)!important}.wp-block-navigation a:where(:not(.wp-element-button)){color:inherit}:where(.wp-block-post-template.is-layout-flex){gap:1.25em}:where(.wp-block-post-template.is-layout-grid){gap:1.25em}:where(.wp-block-columns.is-layout-flex){gap:2em}:where(.wp-block-columns.is-layout-grid){gap:2em}.wp-block-pullquote{font-size:1.5em;line-height:1.6}</style>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/tags/214">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="icon" href="/wp-content/uploads/2021/01/cropped-og-32x32.png" sizes="32x32">
+<link rel="icon" href="/wp-content/uploads/2021/01/cropped-og-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wp-content/uploads/2021/01/cropped-og-180x180.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2021/01/cropped-og-270x270.png">
+</head>
+<body data-rsssl="1" class="archive tag tag-perl tag-214 two-column right-sidebar">
+<nav class="navbar navbar-inverse area_hd">
+<div class="container-fluid">
+<div class="navbar-header">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <span class="navbar-brand" title="Like@Lunatic" rel="home">Like@Lunatic</span>
+<!--/.navbar-header-->
+</div>
+<div class="collapse navbar-collapse" id="navbar-collapse">
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="/blog/">Blog</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+    <ul class="social nav navbar-nav navbar-right">
+    <li><a href="https://twitter.com/seckie_"><img src="/wp-content/themes/likealunatic30/libs/social-media-icons/16px/twitter.png" alt="" width="16" height="16"> Twitter</a></li>
+    <li><a href="https://www.facebook.com/profile.php?id=100001227105896"><img src="/wp-content/themes/likealunatic30/libs/social-media-icons/16px/facebook.png" alt="" width="16" height="16"> Facebook</a></li>
+    <li><a href="https://github.com/seckie"><img src="/wp-content/themes/likealunatic30/libs/social-media-icons/16px/github.png" alt="" width="16" height="16"> GitHub</a></li>
+  <!--./social-->
+</ul>
+<!--/.navbar-collapse-->
+</div>
+<!--/.container-fluid-->
+</div>
+<!--/.navbar--></nav>
+
+<div class="container area_bd">
+  <div class="row">
+    <section class="col-md-8 col-xs-12" id="primary">
+      <div id="content" role="main">
+
+      
+        <header class="page-header">
+          <h1 class="page-title">Tag Archives: <span>Perl</span>
+</h1>
+
+                  </header>
+
+                
+          
+  <article id="post-528" class="post-528 post type-post status-publish format-standard hentry category-software tag-movabletype tag-mysql tag-perl tag-xampp">
+    <header class="entry-header">
+            <h1 class="entry-title"><a href="/2010/03/xampp_and_mt_2" title="Permalink to WinXPローカルでXAMPPを使ってMovable Typeを動かす―2010年3月版 その2" rel="bookmark">WinXPローカルでXAMPPを使ってMovable Typeを動かす―2010年3月版 その2</a></h1>
+      
+            <div class="entry-meta">
+        <span class="sep">Posted on </span><a href="/2010/03/xampp_and_mt_2" title="00:31" rel="bookmark"><time class="entry-date" datetime="2010-03-10T00:31:34+09:00">2010-03-10</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="/author/admin" title="View all posts by seckie" rel="author">seckie</a></span></span>      </div>
+<!-- .entry-meta -->
+          </header><!-- .entry-header -->
+
+        <div class="entry-content">
+            <p>前回に引き続き、XAMPPでMovable Typeを動作させるチュートリアルの第2弾です。</p>
+
+<ol>
+<li><a href="/2010/03/xampp_and_mt_1.php">XAMPPのインストール、Apacheの設定</a></li>
+<li><em>ActivePerlのインストールと設定、MySQLの設定</em></li>
+<li><a href="/2010/03/xampp_and_mt_3.php">ImageMagickのインストール、Movable Typeのインストール</a></li>
+</ol>
+
+<p>今回はActivePerlのインストールと設定、MySQLの設定を行います。</p>
+
+<ol>
+<li class="step01">
+<p><a href="http://www.activestate.com/activeperl/">ActivePerl のダウンロードページ</a>にアクセスし「ActivePerl DOWNLOAD NOW」をクリックして次のページに進みましょう。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_51.jpg"><img decoding="async" src="/wp-content/uploads/2010/03/20100310_51-150x150.jpg" alt="ActivePerlのダウンロードページ" title="20100310_51" width="150" height="150" class="alignnone size-thumbnail wp-image-560"></a></p>
+</li>
+
+<li class="step02">
+<p>プラットフォーム別のダウンロードファイルの一覧が表示されます。一番上の<q>Recommended version(s) for your platform</q>にリストアップされている ActivePerl 5.10.1.1007 for Windows (x86) をダウンロードします。<br>
+<span class="memo">お使いのWindowsが64bit版である場合、ActivePerl 5.10.1.1007 for Windows (64-bit, x64) を選択します。</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_52.jpg"><img decoding="async" src="/wp-content/uploads/2010/03/20100310_52-150x150.jpg" alt="ActivePerlのダウンロードページ" title="20100310_52" width="150" height="150" class="alignnone size-thumbnail wp-image-561"></a></p>
+</li>
+
+<li class="step03">
+<p>ダウンロードしたインストーラを実行しましょう。インストールウィザードが開始されます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_53.jpg"><img decoding="async" src="/wp-content/uploads/2010/03/20100310_53-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_53" width="150" height="150" class="alignnone size-thumbnail wp-image-562"></a></p>
+</li>
+
+<li class="step04">
+<p>ライセンス規約に同意（<q>I accept the terms in the License Agreement</q>）を選択し、「Next」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_54.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_54-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_54" width="150" height="150" class="alignnone size-thumbnail wp-image-563"></a></p>
+</li>
+
+<li class="step05">
+<p>インストールするプログラムと、インストールするディレクトリを設定します。インストールするディレクトリはデフォルトで <span class="path">C:\Perl\</span> になっていますが、これを <span class="path">C:\usr\</span> に変更します。「Browser」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_55.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_55-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_55" width="150" height="150" class="alignnone size-thumbnail wp-image-564"></a></p>
+</li>
+
+<li class="step06">
+<p>ディレクトリの選択画面となるので、「Folder name:」の欄に <span class="path">C:\usr\</span> と入力し、「OK」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_56.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_56-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_56" width="150" height="150" class="alignnone size-thumbnail wp-image-565"></a></p>
+</li>
+
+<li class="step07">
+<p>「Location:」に <span class="path">C:\urs\</span> が正しく設定されたかを確認し、「Next」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_57.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_57-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_57" width="150" height="150" class="alignnone size-thumbnail wp-image-566"></a></p>
+</li>
+
+<li class="step08">
+<p>オプションを選択する画面になります。特に変更せず「Next」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_58.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_58-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_58" width="150" height="150" class="alignnone size-thumbnail wp-image-567"></a></p>
+</li>
+
+<li class="step09">
+<p>これで設定は終わりです。「Install」をクリックしてしばらく待ちます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_59.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_59-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_59" width="150" height="150" class="alignnone size-thumbnail wp-image-570"></a></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_60.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_60-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_60" width="150" height="150" class="alignnone size-thumbnail wp-image-571"></a></p>
+</li>
+
+<li class="step10">
+<p>インストールが完了したら、「Finish」をクリックしてインストールウィザードを完了します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_61.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_61-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_61" width="150" height="150" class="alignnone size-thumbnail wp-image-572"></a></p>
+</li>
+
+<li class="step11">
+<p>さて、<a href="/2010/03/xampp_and_mt_1.php">前回の記事</a>の環境の通り、<span class="path">D:\htdocs\site1</span> というディレクトリを <span class="url">http://site1.localhost/</span> というローカルホストドメインで参照できるようにし、ここで開発を行うことを前提に話を進めましょう。</p>
+<p>サイトのルートディレクトリ（<span class="path">D:\htdocs\site1</span>）に Movable Type（ここではMTOS 5.01） のファイルを展開し、<span class="path">mtos</span> というディレクトリ名をつけます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_134.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_134-150x150.jpg" alt="MTOSのファイルを展開" title="20100310_134" width="150" height="150" class="alignnone size-thumbnail wp-image-569"></a></p>
+</li>
+
+<li class="step12">
+<p>念のため、インストールしたPerlが正しく動作するか確認してみます。テキストエディタを開いて以下のコードを記述し、<span class="path">C:\test.pl</span> というパスで保存します。（あくまで例です。実際はどんなパスでもOKです）</p>
+<pre><code>#! /usr/bin/perl
+print(&quot;It works!\n&quot;);</code></pre>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_66.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_66-150x150.jpg" alt="Perlのテストプログラムを作成する" title="20100310_66" width="150" height="150" class="alignnone size-thumbnail wp-image-575"></a></p>
+<p>これをコマンドプロンプト（<a href="#footnote_20100308_1">※1</a>）で以下のように入力し、Enterキーを押して実行します。</p>
+<pre><code>perl c:\test.pl</code></pre>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_63.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_63-150x150.jpg" alt="Perlのテストプログラムをコマンドプロンプトから実行してみる" title="20100310_63" width="150" height="150" class="alignnone size-thumbnail wp-image-573"></a></p>
+<p>入力の次の行に <q>It works!</q> と表示されれば正しく実行できたということです。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_65.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_65-150x150.jpg" alt="Perlのテストプログラムをコマンドプロンプトから実行してみる" title="20100310_65" width="150" height="150" class="alignnone size-thumbnail wp-image-574"></a></p>
+<p>ここまでくればMovable TypeのCGIプログラムをひとまず表示はできる環境になっています。（<a href="#footnote_20100308_2">※2</a>）</p>
+</li>
+
+<li class="step13">
+<p><span class="url">http://site1.localhost/mtos/mt-check.cgi</span> にブラウザからアクセスします。ここまでの作業が正しくできていれば、MTのシステムチェック画面が表示されるはずです。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_80.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_80-150x150.jpg" alt="mt-check.cgiでのシステムチェック結果" title="20100310_80" width="150" height="150" class="alignnone size-thumbnail wp-image-576"></a></p>
+</li>
+
+<li class="step14">
+<p>この時点では <q>Movable Typeの構成ファイルが見つかりませんでした。</q> というメッセージが表示され、まだMovable Typeが正しく動作しないことが分かります。ページをスクロールしていくと、DBD::mysql というPerlモジュールがシステムにインストールされていないことが分かります。これは MySQL データベースを使用するために必要となるモジュールです。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_81.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_81-150x150.jpg" alt="mt-check.cgiでのシステムチェック結果" title="20100310_81" width="150" height="150" class="alignnone size-thumbnail wp-image-568"></a></p>
+</li>
+
+<li class="step15">
+<p>では DBD::mysql モジュールをインストールしましょう。コマンドプロンプトを起動し、<kbd>ppm</kbd> と入力しEnterキーを押します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_84.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_84-150x150.jpg" alt="コマンドプロンプトでppmを起動する" title="20100310_84" width="150" height="150" class="alignnone size-thumbnail wp-image-578"></a></p>
+</li>
+
+<li class="step16">
+<p>すると「Perl Package Manager（略称PPM）」が起動します。<q>Synchronizing Database&#8230;（データベースと同期中）</q> とステータス表示されてしばらく固まるので、じっと待ちます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_85.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_85-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_85" width="150" height="150" class="alignnone size-thumbnail wp-image-579"></a></p>
+</li>
+
+<li class="step17">
+<p>同期が完了して操作できるようになったら、画面左上の「View all packages」アイコンをクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_87.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_87-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_87" width="150" height="150" class="alignnone size-thumbnail wp-image-580"></a></p>
+</li>
+
+<li class="step18">
+<p>そして画面上部の検索エリアに <kbd>dbd-mysql</kbd> と入力しましょう。すると中央のモジュール一覧に DBD-mysql と表示されるはずです。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_88.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_88-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_88" width="150" height="150" class="alignnone size-thumbnail wp-image-581"></a></p>
+</li>
+
+<li class="step19">
+<p>リストアップされた DBD-mysql を右クリックし「Install DBD-mysql 4.011 + 」を選択します。これでインストールするモジュールの一覧に登録されます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_89.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_89-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_89" width="150" height="150" class="alignnone size-thumbnail wp-image-582"></a></p>
+</li>
+
+<li class="step20">
+<p>画面右上の「→（Run marked actions）」アイコンをクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_90.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_90-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_90" width="150" height="150" class="alignnone size-thumbnail wp-image-589"></a></p>
+<p>すると <q>Ready to install 1 package?</q> とアラート表示されるので「OK」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_91.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_91-150x121.jpg" alt="GUI ppmでインストールの確認アラート" title="20100310_91" width="150" height="121" class="alignnone size-thumbnail wp-image-583"></a></p>
+</li>
+
+<li class="step21">
+<p>しばらく待つと、DBD::mysqlモジュールのインストールが完了します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_92.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_92-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_92" width="150" height="150" class="alignnone size-thumbnail wp-image-584"></a></p>
+</li>
+
+<li class="step22">
+<p>もう一度ブラウザで mt-check.cgi にアクセスしてみましょう。<q>サーバーにDBD::mysqlがインストールされています</q> と表示され、エラー表示になっていなければOKです。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_93.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_93-150x150.jpg" alt="mt-check.cgiでのシステムチェック結果" title="20100310_93" width="150" height="150" class="alignnone size-thumbnail wp-image-585"></a></p>
+</li>
+
+<li class="step23">
+<p>では今度はMySQLの設定を行っていきます。今回インストールするMTOS用のデータベースを作成しましょう。まずXAMPPコントロールパネルでMySQLが「Running」状態になっていることを確認し、「Admin」ボタンをクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_68.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_68-150x150.jpg" alt="XAMPPコントロールパネル" title="20100310_68" width="150" height="150" class="alignnone size-thumbnail wp-image-577"></a></p>
+</li>
+
+<li class="step24">
+<p>するとブラウザでphpMyAdmin（MySQLデータベースをブラウザから操作できるツール）が開きます。「言語 &#8211; Language」に「日本語 &#8211; Japanese」が設定されていることを確認し、ユーザ名、パスワードを入力してログインしましょう。ここでのユーザ名は <kbd>root</kbd> 、<a href="/2010/03/xampp_and_mt_1.php#20100307_s16">パスワードは前回の記事のStep16</a>でXAMPPの管理画面から設定したパスワードになります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_71.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_71-150x150.jpg" alt="phpMyAdminのログイン画面" title="20100310_71" width="150" height="150" class="alignnone size-thumbnail wp-image-587"></a></p>
+</li>
+
+<li class="step25">
+<p>phpMyAdminにログインすると、様々なメニューが並んだ画面が表示されます。ページ中ほどにある「新規データベースを作成する」という入力フォームから、今回使用するデータベースを作成しましょう。</p>
+<p>左のフィールドにはデータベース名を入力し（今回は「<kbd>mtos5</kbd>」とします）、隣のプルダウンメニューでデータベースの文字コードを選択します。ここでは「<strong>utf8_general_ci</strong>」を選択してください。このプルダウンメニューが結構長いのですが、一番下の方にあります。そして「作成」ボタンをクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_74.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_74-150x150.jpg" alt="phpMyAdminの操作画面" title="20100310_74" width="150" height="150" class="alignnone size-thumbnail wp-image-588"></a></p>
+</li>
+
+<li class="step26">
+<p><q>データベース mtos5 を作成しました。</q>　と表示されたら完了です。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_75.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_75-150x150.jpg" alt="phpMyAdminの操作画面" title="20100310_75" width="150" height="150" class="alignnone size-thumbnail wp-image-586"></a></p>
+</li>
+</ol>
+
+<p>以上でActivePerlのインストールと設定、MySQLの設定までが完了し、今回の記事はここまでです。次回はImage Magickのインストール、そしていよいよMovable Typeのインストールを取り上げます。</p>
+
+<div class="postscript">
+<ul class="footnote">
+
+<li>
+<a name="footnote_20100308_1" id="footnote_20100308_1">※1</a> コマンドプロンプトは、スタートアップメニューから「ファイル名を指定して実行」（もしくは「Windowsキー + r」）で <kbd>cmd</kbd> と入力してEnterキーを入力すると起動することができます。</li>
+<li>
+<a name="footnote_20100308_2" id="footnote_20100308_2">※2</a> Movable Type を含む、Perl言語で書かれた大抵のCGIプログラムはデフォルトでPerlを <span class="path">/usr/bin/perl</span> というパスで参照するように書かれています。（ファイルの冒頭にPerlのパスが記述されています）Step5～7でActivePerlを <span class="path">C:\usr\</span> というパスを指定してインストールしたことにより、Perl が <span class="path">/usr/bin/perl</span> で参照できるようになります。</li>
+</ul>
+</div>
+          </div>
+<!-- .entry-content -->
+    
+    <footer class="entry-meta">
+                        <span class="cat-links">
+        <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="/category/software" rel="category tag">Software</a>      </span>
+                  <span class="sep"> | </span>
+              <span class="tag-links">
+        <span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="/tag/movabletype" rel="tag">MovableType</a>, <a href="/tag/mysql" rel="tag">MySQL</a>, <a href="/tag/perl" rel="tag">Perl</a>, <a href="/tag/xampp" rel="tag">XAMPP</a>      </span>
+            
+      
+          </footer><!-- #entry-meta -->
+  </article><!-- #post-528 -->
+
+        
+          
+  <article id="post-376" class="post-376 post type-post status-publish format-standard hentry category-software tag-perl tag-xampp">
+    <header class="entry-header">
+            <h1 class="entry-title"><a href="/2010/01/perlpath" title="Permalink to XAMPP for Windows環境でPerlのパスを /usr/bin/perl にする" rel="bookmark">XAMPP for Windows環境でPerlのパスを /usr/bin/perl にする</a></h1>
+      
+            <div class="entry-meta">
+        <span class="sep">Posted on </span><a href="/2010/01/perlpath" title="23:38" rel="bookmark"><time class="entry-date" datetime="2010-01-05T23:38:30+09:00">2010-01-05</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="/author/admin" title="View all posts by seckie" rel="author">seckie</a></span></span>      </div>
+<!-- .entry-meta -->
+          </header><!-- .entry-header -->
+
+        <div class="entry-content">
+            <p>XAMPPをインストールしたまんまだと、perlは以下のところにあります。</p>
+
+<pre><code>C:\xampp\perl\bin\perl</code></pre>
+
+<p>つまりperlのパスは以下のようになります。</p>
+
+<pre><code>/xampp/perl/bin/perl</code></pre>
+
+<p>cgiファイルを1個1個開いてパスを変更するのは正直面倒くさいので（それに本番環境と同じファイルが使えないということにも）、なんとか解決することができないかググってみると<a href="http://www.y2sunlight.com/ground/?XAMPP%2F5.Perl%A4%CE%A5%A4%A5%F3%A5%B9%A5%C8%A1%BC%A5%EB#content_1_4">やはりありました</a>。<br>
+シンボリックリンクを設定するソフトウェアを導入すれば解決するらしい、ということで<a href="http://www.vector.co.jp/soft/winnt/util/se184746.html" title="Vector：リンク作成シェル拡張for Windows 2000/XP (WindowsNT/2000/XP/Vista / ユーティリティ)">こちらから早速ダウンロード</a>＆インストール。</p>
+
+<p><code>C:\xampp</code>ディレクトリと<code>C:\</code>ディレクトリ（というかCドライブルート）を両方エクスプローラーで開いて、<code>C:\xampp\perl</code>フォルダを右クリックして<code>C:\</code>の方に、ドラッグアンドドロップ。右クリックメニューに「リンクを作る」というのが追加されているのでこれを選択。するとCドライブルートに<code>perl</code>フォルダが作られます。これが<code>C:\xampp\perl</code>へのシンボリックリンクです。</p>
+
+<p><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/01/20100105_perlpath.jpg" alt="「リンク作成シェル拡張」を使う様子" width="520" height="430" class="alignnone size-full wp-image-379" srcset="/wp-content/uploads/2010/01/20100105_perlpath.jpg 520w, /wp-content/uploads/2010/01/20100105_perlpath-300x248.jpg 300w" sizes="(max-width: 520px) 100vw, 520px"></p>
+
+<p>このままではパスがおかしいので<code>C:\perl</code>フォルダ（シンボリックリンク）を<code>usr</code>にリネーム。するとperlのパスは</p>
+
+<pre><code>/usr/bin/perl</code></pre>
+
+<p>になるというわけ。</p>
+
+<p>シンボリックリンクで作ったディレクトリは、エクスプローラー上でも普通のフォルダと同じように扱えます。そして、シンボリックリンクとなるフォルダ自体を削除すれば、リンクを解除することができます。</p>
+
+<dl class="disclist reflinks">
+    <dt>参考：</dt>
+    <dd><a href="http://www.y2sunlight.com/ground/?XAMPP%2F5.Perl%A4%CE%A5%A4%A5%F3%A5%B9%A5%C8%A1%BC%A5%EB">XAMPP/5.Perlのインストール &#8211; Ground-SunLight</a></dd>
+    <dd><a href="http://www.vector.co.jp/soft/winnt/util/se184746.html">Vector：リンク作成シェル拡張for Windows 2000/XP (WindowsNT/2000/XP/Vista / ユーティリティ)</a></dd>
+</dl>
+          </div>
+<!-- .entry-content -->
+    
+    <footer class="entry-meta">
+                        <span class="cat-links">
+        <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="/category/software" rel="category tag">Software</a>      </span>
+                  <span class="sep"> | </span>
+              <span class="tag-links">
+        <span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="/tag/perl" rel="tag">Perl</a>, <a href="/tag/xampp" rel="tag">XAMPP</a>      </span>
+            
+      
+          </footer><!-- #entry-meta -->
+  </article><!-- #post-376 -->
+
+        
+          
+  <article id="post-101" class="post-101 post type-post status-publish format-standard hentry category-miscellany tag-misc tag-perl">
+    <header class="entry-header">
+            <h1 class="entry-title"><a href="/2009/12/perl" title="Permalink to Perl始めました" rel="bookmark">Perl始めました</a></h1>
+      
+            <div class="entry-meta">
+        <span class="sep">Posted on </span><a href="/2009/12/perl" title="11:11" rel="bookmark"><time class="entry-date" datetime="2009-12-11T11:11:32+09:00">2009-12-11</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="/author/admin" title="View all posts by seckie" rel="author">seckie</a></span></span>      </div>
+<!-- .entry-meta -->
+          </header><!-- .entry-header -->
+
+        <div class="entry-content">
+            <p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="初めてのPerl" src="/images/2009/12/11_learningperl.jpg" width="168" height="124" class="mt-image-none introphoto"></span>もう12月も半ばに差し掛かり、今年も残すところあと20日程度となりました。<br>
+昨月くらいから「今年やり残していること」を考えていたのですが、今年1月に<a href="/2009/01/06_pagebute.php">Perlを学ぼう</a>と言ってたにも関わらず特にアクションを起こしていないことに気づき、取り組んでみることにしました。</p>
+
+<p>手始めに会社に転がっていた（？）「<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873110963/likealunatic-22/ref=nosim/" target="_blank" rel="noopener">プログラミングPerl</a>」をかじってみたのですが、硬派な内容でなかなか読み進むことができず、途方に暮れてしまいました。そこで少し情報収集してみたところ、Perlの入門書としては「<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873114276/likealunatic-22/ref=nosim/" target="_blank" rel="noopener">初めてのPerl 第5版</a>」が有力であり、その上位版として「プログラミングPerl」があるということが分かりました。<br>
+しかも「初めてのPerl」はつい最近（2009年10月）に第5版に改訂されているということが分かり、嬉々としてAmazonで購入。現在、最初から読み進めつつ、章末の演習問題に取り組んでいます。年内に半分くらいまでは読めたらいいなぁ、と思っています。とりあえず目標は低めで。</p>
+
+<div class="postscript">
+<div class="amazlet-box" style="margin-bottom:20px;">
+<div class="amazlet-image" style="float:left;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873114276/likealunatic-22/ref=nosim/" target="_blank" rel="noopener"><img decoding="async" src="https://ecx.images-amazon.com/images/I/51v2AChMlfL._SL160_.jpg" alt="初めてのPerl 第5版" style="border: none;"></a></div>
+<div class="amazlet-info" style="margin-left:15px;line-height:120%">
+<div class="amazlet-name" style="margin-bottom:10px;line-height:120%">
+<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873114276/likealunatic-22/ref=nosim/" target="_blank" rel="noopener">初めてのPerl 第5版</a><div class="amazlet-powered-date" style="font-size:7pt;margin-top:5px;font-family:verdana;line-height:120%">posted with <a href="http://www.amazlet.com/browse/ASIN/4873114276/likealunatic-22/ref=nosim/" title="初めてのPerl 第5版" target="_blank" rel="noopener">amazlet</a> at 09.12.11</div>
+</div>
+<div class="amazlet-detail">Randal L. Schwartz Tom Phoenix brian d foy <br>オライリージャパン <br>売り上げランキング: 5310<br>
+</div>
+<div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873114276/likealunatic-22/ref=nosim/" target="_blank" rel="noopener">Amazon.co.jp で詳細を見る</a></div>
+</div>
+<div class="amazlet-footer" style="clear: left"></div>
+</div>
+<div class="amazlet-box" style="margin-bottom:20px;">
+<div class="amazlet-image" style="float:left;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873110963/likealunatic-22/ref=nosim/" target="_blank" rel="noopener"><img decoding="async" src="https://ecx.images-amazon.com/images/I/51EK7E5K5FL._SL160_.jpg" alt="プログラミングPerl〈VOLUME1〉" style="border: none;"></a></div>
+<div class="amazlet-info" style="margin-left:15px;line-height:120%">
+<div class="amazlet-name" style="margin-bottom:10px;line-height:120%">
+<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873110963/likealunatic-22/ref=nosim/" target="_blank" rel="noopener">プログラミングPerl〈VOLUME1〉</a><div class="amazlet-powered-date" style="font-size:7pt;margin-top:5px;font-family:verdana;line-height:120%">posted with <a href="http://www.amazlet.com/browse/ASIN/4873110963/likealunatic-22/ref=nosim/" title="プログラミングPerl〈VOLUME1〉" target="_blank" rel="noopener">amazlet</a> at 09.12.11</div>
+</div>
+<div class="amazlet-detail">ラリー ウォール ジョン オーワント トム クリスチャンセン<br>オライリー・ジャパン<br>売り上げランキング: 138874<br>
+</div>
+<div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873110963/likealunatic-22/ref=nosim/" target="_blank" rel="noopener">Amazon.co.jp で詳細を見る</a></div>
+</div>
+<div class="amazlet-footer" style="clear: left"></div>
+</div>
+</div>
+          </div>
+<!-- .entry-content -->
+    
+    <footer class="entry-meta">
+                        <span class="cat-links">
+        <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="/category/miscellany" rel="category tag">Miscellany</a>      </span>
+                  <span class="sep"> | </span>
+              <span class="tag-links">
+        <span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="/tag/misc" rel="tag">Misc</a>, <a href="/tag/perl" rel="tag">Perl</a>      </span>
+            
+      
+          </footer><!-- #entry-meta -->
+  </article><!-- #post-101 -->
+
+        
+          
+  <article id="post-74" class="post-74 post type-post status-publish format-standard hentry category-webdesign tag-movabletype tag-perl tag-plugin">
+    <header class="entry-header">
+            <h1 class="entry-title"><a href="/2009/01/06_pagebute" title="Permalink to PageButeプラグインで静的ページ分割" rel="bookmark">PageButeプラグインで静的ページ分割</a></h1>
+      
+            <div class="entry-meta">
+        <span class="sep">Posted on </span><a href="/2009/01/06_pagebute" title="17:09" rel="bookmark"><time class="entry-date" datetime="2009-01-06T17:09:05+09:00">2009-01-06</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="/author/admin" title="View all posts by seckie" rel="author">seckie</a></span></span>      </div>
+<!-- .entry-meta -->
+          </header><!-- .entry-header -->
+
+        <div class="entry-content">
+            <p>明けましておめでとうございます。<br>
+本年もこのサイトをどうぞよろしくお願いいたします。<br>
+遅ればせながら新年のご挨拶。2009年の初エントリーです。</p>
+
+<p>昨年は転職という大きな転機を迎えましたが無事乗り越え、今に至っております。一昨年に引き続きスクールで講師を務めたり、雑誌に寄稿させてもらうという経験もでき、充実した一年となりました。</p>
+
+<p>さて、年始の挨拶はここまでで・・・ここから本題です。<br>
+昨日MTの案件をやっていたのですが、アーカイブページ分割の作業をすることとなり、いろいろと調べていました。</p>
+
+<p>MTが<code>&lt;MTEntries&gt;</code>で書き出すアーカイブ一覧は、lastnモディファイアなどで設定された値を上限に記事を順番に出力します。ただし、上限値を超える数の記事が登録されていた場合、超えた分の記事は表示されないという不親切な仕様となっています。<br>
+この上限値を超えた分を「次のページへ」などとして参照できるようにするのが<em>ページ分割</em>です。ページ分割を実現するには、専用のプラグインを導入するのが一般的になっています。</p>
+
+<p><a href="http://www.sixapart.jp/movabletype/plugins/mtpaginate.html">MTPaginate</a>プラグインが使えればこのサイトと同じやり方でできるのですが、PHP化はされていないし、商用利用は有料ということでボツに。そこで、<a href="http://www.skyarc.co.jp/engineerblog/entry/2642.html">PageBute</a>プラグイン（現バージョン：3.2.2）を使うことにしました。</p>
+
+<p>このPageButeプラグイン、PHP化していなくても使えるとあって、静的HTMLとしてページを書き出してくれます。例えば「index.html」を分割設定すると、「index_2.html」、「index_3.html」&#8230;というようにページを自動的に増やしてくれるという、素晴らしいプラグインです。</p>
+
+<p>公式ページを見て導入はあっさりできたのですが、シンプルであるが故に任意に設定できる項目が少ない印象を受けました。</p>
+
+<p>このプラグインで書き出す<code>&lt;$MTPageLists$&gt;</code>は、分割後の各ページへのリンク一覧を書き出すMTタグですが、リンクテキストとなるページ番号は必ず昇順（1、2、3&#8230;というように1から始まる）になります。今回の案件ではこの番号を降順（10、9、8&#8230;というように最後の番号から始まる）としなければならなかったので、プラグインを改変して解決しました。</p>
+
+<p class="note">この改変をすると、リンク一覧に並ぶリンクテキスト（ページ番号）が降順になります。<em>順番が入れ替わるのはリンクテキストのみで、記事の並び順自体は変更されません。</em>動作確認をしたのはMovableType 4.23に、改変したPageBute 3.2.2をインストールした環境です。</p>
+
+<p>改変した点は以下の通りです。</p>
+
+<ol class="decimallist">
+<li>
+<p>PageBute.pl の182行目?189行目のforループの部分を以下のように変更</p>
+<pre><code>my $temp_page_count = $lists-&gt;{max_page};
+for (my $i = $lists-&gt;{min_page}; $i &lt;= $lists-&gt;{max_page}; $i++) {
+$page_lists .= $i == $lists-&gt;{min_page} ? '' : $delim;
+$page_lists .= $pb-&gt;{link_start};
+$page_lists .= $i == $page_count
+? "&lt;span class=\"current_page\"&gt;$temp_page_count&lt;/span&gt;"
+: &amp;_create_link($i, $site_url . $filename, $file_ext, $temp_page_count, 'link_page');
+$page_lists .= $pb-&gt;{link_close};
+$temp_page_count--;
+}</code></pre>
+<p>最大ページ数を格納する変数をもう1個作って、ループの度にデクリメントして、リンクの名前として代入してあげます。</p>
+</li>
+<li>
+<p>MTテンプレートの&lt;MTPageContents&gt;タグを以下のように変更。</p>
+<pre><code>&lt;MTPageContents count="10" navi_count="999"&gt;</code></pre>
+<p>countモディファイアには1ページに表示したい数を書きます。navi_countモディファイアはリンク数の上限を表す値です。公式ページには掲載されていないモディファイアですが、改変後はこの値を与えてあげないと特定の条件でうまくいきません。</p>
+</li>
+</ol>
+
+<p>あとは改変後のプラグインをインストールしなおして、該当のアーカイブを再構築すれば完了。</p>
+
+<div class="postscript">
+<p>仕事初めの日からperlを触ったので、これも何かの縁かと考えて今年はperlを学ぼうかと思います。</p>
+</div>
+          </div>
+<!-- .entry-content -->
+    
+    <footer class="entry-meta">
+                        <span class="cat-links">
+        <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="/category/webdesign" rel="category tag">Web Design</a>      </span>
+                  <span class="sep"> | </span>
+              <span class="tag-links">
+        <span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="/tag/movabletype" rel="tag">MovableType</a>, <a href="/tag/perl" rel="tag">Perl</a>, <a href="/tag/plugin" rel="tag">Plugin</a>      </span>
+            
+      
+          </footer><!-- #entry-meta -->
+  </article><!-- #post-74 -->
+
+        
+        
+      
+      <!--/#content-->
+</div>
+    <!--/#primary--></section>
+
+    <div id="secondary" class="col-md-4 col-xs-12 widget-area" role="complementary">
+      
+		<aside id="recent-posts-3" class="widget widget_recent_entries">
+		<h3 class="widget-title">Recent Posts</h3>
+		<ul>
+											<li>
+					<a href="/2022/01/mycar-review">2021年振り返りと、マイカーを買った感想</a>
+									</li>
+											<li>
+					<a href="/2021/01/lightsail">さくらのVPSから Lightsail へ引っ越した</a>
+									</li>
+											<li>
+					<a href="/2020/11/m1-mac">M1 Mac について調べたことあれこれ</a>
+									</li>
+											<li>
+					<a href="/2020/06/remotework-issues">フルリモートワークの課題感</a>
+									</li>
+											<li>
+					<a href="/2020/02/kiitok-career-market-vol-1">イベント参加メモ: kiitok Career Market Vol.1</a>
+									</li>
+					</ul>
+
+		</aside><aside id="categories-3" class="widget widget_categories"><h3 class="widget-title">Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-55">
+<a href="/category/bookreview">Book Review</a> (2)
+</li>
+	<li class="cat-item cat-item-323">
+<a href="/category/development">Development</a> (7)
+</li>
+	<li class="cat-item cat-item-44">
+<a href="/category/event">Event</a> (15)
+</li>
+	<li class="cat-item cat-item-303">
+<a href="/category/hardware">Hardware</a> (2)
+</li>
+	<li class="cat-item cat-item-78">
+<a href="/category/lifehack">LifeHack</a> (4)
+</li>
+	<li class="cat-item cat-item-32">
+<a href="/category/miscellany">Miscellany</a> (48)
+</li>
+	<li class="cat-item cat-item-136">
+<a href="/category/news">News</a> (11)
+</li>
+	<li class="cat-item cat-item-184">
+<a href="/category/software">Software</a> (19)
+</li>
+	<li class="cat-item cat-item-4">
+<a href="/category/webdesign">Web Design</a> (41)
+</li>
+	<li class="cat-item cat-item-278">
+<a href="/category/webdevelopment">Web Development</a> (17)
+</li>
+	<li class="cat-item cat-item-3">
+<a href="/category/whatsnew">What&#039;s New?</a> (8)
+</li>
+	<li class="cat-item cat-item-1">
+<a href="/category/uncategorised">未分類</a> (2)
+</li>
+			</ul>
+
+			</aside><aside id="tag_cloud-3" class="widget widget_tag_cloud"><h3 class="widget-title">Tags</h3>
+<div class="tagcloud">
+<ul class="wp-tag-cloud" role="list">
+	<li><a href="/tag/about" class="tag-cloud-link tag-link-279 tag-link-position-1" style="font-size: 17.476923076923pt;" aria-label="About (14 items)">About</a></li>
+	<li><a href="/tag/apache" class="tag-cloud-link tag-link-160 tag-link-position-2" style="font-size: 9.9384615384615pt;" aria-label="apache (2 items)">apache</a></li>
+	<li><a href="/tag/book" class="tag-cloud-link tag-link-292 tag-link-position-3" style="font-size: 13.169230769231pt;" aria-label="Book (5 items)">Book</a></li>
+	<li><a href="/tag/career" class="tag-cloud-link tag-link-336 tag-link-position-4" style="font-size: 9.9384615384615pt;" aria-label="Career (2 items)">Career</a></li>
+	<li><a href="/tag/conference" class="tag-cloud-link tag-link-290 tag-link-position-5" style="font-size: 11.230769230769pt;" aria-label="Conference (3 items)">Conference</a></li>
+	<li><a href="/tag/css" class="tag-cloud-link tag-link-9 tag-link-position-6" style="font-size: 16.723076923077pt;" aria-label="CSS (12 items)">CSS</a></li>
+	<li><a href="/tag/cssnite" class="tag-cloud-link tag-link-69 tag-link-position-7" style="font-size: 12.307692307692pt;" aria-label="CSSNite (4 items)">CSSNite</a></li>
+	<li><a href="/tag/dreamweaver" class="tag-cloud-link tag-link-25 tag-link-position-8" style="font-size: 9.9384615384615pt;" aria-label="Dreamweaver (2 items)">Dreamweaver</a></li>
+	<li><a href="/tag/event" class="tag-cloud-link tag-link-327 tag-link-position-9" style="font-size: 17.476923076923pt;" aria-label="Event (14 items)">Event</a></li>
+	<li><a href="/tag/game" class="tag-cloud-link tag-link-283 tag-link-position-10" style="font-size: 12.307692307692pt;" aria-label="Game (4 items)">Game</a></li>
+	<li><a href="/tag/git" class="tag-cloud-link tag-link-306 tag-link-position-11" style="font-size: 9.9384615384615pt;" aria-label="git (2 items)">git</a></li>
+	<li><a href="/tag/github" class="tag-cloud-link tag-link-312 tag-link-position-12" style="font-size: 11.230769230769pt;" aria-label="GitHub (3 items)">GitHub</a></li>
+	<li><a href="/tag/google" class="tag-cloud-link tag-link-285 tag-link-position-13" style="font-size: 11.230769230769pt;" aria-label="Google (3 items)">Google</a></li>
+	<li><a href="/tag/grunt" class="tag-cloud-link tag-link-322 tag-link-position-14" style="font-size: 9.9384615384615pt;" aria-label="Grunt (2 items)">Grunt</a></li>
+	<li><a href="/tag/html" class="tag-cloud-link tag-link-101 tag-link-position-15" style="font-size: 11.230769230769pt;" aria-label="HTML (3 items)">HTML</a></li>
+	<li><a href="/tag/ie" class="tag-cloud-link tag-link-15 tag-link-position-16" style="font-size: 13.169230769231pt;" aria-label="IE (5 items)">IE</a></li>
+	<li><a href="/tag/javascript" class="tag-cloud-link tag-link-35 tag-link-position-17" style="font-size: 18.769230769231pt;" aria-label="JavaScript (19 items)">JavaScript</a></li>
+	<li><a href="/tag/layout" class="tag-cloud-link tag-link-280 tag-link-position-18" style="font-size: 9.9384615384615pt;" aria-label="Layout (2 items)">Layout</a></li>
+	<li><a href="/tag/lifehack" class="tag-cloud-link tag-link-328 tag-link-position-19" style="font-size: 11.230769230769pt;" aria-label="LifeHack (3 items)">LifeHack</a></li>
+	<li><a href="/tag/linenumberwriter" class="tag-cloud-link tag-link-142 tag-link-position-20" style="font-size: 11.230769230769pt;" aria-label="LineNumberWriter (3 items)">LineNumberWriter</a></li>
+	<li><a href="/tag/mac" class="tag-cloud-link tag-link-97 tag-link-position-21" style="font-size: 13.923076923077pt;" aria-label="Mac (6 items)">Mac</a></li>
+	<li><a href="/tag/max" class="tag-cloud-link tag-link-324 tag-link-position-22" style="font-size: 9.9384615384615pt;" aria-label="Max (2 items)">Max</a></li>
+	<li><a href="/tag/memo" class="tag-cloud-link tag-link-191 tag-link-position-23" style="font-size: 12.307692307692pt;" aria-label="Memo (4 items)">Memo</a></li>
+	<li><a href="/tag/misc" class="tag-cloud-link tag-link-37 tag-link-position-24" style="font-size: 22pt;" aria-label="Misc (39 items)">Misc</a></li>
+	<li><a href="/tag/movabletype" class="tag-cloud-link tag-link-61 tag-link-position-25" style="font-size: 17.153846153846pt;" aria-label="MovableType (13 items)">MovableType</a></li>
+	<li><a href="/tag/movie" class="tag-cloud-link tag-link-318 tag-link-position-26" style="font-size: 9.9384615384615pt;" aria-label="Movie (2 items)">Movie</a></li>
+	<li><a href="/tag/music" class="tag-cloud-link tag-link-300 tag-link-position-27" style="font-size: 13.169230769231pt;" aria-label="Music (5 items)">Music</a></li>
+	<li><a href="/tag/mysql" class="tag-cloud-link tag-link-301 tag-link-position-28" style="font-size: 9.9384615384615pt;" aria-label="MySQL (2 items)">MySQL</a></li>
+	<li><a href="/tag/news" class="tag-cloud-link tag-link-329 tag-link-position-29" style="font-size: 11.230769230769pt;" aria-label="News (3 items)">News</a></li>
+	<li><a href="/tag/opera" class="tag-cloud-link tag-link-19 tag-link-position-30" style="font-size: 8pt;" aria-label="Opera (1 item)">Opera</a></li>
+	<li><a href="/tag/pasonatech" class="tag-cloud-link tag-link-291 tag-link-position-31" style="font-size: 11.230769230769pt;" aria-label="PasonaTech (3 items)">PasonaTech</a></li>
+	<li><a href="/tag/perl" class="tag-cloud-link tag-link-214 tag-link-position-32" style="font-size: 12.307692307692pt;" aria-label="Perl (4 items)">Perl</a></li>
+	<li><a href="/tag/php" class="tag-cloud-link tag-link-115 tag-link-position-33" style="font-size: 9.9384615384615pt;" aria-label="PHP (2 items)">PHP</a></li>
+	<li><a href="/tag/portfolio" class="tag-cloud-link tag-link-293 tag-link-position-34" style="font-size: 12.307692307692pt;" aria-label="Portfolio (4 items)">Portfolio</a></li>
+	<li><a href="/tag/security" class="tag-cloud-link tag-link-194 tag-link-position-35" style="font-size: 9.9384615384615pt;" aria-label="Security (2 items)">Security</a></li>
+	<li><a href="/tag/software" class="tag-cloud-link tag-link-330 tag-link-position-36" style="font-size: 11.230769230769pt;" aria-label="Software (3 items)">Software</a></li>
+	<li><a href="/tag/sports" class="tag-cloud-link tag-link-309 tag-link-position-37" style="font-size: 9.9384615384615pt;" aria-label="Sports (2 items)">Sports</a></li>
+	<li><a href="/tag/ubuntu" class="tag-cloud-link tag-link-267 tag-link-position-38" style="font-size: 9.9384615384615pt;" aria-label="Ubuntu (2 items)">Ubuntu</a></li>
+	<li><a href="/tag/vim" class="tag-cloud-link tag-link-251 tag-link-position-39" style="font-size: 12.307692307692pt;" aria-label="Vim (4 items)">Vim</a></li>
+	<li><a href="/tag/vmware" class="tag-cloud-link tag-link-273 tag-link-position-40" style="font-size: 9.9384615384615pt;" aria-label="VMware (2 items)">VMware</a></li>
+	<li><a href="/tag/windows" class="tag-cloud-link tag-link-234 tag-link-position-41" style="font-size: 12.307692307692pt;" aria-label="Windows (4 items)">Windows</a></li>
+	<li><a href="/tag/wordpress" class="tag-cloud-link tag-link-299 tag-link-position-42" style="font-size: 9.9384615384615pt;" aria-label="WordPress (2 items)">WordPress</a></li>
+	<li><a href="/tag/xampp" class="tag-cloud-link tag-link-67 tag-link-position-43" style="font-size: 13.923076923077pt;" aria-label="XAMPP (6 items)">XAMPP</a></li>
+	<li><a href="/tag/xhtml" class="tag-cloud-link tag-link-8 tag-link-position-44" style="font-size: 12.307692307692pt;" aria-label="XHTML (4 items)">XHTML</a></li>
+	<li><a href="/tag/%e6%9b%b8%e8%a9%95" class="tag-cloud-link tag-link-56 tag-link-position-45" style="font-size: 9.9384615384615pt;" aria-label="書評 (2 items)">書評</a></li>
+</ul>
+</div>
+</aside><aside id="archives-3" class="widget widget_archive"><h3 class="widget-title">Archives</h3>
+			<ul>
+					<li>
+<a href="/2022/01">January 2022</a>&nbsp;(1)</li>
+	<li>
+<a href="/2021/01">January 2021</a>&nbsp;(1)</li>
+	<li>
+<a href="/2020/11">November 2020</a>&nbsp;(1)</li>
+	<li>
+<a href="/2020/06">June 2020</a>&nbsp;(1)</li>
+	<li>
+<a href="/2020/02">February 2020</a>&nbsp;(1)</li>
+	<li>
+<a href="/2019/09">September 2019</a>&nbsp;(1)</li>
+	<li>
+<a href="/2018/05">May 2018</a>&nbsp;(1)</li>
+	<li>
+<a href="/2017/08">August 2017</a>&nbsp;(2)</li>
+	<li>
+<a href="/2017/07">July 2017</a>&nbsp;(1)</li>
+	<li>
+<a href="/2017/05">May 2017</a>&nbsp;(2)</li>
+	<li>
+<a href="/2017/04">April 2017</a>&nbsp;(3)</li>
+	<li>
+<a href="/2016/04">April 2016</a>&nbsp;(1)</li>
+	<li>
+<a href="/2015/11">November 2015</a>&nbsp;(1)</li>
+	<li>
+<a href="/2015/08">August 2015</a>&nbsp;(1)</li>
+	<li>
+<a href="/2015/07">July 2015</a>&nbsp;(4)</li>
+	<li>
+<a href="/2015/06">June 2015</a>&nbsp;(1)</li>
+	<li>
+<a href="/2015/04">April 2015</a>&nbsp;(1)</li>
+	<li>
+<a href="/2015/01">January 2015</a>&nbsp;(1)</li>
+	<li>
+<a href="/2014/09">September 2014</a>&nbsp;(1)</li>
+	<li>
+<a href="/2014/04">April 2014</a>&nbsp;(3)</li>
+	<li>
+<a href="/2014/03">March 2014</a>&nbsp;(2)</li>
+	<li>
+<a href="/2013/11">November 2013</a>&nbsp;(1)</li>
+	<li>
+<a href="/2013/08">August 2013</a>&nbsp;(1)</li>
+	<li>
+<a href="/2013/06">June 2013</a>&nbsp;(1)</li>
+	<li>
+<a href="/2013/04">April 2013</a>&nbsp;(2)</li>
+	<li>
+<a href="/2013/02">February 2013</a>&nbsp;(1)</li>
+	<li>
+<a href="/2013/01">January 2013</a>&nbsp;(1)</li>
+	<li>
+<a href="/2012/12">December 2012</a>&nbsp;(2)</li>
+	<li>
+<a href="/2012/11">November 2012</a>&nbsp;(2)</li>
+	<li>
+<a href="/2012/07">July 2012</a>&nbsp;(1)</li>
+	<li>
+<a href="/2012/06">June 2012</a>&nbsp;(1)</li>
+	<li>
+<a href="/2012/02">February 2012</a>&nbsp;(1)</li>
+	<li>
+<a href="/2012/01">January 2012</a>&nbsp;(1)</li>
+	<li>
+<a href="/2011/12">December 2011</a>&nbsp;(1)</li>
+	<li>
+<a href="/2011/11">November 2011</a>&nbsp;(1)</li>
+	<li>
+<a href="/2011/08">August 2011</a>&nbsp;(1)</li>
+	<li>
+<a href="/2011/06">June 2011</a>&nbsp;(2)</li>
+	<li>
+<a href="/2011/04">April 2011</a>&nbsp;(1)</li>
+	<li>
+<a href="/2011/01">January 2011</a>&nbsp;(1)</li>
+	<li>
+<a href="/2010/09">September 2010</a>&nbsp;(2)</li>
+	<li>
+<a href="/2010/07">July 2010</a>&nbsp;(2)</li>
+	<li>
+<a href="/2010/06">June 2010</a>&nbsp;(1)</li>
+	<li>
+<a href="/2010/05">May 2010</a>&nbsp;(2)</li>
+	<li>
+<a href="/2010/04">April 2010</a>&nbsp;(1)</li>
+	<li>
+<a href="/2010/03">March 2010</a>&nbsp;(3)</li>
+	<li>
+<a href="/2010/02">February 2010</a>&nbsp;(1)</li>
+	<li>
+<a href="/2010/01">January 2010</a>&nbsp;(4)</li>
+	<li>
+<a href="/2009/12">December 2009</a>&nbsp;(4)</li>
+	<li>
+<a href="/2009/11">November 2009</a>&nbsp;(3)</li>
+	<li>
+<a href="/2009/10">October 2009</a>&nbsp;(2)</li>
+	<li>
+<a href="/2009/09">September 2009</a>&nbsp;(2)</li>
+	<li>
+<a href="/2009/08">August 2009</a>&nbsp;(4)</li>
+	<li>
+<a href="/2009/07">July 2009</a>&nbsp;(2)</li>
+	<li>
+<a href="/2009/06">June 2009</a>&nbsp;(6)</li>
+	<li>
+<a href="/2009/05">May 2009</a>&nbsp;(4)</li>
+	<li>
+<a href="/2009/03">March 2009</a>&nbsp;(1)</li>
+	<li>
+<a href="/2009/02">February 2009</a>&nbsp;(2)</li>
+	<li>
+<a href="/2009/01">January 2009</a>&nbsp;(1)</li>
+	<li>
+<a href="/2008/12">December 2008</a>&nbsp;(7)</li>
+	<li>
+<a href="/2008/11">November 2008</a>&nbsp;(4)</li>
+	<li>
+<a href="/2008/10">October 2008</a>&nbsp;(4)</li>
+	<li>
+<a href="/2008/09">September 2008</a>&nbsp;(3)</li>
+	<li>
+<a href="/2008/08">August 2008</a>&nbsp;(2)</li>
+	<li>
+<a href="/2008/06">June 2008</a>&nbsp;(2)</li>
+	<li>
+<a href="/2008/05">May 2008</a>&nbsp;(1)</li>
+	<li>
+<a href="/2008/04">April 2008</a>&nbsp;(6)</li>
+	<li>
+<a href="/2008/02">February 2008</a>&nbsp;(4)</li>
+	<li>
+<a href="/2008/01">January 2008</a>&nbsp;(3)</li>
+	<li>
+<a href="/2007/12">December 2007</a>&nbsp;(3)</li>
+	<li>
+<a href="/2007/11">November 2007</a>&nbsp;(4)</li>
+	<li>
+<a href="/2007/10">October 2007</a>&nbsp;(1)</li>
+	<li>
+<a href="/2007/09">September 2007</a>&nbsp;(2)</li>
+	<li>
+<a href="/2007/08">August 2007</a>&nbsp;(2)</li>
+	<li>
+<a href="/2007/07">July 2007</a>&nbsp;(2)</li>
+	<li>
+<a href="/2007/06">June 2007</a>&nbsp;(1)</li>
+	<li>
+<a href="/2007/05">May 2007</a>&nbsp;(5)</li>
+	<li>
+<a href="/2007/04">April 2007</a>&nbsp;(9)</li>
+	<li>
+<a href="/2007/03">March 2007</a>&nbsp;(6)</li>
+			</ul>
+
+			</aside>    <!--/#secondary .widget-area-->
+</div>
+
+  <!--/.row-->
+</div>
+<!--/.container area_bd-->
+</div>
+<footer class="area_ft">
+<div class="container">
+<p class="copyright"><small>&copy; All writing by <a href="/about">Naoki Sekiguchi</a>.</small>
+<small>Design framework by <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>.</small>
+<small>Social icons by <a href="http://icondock.com/free/vector-social-media-icons">IconDock.com</a>.</small></p>
+<!--/.container-->
+</div>
+<!--/.area_ft--></footer>
+
+</body>
+</html>

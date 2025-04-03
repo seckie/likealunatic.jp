@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>LineNumberWriter &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/linenumberwriter/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>LineNumberWriter &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>LineNumberWriterを0.4にバージョンアップ</title>
+		<link>/2009/06/16_linenumberwriter04</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 16 Jun 2009 04:56:11 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[LineNumberWriter]]></category>
+		<guid isPermaLink="false">/wptest/2009/06/linenumberwriter%e3%82%920-4%e3%81%ab%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%82%a2%e3%83%83%e3%83%97.php</guid>
+
+					<description><![CDATA[1年以上放置していたので今更感がありますが、LineNumberWriterをバージョンアップしました。今回から、変換対象のコード内でタグが使えるようになります。例えば以下のように、strong要素やspan要素などを挿入することが可能です。（※） &#60;strong&#62;で囲んでみました &#60;span style=&#34;color:#F33;&#34;&#62;で囲んでみました ※もちろん(X)HTMLの文法的にcode要素に含められない内容（ブロック要素など）は含めちゃダメですよ。 今度Sugamo.cssという企画に参加することにしたので、何かプライベートワークをやっていかなきゃいけないような気になり、とりあえずコレのバージョンアップでも、と着手しました。 実は前からタグが使えるようにしたくてちょくちょくいじってはいたんですが、IEの独自仕様でまた色々とつまづいてしまい、挫折しちゃってたんです。でもまぁ最近、良いアイデアが浮かんだのでどうにか形になった、という。 ダウンロードしようなどという奇特な方はこちらからどうぞ。]]></description>
+										<content:encoded><![CDATA[<p>1年以上放置していたので今更感がありますが、<a href="/2008/04/04_linenumberwriter.php">LineNumberWriter</a>をバージョンアップしました。今回から、変換対象のコード内でタグが使えるようになります。例えば以下のように、<code>strong</code>要素や<code>span</code>要素などを挿入することが可能です。（※）</p>
+
+<pre><code><strong>&lt;strong&gt;で囲んでみました</strong>
+<span style="color:#F33">&lt;span style=&quot;color:#F33;&quot;&gt;で囲んでみました</span></code></pre>
+
+<p>※もちろん(X)HTMLの文法的にcode要素に含められない内容（ブロック要素など）は含めちゃダメですよ。</p>
+
+<p>今度<a href="http://archiva.jp/web/sugamo_css/sugamo_css.html">Sugamo.css</a>という企画に参加することにしたので、何かプライベートワークをやっていかなきゃいけないような気になり、とりあえずコレのバージョンアップでも、と着手しました。<br />
+実は前からタグが使えるようにしたくてちょくちょくいじってはいたんですが、IEの独自仕様でまた色々とつまづいてしまい、挫折しちゃってたんです。でもまぁ最近、良いアイデアが浮かんだのでどうにか形になった、という。</p>
+
+<p><a href="/2008/04/04_linenumberwriter.php">ダウンロードしようなどという奇特な方はこちらからどうぞ。</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>LineNumberWriter開発メモ</title>
+		<link>/2008/04/05_linenumberwriter</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sat, 05 Apr 2008 09:59:09 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[LineNumberWriter]]></category>
+		<guid isPermaLink="false">/wptest/2008/04/linenumberwriter%e9%96%8b%e7%99%ba%e3%83%a1%e3%83%a2.php</guid>
+
+					<description><![CDATA[LineNumberWriterを作るに当たって気づいた点やその他補足など。自分で書いていて改めて気付きましたけど、かなりの欠陥品です...orz <a href="/2008/04/05_linenumberwriter">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/2008/04/04_linenumberwriter.php">LineNumberWriter</a>を作るに当たって気づいた点やその他補足など。自分で書いていて改めて気付きましたけど、かなりの欠陥品です&#8230;orz</p>
+
+<div class="section">
+<h3>基本設計</h3>
+<p>行番号を振るための処理は、基本的に<a href="http://code.google.com/p/syntaxhighlighter/">syntaxhighlithter.js</a>とほとんど同じ。というか、syntaxhighlighter.jsを参考にして作りました。</p>
+<p>処理の流れとしては、</p>
+<ol class="decimallist">
+<li>まずページ内に&lt;pre&gt;&lt;code&gt;とマークアップされている部分を取得します。</li>
+<li><del datetime="2008-04-07T22:29+09:00" title="2008年4月7日 削除">それら個々を&lt;ol&gt;&lt;li&gt;番号順リストのマークアップに変換します。</del><ins datetime="2008-04-07T22:29+09:00" title="2008年4月7日 追記">それら個々を&lt;ol&gt;&lt;li&gt;番号順リストのマークアップに変換したものと、そのままのもの（プレーンテキスト）、それぞれ二つづつを生成します。プレーンテキストの方はデフォルトで非表示にします</ins></li>
+<li>奇数行と偶数行のli要素それぞれに別のclass属性値を設定します。</li>
+<li><ins datetime="2008-04-07T22:29+09:00" title="2008年4月7日 追記">変換後のコードとプレーンテキストとを切り替えるヘッダー部分を生成します。</ins></li>
+<li><del datetime="2008-04-07T22:29+09:00" title="2008年4月7日 削除">最後にdiv要素で包みます（後でスタイルを整える都合）。</del><ins datetime="2008-04-07T22:29+09:00" title="2008年4月7日 追記">最後にこれらをdiv要素内に書き出し、元の&lt;pre&gt;&lt;code&gt;部分と差し替えます。</ins></li>
+</ol>
+<pre><code>&lt;pre&gt;&lt;code&gt;function sample() {
+alert(&quot;sample&quot;);
+}&lt;/code&gt;&lt;/pre&gt;</code></pre>
+<p>これが</p>
+<pre><code>&lt;div class=&quot;LNW&quot;&gt;
+&lt;div class=&quot;header&quot; style=&quot;display:none&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;ctrl1&quot;&gt;with line number&lt;/a&gt;
+&lt;span class=&quot;ctrl2&quot;&gt;plain text&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;header&quot;&gt;
+&lt;span class=&quot;ctrl1&quot;&gt;with line number&lt;/span&gt;
+&lt;a href=&quot;#&quot; class=&quot;ctrl2&quot;&gt;plain text&lt;/a&gt;
+&lt;/div&gt;
+&lt;ol&gt;
+&lt;li class=&quot;odd&quot;&gt;function&amp;nbsp;sample()&amp;nbsp;{&lt;/li&gt;
+&lt;li class=&quot;even&quot;&gt;&amp;nbsp;&amp;nbsp;alert(&amp;quot;sample&amp;quot;);&lt;/li&gt;
+&lt;li class=&quot;odd&quot;&gt;}&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre style=&quot;display:none&quot;&gt;&lt;code&gt;function sample() {
+alert(&quot;sample&quot;);
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</code></pre>
+<p>こうなります。</p>
+</div>
+
+<p><span id="more-46"></span></p>
+
+<div class="section">
+<h3>改行をどうやって拾うか</h3>
+<p>取得したDOM要素のinnerHTMLプロパティから拾えれば全く問題なかったんです。innerHTMLから改行を拾う処理はこんな感じ。</p>
+<pre><code>var str = codeElement.innerHTML;
+str = str.replace(/\r?\n/g, "\r");</code></pre>
+<p>で、splitメソッドで分割して、li要素に突っ込んでいけばOKと思っていました。</p>
+<pre><code>var line = str.split("\r");
+var i,l,li;
+for(i=0,l=line.length; i&lt;l; i++) {
+li = document.createElement("li");
+li.innerHTML = line[i];
+}</code></pre>
+<p>ところが、、WinIEがどうやっても改行を拾ってくれません。innerHTMLにした瞬間に全部改行が消えてしまう・・・！</p>
+<p>そこで、取得した要素のコード部分をテキストノードとして拾い、そのnodeValueから拾ったら、うまくいきました。ただしこのやり方だと、テキストノード以外のノード（要素ノードとか）が混じっていると処理が複雑になりすぎてしまう・・・。ここで壁にぶち当たります。</p>
+<p>「今の自分にはこりゃ作れない」という気になってきたので気分を切り替え、そういう仕様と割り切っていっそのこと<em>タグを使用不可にすればいいじゃん</em>と考えました。取得したDOM要素内には常にテキストノードだけが入っている状態なら良いわけですから。</p>
+</div>
+
+<div class="section">
+<h3>Safariのヘンなところ発見</h3>
+<p>コードの一行目に含まれているのが改行のみの場合、Safariがその改行を拾ってくれません。一行目が改行だけってシチュエーションがまずないので、これもスルーしています。</p>
+<p>次のようになるべきコードが</p>
+<pre><code>  &lt;ol&gt;
+&lt;li class=&quot;odd&quot;&gt;&lt;/li&gt;
+&lt;li class=&quot;even&quot;&gt;function&amp;nbsp;sample()&amp;nbsp;{&lt;/li&gt;
+&lt;li class=&quot;odd&quot;&gt;&amp;nbsp;&amp;nbsp;alert(&amp;quot;sample&amp;quot;);&lt;/li&gt;
+&lt;li class=&quot;even&quot;&gt;}&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+<p>Safariでは次のようになります。</p>
+<pre><code>  &lt;ol&gt;
+&lt;li class=&quot;odd&quot;&gt;function&amp;nbsp;sample()&amp;nbsp;{&lt;/li&gt;
+&lt;li class=&quot;even&quot;&gt;&amp;nbsp;&amp;nbsp;alert(&amp;quot;sample&amp;quot;);&lt;/li&gt;
+&lt;li class=&quot;odd&quot;&gt;}&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+</div>
+
+<div class="section">
+<h3>ブラウザ振り分け処理</h3>
+<p>WinIEだけ別処理にしたいので振り分けます。確かWinIEだけ実装している、document.allオブジェクトを利用してみました。が、Operaもひっかかってきた（Operaもdocument.allを実装していた）ので、Operaだけが実装しているwindow.operaオブジェクトをさらに利用します。</p>
+<pre><code>if(document.all &amp;&amp; !window.opera) {
+WinIE用の処理
+} else {
+その他のブラウザ用の処理
+}</code></pre>
+<p>ホントはもっとスマートなやり方があると思います・・・。</p>
+</div>
+
+<div class="section">
+<h3>半角スペースの変換問題</h3>
+<p>いっぽう、WinIE以外のブラウザではinnerHTMLから改行が拾えるからタグ使えるんじゃね？と思っていたら、別の問題にぶち当たりました。次に問題となったのは半角スペースです。</p>
+<p>まず前提として、コードのインデントなどに使われる半角スペースを拾い、&amp;nbsp;へと変換する処理を行っています。タグに属性値をセットしている場合、この処理で属性名前の半角スペースを拾われてしまい、ヘンテコな状態に変換されてしまいました。</p>
+<pre><code>sample text
+&lt;a href=&quot;sample.html&quot;&gt;sample text&lt;/a&gt;
+sample text</code></pre>
+<p>これが</p>
+<pre><code>sample&amp;nbsp;text
+&amp;nbsp;&amp;nbsp;&lt;a&amp;nbsp;href=&quot;sample.html&quot;&gt;sample&amp;nbsp;text&lt;/a&gt;
+&amp;nbsp;&amp;nbsp;sample&amp;nbsp;text</code></pre>
+<p>こうなっちゃいました。<br />
+というわけで、結局タグは使えない仕様で行くことに決定。</p>
+</div>
+
+<div class="section">
+<h3>CSSでも&#8230;</h3>
+<p>CSSを書く段階になってもWinIEに苦しめられます。</p>
+<p>横に長いコードを詰め込んだときにスクロールバーを出すためにoverflow:autoを設定するわけですが、スクロールバーが出た状態のWinIEがとてもヘン。それから、ol要素にoverflow設定をするとIE6で幅がヘンなことに。syntaxhighlighter.jsを参考に、全体をdiv要素で包み、そちらにoverflow設定をするこにしました。</p>
+<p>また、横スクロールバーが出た際にWinIEは、スクロールバーの高さ分をそのボックスの高さに含めてしまう模様。そしてそのせいで、横スクロールバーが出ると同時に、縦スクロールバーも出てしまう・・・。</p>
+<p>横長なコードのくせに1行か2行しかない場合が最悪で、コードが横スクロールバーに隠れてしまい、ロクに見ることができなくなってしまいます。これはお話にならない！というわけでWinIEだけハックで下paddingを設定し、スクロールバー分の高さを稼ぎました。これによって縦スクロールバーが出なくなり、コードの閲覧性は上がりました。が、スクロールバーが出た時に下marginが狭くなるという副作用が・・・。もうここでお手上げとなりました。</p>
+</div>
+
+<p>CSSが書ける方であれば、linenumberwriter.cssのソースコードをいじれば、変換後のスタイルを自由に変更できます。お気に入りのスタイルにどうぞ。</p>
+
+<p><del datetime="2008-04-07T22:29+09:00" title="2008年4月7日 削除">div.LNWの上下のmargin、color、font-size辺り、それから各要素のbackground-colorやborder辺りがいじりどころだと思います。</del><ins datetime="2008-04-07T22:29+09:00" title="2008年4月7日 追記">0.2にバージョンアップするに当たり、CSSも大分見直しました。</ins></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>LineNumberWriter &#8211; syntaxhighlighter風のJavaScriptを書いてみた</title>
+		<link>/2008/04/04_linenumberwriter</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Fri, 04 Apr 2008 13:46:29 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[LineNumberWriter]]></category>
+		<guid isPermaLink="false">/wptest/2008/04/linenumberwriter-syntaxhighlighter%e9%a2%a8%e3%81%aejavascript%e3%82%92%e6%9b%b8%e3%81%84%e3%81%a6%e3%81%bf%e3%81%9f.php</guid>
+
+					<description><![CDATA[サンプルコードを装飾するSyntaxHighlighter風のJavaScriptを書いてみました。行番号が付き、1行おきに背景色が付くというだけのものですので、syntaxはhighlightされません。よって、SyntaxHighlighterとは名乗れないので、LineNumberWriterと名乗ることにします。 <a href="/2008/04/04_linenumberwriter">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>最近いろんなところで見かけるようになった<a href="http://code.google.com/p/syntaxhighlighter/">syntaxhighlighter.js</a>。文法が分かりやすいようにコードがカラーリングされ、行番号が付いてとてもコードが見やすいです。導入を検討しようかと思ったのですが、(X)HTML的に文法違反になるのは許せないなーと思い、違った形のものをJavaScriptで書いてみました。当サイトに導入済みです。次のような見た目になります。</p>
+
+<pre><code>function sample() {
+alert(&quot;sample&quot;);
+}</code></pre>
+
+<p>ただし、私が作ったのはSyntaxHighlighterではありません。<em>行番号が付き</em>、<em>1行おきに背景色が付く</em>だけのものです。<em>syntaxはhighlightされません</em>。よって、SyntaxHighlighterとは名乗れないので、<strong>LineNumberWriter</strong>と名乗ることにします（これ、果たして妥当な英語なんでしょうか・・・）。</p>
+
+<p>もし使ってみたいという方がおりましたらご自由に使ってみてくださいまし。下記リンクからzipファイルでダウンロードできます。</p>
+
+<p><a href="/lib/linenumberwriter_0.4.1.zip" onclick="pageTracker._trackPageview('/downloads/linenumberwriter_041');"><strong title="2009-10-15">linenumberlighter Ver.0.4.1</strong></a></p>
+
+<p><del datetime="2009-06-16">勢いで作ったものなので、バージョンは0.1ということにします。それから一応、</del>ライセンスは<a href="http://www.opensource.org/licenses/mit-license.php">MITライセンス</a>としておきますね。<ins datetime="2008-04-05">（2008年4月5日追記）<a href="/2008/04/04_linenumberwriter.php#LNWupdate">更新履歴</a>を付けるようにしました。</ins></p>
+
+<p><span id="more-45"></span></p>
+
+<div class="section">
+<h3>動作確認済みブラウザ</h3>
+<ul class="disclist">
+<li>Windows IE6 / 7 / <ins datetime="2009-06-16" title="2009年6月16日 追記">8</ins></li>
+<li>Windows Firefox2 / <ins datetime="2009-06-16" title="2009年6月16日 追記">3</ins></li>
+<li>Windows Opera<ins datetime="2009-06-16" title="2009年6月16日 追記">9.6</ins></li>
+<li><ins datetime="2008-04-07" title="2008年4月7日 追記">Windows Safari3.1</ins></li>
+<li><ins datetime="2009-06-16" title="2009年6月16日 追記">Windows Google Chrome2</ins></li>
+<li>Mac Safari3</li>
+<li>Mac Firefox2 / <ins datetime="2009-06-16" title="2009年6月16日 追記">3</ins></li>
+<li>Mac Opera<ins datetime="2009-06-16" title="2009年6月16日 追記">9.6</ins></li>
+</ul>
+</div>
+
+<div class="section">
+<h3>使い方</h3>
+<p>ダウンロードしたzipファイルを解凍すると、<em>linenumberwriter.js</em>と<em>linenumberwriter.css</em>が入っています。この2つを両方とも(X)HTMLファイルから読み込んでください。例えば次のようなコードをhead要素内に記述し、呼び出します。</p>
+<pre><code>&lt;script type="text/javascript" src="/js/linenumberwriter.js"&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/linenumberwriter.css&quot; media=&quot;screen,projection&quot; /&gt;</code></pre>
+<p>前項JSを呼び出した後で、<code>window.onload</code>イベントなどで<code>LNW.write();</code>というメソッドを呼び出してあげます。（その他にも<code>window.onload</code>イベントで呼び出しているメソッドがあったら、イベントを上書きしないようご注意ください）</p>
+<pre><code>window.onload = function() {
+LNW.write();
+}</code></pre>
+<p>(X)HTML内の<em><code>&lt;pre&gt;&lt;code&gt;</code>から<code>&lt;/code&gt;&lt;pre&gt;</code>まででマークアップされているコードが自動的に変換の対象となります</em>。</p>
+</div>
+
+<div class="section">
+<h3>使用上の注意&amp;既知の不具合</h3>
+<ul class="disclist-comment">
+<li>現在の仕様では<code>&lt;pre&gt;&lt;code&gt;</code>でマークアップしてしまうと、強制的に変換対象となってしまいますので、ページ内で例外的なスタイルを作れません。</li>
+<li><del datetime="2009-06-16"><code>&lt;pre&gt;&lt;code&gt;</code>内では<strong>タグが使えません</strong>。具体的には<em>コードの一部をstrong要素で強調する</em>といった使い方や、<em>コードの一部をspan要素でマークアップして色を付ける</em>といった使い方はできません。これも仕様です。<br />
+もしタグを使ってしまうと一部コードが非表示になってしまうなどして、表示が崩れます。</del><br />
+<ins datetime="2009-06-16" title="2009年6月16日 追記">0.4にアップデートするに当たり、<code>&lt;pre&gt;&lt;code&gt;</code>内でタグが使用できるようになりました。</ins></li>
+<li>一行目に改行のみが含まれている場合、Safariではその改行を拾ってくれません。</li>
+<li>コードが表示エリアをはみ出した場合、スクロールバーが表示されますが、行の背景色がはみ出した部分に付きません。</li>
+<li>IEではスクロールバーが表示されてしまうと、いろいろとヘンなことに・・・（それをハックでごまかしています。。）</li>
+</ul>
+</div>
+
+<div class="section">
+<h3><a name="LNWupdate" id="LNWupdate">更新履歴</a></h3>
+<ul>
+<li><ins datetime="2009-10-15">2009年10月15日 &#8211; 0.4.1にアップデート<br />
+空白行が「nbsp;」と出力されてしまう不具合を修正しました。</ins></li>
+<li><ins datetime="2009-06-16">2009年6月16日 &#8211; 0.4にアップデート<br />
+変換対象内（<code>&lt;pre&gt;&lt;code&gt;</code>内）でタグを使えるようにしました。コードの一部をstrong要素で強調したり、span要素で囲んで特定のスタイルを適用するといったことが可能となります。</ins></li>
+<li><ins datetime="2008-04-07">2008年4月7日 &#8211; 0.2にアップデート<br />
+タブっぽいリンクをクリックすることによって、プレーンテキストと切り替えられるようにしました。Firefoxでコードをコピペした時にリストマーカー部分がくっついてくるのが鬱陶しかったため、この機能をつけました。Firefoxではコピペしたい時は、プレーンテキストに切り替えてからコピペしましょう。</ins></li>
+<li><ins datetime="2008-04-05">2008年4月5日 &#8211; 0.1.1にアップデート<br />
+WinIEで&amp;（アンパサンド）の変換処理がおかしかった点を修正しました。</ins></li>
+</ul>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

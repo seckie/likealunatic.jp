@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: 「JavaScript&#038;Ajax プロが教える“本当の使い方”」の一部を執筆しました	</title>
+	<atom:link href="/2009/08/javascriptajax/feed" rel="self" type="application/rss+xml" />
+	<link>/2009/08/javascriptajax</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:17 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: Naoki Sekiguchi		</title>
+		<link>/2009/08/javascriptajax/comment-page-1#comment-49</link>
+
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2009 13:25:45 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2009/08/%e3%80%8cjavascriptajax-%e3%83%97%e3%83%ad%e3%81%8c%e6%95%99%e3%81%88%e3%82%8b%e2%80%9c%e6%9c%ac%e5%bd%93%e3%81%ae%e4%bd%bf%e3%81%84%e6%96%b9%e2%80%9d%e3%80%8d%e3%81%ae%e4%b8%80%e9%83%a8%e3%82%92.php#comment-49</guid>
+
+					<description><![CDATA[&lt;p&gt;はじめまして。コメントありがとうございます。
+本書にCDはついておりませんが、ウェブから作例データをダウンロードすることができます。
+作例とその解説が主な内容となっており、以下のページなどからページの一部を見ることができます。
+&lt;a href=&quot;http://www.mdn.co.jp/content/view/9096/&quot; rel=&quot;nofollow&quot;&gt;http://www.mdn.co.jp/content/view/9096/&lt;/a&gt;
+&lt;a href=&quot;http://direct.ips.co.jp/book/Template/Goods/go_Bookstempmdn.cfm?GM_ID=6059&amp;SPM_ID=2&amp;CM_ID=004053034&amp;PM_No=&amp;PM_Class=&amp;HN_NO=&quot; rel=&quot;nofollow&quot;&gt;http://direct.ips.co.jp/book/Template/Goods/go_Bookstempmdn.cfm?GM_ID=6059&#038;SPM_ID=2&#038;CM_ID=004053034&#038;PM_No=&#038;PM_Class=&#038;HN_NO=&lt;/a&gt;
+具体的な回答をすることができませんが、参考となれば幸いです。&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>はじめまして。コメントありがとうございます。
+本書にCDはついておりませんが、ウェブから作例データをダウンロードすることができます。
+作例とその解説が主な内容となっており、以下のページなどからページの一部を見ることができます。
+<a href="http://www.mdn.co.jp/content/view/9096/" rel="nofollow">http://www.mdn.co.jp/content/view/9096/</a>
+<a href="http://direct.ips.co.jp/book/Template/Goods/go_Bookstempmdn.cfm?GM_ID=6059&#038;SPM_ID=2&#038;CM_ID=004053034&#038;PM_No=&#038;PM_Class=&#038;HN_NO=" rel="nofollow">http://direct.ips.co.jp/book/Template/Goods/go_Bookstempmdn.cfm?GM_ID=6059&#038;SPM_ID=2&#038;CM_ID=004053034&#038;PM_No=&#038;PM_Class=&#038;HN_NO=</a>
+具体的な回答をすることができませんが、参考となれば幸いです。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: yamasyu		</title>
+		<link>/2009/08/javascriptajax/comment-page-1#comment-48</link>
+
+		<dc:creator><![CDATA[yamasyu]]></dc:creator>
+		<pubDate>Mon, 09 Nov 2009 13:54:52 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2009/08/%e3%80%8cjavascriptajax-%e3%83%97%e3%83%ad%e3%81%8c%e6%95%99%e3%81%88%e3%82%8b%e2%80%9c%e6%9c%ac%e5%bd%93%e3%81%ae%e4%bd%bf%e3%81%84%e6%96%b9%e2%80%9d%e3%80%8d%e3%81%ae%e4%b8%80%e9%83%a8%e3%82%92.php#comment-48</guid>
+
+					<description><![CDATA[&lt;p&gt;はじめまして、WebデザイナーかけだしのYamasyuと申します。JavaScript＆Ajaxを極めたいと思ってますが、なかなか
+覚える時間がとれないのが現状ですが、それでも所々つかいたいと思い、書籍を探してる所だったので目に付きました。
+正直、評価を参考に購入するつもりだったのですが、参考にする評価がないので迷ってます。CDは付いてないのですね？
+ちょっと質問ですがFlashの作品をjpg画像みたいに応用してAjaxで制御する解説はかいてありますでしょうか？&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>はじめまして、WebデザイナーかけだしのYamasyuと申します。JavaScript＆Ajaxを極めたいと思ってますが、なかなか
+覚える時間がとれないのが現状ですが、それでも所々つかいたいと思い、書籍を探してる所だったので目に付きました。
+正直、評価を参考に購入するつもりだったのですが、参考にする評価がないので迷ってます。CDは付いてないのですね？
+ちょっと質問ですがFlashの作品をjpg画像みたいに応用してAjaxで制御する解説はかいてありますでしょうか？</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Naoki Sekiguchi		</title>
+		<link>/2009/08/javascriptajax/comment-page-1#comment-47</link>
+
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Sat, 29 Aug 2009 16:06:43 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2009/08/%e3%80%8cjavascriptajax-%e3%83%97%e3%83%ad%e3%81%8c%e6%95%99%e3%81%88%e3%82%8b%e2%80%9c%e6%9c%ac%e5%bd%93%e3%81%ae%e4%bd%bf%e3%81%84%e6%96%b9%e2%80%9d%e3%80%8d%e3%81%ae%e4%b8%80%e9%83%a8%e3%82%92.php#comment-47</guid>
+
+					<description><![CDATA[&lt;p&gt;先日のCSS Niteではどうもでした。
+ご購入ありがとうございます???！
+少しでもこの書籍がkikuchiさんの助けになれば幸いです！&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>先日のCSS Niteではどうもでした。
+ご購入ありがとうございます???！
+少しでもこの書籍がkikuchiさんの助けになれば幸いです！</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: kikuchi		</title>
+		<link>/2009/08/javascriptajax/comment-page-1#comment-46</link>
+
+		<dc:creator><![CDATA[kikuchi]]></dc:creator>
+		<pubDate>Tue, 25 Aug 2009 07:00:27 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2009/08/%e3%80%8cjavascriptajax-%e3%83%97%e3%83%ad%e3%81%8c%e6%95%99%e3%81%88%e3%82%8b%e2%80%9c%e6%9c%ac%e5%bd%93%e3%81%ae%e4%bd%bf%e3%81%84%e6%96%b9%e2%80%9d%e3%80%8d%e3%81%ae%e4%b8%80%e9%83%a8%e3%82%92.php#comment-46</guid>
+
+					<description><![CDATA[&lt;p&gt;お久しぶりです。品川近辺にいたkikuchiです。
+書籍、購入しました?。
+（購入したあと、このサイトに来て見てビックリ。）
+参考にさせていただきます！&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>お久しぶりです。品川近辺にいたkikuchiです。
+書籍、購入しました?。
+（購入したあと、このサイトに来て見てビックリ。）
+参考にさせていただきます！</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

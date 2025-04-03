@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Yahoo! &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/yahoo/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:40 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Yahoo! &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>リダイレクト手法まとめ</title>
+		<link>/2007/10/21_redirect</link>
+					<comments>/2007/10/21_redirect#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 21 Oct 2007 02:26:52 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[Redirect]]></category>
+		<category><![CDATA[Yahoo!]]></category>
+		<guid isPermaLink="false">/wptest/2007/10/%e3%83%aa%e3%83%80%e3%82%a4%e3%83%ac%e3%82%af%e3%83%88%e6%89%8b%e6%b3%95%e3%81%be%e3%81%a8%e3%82%81.php</guid>
+
+					<description><![CDATA[3つのリダイレクトの方法を取り上げてまとめてみました。
+(1)301リダイレクトと呼ばれる方法で、.httaccessを使うなどして行うもの。
+(2)HTMLの&#60;meta http-equiv="Refresh" ...&#62;を使う方法
+(3)JavaScriptのlocation.href、またはlocation.replace()を使う方法 <a href="/2007/10/21_redirect">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>サイト内でページを移設するとか、拡張子を変更するとか（html→php など）、ドメインを変えるとかいったことになると、旧<abbr title="Uniform Resource Locator">URL</abbr>から新<abbr title="Uniform Resource Locator">URL</abbr>への<strong>リダイレクト</strong>をするケースがあります。リダイレクトが必要とされるのは、旧<abbr title="Uniform Resource Locator">URL</abbr>を参照するユーザーに不便をかけないためだけではなく、検索エンジンのロボットに<abbr title="Uniform Resource Locator">URL</abbr>変更を通知するためという側面もあります。</p>
+
+<p>ここでは3つのリダイレクトの方法を取り上げてまとめてみました。</p>
+
+<ul class="method">
+<li><dfn>(1)</dfn><strong>301リダイレクト</strong>と呼ばれる方法で、<dfn>.httaccess</dfn>を使うなどして行うもの。</li>
+<li><dfn>(2)</dfn><abbr title="HyperText Markup Language">HTML</abbr>の<code>&lt;meta http-equiv="Refresh" ...&gt;</code>を使う方法</li>
+<li><dfn>(3)</dfn>JavaScriptの<code>location.href</code>、または<code>location.replace()</code>を使う方法</li>
+</ul>
+
+<div class="section">
+<p><dfn>(1)</dfn>はサーバー側<dfn>に.htaccess</dfn>を設置する方法です。具体的なコードは以下のようになります。</p>
+<pre><code>Redirect permanent /index.html /index.php
+Redirect permanent /about.html /about.php
+</code></pre>
+<p>これで/index.htmlにアクセスしようとした人は/index.php にリダイレクトされるようになります。/about.htmlについても同様。この例は実際に当サイトで使っているもので、ファイルの拡張子をhtmlからphpに変更した際のものです。このようにリダイレクトしたい分だけずらずらと行を増やしていけばOK。<br />
+<a href="http://www.google.com/support/webmasters/bin/answer.py?answer=48551">Googleでも</a> <a href="http://help.yahoo.co.jp/help/jp/search/indexing/indexing-08.html">Yahoo!でも</a>はこの方法が推奨されています。</p>
+</div>
+
+<div class="section">
+<p><dfn>(2)</dfn>は<abbr title="HyperText Markup Language">HTML</abbr>ファイルのヘッダーに直接書き込む方法です。head要素内に下記のようなコードを書けば良いだけです。簡単。</p>
+<pre><code>&lt;meta http-equiv=&quot;Refresh&quot; content=&quot;0; URL=/index.php&quot;&gt;</code></pre>
+<p>この例は /index.php に0秒後にリダイレクトする、ということになります。<br />
+ただし当然ながらこの手法は古い<abbr title="Uniform Resource Locator">URL</abbr>にリダイレクト用の<abbr title="HyperText Markup Language">HTML</abbr>を残しておかねばならないことになります。</p>
+<p>また、この方法は<a href="http://www.google.com/support/webmasters/bin/answer.py?answer=35157">Googleでは推奨されていないようです</a>。しかし<a href="http://help.yahoo.co.jp/help/jp/search/indexing/indexing-21.html">Yahoo!においては正当な手法としてきちんと言及されています。</a><br />
+この方法でリダイレクトした場合、ブラウザによってはリダイレクト用のページが履歴に残ってしまい、「戻る」ボタンを押した時の挙動がおかしくなる場合があります（「戻る」を押しても再度リダイレクトされてしまい、戻れない）。検証不足により「どのブラウザがこうなる」とは具体的に言えませんが、少し試した限りでは<abbr title="Internet Explorer">IE</abbr>7やOpera9はこの挙動になってしまうようです。<br />
+これについては似たようなことを実験しているページを発見したのでリンクを張っておきます……<a href="http://www.teria.com/~koseki/memo/referrer/">リファラ実験</a></p>
+</div>
+
+<div class="section">
+<p><dfn>(3)</dfn>はJavaScriptを使ってリダイレクトです。ただし<code>location.href</code>を使うと&quot;「戻る」ボタンで戻れない問題&quot;が発生しますので、履歴の残らない<code>location.replace()</code>の方がいいです（こちらでは戻れる）。こちらの手法も古い<abbr title="Uniform Resource Locator">URL</abbr>にリダイレクト用の<abbr title="Hyper Text Markup Laguage">HTML</abbr>ファイルを置いておかねばならないという点で、<dfn>(1)</dfn>に劣ります。<br />
+また、<a href="http://www.google.com/support/webmasters/bin/answer.py?answer=66355">GoogleではJavaScriptによるリンクをクロールできないことを明示しています。</a></p>
+<blockquote cite="http://www.google.com/support/webmasters/bin/answer.py?answer=66355">
+<p>Googlebot は JavaScript を含んでいるページもインデックスに登録しますが、JavaScript そのものに含まれているリンクをたどったりインデックスに登録することはできません。</p>
+</blockquote>
+<p>よってこのJavaScriptによるリダイレクトを使用する場合には、<dfn>(2)</dfn>のmeta要素による手法と併用したり、noscript要素で代替コンテンツを記述しておく必要があります。</p>
+</div>
+
+<p>以上3つの手法においてはダントツで<dfn>(1)</dfn>の301リダイレクトが優秀であるのは言うまでもありません。しかし、何らかの理由によりサーバーに手を入れることができない場合、<dfn>(2)</dfn>と<dfn>(3)</dfn>を併用するのがベストな手法でしょう。</p>
+
+<p>具体的には、下記のようなコードが良いのではないかと思います。（<abbr title="Extensible HyperText Markup Language">XHTML</abbr>1.0 Strictの場合）</p>
+
+<pre><code>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
+&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;ja&quot; lang=&quot;ja&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+&lt;meta http-equiv=&quot;Content-Script-Type&quot; content=&quot;text/javascript&quot; /&gt;
+&lt;title&gt;Like@Lunatic トップページへ&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+location.replace('/');
+&lt;/script&gt;
+&lt;meta http-equiv=&quot;Refresh&quot; content=&quot;0; URL=/&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;noscript&gt;
+&lt;p&gt;&lt;a href=&quot;/&quot;&gt;Like@Lunatic トップページへ&lt;/a&gt;&lt;/p&gt;
+&lt;/noscript&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>ちなみにa要素によるリンクはnoscript要素で囲わなくても良いですが、リダイレクトが実行される前に一瞬だけリンクが見えてしまいますのでご注意を……。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2007/10/21_redirect/feed</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

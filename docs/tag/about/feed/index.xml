@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>About &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/about/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:18:24 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>About &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>さくらのレンタルサーバーからさくらのVPSに引っ越しした</title>
+		<link>/2015/07/server-moving</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Sun, 05 Jul 2015 10:59:53 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[About]]></category>
+		<guid isPermaLink="false">/?p=1153</guid>
+
+					<description><![CDATA[実際に引っ越ししたのは5月のことなのだが、今更書く話。 さくらのVPSは仕事でも使っているのだが、使い勝手がよいので個人でも使うことにした。 このサイトはそちらに引っ越ししました。 Linuxの設定は問題ない…と思っていたのだが、旧レンタルサーバーと使いたい構成が異なった（Apache + MySQL + WordPress → Nginx + MySQL + WordPress）のと、メールサーバーをどうするかという課題があって結構手こずってしまった。 このサイトはWordPressで稼働しているのだが、今回はNginxで動かすことにした。Nginxを使うのは初めてだが、ネット上にいくらでもノウハウが転がっていたのであまり困ることはなかった。Nginxはその頃に 1.8.0 がリリースされたのでそれを使うことにした。メールサーバーはノウハウもないのでやりたくないぜ…と思ったので、Gmailに転送するだけにした。postfix設定についても探せばノウハウはたくさんあった。 しばらく運用してみたが、以前よりサイトが重くなっている。。VPSのスペックの問題かNginx + WordPressという構成の問題か…、分からないがこのまま様子を見よう。]]></description>
+										<content:encoded><![CDATA[<p>実際に引っ越ししたのは5月のことなのだが、今更書く話。</p>
+
+<p>さくらのVPSは仕事でも使っているのだが、使い勝手がよいので個人でも使うことにした。<br />
+このサイトはそちらに引っ越ししました。</p>
+
+<p>Linuxの設定は問題ない…と思っていたのだが、旧レンタルサーバーと使いたい構成が異なった（Apache + MySQL + WordPress → Nginx + MySQL + WordPress）のと、メールサーバーをどうするかという課題があって結構手こずってしまった。</p>
+
+<p>このサイトはWordPressで稼働しているのだが、今回はNginxで動かすことにした。Nginxを使うのは初めてだが、ネット上にいくらでもノウハウが転がっていたのであまり困ることはなかった。Nginxはその頃に 1.8.0 がリリースされたのでそれを使うことにした。メールサーバーはノウハウもないのでやりたくないぜ…と思ったので、Gmailに転送するだけにした。postfix設定についても探せばノウハウはたくさんあった。</p>
+
+<p>しばらく運用してみたが、以前よりサイトが重くなっている。。VPSのスペックの問題かNginx + WordPressという構成の問題か…、分からないがこのまま様子を見よう。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>サイトをリニューアルした</title>
+		<link>/2012/01/renewal</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 08 Jan 2012 06:33:02 +0000</pubDate>
+				<category><![CDATA[What's New?]]></category>
+		<category><![CDATA[About]]></category>
+		<guid isPermaLink="false">/?p=827</guid>
+
+					<description><![CDATA[Bootstrap, from Twitterを使ってサイトをリニューアルした <a href="/2012/01/renewal">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>あけましておめでとうございます、というにはもう遅すぎるけど、2012年初エントリーです。
+年末年始の休みに作業していたものをようやくリリースすることができたので、これで安心して新年をスタートできるというものです。</p>
+
+<h2>今回のリニューアルでやったこと</h2>
+
+<ol>
+<li>記事をMarkdownで書くことを前提とした
+
+<ul>
+<li>GitHubを使い始めてからMarkdownマンセーになったので</li>
+</ul></li>
+<li>デザインは<a href="http://twitter.github.com/bootstrap/">Bootstrap</a>をベースにする
+
+<ul>
+<li>Mardown前提ならある程度スタイルが最初から用意されているフレームワーク使った方が楽</li>
+<li>ビジュアル面のデザインをする気力がないだけということもあるが</li>
+</ul></li>
+<li>WordPressのテーマは&#8221;Twenty Eleven&#8221;を継承した子テーマに
+
+<ul>
+<li>これも楽をしたかっただけ</li>
+<li>最初はBootstrapに最適化したようなテンプレートを書こうと思ったけど、めんどくさくなって諦めた</li>
+<li>Twenty ElevenをベースにBootstrap + αをくっつけるだけ、みたいなテーマを書いた</li>
+</ul></li>
+<li>トップページに<a href="https://twitter.com/seckie_">自分のツイート</a>を表示して人気（ひとけ）を出す
+
+<ul>
+<li>ソーシャルサービスのデータを表示すれば、<del>ブログを更新していなくても人気が出て寂しくないお。</del>リアルタイムな雰囲気が出ていいんじゃないかと</li>
+<li>今のところTwitter APIをPHPで叩いてるだけ。WordPressのエントリーは普通にテンプレートで出力してる</li>
+<li>全部データを書き出した後に日付順にソートしてる。新しいものは上の方に、古いものは下の方に表示される</li>
+<li>今後、他サービスのAPIにも挑戦したい。Instagramの写真を展開したりとか。<del>でもそうすると余計ブログを更新していないことがバレバレになるお</del></li>
+</ul></li>
+<li>トップページのレイアウトに<a href="http://masonry.desandro.com/" title="jQuery Masonry">jQuery Masonry</a>を使う
+
+<ul>
+<li>今風にしてみたかっただけ</li>
+</ul></li>
+<li>ソーシャルサービスのアイコンは<a href="http://icondock.com/free/vector-social-media-icons" title="IconDock.com">IconDock.com</a>より拝借
+
+<ul>
+<li>awesomeです。ありがとうございます。</li>
+</ul></li>
+</ol>
+
+<ins datetime="2012-01-08T16:07:00">
+<h3>追記:</h3>
+<p>モバイル端末用のビューは<a href="http://wordpress.org/extend/plugins/wptouch/">WPtouch</a>任せなので、iPhoneなんかで見ると何が変わったかさっぱり分かりませんね&#8230;。</p>
+</ins>
+
+<h2>今年の目標など</h2>
+
+<p>書こうと思ったら長くなりそうだったので別のエントリーにします。</p>
+
+<p>というわけで本年もどうぞよろしくお願いいたします。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>WordPressに移行</title>
+		<link>/2009/12/wordpress</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 30 Dec 2009 06:07:47 +0000</pubDate>
+				<category><![CDATA[What's New?]]></category>
+		<category><![CDATA[About]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">/wptest/?p=211</guid>
+
+					<description><![CDATA[当サイトのCMSをMTOS4からWordPressに移行しました。 <a href="/2009/12/wordpress">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>当サイトのCMSを<a href="http://www.movabletype.jp/opensource/"><abbr title="Movable Type Open Source">MTOS</abbr></a>4から<a href="http://ja.wordpress.org/">WordPress</a>に移行しました。</p>
+
+<p>今年は仕事において<abbr title="Movable Type">MT</abbr>でサイトを構築する機会に恵まれたおかげもあり、MTはどう使えばいいのか割と勝手がわかってきた、と思っています。それなりにすらすらとテンプレートも書けるようになり、プラグインもこれとこれを使うってやつがある程度決まってきたので、不自由する機会はあまりなくなりました。<br />
+# プラグインを自分で書いて云々っていうレベルには遠く及びませんが</p>
+
+<p>MTがバージョン5になってよりCMSとしてよくなった感があるのだけれど、優等生になってしまった気がしてもう仕事で使えさえすればいいや、という気分になってしまった、と。そこでプライベートではWordPressやろうかってことで移行に至りました。</p>
+
+<p>MTOS４からの移行では、MTOS４から「ブログのエクスポート」を行い、新規インストールしたWordPressのインポート機能で「Movable Type と TypePad」を選択し、記事とコメントのインポートを行いました。</p>
+
+<p>ここでいくつか不都合が発生。</p>
+
+<p>まず1点は、記事毎のパーマリンクの設定（WordPressでは「スラッグ」と呼ぶ）にMTでいう「出力ファイル名（MTEntryBasename）」が引き継がれないこと。「出力ファイル名」の情報は飛んでしまい、代わりにスラッグには記事のタイトルと同じテキストが設定されます。なので記事のタイトルに日本語が使われているとスラッグにも日本語が入ってしまうわけで・・・、パーマリンクの設定をカスタマイズして<code>%postname%</code>を使用していると、URLはかなりひどいことになります。</p>
+
+<p>2点目は「タグ」の設定が引き継がれないこと。WordPressにも「タグ」がありますがここにはMTでいう「キーワード」フィールドの値が引き継がれてしまいました。「タグ」も「キーワード」も役割が似通っているとも言えるのでWordPressではこれを一本化しているのには納得が行きますが、かといってなぜ「タグ（MT）」を「タグ（WordPress）」に引き継がないのか・・・。これは納得がいかない！</p>
+
+<p>このブログは幸いにも（？）記事の総数が大した量ではないため、全て手動で入力しなおすことで解決しましたが。その際、記事一覧の「クイック編集」の機能が重宝しました。これがなかったら嫌になっていたかも・・・。</p>
+
+<p>テーマもオリジナルではなく適当なものを拝借していじったやつだし、まだまだWordPressがなんのこっちゃ分からんという感じなので、ちょっとづつ勉強していきたいと思います。でもまぁ、来年の話ですね（笑）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>XHTML＋CSS プロが教える“本当の使い方”の一部を執筆しました</title>
+		<link>/2009/10/xhtmlcssmdn</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sat, 10 Oct 2009 12:58:53 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[About]]></category>
+		<category><![CDATA[Book]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<guid isPermaLink="false">/wptest/2009/10/xhtml%ef%bc%8bcss-%e3%83%97%e3%83%ad%e3%81%8c%e6%95%99%e3%81%88%e3%82%8b%e2%80%9c%e6%9c%ac%e5%bd%93%e3%81%ae%e4%bd%bf%e3%81%84%e6%96%b9%e2%80%9d%e3%81%ae%e4%b8%80%e9%83%a8%e3%82%92%e5%9f%b7%e7%ad%86.php</guid>
+
+					<description><![CDATA[9月発売となったMdNの「XHTML＋CSS プロが教える“本当の使い方”」という本のほんの一部を執筆しました。 <a href="/2009/10/xhtmlcssmdn">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>今更なご報告ではありますが、<a href="http://www.mdn.co.jp/content/view/9412/">XHTML＋CSS プロが教える“本当の使い方”</a>のほんの一部（40ネタ中、2ネタ）を執筆させていただきました。<a href="/2009/08/javascriptajax.php">同シリーズのJS本</a>に引き続き今回も執筆をさせていただきました。</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/10/20091010.jpg"><img fetchpriority="high" decoding="async" alt="XHTML＋CSS プロが教える“本当の使い方”" src="/images/2009/10/20091010-thumb-400x300-139.jpg" width="400" height="300" class="mt-image-none" style="" /></a></span></p>
+
+<p>優れた著者陣の中で執筆をさせていただいたことは本当に恐縮であるとともに、直球なネタで行くのは自信がなかったので変化球的なネタを持ち込ませていただきました。結果的に本書に良い具合に彩りを添えることができたのではないかと思っています。</p>
+
+<p>もし書店などでお見かけの際は、よろしければ手に取ってみてくださいませ。</p>
+
+<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4844360663/likealunatic-22/ref=nosim/" name="amazletlink"><img decoding="async" src="http://ecx.images-amazon.com/images/I/51oiwOkc1QL._SL160_.jpg" alt="XHTML+CSS プロが教える“本当の使い方”" style="border: none;" /></a></div><div class="amazlet-info" style="float:left;margin-left:15px;line-height:120%"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4844360663/likealunatic-22/ref=nosim/" name="amazletlink">XHTML+CSS プロが教える“本当の使い方”</a><div class="amazlet-powered-date" style="font-size:7pt;margin-top:5px;font-family:verdana;line-height:120%">posted with <a href="http://www.amazlet.com/browse/ASIN/4844360663/likealunatic-22/ref=nosim/" title="XHTML+CSS プロが教える“本当の使い方”">amazlet</a> at 09.10.10</div></div><div class="amazlet-detail">MdN編集部 <br />MdN <br />売り上げランキング: 4608<br /></div><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4844360663/likealunatic-22/ref=nosim/" name="amazletlink">Amazon.co.jp で詳細を見る</a></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>web creators 2009年9月号にちょっぴり載りました</title>
+		<link>/2009/08/12_webcreators</link>
+					<comments>/2009/08/12_webcreators#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 11 Aug 2009 16:04:46 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[About]]></category>
+		<category><![CDATA[Book]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<guid isPermaLink="false">/wptest/2009/08/web-creators-2009%e5%b9%b49%e6%9c%88%e5%8f%b7%e3%81%ab%e3%81%a1%e3%82%87%e3%81%a3%e3%81%b4%e3%82%8a%e8%bc%89%e3%82%8a%e3%81%be%e3%81%97%e3%81%9f.php</guid>
+
+					<description><![CDATA[7月末に発売となっていたweb creators 2009年9月号の「WEB DESIGN WORKS - Pick Up! 今月のPickUpサイト」というコーナーにちょっぴり載りました。 <a href="/2009/08/12_webcreators">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>7月末に発売となっていた<a href="http://www.mdn.co.jp/index.php?option=com_content&amp;task=view&amp;id=269&amp;Itemid=">web creators 2009年9月号</a>の「WEB DESIGN WORKS &#8211; Pick Up! 今月のPickUpサイト」というコーナーにちょっぴり載りました（遅）。</p>
+
+<p>会社で、とあるNPO法人様のサイトをコーディングさせていただいたので、そのことで掲載いただきました。写真にもちょっぴり載っていますが、なんか私だけ与太ってるな、と思いました（謎）</p>
+
+<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B002GP07BE/likealunatic-22/ref=nosim/" name="amazletlink"><img decoding="async" src="http://ecx.images-amazon.com/images/I/51sM7gezzsL._SL160_.jpg" alt="Web creators (ウェブクリエイターズ) 2009年 09月号 [雑誌]" style="border: none;" /></a></div><div class="amazlet-info" style="float:left;margin-left:15px;line-height:120%"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B002GP07BE/likealunatic-22/ref=nosim/" name="amazletlink">Web creators (ウェブクリエイターズ) 2009年 09月号 [雑誌]</a><div class="amazlet-powered-date" style="font-size:7pt;margin-top:5px;font-family:verdana;line-height:120%">posted with <a href="http://www.amazlet.com/browse/ASIN/B002GP07BE/likealunatic-22/ref=nosim/" title="Web creators (ウェブクリエイターズ) 2009年 09月号 [雑誌]">amazlet</a> at 09.08.12</div></div><div class="amazlet-detail"><br />インプレスコミュニケーションズ <br /></div><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B002GP07BE/likealunatic-22/ref=nosim/" name="amazletlink">Amazon.co.jp で詳細を見る</a></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2009/08/12_webcreators/feed</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>「JavaScript&#038;Ajax プロが教える“本当の使い方”」の一部を執筆しました</title>
+		<link>/2009/08/javascriptajax</link>
+					<comments>/2009/08/javascriptajax#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 09 Aug 2009 06:49:49 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[About]]></category>
+		<category><![CDATA[Book]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<guid isPermaLink="false">/wptest/2009/08/%e3%80%8cjavascriptajax-%e3%83%97%e3%83%ad%e3%81%8c%e6%95%99%e3%81%88%e3%82%8b%e2%80%9c%e6%9c%ac%e5%bd%93%e3%81%ae%e4%bd%bf%e3%81%84%e6%96%b9%e2%80%9d%e3%80%8d%e3%81%ae%e4%b8%80%e9%83%a8%e3%82%92.php</guid>
+
+					<description><![CDATA[7月31日に発売となったMdNの「JavaScript&#38;Ajax プロが教える“本当の使い方”」という本の一部を執筆しました。 <a href="/2009/08/javascriptajax">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>7月31日に発売となったMdNの「<a href="http://www.mdn.co.jp/content/view/9096/">JavaScript&amp;Ajax プロが教える“本当の使い方”</a>」という本の一部を執筆しました。</p>
+
+<p>JavaScript・JavaScriptライブラリ・Ajaxの基本説明と、作例＋解説ネタが27ネタという構成となっています。27ネタのうち8ネタを自分が書いています。(表紙などのクレジット表記には名前は出ていません)</p>
+
+<p>こういった書籍の執筆は初めてということもあり原稿自体を書くのにも骨が折れましたが、それよりも作例を作るのに骨が折れました。<br />
+画面デザインを作成する作業は久しぶりにやりましたよ・・・数年前、業務としてデザインを少しばかりさせてもらった経験が生きました。それから、作例で使っているおそまつな写真は、自分でデジカメで撮ったものです。ちょくちょく撮り貯めておいた写真が、期せずして役に立った形です。何がどこで役に立つか、わかったもんじゃないですね。。</p>
+
+<p>初級・中級者向けのJavaScript・Ajax本ということで、「初心者にもわかりやすく」と心がけてに書いたつもりですが、いやはや、どう評価していただけることか。<br />
+結構内容ぎっしりの本なので、よかったら書店などで手に取ってみてください。</p>
+
+<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4844360590/likealunatic-22/ref=nosim/" name="amazletlink"><img decoding="async" src="http://ecx.images-amazon.com/images/I/51Jvbf5%2BSlL._SL160_.jpg" alt="JavaScript &amp; Ajax プロが教える“本当の使い方”" style="border: none;" /></a></div><div class="amazlet-info" style="float:left;margin-left:15px;line-height:120%"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4844360590/likealunatic-22/ref=nosim/" name="amazletlink">JavaScript &amp; Ajax プロが教える“本当の使い方”</a><div class="amazlet-powered-date" style="font-size:7pt;margin-top:5px;font-family:verdana;line-height:120%">posted with <a href="http://www.amazlet.com/browse/ASIN/4844360590/likealunatic-22/ref=nosim/" title="JavaScript &amp; Ajax プロが教える“本当の使い方”">amazlet</a> at 09.08.09</div></div><div class="amazlet-detail">MdN編集部 <br />MdN <br />売り上げランキング: 46663<br /></div><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4844360590/likealunatic-22/ref=nosim/" name="amazletlink">Amazon.co.jp で詳細を見る</a></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2009/08/javascriptajax/feed</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>「この記事にTwitterでコメント」ボタンを設置してみた</title>
+		<link>/2009/06/09_twitterbutton</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 09 Jun 2009 11:48:51 +0000</pubDate>
+				<category><![CDATA[What's New?]]></category>
+		<category><![CDATA[About]]></category>
+		<category><![CDATA[Twitter]]></category>
+		<guid isPermaLink="false">/wptest/2009/06/%e3%80%8c%e3%81%93%e3%81%ae%e8%a8%98%e4%ba%8b%e3%81%abtwitter%e3%81%a7%e3%82%b3%e3%83%a1%e3%83%b3%e3%83%88%e3%80%8d%e3%83%9c%e3%82%bf%e3%83%b3%e3%82%92%e8%a8%ad%e7%bd%ae%e3%81%97%e3%81%a6%e3%81%bf.php</guid>
+
+					<description><![CDATA[「この記事にTwitterでコメント」ボタンをつけたよ &#8211; 頭ん中 上記の記事で紹介されているTwitterボタンが気になったので、設置してみました。ただの外部リンクなので、ページが重くならないのが良いですね。]]></description>
+										<content:encoded><![CDATA[<p><a href="http://www.msng.info/archives/2009/04/comment_on_this_entry_on_twitter.php">「この記事にTwitterでコメント」ボタンをつけたよ &#8211; 頭ん中</a><br />
+上記の記事で紹介されているTwitterボタンが気になったので、設置してみました。ただの外部リンクなので、ページが重くならないのが良いですね。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>MTOS4.23にアップグレード</title>
+		<link>/2008/12/10_mtos423</link>
+					<comments>/2008/12/10_mtos423#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 10 Dec 2008 09:02:48 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[About]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<guid isPermaLink="false">/wptest/2008/12/mtos4-23%e3%81%ab%e3%82%a2%e3%83%83%e3%83%97%e3%82%b0%e3%83%ac%e3%83%bc%e3%83%89.php</guid>
+
+					<description><![CDATA[MTOS4.23にアップグレードしました <a href="/2008/12/10_mtos423">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://www.sixapart.jp/movabletype/news/2008/12/03-1400.html">Six Apart &#8211; Movable Type News: [重要] セキュリティアップデート Movable Type 4.23 の提供を開始</a> だそうです。</p>
+
+<p><a href="/2008/10/16_mt422.php">こないだアップグレードしたばかりなのに</a>またか・・・と思いつつ、当サイトのMTOSにもアップグレードをかけました。もう勝手が分かっているので、楽チンですね。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2008/12/10_mtos423/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

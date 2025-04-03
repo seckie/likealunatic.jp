@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>jquery &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/jquery/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:04 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>jquery &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>JSONがinvalidでもjQuery.getJSON()はエラーを吐かない</title>
+		<link>/2010/05/getjson</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Fri, 21 May 2010 05:51:13 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[jquery]]></category>
+		<category><![CDATA[json]]></category>
+		<guid isPermaLink="false">/?p=681</guid>
+
+					<description><![CDATA[記事のタイトルで言いたいことは言い切っちゃているんですけれども。 jQuery 1.4.2 の $.getJSON() 、もしくは $.ajax() でリクエストしたJSONファイルがinvalidだった場合、エラーは吐きませんがコールバック関数が実行されません。 [jQuery] getJSON callback not firing? &#8211; jQuery Forum なんでinvalidなのかと調べたところ・・・、JSONでは文字列は必ずダブルクォートで囲まないといけないことが判りました。シングルクォートではダメです。それからオブジェクトリテラルの左のオペランドにも、ダブルクォート省略不可！あー、なんか初歩的なところでつまづいています。 A string is a collection of zero or more Unicode characters, wrapped in double quotes, using backslash escapes. http://json.org/ 何しろエラーが出ないので、何が悪いのかわかりにくいです＞＜ これで2時間はハマってしまった・・・。。]]></description>
+										<content:encoded><![CDATA[<p>記事のタイトルで言いたいことは言い切っちゃているんですけれども。<br />
+jQuery 1.4.2 の <a href="http://api.jquery.com/jQuery.getJSON/">$.getJSON()</a> 、もしくは <a href="http://api.jquery.com/jQuery.ajax/">$.ajax()</a> でリクエストしたJSONファイルがinvalidだった場合、エラーは吐きませんが<strong>コールバック関数が実行されません</strong>。</p>
+
+<p class="ref"><a href="http://forum.jquery.com/topic/jquery-getjson-callback-not-firing-12-1-2010">[jQuery] getJSON callback not firing? &#8211; jQuery Forum</a></p>
+
+<p>なんでinvalidなのかと調べたところ・・・、JSONでは文字列は必ずダブルクォートで囲まないといけないことが判りました。シングルクォートではダメです。それからオブジェクトリテラルの左のオペランドにも、ダブルクォート省略不可！あー、なんか初歩的なところでつまづいています。</p>
+
+<blockquote cite="http://json.org/">
+<p>A string is a collection of zero or more Unicode characters, wrapped in double quotes, using backslash escapes. </p>
+<p class="site"><a href="http://json.org/">http://json.org/</a></p>
+</blockquote>
+
+<p>何しろエラーが出ないので、何が悪いのかわかりにくいです＞＜ これで2時間はハマってしまった・・・。。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

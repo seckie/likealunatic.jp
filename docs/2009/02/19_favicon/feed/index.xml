@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: テスト環境ではfavicon.icoを色違いにしておく	</title>
+	<atom:link href="/2009/02/19_favicon/feed" rel="self" type="application/rss+xml" />
+	<link>/2009/02/19_favicon</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:18:24 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: NINECUBE		</title>
+		<link>/2009/02/19_favicon/comment-page-1#comment-44</link>
+
+		<dc:creator><![CDATA[NINECUBE]]></dc:creator>
+		<pubDate>Fri, 20 Feb 2009 06:54:14 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2009/02/%e3%83%86%e3%82%b9%e3%83%88%e7%92%b0%e5%a2%83%e3%81%a7%e3%81%affavicon-ico%e3%82%92%e8%89%b2%e9%81%95%e3%81%84%e3%81%ab%e3%81%97%e3%81%a6%e3%81%8a%e3%81%8f.php#comment-44</guid>
+
+					<description><![CDATA[&lt;p&gt;さすが先生。これはいい！&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>さすが先生。これはいい！</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

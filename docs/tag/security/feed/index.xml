@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Security &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/security/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Security &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>[Memo]:visitedクラスを利用した行動ターゲティング広告</title>
+		<link>/2008/11/12_visitedlink</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 12 Nov 2008 01:54:40 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Security]]></category>
+		<guid isPermaLink="false">/wptest/2008/11/memovisited%e3%82%af%e3%83%a9%e3%82%b9%e3%82%92%e5%88%a9%e7%94%a8%e3%81%97%e3%81%9f%e8%a1%8c%e5%8b%95%e3%82%bf%e3%83%bc%e3%82%b2%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0%e5%ba%83%e5%91%8a.php</guid>
+
+					<description><![CDATA[とても興味深い内容だったのでメモ。 行動ターゲティング広告はどこまで許されるのか&#160;インターネット-最新ニュース:IT-PLUS visited疑似クラスのビーコンを拾うサービスが登場 個人で使うドリコム式行動ターゲティング広告 id:Hamachiya2さんのデモのソースを見るとCSSの:visited擬似クラスと、JavaScriptを併用した形で、動的にコンテンツを入れ替える方法が分かります。 まずCSSで:visited擬似クラスに別のスタイルを書いておいて a { display: block; height: 22px; overflow: hidden; } a:visited { height: 16px; } JavaScriptの以下のようなコードで、訪問の有無を調べています。 var defHeight = 22; var visHeight = 16; ...中略... // 引数にはa要素ノードを入れる // その高さがデフォルトでない（既訪問リンク）ならtrueを返す // その高さがデフォルト（未訪問リンク）ならfalse返す function checkVisited(elm) { return (elm.offsetHeight != defHeight); } 実行はwindow.onloadのイベントで。なるほど。 自らの意図しない情報が、このように簡単に取得されてしまうのかと思うと、気持ちが悪いな・・・と思うと同時に、簡単であるが故に防ぎようがないと思いました。]]></description>
+										<content:encoded><![CDATA[<p>とても興味深い内容だったのでメモ。</p>
+
+<ul class="disclist">
+<li><a href="http://it.nikkei.co.jp/internet/news/index.aspx?n=MMITbe000015102008">行動ターゲティング広告はどこまで許されるのか&nbsp;インターネット-最新ニュース:IT-PLUS</a></li>
+<li><a href="http://bakera.jp/ebi/topic/3298">visited疑似クラスのビーコンを拾うサービスが登場</a></li>
+<li><a href="http://d.hatena.ne.jp/Hamachiya2/20081029/visited">個人で使うドリコム式行動ターゲティング広告</a></li>
+</ul>
+
+<p><a href="http://hamachiya.com/junk/visited.html">id:Hamachiya2さんのデモ</a>のソースを見るとCSSの:visited擬似クラスと、JavaScriptを併用した形で、動的にコンテンツを入れ替える方法が分かります。</p>
+
+<p>まずCSSで:visited擬似クラスに別のスタイルを書いておいて</p>
+
+<pre><code>a {
+display: block;
+height: 22px;
+overflow: hidden;
+}
+a:visited {
+height: 16px;
+}</code></pre>
+
+<p>JavaScriptの以下のようなコードで、訪問の有無を調べています。</p>
+
+<pre><code>var defHeight = 22;
+var visHeight = 16;
+...中略...
+// 引数にはa要素ノードを入れる
+// その高さがデフォルトでない（既訪問リンク）ならtrueを返す
+// その高さがデフォルト（未訪問リンク）ならfalse返す
+function checkVisited(elm) {
+return (elm.offsetHeight != defHeight);
+}</code></pre>
+
+<p>実行はwindow.onloadのイベントで。なるほど。</p>
+
+<p>自らの意図しない情報が、このように簡単に取得されてしまうのかと思うと、気持ちが悪いな・・・と思うと同時に、簡単であるが故に防ぎようがないと思いました。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>クリックジャッキングはWeb制作者にとっても脅威なのでは</title>
+		<link>/2008/10/01_clickjacking</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 01 Oct 2008 03:29:51 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<guid isPermaLink="false">/wptest/2008/10/%e3%82%af%e3%83%aa%e3%83%83%e3%82%af%e3%82%b8%e3%83%a3%e3%83%83%e3%82%ad%e3%83%b3%e3%82%b0%e3%81%afweb%e5%88%b6%e4%bd%9c%e8%80%85%e3%81%ab%e3%81%a8%e3%81%a3%e3%81%a6%e3%82%82%e8%84%85%e5%a8%81.php</guid>
+
+					<description><![CDATA[様々なニュースサイトで話題のクリックジャッキング。悪意あるウェブサイトを訪れたユーザーが、意図しないリンクをクリックさせられる脅威のこと、と私は解釈しました。 <a href="/2008/10/01_clickjacking">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<ul class="disclist">
+<li><a href="http://japan.zdnet.com/sp/feature/07zeroday/story/0,3800083088,20381028,00.htm">クリックジャッキング：研究者が複数のブラウザに対する新たな脅威について警告 &#8211; Zero Day &#8211; ZDNet Japan</a></li>
+<li><a href="http://headlines.yahoo.co.jp/hl?a=20080929-00000034-zdn_ep-sci">「クリック乗っ取り」の脅威が出現、主要なブラウザに影響か（ITmediaエンタープライズ） &#8211; Yahoo!ニュース</a></li>
+<li><a href="http://japan.cnet.com/blog/muteki/2008/09/29/entry_27016509/">ところでクリックジャッキングって一体なに？:独断と偏見の気になる情報セキュリティ &#8211; CNET Japan</a></li>
+</ul>
+
+<p>最近様々なニュースサイトで騒がれているクリックジャッキング問題。とても恐るべき問題であることは伝わってきますが、具体的に何をどうしたら危ないのか、イマイチ判然としないかもしれません。<br />
+上記のサイトを見て私はこの問題を、<strong>悪意あるウェブサイトを訪れたユーザーが、意図しないリンクをクリックさせられる脅威のこと</strong>であると解釈しましたが・・・。</p>
+
+<blockquote cite="http://japan.zdnet.com/sp/feature/07zeroday/story/0,3800083088,20381028,00.htm">
+<p>当面の間は、唯一の対策はブラウザのスクリプト機能とプラグインを無効化することだ。この情報では技術的な情報は伝わらないだろうが、これがわれわれに今できる最善のことだ。 </p>
+</blockquote>
+
+<p>ということであり、<a href="http://builder.japan.zdnet.com/sp/firefox-3-for-developer-2008/story/0,3800087566,20381144,00.htm?ref=rss">FirefoxではNoScript拡張機能をインストールすることである程度安全なブラウジングが可能になる</a>とか。</p>
+
+<p>しかし今時、JavaScriptやプラグインを無効にした状態できちんと見えるサイトがどれだけあるでしょうか・・・。<br />
+このような脅威が続くのであれば「JavaScriptは使えない」と言われる時代がまた訪れてしまうかもしれません。そうなると、コンテンツ制作側も変化を余儀なくされるでしょう。</p>
+
+<p><span id="more-59"></span></p>
+
+<p><a href="https://addons.mozilla.org/ja/firefox/addon/722">NoScript拡張機能</a>は以前使っていたことはあるのですが、中々苦手でして・・・。ホワイトリストに設定していないサイトにアクセスすると、全てのスクリプトとプラグインがブロックされるため（ここがまさに利点なのですが・・・）、まずホワイトリストを設定していくのがとても面倒臭く、アンインストールしてしまいました。</p>
+
+<p>とはいえ、ブラウザベンダーが有効な対策を行わない限り、背に腹は変えられない状況となってきているのかもしれませんね。またNoScriptと、付き合ってみようか・・・な。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

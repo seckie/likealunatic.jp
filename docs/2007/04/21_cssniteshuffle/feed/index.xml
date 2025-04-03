@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: CSS Nite Shuffle簡易レポ	</title>
+	<atom:link href="/2007/04/21_cssniteshuffle/feed" rel="self" type="application/rss+xml" />
+	<link>/2007/04/21_cssniteshuffle</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:54 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: CSS Nite公式ブログ		</title>
+		<link>/2007/04/21_cssniteshuffle/comment-page-1#comment-11</link>
+
+		<dc:creator><![CDATA[CSS Nite公式ブログ]]></dc:creator>
+		<pubDate>Sun, 06 May 2007 13:11:55 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/04/css-nite-shuffle%e7%b0%a1%e6%98%93%e3%83%ac%e3%83%9d.php#comment-11</guid>
+
+					<description><![CDATA[&lt;p&gt;&lt;strong&gt;CSS Nite shuffleフォト・ギャラリー&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;2007年4月13日に開催したCSS Nite shuffleの模様を写真でお届...&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p><strong>CSS Nite shuffleフォト・ギャラリー</strong></p>
+
+<p>2007年4月13日に開催したCSS Nite shuffleの模様を写真でお届&#8230;</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

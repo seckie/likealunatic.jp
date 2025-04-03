@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>apache &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/apache/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>apache &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>WinXPローカルでXAMPPを使ってMovable Typeを動かす―2010年3月版 その1</title>
+		<link>/2010/03/xampp_and_mt_1</link>
+					<comments>/2010/03/xampp_and_mt_1#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 07 Mar 2010 15:16:24 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[apache]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<category><![CDATA[XAMPP]]></category>
+		<guid isPermaLink="false">/?p=478</guid>
+
+					<description><![CDATA[3年くらい前に書いたXAMPPとMTの記事に今でもアクセスがそこそこあるので、古い内容を見ていただいてもなぁ・・・と思い、最新の情報で記事を書き直すことにしました。2010年3月7日時点の情報となります。全3記事で、第1弾は「XAMPPのインストール、Apacheの設定」です。 <a href="/2010/03/xampp_and_mt_1">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p> <a href="/2007/06/04_xampp_mt.php">3年くらい前に書いたXAMPPとMTの記事</a>に今でもアクセスがそこそこあるので、古い内容を見ていただいてもなぁ・・・と思い、最新の情報で記事を書き直すことにしました。2010年3月7日時点の情報となります。</p>
+
+<p>概要は以下となります。</p>
+
+<ul>
+<li>Windows XPのローカル環境にMovable Type 5の開発環境を構築する</li>
+<li>使用するソフトウェアとバージョン（2010年3月時点で最新）<ul>
+    <li><a href="http://www.apachefriends.org/jp/xampp-windows.html">XAMPP for Windows 1.7.3</a></li>
+    <li><a href="http://www.activestate.com/activeperl/">ActivPerl 5.10.1 Build 1007</a></li>
+    <li><a href="http://www.imagemagick.org/">Image Magick 6.6.0 Q8</a></li>
+    <li><a href="http://www.sixapart.jp/movabletype/">Movable Type 5.01</a>（文中の例では<a href="http://www.movabletype.jp/opensource/">MTOS 5.01</a>）</li>
+    </ul></li>
+<li>Apacheのバーチャルホスト機能を使い、複数のサイトを管理できるようにします</li>
+<li>XAMPP内包のPerlは使わず、ActivePerlを使用します</li>
+<li>データベースには、XAMPP内包のMySQLを使用します</li>
+<li>Movable Typeの画像を扱う機能を使うため、Image Magickを導入します</li>
+</ul>
+
+<p>かなり長い記事となってしまうので、3つの記事に分割して投稿します。</p>
+
+<ol>
+<li><em>XAMPPのインストール、Apacheの設定</em></li>
+<li><a href="/2010/03/xampp_and_mt_2.php">ActivePerlのインストールと設定、MySQLの設定</a></li>
+<li><a href="/2010/03/xampp_and_mt_3.php">ImageMagickのインストール、Movable Typeのインストール</a></li>
+</ol>
+
+<p>ではまず「その1」としてXAMPPのインストールから、Apacheの設定までです。</p>
+
+<ol>
+<li class="step01">
+<p class="pic"><a href="http://www.apachefriends.org/jp/xampp-windows.html" title="XAMPP for Windows">http://www.apachefriends.org/jp/xampp-windows.html</a><br />
+<a href="/wp-content/uploads/2010/03/20100307_08.jpg"><img decoding="async" src="/wp-content/uploads/2010/03/20100307_08-150x150.jpg" alt="XAMPP for Windowsのサイト" title="20100307_08" width="150" height="150" class="alignnone size-thumbnail wp-image-486" /></a></p>
+<p><a href="http://www.apachefriends.org/jp/xampp-windows.html" title="XAMPP for Windows">XAMPP for Windows ダウンロードページ</a>にアクセスし「XAMPP Windows版 1.7.4, 2009/12/23」のベーシックパッケージをダウンロードします。ここではEXE版を使用します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_09.jpg"><img decoding="async" src="/wp-content/uploads/2010/03/20100307_09-150x150.jpg" alt="XAMPP for Windowsのサイト" title="20100307_09" width="150" height="150" class="alignnone size-thumbnail wp-image-487" /></a></p>
+</li>
+
+<li class="step02">
+<p>ダウンロードしたexeファイルを実行しましょう。インストールウィザードが始まります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_10.jpg"><img decoding="async" src="/wp-content/uploads/2010/03/20100307_10-150x150.jpg" alt="XAMPP for Windowsのインストールウィザード" title="20100307_10" width="150" height="150" class="alignnone size-thumbnail wp-image-485" /></a></p>
+</li>
+
+<li class="step03">
+<p>「Destination folder」でインストール先のディレクトリを指定することができます。今回はデフォルトの設定（<span class="path">C:\</span>）をそのまま使用します。「Install」をクリックしてしばらく待ちます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_11.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_11-150x150.jpg" alt="XAMPP for Windowsのインストールウィザード" title="20100307_11" width="150" height="150" class="alignnone size-thumbnail wp-image-489" /></a></p>
+</li>
+
+<li class="step04">
+<p>インストール処理が終わると、コマンドプロンプトが立ち上がって初期設定を聞いてきます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_12.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_12-150x150.jpg" alt="コマンドプロンプトでXAMPP for Windowsの初期設定を行っているところ" title="20100307_12" width="150" height="150" class="alignnone size-thumbnail wp-image-490" /></a></p>
+<blockquote>
+<p>「Should I add shortcuts to the startmenu/desktop?」（スタートメニューとデスクトップにショートカットを追加するかい？）</p>
+</blockquote>
+<p>「y」が最初から入力されていますので、そのままEnterを押します。</p>
+</li>
+
+<li class="step05">
+<blockquote>
+<p>「Should I proceed?」（続行する？・・・とかって意味かな）</p>
+</blockquote>
+<p>「y」でEnter。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_13.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_13-150x150.jpg" alt="コマンドプロンプトでXAMPP for Windowsの初期設定を行っているところ" title="20100307_13" width="150" height="150" class="alignnone size-thumbnail wp-image-491" /></a></p>
+</li>
+
+<li class="step06">
+<blockquote>
+<p>「Should I make a portable XAMPP without drive letters?」（ドライブレターを付けないで、XAMPPのポータブル版を作成するかい？）</p>
+</blockquote>
+<p>「n」のままEnter。「y」にするとUSBメモリとかにインストールできるXAMPPのポータブル版になるようですが、それだとドライブレターを付加できないのでWindowsの「サービス」が使えないみたいです。（超適当訳）</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_14.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_14-150x150.jpg" alt="コマンドプロンプトでXAMPP for Windowsの初期設定を行っているところ" title="20100307_14" width="150" height="150" class="alignnone size-thumbnail wp-image-492" /></a></p>
+</li>
+
+<li class="step07">
+<blockquote>
+<p>&#8230;中略<br />
+XAMPP is ready to use.</p>
+</blockquote>
+<p>Enterキーを押します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_16.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_16-150x150.jpg" alt="コマンドプロンプトでXAMPP for Windowsの初期設定を行っているところ" title="20100307_16" width="150" height="150" class="alignnone size-thumbnail wp-image-521" /></a></p>
+</li>
+
+<li class="step08">
+<blockquote>
+<p>「I have set the timezone in &#8216;php.ini&#8217; and &#8216;my.ini&#8217; to &quot;Asia/Tokyo&quot;.<br />
+Yous should correct these values if  my guess was wrong.」<br />
+（php.iniとmy.iniのタイムゾーンを「Asia/Tokyo」に設定したよ。違っていたら修正することができるよ。）</p>
+</blockquote>
+<p>Enterキーを押します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_17.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_17-150x150.jpg" alt="コマンドプロンプトでXAMPP for Windowsの初期設定を行っているところ" title="20100307_17" width="150" height="150" class="alignnone size-thumbnail wp-image-494" /></a></p>
+</li>
+
+<li class="step09">
+<p>これでセットアップは完了となります。「1」を入力してEnterを押します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_19.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_19-150x150.jpg" alt="コマンドプロンプトでXAMPP for Windowsの初期設定を行っているところ" title="20100307_19" width="150" height="150" class="alignnone size-thumbnail wp-image-495" /></a></p>
+</li>
+
+<li class="step10">
+<p>XAMPPのコントロールパネルが起動します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_20.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_20-150x150.jpg" alt="XAMPPのコントロールパネル" title="20100307_20" width="150" height="150" class="alignnone size-thumbnail wp-image-488" /></a></p>
+</li>
+
+<li class="step11">
+<p>ApacheとMySQLの「Start」ボタンをクリックして起動させます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_21.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_21-150x150.jpg" alt="XAMPPのコントロールパネル" title="20100307_21" width="150" height="150" class="alignnone size-thumbnail wp-image-497" /></a></p>
+</li>
+
+<li class="step12">
+<p>Apacheの「Admin」ボタンをクリックします。するとブラウザが立ち上がってXAMPPのスタート画面が表示されます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_22.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_22-150x150.jpg" alt="XAMPPのコントロールパネル" title="20100307_22" width="150" height="150" class="alignnone size-thumbnail wp-image-498" /></a></p>
+</li>
+
+<li class="step13">
+<p>「日本語」をクリックしましょう。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_25.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_25-150x150.jpg" alt="XAMPPの管理画面にアクセス" title="20100307_25" width="150" height="150" class="alignnone size-thumbnail wp-image-499" /></a></p>
+</li>
+
+<li class="step14">
+<p>これがXAMPPの管理画面です。<br />
+一応サーバーソフトウェアなので、万が一のことも考慮して最初にセキュリティの設定を行いましょう。左のメニューから「セキュリティ」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_27.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_27-150x150.jpg" alt="XAMPPの管理画面" title="20100307_27" width="150" height="150" class="alignnone size-thumbnail wp-image-501" /></a></p>
+</li>
+
+<li class="step15">
+<p>最初はなんのセキュリティ対策も施されていない状態なので、5くらいあるステータスが全て「要注意」か「不明」になっています。対策にはXAMPPのツールを使います。ページの中程に<br />
+<a href="http://localhost/security/xamppsecurity.php">http://localhost/security/xamppsecurity.php</a><br />
+というリンクがあるので、クリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_28.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_28-150x150.jpg" alt="XAMPPのセキュリティ管理画面" title="20100307_28" width="150" height="150" class="alignnone size-thumbnail wp-image-502" /></a></p>
+</li>
+
+<li class="step16">
+<p>するとMySQLと、XAMPPのディレクトリにパスワードを設定するためのフォームが現れます。<br />
+「MYSQL項目：&#8221;ROOT&#8221;パスワード」というフォームから、MySQLのrootユーザーのパスワードを設定しましょう。
+なお、（File: <span class="path">C:\XAMPP\security\mysqlrootpasswd.txt</span>）にチェックを入れておくと、変更したパスワードがテキストファイルに書き出されます。万が一パスワードを忘れてしまったときにこれを見ればいい、というわけです。<br />
+<span class="memo">このディレクトリは公開ディレクトリではないので安全なハズ</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_29.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_29-150x150.jpg" alt="XAMPPのセキュリティ管理画面" title="20100307_29" width="150" height="150" class="alignnone size-thumbnail wp-image-496" /></a></p>
+</li>
+
+<li class="step17">
+<p>次に「XAMPPのディレクトリ制御（.htaccess）」でユーザとパスワードを入力します。これで、この管理画面自体にベーシック認証がかかります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_30.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_30-150x150.jpg" alt="XAMPPのセキュリティ管理画面" title="20100307_30" width="150" height="150" class="alignnone size-thumbnail wp-image-504" /></a></p>
+<p>設定が終わったら、左のメニューの「セキュリティ」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_32.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_32-150x150.jpg" alt="XAMPPのセキュリティ管理画面" title="20100307_32" width="150" height="150" class="alignnone size-thumbnail wp-image-505" /></a></p>
+</li>
+
+<li class="step18">
+<p>するとたった今設定したベーシック認証が行われます。ユーザー名とパスワードを入力してログイン。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_33.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_33-150x150.jpg" alt="管理画面にベーシック認証がかかった" title="20100307_33" width="150" height="150" class="alignnone size-thumbnail wp-image-506" /></a></p>
+</li>
+
+<li class="step19">
+<p>今度はセキュリティのステータスの「要注意」が「安全」に変わったことを確認します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_34.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_34-150x150.jpg" alt="XAMPPのセキュリティ管理画面" title="20100307_34" width="150" height="150" class="alignnone size-thumbnail wp-image-507" /></a></p>
+</li>
+
+<li class="step20">
+<p>では実際にWebサーバーのディレクトリにアクセスしてみましょう。ブラウザで、<span class="url">http://localhost/index.html</span> にアクセスします。「It works!」というページが見えたら、正常に動作しています。<br />
+<span class="memo">ちなみに <span class="url">http://localhost/</span> でアクセスしようとすると、XAMPPの管理画面に飛ばされてしまいます。</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_35.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_35-150x150.jpg" alt="http://localhost/index.html にブラウザでアクセス" title="20100307_35" width="150" height="150" class="alignnone size-thumbnail wp-image-508" /></a></p>
+<p>さて、これだけだとWebサーバーを通じて見ることができるのは <span class="path">C:\xampp\htdocs</span> ディレクトリだけです。これをバーチャルホスト機能を使って拡張し、複数のサイトを管理できるように変更します。</p>
+</li>
+
+<li class="step21">
+<p><span class="path">C:\xampp\apache\conf\extra\httpd-vhosts.conf</span> をテキストエディタで開きます。これがバーチャルホスト設定用のファイルです。まず <code>##NameVirtualHost *:80</code> となっている部分の <code>##</code> を削除して、コメントアウトされた状態を解除します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_37.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_37-150x150.jpg" alt="httpd-vhosts.conf をエディタで開いたところ" title="20100307_37" width="150" height="150" class="alignnone size-thumbnail wp-image-503" /></a></p>
+</li>
+
+<li class="step22">
+<p>このファイルにはコメントアウトされた状態で設定の例文が示されています。このような感じで。</p>
+<pre><code>##&lt;VirtualHost *:80&gt;
+    ##ServerAdmin postmaster@dummy-host2.localhost
+    ##DocumentRoot &quot;C:/xampp/htdocs/dummy-host2.localhost&quot;
+    ##ServerName dummy-host2.localhost
+    ##ServerAlias www.dummy-host2.localhost
+    ##ErrorLog &quot;logs/dummy-host2.localhost-error.log&quot;
+    ##CustomLog &quot;logs/dummy-host2.localhost-access.log&quot; combined
+##&lt;/VirtualHost&gt;</code></pre>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_48.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_48-150x150.jpg" alt="httpd-vhosts.conf ファイルをエディタで編集する" title="20100307_48" width="150" height="150" class="alignnone size-thumbnail wp-image-514" /></a></p>
+<p>ただ、動作させるだけなら <code>DocumentRoot</code>、<code>ServerName</code> を設定するだけで良いようです。仮に <span class="url">site1.localhost</span> というドメインで <span class="path">D:\htdocs\site1</span> ディレクトリを、<span class="url">site2.localhost</span> というドメインで <span class="path">D:\htdocs\site2</span> ディレクトリを参照できるようにしたいとすると、以下のようにファイル末尾に設定を追加します。書き換えたら、上書き保存します。</p>
+<pre><code>&lt;Directory &quot;C:/xampp/htdocs&quot;&gt;
+    Options +ExecCGI
+    AddHandler cgi-script .cgi .pl 
+    order allow,deny
+    Allow from all
+&lt;/Directory&gt;
+&lt;Directory &quot;D:/htdocs&quot;&gt;
+    Options +ExecCGI
+    AddHandler cgi-script .cgi .pl 
+    order allow,deny
+    Allow from all
+&lt;/Directory&gt;
+
+&lt;VirtualHost *:80&gt;
+    DocumentRoot &quot;C:/xampp/htdocs&quot;
+    ServerName localhost
+&lt;/VirtualHost&gt;
+&lt;VirtualHost *:80&gt;
+    DocumentRoot &quot;D:/htdocs/site1&quot;
+    ServerName site1.localhost
+&lt;/VirtualHost&gt;
+&lt;VirtualHost *:80&gt;
+    DocumentRoot &quot;D:/htdocs/site2&quot;
+    ServerName site2.localhost
+&lt;/VirtualHost&gt;</code></pre>
+</li>
+
+<li class="step23">
+<p>今度はそのURLの名前解決をできるようにするための設定を行います。<span class="path">C:\WINDOWS\system32\drivers\etc\hosts</span> （<a href="#footnote_20100307_1">※1</a>）をテキストエディタを開きます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_44.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_44-150x150.jpg" alt="hostsファイルをエディタで編集する" title="20100307_44" width="150" height="150" class="alignnone size-thumbnail wp-image-511" /></a></p>
+</li>
+
+<li class="step24">
+<pre><code>127.0.0.1 localhost</code></pre>
+となっているところの次に以下の行を追加し、上書き保存します。
+<pre><code>127.0.0.1 site1.localhost
+127.0.0.1 site2.localhost </code></pre>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_45.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_45-150x150.jpg" alt="hostsファイルをエディタで編集する" title="20100307_45" width="150" height="150" class="alignnone size-thumbnail wp-image-512" /></a></p>
+</li>
+
+<li class="step25">
+<p>ここまで行った設定を反映するため、Apacheを再起動します。XAMPPコントロールパネルで Apache の「Stop」ボタンをクリックし、しばらく待ちます。すると左の「Running」表示が消えるので、再度「Start」ボタンをクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_46.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_46-150x150.jpg" alt="XAMPPコントロールパネルでApacheを再起動" title="20100307_46" width="150" height="150" class="alignnone size-thumbnail wp-image-513" /></a></p>
+</li>
+
+<li class="step26">
+<p>設定したディレクトリにブラウザでアクセスしてみましょう。<span class="path">D:\htdocs\site1\</span> に適当なhtmlファイルを置き、<span class="url">http://site1.localhost/ファイル名</span> としてアクセスし、ページが正常に表示されるか確認します。また、同様に <span class="url">http://site2.localhost/</span> も確認しましょう。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_49.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_49-150x150.jpg" alt="バーチャルホストで設定したURLにブラウザでアクセス" title="20100307_49" width="150" height="150" class="alignnone size-thumbnail wp-image-510" /></a></p>
+<p>もしもサーバーエラー画面が表示される場合、httpd-vhosts.conf ファイルの記述が誤っている可能性があります。また、ブラウザのステータスバーに <q>site1.localhost のアドレス解決をしています</q> とか <q>ホストを解決しています</q> とかいうメッセージが表示される場合、hostsファイルの設定が誤っています。それぞれ設定を見直してみましょう。</p>
+</li>
+</ol>
+
+<p>以上でXAMPPのインストールからApacheの設定までが完了です。次回の記事ではActivePerlのインストールと設定、MySQLの設定を取り上げる予定です。</p>
+
+<div class="postscript">
+<ul class="footnote">
+<li><a name="footnote_20100307_1" id="footnote_20100307_1">※1</a> Windows XPの場合。Windows Vistaや7だと、<a href="http://support.microsoft.com/kb/923947/ja">権限の問題で少々めんどくさいみたいです</a>。しかしファイルの置いてある場所は一緒。<span class="path">C:\Windows\System32\drivers\etc\hosts</span> のようですね。</li>
+</ul>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2010/03/xampp_and_mt_1/feed</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[XAMPP]WinXPローカル環境で複数ドメイン管理</title>
+		<link>/2008/05/16_xampp</link>
+					<comments>/2008/05/16_xampp#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Fri, 16 May 2008 07:45:01 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[apache]]></category>
+		<category><![CDATA[XAMPP]]></category>
+		<guid isPermaLink="false">/wptest/2008/05/xamppwinxp%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e7%92%b0%e5%a2%83%e3%81%a7%e8%a4%87%e6%95%b0%e3%83%89%e3%83%a1%e3%82%a4%e3%83%b3%e7%ae%a1%e7%90%86.php</guid>
+
+					<description><![CDATA[複数のサイトを制作・管理する場合、ローカル環境にも複数のドメインがあったら便利です。XAMPPでこれをやってみました。 <a href="/2008/05/16_xampp">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>XAMPPを使うと、ローカル環境でサイトの動作確認ができて大変便利です。<br />
+複数のサイトを制作・管理する場合、ローカル環境に複数のドメインがあったら便利だと常々思っていました。実際にやってみたところ、うまくいったのでその方法をご紹介します。</p>
+
+<dl class="disclist">
+<dt>環境：</dt>
+<dd>Windows XP SP2</dd>
+<dd><a href="http://www.apachefriends.org/jp/xampp-windows.html">XAMPP for Windows</a> Version 1.6.6a</dd>
+<dd>XAMPPのインストールディレクトリはデフォルト設定のまま（<span class="path">C:\xampp</span>）です。</dd></dl>
+
+<ol class="decimallist">
+<li class="step01"><span class="path">C:\xampp\apache\conf\extra\httpd-vhosts.conf</span>をテキストエディタで開き、
+<code>#NameVirtualHost *:80</code>
+となっているところの先頭の<code>#</code>を取り除きます（コメントアウトを外す）。</li>
+<li class="step02"><p>仮に<span class="path">D:\htdocs\hoge</span>というディレクトリを<span class="url">http://hoge.localhost/</span>というサブドメインで参照したい場合、同ファイルに以下のように記述を追加します。</p>
+<pre><code>&lt;VirtualHost *:80&gt;
+DocumentRoot &quot;C:/xampp/htdocs&quot;
+ServerName localhost
+&lt;/VirtualHost&gt;
+&lt;VirtualHost *:80&gt;
+DocumentRoot D:/htdocs/hoge
+ServerName hoge.localhost
+&lt;/VirtualHost&gt;
+&lt;Directory &quot;D:/htdocs/hoge&quot;&gt;
+order deny,allow
+allow from ALL
+&lt;/Directory&gt;</code></pre>
+<p>他にもドメインを追加したい時は、同ファイルに続けて以下のように書きます。</p>
+<pre><code>&lt;VirtualHost *:80&gt;
+DocumentRoot D:/htdocs/fuga
+ServerName fuga.localhost
+&lt;/VirtualHost&gt;
+&lt;Directory &quot;D:/htdocs/fuga&quot;&gt;
+order deny,allow
+allow from ALL
+&lt;/Directory&gt;</code></pre>
+<p>ファイルの修正が終わったら上書き保存します。</p>
+<p class="memo">同ファイルに<code>&lt;VirtualHost&gt;</code>の書き方のお手本がコメントアウトされた状態で書いてあります。それを見ると、<code>ServerAdmin</code>やら<code>ErrorLog</code>といった項目が書いてありますが、動かすだけならこれらを省略しても支障はないようです。</p></li>
+<li class="step03"><p><span class="path">C:\WINDOWS\system32\drivers\etc\hosts</span>をテキストエディタで開き</p>
+<pre><code>127.0.0.1       localhost</code></pre>
+<p>となっているところを次のような感じに修正し、保存します。</p>
+<pre><code>127.0.0.1       localhost
+127.0.0.1       hoge.localhost
+127.0.0.1       fuga.localhost</code></pre></li>
+<li class="step04">apacheを再起動します。XAMPPコントロールパネルから「停止」ボタン→しばらく待ってから「開始」ボタン で再起動になります。そもそも起動していないなら、「開始」ボタンを押して起動させます。</li>
+<li class="step05">ブラウザで<span class="url">http://localhost/</span>や<span class="url">http://hoge.localhost/</span>にアクセスし、正常な表示ができるかどうかを確認します。</li>
+</ol>
+
+<dl class="disclist">
+<dt>参考にさせていただいたWebサイト：</dt>
+<dd><a href="http://labs.uechoco.com/blog3/2007/12/xamppaccess_forbidden.html">[xampp]ローカルにサブドメイン切ったらaccess forbidden食らった &#8211; うえちょこ＠ぼろぐ</a></dd>
+<dd><a href="http://www.res-system.com/weblog/item/585/catid/32">apache:ローカル環境で複数ドメイン（サイト）:VirtualHost</a></dd>
+</dl>
+
+<p><span id="more-51"></span></p>
+
+<div class="postscript">
+<ins datetime="2008-09-07T13:00+09:00">
+<h3>2008年9月7日 &#8211; メモ的追記</h3>
+<p>そのディレクトリでCGIが動かしたかったら <code>ExecCGI</code> オプションを追加して次のように書きます。</p>
+<pre><code>&lt;VirtualHost *:80&gt;
+DocumentRoot D:/htdocs/fuga
+ServerName fuga.localhost
+&lt;/VirtualHost&gt;
+&lt;Directory &quot;D:/htdocs/fuga&quot;&gt;
+Options ExecCGI
+order deny,allow
+allow from ALL
+&lt;/Directory&gt;</code></pre>
+<p>これでMTも動きます。</p>
+<dl class="disclist">
+<dt>参考：</dt>
+<dd><a href="http://httpd.apache.org/docs/2.2/ja/howto/cgi.html#configuring">Apache Tutorial: CGI による動的コンテンツ &#8211; Apache HTTP サーバ</a></dd>
+</dl>
+</ins>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2008/05/16_xampp/feed</wfw:commentRss>
+			<slash:comments>6</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

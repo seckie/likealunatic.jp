@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: 英辞郎 on the WebをGoogleツールバー for Firefoxから使う	</title>
+	<atom:link href="/2007/08/29_eijiro/feed" rel="self" type="application/rss+xml" />
+	<link>/2007/08/29_eijiro</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:40 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: poo		</title>
+		<link>/2007/08/29_eijiro/comment-page-1#comment-27</link>
+
+		<dc:creator><![CDATA[poo]]></dc:creator>
+		<pubDate>Sat, 30 May 2009 04:48:43 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/08/%e8%8b%b1%e8%be%9e%e9%83%8e-on-the-web%e3%82%92google%e3%83%84%e3%83%bc%e3%83%ab%e3%83%90%e3%83%bc-for-firefox%e3%81%8b%e3%82%89%e4%bd%bf%e3%81%86.php#comment-27</guid>
+
+					<description><![CDATA[&lt;p&gt;こんにちは。解決しました！ありがとうございます！&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>こんにちは。解決しました！ありがとうございます！</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Naoki Sekiguchi		</title>
+		<link>/2007/08/29_eijiro/comment-page-1#comment-26</link>
+
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Sat, 30 May 2009 01:32:22 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/08/%e8%8b%b1%e8%be%9e%e9%83%8e-on-the-web%e3%82%92google%e3%83%84%e3%83%bc%e3%83%ab%e3%83%90%e3%83%bc-for-firefox%e3%81%8b%e3%82%89%e4%bd%bf%e3%81%86.php#comment-26</guid>
+
+					<description><![CDATA[&lt;p&gt;＞pooさん
+こんにちは。
+私も試してみました。↓これで動きましたが、いかがでしょうか？
+&lt;a href=&quot;http://b.hatena.ne.jp/t/{query}&quot; rel=&quot;nofollow&quot;&gt;http://b.hatena.ne.jp/t/{query}&lt;/a&gt;&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>＞pooさん
+こんにちは。
+私も試してみました。↓これで動きましたが、いかがでしょうか？
+<a href="http://b.hatena.ne.jp/t/{query}" rel="nofollow"></a><a href="http://b.hatena.ne.jp/t/" rel="nofollow ugc">http://b.hatena.ne.jp/t/</a>{query}</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: poo		</title>
+		<link>/2007/08/29_eijiro/comment-page-1#comment-25</link>
+
+		<dc:creator><![CDATA[poo]]></dc:creator>
+		<pubDate>Sat, 30 May 2009 00:21:01 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/08/%e8%8b%b1%e8%be%9e%e9%83%8e-on-the-web%e3%82%92google%e3%83%84%e3%83%bc%e3%83%ab%e3%83%90%e3%83%bc-for-firefox%e3%81%8b%e3%82%89%e4%bd%bf%e3%81%86.php#comment-25</guid>
+
+					<description><![CDATA[&lt;p&gt;この記事を読んで、はてなブックマークのタグ検索ツールバーを自ら創ってみようと思ったのですが、うまくいきませんでした。&lt;a href=&quot;http://b.hatena.ne.jp/t{query}/UTF-8/?q={query}&quot; rel=&quot;nofollow&quot;&gt;http://b.hatena.ne.jp/t{query}/UTF-8/?q={query}&lt;/a&gt;に問題があると思うのですが、もしよろしければどのように訂正すればいいか、ご教示いただけないでしょうか？&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>この記事を読んで、はてなブックマークのタグ検索ツールバーを自ら創ってみようと思ったのですが、うまくいきませんでした。<a href="http://b.hatena.ne.jp/t{query}/UTF-8/?q={query}" rel="nofollow"></a><a href="http://b.hatena.ne.jp/t" rel="nofollow ugc">http://b.hatena.ne.jp/t</a>{query}/UTF-8/?q={query}に問題があると思うのですが、もしよろしければどのように訂正すればいいか、ご教示いただけないでしょうか？</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Naoki Sekiguchi		</title>
+		<link>/2007/08/29_eijiro/comment-page-1#comment-24</link>
+
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Sat, 10 Nov 2007 06:35:24 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/08/%e8%8b%b1%e8%be%9e%e9%83%8e-on-the-web%e3%82%92google%e3%83%84%e3%83%bc%e3%83%ab%e3%83%90%e3%83%bc-for-firefox%e3%81%8b%e3%82%89%e4%bd%bf%e3%81%86.php#comment-24</guid>
+
+					<description><![CDATA[&lt;p&gt;＞G-Geekさん
+コメントありがとうございます。
+お役に立てて光栄です・・・が・・・
+&quot;英辞郎+ツールバー&quot;で私も検索しましたところ、件の利用規約を発見してしまいました。表題の使い方は利用規約違反だということが分かりましたので、記事を削除させていただきました次第です。&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>＞G-Geekさん
+コメントありがとうございます。
+お役に立てて光栄です・・・が・・・
+&#8220;英辞郎+ツールバー&#8221;で私も検索しましたところ、件の利用規約を発見してしまいました。表題の使い方は利用規約違反だということが分かりましたので、記事を削除させていただきました次第です。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: G-Geek		</title>
+		<link>/2007/08/29_eijiro/comment-page-1#comment-23</link>
+
+		<dc:creator><![CDATA[G-Geek]]></dc:creator>
+		<pubDate>Fri, 09 Nov 2007 19:03:55 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/08/%e8%8b%b1%e8%be%9e%e9%83%8e-on-the-web%e3%82%92google%e3%83%84%e3%83%bc%e3%83%ab%e3%83%90%e3%83%bc-for-firefox%e3%81%8b%e3%82%89%e4%bd%bf%e3%81%86.php#comment-23</guid>
+
+					<description><![CDATA[&lt;p&gt;初めまして！
+これまでずっと、アルクに行ってから英辞郎を使ってました。
+この度ブラウズ環境を見直そうと、&quot;英辞郎＋ツールバー&quot;でサーチしてましたら、こちらがHitしました。
+大感謝です！
+ありがとうございます。&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>初めまして！
+これまでずっと、アルクに行ってから英辞郎を使ってました。
+この度ブラウズ環境を見直そうと、&#8221;英辞郎＋ツールバー&#8221;でサーチしてましたら、こちらがHitしました。
+大感謝です！
+ありがとうございます。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Naoki Sekiguchi		</title>
+		<link>/2007/08/29_eijiro/comment-page-1#comment-22</link>
+
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Fri, 02 Nov 2007 02:35:28 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/08/%e8%8b%b1%e8%be%9e%e9%83%8e-on-the-web%e3%82%92google%e3%83%84%e3%83%bc%e3%83%ab%e3%83%90%e3%83%bc-for-firefox%e3%81%8b%e3%82%89%e4%bd%bf%e3%81%86.php#comment-22</guid>
+
+					<description><![CDATA[&lt;p&gt;＞shin5nackさん
+コメントありがとうございます。お役に立てて光栄です。
+英辞郎はリニューアルによってさらに良くなりましたよね。ホント手放せないサービスの一つです。&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>＞shin5nackさん
+コメントありがとうございます。お役に立てて光栄です。
+英辞郎はリニューアルによってさらに良くなりましたよね。ホント手放せないサービスの一つです。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: shin5nack		</title>
+		<link>/2007/08/29_eijiro/comment-page-1#comment-21</link>
+
+		<dc:creator><![CDATA[shin5nack]]></dc:creator>
+		<pubDate>Thu, 01 Nov 2007 09:42:46 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/08/%e8%8b%b1%e8%be%9e%e9%83%8e-on-the-web%e3%82%92google%e3%83%84%e3%83%bc%e3%83%ab%e3%83%90%e3%83%bc-for-firefox%e3%81%8b%e3%82%89%e4%bd%bf%e3%81%86.php#comment-21</guid>
+
+					<description><![CDATA[&lt;p&gt;最近使えなくなったよなーと思いつつ放置していたのですが、これでまた英辞郎が使えるようになりました。ありがとうございました！&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>最近使えなくなったよなーと思いつつ放置していたのですが、これでまた英辞郎が使えるようになりました。ありがとうございました！</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Web Development &#8211; Like@Lunatic</title>
+	<atom:link href="/category/webdevelopment/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:13:52 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Web Development &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>さくらのVPSから Lightsail へ引っ越した</title>
+		<link>/2021/01/lightsail</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Sun, 03 Jan 2021 15:18:52 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[AWS]]></category>
+		<guid isPermaLink="false">/?p=1462</guid>
+
+					<description><![CDATA[さくらのVPSを使ってこのサイトをホスティングしてきた のだが、この度 AWS の Lightsail に引っ越した。 引っ越しした最大の理由は、契約して以降長らく使いっぱなしのマシンの OS が CentOS 6 だったから。 CentOS 6 は11月30日でサポートが終了 しており、そのまま運用するわけにもいかないぞ…と目下の課題だった。 それに、さくらのVPSを使っていたことには積極的な理由はなく惰性でそうしていただけだ。2020年12月時点でこのサイトのホスティングと、likealunatic.jp ドメインに紐づいたメールアドレスを Gmail に転送することにしか利用していなかった。メールは現在 Gmail のアドレスしか使っていないので、独自ドメインのメールアドレスは捨てることにした。引越し先では WordPress サイトのホスティングだけできればよい。 移転先として Lightsail を選んだのは、現在の仕事で AWS を利用しているため、少しでもサービスに触る機会を増やしたかったから。まあ、業務で Lightsail は使わないわけだけど…。それに調べてみると Lightsail の方がさくらのVPSよりコストが安いし、スペックも見劣りすることもなかったので。 年末年始の宿題として取り組むつもりだったのだが、思いのほか簡単に済んでしまって拍子抜けだった。 ほぼ こちらの記事（［Lightsail］さくらインターネットからAWS LightsailにWordPressを最速で移行する – スモールスタート編 &#124; ma-ya&#8217;s CREATE / WEB DESIGN） で紹介されている手順で作業は完了した。とても有用な記事をありがとうございます。 つまづいたポイントとしては HTTPS 化の作業で sudo /opt/bitnami/bncert-tool した際に、 Warning: The domain 'mydomain.com' resolves to a different IP address than the one detected for this machine, which is 'aa.bb.ccc.dddd'. Please fix its DNS entries or remove it. For more info see: https://docs.bitnami.com/general/faq/configuration/configure-custom-domain/ というようなメッセージが表示され、それ以上設定が進められなくなったこと。 これはドメインのゾーン情報に、旧サーバーを指すAレコードが残っているからだった。さくらインターネット会員メニューのドメイン設定画面からAレコードを削除したら解決。 &#8230; というわけで2021年も始まりましたが、こちらはのらりくらりとやっていこうと思っています。 改めまして、明けましておめでとうございます。本年もよろしくお願いいたします。 References ［Lightsail］さくらインターネットからAWS LightsailにWordPressを最速で移行する – スモールスタート編 &#124; ma-ya&#8217;s CREATE / WEB DESIGN SFTP を使用して Amazon Lightsail の Linux または UNIX インスタンスに接続する &#8230; <a href="/2021/01/lightsail">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/2015/07/server-moving">さくらのVPSを使ってこのサイトをホスティングしてきた</a> のだが、この度 AWS の <a href="https://aws.amazon.com/jp/lightsail/">Lightsail</a> に引っ越した。</p>
+
+<p>引っ越しした最大の理由は、契約して以降長らく使いっぱなしのマシンの OS が CentOS 6 だったから。 <a href="https://cybersecurity-tokyo.jp/security/cyberthreat/259/">CentOS 6 は11月30日でサポートが終了</a> しており、そのまま運用するわけにもいかないぞ…と目下の課題だった。<br />
+それに、さくらのVPSを使っていたことには積極的な理由はなく惰性でそうしていただけだ。2020年12月時点でこのサイトのホスティングと、likealunatic.jp ドメインに紐づいたメールアドレスを Gmail に転送することにしか利用していなかった。メールは現在 Gmail のアドレスしか使っていないので、独自ドメインのメールアドレスは捨てることにした。引越し先では WordPress サイトのホスティングだけできればよい。</p>
+
+<p>移転先として Lightsail を選んだのは、現在の仕事で AWS を利用しているため、少しでもサービスに触る機会を増やしたかったから。まあ、業務で Lightsail は使わないわけだけど…。それに調べてみると Lightsail の方がさくらのVPSよりコストが安いし、スペックも見劣りすることもなかったので。</p>
+
+<p>年末年始の宿題として取り組むつもりだったのだが、思いのほか簡単に済んでしまって拍子抜けだった。</p>
+
+<p>ほぼ <a href="https://myscreate.com/migration-sakura-from-aws/">こちらの記事（［Lightsail］さくらインターネットからAWS LightsailにWordPressを最速で移行する – スモールスタート編 | ma-ya&#8217;s CREATE / WEB DESIGN）</a> で紹介されている手順で作業は完了した。とても有用な記事をありがとうございます。</p>
+
+<p>つまづいたポイントとしては HTTPS 化の作業で <code>sudo /opt/bitnami/bncert-tool</code> した際に、</p>
+
+<pre><code>Warning: The domain 'mydomain.com' resolves to a different IP address than the
+one detected for this machine, which is 'aa.bb.ccc.dddd'. Please fix its DNS
+entries or remove it. For more info see:
+https://docs.bitnami.com/general/faq/configuration/configure-custom-domain/
+</code></pre>
+
+<p>というようなメッセージが表示され、それ以上設定が進められなくなったこと。
+これはドメインのゾーン情報に、旧サーバーを指すAレコードが残っているからだった。さくらインターネット会員メニューのドメイン設定画面からAレコードを削除したら解決。</p>
+
+<p>&#8230;</p>
+
+<p>というわけで2021年も始まりましたが、こちらはのらりくらりとやっていこうと思っています。
+改めまして、明けましておめでとうございます。本年もよろしくお願いいたします。</p>
+
+<h2>References</h2>
+
+<ul>
+<li><a href="https://myscreate.com/migration-sakura-from-aws/">［Lightsail］さくらインターネットからAWS LightsailにWordPressを最速で移行する – スモールスタート編 | ma-ya&#8217;s CREATE / WEB DESIGN</a></li>
+<li><a href="https://lightsail.aws.amazon.com/ls/docs/ja_jp/articles/amazon-lightsail-connecting-to-linux-unix-instance-using-sftp">SFTP を使用して Amazon Lightsail の Linux または UNIX インスタンスに接続する &#124; Lightsail ドキュメント</a></li>
+<li><a href="https://help.sakura.ad.jp/206207381/">ネームサーバ利用申請 – さくらのサポート情報</a></li>
+<li><a href="https://oji-cloud.net/2018/06/10/post-43/">WordPressサイトアドレスをhttpsに変更する（Really Simple SSL） &#124; Oji&#45;Cloud</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Noto Serif CJK JP を Web フォントとして使う</title>
+		<link>/2018/05/noto-serif-cjk-web-fonts</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Sun, 06 May 2018 07:50:18 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<guid isPermaLink="false">/?p=1351</guid>
+
+					<description><![CDATA[仕事で明朝体のサイトを作ることになったので Noto Serif CJK が Web フォントとして使えないか、と調査した。 Noto Sans JP は CDN 配信されている が、Noto Serif JP は配信されていないので、自前でファイルを持つ必要があるのだ。これはめんどくさいぞ…。 まずは Noto CJK – Google Noto Fonts の &#8220;Region-specific Subset OpenType/CFF (Subset OTF)&#8221; というセクションから使いたいウェイトをダウンロード。今回は NotoSerifCJK-Regular.ttc を選択した。 Web フォントとして使用するために ttc ファイルを woff2 と woff に変換する。今回は WOFFコンバータ を使うことにした。 できたデモがこちら。 NotoSerifCJK-Regular をWeb フォントとして使用するデモ ファイルサイズは woff2 で 4.5 MB、woff で 5.2 MB だ。これでも &#8220;Regision-specific Subset&#8221; とサブセット化されているものだが、まだ実用に耐えうるサイズじゃない。Chrome のネットワークエミュレーションで &#8220;Fast 3G&#8221; を選択するとダウンロードするのに 24.51 秒かかる。ちなみに通常の環境（光＋Wifi）だと 674 ミリ秒。うーむ。 というわけでさらなるサブセット化に取り組むことにする。これには サブセットフォントメーカー を使う。 ネット検索し、「第一水準漢字＋記号＋ローマ字＋カタカナ＋ひらがな」のソースを探すが、信頼に足るものがいまいち見つからない。 まずはこちらさんを試す。 ん、なんだか漢字少なすぎじゃない？ ではこちらさんはどうだろう。 えぇ…、「j」がないよ…。 で、結局、漢字のセクションだけ後者、それ以外を前者から頂戴する形でサブセット化。 うむ。まぁこれでよかろう。 サーバーにアップロードして、と。 サブセット化した NotoSerifCJK-Regular を使用するデモ Chrome DevTools で同じ条件（Fast 3G）で見てみると…、3.87秒。及第点じゃないだろうか。 本日はこの辺で。 References Articles Google Fonts「Noto Serif CJK JP（源ノ明朝）」の使い方｜プラカンブログ &#124; WEB制作会社プラスデザインカンパニー Google Fonts「Noto Serif CJK JP」を使ってみる ｜ Tips Note by TAM &#91;CSS&#93;Web制作者が知っておきたい、Webフォントを快適に表示するCSSの新しいプロパティ「font&#45;display」 &#124; コリス 日本語Webフォントをサブセット化して軽量化する方法 &#124; &#8230; <a href="/2018/05/noto-serif-cjk-web-fonts">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>仕事で明朝体のサイトを作ることになったので <a href="https://www.google.com/get/noto/help/cjk/">Noto Serif CJK</a> が Web フォントとして使えないか、と調査した。
+<a href="https://fonts.google.com/earlyaccess#Noto+Sans+JP">Noto Sans JP は CDN 配信されている</a> が、Noto Serif JP は配信されていないので、自前でファイルを持つ必要があるのだ。これはめんどくさいぞ…。</p>
+
+<p>まずは <a href="https://www.google.com/get/noto/help/cjk/">Noto CJK – Google Noto Fonts</a> の &#8220;Region-specific Subset OpenType/CFF (Subset OTF)&#8221; というセクションから使いたいウェイトをダウンロード。今回は NotoSerifCJK-Regular.ttc を選択した。</p>
+
+<p>Web フォントとして使用するために ttc ファイルを woff2 と woff に変換する。今回は <a href="https://opentype.jp/woffconv.htm">WOFFコンバータ</a> を使うことにした。
+できたデモがこちら。</p>
+
+<p><a href="/fonts/demo.html" class="btn btn-info" role="button">NotoSerifCJK-Regular をWeb フォントとして使用するデモ</a></p>
+
+<p>ファイルサイズは woff2 で 4.5 MB、woff で 5.2 MB だ。これでも &#8220;Regision-specific Subset&#8221; とサブセット化されているものだが、まだ実用に耐えうるサイズじゃない。Chrome のネットワークエミュレーションで &#8220;Fast 3G&#8221; を選択するとダウンロードするのに 24.51 秒かかる。ちなみに通常の環境（光＋Wifi）だと 674 ミリ秒。うーむ。</p>
+
+<p><a href="/wp-content/uploads/2018/05/ac7d48b1c976439809a4dbcfef6da2e5.png"><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2018/05/ac7d48b1c976439809a4dbcfef6da2e5-1024x646.png" alt="Noto Serif JP - 単にwoffに変換した状態" width="584" height="368" class="alignnone size-large wp-image-1352" srcset="/wp-content/uploads/2018/05/ac7d48b1c976439809a4dbcfef6da2e5-1024x646.png 1024w, /wp-content/uploads/2018/05/ac7d48b1c976439809a4dbcfef6da2e5-300x189.png 300w, /wp-content/uploads/2018/05/ac7d48b1c976439809a4dbcfef6da2e5-768x485.png 768w, /wp-content/uploads/2018/05/ac7d48b1c976439809a4dbcfef6da2e5-475x300.png 475w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+
+<p>というわけでさらなるサブセット化に取り組むことにする。これには <a href="https://opentype.jp/subsetfontmk.htm">サブセットフォントメーカー</a> を使う。
+ネット検索し、「第一水準漢字＋記号＋ローマ字＋カタカナ＋ひらがな」のソースを探すが、信頼に足るものがいまいち見つからない。</p>
+
+<p>まずは<a href="https://gist.githubusercontent.com/yokotak0527/6354609/raw/7df06d2931cec43a2144e84f2f54e35f18da2db5/gistfile1.txt">こちらさん</a>を試す。
+ん、なんだか漢字少なすぎじゃない？</p>
+
+<p><a href="/wp-content/uploads/2018/05/6877b20154b4e0f0aa643517e49b78eb.png"><img decoding="async" src="/wp-content/uploads/2018/05/6877b20154b4e0f0aa643517e49b78eb-1024x530.png" alt="Noto Serif JP - サブセット化1" width="584" height="302" class="alignnone size-large wp-image-1355" srcset="/wp-content/uploads/2018/05/6877b20154b4e0f0aa643517e49b78eb-1024x530.png 1024w, /wp-content/uploads/2018/05/6877b20154b4e0f0aa643517e49b78eb-300x155.png 300w, /wp-content/uploads/2018/05/6877b20154b4e0f0aa643517e49b78eb-768x398.png 768w, /wp-content/uploads/2018/05/6877b20154b4e0f0aa643517e49b78eb-500x259.png 500w, /wp-content/uploads/2018/05/6877b20154b4e0f0aa643517e49b78eb.png 1618w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+
+<p>では<a href="https://drive.google.com/file/d/0Bza38quoCtHqM004SE1QUVlNLWc/view">こちらさん</a>はどうだろう。
+えぇ…、「j」がないよ…。</p>
+
+<p><a href="/wp-content/uploads/2018/05/36cadf5438b55915b05137941fa4be47.png"><img decoding="async" src="/wp-content/uploads/2018/05/36cadf5438b55915b05137941fa4be47-1024x533.png" alt="Noto Serif JP - サブセット化2" width="584" height="304" class="alignnone size-large wp-image-1356" srcset="/wp-content/uploads/2018/05/36cadf5438b55915b05137941fa4be47-1024x533.png 1024w, /wp-content/uploads/2018/05/36cadf5438b55915b05137941fa4be47-300x156.png 300w, /wp-content/uploads/2018/05/36cadf5438b55915b05137941fa4be47-768x400.png 768w, /wp-content/uploads/2018/05/36cadf5438b55915b05137941fa4be47-500x260.png 500w, /wp-content/uploads/2018/05/36cadf5438b55915b05137941fa4be47.png 1606w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+
+<p>で、結局、漢字のセクションだけ後者、それ以外を前者から頂戴する形でサブセット化。
+うむ。まぁこれでよかろう。</p>
+
+<p><a href="/wp-content/uploads/2018/05/a7ca6af25ce068fcf20c530ed11a4381.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2018/05/a7ca6af25ce068fcf20c530ed11a4381-1024x535.png" alt="Noto Serif JP - サブセット化3" width="584" height="305" class="alignnone size-large wp-image-1357" srcset="/wp-content/uploads/2018/05/a7ca6af25ce068fcf20c530ed11a4381-1024x535.png 1024w, /wp-content/uploads/2018/05/a7ca6af25ce068fcf20c530ed11a4381-300x157.png 300w, /wp-content/uploads/2018/05/a7ca6af25ce068fcf20c530ed11a4381-768x401.png 768w, /wp-content/uploads/2018/05/a7ca6af25ce068fcf20c530ed11a4381-500x261.png 500w, /wp-content/uploads/2018/05/a7ca6af25ce068fcf20c530ed11a4381.png 1620w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+
+<p>サーバーにアップロードして、と。</p>
+
+<p><a href="/fonts/demo.html" class="btn btn-info" role="button">サブセット化した NotoSerifCJK-Regular を使用するデモ</a></p>
+
+<p>Chrome DevTools で同じ条件（Fast 3G）で見てみると…、3.87秒。及第点じゃないだろうか。</p>
+
+<p><a href="/wp-content/uploads/2018/05/345b52b806890fc972c90b33d18b7a6c.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2018/05/345b52b806890fc972c90b33d18b7a6c-1024x756.png" alt="Noto Serif JP - Noto Serif JP - サブセット化した後の計測" width="584" height="431" class="alignnone size-large wp-image-1358" srcset="/wp-content/uploads/2018/05/345b52b806890fc972c90b33d18b7a6c-1024x756.png 1024w, /wp-content/uploads/2018/05/345b52b806890fc972c90b33d18b7a6c-300x222.png 300w, /wp-content/uploads/2018/05/345b52b806890fc972c90b33d18b7a6c-768x567.png 768w, /wp-content/uploads/2018/05/345b52b806890fc972c90b33d18b7a6c-406x300.png 406w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+
+<p>本日はこの辺で。</p>
+
+<h2>References</h2>
+
+<h3>Articles</h3>
+
+<ul>
+<li><a href="https://www.plusdesign.co.jp/blog/?p=8854">Google Fonts「Noto Serif CJK JP（源ノ明朝）」の使い方｜プラカンブログ &#124; WEB制作会社プラスデザインカンパニー</a></li>
+<li><a href="https://www.tam-tam.co.jp/tipsnote/html_css/post13175.html">Google Fonts「Noto Serif CJK JP」を使ってみる ｜ Tips Note by TAM</a></li>
+<li><a href="https://coliss.com/articles/build-websites/operation/css/about-font-display.html">&#91;CSS&#93;Web制作者が知っておきたい、Webフォントを快適に表示するCSSの新しいプロパティ「font&#45;display」 &#124; コリス</a></li>
+<li><a href="https://heysho.com/webfont/">日本語Webフォントをサブセット化して軽量化する方法 &#124; HEYSHO&#46;COM</a> </li>
+<li><a href="http://brian.hatenablog.jp/entry/how-to-set-web-fonts">10分で設定完了！Webフォントの使い方や軽量化・はてなブログでの設定手順、優良リソースなどまとめ【おすすめ日本語フォントも】 &#45; Brian&#8217;z Imagination</a></li>
+</ul>
+
+<h3>Resources</h3>
+
+<ul>
+<li><a href="https://www.google.com/get/noto/help/cjk/">Noto CJK – Google Noto Fonts</a></li>
+<li><a href="https://opentype.jp/subsetfontmk.htm">サブセットフォントメーカー</a></li>
+<li><a href="https://opentype.jp/woffconv.htm">WOFFコンバータ</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Let&#8217;s Encrypt でサイトの SSL 化</title>
+		<link>/2017/05/lets-encrypt-ssl</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Thu, 18 May 2017 10:29:31 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[SSL]]></category>
+		<guid isPermaLink="false">/?p=1253</guid>
+
+					<description><![CDATA[Let&#8217;s Entrypt という素晴らしいサービスが無料のSSL証明書が提供していると同僚に教えてもらったので、試しにこのサイトに導入することにしました。 このエントリーは導入過程のメモです。 Let&#8217;s Encrypt は Certbot というコマンドラインインターフェースを持っていて、証明書の取得とインストール、更新までコマンドでできるようになっているとのこと。なんとまあ便利ですね。 証明書の有効期限は90日間しかないので、crontab などで有効期限前に自動で更新していく運用が望ましいみたいです。ではそうしていきましょう。 事前に以下の準備をしておきます。 Really Simple SSL プラグインを WordPress にインストールしておく ファイヤーウォールがあるならインバウンド 443 ポートを開けておく また、環境としてはさくらのVPS（CentOS 6）で Nginx + WordPress を動かしている状態です。 証明書のインストールとWebサーバーの設定 サーバーに SSH でログインして、作業開始。 certbot-auto スクリプトをダウンロードして、 /usr/bin に移動、実行権限をつけて、実行。ウェブサーバーは Nginx なので、--nginx オプションをつける。 $ wget https://dl.eff.org/certbot-auto $ sudo mv ./certbot-auto /usr/bin/certbot-auto $ sudo chmod a+x /usr/bin/certbot-auto $ sudo certbot-auto --nginx これでインストールウィザードが始まる。 以下のくだりでは「2」と答えておくと、Nginx 設定ファイルにリダイレクトの設定を勝手に書き込んでくれる。 Please choose whether HTTPS access is required or optional. ------------------------------------------------------------------------------- 1: Easy - Allow both HTTP and HTTPS access to these sites 2: Secure - Make all requests redirect to secure HTTPS access ------------------------------------------------------------------------------- 設定を反映させる。 $ sudo service nginx reload この状態でもうすでにSSL化はできていた。https でサイトにアクセスしてみると以下のような状況。 http 接続を https 接続に強制リダイレクトをかける。 certbot-auto が /etc/nginx/conf.d/default.conf に設定を書き込んでいるが、コメントアウトされているのでそれを外して有効にする。 # Redirect &#8230; <a href="/2017/05/lets-encrypt-ssl">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://letsencrypt.org/">Let&#8217;s Entrypt</a> という素晴らしいサービスが無料のSSL証明書が提供していると同僚に教えてもらったので、試しにこのサイトに導入することにしました。<br />
+このエントリーは導入過程のメモです。</p>
+
+<p>Let&#8217;s Encrypt は <a href="https://certbot.eff.org/">Certbot</a> というコマンドラインインターフェースを持っていて、証明書の取得とインストール、更新までコマンドでできるようになっているとのこと。なんとまあ便利ですね。</p>
+
+<p>証明書の有効期限は90日間しかないので、crontab などで有効期限前に自動で更新していく運用が望ましいみたいです。ではそうしていきましょう。</p>
+
+<p>事前に以下の準備をしておきます。</p>
+
+<ul>
+<li><a href="https://ja.wordpress.org/plugins/really-simple-ssl/">Really Simple SSL</a> プラグインを WordPress にインストールしておく</li>
+<li>ファイヤーウォールがあるならインバウンド 443 ポートを開けておく</li>
+</ul>
+
+<p>また、環境としては<a href="http://vps.sakura.ad.jp/">さくらのVPS</a>（CentOS 6）で Nginx + WordPress を動かしている状態です。</p>
+
+<h2>証明書のインストールとWebサーバーの設定</h2>
+
+<p>サーバーに SSH でログインして、作業開始。<br />
+certbot-auto スクリプトをダウンロードして、 <code>/usr/bin</code> に移動、実行権限をつけて、実行。ウェブサーバーは Nginx なので、<code>--nginx</code> オプションをつける。</p>
+
+<pre><code class="bash">$ wget https://dl.eff.org/certbot-auto
+$ sudo mv ./certbot-auto /usr/bin/certbot-auto
+$ sudo chmod a+x /usr/bin/certbot-auto
+$ sudo certbot-auto --nginx
+</code></pre>
+
+<p>これでインストールウィザードが始まる。
+以下のくだりでは「2」と答えておくと、Nginx 設定ファイルにリダイレクトの設定を勝手に書き込んでくれる。</p>
+
+<pre><code>Please choose whether HTTPS access is required or optional.
+-------------------------------------------------------------------------------
+1: Easy - Allow both HTTP and HTTPS access to these sites
+2: Secure - Make all requests redirect to secure HTTPS access
+-------------------------------------------------------------------------------
+</code></pre>
+
+<p>設定を反映させる。</p>
+
+<pre><code>$ sudo service nginx reload
+</code></pre>
+
+<p>この状態でもうすでにSSL化はできていた。https でサイトにアクセスしてみると以下のような状況。</p>
+
+<p><a href="/wp-content/uploads/2017/05/b92e66e39f0d901ea913a4d15651ce33.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/05/b92e66e39f0d901ea913a4d15651ce33-1024x868.png" alt="SSL証明書を表示確認しているところ" width="584" height="495" class="alignnone size-large wp-image-1254" srcset="/wp-content/uploads/2017/05/b92e66e39f0d901ea913a4d15651ce33-1024x868.png 1024w, /wp-content/uploads/2017/05/b92e66e39f0d901ea913a4d15651ce33-300x254.png 300w, /wp-content/uploads/2017/05/b92e66e39f0d901ea913a4d15651ce33-768x651.png 768w, /wp-content/uploads/2017/05/b92e66e39f0d901ea913a4d15651ce33-354x300.png 354w, /wp-content/uploads/2017/05/b92e66e39f0d901ea913a4d15651ce33.png 1812w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+
+<p>http 接続を https 接続に強制リダイレクトをかける。<br />
+certbot-auto が <code>/etc/nginx/conf.d/default.conf</code> に設定を書き込んでいるが、コメントアウトされているのでそれを外して有効にする。</p>
+
+<pre><code class="git">     # Redirect non-https traffic to https
+-    # if ($scheme != "https") {
+-    #     return 301 https://$host$request_uri;/
+-    # } # managed by Certbot
++    if ($scheme != "https") {
++        return 301 https://$host$request_uri;/
++    } # managed by Certbot
+</code></pre>
+
+<p>設定を反映させる。</p>
+
+<pre><code>$ sudo service nginx reload
+</code></pre>
+
+<p>最後に自動更新の設定。<br />
+毎週日曜日の5時に更新処理が走るように設定した例。</p>
+
+<pre><code class="bash">$ sudo crontab -e
+
+0 5 * * 0 certbot-auto renew --post-hook "service nginx reload" &gt;/dev/null 2&gt;&amp;1
+</code></pre>
+
+<h2>Really Simple SSL プラグインを使う</h2>
+
+<p>インストールしてアクティベートすると以下のようなメッセージが表示される。</p>
+
+<p><a href="/wp-content/uploads/2017/05/aa90f7af9af23697da2541a0e33e9b7e.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/05/aa90f7af9af23697da2541a0e33e9b7e-1024x788.png" alt="Relly Simple SSL Plugin" width="584" height="449" class="alignnone size-large wp-image-1255" srcset="/wp-content/uploads/2017/05/aa90f7af9af23697da2541a0e33e9b7e-1024x788.png 1024w, /wp-content/uploads/2017/05/aa90f7af9af23697da2541a0e33e9b7e-300x231.png 300w, /wp-content/uploads/2017/05/aa90f7af9af23697da2541a0e33e9b7e-768x591.png 768w, /wp-content/uploads/2017/05/aa90f7af9af23697da2541a0e33e9b7e-390x300.png 390w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+
+<p>「Go ahead, activate SSL!」ボタンを押す。すると以下のようなメッセージが表示される。</p>
+
+<pre><code>SSL activated!  Don't forget to change your settings in Google Analytics en Webmaster tools.  More info.
+</code></pre>
+
+<p>えっと…、本当に簡単だな…。<br />
+Google Analytics と Webmaster tools の面倒も見ろとな。あとでね。</p>
+
+<p>以上です。</p>
+
+<hr />
+
+<p>P.S.</p>
+
+<p>URLが変わるので、はてブ数などはリセットされてしまいます。まぁそれはそうだわな。<br />
+<a href="http://b.hatena.ne.jp/search/text?q=likealunatic.jp">本文「likealunatic&#46;jp」を検索 &#45; はてなブックマーク</a></p>
+
+<hr />
+
+<h2>References</h2>
+
+<ul>
+<li><a href="https://letsencrypt.org/">Let&#8217;s Encrypt &#45; Free SSL/TLS Certificates</a></li>
+<li><a href="https://certbot.eff.org/">Certbot</a></li>
+<li><a href="https://letsencrypt.jp/">Let&#8217;s Encrypt 総合ポータル</a></li>
+<li><a href="http://knowledge.sakura.ad.jp/knowledge/5573/">Let’s EncryptのSSL証明書で、安全なウェブサイトを公開 &#45; さくらのナレッジ</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>webpack にまつわるぐだぐだ。キャッシュ対策と CommonsChunkPlugin</title>
+		<link>/2017/05/webpack</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Thu, 11 May 2017 08:30:11 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[webpack]]></category>
+		<guid isPermaLink="false">/?p=1246</guid>
+
+					<description><![CDATA[webpack (version 2) の公式ドキュメントではバンドルファイルのブラウザキャッシュ対策として、ファイル名にハッシュ値を埋め込む方法が提案されている。 こうするとアプリのコードを変更する度に、バンドルファイル名に埋め込まれたハッシュ値も更新され、ブラウザキャッシュ対策ができる、という寸法だが…。 当然ファイル名が変わるわけだから、&#60;sript&#62; タグも更新しなくてはならない。それを解決するには、HTML ファイルも動的に扱わなければならない。chunk-manifest-webpack-plugin と html-webpack-plugin を導入し、HTML のテンプレーティングを行い…、となると今使っている Pug はどうなる…、となってさらにさらに掘り下げないといけなくなり、はっきり言ってソリューションとして無理がある。 閑話休題。 webpack をヘビーに使っていると、サードパーティーフレームワークやライブラリのコード（npm install でインストールしたようなモジュール）を出力ファイル（バンドルファイル）から切り離したくなる。 バンドルファイルにライブラリが直接含まれるが故に、以下のような事象に直面したことがある開発者は多いのではないだろうか。 複数人で開発していて各自のライブラリのバージョンが微妙に異なり、Git経由でやり取りされるバンドルファイルに環境の差分までが含まれてしまう 使っているライブラリが増えて、コンパイルがとても遅くなる 解決策として、フレームワークやライブラリはまとめて別のバンドルファイルにする、もしくは単独で配布されたものを &#60;script&#62; タグを読み込む、という解決方法を取ることもできる。 これを可能にするのが externals オプションで、ここで宣言された名前については、依存関係がグローバルスコープから参照されるようになる。 externals: { jquery: 'jQuery' } と webpack.config.js に設定しておくと、 import jQuery from 'jquery'; というコードはグローバルスコープの jQuery を参照するようになり、バンドルファイルに jQuery のコードは含まれないようになる。 もちろんこの場合には jQuery は新たに別の &#60;script&#62; タグで読み込む必要ある。 よりスマートな解決策としての CommonsChunkPlugin CommonsChunkPlugin を使うと、複数のバンドルファイルから共通の依存モジュールを切り出してくれる。 サードパーティーライブラリをアプリのコードと分割する、という使い方ももちろんできる。 公式で示されている設定は以下のようなものだ。 plugins: [ new webpack.optimize.CommonsChunkPlugin({ name: "vendor", minChunks: function(module){ // node_modules のディレクトリ下に含まれるものだけに絞る return module.context &#38;&#38; module.context.indexOf("node_modules") !== -1; } }), new webpack.optimize.CommonsChunkPlugin({ name: "manifest", // 名前は "manifest" でないとダメ minChunks: Infinity // entryがいくつあろうと生成。省略可 }), ] サードパーティーコードを別にしたいだけなら vendor だけでも目的は果たせるが、manifest を入れると、webpack バンドル共通部分（ソースには webpackBootstrap とコメントが書かれている部分）が manifest.js として別ファイルに書き出される。こうするとビルドするたびに vendor のハッシュ値が変更されることを防げるとのこと。 でもこれ、先述のハッシュ値をファイル名に含めるキャッシュ対策をやっていないと、意味はなさそう。なぜならハッシュ値はバンドルファイルのコード内には現れないから。 manifest を定義した場合、以下のように manifest.js も読み込まないとコードは動かないので注意。 &#60;script src="/js/manifest.js"&#62;&#60;/script&#62; &#60;script src="/js/vendor.js"&#62;&#60;/script&#62; &#60;script &#8230; <a href="/2017/05/webpack">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>webpack (version 2) の公式ドキュメントではバンドルファイルのブラウザキャッシュ対策として、<a href="https://webpack.js.org/guides/caching/#generating-unique-hashes-for-each-file">ファイル名にハッシュ値を埋め込む方法が提案されている</a>。</p>
+
+<p>こうするとアプリのコードを変更する度に、バンドルファイル名に埋め込まれたハッシュ値も更新され、ブラウザキャッシュ対策ができる、という寸法だが…。<br />
+当然ファイル名が変わるわけだから、<code>&lt;sript&gt;</code> タグも更新しなくてはならない。それを解決するには、HTML ファイルも動的に扱わなければならない。<a href="https://github.com/soundcloud/chunk-manifest-webpack-plugin">chunk-manifest-webpack-plugin</a> と <a href="https://github.com/jantimon/html-webpack-plugin">html-webpack-plugin</a> を導入し、HTML のテンプレーティングを行い…、となると今使っている <a href="https://pugjs.org/api/getting-started.html">Pug</a> はどうなる…、となってさらにさらに掘り下げないといけなくなり、はっきり言ってソリューションとして無理がある。</p>
+
+<p>閑話休題。</p>
+
+<p>webpack をヘビーに使っていると、サードパーティーフレームワークやライブラリのコード（<code>npm install</code> でインストールしたようなモジュール）を出力ファイル（バンドルファイル）から切り離したくなる。
+バンドルファイルにライブラリが直接含まれるが故に、以下のような事象に直面したことがある開発者は多いのではないだろうか。</p>
+
+<ul>
+<li>複数人で開発していて各自のライブラリのバージョンが微妙に異なり、Git経由でやり取りされるバンドルファイルに環境の差分までが含まれてしまう</li>
+<li>使っているライブラリが増えて、コンパイルがとても遅くなる</li>
+</ul>
+
+<p>解決策として、フレームワークやライブラリはまとめて別のバンドルファイルにする、もしくは単独で配布されたものを <code>&lt;script&gt;</code> タグを読み込む、という解決方法を取ることもできる。
+これを可能にするのが <code>externals</code> オプションで、ここで宣言された名前については、依存関係がグローバルスコープから参照されるようになる。</p>
+
+<pre><code class="javascript">externals: {
+  jquery: 'jQuery'
+}
+</code></pre>
+
+<p>と <code>webpack.config.js</code> に設定しておくと、 <code>import jQuery from 'jquery';</code> というコードはグローバルスコープの <code>jQuery</code> を参照するようになり、バンドルファイルに jQuery のコードは含まれないようになる。
+もちろんこの場合には jQuery は新たに別の <code>&lt;script&gt;</code> タグで読み込む必要ある。</p>
+
+<h2>よりスマートな解決策としての CommonsChunkPlugin</h2>
+
+<p><a href="https://webpack.js.org/plugins/commons-chunk-plugin/">CommonsChunkPlugin</a> を使うと、複数のバンドルファイルから共通の依存モジュールを切り出してくれる。
+サードパーティーライブラリをアプリのコードと分割する、という使い方ももちろんできる。
+公式で示されている設定は以下のようなものだ。</p>
+
+<pre><code>plugins: [
+  new webpack.optimize.CommonsChunkPlugin({
+    name: "vendor",
+    minChunks: function(module){
+      // node_modules のディレクトリ下に含まれるものだけに絞る
+      return module.context &amp;&amp; module.context.indexOf("node_modules") !== -1;
+    }
+  }),
+  new webpack.optimize.CommonsChunkPlugin({
+    name: "manifest", // 名前は "manifest" でないとダメ
+    minChunks: Infinity // entryがいくつあろうと生成。省略可
+  }),
+]
+</code></pre>
+
+<p>サードパーティーコードを別にしたいだけなら <code>vendor</code> だけでも目的は果たせるが、<code>manifest</code> を入れると、webpack バンドル共通部分（ソースには <code>webpackBootstrap</code> とコメントが書かれている部分）が <code>manifest.js</code> として別ファイルに書き出される。こうするとビルドするたびに <code>vendor</code> のハッシュ値が変更されることを防げるとのこと。<br />
+でもこれ、先述のハッシュ値をファイル名に含めるキャッシュ対策をやっていないと、意味はなさそう。なぜならハッシュ値はバンドルファイルのコード内には現れないから。</p>
+
+<p><code>manifest</code> を定義した場合、以下のように <code>manifest.js</code> も読み込まないとコードは動かないので注意。</p>
+
+<pre><code class="html">&lt;script src="/js/manifest.js"&gt;&lt;/script&gt;
+&lt;script src="/js/vendor.js"&gt;&lt;/script&gt;
+&lt;script src="/js/bundle.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h2>References</h2>
+
+<ul>
+<li><a href="https://webpack.js.org/guides/caching/">Caching</a></li>
+<li><a href="https://webpack.js.org/configuration/externals/">Externals</a></li>
+<li><a href="https://webpack.js.org/guides/code-splitting-libraries/">Code Splitting &#45; Libraries</a></li>
+<li><a href="https://webpack.js.org/plugins/commons-chunk-plugin/">CommonsChunkPlugin</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>WP Pusher による WordPress テーマの自動デプロイ</title>
+		<link>/2017/04/wppusher</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Fri, 14 Apr 2017 10:35:26 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">/?p=1218</guid>
+
+					<description><![CDATA[WP Pusher というプラグインを導入し、GitHub のレポジトリの master ブランチに push したらサイトの WordPress テーマが自動的に更新されるという運用にしてみた。 seckie/likealunatic: Like@Lunatic website source code サイトの静的ファイルがテーマディレクトリの外に散在していた状態だったから、それもできなかったわけだ。今回自作テーマを大幅に整理したことで、テンプレートも静的ファイルもすべて1つのテーマフォルダに収めることができた。（まあ当たり前の状態になったというべきか…） GitHub の Webhooks による自動更新は以前からやりたかったのだが、CI ツールを使ったことのない僕にはハードルが高かった。しかし調べてみると、プラグインでそういうものがある、という情報があった ので導入してみることにした。該当記事の紹介によると、ビルドを Travis CI で行い、その後 dist ブランチに自動的にプッシュ、それを Webhooks で拾って本番にデプロイ、というフローになっている。しかし僕の環境だとビルドはローカルでやっているので Travis CI を使うフローは不要になる。シンプルに GitHub と WP Pusher だけの形で実現できた。 ただしハマったポイントが一つある。 WP Pusher は公式プラグインディレクトリに置いていないので、FTP を使ってアップロードした。すると、該当ファイルとディレクトリのオーナーは当然その FTP ユーザーになる。それによってパーミッションの問題が発生。 このサイトは Nginx + WordPress で動作している。 Nginx を使っている場合、wp-content ディレクトリなどに対して nginx ユーザーに書き込み権限を与えておけば、 WordPress (PHP) から自動更新やらプラグインの追加削除が行えるようになる。そうでない場合、WordPress は FTP 経由でファイルを出し入れしようとして FTP 情報を入力するプロンプト画面を表示する。 WP Pusher による自動デプロイも例外ではなく、パーミッションが適切でないと WordPress がそのページを表示しようとしてしまい、正しく通信できないらしい。 ちなみにエラーは GitHub の 該当 Webhook のページ下方に &#8220;Recent Deliveries&#8221; というセクションがあるのでそこで確認できる。 Webhook を設定すると通信確認のためなのか Recent Deliveries に1つ通信が記録される。それがエラーになっていた場合、Response が &#8220;500&#8221; となっているはず。Body のセクションを確認すると「FTP credentials を入力してください」という感じの HTML が出力されている。 これは正常な状態。 今回のケースでは wp-content 以下すべてのファイル、ディレクトリオーナーを nginx ユーザーに変更したら解決した。 ちなみにこのことは WP Pusher Troubleshooting のページにもちらっと記述があった…。なんだろうこの徒労感。 参考 Github から WordPress のテーマを自動更新するとめちゃくちゃ快適だった。 – Toro&#95;Unit ファイルパーミッションの変更 &#45; WordPress &#8230; <a href="/2017/04/wppusher">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://docs.wppusher.com/">WP Pusher</a> というプラグインを導入し、GitHub のレポジトリの master ブランチに push したらサイトの WordPress テーマが自動的に更新されるという運用にしてみた。</p>
+
+<p><a href="https://github.com/seckie/likealunatic">seckie/likealunatic: Like@Lunatic website source code</a></p>
+
+<p>サイトの静的ファイルがテーマディレクトリの外に散在していた状態だったから、それもできなかったわけだ。今回自作テーマを大幅に整理したことで、テンプレートも静的ファイルもすべて1つのテーマフォルダに収めることができた。（まあ当たり前の状態になったというべきか…）</p>
+
+<p>GitHub の Webhooks による自動更新は以前からやりたかったのだが、CI ツールを使ったことのない僕にはハードルが高かった。しかし調べてみると、<a href="https://torounit.com/blog/2016/01/20/2176/">プラグインでそういうものがある、という情報があった</a> ので導入してみることにした。該当記事の紹介によると、ビルドを Travis CI で行い、その後 dist ブランチに自動的にプッシュ、それを Webhooks で拾って本番にデプロイ、というフローになっている。しかし僕の環境だとビルドはローカルでやっているので Travis CI を使うフローは不要になる。シンプルに GitHub と WP Pusher だけの形で実現できた。</p>
+
+<p>ただしハマったポイントが一つある。</p>
+
+<p>WP Pusher は公式プラグインディレクトリに置いていないので、FTP を使ってアップロードした。すると、該当ファイルとディレクトリのオーナーは当然その FTP ユーザーになる。それによってパーミッションの問題が発生。</p>
+
+<p>このサイトは <a href="https://wpdocs.osdn.jp/Nginx">Nginx + WordPress</a> で動作している。
+Nginx を使っている場合、wp-content ディレクトリなどに対して <strong><code>nginx</code></strong> ユーザーに書き込み権限を与えておけば、 WordPress (PHP) から自動更新やらプラグインの追加削除が行えるようになる。そうでない場合、WordPress は FTP 経由でファイルを出し入れしようとして FTP 情報を入力するプロンプト画面を表示する。<br />
+WP Pusher による自動デプロイも例外ではなく、パーミッションが適切でないと WordPress がそのページを表示しようとしてしまい、正しく通信できないらしい。</p>
+
+<p>ちなみにエラーは GitHub の 該当 Webhook のページ下方に &#8220;Recent Deliveries&#8221; というセクションがあるのでそこで確認できる。
+Webhook を設定すると通信確認のためなのか Recent Deliveries に1つ通信が記録される。それがエラーになっていた場合、Response が &#8220;500&#8221; となっているはず。Body のセクションを確認すると「FTP credentials を入力してください」という感じの HTML が出力されている。</p>
+
+<p><a href="/wp-content/uploads/2017/04/2017-04-14-17.56.49.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2017/04/2017-04-14-17.56.49-300x189.png" alt="GitHub Webhook setting screen" width="300" height="189" class="alignnone size-medium wp-image-1219" srcset="/wp-content/uploads/2017/04/2017-04-14-17.56.49-300x189.png 300w, /wp-content/uploads/2017/04/2017-04-14-17.56.49-768x485.png 768w, /wp-content/uploads/2017/04/2017-04-14-17.56.49-1024x647.png 1024w, /wp-content/uploads/2017/04/2017-04-14-17.56.49-475x300.png 475w, /wp-content/uploads/2017/04/2017-04-14-17.56.49.png 1504w" sizes="(max-width: 300px) 100vw, 300px" /></a><br />
+これは正常な状態。</p>
+
+<p>今回のケースでは wp-content 以下すべてのファイル、ディレクトリオーナーを nginx ユーザーに変更したら解決した。
+ちなみにこのことは <a href="http://docs.wppusher.com/article/30-troubleshooting">WP Pusher Troubleshooting のページにもちらっと記述があった</a>…。なんだろうこの徒労感。</p>
+
+<h2>参考</h2>
+
+<ul>
+<li><a href="https://torounit.com/blog/2016/01/20/2176/">Github から WordPress のテーマを自動更新するとめちゃくちゃ快適だった。 – Toro&#95;Unit</a></li>
+<li><a href="https://wpdocs.osdn.jp/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%91%E3%83%BC%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%A4%89%E6%9B%B4#.E3.83.91.E3.83.BC.E3.83.9F.E3.83.83.E3.82.B7.E3.83.A7.E3.83.B3_777_.E3.81.AE.E5.8D.B1.E9.99.BA.E6.80.A7">ファイルパーミッションの変更 &#45; WordPress Codex 日本語版</a></li>
+<li><a href="http://docs.wppusher.com/article/30-troubleshooting">Troubleshooting &#45; WP Pusher Knowledge Base</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>サイトのアップデート</title>
+		<link>/2017/04/update</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Fri, 14 Apr 2017 10:31:31 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<guid isPermaLink="false">/?p=1216</guid>
+
+					<description><![CDATA[Bootstrapのアップグレードを中心にサイトをアップデートしました <a href="/2017/04/update">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>直近の仕事が延期になってぽっかりと時間が空いたので、このサイトのメンテを一気にやった。</p>
+
+<ul>
+<li>Bootstrap のアップグレード（v.1 -> v.3）</li>
+<li>タスクランナーを Grunt から gulp に乗り換え</li>
+<li>CSS プリプロセッサは Stylus から Sass (indented syntax) へ乗り換え</li>
+<li>JavaScript は ES2015 + Babel を Webpack でビルドする環境へ</li>
+<li>WordPress テーマディレクトリの整理</li>
+<li>WP touch プラグインを廃止。スマホ向けスタイルは Bootstrap ベースで自作</li>
+<li>WP Pusher による自動デプロイ</li>
+</ul>
+
+<p>何年もサボっていたのでもう色々古かった。
+Bootstrap はタイポグラフィーが格段に良くなりました。感心。それとモバイルファースト感が増していて、時代が移り変わった感じがします。
+とはいえ今回使った v3.3.7 は<a href="https://github.com/twbs/bootstrap/releases">2016年7月のリリースバージョン</a>となっていて、そんなに最新のトレンドっていう訳でもないです…。
+というかこのリリースノートを見る限り Bootstrap ってもうあまり活発にメンテされていない感じか。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>さくらのレンタルサーバーからさくらのVPSに引っ越しした</title>
+		<link>/2015/07/server-moving</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Sun, 05 Jul 2015 10:59:53 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[About]]></category>
+		<guid isPermaLink="false">/?p=1153</guid>
+
+					<description><![CDATA[実際に引っ越ししたのは5月のことなのだが、今更書く話。 さくらのVPSは仕事でも使っているのだが、使い勝手がよいので個人でも使うことにした。 このサイトはそちらに引っ越ししました。 Linuxの設定は問題ない…と思っていたのだが、旧レンタルサーバーと使いたい構成が異なった（Apache + MySQL + WordPress → Nginx + MySQL + WordPress）のと、メールサーバーをどうするかという課題があって結構手こずってしまった。 このサイトはWordPressで稼働しているのだが、今回はNginxで動かすことにした。Nginxを使うのは初めてだが、ネット上にいくらでもノウハウが転がっていたのであまり困ることはなかった。Nginxはその頃に 1.8.0 がリリースされたのでそれを使うことにした。メールサーバーはノウハウもないのでやりたくないぜ…と思ったので、Gmailに転送するだけにした。postfix設定についても探せばノウハウはたくさんあった。 しばらく運用してみたが、以前よりサイトが重くなっている。。VPSのスペックの問題かNginx + WordPressという構成の問題か…、分からないがこのまま様子を見よう。]]></description>
+										<content:encoded><![CDATA[<p>実際に引っ越ししたのは5月のことなのだが、今更書く話。</p>
+
+<p>さくらのVPSは仕事でも使っているのだが、使い勝手がよいので個人でも使うことにした。<br />
+このサイトはそちらに引っ越ししました。</p>
+
+<p>Linuxの設定は問題ない…と思っていたのだが、旧レンタルサーバーと使いたい構成が異なった（Apache + MySQL + WordPress → Nginx + MySQL + WordPress）のと、メールサーバーをどうするかという課題があって結構手こずってしまった。</p>
+
+<p>このサイトはWordPressで稼働しているのだが、今回はNginxで動かすことにした。Nginxを使うのは初めてだが、ネット上にいくらでもノウハウが転がっていたのであまり困ることはなかった。Nginxはその頃に 1.8.0 がリリースされたのでそれを使うことにした。メールサーバーはノウハウもないのでやりたくないぜ…と思ったので、Gmailに転送するだけにした。postfix設定についても探せばノウハウはたくさんあった。</p>
+
+<p>しばらく運用してみたが、以前よりサイトが重くなっている。。VPSのスペックの問題かNginx + WordPressという構成の問題か…、分からないがこのまま様子を見よう。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>grunt-contrib-jshint の設定</title>
+		<link>/2014/04/grunt-contrib-jshint</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Wed, 16 Apr 2014 04:38:01 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Grunt]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<guid isPermaLink="false">/?p=1079</guid>
+
+					<description><![CDATA[Gruntfile.coffee に以下のように書く。 grunt.loadNpmTasks 'grunt-contrib-jshint' grunt.initConfig( jshint: main: options: jshintrc: true src: [ 'app' + sitePath + 'js/script.js' ] ... watch: js: options: livereload: true files: [ 'app' + sitePath + 'js/*' ] tasks: [ 'jshint' ] ) options.jshintrc = true を設定するとそれ以外の options は無視され同階層に置かれた .jshintrc ファイルを参照するようになる。 .jshintrc はJSON形式で記述する。 結果的に以下のような設定に。 { "node": true, "esnext": true, "bitwise": true, "camelcase": true, "curly": true, ... "globals": { "window": true, "document": true, "jQuery": true, "$": true, "_": true, "Backbone": true }, "-W116": true, "-W041": true } globals には「XXXグローバルオブジェクトがない」的な警告が出るときに、予め「このグローバルオブジェクトはあるから、警告出すな」とJSHint側に伝えておく設定。 -WXXX: true は特定のエラーを無視したいときに追加する設定。このエラーコード（ドキュメントの原文では warning code）は grunt --verbose（もしくは grunt -v）として verbose モードで Grunt タスクを起動すると表示されるようになる。 表示例： ^ [W116] Expected '!==' and instead saw '!='. ここでは W116 というのが warning code なのでそれを &#8230; <a href="/2014/04/grunt-contrib-jshint">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Gruntfile.coffee に以下のように書く。</p>
+
+<pre><code class="js">grunt.loadNpmTasks 'grunt-contrib-jshint'
+grunt.initConfig(
+  jshint:
+    main:
+      options:
+        jshintrc: true
+      src: [ 'app' + sitePath + 'js/script.js' ]
+  ...
+  watch:
+    js:
+      options:
+        livereload: true
+      files: [ 'app' + sitePath + 'js/*' ]
+      tasks: [ 'jshint' ]
+)
+</code></pre>
+
+<p><code>options.jshintrc = true</code> を設定するとそれ以外の options は無視され同階層に置かれた .jshintrc ファイルを参照するようになる。</p>
+
+<p>.jshintrc はJSON形式で記述する。<br />
+結果的に以下のような設定に。</p>
+
+<pre><code class="js">{
+  "node": true,
+  "esnext": true,
+  "bitwise": true,
+  "camelcase": true,
+  "curly": true,
+  ...
+  "globals": {
+    "window": true,
+    "document": true,
+    "jQuery": true,
+    "$": true,
+    "_": true,
+    "Backbone": true
+  },
+  "-W116": true,
+  "-W041": true
+}
+</code></pre>
+
+<p><code>globals</code> には「XXXグローバルオブジェクトがない」的な警告が出るときに、予め「このグローバルオブジェクトはあるから、警告出すな」とJSHint側に伝えておく設定。<br />
+<code>-WXXX: true</code> は特定のエラーを無視したいときに追加する設定。このエラーコード（ドキュメントの原文では warning code）は <code>grunt --verbose</code>（もしくは <code>grunt -v</code>）として verbose モードで Grunt タスクを起動すると表示されるようになる。</p>
+
+<p>表示例：</p>
+
+<pre><code>^ [W116] Expected '!==' and instead saw '!='.
+</code></pre>
+
+<p>ここでは <code>W116</code> というのが warning code なのでそれを <code>"-W116": true</code> のように options に追加すると、警告は出なくなる。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

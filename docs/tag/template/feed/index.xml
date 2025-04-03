@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Template &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/template/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:40 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Template &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>コーダーのための(X)HTMLテンプレート</title>
+		<link>/2007/11/20_template</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 20 Nov 2007 11:14:16 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Template]]></category>
+		<guid isPermaLink="false">/wptest/2007/11/%e3%82%b3%e3%83%bc%e3%83%80%e3%83%bc%e3%81%ae%e3%81%9f%e3%82%81%e3%81%aexhtml%e3%83%86%e3%83%b3%e3%83%97%e3%83%ac%e3%83%bc%e3%83%88.php</guid>
+
+					<description><![CDATA[あ！ああいうコードを書いたらどうなるんだろう？！とアイデアを思いついた時に、ポンと開いてすぐコードを書き始められるテンプレートがあったら便利だなと思ったので、作りました <a href="/2007/11/20_template">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>あ！ああいうコードを書いたらどうなるんだろう？！とアイデアを思いついた時に、ポンと開いてすぐコードを書き始められるテンプレートがあったら便利だなと思ったので、作りました。<br />
+以下のリンクからお好きにお持ち帰りください。</p>
+
+<p><a href="/2007/11/lib/template.zip">コーダーのための<abbr title="(Extensible)HyperText Markup Language">(X)HTML</abbr>テンプレート</a>（zip形式）</p>
+
+<p><abbr title="(Extensible)HyperText Markup Language">(X)HTML</abbr>のテンプレートなんて、いくらでも配布されていると思いますのでありがたみはないと思いますが･･･。</p>
+
+<p>で、内容は以下のようなものになります。</p>
+
+<ul class="disclist">
+<li>文字コードShift_JISとUTF-8の2種類のファイルを用意。</li>
+<li><abbr title="Hyper Text Markup Language">HTML</abbr> 4.01 Strict/Transitionalのそれぞれシステム識別子有りと無しを用意。</li>
+<li><abbr title="Extensible HyperText Markup Language">XHTML</abbr> 1.0 Strict/Transitionalのそれぞれ<abbr title="Extensible Markup Language">XML</abbr>宣言有りと無しを用意<br />
+（ただし文字コードShift_JISでは<abbr title="Extensible Markup Language">XML</abbr>宣言の省略はできないので<abbr title="Extensible Markup Language">XML</abbr>宣言有り版のみ）</li>
+<li>すぐに<abbr title="Cascading Style Sheet">CSS</abbr>やJavaScriptを書けるようにstyle要素とscript要素を予め記述</li>
+</ul>
+
+<p><span id="more-33"></span></p>
+
+<p>以下、zip形式ではなく<abbr title="Hyper Text Markup Language">HTML</abbr>への直リンクになります。</p>
+
+<ul class="disclist">
+<li><a href="/2007/11/lib/utf8/html/401strict.html">HTML 4.01 Strict(システム識別子有) &#8211; encoding: UTF-8</a></li>
+<li><a href="/2007/11/lib/utf8/html/401strict_nosys.html">HTML 4.01 Strict(システム識別子無) &#8211; encoding: UTF-8</a></li>
+<li><a href="/2007/11/lib/utf8/html/401trans.html">HTML 4.01 Transitional(システム識別子有) &#8211; encoding: UTF-8</a></li>
+<li><a href="/2007/11/lib/utf8/html/401trans_nosys.html">HTML 4.01 Transitional(システム識別子無) &#8211; encoding: UTF-8</a></li>
+<li><a href="/2007/11/lib/utf8/xhtml/10strict.html">XHTML 1.0 Strict(XML宣言有) &#8211; encoding: UTF-8</a></li>
+<li><a href="/2007/11/lib/utf8/xhtml/10strict_noxml.html">XHTML 1.0 Strict(XML宣言無) &#8211; encoding: UTF-8</a></li>
+<li><a href="/2007/11/lib/utf8/xhtml/10trans.html">XHTML 1.0 Transitional(XML宣言有) &#8211; encoding: UTF-8</a></li>
+<li><a href="/2007/11/lib/utf8/xhtml/10trans_noxml.html">XHTML 1.0 Transitional(XML宣言無) &#8211; encoding: UTF-8</a></li>
+<li><a href="/2007/11/lib/shiftjis/html/401strict.html">HTML 4.01 Strict(システム識別子有) &#8211; encoding: Shift_JIS</a></li>
+<li><a href="/2007/11/lib/shiftjis/html/401strict_nosys.html">HTML 4.01 Strict(システム識別子無) &#8211; encoding: Shift_JIS</a></li>
+<li><a href="/2007/11/lib/shiftjis/html/401trans.html">HTML 4.01 Transitional(システム識別子有) &#8211; encoding: Shift_JIS</a></li>
+<li><a href="/2007/11/lib/shiftjis/html/401trans_nosys.html">HTML 4.01 Transitional(システム識別子無) &#8211; encoding: Shift_JIS</a></li>
+<li><a href="/2007/11/lib/shiftjis/xhtml/10strict.html">XHTML 1.0 Strict(XML宣言有) &#8211; encoding: Shift_JIS</a></li>
+<li><a href="/2007/11/lib/shiftjis/xhtml/10trans.html">XHTML 1.0 Transitional(XML宣言有) &#8211; encoding: Shift_JIS</a></li>
+</ul>
+
+<p>非常に&quot;今更&quot;なのですが、<a href="http://days2007.cssnite.jp/">Web標準の日々</a>の上ノ郷谷さんのプレゼン資料を見て、インスパイアを受けました。&quot;試しちゃいなYO！&quot;の精神です。以下、関連リンクです。</p>
+
+<ul class="disclist">
+<li><a href="http://cssnite.jp/archives/post_818.php">CSS Nite公式ブログ:［Web標準の日々］フォローアップ：「XHTML+CSS」トラック</a></li>
+<li><a href="http://2xup.org/sample/displaymode/">displaymode check sample (2xup.org)</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

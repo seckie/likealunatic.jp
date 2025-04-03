@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Max &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/max/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:13:52 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Max &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Maxのドキュメントを読む その2(Javascript in Max 02 – Basic Techniques)</title>
+		<link>/2014/09/jsinmax02</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Thu, 11 Sep 2014 07:41:19 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Max]]></category>
+		<guid isPermaLink="false">/?p=1240</guid>
+
+					<description><![CDATA[JavaScript in Max ドキュメントの日本語備忘録的なエントリー第2弾。 Global Methods Document 以下のメソッドはグローバルコンテキストにあり、どこでも使うことができる。 messnamed (Max object name, message name, any arguments) Document グローバルシンボルに紐付けてネーミングされた Max オブジェクトにメッセージを送る。例えば receive オブジェクトなど。 以下の例は &#8220;jsmessage&#8221; と名付けられたオブジェクトに &#8220;hogehoge&#8221; とメッセージを送る例である。 Test Code function loadbang () { messnamed("jsmessage", "hogehoge"); } cpost (any arguments) Document コンソールにメッセージを出力する。引数とかは次項の post() と同じ。 Test Code function foo(a, b, c) { cpost(a, b, c); } function loadbang() { foo('foo', [ 'a', 'b', 'c' ], { 'hoge': 'fuga' }); } なお、グローバルスコープは jsthis オブジェクト（ブラウザ JavaScript でいうwindow オブジェクト）とドキュメントには書いてあるが、jsthisオブジェクトを呼び出そうとしてもMAXウィンドウに Javascript ReferenceErrod: jsthis is not defined と出て怒られる。 一方、一般的な this オブジェクトは機能している。 function foo() { } post(this.foo === foo); // 1 (true) post (any arguments) Document MAXウィンドウにメッセージを出力する。 \n を含めると改行になる。 post() を新しい行から初めても改行が出力される。 Test Code function foo(a, b, c) { &#8230; <a href="/2014/09/jsinmax02">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://cycling74.com/wiki/index.php?title=Category:Javascript_In_Max_Docs">JavaScript in Max</a> ドキュメントの日本語備忘録的なエントリー第2弾。</p>
+
+<h2 id="Global_Methods">Global Methods</h2>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_02_-_Global_Methods#Global_Methods">Document</a></p>
+
+<p>以下のメソッドはグローバルコンテキストにあり、どこでも使うことができる。</p>
+
+<hr />
+
+<h3 id="messnamed">messnamed (Max object name, message name, any arguments)</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_02_-_Global_Methods#messnamed_.28Max_object_name.2C_message_name.2C_any_arguments.29">Document</a></p>
+
+<p>グローバルシンボルに紐付けてネーミングされた Max オブジェクトにメッセージを送る。例えば receive オブジェクトなど。
+以下の例は &#8220;jsmessage&#8221; と名付けられたオブジェクトに &#8220;hogehoge&#8221; とメッセージを送る例である。</p>
+
+<h4>Test Code</h4>
+
+<pre><code>function loadbang () {
+    messnamed("jsmessage", "hogehoge");
+}
+</code></pre>
+
+<p><img decoding="async" src="1-1.png" alt="messnamed" /></p>
+
+<hr />
+
+<h3 id="cpost">cpost (any arguments)</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_02_-_Global_Methods#cpost_.28any_arguments.29">Document</a></p>
+
+<p>コンソールにメッセージを出力する。引数とかは次項の <code>post()</code> と同じ。</p>
+
+<h4>Test Code</h4>
+
+<pre><code>function foo(a, b, c) {
+  cpost(a, b, c);
+}
+function loadbang() {
+  foo('foo', [ 'a', 'b', 'c' ], { 'hoge': 'fuga' });
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss02.png"><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2014/04/ss02.png" alt="How Input to the js Object is Handled" width="692" height="429" class="alignnone size-full wp-image-1100" srcset="/wp-content/uploads/2014/04/ss02.png 692w, /wp-content/uploads/2014/04/ss02-300x185.png 300w, /wp-content/uploads/2014/04/ss02-483x300.png 483w" sizes="(max-width: 692px) 100vw, 692px" /></a></p>
+
+<hr />
+
+<p>なお、グローバルスコープは <code>jsthis</code> オブジェクト（ブラウザ JavaScript でいうwindow オブジェクト）とドキュメントには書いてあるが、jsthisオブジェクトを呼び出そうとしてもMAXウィンドウに <code>Javascript ReferenceErrod: jsthis is not defined</code> と出て怒られる。
+一方、一般的な this オブジェクトは機能している。</p>
+
+<pre><code>function foo() { }
+post(this.foo === foo); // 1 (true)
+</code></pre>
+
+<hr />
+
+<h3 id="post">post (any arguments)</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_02_-_Global_Methods#post_.28any_arguments.29">Document</a></p>
+
+<p>MAXウィンドウにメッセージを出力する。
+<code>\n</code> を含めると改行になる。
+<code>post()</code> を新しい行から初めても改行が出力される。</p>
+
+<h4>Test Code</h4>
+
+<pre><code>function foo(a, b, c) {
+  post(a, b, c);
+}
+function loadbang() {
+  foo('bar', [ 'a', 'b', 'c' ], { 'hoge': 'fuga' });
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss02.png"><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2014/04/ss02.png" alt="How Input to the js Object is Handled" width="692" height="429" class="alignnone size-full wp-image-1100" srcset="/wp-content/uploads/2014/04/ss02.png 692w, /wp-content/uploads/2014/04/ss02-300x185.png 300w, /wp-content/uploads/2014/04/ss02-483x300.png 483w" sizes="(max-width: 692px) 100vw, 692px" /></a></p>
+
+<hr />
+
+<h2 id="jsthisobject">The jsthis Object</h2>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_02_-_Global_Methods#The_jsthis_Object">Document</a></p>
+
+<p>Browser JavaScript だと &#8221;window&#8221; にあたるもの。
+<code>jsthis</code> オブジェクトはグローバルコードにおける &#8221;this&#8221; を表す。グローバルコードで関数を定義すればそれは <code>jsthis</code> のメソッドになり、変数を定義すれば <code>jsthis</code> のメソッドになる。<code>jsthis</code> オブジェクトは以下のようなビルトインプロパティとメソッドを持つ。</p>
+
+<h3>autowatch (Number, get/set)</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_02_-_Global_Methods#autowatch_.28Number.2C_get.2Fset.29">Document</a></p>
+
+<p>これはとりわけ、1つのソースファイルからいくつかの js インスタンスを作っていて、ソースファイルを変更したらすべてのインスタンスを更新したいような時に便利。外部のテキストエディタでソースファイルを書いている場合も、これを使えばパッチ中の js オブジェクトは自動的に再コンパイルされる。
+デフォルトではこの autowatch は <code>0 (off)</code> に設定されている。on にしたいときはグローバルコード中で行うことがベスト。</p>
+
+<h3>box (Maxobj, get)</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_02_-_Global_Methods#box_.28Maxobj.2C_get.29">Document</a></p>
+
+<p>js オブジェクトを含む Maxobj を返す。<code>jsui</code> オブジェクトからオブジェクトボックスの長方形を取得する際に便利。
+詳しくは <a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_03_-_the_Max_Object">the Max Object</a> を参照のこと</p>
+
+<h3>editfontsize (Number, get/set)</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_02_-_Global_Methods#editfontsize_.28Number.2C_get.2Fset.29">Document</a>
+スクリプトを編集するウィンドウのフォントサイズを制御する。グローバルコードで書くと、テキスト編集のデフォルトフォントサイズ（Maxウィンドウのフォントサイズ）が変更される。</p>
+
+<h3>inlet (Number, get)</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_02_-_Global_Methods#inlet_.28Number.2C_get.29">Document</a>
+関数の実行中、 <code>inlet</code> プロパティには、その関数を呼び出したメッセージを受け取ったインレット番号が格納されている。
+この番号は一番左のインレットから0で始まる。
+グローバルコード中ではこのプロパティは <code>0</code> になる。</p>
+
+<h3>inlets (Number, get/set)</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_02_-_Global_Methods#inlets_.28Number.2C_get.2Fset.29">Document</a>
+インスタンスがいくつのインレットを持つべきかを指定する。&#8221;inlets&#8221; プロパティはグローバルコード中で指定しなければ効果がない。指定されなかった場合、インレットを1つ持ったオブジェクトが作られる。</p>
+
+<h4>Test Code 1</h4>
+
+<pre><code>function msg_int(a) { // a == 1
+  post(a); // 1
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss03-1.png"><img decoding="async" src="/wp-content/uploads/2014/04/ss03-1.png" alt="msg_int" width="884" height="431" class="alignnone size-full wp-image-1101" srcset="/wp-content/uploads/2014/04/ss03-1.png 884w, /wp-content/uploads/2014/04/ss03-1-300x146.png 300w, /wp-content/uploads/2014/04/ss03-1-500x243.png 500w" sizes="(max-width: 884px) 100vw, 884px" /></a></p>
+
+<h4>Test Code 2</h4>
+
+<pre><code>function msg_int(a) { // a == 1
+  post(a); // 1
+}
+function msg_float(a) { // a == 1.23456
+  post(a); // 1.23
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss03-2.png"><img decoding="async" src="/wp-content/uploads/2014/04/ss03-2.png" alt="msg_float" width="876" height="423" class="alignnone size-full wp-image-1103" srcset="/wp-content/uploads/2014/04/ss03-2.png 876w, /wp-content/uploads/2014/04/ss03-2-300x144.png 300w, /wp-content/uploads/2014/04/ss03-2-500x241.png 500w" sizes="(max-width: 876px) 100vw, 876px" /></a></p>
+
+<hr />
+
+<h3 id="list">list</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#list">Document</a></p>
+
+<p>inlet に最初の値が int もしくは float の list が入力されると <code>list()</code> が呼ばれる。
+<a href="#howinputtothejsobjectishandled">上記の例</a>のように最初の値が String の list はその String 名の関数が呼ばれる。</p>
+
+<h4>Test Code 1</h4>
+
+<pre><code>function list(a, b, c) { // a == 1, b == 2, c == hoge
+  post(a, b, c); // 1 2 hoge
+  post(arguments.length); // 3
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss03-3.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-3.png" alt="list" width="870" height="418" class="alignnone size-full wp-image-1104" srcset="/wp-content/uploads/2014/04/ss03-3.png 870w, /wp-content/uploads/2014/04/ss03-3-300x144.png 300w, /wp-content/uploads/2014/04/ss03-3-500x240.png 500w" sizes="(max-width: 870px) 100vw, 870px" /></a></p>
+
+<hr />
+
+<h3 id="anything">anything</h3>
+
+<p>inlet に入力されたものに該当する function が定義されていなかった場合、<code>anything()</code> で受け取ることができる。例えば int が入力されたときに <code>msg_int()</code> が未定義だったら <code>anything()</code> が呼ばれる。float や list でも同様。<br />
+<code>anything()</code> 内部では <code>messagename</code> と <code>inlet</code> 変数が定義されており、それぞれ inlet に入ったメッセージの種類と、inlet 番号を参照できる。</p>
+
+<h4>Test Code 1</h4>
+
+<pre><code>function anything(a, b, c) { // a == 1, b == 2, c == hoge
+  post("messagename", messagename); // messagename list
+  post("inlet", inlet); // inlet 0
+  post("anything", a, b, c); // anything 1 2 hoge
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss03-4.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-4.png" alt="anything" width="869" height="420" class="alignnone size-full wp-image-1105" srcset="/wp-content/uploads/2014/04/ss03-4.png 869w, /wp-content/uploads/2014/04/ss03-4-300x144.png 300w, /wp-content/uploads/2014/04/ss03-4-500x241.png 500w" sizes="(max-width: 869px) 100vw, 869px" /></a></p>
+
+<hr />
+
+<h3 id="loadbang">loadbang</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#loadbang">Document</a></p>
+
+<p><code>loadbang()</code> はパッチ起動時に呼ばれる。<code>js</code> オブジェクトや <code>jsui</code> オブジェクトを追加した時ではなく、あくまでそれを予め含むパッチ起動時に呼ばれることに注意。<br />
+<a href="http://cycling74.com/wiki/index.php?title=loadbang#loadbang_Tips_and_Workarounds">Cmd+Shiftを押しながらパッチを起動すると loadbang を無効化できる</a>が、無効になっているかどうかは <code>max.loadbangdisabled</code> プロパティに 1 が入っているかどうかで分かる。</p>
+
+<h4>Test Code 1</h4>
+
+<pre><code>function loadbang() {
+  if (max.loadbangdisabled == 1) {
+    post("no loadbang");
+  } else {
+    post("loadbang!");
+  }
+}
+function bang() {
+  post("bang!");
+}
+</code></pre>
+
+<p>普通にパッチを起動した場合<br />
+<a href="/wp-content/uploads/2014/04/ss03-5.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-5.png" alt="loadbang" width="869" height="419" class="alignnone size-full wp-image-1106" srcset="/wp-content/uploads/2014/04/ss03-5.png 869w, /wp-content/uploads/2014/04/ss03-5-300x144.png 300w, /wp-content/uploads/2014/04/ss03-5-500x241.png 500w" sizes="(max-width: 869px) 100vw, 869px" /></a></p>
+
+<p>Cmd+Shiftを押しながらパッチを起動した場合<br />
+<a href="/wp-content/uploads/2014/04/ss03-6.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-6.png" alt="noloadbang" width="873" height="418" class="alignnone size-full wp-image-1108" srcset="/wp-content/uploads/2014/04/ss03-6.png 873w, /wp-content/uploads/2014/04/ss03-6-300x143.png 300w, /wp-content/uploads/2014/04/ss03-6-500x239.png 500w" sizes="(max-width: 873px) 100vw, 873px" /></a></p>
+
+<hr />
+
+<h3 id="getvalueof">getvalueof</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#getvalueof">Document</a></p>
+
+<p>JavaScript 内で定義した変数の値（String か Number）を <code>pattr</code> 関連オブジェクトから呼び出せるようにする関数。
+→ pattr オブジェクトのことがよく分からないので、テストコードが書けない。後で復習する。</p>
+
+<hr />
+
+<h3 id="setvalueof">setvalueof</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#setvalueof">Document</a></p>
+
+<p><code>pattr</code> 関連オブジェクトから JavaScript 内に変数（Number か String）をパスできるインターフェースを提供する関数。
+value が複数の場合、<code>jsthis</code> オブジェクトの <code>arrayfromargs()</code> メソッドで引数を扱うと良いとのこと。<br />
+→ pattr オブジェクトのことがよく分からないので、テストコードが書けない。後で復習する。</p>
+
+<hr />
+
+<h3 id="save">save</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#save">Document</a></p>
+
+<p><code>save()</code> を定義すると、JavaScript 内の状態をパッチに保持することができる。
+パッチが再読み込みされると、JavaScript 内の状態が復元される。</p>
+
+<p><code>save()</code> 内だけで使える <code>embedmessage()</code> を使い、値を保存する。</p>
+
+<ul>
+<li><code>embedmessage()</code> の第1引数には保存された値を渡したいコールバック関数名を文字列で渡す</li>
+<li><code>embedmessage()</code> の第2引数以降には保存したい値を渡し、これがコールバック関数の引数に渡される</li>
+</ul>
+
+<h4>Test Code 1</h4>
+
+<pre><code>var valuetosave = 0;
+function foo(v) {
+  valuetosave = v;
+}
+function save() {
+  embedmessage("callback", valuetosave);
+}
+function callback(v) {
+  valuetosave = v;
+  post(v);
+}
+</code></pre>
+
+<p><code>foo 1</code> メッセージを送ったあと、パッチを再起動した場合<br />
+<a href="/wp-content/uploads/2014/04/ss03-9-1.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-9-1.png" alt="save" width="873" height="419" class="alignnone size-full wp-image-1109" srcset="/wp-content/uploads/2014/04/ss03-9-1.png 873w, /wp-content/uploads/2014/04/ss03-9-1-300x143.png 300w, /wp-content/uploads/2014/04/ss03-9-1-500x239.png 500w" sizes="(max-width: 873px) 100vw, 873px" /></a></p>
+
+<p><code>foo 2</code> メッセージを送ったあと、パッチを再起動した場合<br />
+<a href="/wp-content/uploads/2014/04/ss03-9-21.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-9-21.png" alt="save" width="873" height="417" class="alignnone size-full wp-image-1112" srcset="/wp-content/uploads/2014/04/ss03-9-21.png 873w, /wp-content/uploads/2014/04/ss03-9-21-300x143.png 300w, /wp-content/uploads/2014/04/ss03-9-21-500x238.png 500w" sizes="(max-width: 873px) 100vw, 873px" /></a></p>
+
+<hr />
+
+<h3 id="notifydeleted">notifydeleted</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#notifydeleted">Document</a></p>
+
+<p><code>js</code> オブジェクトが削除されたときに呼ばれる</p>
+
+<h4>Test Code 1</h4>
+
+<pre><code>function notifydeleted() {
+  post('js object was deleted.');
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss03-10.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-10.png" alt="notifydeleted" width="866" height="420" class="alignnone size-full wp-image-1113" srcset="/wp-content/uploads/2014/04/ss03-10.png 866w, /wp-content/uploads/2014/04/ss03-10-300x145.png 300w, /wp-content/uploads/2014/04/ss03-10-500x242.png 500w" sizes="(max-width: 866px) 100vw, 866px" /></a></p>
+
+<hr />
+
+<h2 id="Global_Code">Global Code</h2>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#Global_Code">Document</a></p>
+
+<p>グローバルスコープに書かれたコードは編集された後、スクリプトがロードされるかコンパイルされたタイミングで評価される。
+<code>js</code> / <code>jsui</code> オブジェクトが完全に作られる前に評価される。
+js オブジェクトがいくつ inlet / outlet を持つかはグローバルコードからは分からない。これはグローバルコードから inlet / outlet をいくつにするか定義できることを意味する。しかし言い換えれば、まだ outlet が存在しなければ、使うことはできない。
+初期化処理を書きたい場合は <code>loadbang()</code> の中に書くべし。</p>
+
+<h3>グローバルコードでやるべきこと</h3>
+
+<ul>
+<li>inlet / outlet の数を定義する</li>
+<li><code>jsarguments[]</code> プロパティ（<code>js</code> オブジェクトの引数）にアクセスする</li>
+<li>inlet / outlet の値の操作</li>
+<li>グローバル変数の定義と初期化</li>
+<li>グローバルアプリケーション環境にアクセス＆操作するため、Max オブジェクトを使う</li>
+</ul>
+
+<h3>グローバルコードでやるべきでないこと</h3>
+
+<ul>
+<li>outlet から何か出力すること</li>
+<li><code>js</code> オブジェクトが置かれたパッチ側を参照しようとすること</li>
+</ul>
+
+<hr />
+
+<h2 id="Private_28Local29_Functions">Private (Local) Function</h2>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#Private_.28Local.29_Functions">Document</a></p>
+
+<p><code>js</code> オブジェクトへの inlet メッセージから参照されたくないローカル関数を作りたい場合、<code>local</code> プロパティに <code>1</code> をセットする。</p>
+
+<h3>Test Code 1</h3>
+
+<pre><code>function foo() {
+  post("Welcome to 'foo' method!");
+}
+foo.local = 1;
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss05.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss05.png" alt="private function" width="875" height="422" class="alignnone size-full wp-image-1114" srcset="/wp-content/uploads/2014/04/ss05.png 875w, /wp-content/uploads/2014/04/ss05-300x144.png 300w, /wp-content/uploads/2014/04/ss05-500x241.png 500w" sizes="(max-width: 875px) 100vw, 875px" /></a></p>
+
+<hr />
+
+<p>未完</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Maxのドキュメントを読む その1 (Javascript in Max 01 &#8211; Basic Techniques)</title>
+		<link>/2014/04/jsinmax01</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Sat, 19 Apr 2014 13:24:38 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Max]]></category>
+		<guid isPermaLink="false">/?p=1069</guid>
+
+					<description><![CDATA[最近 Max というビジュアルプログラミング言語を学んでいる。js / jsui オブジェクトというのがあり、その中で JavaScript が書ける、ということでドキュメントを読んでいる。 正直流行っていない言語なので情報が少なく、とにかく公式ドキュメントを読むしかないのである。 読んだドキュメントを備忘録的にエントリーしておく。その第1弾。 注意事項 JavaScriptファイルを更新した場合、MAXパッチを開き直さないと変更が反映されない Arguments Document js オブジェクトに渡した引数は JavaScript 内では jsarguments[] 配列で参照できる。 jsarguments[0] => ファイル名 (required) jsarguments[1] 以降 => その他の引数 (optional) ということになる。 Test Code function bang() { post(jsarguments[0], jsarguments[1], jsarguments[2], jsarguments[3]); } How Input to the js Object is Handled Document js オブジェクトの inlet に foo 1 2 3 というメッセージを送った場合、グローバルスコープの foo() 関数を引数 1,2,3 と共に実行するということになる。 Test Code function foo(a, b, c) { post(a, b, c); } なお、グローバルスコープは jsthis オブジェクト（ブラウザ JavaScript でいう window オブジェクト）とドキュメントには書いてあるが、jsthisオブジェクトを呼び 出そうとしてもMAXウィンドウに Javascript ReferenceErrod: jsthis is not defined と出て怒られる。なんだこれは。 一方、一般的な this オブジェクトは機能している。 function foo() { } post(this.foo === foo); // 1 (true) Special Function Names Document msg_int, msg_float Document inlet に &#8230; <a href="/2014/04/jsinmax01">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>最近 <a href="http://cycling74.com/products/max/">Max</a> というビジュアルプログラミング言語を学んでいる。<code>js</code> / <code>jsui</code> オブジェクトというのがあり、その中で JavaScript が書ける、ということでドキュメントを読んでいる。
+正直流行っていない言語なので情報が少なく、とにかく公式ドキュメントを読むしかないのである。</p>
+
+<p>読んだドキュメントを備忘録的にエントリーしておく。その第1弾。</p>
+
+<hr />
+
+<h2>注意事項</h2>
+
+<ul>
+<li>JavaScriptファイルを更新した場合、MAXパッチを開き直さないと変更が反映されない</li>
+</ul>
+
+<hr />
+
+<h2 id="argumetns">Arguments</h2>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#Arguments">Document</a></p>
+
+<p>js オブジェクトに渡した引数は JavaScript 内では jsarguments[] 配列で参照できる。</p>
+
+<ul>
+<li>jsarguments[0] => ファイル名 (required)</li>
+<li>jsarguments[1] 以降 => その他の引数 (optional)</li>
+</ul>
+
+<p>ということになる。</p>
+
+<h3>Test Code</h3>
+
+<pre><code>function bang() {
+  post(jsarguments[0], jsarguments[1], jsarguments[2], jsarguments[3]);
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss01.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss01.png" alt="Arguments test" width="700" height="430" class="alignnone size-full wp-image-1098" srcset="/wp-content/uploads/2014/04/ss01.png 700w, /wp-content/uploads/2014/04/ss01-300x184.png 300w, /wp-content/uploads/2014/04/ss01-488x300.png 488w" sizes="(max-width: 700px) 100vw, 700px" /></a></p>
+
+<hr />
+
+<h2 id="howinputtothejsobjectishandled">How Input to the js Object is Handled</h2>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#How_Input_to_the_js_Object_is_Handled">Document</a></p>
+
+<p>js オブジェクトの inlet に <code>foo 1 2 3</code> というメッセージを送った場合、グローバルスコープの foo() 関数を引数 1,2,3 と共に実行するということになる。</p>
+
+<h3>Test Code</h3>
+
+<pre><code>function foo(a, b, c) {
+  post(a, b, c);
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss02.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss02.png" alt="How Input to the js Object is Handled" width="692" height="429" class="alignnone size-full wp-image-1100" srcset="/wp-content/uploads/2014/04/ss02.png 692w, /wp-content/uploads/2014/04/ss02-300x185.png 300w, /wp-content/uploads/2014/04/ss02-483x300.png 483w" sizes="(max-width: 692px) 100vw, 692px" /></a></p>
+
+<p>なお、グローバルスコープは <code>jsthis</code> オブジェクト（ブラウザ JavaScript でいう
+window オブジェクト）とドキュメントには書いてあるが、jsthisオブジェクトを呼び
+出そうとしてもMAXウィンドウに <code>Javascript ReferenceErrod: jsthis is not defined</code> と出て怒られる。なんだこれは。
+一方、一般的な this オブジェクトは機能している。</p>
+
+<pre><code>function foo() { }
+post(this.foo === foo); // 1 (true)
+</code></pre>
+
+<hr />
+
+<h2 id="specialfunctionnames">Special Function Names</h2>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#Special_Function_Names">Document</a></p>
+
+<h3 id="msg_intmsg_float">msg_int, msg_float</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#msg_int.2C_msg_float">Document</a></p>
+
+<p>inlet に int が入力されると <code>msg_int()</code> が呼ばれる。inlet に float が入力されると <code>msg_float()</code> が呼ばれる。<code>msg_float()</code> が未定義の場合、 <code>msg_int()</code> が代用で呼ばれるが、少数点以下は切り飛ばされる。
+なお <code>msg_float()</code> は少数点第3位以下を受け取ることができない。</p>
+
+<h4>Test Code 1</h4>
+
+<pre><code>function msg_int(a) { // a == 1
+  post(a); // 1
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss03-1.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-1.png" alt="msg_int" width="884" height="431" class="alignnone size-full wp-image-1101" srcset="/wp-content/uploads/2014/04/ss03-1.png 884w, /wp-content/uploads/2014/04/ss03-1-300x146.png 300w, /wp-content/uploads/2014/04/ss03-1-500x243.png 500w" sizes="(max-width: 884px) 100vw, 884px" /></a></p>
+
+<h4>Test Code 2</h4>
+
+<pre><code>function msg_int(a) { // a == 1
+  post(a); // 1
+}
+function msg_float(a) { // a == 1.23456
+  post(a); // 1.23
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss03-2.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-2.png" alt="msg_float" width="876" height="423" class="alignnone size-full wp-image-1103" srcset="/wp-content/uploads/2014/04/ss03-2.png 876w, /wp-content/uploads/2014/04/ss03-2-300x144.png 300w, /wp-content/uploads/2014/04/ss03-2-500x241.png 500w" sizes="(max-width: 876px) 100vw, 876px" /></a></p>
+
+<hr />
+
+<h3 id="list">list</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#list">Document</a></p>
+
+<p>inlet に最初の値が int もしくは float の list が入力されると <code>list()</code> が呼ばれる。
+<a href="#howinputtothejsobjectishandled">上記の例</a>のように最初の値が String の list はその String 名の関数が呼ばれる。</p>
+
+<h4>Test Code 1</h4>
+
+<pre><code>function list(a, b, c) { // a == 1, b == 2, c == hoge
+  post(a, b, c); // 1 2 hoge
+  post(arguments.length); // 3
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss03-3.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-3.png" alt="list" width="870" height="418" class="alignnone size-full wp-image-1104" srcset="/wp-content/uploads/2014/04/ss03-3.png 870w, /wp-content/uploads/2014/04/ss03-3-300x144.png 300w, /wp-content/uploads/2014/04/ss03-3-500x240.png 500w" sizes="(max-width: 870px) 100vw, 870px" /></a></p>
+
+<hr />
+
+<h3 id="anything">anything</h3>
+
+<p>inlet に入力されたものに該当する function が定義されていなかった場合、<code>anything()</code> で受け取ることができる。例えば int が入力されたときに <code>msg_int()</code> が未定義だったら <code>anything()</code> が呼ばれる。float や list でも同様。<br />
+<code>anything()</code> 内部では <code>messagename</code> と <code>inlet</code> 変数が定義されており、それぞれ inlet に入ったメッセージの種類と、inlet 番号を参照できる。</p>
+
+<h4>Test Code 1</h4>
+
+<pre><code>function anything(a, b, c) { // a == 1, b == 2, c == hoge
+  post("messagename", messagename); // messagename list
+  post("inlet", inlet); // inlet 0
+  post("anything", a, b, c); // anything 1 2 hoge
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss03-4.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-4.png" alt="anything" width="869" height="420" class="alignnone size-full wp-image-1105" srcset="/wp-content/uploads/2014/04/ss03-4.png 869w, /wp-content/uploads/2014/04/ss03-4-300x144.png 300w, /wp-content/uploads/2014/04/ss03-4-500x241.png 500w" sizes="(max-width: 869px) 100vw, 869px" /></a></p>
+
+<hr />
+
+<h3 id="loadbang">loadbang</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#loadbang">Document</a></p>
+
+<p><code>loadbang()</code> はパッチ起動時に呼ばれる。<code>js</code> オブジェクトや <code>jsui</code> オブジェクトを追加した時ではなく、あくまでそれを予め含むパッチ起動時に呼ばれることに注意。<br />
+<a href="http://cycling74.com/wiki/index.php?title=loadbang#loadbang_Tips_and_Workarounds">Cmd+Shiftを押しながらパッチを起動すると loadbang を無効化できる</a>が、無効になっているかどうかは <code>max.loadbangdisabled</code> プロパティに 1 が入っているかどうかで分かる。</p>
+
+<h4>Test Code 1</h4>
+
+<pre><code>function loadbang() {
+  if (max.loadbangdisabled == 1) {
+    post("no loadbang");
+  } else {
+    post("loadbang!");
+  }
+}
+function bang() {
+  post("bang!");
+}
+</code></pre>
+
+<p>普通にパッチを起動した場合<br />
+<a href="/wp-content/uploads/2014/04/ss03-5.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-5.png" alt="loadbang" width="869" height="419" class="alignnone size-full wp-image-1106" srcset="/wp-content/uploads/2014/04/ss03-5.png 869w, /wp-content/uploads/2014/04/ss03-5-300x144.png 300w, /wp-content/uploads/2014/04/ss03-5-500x241.png 500w" sizes="(max-width: 869px) 100vw, 869px" /></a></p>
+
+<p>Cmd+Shiftを押しながらパッチを起動した場合<br />
+<a href="/wp-content/uploads/2014/04/ss03-6.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-6.png" alt="noloadbang" width="873" height="418" class="alignnone size-full wp-image-1108" srcset="/wp-content/uploads/2014/04/ss03-6.png 873w, /wp-content/uploads/2014/04/ss03-6-300x143.png 300w, /wp-content/uploads/2014/04/ss03-6-500x239.png 500w" sizes="(max-width: 873px) 100vw, 873px" /></a></p>
+
+<hr />
+
+<h3 id="getvalueof">getvalueof</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#getvalueof">Document</a></p>
+
+<p>JavaScript 内で定義した変数の値（String か Number）を <code>pattr</code> 関連オブジェクトから呼び出せるようにする関数。
+→ pattr オブジェクトのことがよく分からないので、テストコードが書けない。後で復習する。</p>
+
+<hr />
+
+<h3 id="setvalueof">setvalueof</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#setvalueof">Document</a></p>
+
+<p><code>pattr</code> 関連オブジェクトから JavaScript 内に変数（Number か String）をパスできるインターフェースを提供する関数。
+value が複数の場合、<code>jsthis</code> オブジェクトの <code>arrayfromargs()</code> メソッドで引数を扱うと良いとのこと。<br />
+→ pattr オブジェクトのことがよく分からないので、テストコードが書けない。後で復習する。</p>
+
+<hr />
+
+<h3 id="save">save</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#save">Document</a></p>
+
+<p><code>save()</code> を定義すると、JavaScript 内の状態をパッチに保持することができる。
+パッチが再読み込みされると、JavaScript 内の状態が復元される。</p>
+
+<p><code>save()</code> 内だけで使える <code>embedmessage()</code> を使い、値を保存する。</p>
+
+<ul>
+<li><code>embedmessage()</code> の第1引数には保存された値を渡したいコールバック関数名を文字列で渡す</li>
+<li><code>embedmessage()</code> の第2引数以降には保存したい値を渡し、これがコールバック関数の引数に渡される</li>
+</ul>
+
+<h4>Test Code 1</h4>
+
+<pre><code>var valuetosave = 0;
+function foo(v) {
+  valuetosave = v;
+}
+function save() {
+  embedmessage("callback", valuetosave);
+}
+function callback(v) {
+  valuetosave = v;
+  post(v);
+}
+</code></pre>
+
+<p><code>foo 1</code> メッセージを送ったあと、パッチを再起動した場合<br />
+<a href="/wp-content/uploads/2014/04/ss03-9-1.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-9-1.png" alt="save" width="873" height="419" class="alignnone size-full wp-image-1109" srcset="/wp-content/uploads/2014/04/ss03-9-1.png 873w, /wp-content/uploads/2014/04/ss03-9-1-300x143.png 300w, /wp-content/uploads/2014/04/ss03-9-1-500x239.png 500w" sizes="(max-width: 873px) 100vw, 873px" /></a></p>
+
+<p><code>foo 2</code> メッセージを送ったあと、パッチを再起動した場合<br />
+<a href="/wp-content/uploads/2014/04/ss03-9-21.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-9-21.png" alt="save" width="873" height="417" class="alignnone size-full wp-image-1112" srcset="/wp-content/uploads/2014/04/ss03-9-21.png 873w, /wp-content/uploads/2014/04/ss03-9-21-300x143.png 300w, /wp-content/uploads/2014/04/ss03-9-21-500x238.png 500w" sizes="(max-width: 873px) 100vw, 873px" /></a></p>
+
+<hr />
+
+<h3 id="notifydeleted">notifydeleted</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#notifydeleted">Document</a></p>
+
+<p><code>js</code> オブジェクトが削除されたときに呼ばれる</p>
+
+<h4>Test Code 1</h4>
+
+<pre><code>function notifydeleted() {
+  post('js object was deleted.');
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss03-10.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-10.png" alt="notifydeleted" width="866" height="420" class="alignnone size-full wp-image-1113" srcset="/wp-content/uploads/2014/04/ss03-10.png 866w, /wp-content/uploads/2014/04/ss03-10-300x145.png 300w, /wp-content/uploads/2014/04/ss03-10-500x242.png 500w" sizes="(max-width: 866px) 100vw, 866px" /></a></p>
+
+<hr />
+
+<h2 id="Global_Code">Global Code</h2>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#Global_Code">Document</a></p>
+
+<p>グローバルスコープに書かれたコードは編集された後、スクリプトがロードされるかコンパイルされたタイミングで評価される。
+<code>js</code> / <code>jsui</code> オブジェクトが完全に作られる前に評価される。
+js オブジェクトがいくつ inlet / outlet を持つかはグローバルコードからは分からない。これはグローバルコードから inlet / outlet をいくつにするか定義できることを意味する。しかし言い換えれば、まだ outlet が存在しなければ、使うことはできない。
+初期化処理を書きたい場合は <code>loadbang()</code> の中に書くべし。</p>
+
+<h3>グローバルコードでやるべきこと</h3>
+
+<ul>
+<li>inlet / outlet の数を定義する</li>
+<li><code>jsarguments[]</code> プロパティ（<code>js</code> オブジェクトの引数）にアクセスする</li>
+<li>inlet / outlet の値の操作</li>
+<li>グローバル変数の定義と初期化</li>
+<li>グローバルアプリケーション環境にアクセス＆操作するため、Max オブジェクトを使う</li>
+</ul>
+
+<h3>グローバルコードでやるべきでないこと</h3>
+
+<ul>
+<li>outlet から何か出力すること</li>
+<li><code>js</code> オブジェクトが置かれたパッチ側を参照しようとすること</li>
+</ul>
+
+<hr />
+
+<h2 id="Private_28Local29_Functions">Private (Local) Function</h2>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#Private_.28Local.29_Functions">Document</a></p>
+
+<p><code>js</code> オブジェクトへの inlet メッセージから参照されたくないローカル関数を作りたい場合、<code>local</code> プロパティに <code>1</code> をセットする。</p>
+
+<h3>Test Code 1</h3>
+
+<pre><code>function foo() {
+  post("Welcome to 'foo' method!");
+}
+foo.local = 1;
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss05.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss05.png" alt="private function" width="875" height="422" class="alignnone size-full wp-image-1114" srcset="/wp-content/uploads/2014/04/ss05.png 875w, /wp-content/uploads/2014/04/ss05-300x144.png 300w, /wp-content/uploads/2014/04/ss05-500x241.png 500w" sizes="(max-width: 875px) 100vw, 875px" /></a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

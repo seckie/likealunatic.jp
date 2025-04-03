@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Silverlight &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/silverlight/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Silverlight &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>asahi.comでSilverlight動画配信開始</title>
+		<link>/2008/02/28_asahicom</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 28 Feb 2008 13:51:07 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Silverlight]]></category>
+		<guid isPermaLink="false">/wptest/2008/02/asahi-com%e3%81%a7silverlight%e5%8b%95%e7%94%bb%e9%85%8d%e4%bf%a1%e9%96%8b%e5%a7%8b.php</guid>
+
+					<description><![CDATA[同僚に教えられて、素直にスゲー！と思ったのでご紹介させていただきます。<q><a href="http://www.asahi.com/komimi/TKY200802280188.html">ハイビジョンで迫力の大画面映像　アサヒ・コムが配信開始</a></q>
+画質が格段に上がっているのが分かります。そしてフルスクリーンモードがすごい。Webサイト見てることを忘れるかも。 <a href="/2008/02/28_asahicom">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>同僚に教えられて、素直にスゲー！と思ったのでご紹介させていただきます。</p>
+
+<p class="ref"><a href="http://www.asahi.com/komimi/TKY200802280188.html">ハイビジョンで迫力の大画面映像　アサヒ・コムが配信開始</a></p>
+
+<p>本々asahi.comは動画配信自体はやっていたみたいです。<a href="http://www.microsoft.com/silverlight/">Silverlight</a>導入以前と導入後の動画を、スクリーンショットで比較してみました。</p>
+
+<dl>
+<dt>Before:</dt>
+<dd><a href="/img/2008/02/28_asahicom_01.jpg" title="Silverlight導入以前の配信動画" class="thickbox" rel="asahicom"><img decoding="async" src="/img/2008/02/28_asahicom_01_thumb.jpg" alt="Silverlight導入以前の配信動画" /></a></dd>
+<dt>After:</dt>
+<dd><a href="/img/2008/02/28_asahicom_02.jpg" title="Silverlight導入後の配信動画・・・？" class="thickbox" rel="asahicom"><img decoding="async" src="/img/2008/02/28_asahicom_02_thumb.jpg" alt="Silverlight導入後の配信動画・・・？" /></a></dd>
+</dl>
+
+<p>って、アレッ！？自宅の環境にはプラグインが入っていなかったのか・・・。</p>
+
+<p>では、プラグインを導入して・・・<br />
+まず<strong>必ずご確認ください</strong>、と書いてある「ライセンス条項」を開いてみます。</p>
+
+<p><a href="/img/2008/02/28_asahicom_03.jpg" title="マイクロソフトソフトウェアライセンス条項" class="thickbox" rel="asahicom"><img decoding="async" src="/img/2008/02/28_asahicom_03_thumb.jpg" alt="マイクロソフトソフトウェアライセンス条項" /></a></p>
+
+<p>ソフトウェアのインストールにこういうものは付きものですが、なんのこっちゃわからない素人が導入するにはやはり敷居が高く感じます。「必ず読め」と書いてあるわけですからね・・・（確かに読まないといけませんが）。<br />
+「同意してインストール」ボタンを押すと、「Silverlight.exe」ファイルのダウンロードが開始されます。
+そしてこれを実行して、初めてインストール処理が開始されます（少なくとも私の自宅のWindowsXP環境ではそうでした）。
+ダウンロードされたら自動実行するくらいの方が、親切なのではないかと私は思いますが、その辺はどうなんでしょう。</p>
+
+<p>そんなこんなでインストールが完了し、ブラウザを再起動します。<br />
+そして動画をいざ閲覧。こんな風になっていました。</p>
+
+<p><a href="/img/2008/02/28_asahicom_04.jpg" title="Silverlight導入後の配信動画" class="thickbox" rel="asahicom"><img decoding="async" src="/img/2008/02/28_asahicom_04_thumb.jpg" alt="Silverlight導入後の配信動画" /></a></p>
+
+<p>画質が格段に上がっているのが分かります。そしてフルスクリーンモードがすごい。Webサイト見てることを忘れるかも。気になる方は、実際にasahi.comでご体験ください。</p>
+
+<p>Silverlightは良いものだということが改めて分かりました。asahi.comのようなサイトが導入に踏み切ったことによって、一般層のユーザーにもプラグインの導入が進むと良いですね・・・。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

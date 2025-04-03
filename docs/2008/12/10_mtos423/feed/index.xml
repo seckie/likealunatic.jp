@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: MTOS4.23にアップグレード	</title>
+	<atom:link href="/2008/12/10_mtos423/feed" rel="self" type="application/rss+xml" />
+	<link>/2008/12/10_mtos423</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:18:24 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: NINECUBE		</title>
+		<link>/2008/12/10_mtos423/comment-page-1#comment-43</link>
+
+		<dc:creator><![CDATA[NINECUBE]]></dc:creator>
+		<pubDate>Wed, 10 Dec 2008 10:30:33 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2008/12/mtos4-23%e3%81%ab%e3%82%a2%e3%83%83%e3%83%97%e3%82%b0%e3%83%ac%e3%83%bc%e3%83%89.php#comment-43</guid>
+
+					<description><![CDATA[&lt;p&gt;あ　ぼくもうｐグレードしよー
+ご指南ください&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>あ　ぼくもうｐグレードしよー
+ご指南ください</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

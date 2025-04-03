@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Perl &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/perl/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:18:24 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Perl &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>WinXPローカルでXAMPPを使ってMovable Typeを動かす―2010年3月版 その2</title>
+		<link>/2010/03/xampp_and_mt_2</link>
+					<comments>/2010/03/xampp_and_mt_2#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 09 Mar 2010 15:31:34 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<category><![CDATA[MySQL]]></category>
+		<category><![CDATA[Perl]]></category>
+		<category><![CDATA[XAMPP]]></category>
+		<guid isPermaLink="false">/?p=528</guid>
+
+					<description><![CDATA[3年くらい前に書いたXAMPPとMTの記事に今でもアクセスがそこそこあるので、古い内容を見ていただいてもなぁ・・・と思い、最新の情報で記事を書き直すことにしました。2010年3月7日時点の情報となります。全3記事で、今回第2弾は「ActivePerlのインストールと設定、MySQLの設定」です。 <a href="/2010/03/xampp_and_mt_2">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>前回に引き続き、XAMPPでMovable Typeを動作させるチュートリアルの第2弾です。</p>
+
+<ol>
+<li><a href="/2010/03/xampp_and_mt_1.php">XAMPPのインストール、Apacheの設定</a></li>
+<li><em>ActivePerlのインストールと設定、MySQLの設定</em></li>
+<li><a href="/2010/03/xampp_and_mt_3.php">ImageMagickのインストール、Movable Typeのインストール</a></li>
+</ol>
+
+<p>今回はActivePerlのインストールと設定、MySQLの設定を行います。</p>
+
+<ol>
+<li class="step01">
+<p><a href="http://www.activestate.com/activeperl/">ActivePerl のダウンロードページ</a>にアクセスし「ActivePerl DOWNLOAD NOW」をクリックして次のページに進みましょう。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_51.jpg"><img decoding="async" src="/wp-content/uploads/2010/03/20100310_51-150x150.jpg" alt="ActivePerlのダウンロードページ" title="20100310_51" width="150" height="150" class="alignnone size-thumbnail wp-image-560" /></a></p>
+</li>
+
+<li class="step02">
+<p>プラットフォーム別のダウンロードファイルの一覧が表示されます。一番上の<q>Recommended version(s) for your platform</q>にリストアップされている ActivePerl 5.10.1.1007 for Windows (x86) をダウンロードします。<br />
+<span class="memo">お使いのWindowsが64bit版である場合、ActivePerl 5.10.1.1007 for Windows (64-bit, x64) を選択します。</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_52.jpg"><img decoding="async" src="/wp-content/uploads/2010/03/20100310_52-150x150.jpg" alt="ActivePerlのダウンロードページ" title="20100310_52" width="150" height="150" class="alignnone size-thumbnail wp-image-561" /></a></p>
+</li>
+
+<li class="step03">
+<p>ダウンロードしたインストーラを実行しましょう。インストールウィザードが開始されます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_53.jpg"><img decoding="async" src="/wp-content/uploads/2010/03/20100310_53-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_53" width="150" height="150" class="alignnone size-thumbnail wp-image-562" /></a></p>
+</li>
+
+<li class="step04">
+<p>ライセンス規約に同意（<q>I accept the terms in the License Agreement</q>）を選択し、「Next」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_54.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_54-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_54" width="150" height="150" class="alignnone size-thumbnail wp-image-563" /></a></p>
+</li>
+
+<li class="step05">
+<p>インストールするプログラムと、インストールするディレクトリを設定します。インストールするディレクトリはデフォルトで <span class="path">C:\Perl\</span> になっていますが、これを <span class="path">C:\usr\</span> に変更します。「Browser」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_55.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_55-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_55" width="150" height="150" class="alignnone size-thumbnail wp-image-564" /></a></p>
+</li>
+
+<li class="step06">
+<p>ディレクトリの選択画面となるので、「Folder name:」の欄に <span class="path">C:\usr\</span> と入力し、「OK」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_56.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_56-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_56" width="150" height="150" class="alignnone size-thumbnail wp-image-565" /></a></p>
+</li>
+
+<li class="step07">
+<p>「Location:」に <span class="path">C:\urs\</span> が正しく設定されたかを確認し、「Next」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_57.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_57-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_57" width="150" height="150" class="alignnone size-thumbnail wp-image-566" /></a></p>
+</li>
+
+<li class="step08">
+<p>オプションを選択する画面になります。特に変更せず「Next」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_58.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_58-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_58" width="150" height="150" class="alignnone size-thumbnail wp-image-567" /></a></p>
+</li>
+
+<li class="step09">
+<p>これで設定は終わりです。「Install」をクリックしてしばらく待ちます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_59.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_59-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_59" width="150" height="150" class="alignnone size-thumbnail wp-image-570" /></a></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_60.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_60-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_60" width="150" height="150" class="alignnone size-thumbnail wp-image-571" /></a></p>
+</li>
+
+<li class="step10">
+<p>インストールが完了したら、「Finish」をクリックしてインストールウィザードを完了します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_61.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_61-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_61" width="150" height="150" class="alignnone size-thumbnail wp-image-572" /></a></p>
+</li>
+
+<li class="step11">
+<p>さて、<a href="/2010/03/xampp_and_mt_1.php">前回の記事</a>の環境の通り、<span class="path">D:\htdocs\site1</span> というディレクトリを <span class="url">http://site1.localhost/</span> というローカルホストドメインで参照できるようにし、ここで開発を行うことを前提に話を進めましょう。</p>
+<p>サイトのルートディレクトリ（<span class="path">D:\htdocs\site1</span>）に Movable Type（ここではMTOS 5.01） のファイルを展開し、<span class="path">mtos</span> というディレクトリ名をつけます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_134.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_134-150x150.jpg" alt="MTOSのファイルを展開" title="20100310_134" width="150" height="150" class="alignnone size-thumbnail wp-image-569" /></a></p>
+</li>
+
+<li class="step12">
+<p>念のため、インストールしたPerlが正しく動作するか確認してみます。テキストエディタを開いて以下のコードを記述し、<span class="path">C:\test.pl</span> というパスで保存します。（あくまで例です。実際はどんなパスでもOKです）</p>
+<pre><code>#! /usr/bin/perl
+print(&quot;It works!\n&quot;);</code></pre>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_66.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_66-150x150.jpg" alt="Perlのテストプログラムを作成する" title="20100310_66" width="150" height="150" class="alignnone size-thumbnail wp-image-575" /></a></p>
+<p>これをコマンドプロンプト（<a href="#footnote_20100308_1">※1</a>）で以下のように入力し、Enterキーを押して実行します。</p>
+<pre><code>perl c:\test.pl</code></pre>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_63.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_63-150x150.jpg" alt="Perlのテストプログラムをコマンドプロンプトから実行してみる" title="20100310_63" width="150" height="150" class="alignnone size-thumbnail wp-image-573" /></a></p>
+<p>入力の次の行に <q>It works!</q> と表示されれば正しく実行できたということです。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_65.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_65-150x150.jpg" alt="Perlのテストプログラムをコマンドプロンプトから実行してみる" title="20100310_65" width="150" height="150" class="alignnone size-thumbnail wp-image-574" /></a></p>
+<p>ここまでくればMovable TypeのCGIプログラムをひとまず表示はできる環境になっています。（<a href="#footnote_20100308_2">※2</a>）</p>
+</li>
+
+<li class="step13">
+<p><span class="url">http://site1.localhost/mtos/mt-check.cgi</span> にブラウザからアクセスします。ここまでの作業が正しくできていれば、MTのシステムチェック画面が表示されるはずです。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_80.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_80-150x150.jpg" alt="mt-check.cgiでのシステムチェック結果" title="20100310_80" width="150" height="150" class="alignnone size-thumbnail wp-image-576" /></a></p>
+</li>
+
+<li class="step14">
+<p>この時点では <q>Movable Typeの構成ファイルが見つかりませんでした。</q> というメッセージが表示され、まだMovable Typeが正しく動作しないことが分かります。ページをスクロールしていくと、DBD::mysql というPerlモジュールがシステムにインストールされていないことが分かります。これは MySQL データベースを使用するために必要となるモジュールです。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_81.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_81-150x150.jpg" alt="mt-check.cgiでのシステムチェック結果" title="20100310_81" width="150" height="150" class="alignnone size-thumbnail wp-image-568" /></a></p>
+</li>
+
+<li class="step15">
+<p>では DBD::mysql モジュールをインストールしましょう。コマンドプロンプトを起動し、<kbd>ppm</kbd> と入力しEnterキーを押します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_84.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_84-150x150.jpg" alt="コマンドプロンプトでppmを起動する" title="20100310_84" width="150" height="150" class="alignnone size-thumbnail wp-image-578" /></a></p>
+</li>
+
+<li class="step16">
+<p>すると「Perl Package Manager（略称PPM）」が起動します。<q>Synchronizing Database&#8230;（データベースと同期中）</q> とステータス表示されてしばらく固まるので、じっと待ちます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_85.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_85-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_85" width="150" height="150" class="alignnone size-thumbnail wp-image-579" /></a></p>
+</li>
+
+<li class="step17">
+<p>同期が完了して操作できるようになったら、画面左上の「View all packages」アイコンをクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_87.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_87-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_87" width="150" height="150" class="alignnone size-thumbnail wp-image-580" /></a></p>
+</li>
+
+<li class="step18">
+<p>そして画面上部の検索エリアに <kbd>dbd-mysql</kbd> と入力しましょう。すると中央のモジュール一覧に DBD-mysql と表示されるはずです。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_88.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_88-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_88" width="150" height="150" class="alignnone size-thumbnail wp-image-581" /></a></p>
+</li>
+
+<li class="step19">
+<p>リストアップされた DBD-mysql を右クリックし「Install DBD-mysql 4.011 + 」を選択します。これでインストールするモジュールの一覧に登録されます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_89.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_89-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_89" width="150" height="150" class="alignnone size-thumbnail wp-image-582" /></a></p>
+</li>
+
+<li class="step20">
+<p>画面右上の「→（Run marked actions）」アイコンをクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_90.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_90-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_90" width="150" height="150" class="alignnone size-thumbnail wp-image-589" /></a></p>
+<p>すると <q>Ready to install 1 package?</q> とアラート表示されるので「OK」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_91.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_91-150x121.jpg" alt="GUI ppmでインストールの確認アラート" title="20100310_91" width="150" height="121" class="alignnone size-thumbnail wp-image-583" /></a></p>
+</li>
+
+<li class="step21">
+<p>しばらく待つと、DBD::mysqlモジュールのインストールが完了します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_92.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_92-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_92" width="150" height="150" class="alignnone size-thumbnail wp-image-584" /></a></p>
+</li>
+
+<li class="step22">
+<p>もう一度ブラウザで mt-check.cgi にアクセスしてみましょう。<q>サーバーにDBD::mysqlがインストールされています</q> と表示され、エラー表示になっていなければOKです。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_93.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_93-150x150.jpg" alt="mt-check.cgiでのシステムチェック結果" title="20100310_93" width="150" height="150" class="alignnone size-thumbnail wp-image-585" /></a></p>
+</li>
+
+<li class="step23">
+<p>では今度はMySQLの設定を行っていきます。今回インストールするMTOS用のデータベースを作成しましょう。まずXAMPPコントロールパネルでMySQLが「Running」状態になっていることを確認し、「Admin」ボタンをクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_68.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_68-150x150.jpg" alt="XAMPPコントロールパネル" title="20100310_68" width="150" height="150" class="alignnone size-thumbnail wp-image-577" /></a></p>
+</li>
+
+<li class="step24">
+<p>するとブラウザでphpMyAdmin（MySQLデータベースをブラウザから操作できるツール）が開きます。「言語 &#8211; Language」に「日本語 &#8211; Japanese」が設定されていることを確認し、ユーザ名、パスワードを入力してログインしましょう。ここでのユーザ名は <kbd>root</kbd> 、<a href="/2010/03/xampp_and_mt_1.php#20100307_s16">パスワードは前回の記事のStep16</a>でXAMPPの管理画面から設定したパスワードになります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_71.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_71-150x150.jpg" alt="phpMyAdminのログイン画面" title="20100310_71" width="150" height="150" class="alignnone size-thumbnail wp-image-587" /></a></p>
+</li>
+
+<li class="step25">
+<p>phpMyAdminにログインすると、様々なメニューが並んだ画面が表示されます。ページ中ほどにある「新規データベースを作成する」という入力フォームから、今回使用するデータベースを作成しましょう。</p>
+<p>左のフィールドにはデータベース名を入力し（今回は「<kbd>mtos5</kbd>」とします）、隣のプルダウンメニューでデータベースの文字コードを選択します。ここでは「<strong>utf8_general_ci</strong>」を選択してください。このプルダウンメニューが結構長いのですが、一番下の方にあります。そして「作成」ボタンをクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_74.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_74-150x150.jpg" alt="phpMyAdminの操作画面" title="20100310_74" width="150" height="150" class="alignnone size-thumbnail wp-image-588" /></a></p>
+</li>
+
+<li class="step26">
+<p><q>データベース mtos5 を作成しました。</q>　と表示されたら完了です。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_75.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_75-150x150.jpg" alt="phpMyAdminの操作画面" title="20100310_75" width="150" height="150" class="alignnone size-thumbnail wp-image-586" /></a></p>
+</li>
+</ol>
+
+<p>以上でActivePerlのインストールと設定、MySQLの設定までが完了し、今回の記事はここまでです。次回はImage Magickのインストール、そしていよいよMovable Typeのインストールを取り上げます。</p>
+
+<div class="postscript">
+<ul class="footnote">
+
+<li><a name="footnote_20100308_1" id="footnote_20100308_1">※1</a> コマンドプロンプトは、スタートアップメニューから「ファイル名を指定して実行」（もしくは「Windowsキー + r」）で <kbd>cmd</kbd> と入力してEnterキーを入力すると起動することができます。</li>
+<li><a name="footnote_20100308_2" id="footnote_20100308_2">※2</a> Movable Type を含む、Perl言語で書かれた大抵のCGIプログラムはデフォルトでPerlを <span class="path">/usr/bin/perl</span> というパスで参照するように書かれています。（ファイルの冒頭にPerlのパスが記述されています）Step5～7でActivePerlを <span class="path">C:\usr\</span> というパスを指定してインストールしたことにより、Perl が <span class="path">/usr/bin/perl</span> で参照できるようになります。</li>
+</ul>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2010/03/xampp_and_mt_2/feed</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>XAMPP for Windows環境でPerlのパスを /usr/bin/perl にする</title>
+		<link>/2010/01/perlpath</link>
+					<comments>/2010/01/perlpath#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 05 Jan 2010 14:38:30 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Perl]]></category>
+		<category><![CDATA[XAMPP]]></category>
+		<guid isPermaLink="false">/?p=376</guid>
+
+					<description><![CDATA[「リンク作成シェル拡張」というソフトウェアを使ってXAMPP for WindowsのPerlのパスを /usr/bin/perl に変更します。 <a href="/2010/01/perlpath">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>XAMPPをインストールしたまんまだと、perlは以下のところにあります。</p>
+
+<pre><code>C:\xampp\perl\bin\perl</code></pre>
+
+<p>つまりperlのパスは以下のようになります。</p>
+
+<pre><code>/xampp/perl/bin/perl</code></pre>
+
+<p>cgiファイルを1個1個開いてパスを変更するのは正直面倒くさいので（それに本番環境と同じファイルが使えないということにも）、なんとか解決することができないかググってみると<a href="http://www.y2sunlight.com/ground/?XAMPP%2F5.Perl%A4%CE%A5%A4%A5%F3%A5%B9%A5%C8%A1%BC%A5%EB#content_1_4">やはりありました</a>。<br />
+シンボリックリンクを設定するソフトウェアを導入すれば解決するらしい、ということで<a href="http://www.vector.co.jp/soft/winnt/util/se184746.html" title="Vector：リンク作成シェル拡張for Windows 2000/XP (WindowsNT/2000/XP/Vista / ユーティリティ)">こちらから早速ダウンロード</a>＆インストール。</p>
+
+<p><code>C:\xampp</code>ディレクトリと<code>C:\</code>ディレクトリ（というかCドライブルート）を両方エクスプローラーで開いて、<code>C:\xampp\perl</code>フォルダを右クリックして<code>C:\</code>の方に、ドラッグアンドドロップ。右クリックメニューに「リンクを作る」というのが追加されているのでこれを選択。するとCドライブルートに<code>perl</code>フォルダが作られます。これが<code>C:\xampp\perl</code>へのシンボリックリンクです。</p>
+
+<p><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/01/20100105_perlpath.jpg" alt="「リンク作成シェル拡張」を使う様子" width="520" height="430" class="alignnone size-full wp-image-379" srcset="/wp-content/uploads/2010/01/20100105_perlpath.jpg 520w, /wp-content/uploads/2010/01/20100105_perlpath-300x248.jpg 300w" sizes="(max-width: 520px) 100vw, 520px" /></p>
+
+<p>このままではパスがおかしいので<code>C:\perl</code>フォルダ（シンボリックリンク）を<code>usr</code>にリネーム。するとperlのパスは</p>
+
+<pre><code>/usr/bin/perl</code></pre>
+
+<p>になるというわけ。</p>
+
+<p>シンボリックリンクで作ったディレクトリは、エクスプローラー上でも普通のフォルダと同じように扱えます。そして、シンボリックリンクとなるフォルダ自体を削除すれば、リンクを解除することができます。</p>
+
+<dl class="disclist reflinks">
+    <dt>参考：</dt>
+    <dd><a href="http://www.y2sunlight.com/ground/?XAMPP%2F5.Perl%A4%CE%A5%A4%A5%F3%A5%B9%A5%C8%A1%BC%A5%EB">XAMPP/5.Perlのインストール &#8211; Ground-SunLight</a></dd>
+    <dd><a href="http://www.vector.co.jp/soft/winnt/util/se184746.html">Vector：リンク作成シェル拡張for Windows 2000/XP (WindowsNT/2000/XP/Vista / ユーティリティ)</a></dd>
+</dl>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2010/01/perlpath/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Perl始めました</title>
+		<link>/2009/12/perl</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Fri, 11 Dec 2009 02:11:32 +0000</pubDate>
+				<category><![CDATA[Miscellany]]></category>
+		<category><![CDATA[Misc]]></category>
+		<category><![CDATA[Perl]]></category>
+		<guid isPermaLink="false">/wptest/2009/12/perl%e5%a7%8b%e3%82%81%e3%81%be%e3%81%97%e3%81%9f.php</guid>
+
+					<description><![CDATA[もう12月も半ばに差し掛かり、今年も残すところあと20日程度となってしまいました。昨月くらいから「今年やり残していること」を考えていたのですが、今年1月にPerlを学ぼうと言ってたにも関わらず特にアクションを起こしていないことに気づき、取り組んでみることにしました。 <a href="/2009/12/perl">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="初めてのPerl" src="/images/2009/12/11_learningperl.jpg" width="168" height="124" class="mt-image-none introphoto" style="" /></span>もう12月も半ばに差し掛かり、今年も残すところあと20日程度となりました。<br />
+昨月くらいから「今年やり残していること」を考えていたのですが、今年1月に<a href="/2009/01/06_pagebute.php">Perlを学ぼう</a>と言ってたにも関わらず特にアクションを起こしていないことに気づき、取り組んでみることにしました。</p>
+
+<p>手始めに会社に転がっていた（？）「<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873110963/likealunatic-22/ref=nosim/" target="_blank" rel="noopener">プログラミングPerl</a>」をかじってみたのですが、硬派な内容でなかなか読み進むことができず、途方に暮れてしまいました。そこで少し情報収集してみたところ、Perlの入門書としては「<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873114276/likealunatic-22/ref=nosim/" target="_blank" rel="noopener">初めてのPerl 第5版</a>」が有力であり、その上位版として「プログラミングPerl」があるということが分かりました。<br />
+しかも「初めてのPerl」はつい最近（2009年10月）に第5版に改訂されているということが分かり、嬉々としてAmazonで購入。現在、最初から読み進めつつ、章末の演習問題に取り組んでいます。年内に半分くらいまでは読めたらいいなぁ、と思っています。とりあえず目標は低めで。</p>
+
+<div class="postscript">
+<div class="amazlet-box" style="margin-bottom:20px;"><div class="amazlet-image" style="float:left;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873114276/likealunatic-22/ref=nosim/" target="_blank" rel="noopener"><img decoding="async" src="http://ecx.images-amazon.com/images/I/51v2AChMlfL._SL160_.jpg" alt="初めてのPerl 第5版" style="border: none;" /></a></div><div class="amazlet-info" style="margin-left:15px;line-height:120%"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873114276/likealunatic-22/ref=nosim/" target="_blank" rel="noopener">初めてのPerl 第5版</a><div class="amazlet-powered-date" style="font-size:7pt;margin-top:5px;font-family:verdana;line-height:120%">posted with <a href="http://www.amazlet.com/browse/ASIN/4873114276/likealunatic-22/ref=nosim/" title="初めてのPerl 第5版" target="_blank" rel="noopener">amazlet</a> at 09.12.11</div></div><div class="amazlet-detail">Randal L. Schwartz Tom Phoenix brian d foy <br />オライリージャパン <br />売り上げランキング: 5310<br /></div><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873114276/likealunatic-22/ref=nosim/" target="_blank" rel="noopener">Amazon.co.jp で詳細を見る</a></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+<div class="amazlet-box" style="margin-bottom:20px;"><div class="amazlet-image" style="float:left;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873110963/likealunatic-22/ref=nosim/" target="_blank" rel="noopener"><img decoding="async" src="http://ecx.images-amazon.com/images/I/51EK7E5K5FL._SL160_.jpg" alt="プログラミングPerl〈VOLUME1〉" style="border: none;" /></a></div><div class="amazlet-info" style="margin-left:15px;line-height:120%"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873110963/likealunatic-22/ref=nosim/" target="_blank" rel="noopener">プログラミングPerl〈VOLUME1〉</a><div class="amazlet-powered-date" style="font-size:7pt;margin-top:5px;font-family:verdana;line-height:120%">posted with <a href="http://www.amazlet.com/browse/ASIN/4873110963/likealunatic-22/ref=nosim/" title="プログラミングPerl〈VOLUME1〉" target="_blank" rel="noopener">amazlet</a> at 09.12.11</div></div><div class="amazlet-detail">ラリー ウォール ジョン オーワント トム クリスチャンセン<br />オライリー・ジャパン<br />売り上げランキング: 138874<br /></div><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4873110963/likealunatic-22/ref=nosim/" target="_blank" rel="noopener">Amazon.co.jp で詳細を見る</a></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>PageButeプラグインで静的ページ分割</title>
+		<link>/2009/01/06_pagebute</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 06 Jan 2009 08:09:05 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<category><![CDATA[Perl]]></category>
+		<category><![CDATA[Plugin]]></category>
+		<guid isPermaLink="false">/wptest/2009/01/pagebute%e3%83%97%e3%83%a9%e3%82%b0%e3%82%a4%e3%83%b3%e3%81%a7%e9%9d%99%e7%9a%84%e3%83%9a%e3%83%bc%e3%82%b8%e5%88%86%e5%89%b2.php</guid>
+
+					<description><![CDATA[MTのアーカイブページを分割するPageButeプラグインを改変し、リンク一覧のリンク番号が降順になるようにしてみました。 <a href="/2009/01/06_pagebute">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>明けましておめでとうございます。<br />
+本年もこのサイトをどうぞよろしくお願いいたします。<br />
+遅ればせながら新年のご挨拶。2009年の初エントリーです。</p>
+
+<p>昨年は転職という大きな転機を迎えましたが無事乗り越え、今に至っております。一昨年に引き続きスクールで講師を務めたり、雑誌に寄稿させてもらうという経験もでき、充実した一年となりました。</p>
+
+<p>さて、年始の挨拶はここまでで・・・ここから本題です。<br />
+昨日MTの案件をやっていたのですが、アーカイブページ分割の作業をすることとなり、いろいろと調べていました。</p>
+
+<p>MTが<code>&lt;MTEntries&gt;</code>で書き出すアーカイブ一覧は、lastnモディファイアなどで設定された値を上限に記事を順番に出力します。ただし、上限値を超える数の記事が登録されていた場合、超えた分の記事は表示されないという不親切な仕様となっています。<br />
+この上限値を超えた分を「次のページへ」などとして参照できるようにするのが<em>ページ分割</em>です。ページ分割を実現するには、専用のプラグインを導入するのが一般的になっています。</p>
+
+<p><a href="http://www.sixapart.jp/movabletype/plugins/mtpaginate.html">MTPaginate</a>プラグインが使えればこのサイトと同じやり方でできるのですが、PHP化はされていないし、商用利用は有料ということでボツに。そこで、<a href="http://www.skyarc.co.jp/engineerblog/entry/2642.html">PageBute</a>プラグイン（現バージョン：3.2.2）を使うことにしました。</p>
+
+<p>このPageButeプラグイン、PHP化していなくても使えるとあって、静的HTMLとしてページを書き出してくれます。例えば「index.html」を分割設定すると、「index_2.html」、「index_3.html」&#8230;というようにページを自動的に増やしてくれるという、素晴らしいプラグインです。</p>
+
+<p>公式ページを見て導入はあっさりできたのですが、シンプルであるが故に任意に設定できる項目が少ない印象を受けました。</p>
+
+<p>このプラグインで書き出す<code>&lt;$MTPageLists$&gt;</code>は、分割後の各ページへのリンク一覧を書き出すMTタグですが、リンクテキストとなるページ番号は必ず昇順（1、2、3&#8230;というように1から始まる）になります。今回の案件ではこの番号を降順（10、9、8&#8230;というように最後の番号から始まる）としなければならなかったので、プラグインを改変して解決しました。</p>
+
+<p class="note">この改変をすると、リンク一覧に並ぶリンクテキスト（ページ番号）が降順になります。<em>順番が入れ替わるのはリンクテキストのみで、記事の並び順自体は変更されません。</em>動作確認をしたのはMovableType 4.23に、改変したPageBute 3.2.2をインストールした環境です。</p>
+
+<p>改変した点は以下の通りです。</p>
+
+<ol class="decimallist">
+<li><p>PageBute.pl の182行目?189行目のforループの部分を以下のように変更</p>
+<pre><code>my $temp_page_count = $lists-&gt;{max_page};
+for (my $i = $lists-&gt;{min_page}; $i &lt;= $lists-&gt;{max_page}; $i++) {
+$page_lists .= $i == $lists-&gt;{min_page} ? '' : $delim;
+$page_lists .= $pb-&gt;{link_start};
+$page_lists .= $i == $page_count
+? "&lt;span class=\"current_page\"&gt;$temp_page_count&lt;/span&gt;"
+: &amp;_create_link($i, $site_url . $filename, $file_ext, $temp_page_count, 'link_page');
+$page_lists .= $pb-&gt;{link_close};
+$temp_page_count--;
+}</code></pre>
+<p>最大ページ数を格納する変数をもう1個作って、ループの度にデクリメントして、リンクの名前として代入してあげます。</p>
+</li>
+<li><p>MTテンプレートの&lt;MTPageContents&gt;タグを以下のように変更。</p>
+<pre><code>&lt;MTPageContents count="10" navi_count="999"&gt;</code></pre>
+<p>countモディファイアには1ページに表示したい数を書きます。navi_countモディファイアはリンク数の上限を表す値です。公式ページには掲載されていないモディファイアですが、改変後はこの値を与えてあげないと特定の条件でうまくいきません。</p>
+</li>
+</ol>
+
+<p>あとは改変後のプラグインをインストールしなおして、該当のアーカイブを再構築すれば完了。</p>
+
+<div class="postscript">
+<p>仕事初めの日からperlを触ったので、これも何かの縁かと考えて今年はperlを学ぼうかと思います。</p>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

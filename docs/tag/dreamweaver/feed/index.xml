@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Dreamweaver &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/dreamweaver/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:54 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Dreamweaver &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Dreamweaverコードビューを背景黒にして使ってみた（3ヶ月経過）</title>
+		<link>/2008/12/25_dwcodecoloring</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 25 Dec 2008 10:51:59 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Dreamweaver]]></category>
+		<guid isPermaLink="false">/wptest/2008/12/dreamweaver%e3%82%b3%e3%83%bc%e3%83%89%e3%83%93%e3%83%a5%e3%83%bc%e3%82%92%e8%83%8c%e6%99%af%e9%bb%92%e3%81%ab%e3%81%97%e3%81%a6%e4%bd%bf%e3%81%a3%e3%81%a6%e3%81%bf%e3%81%9f%ef%bc%883%e3%83%b6.php</guid>
+
+					<description><![CDATA[Dreamweaverコードビューの、私のオリジナルカラーリング設定を公開します。 <a href="/2008/12/25_dwcodecoloring">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://rewish.org/xhtml_css/dw_black_bg">Dreamweaverの背景を黒にして使う方法(改訂版) &#8211; Rewish</a>という記事を読み、これは私もやってみようと思い立ち、自分なりのコードカラーリングを作ってから約3ヶ月。</p>
+
+<p>最初のうちは足りない設定が色々と目に付いたものですが、現在では日々の業務でほぼ問題なく使えているので、ここで公開しておこうと思います。</p>
+
+<p>XMLファイル直ですが、ここからダウンロード → <a href="/publiclib/dreamweaver/Colors.xml" class="dl">Colors.xml</a></p>
+
+<p>この設定を導入すると、Dreamweaverのコードビューが以下のスクリーンショットみたいになります。</p>
+
+<dl>
+<dt>(X)HTML</dt>
+<dd><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img fetchpriority="high" decoding="async" alt="Dreamweaverのオリジナルコードカラーリングのスクリーンショット（(X)HTML）" src="/images/2008/12/25_dwcodecoloring1.gif" width="300" height="225" class="mt-image-none" style="" /></span></dd>
+<dt>CSS</dt>
+<dd><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img decoding="async" alt="Dreamweaverのオリジナルコードカラーリングのスクリーンショット（CSS）" src="/images/2008/12/25_dwcodecoloring2.gif" width="300" height="225" class="mt-image-none" style="" /></span></dd>
+<dt>JavaScript</dt>
+<dd><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img decoding="async" alt="Dreamweaverのオリジナルコードカラーリングのスクリーンショット（JavaScript）" src="/images/2008/12/25_dwcodecoloring3.gif" width="300" height="225" class="mt-image-none" style="" /></span></dd>
+</dl>
+
+<p>背景色は #222222 として使っています。このくらいコントラスト低めが好みです。コントラストが強いと目が痛くなるので苦手です。。実際、この設定にしてからかなり目が楽になったような気がします。個人の好みだとは思うのですが、<strong>背景黒オススメ</strong>とだけ言っておきます。</p>
+
+<p>導入方法については、冒頭のRewishさんの記事を見るといいですよ。</p>
+
+<p>対応しているファイル形式は (X)HTML、CSS、JavaScript、XML、テキストファイルくらい。他の形式の色は設定していません。なのでPHPファイルとか開くとヒドイことになります。もしお使いになる場合、その辺はご自分で設定してくださいませ。。</p>
+
+<p>動作確認をできたのは Dreamweaver 8 と Dreamweaver CS3 の2つ。8で作ったんですけど、CS3でファイルを開いてもほぼ同じ見た目だったので、まず問題ないかと思います。</p>
+
+<p>もし不具合があるようでしたらこっそり教えていただけると嬉しいです。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Dreamweaverでの失敗談</title>
+		<link>/2007/04/01_dw</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Mon, 02 Apr 2007 14:05:47 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Dreamweaver]]></category>
+		<guid isPermaLink="false">/wptest/2007/04/dreamweaver%e3%81%a7%e3%81%ae%e5%a4%b1%e6%95%97%e8%ab%87.php</guid>
+
+					<description><![CDATA[Dreamweaverには「ファイル」パネルでファイル名を変更した際に、それにリンクしているファイルのコードを自動更新する機能があります。この機能を使う時は、更新対象ファイルのバックアップを必ず取ってから使うことをおすすめします。私が使った限り、動作がかなり不安定な印象を受けています。 <a href="/2007/04/01_dw">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Dreamweaverには「ファイル」パネルでファイル名を変更した際に、それにリンクしているファイルのコードを自動更新する機能があります。</p>
+
+<p>この機能を使う場合は、更新対象ファイルのバックアップを必ず取ってから使うことをおすすめします。私の環境（WindowsXPのDreamweaver8）で使う限り、動作がかなり不安定な印象を受けています。</p>
+
+<p>この自動更新処理によって<abbr title="Cascading Style Sheet">CSS</abbr>ファイルのコードが途中からバッサリ削除された経験があります。その時は不覚にもバックアップを取っておらず、テストサーバーにもその状態でアップしたばかりだったので途方に暮れました。・・・が、ブラウザのキャッシュフォルダをあさって該当のファイルを探し出し、なんとか復元に成功しました。</p>
+
+<p>そんな苦い経験をしたものですから、あまりオーサリングツールに頼りすぎるのもいかがなものか、と考えるようになりました。便利なのは良いのですが、それを完全に自分のものとして使いこなせないようでは、作業フローに組み込むのは難しいです。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

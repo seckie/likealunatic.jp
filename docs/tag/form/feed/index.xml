@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Form &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/form/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:17 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Form &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>電話番号入力フォームのmaxlength</title>
+		<link>/2009/07/02_telform_maxlength</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 02 Jul 2009 07:06:44 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Form]]></category>
+		<category><![CDATA[HTML]]></category>
+		<guid isPermaLink="false">/wptest/2009/07/%e9%9b%bb%e8%a9%b1%e7%95%aa%e5%8f%b7%e5%85%a5%e5%8a%9b%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%e3%81%aemaxlength.php</guid>
+
+					<description><![CDATA[電話番号の市外局番は最高5桁だという話。 <a href="/2009/07/02_telform_maxlength">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>次のような電話番号入力フォームは正しくできていると言えるでしょうか？</p>
+
+<pre><code>&lt;input type=&quot;text&quot; size=&quot;20&quot; maxlength=&quot;4&quot; value=&quot;&quot; name=&quot;tel1&quot; id=&quot;tel1&quot; /&gt; -
+&lt;input type=&quot;text&quot; size=&quot;20&quot; maxlength=&quot;4&quot; value=&quot;&quot; name=&quot;tel2&quot; id=&quot;tel2&quot; /&gt; -
+&lt;input type=&quot;text&quot; size=&quot;20&quot; maxlength=&quot;4&quot; value=&quot;&quot; name=&quot;tel3&quot; id=&quot;tel3&quot; /&gt;</code></pre>
+
+<p><q>答えはNo。その理由は <code>maxlength=&quot;5&quot;</code> にすべきだから</q>、と職場の<abbr title="Technical Director">TD</abbr>さんが教えてくれました。5桁の市外局番が存在するなんて、知らなかったです・・・。</p>
+
+<ul class="disclist ref">
+<li>参考1：<a href="http://www.soumu.go.jp/main_sosiki/joho_tsusin/top/tel_number/q_and_a-2001aug.html#q2">電話番号に関するＱ＆Ａ &#8211; 市外局番・市内局番とはどのようなものですか？ </a></li>
+<li>参考2：<a href="http://townpage.goo.ne.jp/SearchKihon.php?maxgyocode=c01&amp;maxgyoname=%A5%B0%A5%EB%A5%E1&amp;gyonext=1&amp;keyword=&amp;prefcode=01&amp;prefname=%CB%CC%B3%A4%C6%BB&amp;citycode=347&amp;cityname=%BB%B3%B1%DB%B7%B4%C4%B9%CB%FC%C9%F4%C4%AE&amp;mapscale=9">グルメ 北海道 山越郡長万部町 &#8211; gooタウンページ</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

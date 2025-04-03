@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Windows &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/windows/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Windows &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>使用中のWindowsフリーソフトまとめ</title>
+		<link>/2010/01/windowsfreesoft</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Mon, 04 Jan 2010 12:08:03 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Windows]]></category>
+		<guid isPermaLink="false">/?p=368</guid>
+
+					<description><![CDATA[作業環境（Windows XP）にインストールしているフリーソフトウェアの一部をまとめてみました。 <a href="/2010/01/windowsfreesoft">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>あけましておめでとうございます。<br />
+正月は実家に帰り、ただただこたつでTVの正月特番を見てました。。</p>
+
+<p>本日仕事始めを迎え、新しい気持ちで仕事に取り組もうということで、自分のPCの作業環境を整理整頓していました。<br />
+そのついでと言ってはなんですが、作業環境（Windows XP）にインストールしているフリーソフトウェアの一部をまとめてみました。掲載順はアルファベット順です。</p>
+
+<dl class="disclist">
+
+<dt><a href="http://www.forest.impress.co.jp/lib/dktp/desktop/clipboard/clcl.html">CLCL</a></dt>
+<dd>クリップボード履歴の管理とか、自分で設定した定型文の挿入とかができる。OSに最初から組み込まれていればいいのにと思うほど便利</dd>
+
+<dt><a href="http://www.forest.impress.co.jp/lib/sys/file/delundel/datarecovery.html">DataRecovery</a></dt>
+<dd>削除したファイルを復元したり、完全削除したりするツール。マシン乗り換えのとき、ファイル完全削除用途に使用しました</dd>
+
+<dt><a href="https://www.dropbox.com/">Dropbox</a></dt>
+<dd>無償プラン（2GB）で使用中</dd>
+
+<dt><a href="http://www.vector.co.jp/soft/win95/util/se360695.html">FastCopy</a></dt>
+<dd>ファイルの移動、コピー、削除が高速にできるツール。大量にコピーしたりする時に重宝。<a href="http://ipmsg.org/private/">IP Messengerと同じ人が作っている</a></dd>
+
+<dt><a href="http://www.vector.co.jp/soft/win95/net/se061839.html">FFFTP</a></dt>
+<dd>王道FTPクライアント</dd>
+
+<dt><a href="http://filezilla-project.org/">FileZilla</a></dt>
+<dd>SFTP用。FFFTPがSFTPに対応していないため。FFFTPと結構UIが異なるので、いずれこっちに一本化したいです。Mac用もあるし</dd>
+
+<dt><a href="http://www.evernote.com/">Evernote</a></dt>
+<dd>主にプライベートなメモばっかり放り込んでいるので、あまり仕事では使っていませんが。有償プラン（月500MB）で使用中</dd>
+
+<dt><a href="http://www.vector.co.jp/soft/win95/util/se178553.html">ID Manager</a></dt>
+<dd>ID・パスワードを管理するツール。とても使いやすい。Mac版もあれば最高なのに・・・</dd>
+
+<dt><a href="http://www.vector.co.jp/soft/winnt/util/se228667.html">KeySwap</a></dt>
+<dd>キー配列の入れ替えツール。&lt;CapsLock&gt;→&lt;Esc&gt;に設定</dd>
+
+<dt><a href="http://code.google.com/p/msysgit/">msysgit</a></dt>
+<dd>Windowsで使えるGit（バージョン管理ツールの一種）。コマンド勉強中</dd>
+
+<dt><a href="http://niwradsoft.blogspot.com/">Seven Remix XP</a></dt>
+<dd>Windows XPの見た目をWindows 7っぽくするソフト。気分が変わります</dd>
+
+<dt><a href="http://skydriveexplorer.com/">SkyDrive Explorer</a></dt>
+<dd><a href="http://skydrive.live.com/?mkt=ja-jp">SkyDrive</a>をエクスプローラーに統合して使えるようにするツール。まだインストールしたばかり</dd>
+
+<dt><a href="http://hp.vector.co.jp/authors/VA002416/">Tera Term</a></dt>
+<dd>たまにSSHを使うときに</dd>
+
+<dt><a href="http://cheebow.info/chemt/archives/2007/04/twitterwindowst.html">Twit</a></dt>
+<dd>たまにつぶやいてます</dd>
+
+<dt><a href="http://www.vmware.com/jp/products/player/">VMware Player</a></dt>
+<dd>仮想マシン実行ツール。<a href="http://www.ubuntulinux.jp/download/">Ubuntu</a>をのっけてローカルサーバーとして使ってみましたが、パフォーマンスの問題で結局<a href="http://www.apachefriends.org/jp/xampp-windows.html">XAMPP</a>を使っています</dd>
+
+<dt><a href="http://www.vector.co.jp/soft/win95/util/se320392.html">X-Finder</a></dt>
+<dd>タブ表示のファイラ。上っ面な使い方しかしていないので、もっと使いこなしたいところ。<a href="/2008/10/15_xfinder.php">こちらの記事を参照のこと</a></dd>
+
+<dt><a href="http://www.forest.impress.co.jp/lib/stdy/program/progsupt/winmerge.html">WinMerge</a></dt>
+<dd>diffのすごいやつ、みたいなツール。ファイルだけでなく、フォルダまるごと比較にも対応</dd>
+
+<dt><a href="http://www.forest.impress.co.jp/lib/pic/piccam/capture/winshot.html">WinShot</a></dt>
+<dd>スクリーンショットツール。JPEG、BMP形式対応、カーソルも含めた撮影、矩形選択、プレビューなど</dd>
+
+<dt><a href="http://www.apachefriends.org/jp/xampp-windows.html">XAMPP for Windows</a></dt>
+<dd>ローカルサーバー。現バージョンだとインストールするだけでPerl、PHP、MySQLと一通り揃っている</dd>
+
+<dt><a href="http://www.forest.impress.co.jp/lib/pic/piccam/picviewer/xnview.html">Xnview</a></dt>
+<dd>画像ビューア。軽い。<a href="http://www8.plala.or.jp/kusutaku/iview/">Irfan View</a>よりこちらのが好み</dd>
+
+</dl>
+
+<p>2010年が皆様にとって良い年になりますように。<br />
+本年もどうぞよろしくお願いいたします。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>コマンドプロンプトでディレクトリを作る</title>
+		<link>/2009/08/05_cmd</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 05 Aug 2009 12:09:52 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[cmd]]></category>
+		<category><![CDATA[Windows]]></category>
+		<guid isPermaLink="false">/wptest/2009/08/%e3%82%b3%e3%83%9e%e3%83%b3%e3%83%89%e3%83%97%e3%83%ad%e3%83%b3%e3%83%97%e3%83%88%e3%81%a7%e3%83%87%e3%82%a3%e3%83%ac%e3%82%af%e3%83%88%e3%83%aa%e3%82%92%e4%bd%9c%e3%82%8b.php</guid>
+
+					<description><![CDATA[WindowsXPのコマンドプロンプトでディレクトリを移動・作成する方法 <a href="/2009/08/05_cmd">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>新しい案件をやる際に、ディレクトリマップを作ってそれに沿ってローカルにディレクトリを作って行こう、という時のお話。これをエクスプローラーで「新規作成→フォルダ」としてちくちく作っていくのは非常にだるいので、コマンドでできないか調べて、やってみました。</p>
+
+<p>職場のマシンはWindowsXPなので、コマンドプロンプトでこれをやる方法。<br />
+まず「スタートメニュー→ファイル名を指定して実行」で<kbd>cmd</kbd>と入力してコマンドプロンプトを立ち上げます。</p>
+
+<p>作業ディレクトリに移動はcdコマンド。</p>
+
+<pre><code>C:\Documents and Settings\UserName&gt;cd folderPath\folderPath</code></pre>
+
+<p>上位の階層に移動する場合は</p>
+
+<pre><code>c:\documents and settings\username&gt;cd ../../</code></pre>
+
+<p>とかやればいいです。</p>
+
+<p>もし異なるドライブに移動する場合（以下の例はcドライブ→dドライブ）</p>
+
+<pre><code>c:\documents and settings\username&gt;d:</code></pre>
+
+<p>（<code>ドライブ名:</code>）と入力するだけで、そのドライブのルートに移動できます。<br />
+ディレクトリの区切り文字はlinux系と違ってバックスラッシュじゃないと行けないのね。独自路線を突っ走るwindows・・・さすがです（謎）</p>
+
+<p>ディレクトリの作成はmdコマンド。<br />
+以下はdドライブの直下にフォルダ「hoge」を作る例。</p>
+
+<pre><code>d:\&gt;md hoge</code></pre>
+
+<p>以上です。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>IE8の自動更新はまだ始まっていない・・・のか</title>
+		<link>/2009/05/30_ie8update</link>
+					<comments>/2009/05/30_ie8update#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sat, 30 May 2009 03:04:07 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[IE8]]></category>
+		<category><![CDATA[Windows]]></category>
+		<guid isPermaLink="false">/wptest/2009/05/ie8%e3%81%ae%e8%87%aa%e5%8b%95%e6%9b%b4%e6%96%b0%e3%81%af%e3%81%be%e3%81%a0%e5%a7%8b%e3%81%be%e3%81%a3%e3%81%a6%e3%81%84%e3%81%aa%e3%81%84%e3%83%bb%e3%83%bb%e3%83%bb%e3%81%ae%e3%81%8b.php</guid>
+
+					<description><![CDATA[日本においては自動更新機能による Internet Explorer 8 の配信を延期しておりましたが、5 月 25 日週よりこれを開始する予定です。 Internet Explorer 8 の自動更新による配布について &#124; Microsoft TechNet と、Microsoft TechNetではアナウンスされていますが、同時に 日本では自動更新機能による IE8 の自動インストール通知の開始は未定となっております。 とも書いてあります。どっちなんでしょうね。 ちなみに、IE7のインストールされたWindowsXPで手動Windows Updateをかけると、IE8が「優先度の高い更新プログラム 」としてリストアップされることは確認しました。 事実上、自動更新も秒読みですね。IE8とIE7は見た目には大して変化がないので、IE7ユーザーにはすんなり受け入れられるのかもしれません。IE7に比べて動作がかなーり軽快になっているので、一般ユーザーでもその辺の改善は体感できるのではないでしょうか。 やばいなぁ・・・最近忙しさにかまけて情報収集を怠っていたんですよ。そろそろ本気で情報収集と対応をしないと。。]]></description>
+										<content:encoded><![CDATA[<blockquote class="http://technet.microsoft.com/ja-jp/updatemanagement/dd365125.aspx"><p>日本においては自動更新機能による Internet Explorer 8 の配信を延期しておりましたが、5 月 25 日週よりこれを開始する予定です。</p></blockquote>
+
+<p class="cite"><a href="http://technet.microsoft.com/ja-jp/updatemanagement/dd365125.aspx">Internet Explorer 8 の自動更新による配布について | Microsoft TechNet</a></p>
+
+<p>と、Microsoft TechNetではアナウンスされていますが、同時に</p>
+
+<blockquote class="http://technet.microsoft.com/ja-jp/updatemanagement/dd365125.aspx"><p>日本では自動更新機能による IE8 の自動インストール通知の開始は未定となっております。</p></blockquote>
+
+<p>とも書いてあります。どっちなんでしょうね。<br />
+ちなみに、IE7のインストールされたWindowsXPで手動Windows Updateをかけると、IE8が「優先度の高い更新プログラム 」としてリストアップされることは確認しました。</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img fetchpriority="high" decoding="async" alt="手動更新ではIE8がリストアップされる" src="/images/2009/05/30_winxpautoupdate.jpg" width="480" height="360" class="mt-image-none" style="" /></span></p>
+
+<p>事実上、自動更新も秒読みですね。IE8とIE7は見た目には大して変化がないので、IE7ユーザーにはすんなり受け入れられるのかもしれません。IE7に比べて動作がかなーり軽快になっているので、一般ユーザーでもその辺の改善は体感できるのではないでしょうか。</p>
+
+<p>やばいなぁ・・・最近忙しさにかまけて情報収集を怠っていたんですよ。そろそろ本気で情報収集と対応をしないと。。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2009/05/30_ie8update/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>ファイルブラウザ・X-Finderでファイル・フォルダ管理</title>
+		<link>/2008/10/15_xfinder</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 15 Oct 2008 04:49:48 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Windows]]></category>
+		<guid isPermaLink="false">/wptest/2008/10/%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%83%96%e3%83%a9%e3%82%a6%e3%82%b6%e3%83%bbx-finder%e3%81%a7%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%83%bb%e3%83%95%e3%82%a9%e3%83%ab%e3%83%80%e7%ae%a1%e7%90%86.php</guid>
+
+					<description><![CDATA[タブでファイル・フォルダ管理ができるWindowsソフトウェアです。「エクスプローラーのすごいやつ」みたいな感覚で使えます <a href="/2008/10/15_xfinder">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2008/10/15_xf.gif"><img decoding="async" alt="スクリーンショット：X-Finder" src="/images/2008/10/15_xf_s.gif" width="470" height="489" class="mt-image-none" /></a></span></p>
+
+<p>タブでファイル・フォルダ管理ができるWindowsソフトウェアです。「エクスプローラーのすごいやつ」みたいな感覚で使えます。</p>
+
+<p>様々な機能が搭載されているようですが、私が使っているのはタブ機能と、タブに色を付けられる機能と、ウィンドウを分割する機能、の3つだけです。というか全ての機能を使いこなせていないだけですが。。<br />
+ファイラーにこの3つの機能があるかないかで、（私にとっては）雲泥の差です。タブに色がつけられるおかげで、案件を同時に複数持っていても混乱しないで済むんです。</p>
+
+<p>私の設定では・・・</p>
+
+<p>まず、現在やっている案件ごとにタブを色分け。
+（<em>タブを右クリック → 「タブの背景色1 or 2」を設定</em>）<br />
+それからウィンドウを上下に分割して、
+（<em>「表示」メニュー → 「ウインドウの分割」 → 「上下に分割」</em>）<br />
+上のウィンドウにはドキュメントや素材関連のフォルダ（社内共有サーバーの案件フォルダと同期）を開き、下のウィンドウはHTML関連のフォルダ（案件Webサーバーと同期）を開く。</p>
+
+<p>・・・という使い方をしています。</p>
+
+<p>ただ一つ気に入らない点は、ファイル選択の状態にクセがあって、エクスプローラーと比較するとちょっと違和感があること。まぁ、慣れれば大丈夫ですが。</p>
+
+<p>エクスプローラーしか使ったことがない方は、だまされたと思って一度使ってみてください。</p>
+
+<p>公式サイト：<a href="http://www.eonet.ne.jp/~gakana/">ファイルブラウザ・X-Finder</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

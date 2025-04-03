@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>妄想 &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/%E5%A6%84%E6%83%B3/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:54 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>妄想 &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>[妄想] ネトゲのキャラクター情報をフィード配信するサービス</title>
+		<link>/2007/04/24_netgamefeed</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 24 Apr 2007 13:06:45 +0000</pubDate>
+				<category><![CDATA[Miscellany]]></category>
+		<category><![CDATA[Game]]></category>
+		<category><![CDATA[妄想]]></category>
+		<guid isPermaLink="false">/wptest/2007/04/%e5%a6%84%e6%83%b3-%e3%83%8d%e3%83%88%e3%82%b2%e3%81%ae%e3%82%ad%e3%83%a3%e3%83%a9%e3%82%af%e3%82%bf%e3%83%bc%e6%83%85%e5%a0%b1%e3%82%92%e3%83%95%e3%82%a3%e3%83%bc%e3%83%89%e9%85%8d%e4%bf%a1.php</guid>
+
+					<description><![CDATA[ネトゲのキャラクター情報をフィードで配信するサービスがあったらおもしろいな、という妄想。 <a href="/2007/04/24_netgamefeed">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>たまに <a href="http://www.ragnarokonline.jp/">RagnarokOnline</a> というオンラインゲームをプレイする私が、<a href="http://iddy.jp/profile/likealunatic/">iddy</a> をいじっていて、思いついた妄想です。以下、その妄想を徒然なるままに。</p>
+
+<p>ネトゲのキャラクター情報をフィードで配信するサービス。ゲーム ID 一つにつき、一つにフィード <abbr title="Uniform Resource Identifier">URI</abbr> を発行。そのゲーム ID に属するキャラクターは全てそのフィードに表示される。例えば以下のような感じの <abbr title="Extensible Markup Language">XML</abbr> データが原型でさ。</p>
+
+<pre><code>&lt;character&gt;
+&lt;name&gt;hoge&lt;/name&gt;
+&lt;job&gt;Knight&lt;/job&gt;
+&lt;level&gt;30&lt;/level&gt;
+&lt;skills&gt;
+&lt;skill&gt;Magnum Break&lt;/skill&gt;
+&lt;skill&gt;Auto Guard&lt;/skill&gt;
+&lt;/skills&gt;
+&lt;items&gt;
+&lt;item&gt;Ice Sword&lt;/item&gt;
+&lt;item&gt;Iron Armor&lt;/item&gt;
+&lt;/items&gt;
+&lt;location&gt;Hoge City&lt;/location&gt;
+&lt;/character&gt;
+&lt;character&gt;
+&lt;name&gt;hoge-MK2&lt;/name&gt;
+&lt;job&gt;Wizard&lt;/job&gt;
+&lt;level&gt;32&lt;/level&gt;
+&lt;skills&gt;
+&lt;skill&gt;Fire Bolt&lt;/skill&gt;
+&lt;skill&gt;Thunder Storm&lt;/skill&gt;
+&lt;/skills&gt;
+&lt;items&gt;
+&lt;item&gt;Magic Wand&lt;/item&gt;
+&lt;item&gt;Silk Robe&lt;/item&gt;
+&lt;/items&gt;
+&lt;location&gt;Hoge Moutain&lt;/location&gt;
+&lt;/character&gt;</code></pre>
+
+<p>キャラクターごとにキャラクター名、職業、レベル、所有スキル、所有アイテム、今どこにいるか等の情報を含んでるわけ。これをフィードに変換して配信するんだけど、それぞれのデータの公開レベルをゲーム ID 所有者が設定できるの。友達登録しているゲーム ID の人にしか、所有アイテムのフィードは公開しません、とか。もしくはフィード自体、一般公開しない設定も考えられるよね。友達登録している人にしか見せません、みたいな。なんか mixi みたいになってきたな。</p>
+
+<p>当然、ゲーム内でキャラクターデータに変化があれば、フィードの内容も自動的に更新される方がいいよね。友達のキャラクターフィードを登録しておけば、フィードリーダーで友達のキャラクターが今何レベルか、どんなアイテムを手に入れたか、などがすぐに分かるというわけ。「お、あいつレベル上げたな、じゃ俺もがんばらなきゃ」とか「む、あいつあんなレアアイテム手に入れたのか！」とか、そういう様子になるのではないかと。</p>
+
+<p>なんか今話題の<a href="http://secondlife.com/world/jp/developers/#tools">セカンドライフだったらそういうのもできそうな気がする</a>。<q cite="http://secondlife.com/world/jp/developers/#tools">インワールド XML データを外部のウェブサイトやサービスにエクスポート可能</q> とか書いてあるし。何しろ私はオンラインゲームは  Ragnarok しかやったことないので、セカンドラインとかはよく、分かりません！</p>
+
+<p>というわけでどこかのネトゲ会社の中の人、これ、是非やってください。ネトゲ開発してる会社の中の人だったらそんなに難しい話じゃないと思うんだけど、どうだろう。外部のサービスからネトゲの情報を持ってくる場合だと、セカンドライフみたいにそれ用のデータをエクスポートしてるようなゲームじゃないと厳しそう。そうじゃないゲームからデータ抜いたりなんかしたら不正アクセスってやつになるよね・・・。</p>
+
+<p style="margin-top:2em;">・・・以上、妄想をただただ書いただけなのですが、もう既にこういうアイデアのサービスがあったりするかもしれません。今の時代、なんでもかんでもフィードですからね。。私も今では、フィード無しの生活は考えられません。<br />
+もし似たようなサービス、もしくはこれおもしろいサービスだよっていう情報をお持ちの方は、こっそり教えていただけると幸いです。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Mac &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/mac/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:40 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Mac &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>M1 Mac について調べたことあれこれ</title>
+		<link>/2020/11/m1-mac</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Sun, 22 Nov 2020 07:35:08 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Mac]]></category>
+		<guid isPermaLink="false">/?p=1452</guid>
+
+					<description><![CDATA[この3連休にゆっくり情報収集していたら、M1 Mac がとても欲しくなってしまった。買うなら今使ってる MacBook Pro 13-inch の同モデルへの買い替えかな。 とはいえ Homebrew 動かないとか、そういった情報もあり、開発用に簡単に使うには少しハードルがまだある模様。Rosetta 2 を使えばなんとかなるのかな？とも思うけど使用感がわからない。現状そこまで困っていないので、しばらく様子見。 M1 と Apple Silicon について Apple は Aシリーズと名付けた自社製 Soc（Apple Silicon）を iPhone、iPad、Apple Watch、Apple TV などに搭載してきた。Aシリーズを Mac 向けに強化したのが M1。 SoC は「System on a chip」の略で、CPU、GPU、メモリなどの集積回路を1つのパッケージで実現したチップ。モバイルなどの小さなデバイスは大体このチップを使って作られている。 ARM はコアのアーキテクチャの一種で、それを使って各社 SoC を実装しており、Apple Silicon もこのアーキテクチャを採用している。 M1 は 5nm プロセスを採用した初の PC 向けチップで、160 億個のトランジスタを搭載。 M1 Mac について すべて Big Sur (macOS 11) 搭載。 MacBook Air はファンレスでタッチバーなし。MacBook Pro はファンありの冷却システムを持つ分ピーク性能が上。 アプリについて Intel プロセッサ向けバイナリと Apple Silicon 向けバイナリを1つのパッケージでまとめた「Universal Apps」と、Intel プロセッサ向けバイナリを M1 Mac で動作させる「Rosetta 2」を提供。 iOS 向けのアプリが、M1 Mac では直接動作するようになる。 References Apple Silicon搭載MacBook AirとMacBook Pro、Mac miniの違いは？　比較まとめ &#40;1/4&#41; &#45; ITmedia NEWS 初のApple Siliconとなる「M1」チップが登場、5nmプロセスで製造された世界最速のCPU搭載 &#45; GIGAZINE Apple Silicon「M1」搭載Mac登場　MacBook Air、Mac mini、MacBook Proの3機種 &#45; ITmedia NEWS System&#45;on&#45;a&#45;chip &#45; Wikipedia Rebuild: 288: Unidentified Mysterious Animal &#40;hak&#41; 「ARM」という単語の意味を啓蒙する記事 &#45; &#8230; <a href="/2020/11/m1-mac">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>この3連休にゆっくり情報収集していたら、M1 Mac がとても欲しくなってしまった。買うなら今使ってる MacBook Pro 13-inch の同モデルへの買い替えかな。</p>
+
+<p>とはいえ Homebrew 動かないとか、そういった情報もあり、開発用に簡単に使うには少しハードルがまだある模様。Rosetta 2 を使えばなんとかなるのかな？とも思うけど使用感がわからない。現状そこまで困っていないので、しばらく様子見。</p>
+
+<h2>M1 と Apple Silicon について</h2>
+
+<ul>
+<li>Apple は Aシリーズと名付けた自社製 Soc（Apple Silicon）を iPhone、iPad、Apple Watch、Apple TV などに搭載してきた。Aシリーズを Mac 向けに強化したのが M1。</li>
+<li>SoC は「System on a chip」の略で、CPU、GPU、メモリなどの集積回路を1つのパッケージで実現したチップ。モバイルなどの小さなデバイスは大体このチップを使って作られている。</li>
+<li>ARM はコアのアーキテクチャの一種で、それを使って各社 SoC を実装しており、Apple Silicon もこのアーキテクチャを採用している。</li>
+<li>M1 は 5nm プロセスを採用した初の PC 向けチップで、160 億個のトランジスタを搭載。</li>
+</ul>
+
+<h2>M1 Mac について</h2>
+
+<ul>
+<li>すべて Big Sur (macOS 11) 搭載。</li>
+<li>MacBook Air はファンレスでタッチバーなし。MacBook Pro はファンありの冷却システムを持つ分ピーク性能が上。</li>
+</ul>
+
+<h2>アプリについて</h2>
+
+<ul>
+<li>Intel プロセッサ向けバイナリと Apple Silicon 向けバイナリを1つのパッケージでまとめた「Universal Apps」と、Intel プロセッサ向けバイナリを M1 Mac で動作させる「Rosetta 2」を提供。</li>
+<li>iOS 向けのアプリが、M1 Mac では直接動作するようになる。</li>
+</ul>
+
+<h2>References</h2>
+
+<ul>
+<li><a href="https://www.itmedia.co.jp/news/articles/2011/11/news070.html">Apple Silicon搭載MacBook AirとMacBook Pro、Mac miniの違いは？　比較まとめ &#40;1/4&#41; &#45; ITmedia NEWS</a></li>
+<li><a href="https://gigazine.net/news/20201111-apple-silicon-m1/">初のApple Siliconとなる「M1」チップが登場、5nmプロセスで製造された世界最速のCPU搭載 &#45; GIGAZINE</a></li>
+<li><a href="https://www.itmedia.co.jp/news/articles/2011/11/news066.html">Apple Silicon「M1」搭載Mac登場　MacBook Air、Mac mini、MacBook Proの3機種 &#45; ITmedia NEWS</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/System-on-a-chip">System&#45;on&#45;a&#45;chip &#45; Wikipedia</a></li>
+<li><a href="https://rebuild.fm/288/">Rebuild: 288: Unidentified Mysterious Animal &#40;hak&#41;</a></li>
+<li><a href="https://essay.zopfco.de/entry/2020/11/21/232504">「ARM」という単語の意味を啓蒙する記事 &#45; Zopfcode Essay</a></li>
+<li><a href="https://qiita.com/shibukawa/items/797b7cbb7e530842e6f7">M1 Macの開発環境 &#45; Qiita</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>MacBook Pro (13-inch) を購入</title>
+		<link>/2017/07/mbp2017</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Fri, 14 Jul 2017 10:56:36 +0000</pubDate>
+				<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Miscellany]]></category>
+		<category><![CDATA[Mac]]></category>
+		<guid isPermaLink="false">/?p=1268</guid>
+
+					<description><![CDATA[自宅では長らく MacBook Air (13-inch, Mid 2011) を使用してきたのだけれど、かなりくたびれていて作業するに耐えない状態なので新しい Mac を買うことにした。 購入したのは以下のスペックの MacBook Pro (13-inch)。 Touch Bar なし 第7世代の2.3GHzデュアルコアIntel Core i5プロセッサ（Turbo Boost使用時最大3.6GHz） Intel Iris Plus Graphics 640 16GB 2,133MHz LPDDR3メモリ 512GB SSDストレージ バックライトキーボード &#8211; 英語（US） 本当は旧世代の整備済み製品を買おうとしていたのだけど、US キーボードの製品をほとんど見かけなかったので、諦めて新品を買うことにしたのだ。会社で使っていたマシンが US キーボードだったので、もう US 配列しか手が受け付けなくなってしまったので…。 スペックをカスタマイズすると受注生産になるらしく、配送予定日が遅くなるようだ。（出荷まで2〜3営業日、配送に2〜3日はかかった）なお、今回は上海からの配送になっていた。 早速設定していく。 電源を入れてウィザードに従って設定を進める。以下は一部抜粋。 FileVault は ON iCloud アカウントを利用したログインパスワードの変更は可。同じく FileVault のロック解除に iCloud アカウントを使用 OSが起動したらば、まず「設定 > キーボード」でキーボード周りの設定を自分好みにする。 「キーボード > キーのリピート」 → 最速に 「キーボード > リピート入力認識までの時間」→ 一番短く 「キーボード 」 → 「F1、F2などのキーを標準のファンクションキーとして使用」にチェック 「キーボード > 修飾キー」→ Caps Lock と Control を入れ替え 「ショートカット > フルキーボードアクセス」 → 「すべてのコントロール」にチェック 「ショートカット > Mission Control > 通知センターを表示」 → 「Shift + Control + →」に設定 「ショートカット > 入力ソース > 前の入力ソースを選択」 → 「Command + Space」に設定 「ショートカット > 入力ソース > 次の入力ソースを選択」 → チェックを外す 「ショートカット > Spotlight > &#8230; <a href="/2017/07/mbp2017">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>自宅では長らく MacBook Air (13-inch, Mid 2011) を使用してきたのだけれど、かなりくたびれていて作業するに耐えない状態なので新しい Mac を買うことにした。
+購入したのは以下のスペックの <a href="https://www.apple.com/jp/shop/buy-mac/macbook-pro">MacBook Pro (13-inch)</a>。</p>
+
+<ul>
+<li>Touch Bar なし</li>
+<li>第7世代の2.3GHzデュアルコアIntel Core i5プロセッサ（Turbo Boost使用時最大3.6GHz）</li>
+<li>Intel Iris Plus Graphics 640</li>
+<li>16GB 2,133MHz LPDDR3メモリ</li>
+<li>512GB SSDストレージ</li>
+<li>バックライトキーボード &#8211; 英語（US）</li>
+</ul>
+
+<p>本当は旧世代の<a href="https://www.apple.com/jp/shop/browse/home/specialdeals/mac/macbook_pro">整備済み製品</a>を買おうとしていたのだけど、US キーボードの製品をほとんど見かけなかったので、諦めて新品を買うことにしたのだ。会社で使っていたマシンが US キーボードだったので、もう US 配列しか手が受け付けなくなってしまったので…。</p>
+
+<p>スペックをカスタマイズすると受注生産になるらしく、配送予定日が遅くなるようだ。（出荷まで2〜3営業日、配送に2〜3日はかかった）なお、今回は上海からの配送になっていた。</p>
+
+<p>早速設定していく。
+電源を入れてウィザードに従って設定を進める。以下は一部抜粋。</p>
+
+<ul>
+<li>FileVault は ON</li>
+<li>iCloud アカウントを利用したログインパスワードの変更は可。同じく FileVault のロック解除に iCloud アカウントを使用</li>
+</ul>
+
+<p>OSが起動したらば、まず「設定 > キーボード」でキーボード周りの設定を自分好みにする。</p>
+
+<ul>
+<li>「キーボード > キーのリピート」 → 最速に</li>
+<li>「キーボード > リピート入力認識までの時間」→ 一番短く</li>
+<li>「キーボード 」 → 「F1、F2などのキーを標準のファンクションキーとして使用」にチェック</li>
+<li>「キーボード > 修飾キー」→ Caps Lock と Control を入れ替え</li>
+<li>「ショートカット > フルキーボードアクセス」 → 「すべてのコントロール」にチェック</li>
+<li>「ショートカット > Mission Control > 通知センターを表示」 → 「Shift + Control + →」に設定</li>
+<li>「ショートカット > 入力ソース > 前の入力ソースを選択」 → 「Command + Space」に設定</li>
+<li>「ショートカット > 入力ソース > 次の入力ソースを選択」 → チェックを外す</li>
+<li>「ショートカット > Spotlight > Spotlight検索を表示」 → 「Option + Command + Space」に設定</li>
+<li>「ショートカット > Spotlight > Finderの検索ウィンドウを表示」 → チェックを外す</li>
+<li>「入力ソース > 日本語」 → 「ひらがな」と「英字」だけ残してチェックを外す</li>
+<li>「入力ソース > “/“で入力する文字」 → 「/（スラッシュ）」</li>
+<li>「入力ソース > “¥”で入力する文字」 → 「\（バックスラッシュ）」</li>
+</ul>
+
+<p>「設定 > セキュリティーとプライバシー > ファイアウォール」 → 「ファイアウォールを入にする」</p>
+
+<p>「設定 > Dock」では「Dockを自動的に隠す/表示」にチェックを入れる。</p>
+
+<p>「設定 > 共有」では「コンピューター名」を見られても恥ずかしくない名前にしておく。</p>
+
+<p>「設定 > ユーザーとグループ」では「変更するにはカギをクリック」した後、左サイドバーに表示されているユーザーを副ボタンクリックし「詳細オプション」を選択すると、アカウント名などを変更することができる。初回起動時のウィザードで設定したものをやっぱり修正したくなったらここで直す。</p>
+
+<h2>ソフトウェアのインストール</h2>
+
+<ul>
+<li><a href="https://www.google.co.jp/chrome/browser/desktop/index.html">Google Chrome</a></li>
+<li><a href="https://www.dropbox.com/">Dropbox</a></li>
+<li><a href="https://www.alfredapp.com/">Alfred</a></li>
+<li><a href="https://github.com/splhack/macvim-kaoriya/releases/tag/20170512">MacVim</a></li>
+<li><a href="https://www.iterm2.com/">iTerm2</a></li>
+<li><a href="https://www.keepassx.org/downloads">KeePassX</a></li>
+<li><a href="https://www.avg.com/en-dk/avg-antivirus-for-mac">AVG AntiVirus for Mac</a></li>
+<li><a href="http://freemacsoft.net/appcleaner/">AppCleaner</a></li>
+</ul>
+
+<p>以下は App Store からインストール</p>
+
+<ul>
+<li>Keynote</li>
+<li>Pages</li>
+<li>Xcode</li>
+<li>Byword</li>
+<li>Transmit</li>
+<li>Popclip</li>
+<li>Pixelmator</li>
+<li>Logic Pro</li>
+<li>WinArchiver Lite</li>
+</ul>
+
+<h2>Xcode 設定</h2>
+
+<ul>
+<li>起動すると License Agreement が表示されるので「Agree」をクリックするとコンポーネント（Command Line Tools など？）がインストールされる</li>
+</ul>
+
+<h2>Alfred 設定</h2>
+
+<ul>
+<li>「General」 → Launch After at Login」にチェック</li>
+<li>「General > Alfred Hotkey」 → 「Control + Shift + Space」</li>
+<li>「Features > Dictionary > Define a word」 → 「d」</li>
+</ul>
+
+<p>以下は要 Powerpack</p>
+
+<ul>
+<li>「Features > Clipboard > Clipboard History 」 → 「Keep Plain Text」にチェック</li>
+<li>「Features > Clipboard > Viewer Hotkey 」 → 「Control + Shift + Command + Space」</li>
+</ul>
+
+<h2>iTerm2 設定</h2>
+
+<ul>
+<li>「Profiles > Default > Window > Columns」 → 100</li>
+<li>「Profiles > Default > Window > Rows」 → 50</li>
+<li>「Profiles > Default > Window > Transparency」 → Transparent 側に10%くらい動かす</li>
+</ul>
+
+<h2>Git 設定</h2>
+
+<pre><code>$ git config --global user.name "Naoki Sekiguchi"
+$ git config --global user.email web@likealunatic.jp
+$ git config --global alias.st status
+$ git config --global alias.co checkout
+$ git config --global alias.ci commit
+$ git config --global core.excludesfile ~/.gitignore
+</code></pre>
+
+<p>GitHub と SSH 通信できるようにする。</p>
+
+<ul>
+<li><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">Generating a new SSH key and adding it to the ssh&#45;agent &#45; User Documentation</a></li>
+</ul>
+
+<pre><code>$ ssh-keygen -t rsa -b 4096 -C “web@likealunatic.jp”
+Enter file in which to save the key (/Users/naokis/.ssh/id_rsa): [空のまま Enter]
+Enter passphrase (empty for no passphrase): [空のまま Enter]
+Enter same passphrase again: [空のまま Enter]
+$ pbcopy &lt; ~/.ssh/id_rsa.pub
+</code></pre>
+
+<p>クリップボードに公開鍵の中身がコピーされた状態になるので、GitHub にアクセスして「Settings > SSH and GPG keys > New SSH key」と進んで内容をペーストし「Add SSH key」をクリック。</p>
+
+<p>接続をチェック。</p>
+
+<pre><code>$ ssh -T git@github.com
+</code></pre>
+
+<h2>Vim, Bash 設定</h2>
+
+<p>自分用の <a href="https://github.com/seckie/dotfiles">dotfiles レポジトリ</a>からごっそり設定を落とす。</p>
+
+<pre><code>$ git clone git@github.com:seckie/dotfiles.git ~/dotfiles
+$ ln -s ~/dotfiles/.vim ~/.vim
+$ ln -s ~/dotfiles/.vimrc ~/.vimrc
+$ ln -s ~/dotfiles/.gvimrc ~/.gvimrc
+$ ln -s ~/dotfiles/.gitignore ~/.gitignore
+$ ln -s ~/dotfiles/.bash_profile ~/.bash_profile
+</code></pre>
+
+<p>Vim プラグインを入れる</p>
+
+<pre><code>$ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh &gt; installer.sh
+$ sh ./installer.sh ~/dotfiles/.vim/dein
+</code></pre>
+
+<p>Vim を起動して以下を実行</p>
+
+<pre><code>:call dein#install()
+</code></pre>
+
+<p>フォントに <a href="http://vlgothic.dicey.org/download.html">VL ゴシック</a> を利用したいので、それもインストールしておく。</p>
+
+<h2>その他 CLI でインストールするもの</h2>
+
+<ul>
+<li><a href="https://brew.sh/index_ja.html">Homebrew</a></li>
+<li><a href="https://github.com/hokaccha/nodebrew">Nodebrew</a></li>
+</ul>
+
+<p>Node.js は Nodebrew からインストールする。
+とりあえず最新版を入れておく。</p>
+
+<pre><code>$ nodebrew ls-remote
+$ nodebrew install-binary v8.1.4
+$ nodebrew use v8.1.4
+</code></pre>
+
+<p>—</p>
+
+<p>初期設定は以上。あとは随時必要に応じて運用していく。</p>
+
+<p><a href="https://www.sketchapp.com/">Sketch</a> と <a href="https://www.apple.com/jp/logic-pro/">Logic Pro X</a> を購入したいところだが、タイミングを失っている状態。さてどうしようか。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[Mac/iPhone]壁紙アプリKuvvaとDeko</title>
+		<link>/2013/02/kuvva-deko</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 10 Feb 2013 03:35:40 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[iPhone]]></category>
+		<category><![CDATA[Mac]]></category>
+		<guid isPermaLink="false">/?p=973</guid>
+
+					<description><![CDATA[最近ハマっている壁紙アプリがあるのでご紹介。2つあります。 Kuvva KuvvaはMacとiPhone向けの壁紙アプリ。アプリとウェブサービスが連動しており、ウェブサービス側からアプリへと壁紙を配信する仕組み。ウェブサービスに無料のアカウント登録をすれば、「お気に入り(Favorites)」などの情報をMacとiPhoneで共有することができる。 iPhoneアプリやサイトからは、登録されているアーティストごとに作品の一覧を見ることができ「お気に入り」を管理できる。 もちろんMacアプリで直接「Add to favorites」も可能。 Deko DekoはiOS向け壁紙アプリ。特定のパターンから画像をジェネレートし、壁紙として保存したり、シェアしたりできる。 画面を左右にフリックするとパターンが変化するのだけど、速くフリックすると新しいパターンに、遅くフリックすると同じパターンで色違いになったりする。どういうルールで変化するのかいまいち分からないし、使いやすいとは言えないけど、独特のインターフェースだなあと。なにより、どういう画像ができるか分からないという偶然性が魅力的。 実際に壁紙にしてみると、こんな感じ。 アプリのダウンロードは無料だけど、高解像度で画像を保存するために1.99$のアドオンが必要。一度支払うだけでOK。 あとがき 気軽にアートに触れることができる、こういったアプリやウェブサービスが出てくるのは嬉しいですね。決して大衆向けとは言えないかもしれませんが、盛り上がって行くといいなあと思います。 ネタ元 仕事中でも気分転換！ 壁紙を定期的に自動で変更するアプリ『Kuvva』 : ライフハッカー［日本版］ Deko &#8211; Generative Wallpapers for iOS / @suprjohan]]></description>
+										<content:encoded><![CDATA[<p>最近ハマっている壁紙アプリがあるのでご紹介。2つあります。</p>
+
+<h3>Kuvva</h3>
+
+<p><a href="http://www.kuvva.com/" title="Kuvva wallpapers for iPhone and Mac">Kuvva</a>はMacとiPhone向けの壁紙アプリ。アプリとウェブサービスが連動しており、ウェブサービス側からアプリへと壁紙を配信する仕組み。ウェブサービスに無料のアカウント登録をすれば、「お気に入り(Favorites)」などの情報をMacとiPhoneで共有することができる。</p>
+
+<p>iPhoneアプリやサイトからは、登録されているアーティストごとに作品の一覧を見ることができ「お気に入り」を管理できる。</p>
+
+<p><a href="/wp-content/uploads/2013/02/kuvva-mac2.png"><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2013/02/kuvva-mac2-300x239.png" alt="Kuvva Website" width="300" height="239" class="alignnone size-medium wp-image-982" srcset="/wp-content/uploads/2013/02/kuvva-mac2-300x239.png 300w, /wp-content/uploads/2013/02/kuvva-mac2-1024x817.png 1024w, /wp-content/uploads/2013/02/kuvva-mac2-375x300.png 375w, /wp-content/uploads/2013/02/kuvva-mac2.png 1219w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>もちろんMacアプリで直接「Add to favorites」も可能。</p>
+
+<p><a href="/wp-content/uploads/2013/02/kuvva-mac.png"><img decoding="async" src="/wp-content/uploads/2013/02/kuvva-mac-300x187.png" alt="Kuvva for Mac" width="300" height="187" class="alignnone size-medium wp-image-979" srcset="/wp-content/uploads/2013/02/kuvva-mac-300x187.png 300w, /wp-content/uploads/2013/02/kuvva-mac-480x300.png 480w, /wp-content/uploads/2013/02/kuvva-mac.png 720w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<h3>Deko</h3>
+
+<p><a href="http://aerodeko.com/" title="Aero Deko">Deko</a>はiOS向け壁紙アプリ。特定のパターンから画像をジェネレートし、壁紙として保存したり、シェアしたりできる。</p>
+
+<p><a href="/wp-content/uploads/2013/02/deko1.png"><img decoding="async" src="/wp-content/uploads/2013/02/deko1-200x300.png" alt="deko1" width="200" height="300" class="alignnone size-medium wp-image-983" srcset="/wp-content/uploads/2013/02/deko1-200x300.png 200w, /wp-content/uploads/2013/02/deko1.png 640w" sizes="(max-width: 200px) 100vw, 200px" /></a></p>
+
+<p>画面を左右にフリックするとパターンが変化するのだけど、速くフリックすると新しいパターンに、遅くフリックすると同じパターンで色違いになったりする。どういうルールで変化するのかいまいち分からないし、使いやすいとは言えないけど、独特のインターフェースだなあと。なにより、どういう画像ができるか分からないという偶然性が魅力的。</p>
+
+<p><a href="/wp-content/uploads/2013/02/deko2.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/deko2-200x300.png" alt="deko2" width="200" height="300" class="alignnone size-medium wp-image-984" srcset="/wp-content/uploads/2013/02/deko2-200x300.png 200w, /wp-content/uploads/2013/02/deko2.png 640w" sizes="(max-width: 200px) 100vw, 200px" /></a></p>
+
+<p>実際に壁紙にしてみると、こんな感じ。</p>
+
+<p><a href="/wp-content/uploads/2013/02/deko3.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/deko3-200x300.png" alt="deko3" width="200" height="300" class="alignnone size-medium wp-image-985" srcset="/wp-content/uploads/2013/02/deko3-200x300.png 200w, /wp-content/uploads/2013/02/deko3.png 640w" sizes="(max-width: 200px) 100vw, 200px" /></a></p>
+
+<p>アプリのダウンロードは無料だけど、高解像度で画像を保存するために1.99$のアドオンが必要。一度支払うだけでOK。</p>
+
+<p><a href="/wp-content/uploads/2013/02/deko4.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/deko4-200x300.png" alt="deko4" width="200" height="300" class="alignnone size-medium wp-image-986" srcset="/wp-content/uploads/2013/02/deko4-200x300.png 200w, /wp-content/uploads/2013/02/deko4.png 640w" sizes="(max-width: 200px) 100vw, 200px" /></a></p>
+
+<h3>あとがき</h3>
+
+<p>気軽にアートに触れることができる、こういったアプリやウェブサービスが出てくるのは嬉しいですね。決して大衆向けとは言えないかもしれませんが、盛り上がって行くといいなあと思います。</p>
+
+<h4>ネタ元</h4>
+
+<ul>
+<li><a href="http://www.lifehacker.jp/2013/01/130118kuvva.html" title="仕事中でも気分転換！ 壁紙を定期的に自動で変更するアプリ『Kuvva』 : ライフハッカー［日本版］">仕事中でも気分転換！ 壁紙を定期的に自動で変更するアプリ『Kuvva』 : ライフハッカー［日本版］</a></li>
+<li><a href="http://www.creativeapplications.net/iphone/deko-generative-wallpapers-for-ios/" title="Deko - Generative Wallpapers for iOS / @suprjohan">Deko &#8211; Generative Wallpapers for iOS / @suprjohan</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>MacBookをチューニングした話</title>
+		<link>/2010/05/macbook</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sat, 08 May 2010 04:40:11 +0000</pubDate>
+				<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Mac]]></category>
+		<guid isPermaLink="false">/?p=646</guid>
+
+					<description><![CDATA[約2年半前に手に入れた初めてのMacが、今も愛用しているMacBookです。 VMWare FusionでWindowsを動かしたり、Adobe社の製品を動かしたり、と買った当時想定していたよりいつの間にかヘビーな使い方をするようになっていたので、かねてから性能には不満を感じるようになっていました。そこでGW中にいい加減に環境改善を行うことにしたわけです。 MacBookと言えば、ついこないだ新型が出たばかりなので、本当はMacBook Proに乗り換えるのがベストな選択でした。が、予算の関係で断念。 先月、Sugamo.vimに参加した際に@neotagさんにSnow Leopardへの乗り換えとメモリ増設を薦めていただきましたので、これを実行してみることにしました。 では今回の計画をば。 メモリを4GBに増設 HDDを500GB、7200rpmのものに換装 Snow Leopardのクリーンインストールして環境再構築 記憶媒体は本当はSSDのがいいに決まってるのですが、まだ高いしHDDにすることに。 メモリ交換については、説明書にやり方が書いてある程簡単にできることが判明。問題はHDDの換装です。 下調べをしてみると実際に交換したレポートが掲載されている記事がまぁ出るわ出るわ。参考になりまくりました。（※参考にさせていただいたサイト様は記事末尾にリンクを掲載します） まず、自分のMacBookの型番を調査。MB062J/Bという型であることが判明。 技術仕様: MacBook (2 Duo/13.3)(22 Duo/13.3)(2.2 Duo/13.3) アップル &#8211; サポート &#8211; 製品名一覧 で、上記の「技術仕様」によるとメモリは 1GB (2 x 512MB) 667MHz DDR2 SDRAM (PC2-5300)メモリ、最大4GBをサポート HDDは 120GBシリアルATA、5400rpm であるようです。さらに調べると、HDDは2.5インチサイズで、9.5mm厚以下のものである必要があることが分かりました。 そして、メモリとHDDを外すために精密ドライバーと、T8というサイズの「トルクスドライバー」が必要であることも判明。 さて、これで必要なものが全て分かりました。ではいざ、秋葉原へショッピングへ！ 何件かお店をウロウロとしたのですが、結果的に買い物をしたお店は以下です。Google Mapを張ります。 より大きな地図で 201005秋葉原買い物マップ を表示 ソフマップ 秋葉原Mac・クリエイターズ館でSnow Leopardを、秋葉館でメモリとトルクスドライバーを、クレバリーでHDDを、東京ラジオデパートで精密ドライバーを買いました。 結果的に、購入した製品は以下となりました。 Snow Leopard Transcend製メモリ DDR2-667 2GB ×2 Seagate製HDD ST9500420ASG 500GB キャッシュ16MB サンワサプライ製 T-9・8ドライバーセット 精密ドライバー3本セット 「トルクスドライバー」がスムーズに手に入るものかいささか不安だったのですが、秋葉館さんのレジ横でサンワサプライ製のものをあっさり発見。やっぱりMacでDIYやるのならこの手の工具が必要になるのは有名な話のようですねー。 HDDについては5400rpmから7200rpmのものに換えると発熱量が増えるのかなーと現地でふと気づき、店頭のその場でiPhoneでググってみると目立った問題は見つからないようだったので、7200rpmのHDDに問題なく決定。 ちなみにSeagate製のHDDには ST9500420AS っていうモデルも存在していて（最後に「G」がない）、「G」がつかない方がオプションなしの通常モデル。「G」の付く方が耐衝撃オプションの付いたモデルということです。具体的にどこが違うんだと店員さんに聞いてみたところ「公式な情報にも『衝撃に対して耐性がある』としか説明されていない」と言ってましたが、本当でしょうか・・・？（汗）両モデルの料金差は実売価格で2,000円程度。安心料の違いって感じでしょうか。 これで買い物は終了です。 では買ってきたメモリとHDDの換装に取りかかりましょう。 言うまでもないことですが、作業の前にHDDの内容はバックアップを取っておきましょう。環境をまるっと移す場合にはTime Machineを使ったりなんだりしてうまいやり方があるのかもしれませんが、今回はOSまで乗り換えてしまうので、必要データだけを外付けHDDにバックアップを取りました。 まずは当然MacBookの電源オフにして、電源は外します。 準備が整ったら、MacBookを裏返しにしてバッテリーを外します。10円玉を使って、裏側に付いている丸い溝をくるっと回せばバッテリーは外れます。 バッテリーが入っていた部分の側壁に金属のプレートがはまっていますので、これを外します。小さなプラスねじ3つでとまっているだけですので、これを精密ドライバーで外します。 これで金属のプレートが外れます。 さて、これからメモリを外すので金属のプレートを触って静電気を除去しておきましょう。お約束です（笑） メモリは右奥の二つのスロットにはまっています。そこから覗いているレバーを左に引っ張れば、メモリが外れます。 これを新しいメモリに差し替えます。メモリの装着は押し込むだけ。この時、切り欠きの方向を間違えないように要注意です。奥まで押し込むのには、結構力が要ります。私はMacBookを立てて上から力を加えて押し込みました。奥まで押し込んでも「カチッ」というクリック感はありませんでした。元通りの位置に納まり、戻ってこなければ装着できたって感じでしょうか。 次はHDDの交換です。 HDDは左手の壁にはまっています。白いぺろーんとした取っ手（？）がついていますので、これを引っ張るだけでHDDは外れます。一気に引き抜いてはいけません。くれぐれも少しずつ、そーっと引っ張りましょう。 ついていたHDDはSeagate製でした。 このHDDは特殊な＊型のネジ4本で、ステーに側面から固定されています。ここで例のトルクスドライバーT8の登場です。このネジ4本をトルクスドライバーで外します。 はい、見ての通りこのステー、ぺらっぺらです。誤って踏んづけでもしたらイチコロですのでご注意ください。このステーに新しいHDDをさっきのネジで取り付けます。 ステーに納めたHDDを本体に合体させる際に、注意しなくてはならないことがあります。これも下調べして分かったことなのですが、HDDの左側面にステーが乗るゴム製のレールがついており、HDDを取り付ける際にこれが剥がれて奥に押し込まれてしまうことがあるのだそう。こうなったら大変、剥がれたゴム製レールをどうにかして元に戻すしか道はないそうです。 参考サイト様での失敗談はHDDを裏返しに取り付けようとしたのが原因だったようですが・・・。 これこれ、HDDの横にわずかに見える黒いレールですね。これにHDDがちゃんと乗ってる手応えを感じつつ、そーっとちょっとずつHDDを挿入します。 はい、これでメモリもHDDも新しいものに差し替えられました。金属のプレートを元通り取り付けます。 バッテリーも元通り取り付ければ作業完了です。 あとはSnow LepardのインストールDVDを入れてMacBookを起動し、OSをインストールするだけ・・・と言いたいところですが、ここからは特に難しいことはないので記事には書きません。 ただ1点だけメモ。新しいHDDはまだフォーマットされていないので、OSインストールの際にディスク領域として認識されません。 この時に「ユーティリティ＞ディスクユーティリティ」メニューで出てくるウィンドウで、「消去」を行うことでHDDがフォーマットできます。 現時点で概ね環境はできたのですが、いやー作業前と比べ物にならないくらい快適なマシンになりました。とにかく、以前のもっさり感が軽減されました。メモリ4GBの恩恵がやっぱり大きいんでしょうかね。まだ酷使と言えるような状況では使っていませんが、7200rpmのHDDも熱や振動などといった問題は特に感じることなく動作しています。これでしばらくは自宅の環境は安泰ですわー。 いやまぁ実はまだ物欲は収まっておらず、自宅のWindowsXPデスクトップマシンをWindows7にしたかったりしますが・・・。 参考サイト様一覧 Apple公式のMacBook関連 技術仕様: MacBook (2 Duo/13.3)(22 Duo/13.3)(2.2 Duo/13.3) アップル &#8211; サポート &#8211; 製品名一覧 [PDF] MacBook &#8230; <a href="/2010/05/macbook">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/2007/11/04_macbook.php">約2年半前に手に入れた</a>初めてのMacが、今も愛用しているMacBookです。<br />
+VMWare FusionでWindowsを動かしたり、Adobe社の製品を動かしたり、と買った当時想定していたよりいつの間にかヘビーな使い方をするようになっていたので、かねてから性能には不満を感じるようになっていました。そこでGW中にいい加減に環境改善を行うことにしたわけです。</p>
+
+<p>MacBookと言えば、ついこないだ新型が出たばかりなので、本当はMacBook Proに乗り換えるのがベストな選択でした。が、予算の関係で断念。<br />
+先月、<a href="http://atnd.org/events/3545">Sugamo.vim</a>に参加した際に<a href="http://twitter.com/neotag">@neotag</a>さんにSnow Leopardへの乗り換えとメモリ増設を薦めていただきましたので、これを実行してみることにしました。</p>
+
+<p>では今回の計画をば。</p>
+
+<ul>
+<li>メモリを4GBに増設</li>
+<li>HDDを500GB、7200rpmのものに換装</li>
+<li>Snow Leopardのクリーンインストールして環境再構築</li>
+</ul>
+
+<p>記憶媒体は本当はSSDのがいいに決まってるのですが、<a href="http://twitter.com/likealunatic/status/12439748758">まだ高いし</a>HDDにすることに。</p>
+
+<p>メモリ交換については、説明書にやり方が書いてある程簡単にできることが判明。問題はHDDの換装です。<br />
+下調べをしてみると実際に交換したレポートが掲載されている記事がまぁ出るわ出るわ。参考になりまくりました。（※参考にさせていただいたサイト様は記事末尾にリンクを掲載します）</p>
+
+<p>まず、自分のMacBookの型番を調査。MB062J/Bという型であることが判明。</p>
+
+<ul class="ref">
+<li><a href="http://support.apple.com/kb/SP12?viewlocale=ja_JP">技術仕様:  MacBook (2 Duo/13.3)(22 Duo/13.3)(2.2 Duo/13.3)</a></li>
+<li><a href="http://www.apple.com/jp/support/list.html#macbook">アップル &#8211; サポート &#8211; 製品名一覧</a></li>
+</ul>
+
+<p>で、上記の「技術仕様」によるとメモリは <q>1GB (2 x 512MB) 667MHz DDR2 SDRAM (PC2-5300)メモリ、最大4GBをサポート</q> HDDは <q>120GBシリアルATA、5400rpm</q> であるようです。さらに調べると、HDDは2.5インチサイズで、9.5mm厚以下のものである必要があることが分かりました。</p>
+
+<p>そして、メモリとHDDを外すために精密ドライバーと、T8というサイズの「トルクスドライバー」が必要であることも判明。<br />
+さて、これで必要なものが全て分かりました。ではいざ、秋葉原へショッピングへ！</p>
+
+<p>何件かお店をウロウロとしたのですが、結果的に買い物をしたお店は以下です。Google Mapを張ります。</p>
+
+<p><iframe loading="lazy" width="500" height="375" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.jp/maps/ms?oe=utf-8&amp;hl=ja&amp;client=firefox-a&amp;ie=UTF8&amp;brcurrent=3,0x60188c1c2969d079:0xcbce389a6b190c21,0&amp;source=embed&amp;msa=0&amp;msid=113471310812981762724.000485da1a263b7f9bb4f&amp;ll=35.69993,139.77254&amp;spn=0.003267,0.005364&amp;z=17&amp;output=embed"></iframe><br /><small>より大きな地図で <a href="http://maps.google.co.jp/maps/ms?oe=utf-8&amp;hl=ja&amp;client=firefox-a&amp;ie=UTF8&amp;brcurrent=3,0x60188c1c2969d079:0xcbce389a6b190c21,0&amp;source=embed&amp;msa=0&amp;msid=113471310812981762724.000485da1a263b7f9bb4f&amp;ll=35.69993,139.77254&amp;spn=0.003267,0.005364&amp;z=17" style="color:#0000FF;text-align:left">201005秋葉原買い物マップ</a> を表示</small>
+</p>
+
+<p>ソフマップ 秋葉原Mac・クリエイターズ館でSnow Leopardを、秋葉館でメモリとトルクスドライバーを、クレバリーでHDDを、東京ラジオデパートで精密ドライバーを買いました。<br />
+結果的に、購入した製品は以下となりました。</p>
+
+<ul>
+<li>Snow Leopard</li>
+<li>Transcend製メモリ DDR2-667 2GB ×2</li>
+<li>Seagate製HDD ST9500420ASG 500GB キャッシュ16MB</li>
+<li>サンワサプライ製 T-9・8ドライバーセット</li>
+<li>精密ドライバー3本セット</li>
+</ul>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_01.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_01-300x225.jpg" alt="秋葉原で買い物したもの" title="秋葉原で買い物したもの" width="300" height="225" class="alignnone size-medium wp-image-651" srcset="/wp-content/uploads/2010/05/20100505_01-300x225.jpg 300w, /wp-content/uploads/2010/05/20100505_01.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>「トルクスドライバー」がスムーズに手に入るものかいささか不安だったのですが、秋葉館さんのレジ横でサンワサプライ製のものをあっさり発見。やっぱりMacでDIYやるのならこの手の工具が必要になるのは有名な話のようですねー。</p>
+
+<p>HDDについては5400rpmから7200rpmのものに換えると発熱量が増えるのかなーと現地でふと気づき、<a href="http://www.google.co.jp/search?hl=ja&amp;client=firefox-a&amp;rls=org.mozilla%3Aja-JP-mac%3Aofficial&amp;q=macbook+hdd%E4%BA%A4%E6%8F%9B+7200rpm+%E7%99%BA%E7%86%B1&amp;lr=&amp;aq=f&amp;aqi=&amp;aql=&amp;oq=&amp;gs_rfai=">店頭のその場でiPhoneでググってみると</a>目立った問題は見つからないようだったので、7200rpmのHDDに問題なく決定。<br />
+ちなみにSeagate製のHDDには ST9500420AS っていうモデルも存在していて（最後に「G」がない）、「G」がつかない方がオプションなしの通常モデル。「G」の付く方が耐衝撃オプションの付いたモデルということです。具体的にどこが違うんだと店員さんに聞いてみたところ「公式な情報にも『衝撃に対して耐性がある』としか説明されていない」と言ってましたが、本当でしょうか・・・？（汗）両モデルの料金差は実売価格で2,000円程度。安心料の違いって感じでしょうか。<br />
+これで買い物は終了です。</p>
+
+<p>では買ってきたメモリとHDDの換装に取りかかりましょう。<br />
+言うまでもないことですが、作業の前にHDDの内容はバックアップを取っておきましょう。環境をまるっと移す場合にはTime Machineを使ったりなんだりしてうまいやり方があるのかもしれませんが、今回はOSまで乗り換えてしまうので、必要データだけを外付けHDDにバックアップを取りました。</p>
+
+<p>まずは当然MacBookの電源オフにして、電源は外します。<br />
+準備が整ったら、MacBookを裏返しにしてバッテリーを外します。10円玉を使って、裏側に付いている丸い溝をくるっと回せばバッテリーは外れます。</p>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_02.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_02-300x225.jpg" alt="MacBookのバッテリーを取り外そうとしているところ" title="MacBookのバッテリーを取り外そうとしているところ" width="300" height="225" class="alignnone size-medium wp-image-652" srcset="/wp-content/uploads/2010/05/20100505_02-300x225.jpg 300w, /wp-content/uploads/2010/05/20100505_02.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_03.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_03-300x225.jpg" alt="MacBookのバッテリーを取り外したところ" title="MacBookのバッテリーを取り外したところ" width="300" height="225" class="alignnone size-medium wp-image-653" srcset="/wp-content/uploads/2010/05/20100505_03-300x225.jpg 300w, /wp-content/uploads/2010/05/20100505_03.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>バッテリーが入っていた部分の側壁に金属のプレートがはまっていますので、これを外します。小さなプラスねじ3つでとまっているだけですので、これを精密ドライバーで外します。</p>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_04.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_04-300x225.jpg" alt="バッテリーが収まっていたスペースの側壁を外そうとしているところ" title="バッテリーが収まっていたスペースの側壁を外そうとしているところ" width="300" height="225" class="alignnone size-medium wp-image-654" srcset="/wp-content/uploads/2010/05/20100505_04-300x225.jpg 300w, /wp-content/uploads/2010/05/20100505_04.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>これで金属のプレートが外れます。</p>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_05.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_05-300x225.jpg" alt="側壁が外れました" title="側壁が外れました" width="300" height="225" class="alignnone size-medium wp-image-655" srcset="/wp-content/uploads/2010/05/20100505_05-300x225.jpg 300w, /wp-content/uploads/2010/05/20100505_05.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>さて、これからメモリを外すので金属のプレートを触って静電気を除去しておきましょう。お約束です（笑）</p>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_06.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_06-300x225.jpg" alt="メモリに触る前に金属部にタッチして静電気を除去！" title="メモリに触る前に金属部にタッチして静電気を除去！" width="300" height="225" class="alignnone size-medium wp-image-656" srcset="/wp-content/uploads/2010/05/20100505_06-300x225.jpg 300w, /wp-content/uploads/2010/05/20100505_06.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>メモリは右奥の二つのスロットにはまっています。そこから覗いているレバーを左に引っ張れば、メモリが外れます。</p>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_07.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_07-300x225.jpg" alt="レバーをひっぱってメモリを外します" title="レバーをひっぱってメモリを外します" width="300" height="225" class="alignnone size-medium wp-image-657" srcset="/wp-content/uploads/2010/05/20100505_07-300x225.jpg 300w, /wp-content/uploads/2010/05/20100505_07.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_08.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_08-300x225.jpg" alt="メモリを外します" title="メモリを外します" width="300" height="225" class="alignnone size-medium wp-image-658" srcset="/wp-content/uploads/2010/05/20100505_08-300x225.jpg 300w, /wp-content/uploads/2010/05/20100505_08.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>これを新しいメモリに差し替えます。メモリの装着は押し込むだけ。この時、切り欠きの方向を間違えないように要注意です。奥まで押し込むのには、結構力が要ります。私はMacBookを立てて上から力を加えて押し込みました。奥まで押し込んでも「カチッ」というクリック感はありませんでした。元通りの位置に納まり、戻ってこなければ装着できたって感じでしょうか。</p>
+
+<p>次はHDDの交換です。<br />
+HDDは左手の壁にはまっています。白いぺろーんとした取っ手（？）がついていますので、これを引っ張るだけでHDDは外れます。一気に引き抜いてはいけません。くれぐれも少しずつ、そーっと引っ張りましょう。</p>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_09.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_09-300x225.jpg" alt="HDDを取り外します" title="HDDを取り外します" width="300" height="225" class="alignnone size-medium wp-image-659" srcset="/wp-content/uploads/2010/05/20100505_09-300x225.jpg 300w, /wp-content/uploads/2010/05/20100505_09.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_10.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_10-300x225.jpg" alt="慎重にHDDを引っ張りだします" title="慎重にHDDを引っ張りだします" width="300" height="225" class="alignnone size-medium wp-image-660" srcset="/wp-content/uploads/2010/05/20100505_10-300x225.jpg 300w, /wp-content/uploads/2010/05/20100505_10.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>ついていたHDDはSeagate製でした。</p>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_11.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_11-300x225.jpg" alt="純正HDDはSeagate製でした" title="純正HDDはSeagate製でした" width="300" height="225" class="alignnone size-medium wp-image-661" srcset="/wp-content/uploads/2010/05/20100505_11-300x225.jpg 300w, /wp-content/uploads/2010/05/20100505_11.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>このHDDは特殊な＊型のネジ4本で、ステーに側面から固定されています。ここで例のトルクスドライバーT8の登場です。このネジ4本をトルクスドライバーで外します。</p>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_12.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_12-300x225.jpg" alt="HDDは＊型ネジでステーに固定されてます" title="HDDは＊型ネジでステーに固定されてます" width="300" height="225" class="alignnone size-medium wp-image-662" srcset="/wp-content/uploads/2010/05/20100505_12-300x225.jpg 300w, /wp-content/uploads/2010/05/20100505_12.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>はい、見ての通りこのステー、ぺらっぺらです。誤って踏んづけでもしたらイチコロですのでご注意ください。このステーに新しいHDDをさっきのネジで取り付けます。</p>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_13.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_13-225x300.jpg" alt="HDDのステー。ぺらっぺら" title="HDDのステー。ぺらっぺら" width="225" height="300" class="alignnone size-medium wp-image-663" srcset="/wp-content/uploads/2010/05/20100505_13-225x300.jpg 225w, /wp-content/uploads/2010/05/20100505_13.jpg 480w" sizes="(max-width: 225px) 100vw, 225px" /></a></p>
+
+<p>ステーに納めたHDDを本体に合体させる際に、注意しなくてはならないことがあります。これも下調べして分かったことなのですが、HDDの左側面にステーが乗るゴム製のレールがついており、HDDを取り付ける際にこれが剥がれて奥に押し込まれてしまうことがあるのだそう。こうなったら大変、剥がれたゴム製レールをどうにかして元に戻すしか道はないそうです。<br />
+<span class="memo">参考サイト様での失敗談はHDDを裏返しに取り付けようとしたのが原因だったようですが・・・。</span></p>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_14.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_14-300x225.jpg" alt="HDDと本体設置面のレール" title="HDDと本体設置面のレール" width="300" height="225" class="alignnone size-medium wp-image-664" srcset="/wp-content/uploads/2010/05/20100505_14-300x225.jpg 300w, /wp-content/uploads/2010/05/20100505_14.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>これこれ、HDDの横にわずかに見える黒いレールですね。これにHDDがちゃんと乗ってる手応えを感じつつ、そーっとちょっとずつHDDを挿入します。</p>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_15-e1273294484591.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_15-300x225.jpg" alt="HDDが収まったところ" title="HDDが収まったところ" width="300" height="225" class="alignnone size-medium wp-image-665" /></a></p>
+
+<p>はい、これでメモリもHDDも新しいものに差し替えられました。金属のプレートを元通り取り付けます。</p>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_16.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_16-300x225.jpg" alt="金属プレートを元通りに取り付けます" title="金属プレートを元通りに取り付けます" width="300" height="225" class="alignnone size-medium wp-image-666" srcset="/wp-content/uploads/2010/05/20100505_16-300x225.jpg 300w, /wp-content/uploads/2010/05/20100505_16.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>バッテリーも元通り取り付ければ作業完了です。</p>
+
+<p>あとはSnow LepardのインストールDVDを入れてMacBookを起動し、OSをインストールするだけ・・・と言いたいところですが、ここからは特に難しいことはないので記事には書きません。</p>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_17.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_17-300x225.jpg" alt="Snow Leopardをインストール！" title="Snow Leopardをインストール！" width="300" height="225" class="alignnone size-medium wp-image-667" srcset="/wp-content/uploads/2010/05/20100505_17-300x225.jpg 300w, /wp-content/uploads/2010/05/20100505_17.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>ただ1点だけメモ。新しいHDDはまだフォーマットされていないので、OSインストールの際にディスク領域として認識されません。</p>
+
+<p><a href="/wp-content/uploads/2010/05/20100505_18.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/05/20100505_18-300x225.jpg" alt="HDDをまずフォーマットしましょうね" title="HDDをまずフォーマットしましょうね" width="300" height="225" class="alignnone size-medium wp-image-668" srcset="/wp-content/uploads/2010/05/20100505_18-300x225.jpg 300w, /wp-content/uploads/2010/05/20100505_18.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>この時に「ユーティリティ＞ディスクユーティリティ」メニューで出てくるウィンドウで、「消去」を行うことでHDDがフォーマットできます。</p>
+
+<p>現時点で概ね環境はできたのですが、いやー作業前と比べ物にならないくらい快適なマシンになりました。とにかく、以前のもっさり感が軽減されました。メモリ4GBの恩恵がやっぱり大きいんでしょうかね。まだ酷使と言えるような状況では使っていませんが、7200rpmのHDDも熱や振動などといった問題は特に感じることなく動作しています。これでしばらくは自宅の環境は安泰ですわー。</p>
+
+<p>いやまぁ実はまだ物欲は収まっておらず、自宅のWindowsXPデスクトップマシンをWindows7にしたかったりしますが・・・。</p>
+
+<div class="section">
+<h3>参考サイト様一覧</h3>
+<dl>
+<dt>Apple公式のMacBook関連</dt>
+<dd><a href="http://support.apple.com/kb/SP12?viewlocale=ja_JP">技術仕様: MacBook (2 Duo/13.3)(22 Duo/13.3)(2.2 Duo/13.3)</a></dd>
+<dd><a href="http://www.apple.com/jp/support/list.html#macbook">アップル &#8211; サポート &#8211; 製品名一覧</a></dd>
+<dd><a href="http://manuals.info.apple.com/ja_JP/MacBook_13inch_Memory_DIY.pdf">[PDF] MacBook (13 インチ) メモリ (DIMM) 交換 手順</a></dd>
+<dd><a href="http://manuals.info.apple.com/ja_JP/MacBook_13inch_HardDrive_DIY.pdf">[PDF] MacBook (13 インチ) ハードドライブ 交換 手順</a></dd>
+
+<dt>HDD交換関連</dt>
+<dd><a href="http://w21sa.exblog.jp/6909841/">NISHISAITAMA PROJECT : ＊な頭のドライバーなんてもってねーよ！　というかMacBookのHDD交換日記</a></dd>
+<dd><a href="http://hyper-text.org/archives/2008/09/macbook_hdd_change.shtml">MacBook の HDD を交換 | WWW WATCH</a></dd>
+<dd><a href="http://chalow.net/2009-02-11-3.html">[を] MacBook の HDD を交換した話</a></dd>
+<dd><a href="http://telnet.blog.so-net.ne.jp/2008-09-27">MacBook HD交換：くもり のち ひとりごと.：So-netブログ</a></dd>
+<dd><a href="http://www.portalshit.net/article.php?id=908">portal shit! : 本当は恐ろしいMacBookのHDD換装</a></dd>
+
+<dt>7200rpm HDDの発熱関連</dt>
+<dd><a href="http://www.google.co.jp/search?hl=ja&#038;client=firefox-a&#038;rls=org.mozilla%3Aja-JP-mac%3Aofficial&#038;q=macbook+hdd%E4%BA%A4%E6%8F%9B+7200rpm+%E7%99%BA%E7%86%B1&#038;lr=&#038;aq=f&#038;aqi=&#038;aql=&#038;oq=&#038;gs_rfai=">macbook hdd交換 7200rpm 発熱 &#8211; Google 検索</a></dd>
+<dd><a href="http://e-kumo.air-nifty.com/heko/2009/09/macbookhdd-f442.html">MacbookのHDD交換＆雪豹を入れてみた！: そのうちなんとかなるだろう</a></dd>
+<dd><a href="http://ipod.item-get.com/2008/12/macbook7200rpmhdd.php">MacBookを7200rpmのHDDに交換 &#8211; iPod LOVE</a></dd>
+
+<dt>Seagate製HDDの型番関連</dt>
+<dd><a href="http://bbs.kakaku.com/bbs/K0000018053/#10420760">ST9500420AS とST9500420ASGの違いは？ &#8211; 価格.com &#8211;  SEAGATE ST9500420ASG (500GB 9.5mm) のクチコミ掲示板</a></dd>
+</dl>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Unicodeでのバックスラッシュと&#165;の違い</title>
+		<link>/2008/01/10_unicode</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 10 Jan 2008 03:00:43 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Mac]]></category>
+		<category><![CDATA[Unicode]]></category>
+		<guid isPermaLink="false">/wptest/2008/01/unicode%e3%81%a7%e3%81%ae%e3%83%90%e3%83%83%e3%82%af%e3%82%b9%e3%83%a9%e3%83%83%e3%82%b7%e3%83%a5%e3%81%a8%e3%81%ae%e9%81%95%e3%81%84.php</guid>
+
+					<description><![CDATA[Mac環境のUTF-8では、バックスラッシュは&#165;マークとは違う扱いになる。
+Unicodeで書く場合、Windows環境だと\はバックスラッシュに変換されるが、Mac環境では変換されず、&#165;は&#165;マークとして扱われる。
+Osakaフォントなどで表示していると、&#165;マークもバックスラッシュも同じ「&#165;」表示になるため、見分けがつかない。（「Courier」フォントなどで表示すると見分けがつく）
+Mac環境でバックスラッシュを入力するには、日本語入力の状態で「Option + &#165;」。 <a href="/2008/01/10_unicode">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>とても恥ずかしいのですが、今さらバックスラッシュと&yen;の違いを身をもって体験しました。MacIE対策でバックスラッシュハックを使おうとして、ハマってしまったのです。</p>
+
+<p>調べてみると、色々なことが分かりました。</p>
+
+<ul class="disclist">
+<li>Mac環境のUTF-8では、バックスラッシュは&yen;とは違う扱いになる。</li>
+<li>Unicodeで書く場合、Windows環境だと&yen;はバックスラッシュに変換されるが、Mac環境では変換されず、&yen;は&yen;マークとして扱われる。</li>
+<li>Osakaフォントなどで表示していると、&yen;もバックスラッシュも同じ「&yen;」表示になるため、見分けがつかない。（「Courier」フォントなどで表示すると見分けがつく）</li>
+<li>Mac環境でバックスラッシュを入力するには、日本語入力の状態で「Option + &yen;」。</li>
+</ul>
+
+<p>Mac環境でバックスラッシュだと思って&yen;を入力しておくと、バックスラッシュハックなんかが効かなくなります。UTF-8でサイトを作っている時は要注意ですね。。</p>
+
+<p>ちなみにHTML文書で&yen;を表示させたい場合は実態参照で<code>&amp;yen;</code>です。</p>
+
+<dl class="disclist">
+<dt>参考</dt>
+<dd><a href="http://www.smallmake.com/note/2007/10/utf8.html">UTF-8のバックスラッシュは&yen;ではない (kakitomeru note)</a></dd>
+<dd><a href="http://www.kadoyan.com/item/236">バックスラッシュ問題@MacOSX＠KADOYAN.com</a></dd>
+<dd><a href="http://hbworks.jp/contents/lab/memo/index.html#d060902">Dreamweaver8ハマりどころ 06.09.01 &#8211; Memo：hbworks</a></dd>
+<dd><a href="http://ja.wikipedia.org/wiki/%EF%BF%A5%E8%A8%98%E5%8F%B7">円記号 &#8211; Wikipedia</a></dd>
+<dd><a href="http://ja.wikipedia.org/wiki/%E3%83%90%E3%83%83%E3%82%AF%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5">バックスラッシュ &#8211; Wikipedia</a></dd>
+<dd><a href="http://ja.wikipedia.org/wiki/Unicode#.E6.97.A5.E6.9C.AC.E8.AA.9E.E7.92.B0.E5.A2.83.E3.81.A7.E3.81.AEUnicode.E3.81.AE.E8.AB.B8.E5.95.8F.E9.A1.8C">日本語環境でのUnicodeの諸問題 | Unicode &#8211; Wikipedia</a></dd>
+</dl>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>文字化けしたMP3タグ情報（ID3タグ）の直し方</title>
+		<link>/2007/11/18_itunes01</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 18 Nov 2007 13:21:51 +0000</pubDate>
+				<category><![CDATA[LifeHack]]></category>
+		<category><![CDATA[iTunes]]></category>
+		<category><![CDATA[Mac]]></category>
+		<guid isPermaLink="false">/wptest/2007/11/%e6%96%87%e5%ad%97%e5%8c%96%e3%81%91%e3%81%97%e3%81%9fmp3%e3%82%bf%e3%82%b0%e6%83%85%e5%a0%b1%ef%bc%88id3%e3%82%bf%e3%82%b0%ef%bc%89%e3%81%ae%e7%9b%b4%e3%81%97%e6%96%b9.php</guid>
+
+					<description><![CDATA[いろいろ一段落して、ようやくMacBookへの環境移行を本格的に進めています。 そんな中で起こった問題がiTunesライブラリの文字化け。 Windows環境でエンコードしたMP3をMacにコピーすると、ID3タグが文字化けを起こしてしまいます。 こりゃどっかで聞いたことある現象だなぁ?と思い、ググったら、やっぱりそんな記事がありました。 ライブラリのリストで該当の曲を選び、右クリック（Ctrl＋クリック）して「ID3タグを変換&#8230;」を選択。 「文字列を変換」にチェックし、「ASCIIからISO Latin-1へ」を選択して「OK」。 この通り、直りました。 もしかしてこれって全部手動でタグ情報を打ち直しなのか・・・とか思っていただけに、ホント助かりました。。]]></description>
+										<content:encoded><![CDATA[<p>いろいろ一段落して、ようやくMacBookへの環境移行を本格的に進めています。<br />
+そんな中で起こった問題がiTunesライブラリの文字化け。<br />
+Windows環境でエンコードしたMP3をMacにコピーすると、ID3タグが文字化けを起こしてしまいます。</p>
+
+<p>こりゃどっかで聞いたことある現象だなぁ?と思い、ググったら、<a href="http://osx-navi.main.jp/music/iTunes_tips.html">やっぱりそんな記事がありました</a>。</p>
+
+<p>ライブラリのリストで該当の曲を選び、右クリック（Ctrl＋クリック）して「ID3タグを変換&#8230;」を選択。</p>
+
+<p><img loading="lazy" decoding="async" src="/img/2007/11/18_itunes01.gif" alt="iTunes スクリーンショット1" width="450" height="220" /></p>
+
+<p>「文字列を変換」にチェックし、「ASCIIからISO Latin-1へ」を選択して「OK」。</p>
+
+<p><img loading="lazy" decoding="async" src="/img/2007/11/18_itunes02.gif" alt="iTunes スクリーンショット2" width="450" height="240" /></p>
+
+<p>この通り、直りました。</p>
+
+<p><img loading="lazy" decoding="async" src="/img/2007/11/18_itunes03.gif" alt="iTunes スクリーンショット3" width="450" height="210" /></p>
+
+<p>もしかしてこれって全部手動でタグ情報を打ち直しなのか・・・とか思っていただけに、ホント助かりました。。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

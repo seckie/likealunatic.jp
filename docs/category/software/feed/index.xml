@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Software &#8211; Like@Lunatic</title>
+	<atom:link href="/category/software/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:04 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Software &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Maxのドキュメントを読む その1 (Javascript in Max 01 &#8211; Basic Techniques)</title>
+		<link>/2014/04/jsinmax01</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Sat, 19 Apr 2014 13:24:38 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Max]]></category>
+		<guid isPermaLink="false">/?p=1069</guid>
+
+					<description><![CDATA[最近 Max というビジュアルプログラミング言語を学んでいる。js / jsui オブジェクトというのがあり、その中で JavaScript が書ける、ということでドキュメントを読んでいる。 正直流行っていない言語なので情報が少なく、とにかく公式ドキュメントを読むしかないのである。 読んだドキュメントを備忘録的にエントリーしておく。その第1弾。 注意事項 JavaScriptファイルを更新した場合、MAXパッチを開き直さないと変更が反映されない Arguments Document js オブジェクトに渡した引数は JavaScript 内では jsarguments[] 配列で参照できる。 jsarguments[0] => ファイル名 (required) jsarguments[1] 以降 => その他の引数 (optional) ということになる。 Test Code function bang() { post(jsarguments[0], jsarguments[1], jsarguments[2], jsarguments[3]); } How Input to the js Object is Handled Document js オブジェクトの inlet に foo 1 2 3 というメッセージを送った場合、グローバルスコープの foo() 関数を引数 1,2,3 と共に実行するということになる。 Test Code function foo(a, b, c) { post(a, b, c); } なお、グローバルスコープは jsthis オブジェクト（ブラウザ JavaScript でいう window オブジェクト）とドキュメントには書いてあるが、jsthisオブジェクトを呼び 出そうとしてもMAXウィンドウに Javascript ReferenceErrod: jsthis is not defined と出て怒られる。なんだこれは。 一方、一般的な this オブジェクトは機能している。 function foo() { } post(this.foo === foo); // 1 (true) Special Function Names Document msg_int, msg_float Document inlet に &#8230; <a href="/2014/04/jsinmax01">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>最近 <a href="http://cycling74.com/products/max/">Max</a> というビジュアルプログラミング言語を学んでいる。<code>js</code> / <code>jsui</code> オブジェクトというのがあり、その中で JavaScript が書ける、ということでドキュメントを読んでいる。
+正直流行っていない言語なので情報が少なく、とにかく公式ドキュメントを読むしかないのである。</p>
+
+<p>読んだドキュメントを備忘録的にエントリーしておく。その第1弾。</p>
+
+<hr />
+
+<h2>注意事項</h2>
+
+<ul>
+<li>JavaScriptファイルを更新した場合、MAXパッチを開き直さないと変更が反映されない</li>
+</ul>
+
+<hr />
+
+<h2 id="argumetns">Arguments</h2>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#Arguments">Document</a></p>
+
+<p>js オブジェクトに渡した引数は JavaScript 内では jsarguments[] 配列で参照できる。</p>
+
+<ul>
+<li>jsarguments[0] => ファイル名 (required)</li>
+<li>jsarguments[1] 以降 => その他の引数 (optional)</li>
+</ul>
+
+<p>ということになる。</p>
+
+<h3>Test Code</h3>
+
+<pre><code>function bang() {
+  post(jsarguments[0], jsarguments[1], jsarguments[2], jsarguments[3]);
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss01.png"><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2014/04/ss01.png" alt="Arguments test" width="700" height="430" class="alignnone size-full wp-image-1098" srcset="/wp-content/uploads/2014/04/ss01.png 700w, /wp-content/uploads/2014/04/ss01-300x184.png 300w, /wp-content/uploads/2014/04/ss01-488x300.png 488w" sizes="(max-width: 700px) 100vw, 700px" /></a></p>
+
+<hr />
+
+<h2 id="howinputtothejsobjectishandled">How Input to the js Object is Handled</h2>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#How_Input_to_the_js_Object_is_Handled">Document</a></p>
+
+<p>js オブジェクトの inlet に <code>foo 1 2 3</code> というメッセージを送った場合、グローバルスコープの foo() 関数を引数 1,2,3 と共に実行するということになる。</p>
+
+<h3>Test Code</h3>
+
+<pre><code>function foo(a, b, c) {
+  post(a, b, c);
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss02.png"><img decoding="async" src="/wp-content/uploads/2014/04/ss02.png" alt="How Input to the js Object is Handled" width="692" height="429" class="alignnone size-full wp-image-1100" srcset="/wp-content/uploads/2014/04/ss02.png 692w, /wp-content/uploads/2014/04/ss02-300x185.png 300w, /wp-content/uploads/2014/04/ss02-483x300.png 483w" sizes="(max-width: 692px) 100vw, 692px" /></a></p>
+
+<p>なお、グローバルスコープは <code>jsthis</code> オブジェクト（ブラウザ JavaScript でいう
+window オブジェクト）とドキュメントには書いてあるが、jsthisオブジェクトを呼び
+出そうとしてもMAXウィンドウに <code>Javascript ReferenceErrod: jsthis is not defined</code> と出て怒られる。なんだこれは。
+一方、一般的な this オブジェクトは機能している。</p>
+
+<pre><code>function foo() { }
+post(this.foo === foo); // 1 (true)
+</code></pre>
+
+<hr />
+
+<h2 id="specialfunctionnames">Special Function Names</h2>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#Special_Function_Names">Document</a></p>
+
+<h3 id="msg_intmsg_float">msg_int, msg_float</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#msg_int.2C_msg_float">Document</a></p>
+
+<p>inlet に int が入力されると <code>msg_int()</code> が呼ばれる。inlet に float が入力されると <code>msg_float()</code> が呼ばれる。<code>msg_float()</code> が未定義の場合、 <code>msg_int()</code> が代用で呼ばれるが、少数点以下は切り飛ばされる。
+なお <code>msg_float()</code> は少数点第3位以下を受け取ることができない。</p>
+
+<h4>Test Code 1</h4>
+
+<pre><code>function msg_int(a) { // a == 1
+  post(a); // 1
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss03-1.png"><img decoding="async" src="/wp-content/uploads/2014/04/ss03-1.png" alt="msg_int" width="884" height="431" class="alignnone size-full wp-image-1101" srcset="/wp-content/uploads/2014/04/ss03-1.png 884w, /wp-content/uploads/2014/04/ss03-1-300x146.png 300w, /wp-content/uploads/2014/04/ss03-1-500x243.png 500w" sizes="(max-width: 884px) 100vw, 884px" /></a></p>
+
+<h4>Test Code 2</h4>
+
+<pre><code>function msg_int(a) { // a == 1
+  post(a); // 1
+}
+function msg_float(a) { // a == 1.23456
+  post(a); // 1.23
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss03-2.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-2.png" alt="msg_float" width="876" height="423" class="alignnone size-full wp-image-1103" srcset="/wp-content/uploads/2014/04/ss03-2.png 876w, /wp-content/uploads/2014/04/ss03-2-300x144.png 300w, /wp-content/uploads/2014/04/ss03-2-500x241.png 500w" sizes="(max-width: 876px) 100vw, 876px" /></a></p>
+
+<hr />
+
+<h3 id="list">list</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#list">Document</a></p>
+
+<p>inlet に最初の値が int もしくは float の list が入力されると <code>list()</code> が呼ばれる。
+<a href="#howinputtothejsobjectishandled">上記の例</a>のように最初の値が String の list はその String 名の関数が呼ばれる。</p>
+
+<h4>Test Code 1</h4>
+
+<pre><code>function list(a, b, c) { // a == 1, b == 2, c == hoge
+  post(a, b, c); // 1 2 hoge
+  post(arguments.length); // 3
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss03-3.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-3.png" alt="list" width="870" height="418" class="alignnone size-full wp-image-1104" srcset="/wp-content/uploads/2014/04/ss03-3.png 870w, /wp-content/uploads/2014/04/ss03-3-300x144.png 300w, /wp-content/uploads/2014/04/ss03-3-500x240.png 500w" sizes="(max-width: 870px) 100vw, 870px" /></a></p>
+
+<hr />
+
+<h3 id="anything">anything</h3>
+
+<p>inlet に入力されたものに該当する function が定義されていなかった場合、<code>anything()</code> で受け取ることができる。例えば int が入力されたときに <code>msg_int()</code> が未定義だったら <code>anything()</code> が呼ばれる。float や list でも同様。<br />
+<code>anything()</code> 内部では <code>messagename</code> と <code>inlet</code> 変数が定義されており、それぞれ inlet に入ったメッセージの種類と、inlet 番号を参照できる。</p>
+
+<h4>Test Code 1</h4>
+
+<pre><code>function anything(a, b, c) { // a == 1, b == 2, c == hoge
+  post("messagename", messagename); // messagename list
+  post("inlet", inlet); // inlet 0
+  post("anything", a, b, c); // anything 1 2 hoge
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss03-4.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-4.png" alt="anything" width="869" height="420" class="alignnone size-full wp-image-1105" srcset="/wp-content/uploads/2014/04/ss03-4.png 869w, /wp-content/uploads/2014/04/ss03-4-300x144.png 300w, /wp-content/uploads/2014/04/ss03-4-500x241.png 500w" sizes="(max-width: 869px) 100vw, 869px" /></a></p>
+
+<hr />
+
+<h3 id="loadbang">loadbang</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#loadbang">Document</a></p>
+
+<p><code>loadbang()</code> はパッチ起動時に呼ばれる。<code>js</code> オブジェクトや <code>jsui</code> オブジェクトを追加した時ではなく、あくまでそれを予め含むパッチ起動時に呼ばれることに注意。<br />
+<a href="http://cycling74.com/wiki/index.php?title=loadbang#loadbang_Tips_and_Workarounds">Cmd+Shiftを押しながらパッチを起動すると loadbang を無効化できる</a>が、無効になっているかどうかは <code>max.loadbangdisabled</code> プロパティに 1 が入っているかどうかで分かる。</p>
+
+<h4>Test Code 1</h4>
+
+<pre><code>function loadbang() {
+  if (max.loadbangdisabled == 1) {
+    post("no loadbang");
+  } else {
+    post("loadbang!");
+  }
+}
+function bang() {
+  post("bang!");
+}
+</code></pre>
+
+<p>普通にパッチを起動した場合<br />
+<a href="/wp-content/uploads/2014/04/ss03-5.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-5.png" alt="loadbang" width="869" height="419" class="alignnone size-full wp-image-1106" srcset="/wp-content/uploads/2014/04/ss03-5.png 869w, /wp-content/uploads/2014/04/ss03-5-300x144.png 300w, /wp-content/uploads/2014/04/ss03-5-500x241.png 500w" sizes="(max-width: 869px) 100vw, 869px" /></a></p>
+
+<p>Cmd+Shiftを押しながらパッチを起動した場合<br />
+<a href="/wp-content/uploads/2014/04/ss03-6.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-6.png" alt="noloadbang" width="873" height="418" class="alignnone size-full wp-image-1108" srcset="/wp-content/uploads/2014/04/ss03-6.png 873w, /wp-content/uploads/2014/04/ss03-6-300x143.png 300w, /wp-content/uploads/2014/04/ss03-6-500x239.png 500w" sizes="(max-width: 873px) 100vw, 873px" /></a></p>
+
+<hr />
+
+<h3 id="getvalueof">getvalueof</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#getvalueof">Document</a></p>
+
+<p>JavaScript 内で定義した変数の値（String か Number）を <code>pattr</code> 関連オブジェクトから呼び出せるようにする関数。
+→ pattr オブジェクトのことがよく分からないので、テストコードが書けない。後で復習する。</p>
+
+<hr />
+
+<h3 id="setvalueof">setvalueof</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#setvalueof">Document</a></p>
+
+<p><code>pattr</code> 関連オブジェクトから JavaScript 内に変数（Number か String）をパスできるインターフェースを提供する関数。
+value が複数の場合、<code>jsthis</code> オブジェクトの <code>arrayfromargs()</code> メソッドで引数を扱うと良いとのこと。<br />
+→ pattr オブジェクトのことがよく分からないので、テストコードが書けない。後で復習する。</p>
+
+<hr />
+
+<h3 id="save">save</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#save">Document</a></p>
+
+<p><code>save()</code> を定義すると、JavaScript 内の状態をパッチに保持することができる。
+パッチが再読み込みされると、JavaScript 内の状態が復元される。</p>
+
+<p><code>save()</code> 内だけで使える <code>embedmessage()</code> を使い、値を保存する。</p>
+
+<ul>
+<li><code>embedmessage()</code> の第1引数には保存された値を渡したいコールバック関数名を文字列で渡す</li>
+<li><code>embedmessage()</code> の第2引数以降には保存したい値を渡し、これがコールバック関数の引数に渡される</li>
+</ul>
+
+<h4>Test Code 1</h4>
+
+<pre><code>var valuetosave = 0;
+function foo(v) {
+  valuetosave = v;
+}
+function save() {
+  embedmessage("callback", valuetosave);
+}
+function callback(v) {
+  valuetosave = v;
+  post(v);
+}
+</code></pre>
+
+<p><code>foo 1</code> メッセージを送ったあと、パッチを再起動した場合<br />
+<a href="/wp-content/uploads/2014/04/ss03-9-1.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-9-1.png" alt="save" width="873" height="419" class="alignnone size-full wp-image-1109" srcset="/wp-content/uploads/2014/04/ss03-9-1.png 873w, /wp-content/uploads/2014/04/ss03-9-1-300x143.png 300w, /wp-content/uploads/2014/04/ss03-9-1-500x239.png 500w" sizes="(max-width: 873px) 100vw, 873px" /></a></p>
+
+<p><code>foo 2</code> メッセージを送ったあと、パッチを再起動した場合<br />
+<a href="/wp-content/uploads/2014/04/ss03-9-21.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-9-21.png" alt="save" width="873" height="417" class="alignnone size-full wp-image-1112" srcset="/wp-content/uploads/2014/04/ss03-9-21.png 873w, /wp-content/uploads/2014/04/ss03-9-21-300x143.png 300w, /wp-content/uploads/2014/04/ss03-9-21-500x238.png 500w" sizes="(max-width: 873px) 100vw, 873px" /></a></p>
+
+<hr />
+
+<h3 id="notifydeleted">notifydeleted</h3>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#notifydeleted">Document</a></p>
+
+<p><code>js</code> オブジェクトが削除されたときに呼ばれる</p>
+
+<h4>Test Code 1</h4>
+
+<pre><code>function notifydeleted() {
+  post('js object was deleted.');
+}
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss03-10.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss03-10.png" alt="notifydeleted" width="866" height="420" class="alignnone size-full wp-image-1113" srcset="/wp-content/uploads/2014/04/ss03-10.png 866w, /wp-content/uploads/2014/04/ss03-10-300x145.png 300w, /wp-content/uploads/2014/04/ss03-10-500x242.png 500w" sizes="(max-width: 866px) 100vw, 866px" /></a></p>
+
+<hr />
+
+<h2 id="Global_Code">Global Code</h2>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#Global_Code">Document</a></p>
+
+<p>グローバルスコープに書かれたコードは編集された後、スクリプトがロードされるかコンパイルされたタイミングで評価される。
+<code>js</code> / <code>jsui</code> オブジェクトが完全に作られる前に評価される。
+js オブジェクトがいくつ inlet / outlet を持つかはグローバルコードからは分からない。これはグローバルコードから inlet / outlet をいくつにするか定義できることを意味する。しかし言い換えれば、まだ outlet が存在しなければ、使うことはできない。
+初期化処理を書きたい場合は <code>loadbang()</code> の中に書くべし。</p>
+
+<h3>グローバルコードでやるべきこと</h3>
+
+<ul>
+<li>inlet / outlet の数を定義する</li>
+<li><code>jsarguments[]</code> プロパティ（<code>js</code> オブジェクトの引数）にアクセスする</li>
+<li>inlet / outlet の値の操作</li>
+<li>グローバル変数の定義と初期化</li>
+<li>グローバルアプリケーション環境にアクセス＆操作するため、Max オブジェクトを使う</li>
+</ul>
+
+<h3>グローバルコードでやるべきでないこと</h3>
+
+<ul>
+<li>outlet から何か出力すること</li>
+<li><code>js</code> オブジェクトが置かれたパッチ側を参照しようとすること</li>
+</ul>
+
+<hr />
+
+<h2 id="Private_28Local29_Functions">Private (Local) Function</h2>
+
+<p><a href="http://cycling74.com/wiki/index.php?title=Javascript_in_Max_01_-_Basic_Techniques#Private_.28Local.29_Functions">Document</a></p>
+
+<p><code>js</code> オブジェクトへの inlet メッセージから参照されたくないローカル関数を作りたい場合、<code>local</code> プロパティに <code>1</code> をセットする。</p>
+
+<h3>Test Code 1</h3>
+
+<pre><code>function foo() {
+  post("Welcome to 'foo' method!");
+}
+foo.local = 1;
+</code></pre>
+
+<p><a href="/wp-content/uploads/2014/04/ss05.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2014/04/ss05.png" alt="private function" width="875" height="422" class="alignnone size-full wp-image-1114" srcset="/wp-content/uploads/2014/04/ss05.png 875w, /wp-content/uploads/2014/04/ss05-300x144.png 300w, /wp-content/uploads/2014/04/ss05-500x241.png 500w" sizes="(max-width: 875px) 100vw, 875px" /></a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Max や Pure Data / DAW(Logic Pro) 間でMIDI信号をやり取りするために</title>
+		<link>/2014/03/max-daw-midi</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Mon, 31 Mar 2014 05:51:21 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[midi]]></category>
+		<guid isPermaLink="false">/?p=1060</guid>
+
+					<description><![CDATA[Mac OS 設定のメモ Application>Utilities>Audio MIDI設定.app ウィンドウ＞MIDIウィンドウ IACドライバをダブルクリック＞装置はオンライン にチェック]]></description>
+										<content:encoded><![CDATA[<p>Mac OS 設定のメモ</p>
+
+<h2>Application>Utilities>Audio MIDI設定.app</h2>
+
+<ul>
+<li>ウィンドウ＞MIDIウィンドウ</li>
+<li>IACドライバをダブルクリック＞装置はオンライン にチェック</li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Mac OS / iPhone TouchOSC 間でアドホック通信するためのメモ</title>
+		<link>/2014/03/touchosc-adhoc</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Mon, 31 Mar 2014 05:46:16 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[network]]></category>
+		<category><![CDATA[osc]]></category>
+		<guid isPermaLink="false">/?p=1057</guid>
+
+					<description><![CDATA[MacOS 設定 共有＞インターネット共有 共有する接続経路: (ウチの環境だと) Display Ethernet 相手のコンピュータが使用するポート: Wi-Fi Wi-Fiオプション: ネットワーク名、パスワードは適当に ネットワーク＞Wi-Fi ネットワークを作成 先述のWi-Fiオプションで設定したものと同じものを設定 自己割当IP が出るのでメモっておく iPhone 設定 設定＞Wi-Fi＞デバイス さっきのネットワークがあるので接続 TouchOSC＞Settings MacOS側の自己割当IP、ポート番号を入力]]></description>
+										<content:encoded><![CDATA[<h2>MacOS 設定</h2>
+
+<h3>共有＞インターネット共有</h3>
+
+<ul>
+<li>共有する接続経路: (ウチの環境だと) Display Ethernet</li>
+<li>相手のコンピュータが使用するポート: Wi-Fi</li>
+<li>Wi-Fiオプション: ネットワーク名、パスワードは適当に</li>
+</ul>
+
+<h3>ネットワーク＞Wi-Fi</h3>
+
+<ul>
+<li>ネットワークを作成</li>
+<li>先述のWi-Fiオプションで設定したものと同じものを設定</li>
+<li>自己割当IP が出るのでメモっておく</li>
+</ul>
+
+<h2>iPhone 設定</h2>
+
+<h3>設定＞Wi-Fi＞デバイス</h3>
+
+<ul>
+<li>さっきのネットワークがあるので接続</li>
+</ul>
+
+<h3>TouchOSC＞Settings</h3>
+
+<ul>
+<li>MacOS側の自己割当IP、ポート番号を入力</li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[Mac/iPhone]壁紙アプリKuvvaとDeko</title>
+		<link>/2013/02/kuvva-deko</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 10 Feb 2013 03:35:40 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[iPhone]]></category>
+		<category><![CDATA[Mac]]></category>
+		<guid isPermaLink="false">/?p=973</guid>
+
+					<description><![CDATA[最近ハマっている壁紙アプリがあるのでご紹介。2つあります。 Kuvva KuvvaはMacとiPhone向けの壁紙アプリ。アプリとウェブサービスが連動しており、ウェブサービス側からアプリへと壁紙を配信する仕組み。ウェブサービスに無料のアカウント登録をすれば、「お気に入り(Favorites)」などの情報をMacとiPhoneで共有することができる。 iPhoneアプリやサイトからは、登録されているアーティストごとに作品の一覧を見ることができ「お気に入り」を管理できる。 もちろんMacアプリで直接「Add to favorites」も可能。 Deko DekoはiOS向け壁紙アプリ。特定のパターンから画像をジェネレートし、壁紙として保存したり、シェアしたりできる。 画面を左右にフリックするとパターンが変化するのだけど、速くフリックすると新しいパターンに、遅くフリックすると同じパターンで色違いになったりする。どういうルールで変化するのかいまいち分からないし、使いやすいとは言えないけど、独特のインターフェースだなあと。なにより、どういう画像ができるか分からないという偶然性が魅力的。 実際に壁紙にしてみると、こんな感じ。 アプリのダウンロードは無料だけど、高解像度で画像を保存するために1.99$のアドオンが必要。一度支払うだけでOK。 あとがき 気軽にアートに触れることができる、こういったアプリやウェブサービスが出てくるのは嬉しいですね。決して大衆向けとは言えないかもしれませんが、盛り上がって行くといいなあと思います。 ネタ元 仕事中でも気分転換！ 壁紙を定期的に自動で変更するアプリ『Kuvva』 : ライフハッカー［日本版］ Deko &#8211; Generative Wallpapers for iOS / @suprjohan]]></description>
+										<content:encoded><![CDATA[<p>最近ハマっている壁紙アプリがあるのでご紹介。2つあります。</p>
+
+<h3>Kuvva</h3>
+
+<p><a href="http://www.kuvva.com/" title="Kuvva wallpapers for iPhone and Mac">Kuvva</a>はMacとiPhone向けの壁紙アプリ。アプリとウェブサービスが連動しており、ウェブサービス側からアプリへと壁紙を配信する仕組み。ウェブサービスに無料のアカウント登録をすれば、「お気に入り(Favorites)」などの情報をMacとiPhoneで共有することができる。</p>
+
+<p>iPhoneアプリやサイトからは、登録されているアーティストごとに作品の一覧を見ることができ「お気に入り」を管理できる。</p>
+
+<p><a href="/wp-content/uploads/2013/02/kuvva-mac2.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/kuvva-mac2-300x239.png" alt="Kuvva Website" width="300" height="239" class="alignnone size-medium wp-image-982" srcset="/wp-content/uploads/2013/02/kuvva-mac2-300x239.png 300w, /wp-content/uploads/2013/02/kuvva-mac2-1024x817.png 1024w, /wp-content/uploads/2013/02/kuvva-mac2-375x300.png 375w, /wp-content/uploads/2013/02/kuvva-mac2.png 1219w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>もちろんMacアプリで直接「Add to favorites」も可能。</p>
+
+<p><a href="/wp-content/uploads/2013/02/kuvva-mac.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/kuvva-mac-300x187.png" alt="Kuvva for Mac" width="300" height="187" class="alignnone size-medium wp-image-979" srcset="/wp-content/uploads/2013/02/kuvva-mac-300x187.png 300w, /wp-content/uploads/2013/02/kuvva-mac-480x300.png 480w, /wp-content/uploads/2013/02/kuvva-mac.png 720w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<h3>Deko</h3>
+
+<p><a href="http://aerodeko.com/" title="Aero Deko">Deko</a>はiOS向け壁紙アプリ。特定のパターンから画像をジェネレートし、壁紙として保存したり、シェアしたりできる。</p>
+
+<p><a href="/wp-content/uploads/2013/02/deko1.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/deko1-200x300.png" alt="deko1" width="200" height="300" class="alignnone size-medium wp-image-983" srcset="/wp-content/uploads/2013/02/deko1-200x300.png 200w, /wp-content/uploads/2013/02/deko1.png 640w" sizes="(max-width: 200px) 100vw, 200px" /></a></p>
+
+<p>画面を左右にフリックするとパターンが変化するのだけど、速くフリックすると新しいパターンに、遅くフリックすると同じパターンで色違いになったりする。どういうルールで変化するのかいまいち分からないし、使いやすいとは言えないけど、独特のインターフェースだなあと。なにより、どういう画像ができるか分からないという偶然性が魅力的。</p>
+
+<p><a href="/wp-content/uploads/2013/02/deko2.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/deko2-200x300.png" alt="deko2" width="200" height="300" class="alignnone size-medium wp-image-984" srcset="/wp-content/uploads/2013/02/deko2-200x300.png 200w, /wp-content/uploads/2013/02/deko2.png 640w" sizes="(max-width: 200px) 100vw, 200px" /></a></p>
+
+<p>実際に壁紙にしてみると、こんな感じ。</p>
+
+<p><a href="/wp-content/uploads/2013/02/deko3.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/deko3-200x300.png" alt="deko3" width="200" height="300" class="alignnone size-medium wp-image-985" srcset="/wp-content/uploads/2013/02/deko3-200x300.png 200w, /wp-content/uploads/2013/02/deko3.png 640w" sizes="(max-width: 200px) 100vw, 200px" /></a></p>
+
+<p>アプリのダウンロードは無料だけど、高解像度で画像を保存するために1.99$のアドオンが必要。一度支払うだけでOK。</p>
+
+<p><a href="/wp-content/uploads/2013/02/deko4.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/deko4-200x300.png" alt="deko4" width="200" height="300" class="alignnone size-medium wp-image-986" srcset="/wp-content/uploads/2013/02/deko4-200x300.png 200w, /wp-content/uploads/2013/02/deko4.png 640w" sizes="(max-width: 200px) 100vw, 200px" /></a></p>
+
+<h3>あとがき</h3>
+
+<p>気軽にアートに触れることができる、こういったアプリやウェブサービスが出てくるのは嬉しいですね。決して大衆向けとは言えないかもしれませんが、盛り上がって行くといいなあと思います。</p>
+
+<h4>ネタ元</h4>
+
+<ul>
+<li><a href="http://www.lifehacker.jp/2013/01/130118kuvva.html" title="仕事中でも気分転換！ 壁紙を定期的に自動で変更するアプリ『Kuvva』 : ライフハッカー［日本版］">仕事中でも気分転換！ 壁紙を定期的に自動で変更するアプリ『Kuvva』 : ライフハッカー［日本版］</a></li>
+<li><a href="http://www.creativeapplications.net/iphone/deko-generative-wallpapers-for-ios/" title="Deko - Generative Wallpapers for iOS / @suprjohan">Deko &#8211; Generative Wallpapers for iOS / @suprjohan</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>surround.vimの使い方で気づいたこと</title>
+		<link>/2011/12/surroundvim</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 06 Dec 2011 16:58:42 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Vim]]></category>
+		<guid isPermaLink="false">/?p=807</guid>
+
+					<description><![CDATA[surround.vimがいつからかVisual mode+sで起動しなくなり、Visual mode+Sにキーバインドが変更になった。 Visual mode+sを普通に使っていた僕にとってこれは手痛い変更。Visual選択してからShift押してsなんて、かったるくてやってられない。 しかし改めてドキュメントを読んでいると、ys+[なんたら]が強力であることが分かって、そっちに乗り換えるのが正しい使い方なんだろうなと思った。 例えばこれを &#60;h1&#62;大見出し&#60;/h1&#62; こうしたいとする &#60;h1&#62;&#60;a href="#"&#62;大見出し&#60;/a&#62;&#60;/h1&#62; 今までは vits&#60;a href="#"&#60;Enter&#62; とやっていた（Visual modeでタグの内側を選択してからsでsurround.vimを起動してタグを打ち込んでEnter）。 でも今はこうしなきゃいけない。 vitS&#60;a href="#"&#60;Enter&#62; 途中でShift+sは苦痛。 しかしこうできることが分かった。 ysit&#60;a href="#"&#60;Enter&#62; （タグの内側に対してsurround.vimを起動。タグを打ち込んでEnter） 久しぶりに「おおっ」と思った気づきなので、思わす記事を書いてしまった。 世間ではVim Advent Calendar 2011をやってるみたいです。Check it out!!]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/tpope/vim-surround">surround.vim</a>がいつからかVisual mode+<code>s</code>で起動しなくなり、Visual mode+<code>S</code>にキーバインドが変更になった。</p>
+
+<p>Visual mode+<code>s</code>を普通に使っていた僕にとってこれは手痛い変更。Visual選択してからShift押して<code>s</code>なんて、かったるくてやってられない。</p>
+
+<p>しかし改めてドキュメントを読んでいると、<code>ys+[なんたら]</code>が強力であることが分かって、そっちに乗り換えるのが正しい使い方なんだろうなと思った。</p>
+
+<p>例えばこれを</p>
+
+<pre><code>&lt;h1&gt;大見出し&lt;/h1&gt;
+</code></pre>
+
+<p>こうしたいとする</p>
+
+<pre><code>&lt;h1&gt;&lt;a href="#"&gt;大見出し&lt;/a&gt;&lt;/h1&gt;
+</code></pre>
+
+<p>今までは</p>
+
+<pre><code>vits&lt;a href="#"&lt;Enter&gt;
+</code></pre>
+
+<p>とやっていた（Visual modeでタグの内側を選択してからsでsurround.vimを起動してタグを打ち込んでEnter）。
+でも今はこうしなきゃいけない。</p>
+
+<pre><code>vitS&lt;a href="#"&lt;Enter&gt;
+</code></pre>
+
+<p>途中でShift+sは苦痛。
+しかしこうできることが分かった。</p>
+
+<pre><code>ysit&lt;a href="#"&lt;Enter&gt;
+</code></pre>
+
+<p>（タグの内側に対してsurround.vimを起動。タグを打ち込んでEnter）<br />
+久しぶりに「おおっ」と思った気づきなので、思わす記事を書いてしまった。</p>
+
+<p>世間では<a href="http://atnd.org/events/21925">Vim Advent Calendar 2011</a>をやってるみたいです。Check it out!!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Re: gVim でウィンドウの位置とサイズを記憶する</title>
+		<link>/2010/09/gvimwinpos</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 07 Sep 2010 04:18:18 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Vim]]></category>
+		<guid isPermaLink="false">/?p=734</guid>
+
+					<description><![CDATA[マルチモニタ環境で、セカンドモニタにVimを開いた状態で:tabeとか:vspするとメインモニタにVimが何故か強制的に移動してしまい困っていました。それを見事解決できたのがこちらのVim Script。 Vim-users.jp &#8211; Hack #120: gVim でウィンドウの位置とサイズを記憶する このスクリプトを.gvimrcに書き込んでおけば、$HOMEに.vimwinposというファイルが作られそこに前回Vim終了時のウィンドウのX座標、Y座標、横幅、縦幅が保存されます。 1点気をつけるべき点がありました。.gvimrc内にtransparencyオプションの設定がしてある場合、それより後に書かないとウィンドウの位置が強制的にメインモニタ内に移動してしまいます。 （理由は定かではありませんがtransparencyオプションが使用するWindowsの描画機能の影響・・・？） これを回避できれば全く問題なしです。ありがとうございました！]]></description>
+										<content:encoded><![CDATA[<p>マルチモニタ環境で、セカンドモニタにVimを開いた状態で<code>:tabe</code>とか<code>:vsp</code>するとメインモニタにVimが何故か強制的に移動してしまい困っていました。それを見事解決できたのがこちらのVim Script。</p>
+
+<p class="ref"><a href="http://vim-users.jp/2010/01/hack120/">Vim-users.jp &#8211; Hack #120: gVim でウィンドウの位置とサイズを記憶する</a></p>
+
+<p>このスクリプトを<span class="file">.gvimrc</span>に書き込んでおけば、<span class="path">$HOME</span>に<span class="file">.vimwinpos</span>というファイルが作られそこに前回Vim終了時のウィンドウのX座標、Y座標、横幅、縦幅が保存されます。</p>
+
+<p>1点気をつけるべき点がありました。<span class="file">.gvimrc</span>内に<code>transparency</code>オプションの設定がしてある場合、それより後に書かないとウィンドウの位置が強制的にメインモニタ内に移動してしまいます。<br />
+（理由は定かではありませんが<code>transparency</code>オプションが使用するWindowsの描画機能の影響・・・？）<br />
+これを回避できれば全く問題なしです。ありがとうございました！</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[memo]Git Bash内でコピペ</title>
+		<link>/2010/06/gitbashcopypaste</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Mon, 07 Jun 2010 10:41:05 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[git]]></category>
+		<category><![CDATA[Memo]]></category>
+		<guid isPermaLink="false">/?p=687</guid>
+
+					<description><![CDATA[タイトルバーを右クリックして出るコンテキストメニューで「編集」から範囲選択し、コピーができる。 <a href="/2010/06/gitbashcopypaste">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<blockquote cite="http://magpad.jugem.jp/?eid=82"><p>Git Bashのタイトルバーを右クリックすると、編集や範囲指定のメニューが出てくる。</p></blockquote>
+
+<p class="cite"><a href="http://magpad.jugem.jp/?eid=82">Git Bash内でコピペをする方法 | public static void main</a></p>
+
+<p>助かりました！<br />
+データ納品型の案件だと、ファイルの修正箇所を差分として伝えなくてはならないことが多々あります。そういう時にコミットのログやdiffを差分として納品すりゃ楽チンですねー。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>WinXPローカルでXAMPPを使ってMovable Typeを動かす―2010年3月版 その3</title>
+		<link>/2010/03/xampp_and_mt_3</link>
+					<comments>/2010/03/xampp_and_mt_3#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 14 Mar 2010 03:42:15 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[ImageMagick]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<category><![CDATA[XAMPP]]></category>
+		<guid isPermaLink="false">/?p=629</guid>
+
+					<description><![CDATA[AMPPでMovable Typeを動作させるチュートリアルの第3弾です。今回はImageMagickのインストールと、MovableTypeのインストールを扱い、全3回の記事の最後とします。 <a href="/2010/03/xampp_and_mt_3">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>XAMPPでMovable Typeを動作させるチュートリアルの第3弾です。</p>
+
+<ol>
+<li><a href="/2010/03/xampp_and_mt_1.php">XAMPPのインストール、Apacheの設定</a></li>
+<li><a href="/2010/03/xampp_and_mt_2.php">ActivePerlのインストールと設定、MySQLの設定</a></li>
+<li><em>ImageMagickのインストール、Movable Typeのインストール</em></li>
+</ol>
+
+<p>今回はImageMagickのインストールと、MovableTypeのインストールを扱い、全3回の記事の最後とします。</p>
+
+<ol>
+<li class="step01">
+<p><a href="http://www.imagemagick.org/script/index.php" title="ImageMagick">ImageMagickのダウンロードページ</a>にアクセスし、左に並んでいるメニューの中から「Release→Windows」を選択します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_97.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_97-150x150.jpg" alt="ImageMagickのダウンロード" title="20100313_97" width="150" height="150" class="alignnone size-thumbnail wp-image-599" /></a></p>
+</li>
+
+<li class="step02">
+<p>「Windows Binary Release」という見出しのページが表示され、ダウンロードできるパッケージの一覧が表示されます。この中から「ImageMagick-6.6.0-3-Q8-windows-dll.exe」を選択します。HTTPとFTPどちらでダウンロードしても構いません。<br />
+<span class="memo"><q>6.6.0-3</q>というところはバージョンを表しているようなので、その時によって最新となるバージョンは異なっているかもしれません。<br />
+また、お使いのマシンが64bitなら「ImageMagick-6.6.0-3-Q16-windows-x64-static.exe」を選んでください。</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_98.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_98-150x150.jpg" alt="ImageMagickのダウンロード" title="20100313_98" width="150" height="150" class="alignnone size-thumbnail wp-image-600" /></a></p>
+</li>
+
+<li class="step03">
+<p>ダウンロードしたインストーラーファイルを実行します。インストールウィザードが始まります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_99.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_99-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_99" width="150" height="150" class="alignnone size-thumbnail wp-image-601" /></a></p>
+</li>
+
+<li class="step04">
+<p>ライセンスを読み、「I accept the agreement（ライセンスに同意）」を選択して「Next」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_100.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_100-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_100" width="150" height="150" class="alignnone size-thumbnail wp-image-602" /></a></p>
+</li>
+
+<li class="step05">
+<p>「information」が表示されるので適当に読んで「Next」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_101.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_101-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_101" width="150" height="150" class="alignnone size-thumbnail wp-image-603" /></a></p>
+</li>
+
+<li class="step06">
+<p>インストールするディレクトリを選択する画面になります。適当に変更しても構いませんが、今回はあえてデフォルトのままでいきます。「Next」をクリックします。<br />
+<span class="memo">「Program Files」というようにディレクトリ名に半角スペースが入ると、この後のPerlとの連携でダメになりそうな気がするのですが・・・意外にも大丈夫なんですね。</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_102.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_102-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_102" width="150" height="150" class="alignnone size-thumbnail wp-image-604" /></a></p>
+</li>
+
+<li class="step07">
+<p>スタートメニューになんという名前で登録されるかを設定する画面になります。特に変更せず「Next」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_1031.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_1031-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_103" width="150" height="150" class="alignnone size-thumbnail wp-image-606" /></a></p>
+</li>
+
+<li class="step08">
+<p>インストールの追加オプションを選択する画面になります。ここで忘れずに<strong>「Install PerlMagick for ActiveState Perl v5.10.1 build 1007」を選択します。</strong>これでActivePerlと連携するためのPerlモジュールが一緒にインストールされます。「Next」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_104.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_104-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_104" width="150" height="150" class="alignnone size-thumbnail wp-image-607" /></a></p>
+</li>
+
+<li class="step09">
+<p>これでインストールのための設定は終わりとなります。「Install」をクリックしてしばらく待ちます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_105.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_105-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_105" width="150" height="150" class="alignnone size-thumbnail wp-image-608" /></a></p>
+</li>
+
+<li class="step10">
+<p>もう一度「Information」が表示されます。「Next」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_106.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_106-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_106" width="150" height="150" class="alignnone size-thumbnail wp-image-609" /></a></p>
+</li>
+
+<li class="step11">
+<p>これでインストールは完了となります。「Finish」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_107.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_107-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_107" width="150" height="150" class="alignnone size-thumbnail wp-image-610" /></a></p>
+</li>
+
+<li class="step12">
+<p>さて、正しくインストールできたかどうか、mt-check.cgi（<a href="/2010/03/xampp_and_mt_2.php">前回</a>までの設定を正しく行っていれば <a href="http://site1.localhost/mtos/mt-check.cgi">http://site1.localhost/mtos/mt-check.cgi</a> というURL）にブラウザでアクセスしてみましょう。すると、<q>perl.exe &#8211; コンポーネントが見つかりません</q>というアラートが表示され、正しく実行できなくなっています。さきほどインストールしたImageMagickのdllファイルを呼び出そうとして、失敗していることが分かります。これはImageMagickインストール時に設定された環境変数が、まだシステムに認識されていないために起こる問題なので、Windowsを再起動することで解決します。作業を中断し、ひとまず一旦再起動です。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_108.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_108-150x121.jpg" alt="エラーメッセージ「perl.exe - コンポーネントが見つかりません。 CORE_RL_magick_.dllが見つからなかったため、このアプリケーションを開始できませんでした。アプリケーションをインストールし直すとこの問題は解決される場合があります。」" title="20100313_108" width="150" height="121" class="alignnone size-thumbnail wp-image-611" /></a></p>
+</li>
+
+<li class="step13">
+<p>Windowsが起動したら、忘れずにApacheとMySQLを起動しましょう。デスクトップに追加されたショートカットやスタートメニューから「XAMPP Control Panel」を起動し、ApacheとMySQLの「Start」ボタンをクリックし、「Running」状態にします。<br />
+<span class="memo">ApacheやMySQLをシステムの「サービス」として登録するとWindowsが起動すると同時にこれらも起動するようになりますが、今回はこの設定は行いません。</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_110.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_110.jpg" alt="XAMPPコントロールパネルを起動する" title="20100313_110" width="182" height="113" class="alignnone size-full wp-image-612" /></a>
+<a href="/wp-content/uploads/2010/03/20100313_111.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_111-150x150.jpg" alt="XAMPPコントロールパネル" title="20100313_111" width="150" height="150" class="alignnone size-thumbnail wp-image-613" /></a></p>
+</li>
+
+<li class="step14">
+<p>改めてmt-check.cgiにブラウザでアクセスします。「Image::Magick」項目の黄色いエラー表示が消えていることを確認します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_112.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_112-150x150.jpg" alt="mt-check.cgiにブラウザでアクセス" title="20100313_112" width="150" height="150" class="alignnone size-thumbnail wp-image-605" /></a></p>
+</li>
+
+<li class="step15">
+<p>これでMovable Typeを使う準備がようやく整いましたので、早速インストールを行いましょう。MovableType（ここではMTOS 5.01）のファイルを保存したディレクトリ（<a href="http://site1.localhost/mtos/">http://site1.localhost/mtos/</a>）にブラウザでアクセスし、「サインイン」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_113.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_113-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_113" width="150" height="150" class="alignnone size-thumbnail wp-image-615" /></a></p>
+</li>
+
+<li class="step16">
+<p>するとmt-wizard.cgiというプログラムが実行され、インストールウィザードが始まります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_114.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_114-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_114" width="150" height="150" class="alignnone size-thumbnail wp-image-616" /></a></p>
+</li>
+
+<li class="step17">
+<p>システムチェックが実行され、<q>必要なPerlモジュールはそろっています。Movable Typeのインストールを続行する準備が整いました。</q>と表示されます。<br />
+と同時に<q>オプションのPerlモジュールのうちいくつかが見つかりませんでした。</q>と表示されます。「オプションモジュールを表示」をクリックするとシステムにインストールされていないモジュールの一覧を見ることができます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_119.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_119-150x150.jpg" alt="" title="20100313_119" width="150" height="150" class="alignnone size-thumbnail wp-image-617" /></a></p>
+</li>
+
+<li class="step18">
+<p>Crypt::DSA や IPC::Run といったPerlモジュールがインストールされていないことが分かりますが、今回は使用することはないので「次へ」進みます。必要な場合は一旦インストールウィザードを中断し、<a href="/2010/03/xampp_and_mt_2.php">前回</a>のようにPPMを使ってインストールするといいでしょう。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_120.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_120-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_120" width="150" height="150" class="alignnone size-thumbnail wp-image-618" /></a></p>
+</li>
+
+<li class="step19">
+<p>データベースの設定の画面となります。「データベースの種類」には「MySQLデータベース（推奨）」を選択しましょう。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_122.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_122-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_122" width="150" height="150" class="alignnone size-thumbnail wp-image-619" /></a></p>
+</li>
+
+<li class="step20">
+<p>データベースの設定項目が出現しますので各項目を以下のように設定し、「接続テスト」をクリックします。</p>
+<dl>
+    <dt>データベースサーバ</dt>
+    <dd><kbd>localhost</kbd></dd>
+    <dt>データベース名</dt>
+    <dd><kbd>mtos5</kbd> <span class="memo">（<a href="/2010/03/xampp_and_mt_2.php">前回</a>作成したMySQLデータベース名）</span></dd>
+    <dt>ユーザ名</dt>
+    <dd><kbd>root</kbd></dd>
+    <dt>パスワード</dt>
+    <dd><a href="/2010/03/xampp_and_mt_1.php">前々回</a>設定したMySQL rootユーザーのパスワード</dd>
+</dl>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_123.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_123-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_123" width="150" height="150" class="alignnone size-thumbnail wp-image-620" /></a></p>
+</li>
+
+<li class="step21">
+<p><q>データベースの設定を完了しました。</q>と表示されます。「次へ」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_124.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_124-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_124" width="150" height="150" class="alignnone size-thumbnail wp-image-630" /></a></p>
+</li>
+
+<li class="step22">
+<p>「メール設定」という画面となりますが、今回は特に設定せず「次へ」をクリック。<br />
+<span class="memo">もし必要となった場合、後で設定できます</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_125.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_125-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_125" width="150" height="150" class="alignnone size-thumbnail wp-image-621" /></a></p>
+</li>
+
+<li class="step23">
+<p>「テンポラリディレクトリの設定」画面となります。テンポラリディレクトリはMovable Typeのシステムが画像などのデータやバックアップデータなどを扱う際、一時的にデータ置き場として利用されるディレクトリです。適当なディレクトリを設定しましょう。ここでは <span class="path">C:\Windows\Temp</span> とし、「次へ」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_126.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_126-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_126" width="150" height="150" class="alignnone size-thumbnail wp-image-614" /></a></p>
+</li>
+
+<li class="step24">
+<p>これでMovableTypeの設定ファイル（mt-config.cgi）が生成され、今まで設定した情報が書き込まれます。mt-config.cgiが正しく生成されたことを確認し、「次へ」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_127.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_127-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_127" width="150" height="150" class="alignnone size-thumbnail wp-image-623" /></a></p>
+</li>
+
+<li class="step25">
+<p>Movable Typeにログインするためのアカウントを作成する画面になります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_128.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_128-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_128" width="150" height="150" class="alignnone size-thumbnail wp-image-624" /></a></p>
+<ul>
+<li>ユーザー名</li>
+<li>表示名</li>
+<li>電子メール</li>
+<li>使用言語</li>
+<li>パスワード</li>
+</ul>
+<p>以上の項目を設定できますが、ログインに使用するのは「ユーザー名」と「パスワード」だけです。<br />
+適当に入力したら「次へ」をクリック。<br />
+<span class="memo">ここで設定する項目は後で変更することができます。</span></p>
+</li>
+
+<li class="step26">
+<p>「最初のウェブサイト」を作成という画面となり、Movable Typeで管理するウェブサイトを設定する画面となります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_129.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_129-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_129" width="150" height="150" class="alignnone size-thumbnail wp-image-625" /></a></p>
+<dl>
+    <dt>ウェブサイト名</dt>
+    <dd><kbd>Site1</kbd><br /><span class="memo">（適当なサイト名）</span></dd>
+    <dt>ウェブサイトURL</dt>
+    <dd><kbd class="url">http://site1.localhost/</kbd><br /><span class="memo">（Movable TypeがインストールされたサイトのURL）</span></dd>
+    <dt>公開パス</dt>
+    <dd><kbd class="path">D:\htdocs\site1</kbd><br /><span class="memo">（Movable Typeがインストールされたサイトのディレクトリ。Windows環境だとディレクトリ区切りがバックスラッシュになりますのでご注意を）</span></dd>
+    <dt>テーマ</dt>
+    <dd>クラシックウェブサイト<br /><span class="memo">（どれでもOKです。選択によって設定されるテンプレートが変更されます）</span></dd>
+    <dt>タイムゾーン</dt>
+    <dd>UTC+9（日本標準時）</dd>
+</dl>
+<p>上記のように設定したら、「インストール」をクリックします。<br />
+<span class="memo">「ウェブサイトURL」と「公開パス」は<a href="/2010/03/xampp_and_mt_1.php">前々回</a>にApacheのバーチャルホスト機能で定義した同サイト内であれば、自由に設定できます。ここではサイトのルートとなるディレクトリを指定しています。</span></p>
+</li>
+
+<li class="step27">
+<p>しばらく待つと、<q>インストールを完了しました！</q>と表示されます。「Movable Typeにサインイン」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_131.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_131-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_131" width="150" height="150" class="alignnone size-thumbnail wp-image-626" /></a></p>
+</li>
+
+<li class="step28">
+<p>これでめでたくMovable Typeがインストールされました。ローカルマシン上で自由に使える開発環境のできあがりです！</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_132.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_132-150x150.jpg" alt="Movable Typeに初めてサインインしたところ" title="20100313_132" width="150" height="150" class="alignnone size-thumbnail wp-image-622" /></a></p>
+</li>
+</ol>
+
+<p>以上で全3回に渡る記事を終わります。</p>
+
+<p>Apacheのバーチャルホスト設定とhostsファイルの設定をそれぞれ増やせば、管理するサイトを増やしていくこともできます。WindowsユーザーのWebデザイナーやフロントエンドエンジニアが利用するには、十分な環境となるのではないかと思います。欠点を挙げるとすると、「公開パス」でディレクトリ区切りが（Windows環境なので）バックスラッシュになることだったりします。ローカルで開発したものを本番の（Linux系の）サーバーに乗せる、という場合はこの辺りの設定を修正する必要があるということですね。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2010/03/xampp_and_mt_3/feed</wfw:commentRss>
+			<slash:comments>11</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

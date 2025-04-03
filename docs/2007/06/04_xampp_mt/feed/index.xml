@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: WinXPローカルでXAMPPを使ってMovableTypeを動かす	</title>
+	<atom:link href="/2007/06/04_xampp_mt/feed" rel="self" type="application/rss+xml" />
+	<link>/2007/06/04_xampp_mt</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:54 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: XamppでPerlを動かすメモ &#124; ITnews online 日本語 Blog		</title>
+		<link>/2007/06/04_xampp_mt/comment-page-1#comment-77095</link>
+
+		<dc:creator><![CDATA[XamppでPerlを動かすメモ &#124; ITnews online 日本語 Blog]]></dc:creator>
+		<pubDate>Wed, 18 Mar 2015 13:08:47 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/06/winxp%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7xampp%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6movabletype%e3%82%92%e5%8b%95%e3%81%8b%e3%81%99.php#comment-77095</guid>
+
+					<description><![CDATA[&lt;p&gt;[&#8230;] WinXP&#12525;&#12540;&#12459;&#12523;&#12391;XAMPP&#12434;&#20351;&#12387;&#12390;MovableType&#038;#12434&#8230; [&#8230;]&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] WinXP&#12525;&#12540;&#12459;&#12523;&#12391;XAMPP&#12434;&#20351;&#12387;&#12390;MovableType&amp;#12434&#8230; [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: as flash as flex - Holy’s Play Ground		</title>
+		<link>/2007/06/04_xampp_mt/comment-page-1#comment-19</link>
+
+		<dc:creator><![CDATA[as flash as flex - Holy’s Play Ground]]></dc:creator>
+		<pubDate>Mon, 25 Feb 2008 00:03:28 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/06/winxp%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7xampp%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6movabletype%e3%82%92%e5%8b%95%e3%81%8b%e3%81%99.php#comment-19</guid>
+
+					<description><![CDATA[&lt;p&gt;&lt;strong&gt;[WEBのお仕事]MovableTypeをWindows Apacheで動かす方法まとめ Image Magickあり&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;1.http://www.apachefriends.org/jp/xampp-windows.html:XAMPPをインストールし、MySQLとApa...&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p><strong>[WEBのお仕事]MovableTypeをWindows Apacheで動かす方法まとめ Image Magickあり</strong></p>
+
+<p>1.<a href="http://www.apachefriends.org/jp/xampp-windows.html:XAMPPをインストールし、MySQLとApa" rel="nofollow ugc">http://www.apachefriends.org/jp/xampp-windows.html:XAMPPをインストールし、MySQLとApa</a>&#8230;</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: shp		</title>
+		<link>/2007/06/04_xampp_mt/comment-page-1#comment-17</link>
+
+		<dc:creator><![CDATA[shp]]></dc:creator>
+		<pubDate>Fri, 05 Oct 2007 23:34:40 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/06/winxp%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7xampp%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6movabletype%e3%82%92%e5%8b%95%e3%81%8b%e3%81%99.php#comment-17</guid>
+
+					<description><![CDATA[&lt;p&gt;初めましてshpと申します。
+私も、xampp + Movable Type　version 4.01をやってみました。
+Movable Type　version 4.01　php化したいと思います。
+インストール　バージョン
+Movable Type　version 4.01
+Movable Type 個人ライセンス（無償）
+IE7 管理画面　設定　→　ブログ設定　→　公開
+公開パス
+サイトURL ?http://&lt;strong&gt;&lt;em&gt;.&lt;/em&gt;&lt;/strong&gt;.**/mt4/  鍵アイコン　Site URL Lock
+サイトパス　D:\xampp\htdocs\mt4\  鍵アイコン　Site Root Lock
+鍵がLockされて、鍵が開きません。
+システムメニュー　ユーザー　システム権限　すべてチェック入っています。
+なぜでしょう、解除出来ません。次に
+アーカイブの拡張子　html →　php
+変更保存すると、エラー　
+サイトURLは絶対URLでなければなりません。と出て変更保存が出来ません。
+公開設定　全て、変更保存出来ません。他の管理設定は保存されます。
+ブログ新規作成　ブログ記事作成　再構築
+ユーザー　shp システム管理者に成っています。
+一覧　カテゴリ　にも鍵アイコン有りますが、
+一覧　カテゴリ
+鍵アイコンクリック
+出力ファイル名 　△　警告: このカテゴリの出力ファイル名を変更すると、URLが変更されてリンク切れが起こる場合があります。
+入力　変更を保存　クリック　保存されました。
+javascript:void(0);　OKですね。アクティブスクリプト　有効になっています。
+公開設定だけ、変更の保存されません。
+ブラウザの JavaScript ON
+IE7 ×　Opera9.50　× Sleipnir2.517 × Firefox2.0.0.7 ×
+Lunascape4.5.0 rc1　×　Safari 3.0.2 for Windows beta ×
+上記、ブラウザ、全てダメでした。
+以上の件、宜しくお願い致します。
+自宅試用サーバー
+Windows XP SP2 DDNS XAMPP Apache/2.2.4 (Win32) PHP/5.2.3 MySQL 5.0.43 Perl 5.8.8-2.2.4
+ZoneAlarm Security Suite 7.0.362.000
+ちなみに、http://www.coreserver.jp/　OS Linux (32bit)
+を借りて、MT4 インストール　管理画面　公開設定
+Windows XP SP2 でだめだった、変更保存出来ました。
+鍵アイコンも解除されます。OS Linux (32bit)でしたら
+OKでした。わかりますでしょうか。&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>初めましてshpと申します。
+私も、xampp + Movable Type　version 4.01をやってみました。
+Movable Type　version 4.01　php化したいと思います。
+インストール　バージョン
+Movable Type　version 4.01
+Movable Type 個人ライセンス（無償）
+IE7 管理画面　設定　→　ブログ設定　→　公開
+公開パス
+サイトURL ?http://<strong><em>.</em></strong>.**/mt4/  鍵アイコン　Site URL Lock
+サイトパス　D:\xampp\htdocs\mt4\  鍵アイコン　Site Root Lock
+鍵がLockされて、鍵が開きません。
+システムメニュー　ユーザー　システム権限　すべてチェック入っています。
+なぜでしょう、解除出来ません。次に
+アーカイブの拡張子　html →　php
+変更保存すると、エラー　
+サイトURLは絶対URLでなければなりません。と出て変更保存が出来ません。
+公開設定　全て、変更保存出来ません。他の管理設定は保存されます。
+ブログ新規作成　ブログ記事作成　再構築
+ユーザー　shp システム管理者に成っています。
+一覧　カテゴリ　にも鍵アイコン有りますが、
+一覧　カテゴリ
+鍵アイコンクリック
+出力ファイル名 　△　警告: このカテゴリの出力ファイル名を変更すると、URLが変更されてリンク切れが起こる場合があります。
+入力　変更を保存　クリック　保存されました。
+javascript:void(0);　OKですね。アクティブスクリプト　有効になっています。
+公開設定だけ、変更の保存されません。
+ブラウザの JavaScript ON
+IE7 ×　Opera9.50　× Sleipnir2.517 × Firefox2.0.0.7 ×
+Lunascape4.5.0 rc1　×　Safari 3.0.2 for Windows beta ×
+上記、ブラウザ、全てダメでした。
+以上の件、宜しくお願い致します。
+自宅試用サーバー
+Windows XP SP2 DDNS XAMPP Apache/2.2.4 (Win32) PHP/5.2.3 MySQL 5.0.43 Perl 5.8.8-2.2.4
+ZoneAlarm Security Suite 7.0.362.000
+ちなみに、http://www.coreserver.jp/　OS Linux (32bit)
+を借りて、MT4 インストール　管理画面　公開設定
+Windows XP SP2 でだめだった、変更保存出来ました。
+鍵アイコンも解除されます。OS Linux (32bit)でしたら
+OKでした。わかりますでしょうか。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: うかブログ		</title>
+		<link>/2007/06/04_xampp_mt/comment-page-1#comment-18</link>
+
+		<dc:creator><![CDATA[うかブログ]]></dc:creator>
+		<pubDate>Sat, 29 Sep 2007 12:55:31 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/06/winxp%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7xampp%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6movabletype%e3%82%92%e5%8b%95%e3%81%8b%e3%81%99.php#comment-18</guid>
+
+					<description><![CDATA[&lt;p&gt;&lt;strong&gt;MTをローカルで動かす by XAMPP&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;カズヲさんがMTをローカルで動かすようにした記事を読んでウチでもやってみよっかなーと漠然と思ってたんですが、昨日深夜、突如思い立って実装してみました。...&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p><strong>MTをローカルで動かす by XAMPP</strong></p>
+
+<p>カズヲさんがMTをローカルで動かすようにした記事を読んでウチでもやってみよっかなーと漠然と思ってたんですが、昨日深夜、突如思い立って実装してみました。&#8230;</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

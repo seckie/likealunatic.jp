@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Chrome &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/chrome/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:18 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Chrome &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>MTのオペレーションに使うブラウザ：GoogleChrome2→1へのダウングレード</title>
+		<link>/2009/06/22_googlechrome2</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Mon, 22 Jun 2009 13:02:01 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Chrome]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<guid isPermaLink="false">/wptest/2009/06/mt%e3%81%ae%e3%82%aa%e3%83%9a%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ab%e4%bd%bf%e3%81%86%e3%83%96%e3%83%a9%e3%82%a6%e3%82%b6%ef%bc%9agooglechrome2%e2%86%921%e3%81%b8%e3%81%ae%e3%83%80.php</guid>
+
+					<description><![CDATA[GoogleChrome2がMTのオペレーション中によくクラッシュするので、1にダウングレードしてみました。 <a href="/2009/06/22_googlechrome2">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>メインブラウザはFirefox3なのですが、拡張機能をそれなりに入れているのでパフォーマンスは高いとは言えず・・・。<abbr title="MovableType">MT</abbr>のオペレーションには表示が速いGoogleChromeを愛用しています。</p>
+
+<p>ところがこのGoogleChrome、2にバージョンアップしてから、オペレーション中によくクラッシュするようになってしまいました。少なくとも私の環境では。<br />
+発生条件はよく分かりませんが（<a href="#googlechrome2-postscript">※</a>）、ページ遷移をきっかけにハングアップするらしく、こうなると、CPU使用率がグングンあがった状態で一切操作を受け付けなくなります。騙し騙し使っていたのですがもう我慢できなくなり、ダウングレードを決意しました。（他のブラウザを使えばいい話かもしれませんが、Chrome1の環境があまりに快適だったので・・・。）</p>
+
+<p>とは言えひどいことに、Googleでは過去のバージョンを配布するページがありません。調べてみると、以下の記事にたどり着きました。</p>
+
+<p><a href="http://n-yagi.0r2.net/script/2009/06/google_chrome_2.html">Google Chrome バージョン２ アンインストール &#8211; 左脳Script</a></p>
+
+<p>あー、やはり同じような悩みがある人が、いるのですね。どうやら、<a href="http://www.filehippo.com/download_google_chrome/5604/">FileHippo.comにてアーカイブが配布されているようです</a>。</p>
+
+<p>Chrome2をアンインストールして、Chrome1をインストールすると、元の快適な環境に戻りました。めでたしめでたし。</p>
+
+<p>ちなみに、<a href="http://n-yagi.0r2.net/script/2009/06/google_chrome_2.html">左脳Scriptさんでご報告されているように</a>、Chromeをアンインストールした後に以下のような画面がポップアップしてきて、なんでアンインストールしたのかアンケートを入力するように促してきます。入力は任意のようです。</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/22_chrome2.gif"><img fetchpriority="high" decoding="async" alt="Chromeをアンインストールした後に表示されるアンケートフォーム" src="/images/2009/06/22_chrome2-thumb-241x299-62.gif" width="241" height="299" class="mt-image-none" style="" /></a></span></p>
+
+<p>最後に・・・。<br />
+最新版じゃないブラウザを使うということはセキュリティホールも開いてるはずなので、普通のネットサーフィン用途には使わない方が良いです。あくまで特定の用途で使う、という割り切りが必要かと思います。<br />
+って誰に言ってるんでしょうね私は（笑）</p>
+
+<div class="postscript" id="googlechrome2-postscript">
+<p>※もしかしたら職場PCのスペックがショボいことが原因の一つかもしれません。自宅のCore2 Duoマシンではハングアップしたことがないので。</p>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

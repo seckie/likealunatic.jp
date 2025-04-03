@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Mobile &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/mobile/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:18:24 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Mobile &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>[memo]auケータイではプログレッシブjpgはNG</title>
+		<link>/2009/02/memoaujpgng</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 12 Feb 2009 02:30:02 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Memo]]></category>
+		<category><![CDATA[Mobile]]></category>
+		<guid isPermaLink="false">/wptest/2009/02/memoau%e3%82%b1%e3%83%bc%e3%82%bf%e3%82%a4%e3%81%a7%e3%81%af%e3%83%97%e3%83%ad%e3%82%b0%e3%83%ac%e3%83%83%e3%82%b7%e3%83%96jpg%e3%81%afng.php</guid>
+
+					<description><![CDATA[一部のauケータイではプログレッシブJPGが表示できないようです。 <a href="/2009/02/memoaujpgng">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>一部のauケータイではプログレッシブJPGが表示できないようです。書き出す際に注意ですね。</p>
+
+<p>一昔前は<a href="http://support.adobe.co.jp/faq/faq/qadoc.sv?228660+002">FlashでもプログレッシブJPGの取扱いに問題があった</a>ようです。同じJPGでも結構違うものなのかなぁ。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

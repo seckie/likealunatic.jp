@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>iTunes &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/itunes/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:40 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>iTunes &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>文字化けしたMP3タグ情報（ID3タグ）の直し方</title>
+		<link>/2007/11/18_itunes01</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 18 Nov 2007 13:21:51 +0000</pubDate>
+				<category><![CDATA[LifeHack]]></category>
+		<category><![CDATA[iTunes]]></category>
+		<category><![CDATA[Mac]]></category>
+		<guid isPermaLink="false">/wptest/2007/11/%e6%96%87%e5%ad%97%e5%8c%96%e3%81%91%e3%81%97%e3%81%9fmp3%e3%82%bf%e3%82%b0%e6%83%85%e5%a0%b1%ef%bc%88id3%e3%82%bf%e3%82%b0%ef%bc%89%e3%81%ae%e7%9b%b4%e3%81%97%e6%96%b9.php</guid>
+
+					<description><![CDATA[いろいろ一段落して、ようやくMacBookへの環境移行を本格的に進めています。 そんな中で起こった問題がiTunesライブラリの文字化け。 Windows環境でエンコードしたMP3をMacにコピーすると、ID3タグが文字化けを起こしてしまいます。 こりゃどっかで聞いたことある現象だなぁ?と思い、ググったら、やっぱりそんな記事がありました。 ライブラリのリストで該当の曲を選び、右クリック（Ctrl＋クリック）して「ID3タグを変換&#8230;」を選択。 「文字列を変換」にチェックし、「ASCIIからISO Latin-1へ」を選択して「OK」。 この通り、直りました。 もしかしてこれって全部手動でタグ情報を打ち直しなのか・・・とか思っていただけに、ホント助かりました。。]]></description>
+										<content:encoded><![CDATA[<p>いろいろ一段落して、ようやくMacBookへの環境移行を本格的に進めています。<br />
+そんな中で起こった問題がiTunesライブラリの文字化け。<br />
+Windows環境でエンコードしたMP3をMacにコピーすると、ID3タグが文字化けを起こしてしまいます。</p>
+
+<p>こりゃどっかで聞いたことある現象だなぁ?と思い、ググったら、<a href="http://osx-navi.main.jp/music/iTunes_tips.html">やっぱりそんな記事がありました</a>。</p>
+
+<p>ライブラリのリストで該当の曲を選び、右クリック（Ctrl＋クリック）して「ID3タグを変換&#8230;」を選択。</p>
+
+<p><img fetchpriority="high" decoding="async" src="/img/2007/11/18_itunes01.gif" alt="iTunes スクリーンショット1" width="450" height="220" /></p>
+
+<p>「文字列を変換」にチェックし、「ASCIIからISO Latin-1へ」を選択して「OK」。</p>
+
+<p><img decoding="async" src="/img/2007/11/18_itunes02.gif" alt="iTunes スクリーンショット2" width="450" height="240" /></p>
+
+<p>この通り、直りました。</p>
+
+<p><img decoding="async" src="/img/2007/11/18_itunes03.gif" alt="iTunes スクリーンショット3" width="450" height="210" /></p>
+
+<p>もしかしてこれって全部手動でタグ情報を打ち直しなのか・・・とか思っていただけに、ホント助かりました。。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

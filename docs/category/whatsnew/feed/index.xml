@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>What&#8217;s New? &#8211; Like@Lunatic</title>
+	<atom:link href="/category/whatsnew/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:21:05 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>What&#8217;s New? &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>サイトの裏側を書き直した</title>
+		<link>/2014/04/rebuild</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Sun, 13 Apr 2014 16:53:41 +0000</pubDate>
+				<category><![CDATA[What's New?]]></category>
+		<category><![CDATA[GitHub]]></category>
+		<category><![CDATA[Grunt]]></category>
+		<guid isPermaLink="false">/?p=1067</guid>
+
+					<description><![CDATA[自分のサイトを更新するモチベーションが沸々と約2年半ぶりに湧き上がり、現在業務で使っているツールや知識を使って裏側を書き直した。 今回変えたのは以下のような点。 Grunt 導入 プロトタイプ環境と本番環境を分けた WordPressシステムファイル以外のソースコードを GitHub で管理するようにした Twitter API version 1.1 への対応（遅っ！） Twitter API を利用しているのはトップページでリスト表示をしているところだけだが、Twitter API 1.0 が廃止されてから1年近く放置してしまった…。お恥ずかしい限り。 Grunt を導入したことでパッケージ管理をぜんぶ bower に任せられたし、必要なやつだけ grunt-contrib-copy でコピーして deploy 環境に置く、みたいなことができてめちゃくちゃ整理ができた。2年半前と開発環境はえらい違い。 突貫工事だったので JavaScript とか LESS とかは適当。まだ途中のところとかあるし。 あとでやりたいこと↓ JavaScript を CoffeeScript で書き直す Bootstrap を始めとしたパッケージ群を最新版にして WordPress テーマを書き直す]]></description>
+										<content:encoded><![CDATA[<p>自分のサイトを更新するモチベーションが沸々と約2年半ぶりに湧き上がり、現在業務で使っているツールや知識を使って裏側を書き直した。
+今回変えたのは以下のような点。</p>
+
+<ul>
+<li>Grunt 導入</li>
+<li>プロトタイプ環境と本番環境を分けた</li>
+<li>WordPressシステムファイル以外のソースコードを <a href="https://github.com/seckie/likealunatic">GitHub で管理するようにした</a></li>
+<li>Twitter API version 1.1 への対応（遅っ！）</li>
+</ul>
+
+<p>Twitter API を利用しているのはトップページでリスト表示をしているところだけだが、Twitter API 1.0 が廃止されてから1年近く放置してしまった…。お恥ずかしい限り。</p>
+
+<p>Grunt を導入したことでパッケージ管理をぜんぶ bower に任せられたし、必要なやつだけ grunt-contrib-copy でコピーして deploy 環境に置く、みたいなことができてめちゃくちゃ整理ができた。2年半前と開発環境はえらい違い。</p>
+
+<p>突貫工事だったので JavaScript とか LESS とかは適当。まだ途中のところとかあるし。<br />
+あとでやりたいこと↓</p>
+
+<ul>
+<li>JavaScript を CoffeeScript で書き直す</li>
+<li>Bootstrap を始めとしたパッケージ群を最新版にして WordPress テーマを書き直す</li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>サイトをリニューアルした</title>
+		<link>/2012/01/renewal</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 08 Jan 2012 06:33:02 +0000</pubDate>
+				<category><![CDATA[What's New?]]></category>
+		<category><![CDATA[About]]></category>
+		<guid isPermaLink="false">/?p=827</guid>
+
+					<description><![CDATA[Bootstrap, from Twitterを使ってサイトをリニューアルした <a href="/2012/01/renewal">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>あけましておめでとうございます、というにはもう遅すぎるけど、2012年初エントリーです。
+年末年始の休みに作業していたものをようやくリリースすることができたので、これで安心して新年をスタートできるというものです。</p>
+
+<h2>今回のリニューアルでやったこと</h2>
+
+<ol>
+<li>記事をMarkdownで書くことを前提とした
+
+<ul>
+<li>GitHubを使い始めてからMarkdownマンセーになったので</li>
+</ul></li>
+<li>デザインは<a href="http://twitter.github.com/bootstrap/">Bootstrap</a>をベースにする
+
+<ul>
+<li>Mardown前提ならある程度スタイルが最初から用意されているフレームワーク使った方が楽</li>
+<li>ビジュアル面のデザインをする気力がないだけということもあるが</li>
+</ul></li>
+<li>WordPressのテーマは&#8221;Twenty Eleven&#8221;を継承した子テーマに
+
+<ul>
+<li>これも楽をしたかっただけ</li>
+<li>最初はBootstrapに最適化したようなテンプレートを書こうと思ったけど、めんどくさくなって諦めた</li>
+<li>Twenty ElevenをベースにBootstrap + αをくっつけるだけ、みたいなテーマを書いた</li>
+</ul></li>
+<li>トップページに<a href="https://twitter.com/seckie_">自分のツイート</a>を表示して人気（ひとけ）を出す
+
+<ul>
+<li>ソーシャルサービスのデータを表示すれば、<del>ブログを更新していなくても人気が出て寂しくないお。</del>リアルタイムな雰囲気が出ていいんじゃないかと</li>
+<li>今のところTwitter APIをPHPで叩いてるだけ。WordPressのエントリーは普通にテンプレートで出力してる</li>
+<li>全部データを書き出した後に日付順にソートしてる。新しいものは上の方に、古いものは下の方に表示される</li>
+<li>今後、他サービスのAPIにも挑戦したい。Instagramの写真を展開したりとか。<del>でもそうすると余計ブログを更新していないことがバレバレになるお</del></li>
+</ul></li>
+<li>トップページのレイアウトに<a href="http://masonry.desandro.com/" title="jQuery Masonry">jQuery Masonry</a>を使う
+
+<ul>
+<li>今風にしてみたかっただけ</li>
+</ul></li>
+<li>ソーシャルサービスのアイコンは<a href="http://icondock.com/free/vector-social-media-icons" title="IconDock.com">IconDock.com</a>より拝借
+
+<ul>
+<li>awesomeです。ありがとうございます。</li>
+</ul></li>
+</ol>
+
+<ins datetime="2012-01-08T16:07:00">
+<h3>追記:</h3>
+<p>モバイル端末用のビューは<a href="http://wordpress.org/extend/plugins/wptouch/">WPtouch</a>任せなので、iPhoneなんかで見ると何が変わったかさっぱり分かりませんね&#8230;。</p>
+</ins>
+
+<h2>今年の目標など</h2>
+
+<p>書こうと思ったら長くなりそうだったので別のエントリーにします。</p>
+
+<p>というわけで本年もどうぞよろしくお願いいたします。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>WordPressに移行</title>
+		<link>/2009/12/wordpress</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 30 Dec 2009 06:07:47 +0000</pubDate>
+				<category><![CDATA[What's New?]]></category>
+		<category><![CDATA[About]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">/wptest/?p=211</guid>
+
+					<description><![CDATA[当サイトのCMSをMTOS4からWordPressに移行しました。 <a href="/2009/12/wordpress">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>当サイトのCMSを<a href="http://www.movabletype.jp/opensource/"><abbr title="Movable Type Open Source">MTOS</abbr></a>4から<a href="http://ja.wordpress.org/">WordPress</a>に移行しました。</p>
+
+<p>今年は仕事において<abbr title="Movable Type">MT</abbr>でサイトを構築する機会に恵まれたおかげもあり、MTはどう使えばいいのか割と勝手がわかってきた、と思っています。それなりにすらすらとテンプレートも書けるようになり、プラグインもこれとこれを使うってやつがある程度決まってきたので、不自由する機会はあまりなくなりました。<br />
+# プラグインを自分で書いて云々っていうレベルには遠く及びませんが</p>
+
+<p>MTがバージョン5になってよりCMSとしてよくなった感があるのだけれど、優等生になってしまった気がしてもう仕事で使えさえすればいいや、という気分になってしまった、と。そこでプライベートではWordPressやろうかってことで移行に至りました。</p>
+
+<p>MTOS４からの移行では、MTOS４から「ブログのエクスポート」を行い、新規インストールしたWordPressのインポート機能で「Movable Type と TypePad」を選択し、記事とコメントのインポートを行いました。</p>
+
+<p>ここでいくつか不都合が発生。</p>
+
+<p>まず1点は、記事毎のパーマリンクの設定（WordPressでは「スラッグ」と呼ぶ）にMTでいう「出力ファイル名（MTEntryBasename）」が引き継がれないこと。「出力ファイル名」の情報は飛んでしまい、代わりにスラッグには記事のタイトルと同じテキストが設定されます。なので記事のタイトルに日本語が使われているとスラッグにも日本語が入ってしまうわけで・・・、パーマリンクの設定をカスタマイズして<code>%postname%</code>を使用していると、URLはかなりひどいことになります。</p>
+
+<p>2点目は「タグ」の設定が引き継がれないこと。WordPressにも「タグ」がありますがここにはMTでいう「キーワード」フィールドの値が引き継がれてしまいました。「タグ」も「キーワード」も役割が似通っているとも言えるのでWordPressではこれを一本化しているのには納得が行きますが、かといってなぜ「タグ（MT）」を「タグ（WordPress）」に引き継がないのか・・・。これは納得がいかない！</p>
+
+<p>このブログは幸いにも（？）記事の総数が大した量ではないため、全て手動で入力しなおすことで解決しましたが。その際、記事一覧の「クイック編集」の機能が重宝しました。これがなかったら嫌になっていたかも・・・。</p>
+
+<p>テーマもオリジナルではなく適当なものを拝借していじったやつだし、まだまだWordPressがなんのこっちゃ分からんという感じなので、ちょっとづつ勉強していきたいと思います。でもまぁ、来年の話ですね（笑）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>「この記事にTwitterでコメント」ボタンを設置してみた</title>
+		<link>/2009/06/09_twitterbutton</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 09 Jun 2009 11:48:51 +0000</pubDate>
+				<category><![CDATA[What's New?]]></category>
+		<category><![CDATA[About]]></category>
+		<category><![CDATA[Twitter]]></category>
+		<guid isPermaLink="false">/wptest/2009/06/%e3%80%8c%e3%81%93%e3%81%ae%e8%a8%98%e4%ba%8b%e3%81%abtwitter%e3%81%a7%e3%82%b3%e3%83%a1%e3%83%b3%e3%83%88%e3%80%8d%e3%83%9c%e3%82%bf%e3%83%b3%e3%82%92%e8%a8%ad%e7%bd%ae%e3%81%97%e3%81%a6%e3%81%bf.php</guid>
+
+					<description><![CDATA[「この記事にTwitterでコメント」ボタンをつけたよ &#8211; 頭ん中 上記の記事で紹介されているTwitterボタンが気になったので、設置してみました。ただの外部リンクなので、ページが重くならないのが良いですね。]]></description>
+										<content:encoded><![CDATA[<p><a href="http://www.msng.info/archives/2009/04/comment_on_this_entry_on_twitter.php">「この記事にTwitterでコメント」ボタンをつけたよ &#8211; 頭ん中</a><br />
+上記の記事で紹介されているTwitterボタンが気になったので、設置してみました。ただの外部リンクなので、ページが重くならないのが良いですね。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>サイトデザインをリニューアルしました</title>
+		<link>/2008/09/post</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 16 Sep 2008 14:38:25 +0000</pubDate>
+				<category><![CDATA[What's New?]]></category>
+		<category><![CDATA[About]]></category>
+		<guid isPermaLink="false">/wptest/2008/09/%e3%82%b5%e3%82%a4%e3%83%88%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%e3%82%92%e3%83%aa%e3%83%8b%e3%83%a5%e3%83%bc%e3%82%a2%e3%83%ab%e3%81%97%e3%81%be%e3%81%97%e3%81%9f.php</guid>
+
+					<description><![CDATA[サイトデザインをリニューアルしました＠2008年9月 <a href="/2008/09/post">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>サイト開設から初めてのデザインリニューアルです。<br />
+リニューアルのポイントは以下。</p>
+
+<ul class="disclist">
+<li>CMSを<a href="http://www.movabletype.jp/opensource/"><abbr title="Movable Type Open Source">MTOS</abbr></a>に変更</li>
+<li>MTOSのデフォルトテンプレートを極力生かすような設計に変更</li>
+<li><a href="http://www.nonplus.net/software/mt/MTPaginate.htm">MTPagenateプラグイン</a>でアーカイブページ分割<br />
+参考：<a href="http://www.koikikukan.com/archives/2008/04/10-000313.php">小粋空間: アーカイブページのページ分割 for Movable Type 4.1</a></li>
+<li>ビジュアル面での簡素化</li>
+<li>使用するJavaScriptライブラリを<a href="http://jquery.com/">jQuery</a>から<a href="http://www.prototypejs.org/">prototype.js</a> + <a href="http://script.aculo.us/">script.aculo.us</a>へ変更</li>
+<li>本文の文字サイズを大きくした</li>
+<li>エラスティックレイアウトから幅固定レイアウトへ変更</li>
+<li>文書型は引き続き XHTML 1.0 Strict</li>
+</ul>
+
+<p>紆余曲折あって現在の私の職種は<dfn>マークアップエンジニア</dfn>となったので・・・、エンジニアらしく、自信のないビジュアル面では凝ったことはもうやめよう、と。よってビジュアル的な簡素化を図った反面、コード面ではいろいろ挑戦しています。</p>
+
+<p>script.aculo.usを使って実験的なことをやってますが、パフォーマンス面ではなかなかに難があり・・・IE6では折りたたみエフェクトを連打するとブラウザが落ちたりします。実験室というこのサイトの性格上、ま、いっかということにしましたが＞＜</p>
+
+<p>それから本文の文字をでかくしたのは、自分が見やすいサイズがこれだから。視力が落ちたのかどうかはわかりませんが、近年は小さい文字をじっと読んでいると目が痛くて痛くて・・・。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>月刊web creators 2008年10月号に執筆協力しました</title>
+		<link>/2008/08/30_webcreators</link>
+					<comments>/2008/08/30_webcreators#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sat, 30 Aug 2008 04:42:56 +0000</pubDate>
+				<category><![CDATA[What's New?]]></category>
+		<category><![CDATA[About]]></category>
+		<category><![CDATA[Book]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<guid isPermaLink="false">/wptest/2008/08/%e6%9c%88%e5%88%8aweb-creators-2008%e5%b9%b410%e6%9c%88%e5%8f%b7%e3%81%ab%e5%9f%b7%e7%ad%86%e5%8d%94%e5%8a%9b%e3%81%97%e3%81%be%e3%81%97%e3%81%9f.php</guid>
+
+					<description><![CDATA[月刊ウェブ・クリエイターズ 2008年10月号（今月号）の巻頭特集「[永久保存版]使えるCSSデザインの技152」に執筆協力しました。 <a href="/2008/08/30_webcreators">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><span class="mt-enclosure<p> mt-enclosure-image&#8221;><img decoding="async" alt="月刊ウェブ・クリエイターズ 2008年10月号" src="/img/2008/08/30_webcreators.jpg" width="200" height="150" class="mt-image-left introphoto" /></span>
+月刊ウェブ・クリエイターズ 2008年10月号（今月号）の巻頭特集「[永久保存版]使えるCSSデザインの技152」に執筆協力しました。</p>
+
+<p>JavaScriptなどは使わない、(X)HTML+CSSのみで実現するTips集という触れ込みでの巻頭特集です。会社経由で執筆のお話をいただいた時は「いい機会だな」と、2つ返事で引き受けてしまいました。</p>
+
+<p>152のTipsのうち、8つを私が書いています。他の方とネタがかぶって困るかと心配しましたが、自然とそういうトラブルは少なかったように思います。</p>
+
+<p>しばらくしたらネタの補足のエントリーでも書きます。たぶん。<br />
+今後もこういった機会があればやろう、と思っています。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2008/08/30_webcreators/feed</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>MT4導入</title>
+		<link>/2007/12/09_mt4</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 09 Dec 2007 05:39:07 +0000</pubDate>
+				<category><![CDATA[What's New?]]></category>
+		<category><![CDATA[About]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<guid isPermaLink="false">/wptest/2007/12/mt4%e5%b0%8e%e5%85%a5.php</guid>
+
+					<description><![CDATA[ようやく重い腰を上げ、MovableType4を導入しました。 SQLiteからMySQLにDBを移行したため、かなり面倒な作業になってしまいました。もう２度とやりたくない感じです（トホホ・・・）。 とりあえず、大きな発見があったこととしては、MT4が各エントリーに勝手に振るIDは振り直せるということです。これはMySQL環境だからできたことですが・・・phpMyAdminからmt_entryというテーブルを見つけて、こいつの中身を空にしちゃいます。それから改めてエントリーをインポートするだけ。 気が向いたら、別の記事に詳しくまとめるかも。今日はもう書く気力が残っていません。。 追記&#8211; 2007年4月23日（月） phpMyAdminから直接DBをいじったせいか、アーカイブのエントリーの書き出され方がおかしくなったりと怪しいトラブルが発生していました。インポートを再びする関係上、コメントやトラックバックのＩＤも振り直さなければならなかったり・・・といろいろ面倒なことになってしまい、結局ＤＢテーブルをクリアしてＭＴ4のインストールから全部やり直しましたorz 生半可な知識でＤＢを直接いじるのは危険なんだな・・・と反省。IDの振り直しの話はやはりなかったことにしといてください・・・。]]></description>
+										<content:encoded><![CDATA[<p>ようやく重い腰を上げ、MovableType4を導入しました。<br />
+SQLiteからMySQLにDBを移行したため、かなり面倒な作業になってしまいました。もう２度とやりたくない感じです（トホホ・・・）。</p>
+
+<p>とりあえず、大きな発見があったこととしては、MT4が各エントリーに勝手に振るIDは振り直せるということです。<del datetime="2007-12-16">これはMySQL環境だからできたことですが・・・phpMyAdminから<strong>mt_entry</strong>というテーブルを見つけて、こいつの中身を空にしちゃいます。それから改めてエントリーをインポートするだけ。</del></p>
+
+<p>気が向いたら、別の記事に詳しくまとめるかも。今日はもう書く気力が残っていません。。</p>
+
+<ins datetime="2007-12-16" class="postscript">
+<div class="section">
+<h3>追記<span>&#8211; 2007年4月23日（月）</span></h3>
+<p>phpMyAdminから直接DBをいじったせいか、アーカイブのエントリーの書き出され方がおかしくなったりと怪しいトラブルが発生していました。インポートを再びする関係上、コメントやトラックバックのＩＤも振り直さなければならなかったり・・・といろいろ面倒なことになってしまい、結局ＤＢテーブルをクリアしてＭＴ4のインストールから全部やり直しましたorz<br />
+生半可な知識でＤＢを直接いじるのは危険なんだな・・・と反省。IDの振り直しの話はやはりなかったことにしといてください・・・。</p>
+</div>
+</ins>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Like@Lunatic 公開</title>
+		<link>/2007/03/opening</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 21 Mar 2007 08:11:47 +0000</pubDate>
+				<category><![CDATA[What's New?]]></category>
+		<category><![CDATA[About]]></category>
+		<guid isPermaLink="false">/wptest/2007/03/likelunatic-%e5%85%ac%e9%96%8b.php</guid>
+
+					<description><![CDATA[Webクリエイターとしての自分のサイトとして、Like@Lunaticを公開します。 <a href="/2007/03/opening">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Webクリエイターとしての自分のサイトとして、Like@Lunaticを公開します。
+<abbr title="Movable Type">MT</abbr>を使うという新しい試みをコンセプトに、ブログ形式で運営をしていきます。</p>
+
+<p>Webサイト制作のコーダーという現在の私の職業から、コーディングの話題がメインになると思います。どうぞよろしくお付き合いください。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

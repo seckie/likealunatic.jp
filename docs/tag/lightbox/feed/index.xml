@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Lightbox &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/lightbox/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:17 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Lightbox &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>LightBox系スクリプト 16選</title>
+		<link>/2009/06/24_lightbox16</link>
+					<comments>/2009/06/24_lightbox16#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 23 Jun 2009 16:10:36 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Lightbox]]></category>
+		<guid isPermaLink="false">/wptest/2009/06/lightbox%e7%b3%bb%e3%82%b9%e3%82%af%e3%83%aa%e3%83%97%e3%83%88-16%e9%81%b8.php</guid>
+
+					<description><![CDATA[Lightbox系スクリプトの情報が一覧表になっているThe Lightbox Clones Matrixという素晴らしいサイトがあります。ここから自分なりに一通り見て回って、クオリティ的に使えそうなものをピックアップしてみました。 <a href="/2009/06/24_lightbox16">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Lightbox系スクリプトの情報が一覧表になっている<a href="http://planetozh.com/projects/lightbox-clones/">The Lightbox Clones Matrix</a>という素晴らしいサイトがあります。ここから一通り見て回って、自分なりに使えそうなものをピックアップしてみました。<del datetime="2009-06-25">ほとんど勢いでまとめたものなので、情報としての正確性は低いかもしれませんが、ご容赦を。</del>半分は自分用ってノリです。</p>
+
+<p>自分はLightbox系のスクリプトを選ぶ時、そのサイトに予め組み込まれている（組み込む予定の）JSライブラリで使えるかどうかを基準に選ぶことが多いです。なので、必要とするJSライブラリ別にカテゴライズして並べています。</p>
+
+<div class="section">
+<h3>ライブラリ不要</h3>
+<div class="section">
+<h4><a href="http://highslide.com/">Highslide JS</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/highslidejs.jpg"><img fetchpriority="high" decoding="async" alt="Highslide JS" src="/images/2009/06/highslidejs-thumb-300x240-67.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>&#8211;</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー、インライン、インラインフレーム、Ajax、Flash</dd>
+<dt>対象指定：</dt>
+<dd>class属性＆onclick属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://creativecommons.org/licenses/by-nc/2.5/deed.ja">CCライセンス 表示-非営利 2.5 一般</a><br />
+非商用：無償、商用-1サイト：29ドル、商用-無制限：179ドル</dd>
+<dt>備考：</dt>
+<dd>表示コンテンツのドラッグ移動が可能。Inline／Ajax／Iframe表示時には右端ドラッグでサイズ変更が可能。</dd>
+</dl>
+</div>
+<div class="section">
+<h4><a href="http://www.ibegin.com/labs/ibox/">iBox</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/ibox.jpg"><img decoding="async" alt="iBox" src="/images/2009/06/ibox-thumb-300x240-68.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>&#8211;</dd>
+<dt>対応形式：</dt>
+<dd>画像、Ajax、インライン、Youtube動画などのムービー</dd>
+<dt>対象指定：</dt>
+<dd>rel属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://www.ibegin.com/labs/ibox/#license">無償</a></dd>
+<dt>備考：</dt>
+<dd>アニメーションがなく軽量。使い勝手はThickboxみたいな感じ。</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<h3>jQuery</h3>
+<div class="section">
+<h4><a href="http://fancy.klade.lv/">FancyBox</a> <span class="memo">→オススメ</span></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/fancybox.jpg"><img decoding="async" alt="FancyBox" src="/images/2009/06/fancybox-thumb-300x240-64.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>jQuery、jQuery Easing（オプション）</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー、インライン（Flashなど含む）、Ajax、Iframe</dd>
+<dt>対象指定：</dt>
+<dd>jQueryセレクタ、rel属性（画像ギャラリー指定時）、class属性（インラインフレーム指定時）</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license">MITライセンス</a></dd>
+<dt>備考：</dt>
+<dd>jQuery Easingプラグインなしだと、ズームアニメーション時のイージング効果がなしになる。</dd>
+</dl>
+</div>
+<del datetime="2009-06-25" title="2009年6月25日 掲載削除">
+<div class="section">
+<h4><a href="http://orderedlist.com/articles/fancyzoom-meet-jquery">FancyZoom(jQuery)</a></h4>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>jQuery</dd>
+<dt>対応形式：</dt>
+<dd>画像、インライン（Flashなど含む）</dd>
+<dt>対象指定：</dt>
+<dd>jQueryセレクタ</dd>
+<dt>ライセンス：</dt>
+<dd>不明</dd>
+<dt>備考：</dt>
+<dd>ウィンドウのシャドウ部分などの透過pngパーツが、IE6では透過gifで代用されており見た目が落ちる。</dd>
+</dl>
+</div>
+</del>
+<div class="section">
+<h4><a href="http://leandrovieira.com/projects/jquery/lightbox/">jQuery lightBox plugin</a> <span class="memo">→オススメ</span></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/jquery_lightbox.jpg"><img loading="lazy" decoding="async" alt="jQuery lightBox plugin" src="/images/2009/06/jquery_lightbox-thumb-300x240-70.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>jQuery</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー</dd>
+<dt>対象指定：</dt>
+<dd>jQueryセレクタ</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://creativecommons.org/licenses/by-sa/2.5/br/deed.jaCC">ライセンス 表示-継承 2.5 ブラジル</a></dd>
+<dt>備考：</dt>
+<dd>UIは本家Lightboxと全く同じ。裏の仕組みがjQueryで動くようにアレンジされたLightbox。jQueryセレクタの指定に複数要素が該当する場合、自動的に画像ギャラリーモードになる模様。<a href="http://leandrovieira.com/projects/jquery/lightbox/#extend">本家Lightboxとは違って色々なパラメーターがあり、カスタマイズができる</a>。</dd>
+</dl>
+</div>
+<div class="section">
+<h4><a href="http://www.no-margin-for-errors.com/projects/prettyPhoto-jquery-lightbox-clone/">prettyPhoto</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/prettyphoto.jpg"><img loading="lazy" decoding="async" alt="prettyPhoto a jQuery lightbox clone" src="/images/2009/06/prettyphoto-thumb-300x240-74.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>jQuery</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー、Flash、RealMedia、インラインフレーム</dd>
+<dt>対象指定：</dt>
+<dd>rel属性、href属性のパラメータ、jQueryセレクタ、オプションでtitle属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://creativecommons.org/licenses/by/2.5/deed.ja">CCライセンス 2.5</a></dd>
+<dt>備考：</dt>
+<dd>対応形式のメディアそれぞれを混合したギャラリー表示が可能。デフォルトのスタイルは黒いUI。</dd>
+</dl>
+</div>
+<div class="section">
+<h4><a href="http://jquery.com/demo/thickbox/">ThickBox</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/thickbox.jpg"><img loading="lazy" decoding="async" alt="Thickbox" src="/images/2009/06/thickbox-thumb-300x240-78.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>jQuery</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー、インライン、インラインフレーム、Ajax</dd>
+<dt>対象指定：</dt>
+<dd>class属性、title属性、href属性のパラメータ</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license">MITライセンス</a></dd>
+<dt>備考：</dt>
+<dd>jQueryを使うLighbox系スクリプトの代表的な存在。多様な形式に対応。アニメーションはしないが、その分軽快に動作する。</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<h3>Prototype.js <ins datetime="2009-06-25">+ script.aculo.us</ins></h3>
+<del datetime="2009-06-25" title="2009年6月25日 掲載削除">
+<div class="section">
+<h4><a href="http://orderedlist.com/articles/fancyzoom-meet-prototype">FancyZoom</a></h4>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>Prototype.js、script.aculo.us</dd>
+<dt>対応形式：</dt>
+<dd>インライン</dd>
+<dt>対象指定：</dt>
+<dd>href属性</dd>
+<dt>ライセンス：</dt>
+<dd>不明</dd>
+<dt>備考：</dt>
+<dd>対象のインラインコンテンツのIDをhref属性で指定できる・・・だけ？ウィンドウのシャドウ部分などの透過pngパーツが、IE6では透過gifで代用されており見た目が落ちる。</dd>
+</dl>
+</div>
+</del>
+<ins datetime="2009-06-25" title="2009年6月25日 掲載追加">
+<div class="section">
+<h4><a href="http://www.huddletogether.com/projects/lightbox2/">Lightbox2</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/lightbox2.jpg"><img loading="lazy" decoding="async" alt="Lightbox2" src="/images/2009/06/lightbox2-thumb-300x240-97.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>Prototype.js、script.aculo.us</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー</dd>
+<dt>対象指定：</dt>
+<dd>rel属性、title属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://creativecommons.org/licenses/by/2.5/deed.ja">CCライセンス 表示 2.5 一般</a></dd>
+<dt>備考：</dt>
+<dd>元祖Lightbox。オプション設定などはないが、使い方は単純明快。</dd>
+</dl>
+</div>
+</ins>
+<div class="section">
+<h4><a href="http://www.nickstakenburg.com/projects/lightview/">Lightview</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/lightview.jpg"><img loading="lazy" decoding="async" alt="Lightview" src="/images/2009/06/lightview-thumb-300x240-71.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>Prototype.js、script.aculo.us</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー、Flash、QuickTime、Ajax、インラインフレーム、インライン</dd>
+<dt>対象指定：</dt>
+<dd>class属性、title属性、rel属性</dd>
+<dt>ライセンス：</dt>
+<dd>非商用の場合、<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.ja">CCライセンス:表示-非営利-改変禁止 3.0 Unported</a><br />
+商用の場合、<a href="http://creativecommons.org/licenses/by-nd/3.0/deed.ja">CCライセンス:表示-改変禁止 3.0</a><br />
+有償。非商用（1ドメイン）：3$、非商用（制限なし）：$15、商用（1ドメイン）：49$、商用（制限なし）：$295</dd>
+<dt>備考：</dt>
+<dd>多機能Lightbox。有償だけあってクオリティは高いが、たくさんのオプションがあるので使いこなすのは骨が折れるかも。</dd>
+</dl>
+</div>
+<div class="section">
+<h4><a href="http://www.wildbit.com/labs/modalbox/">ModalBox</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/modalbox.jpg"><img loading="lazy" decoding="async" alt="ModalBox" src="/images/2009/06/modalbox-thumb-300x240-72.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>Prototype.js、script.aculo.us</dd>
+<dt>対応形式：</dt>
+<dd>プレーンHTML（文字列）、DOMノード</dd>
+<dt>対象指定：</dt>
+<dd>href属性、title属性、onclick属性</dd>
+<dt>ライセンス：</dt>
+<dd>不明</dd>
+<dt>備考：</dt>
+<dd>画面上部からニョロっとオーバーレイボックスが出現する。導入説明が親切。</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<h3>MooTools</h3>
+<div class="section">
+<h4><a href="http://bertramakers.com/moolabs/imagezoom.php">ImageZoom</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/imagezoom.jpg"><img loading="lazy" decoding="async" alt="ImageZoom" src="/images/2009/06/imagezoom-thumb-300x240-69.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>MooTools</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー</dd>
+<dt>対象指定：</dt>
+<dd>rel属性、オプションでtitle属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.ja">CCライセンス 表示-継承 3.0 Unported</a></dd>
+<dt>備考：</dt>
+<dd>対応形式が画像のみと少ないが、ズームするアニメーションがお洒落。拡大状態を複数開けるのが個性的。</dd>
+</dl>
+</div>
+<div class="section">
+<h4><a href="http://www.phatfusion.net/multibox/">phatfusion</a> <span class="memo">→オススメ</span></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/phatfusion.jpg"><img loading="lazy" decoding="async" alt="phatfusion" src="/images/2009/06/phatfusion-thumb-300x240-73.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>MooTools v1.11</dd>
+<dt>対応形式：</dt>
+<dd>画像、Flash、QuickTime、WindowsMedia、RealMedia、MP3、Ajax、インラインフレーム、インラインHTML</dd>
+<dt>対象指定：</dt>
+<dd>スクリプト、rel属性、title属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license">MITライセンス</a></dd>
+<dt>備考：</dt>
+<dd>対応形式のメディアそれぞれを混合したギャラリー表示が可能。デフォルトのスタイルだとUIが黒い。この辺はスクリプト呼び出し時のオプションでカスタマイズ可能。多機能でクオリティ高し。</dd>
+</dl>
+</div>
+<ins datetime="2009-06-25" title="2009年6月25日 掲載追加">
+<div class="section">
+<h4><a href="http://www.coders.me/ejemplos/sexy-lightbox/">SexyLightBox</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/sexy_lightbox.jpg"><img loading="lazy" decoding="async" alt="SexyLightbox" src="/images/2009/06/sexy_lightbox-thumb-300x240-96.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>MooTools</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー</dd>
+<dt>対象指定：</dt>
+<dd>スクリプト、class属性、rel属性、title属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license">MITライセンス</a></dd>
+<dt>備考：</dt>
+<dd>画面上部からビヨーンと登場するという、変わったアニメーションが特徴的。公式サイトの字が読めない。.meというドメインがモンテネグロのドメインなので、モンテネグロのサイト・・・？</dd>
+</dl>
+</div>
+</ins>
+<div class="section">
+<h4><a href="http://www.digitalia.be/software/slimbox">Slimbox</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/slimbox.jpg"><img loading="lazy" decoding="async" alt="Slimbox" src="/images/2009/06/slimbox-thumb-300x240-76.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>MooTools 1.2</dd>
+<dt>対応形式：</dt>
+<dt>対象指定：</dt>
+<dd>スクリプト、rel属性、title属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license">MITライセンス</a></dd>
+<dt>備考：</dt>
+<dd>UIはLightboxと全く同じ。Slimというだけあってライトウェイトであることがウリらしい。スクリプトの書き方次第でダイレクトにSlimboxを呼び出すことも可能。jQueryバージョンもあるとのこと（http://www.digitalia.be/software/slimbox2）。</dd>
+</dl>
+</div>
+<div class="section">
+<h4><a href="http://gueschla.com/labs/smoothbox/">Smoothbox, Thickbox for mootools</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/smoothbox.jpg"><img loading="lazy" decoding="async" alt="Smoothbox, Thickbox for MooTools" src="/images/2009/06/smoothbox-thumb-300x240-77.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>MooTools</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー、インライン、インラインフレーム、Ajax</dd>
+<dt>対象指定：</dt>
+<dd>class属性、title属性、href属性のパラメータ</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license">MITライセンス</a></dd>
+<dt>備考：</dt>
+<dd>ThickboxのMooTool版。UIはThickBoxと同じ。IE8には非対応だった（オーバーレイ部分が真っ黒に）。</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<h3>YUI</h3>
+<div class="section">
+<h4><a href="http://thecodecentral.com/2008/01/01/yui-based-lightbox-final">YUI Based Lightbox</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/yui_lightbox.jpg"><img loading="lazy" decoding="async" alt="YUI Lightbox" src="/images/2009/06/yui_lightbox-thumb-300x240-79.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>YUI</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー</dd>
+<dt>対象指定：</dt>
+<dd>スクリプト、id属性（img要素）</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.ja">CCライセンス 表示-継承 3.0 Unported</a></dd>
+<dt>備考：</dt>
+<dd>コントロールパネルを表示されたり、画像のキャプションを入れるボックスを表示されたり。画像表示領域と、キャプションはドラッグで移動可能。</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<h3>その他</h3>
+<div class="section">
+<h4><a href="http://www.shadowbox-js.com/">Shadowbox.js</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/shadowbox.jpg"><img loading="lazy" decoding="async" alt="Shadowbox.js" src="/images/2009/06/shadowbox-thumb-300x240-75.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>基本的には不要（※）<br />
+※JSライブラリ（Adapter）を先に読み込ませると自動的に感知して、それと一緒に動作するようになる（らしい）。Adapterとして使えるのは Prototype、jQuery、MooTools (requires 1.2 Core)、Dojo Toolkit、Yahoo! User Interface Library (requires yahoo-dom-event.js)、Ext (requires ext-core.js)。</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー、イメージマップ、Flash、各種ムービー、インラインフレーム、インライン、フォーム等</dd>
+<dt>対象指定：</dt>
+<dd>スクリプト、rel属性、title属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://www.shadowbox-js.com/LICENSE">Shadowbox.js License</a><br />
+→有償。Single Developer: $20.00、Multiple Developer: $50.00</dd>
+<dt>備考：</dt>
+<dd>超高機能。アニメーションは控えめで上質感を感じさせる。スクリプト呼び出し時に引数として様々なオプションを指定可能。</dd>
+</dl>
+</div>
+</div>
+
+<p><span id="more-86"></span></p>
+
+<div class="postscript">
+<h3>追記</h3>
+<dl class="disclist">
+<dt><ins datetime="2009-06-25">2009年6月25日</ins></dt>
+<dd><ins datetime="2009-06-25"><a href="http://orderedlist.com/articles/fancyzoom-meet-prototype">FancyZoom(Prototype)</a>と<a href="http://orderedlist.com/articles/fancyzoom-meet-jquery">FancyZoom(jQuery)</a>を削除。
+<a href="http://www.huddletogether.com/projects/lightbox2/">Lightbox2</a>と<a href="http://www.coders.me/ejemplos/sexy-lightbox/">SexyLightBox</a>を追加。各ライセンス表記にリンクを追加</ins></dd>
+</dl>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2009/06/24_lightbox16/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

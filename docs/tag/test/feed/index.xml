@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Test &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/test/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:15:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Test &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>js-test-driverの使い方メモ</title>
+		<link>/2012/12/js-test-driver</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 02 Dec 2012 05:41:31 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Test]]></category>
+		<guid isPermaLink="false">/?p=934</guid>
+
+					<description><![CDATA[js-test-driverはGoogleが作った、JavaScriptをコンソールでテストするプログラム。試したのでメモを。環境はMountain Lion搭載のMacBookAir。 <a href="/2012/12/js-test-driver">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>js-test-driverはGoogleが作った、JavaScriptをコンソールでテストするプログラム。試したのでメモを。環境はMountain Lion搭載のMacBookAir。</p>
+
+<p>ダウンロード：<br />
+<a href="http://code.google.com/p/js-test-driver/downloads/list">http://code.google.com/p/js-test-driver/downloads/list</a></p>
+
+<p>使い方：<br />
+<a href="http://code.google.com/p/js-test-driver/wiki/GettingStarted">http://code.google.com/p/js-test-driver/wiki/GettingStarted</a></p>
+
+<p>参考になる日本語記事：<br />
+<a href="http://0-9.tumblr.com/post/15614207218/js-jstestdriver">http://0-9.tumblr.com/post/15614207218/js-jstestdriver</a><br />
+<a href="http://everyday-eachday.blogspot.jp/2011/12/jstestdriver.html">http://everyday-eachday.blogspot.jp/2011/12/jstestdriver.html</a></p>
+
+<p>ダウンロードページで <span class="file">JsTestDriver-x.x.x.jar</span> ってやつを落とす。ダウンロードしたファイルを <span class="path">~/bin/JsTestDriver.jar</span> みたいなパスに置く。コンソールから以下のコマンドでサーバーを起動。</p>
+
+<pre><code>$ java -jar ~/bin/JsTestDriver.jar --port 4224
+</code></pre>
+
+<p>ポート番号は適当でいいらしい。コマンド成功したら、適当なブラウザで <span class="url">http://localhost:4224/</span> を開く。そうすると</p>
+
+<ul>
+<li>Capture This Browser</li>
+<li>Capture This Browser in strict mode</li>
+</ul>
+
+<p>ってテキストリンクが並んでる画面になるので好きな方をクリック。（普通は <em>Capture This Browser</em> でいいと思われ）そうするとそのブラウザをウォッチしているような状態になる。で、そのブラウザのエンジンでテストが実行される。</p>
+
+<p>実際にテストしたいプロジェクトのディレクトリを作る。例えば以下のような構造にする。</p>
+
+<pre><code>|- jsTestDriver.conf
+|- src
+|--- hoge.js
+|- test
+|--- hoge_test.js
+</code></pre>
+
+<p><span class="file">hoge.js</span> が書きたいJavaScript。<span class="file">hoge_test.js</span> がhoge.jsに対するテストを書くファイル。<span class="file">jsTestDriver.conf</span> がjs-test-driverのためのファイル。テキストエディタで開き、以下のように記述。</p>
+
+<pre><code>server: http://localhost:4224/
+load:
+- src/*.js
+- test/*.js
+</code></pre>
+
+<p>コンソールに戻る。さっきサーバーを起動したプロセスウィンドウはそのままにしといて、新しいプロセスを起動。そっちで</p>
+
+<pre><code>$ cd プロジェクトのディレクトリへ
+$ java -jar ~/bin/JsTestDriver.jar --tests all
+</code></pre>
+
+<p>するとテストが走って <span class="file">hoge_test.js</span> に書いたテスト結果が表示される…予定なんだけど、この時点で <span class="file">hoge_test.js</span> には何も書いてないのでエラーになるはず。<br />
+というわけで簡単なコードを書いてみる。</p>
+
+<section>
+### src/hoge.js
+    function jsdriversample() {
+        return true;
+    }
+</section>
+
+<section>
+### test/hoge_test.js
+    TestCase(&#8216;jsdriversampletest&#8217;, {
+        &#8216;test should return true&#8217;: function () {
+            var result = jsdriversample();
+            assertTrue(result);
+        }
+    });
+</section>
+
+<p>で、コンソールでコマンドを叩いてテストする。</p>
+
+<pre><code>$ java -jar ~/bin/JsTestDriver.jar --tests all
+</code></pre>
+
+<p>ちなみにここで<code>'test should return true'</code>っていうのは各テスト単位の名前で、エラー時にコンソールに出力される。ちなみに文字列だからってマルチバイトは使えない。</p>
+
+<p><code>assertなんちゃら</code>って関数でテストを実行してるんだけど、使えるassertionの一覧は以下に載ってる。<br />
+<a href="http://code.google.com/p/js-test-driver/wiki/Assertions">http://code.google.com/p/js-test-driver/wiki/Assertions</a><br />
+例えば <code>assertTrue</code> だったら、引数の値が <code>true</code> だったらテスト合格になる。</p>
+
+<p>まだちょっと使ってみただけなので、もうちょい勉強して実務に生かしたい。</p>
+
+<section class="postscript">
+### 2012-12-06 追記
+テストケースのメソッド名（上記の例では <code>'test should return true'</code> となっているところ）は必ず**<code>test</code>**で始まらないと、認識されないようです。
+</section>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

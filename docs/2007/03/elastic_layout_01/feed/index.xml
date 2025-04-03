@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: エラスティックレイアウトを採用してみました	</title>
+	<atom:link href="/2007/03/elastic_layout_01/feed" rel="self" type="application/rss+xml" />
+	<link>/2007/03/elastic_layout_01</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:54 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: ProjectDD Blog		</title>
+		<link>/2007/03/elastic_layout_01/comment-page-1#comment-2</link>
+
+		<dc:creator><![CDATA[ProjectDD Blog]]></dc:creator>
+		<pubDate>Mon, 09 Apr 2007 14:33:59 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/03/%e3%82%a8%e3%83%a9%e3%82%b9%e3%83%86%e3%82%a3%e3%83%83%e3%82%af%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%82%92%e6%8e%a1%e7%94%a8%e3%81%97%e3%81%a6%e3%81%bf%e3%81%be%e3%81%97%e3%81%9f.php#comment-2</guid>
+
+					<description><![CDATA[&lt;p&gt;&lt;strong&gt;ブログ改装中です&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;週末、ブログのデザイン変更をしました。 このブログが先月のCSS Nite in...&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p><strong>ブログ改装中です</strong></p>
+
+<p>週末、ブログのデザイン変更をしました。 このブログが先月のCSS Nite in&#8230;</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

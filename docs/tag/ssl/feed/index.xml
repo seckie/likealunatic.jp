@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>SSL &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/ssl/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:11:38 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>SSL &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Let&#8217;s Encrypt でサイトの SSL 化</title>
+		<link>/2017/05/lets-encrypt-ssl</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Thu, 18 May 2017 10:29:31 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[SSL]]></category>
+		<guid isPermaLink="false">/?p=1253</guid>
+
+					<description><![CDATA[Let&#8217;s Entrypt という素晴らしいサービスが無料のSSL証明書が提供していると同僚に教えてもらったので、試しにこのサイトに導入することにしました。 このエントリーは導入過程のメモです。 Let&#8217;s Encrypt は Certbot というコマンドラインインターフェースを持っていて、証明書の取得とインストール、更新までコマンドでできるようになっているとのこと。なんとまあ便利ですね。 証明書の有効期限は90日間しかないので、crontab などで有効期限前に自動で更新していく運用が望ましいみたいです。ではそうしていきましょう。 事前に以下の準備をしておきます。 Really Simple SSL プラグインを WordPress にインストールしておく ファイヤーウォールがあるならインバウンド 443 ポートを開けておく また、環境としてはさくらのVPS（CentOS 6）で Nginx + WordPress を動かしている状態です。 証明書のインストールとWebサーバーの設定 サーバーに SSH でログインして、作業開始。 certbot-auto スクリプトをダウンロードして、 /usr/bin に移動、実行権限をつけて、実行。ウェブサーバーは Nginx なので、--nginx オプションをつける。 $ wget https://dl.eff.org/certbot-auto $ sudo mv ./certbot-auto /usr/bin/certbot-auto $ sudo chmod a+x /usr/bin/certbot-auto $ sudo certbot-auto --nginx これでインストールウィザードが始まる。 以下のくだりでは「2」と答えておくと、Nginx 設定ファイルにリダイレクトの設定を勝手に書き込んでくれる。 Please choose whether HTTPS access is required or optional. ------------------------------------------------------------------------------- 1: Easy - Allow both HTTP and HTTPS access to these sites 2: Secure - Make all requests redirect to secure HTTPS access ------------------------------------------------------------------------------- 設定を反映させる。 $ sudo service nginx reload この状態でもうすでにSSL化はできていた。https でサイトにアクセスしてみると以下のような状況。 http 接続を https 接続に強制リダイレクトをかける。 certbot-auto が /etc/nginx/conf.d/default.conf に設定を書き込んでいるが、コメントアウトされているのでそれを外して有効にする。 # Redirect &#8230; <a href="/2017/05/lets-encrypt-ssl">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="https://letsencrypt.org/">Let&#8217;s Entrypt</a> という素晴らしいサービスが無料のSSL証明書が提供していると同僚に教えてもらったので、試しにこのサイトに導入することにしました。<br />
+このエントリーは導入過程のメモです。</p>
+
+<p>Let&#8217;s Encrypt は <a href="https://certbot.eff.org/">Certbot</a> というコマンドラインインターフェースを持っていて、証明書の取得とインストール、更新までコマンドでできるようになっているとのこと。なんとまあ便利ですね。</p>
+
+<p>証明書の有効期限は90日間しかないので、crontab などで有効期限前に自動で更新していく運用が望ましいみたいです。ではそうしていきましょう。</p>
+
+<p>事前に以下の準備をしておきます。</p>
+
+<ul>
+<li><a href="https://ja.wordpress.org/plugins/really-simple-ssl/">Really Simple SSL</a> プラグインを WordPress にインストールしておく</li>
+<li>ファイヤーウォールがあるならインバウンド 443 ポートを開けておく</li>
+</ul>
+
+<p>また、環境としては<a href="http://vps.sakura.ad.jp/">さくらのVPS</a>（CentOS 6）で Nginx + WordPress を動かしている状態です。</p>
+
+<h2>証明書のインストールとWebサーバーの設定</h2>
+
+<p>サーバーに SSH でログインして、作業開始。<br />
+certbot-auto スクリプトをダウンロードして、 <code>/usr/bin</code> に移動、実行権限をつけて、実行。ウェブサーバーは Nginx なので、<code>--nginx</code> オプションをつける。</p>
+
+<pre><code class="bash">$ wget https://dl.eff.org/certbot-auto
+$ sudo mv ./certbot-auto /usr/bin/certbot-auto
+$ sudo chmod a+x /usr/bin/certbot-auto
+$ sudo certbot-auto --nginx
+</code></pre>
+
+<p>これでインストールウィザードが始まる。
+以下のくだりでは「2」と答えておくと、Nginx 設定ファイルにリダイレクトの設定を勝手に書き込んでくれる。</p>
+
+<pre><code>Please choose whether HTTPS access is required or optional.
+-------------------------------------------------------------------------------
+1: Easy - Allow both HTTP and HTTPS access to these sites
+2: Secure - Make all requests redirect to secure HTTPS access
+-------------------------------------------------------------------------------
+</code></pre>
+
+<p>設定を反映させる。</p>
+
+<pre><code>$ sudo service nginx reload
+</code></pre>
+
+<p>この状態でもうすでにSSL化はできていた。https でサイトにアクセスしてみると以下のような状況。</p>
+
+<p><a href="/wp-content/uploads/2017/05/b92e66e39f0d901ea913a4d15651ce33.png"><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2017/05/b92e66e39f0d901ea913a4d15651ce33-1024x868.png" alt="SSL証明書を表示確認しているところ" width="584" height="495" class="alignnone size-large wp-image-1254" srcset="/wp-content/uploads/2017/05/b92e66e39f0d901ea913a4d15651ce33-1024x868.png 1024w, /wp-content/uploads/2017/05/b92e66e39f0d901ea913a4d15651ce33-300x254.png 300w, /wp-content/uploads/2017/05/b92e66e39f0d901ea913a4d15651ce33-768x651.png 768w, /wp-content/uploads/2017/05/b92e66e39f0d901ea913a4d15651ce33-354x300.png 354w, /wp-content/uploads/2017/05/b92e66e39f0d901ea913a4d15651ce33.png 1812w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+
+<p>http 接続を https 接続に強制リダイレクトをかける。<br />
+certbot-auto が <code>/etc/nginx/conf.d/default.conf</code> に設定を書き込んでいるが、コメントアウトされているのでそれを外して有効にする。</p>
+
+<pre><code class="git">     # Redirect non-https traffic to https
+-    # if ($scheme != "https") {
+-    #     return 301 https://$host$request_uri;/
+-    # } # managed by Certbot
++    if ($scheme != "https") {
++        return 301 https://$host$request_uri;/
++    } # managed by Certbot
+</code></pre>
+
+<p>設定を反映させる。</p>
+
+<pre><code>$ sudo service nginx reload
+</code></pre>
+
+<p>最後に自動更新の設定。<br />
+毎週日曜日の5時に更新処理が走るように設定した例。</p>
+
+<pre><code class="bash">$ sudo crontab -e
+
+0 5 * * 0 certbot-auto renew --post-hook "service nginx reload" &gt;/dev/null 2&gt;&amp;1
+</code></pre>
+
+<h2>Really Simple SSL プラグインを使う</h2>
+
+<p>インストールしてアクティベートすると以下のようなメッセージが表示される。</p>
+
+<p><a href="/wp-content/uploads/2017/05/aa90f7af9af23697da2541a0e33e9b7e.png"><img decoding="async" src="/wp-content/uploads/2017/05/aa90f7af9af23697da2541a0e33e9b7e-1024x788.png" alt="Relly Simple SSL Plugin" width="584" height="449" class="alignnone size-large wp-image-1255" srcset="/wp-content/uploads/2017/05/aa90f7af9af23697da2541a0e33e9b7e-1024x788.png 1024w, /wp-content/uploads/2017/05/aa90f7af9af23697da2541a0e33e9b7e-300x231.png 300w, /wp-content/uploads/2017/05/aa90f7af9af23697da2541a0e33e9b7e-768x591.png 768w, /wp-content/uploads/2017/05/aa90f7af9af23697da2541a0e33e9b7e-390x300.png 390w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+
+<p>「Go ahead, activate SSL!」ボタンを押す。すると以下のようなメッセージが表示される。</p>
+
+<pre><code>SSL activated!  Don't forget to change your settings in Google Analytics en Webmaster tools.  More info.
+</code></pre>
+
+<p>えっと…、本当に簡単だな…。<br />
+Google Analytics と Webmaster tools の面倒も見ろとな。あとでね。</p>
+
+<p>以上です。</p>
+
+<hr />
+
+<p>P.S.</p>
+
+<p>URLが変わるので、はてブ数などはリセットされてしまいます。まぁそれはそうだわな。<br />
+<a href="http://b.hatena.ne.jp/search/text?q=likealunatic.jp">本文「likealunatic&#46;jp」を検索 &#45; はてなブックマーク</a></p>
+
+<hr />
+
+<h2>References</h2>
+
+<ul>
+<li><a href="https://letsencrypt.org/">Let&#8217;s Encrypt &#45; Free SSL/TLS Certificates</a></li>
+<li><a href="https://certbot.eff.org/">Certbot</a></li>
+<li><a href="https://letsencrypt.jp/">Let&#8217;s Encrypt 総合ポータル</a></li>
+<li><a href="http://knowledge.sakura.ad.jp/knowledge/5573/">Let’s EncryptのSSL証明書で、安全なウェブサイトを公開 &#45; さくらのナレッジ</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

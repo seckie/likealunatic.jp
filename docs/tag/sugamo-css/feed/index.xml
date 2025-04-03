@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Sugamo.css &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/sugamo-css/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:18 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Sugamo.css &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Sugamo.css第5回に参加したメモ</title>
+		<link>/2009/06/21_sugamocss5</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 21 Jun 2009 05:20:34 +0000</pubDate>
+				<category><![CDATA[Event]]></category>
+		<category><![CDATA[Sugamo.css]]></category>
+		<guid isPermaLink="false">/wptest/2009/06/sugamo-css%e7%ac%ac5%e5%9b%9e%e3%81%ab%e5%8f%82%e5%8a%a0%e3%81%97%e3%81%9f%e3%83%a1%e3%83%a2.php</guid>
+
+					<description><![CDATA[Sugamo.css 第5回に参加してきました <a href="/2009/06/21_sugamocss5">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://archiva.jp/web/sugamo_css/sugamo_css.html">Sugamo.css</a> 第5回に参加してきました。参加者全員、初めてお会いする方だったのでちょっと緊張（CSS Niteとかでお見かけした方とかもいました）。</p>
+
+<p>会の雰囲気は終始和やか。とは言え、JavaScript/HTML5/SVG/perl/各種エディタ/デザインパターン/モジュール化などなどについて高度な技術話が飛び交っておりまして、ショボい私は半分くらい着いていけませんでした（笑）<br />
+ルノアールの会議室で行われた本編4時間はあっという間に過ぎ去り、近くの居酒屋で2次会がありました。以下、本編と2次会がごっちゃになっていますが、あいまいな記憶の中から拾った会話のメモ。リアルタイムにメモっていたものではないので、間違いがあったらサーセン・・・。</p>
+
+<div class="section">
+<h3>いろいろ</h3>
+<ul class="disclist">
+<li>大企業にいないと分からないこともある。<br />
+レガシーブラウザ対応とか、複数人のチームでやる仕事とか。</li>
+<li>某社ではトレーナーがついてイロイロお仕事を教えてくれる</li>
+<li>某社では最近、ページのスピードチェックをするようになったよ<br />
+<a href="http://code.google.com/p/page-speed/">page-speed &#8211; Google Code</a></li>
+<li>この不況だというのに皆バンバン転職してるよね</li>
+<li><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4839914192/likealunatic-22/ref=nosim/" name="amazletlink">ウェブ戦略としての「ユーザーエクスペリエンス」</a>は内容は良いが訳の評価が良くないので原著を買った方が良い（英語が読めればｗ）</li>
+<li><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4102177213/likealunatic-22/ref=nosim/" name="amazletlink">複雑系</a>って本はおもしろいよ！</li>
+<li>kosei27さんが<a href="https://addons.mozilla.org/ja/firefox/addon/394">ViewSourthWith</a>を使ってCSS／JSのソースをいっぺんに開いていたのが印象的でした。どんなサイトでも一瞬で丸裸（？）に。</li>
+<li>韓国ではMicrosoftのシェアが超高い（90％後半・・・？）のでIEでしか使えないサイトが多い。</li>
+<li>韓国の人は流行ものが大好き。最近はMacが流行る傾向も。よってIE以外でも使えるサイトも増えつつある。</li>
+<li>この業種はネットワークゲームプレイヤーが意外に多い。ファンサイトの管理者だった方がちらほら（私も含めて）。</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>.Sigさんからコーダーな方々へ質問</h3>
+<p>仕事が自分に降りてくる段階で、デザインPSD以外にコンテンツに関する詳細な指示書（ワイヤーフレーム的なもの？）はもらうか</p>
+<ul class="disclist">
+<li>詳細なっていうのは例えばフォームのここの要素にこういうラベル（label要素）を付けてね、というような内容のもの</li>
+<li>それって指示者がコーディングわかってないと書けない</li>
+<li>まずサイトマップは必要でしょ</li>
+<li>デザインPSDはいっぺんにできあがったものがもらうわけではなくて、<span title="さみだれ">五月雨</span>に来ることがほとんどなので、サイト全体の設計をかっちりできることは少ない。五月雨に来たものを順々に、こっちが空気を読みながら組んでいく。</li>
+<li>指示者（ここではディレクターのことかな）にはそれなりにやることがたくさんある。各ポジションの歩み寄りも必要（それが「空気を読む」ってことかと）。それ（指示書）を要求するような職場はエンジニアが偉すぎなんじゃないか。</li>
+</ul>
+</div>
+
+<div class="section">
+<h3><a href="http://gyauza.egoism.jp/clip/archives/2009/05/javascript-oop1/">まんじゅう</a>（prototypeプロパティを使ったオブジェクト指向JavaScript）の話とか</h3>
+<ul class="disclist">
+<li>中身を意識しなくても使えるところがすごいよ！工場の中身を知らなくても自動車ができる、みたいな。</li>
+<li>同じものを何度も作るようなときは1個1個作るより、prototype使った方が軽いよ</li>
+<li>高速化と言えば<a href="http://d.hatena.ne.jp/amachang/20071010/1192012056">一行で IE の JavaScript を高速化する方法</a>とかあったよね。でも実際のページでは大して変わらないとか。高速化って体感できる程であることってあまりない。</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>エディタの話とか</h3>
+<p>Sig.さんからVimの基本操作についてレクチャーがあり、その周辺でエディタ話が盛り上がってました。</p>
+<ul class="disclist">
+<li>VimやEmacsはコミュニティが熱いよ！TwitterやIRCなどもエディタでやっちゃうすごい人（？）もいるよ！</li>
+<li>Emacsはホントなんでも（API叩いてウェブサービスを使ったり、ガジェットを表示させたり）できる。Vimは7になってスクリプトが使えるようになっていろいろできるようになった。</li>
+<li>MacでVimを使うにはコンソールから「vim」って入力して立ち上げるvimと、<a href="http://code.google.com/p/macvim-kaoriya/">MacVim</a>がある。コンソールから使うvimは<a href="http://www.google.co.jp/search?hl=ja&amp;safe=off&amp;rlz=1B3GGGL_jaJP218JP219&amp;q=mac+osx+vim+%E6%97%A5%E6%9C%AC%E8%AA%9E&amp;btnG=%E6%A4%9C%E7%B4%A2&amp;lr=">日本語の扱いをどうするかが肝</a>。</li>
+<li><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774120189/likealunatic-22/ref=nosim/" name="amazletlink">ViIMproved‐Vim完全バイブル</a>ってもう絶版・・・？</li>
+<li>秀丸とEmEditorはも根強い人気がある。同僚の作ったマクロで開発することもあるとか。</li>
+<li>秀丸ってEmEditorに比べて重くない？</li>
+<li>テンプレート機能を使いたいのでDreamweaverは手放せないよ</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>技術ネタの発表</h3>
+<p>yomotsuさんから「モニターを逆さまに置いている人用 Web サービス」が発表になりました。Googleのトップが上下逆さまになって表示されちゃいます（それで普通に使える）。SVGとかcanvasとかforeignObjectとかを駆使して実現しているらしいです。<br />
+Operaだと重くなるとか。IEは別の方法（filterとか）を使ってやっているとか。<br />
+新しいことに挑戦するってスバラシイ！</p>
+</div>
+
+<div class="section">
+<h3>感想</h3>
+<p>ついていけない話が多かったのでかなり凹みましたが、いい刺激になりました。結構身近なところにすごい人っているものです。追いつけ追い越せで私もがんばります。それから、エンジニアってやっぱりエディタの話で盛り上がるんだってことを再確認（笑）<br />
+主催のSig.さん、参加者の皆様ありがとうございました。</p>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
