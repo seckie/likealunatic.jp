@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Event &#8211; Like@Lunatic</title>
+	<atom:link href="/category/event/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Event &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>イベント参加メモ: kiitok Career Market Vol.1</title>
+		<link>/2020/02/kiitok-career-market-vol-1</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Sun, 02 Feb 2020 15:08:40 +0000</pubDate>
+				<category><![CDATA[Event]]></category>
+		<category><![CDATA[Career]]></category>
+		<guid isPermaLink="false">/?p=1422</guid>
+
+					<description><![CDATA[2/1（土）に Career Market &#124; mixi、CA、DMM等のメガベンとスタートアップのエンジニアが集い、キャリアを語るカンファレンス に参加してきました。 &#8220;Vol.1 メガベンとスタートアップで得られるキャリア資産の違いとは？&#8221; とも題されており、メガベンチャーやスタートアップで活躍されているエンジニア出身の偉い人や現役エンジニアの方々が登壇されていろいろ語る、というものでした。 当日取ったメモをポストします。 Keynote Session: メガベンチャー/スタートアップでのエンジニアのキャリパスのすべてとその歩み方 転職／退職したい理由とは 新しいものに惹かれているのか？今の環境から離れたいのか？ その技術を極めたいならコミュニティにいけばいい。その技術を使ったたくさんの人が使うサービスを作りたいならその会社に行けばいい 環境から離れるタイミング 未来が自分の想像できる範囲になると離れる人もいれば、未来が見えないと不安になる人もいる 自分にとってストレッチの効いたミッションがその環境になくなったら 成長するとスコープが大きくなる 何をやりたいのか？ 長期的な視点と、短期的な視点が必要 入るための道具と、入ってから得られる道具は違う 道具を目的に合わせていったん整理する 入るための道具は一本強いのがあれば大丈夫では 意味ない筋肉はあまりないけど、見せる筋肉はここだけ、みたいな これやって意味あるのかな？と思うより、信じて行うことが大事 やってみたら意味があったこと マーケティングとか。昔はバカにしていた 人と比較するのはやめましょう。しかしポジティブな人たちと一緒に働くことが重要 お互いに何が強いのか尊重しあえるチームがヘルシー いいやつになること。口角をあげよう。話しかけられるような人になろう Give First 相手が論理的に話しているのか、感情的に話しているのか。慰めてほしいのか、アドバイスがほしいのかを見極めて話そう 相手から思わしくない反応があるときもあるが「こんなにしてやってるのに」と思った時点で本当のGiveではない。Giveし続けることが大事。 Session1: メガベンとスタートアップの現場の本音。採用、異動、開発現場、組織文化、給与、評価についてポジもネガも包み隠さず話します どんな人が採用されやすいのか？ 採用基準は？ その人がチームに入ったときに何が起きるのか、想像できること 自走できるかどうか 型を身につけているかどうか。軸足は残してもらって、プラスチャレンジをしてもらいたい スタートアップはそれぞれの強みをいかしてチームで進んでいけることが重要 面接でどんな質問してる？ どんな瞬間が嬉しいか？ 成果とアプローチどちらか一個でいいので、すごいのを教えてください よくあるのが、成果なんだけどチームの成果です、ってパターン 個人の話を語ってほしい その人の得意技はなんなのか？ ビジネスに対する理解や興味はどのくらいあるか？ チームメートにどこを頼られますか？ 開発言語やツールはどうやって決まるのか 現場の声は比較的反映される（CA） どっかの部署で使ってみて、うまくいったら全社に展開するパターンが多い どれだけ再利用できるのか？（EXAWIZARDS） ドキュメンテーション必須 有識者が決定したら、議論の余地はない 開発組織の文化 自分が言ったものが伝わらない前提でコミュニケーションする（EXAWIZARDS） 成果物をきちんと計測／数値化して、自分の仕事に自信を持ってもらう 評価制度 技術的に難易度が高いことへの挑戦、ビジネスの成功は分離して考える（EXAWIZARDS） 評価はしない。フィードバックはする（PLAID） ここ1、2年でようやく整ってきた。グレード制。透明性を重視（CA） 第二新卒の採用基準 いまの環境がいやだ！という人は、自分の会社に来てもそうなってしまうのではないか、と思ってしまう 個人でアウトプットしている人 技術領域の広げ方 一年に一つ新しいことをやるといい。同時に複数のことはやらない 尖っていないから表に出てないけど、手広くやって社内で活躍している人も多い（CA） スタートアップは何でもやらなきゃいけない。でも軸がある人の方が良い Session2: なぜ私はこのキャリアパスを歩んできたか？スタートアップとメガベンキャリアを選択してきた第一線エンジニアに聞く 戦略性：そのキャリア、狙ってましたか？ 掛け算的なキャリアにすべし キャリアの意思決定 今後自分がやりたい領域にいけば。自分の場合はスマホシフトの時期に、それにちゃんと向き合っている会社へ行った（黒木さん） やりきった感。何をやりたいんだ自分は、となった時期があったが、どこに行っていいかわからなかったので転職をいったんやめた。プライベートを充実させ、悩みから離れた。社内転職して気分を変えた。（二串さん） 120％頑張れば届く、ところにチャレンジする。それ以上ストレッチすると失敗する。手の届くところを高くするために、日々精進すべし 転職するなら、なぜこの会社を辞めたいのか。なぜこの会社に入りたいのか。これがちゃんと説明できるべき Session3: 2025年までのエンジニア生存戦略 この過去5年で起きているトレンドの変化 オンプレがクラウドになった。いろんなことがソフトウェアに飲み込まれた Firebase とかが出てきて、バックエンドエンジニアへの需要に変化が？ メルカリ筆頭にスタートアップ増えた。資金調達とか デジタルトランスフォーメーション Horizontal Saas はレッドオーシャン化した。Private な Saas とか、ターゲットを絞った Saas が流行 需要の変化 オフショアを活用すると、その単価と競争しないといけない その領域、その分野しかできない、となると需要は減る 掛け算ができていないと需要は減る 自分で企画はできないけども、事業は理解できる、とかでないと。技術だけできるワガママなエンジニアはもう生き残れない 技術アンテナが立っていることが重要。Java/PHP をやっていること自体は悪くない。ただ、海外にライバルが多い システム全体を設計できるか？が重要 どれだけシステムの目的志向で動けているか 技術的な知識やドメインの知識は必要条件であって、十分条件ではない サービスを届けられて、事業が成功すれば、最悪知らなくていい。知っていないと普通はできないから知るべき、というだけ ソフトウェアがすべてを飲み込むことで、大きなことを小さなチームでできるようになった コミュニケーション能力があって、好奇心を持つこと。そうでないとチーム内で浮いてしまう。9割ディスカッションしていて、1割作業する、とか、極端に言えばその方がいい &#8230; <a href="/2020/02/kiitok-career-market-vol-1">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>2/1（土）に <a href="https://kiitok-careemarket.studio.design/">Career Market | mixi、CA、DMM等のメガベンとスタートアップのエンジニアが集い、キャリアを語るカンファレンス</a> に参加してきました。<br />
+<strong>&#8220;Vol.1 メガベンとスタートアップで得られるキャリア資産の違いとは？&#8221;</strong> とも題されており、メガベンチャーやスタートアップで活躍されているエンジニア出身の偉い人や現役エンジニアの方々が登壇されていろいろ語る、というものでした。<br />
+当日取ったメモをポストします。</p>
+
+<hr />
+
+<h2>Keynote Session: メガベンチャー/スタートアップでのエンジニアのキャリパスのすべてとその歩み方</h2>
+
+<p>転職／退職したい理由とは</p>
+
+<ul>
+<li>新しいものに惹かれているのか？今の環境から離れたいのか？</li>
+<li>その技術を極めたいならコミュニティにいけばいい。その技術を使ったたくさんの人が使うサービスを作りたいならその会社に行けばいい</li>
+</ul>
+
+<p>環境から離れるタイミング</p>
+
+<ul>
+<li>未来が自分の想像できる範囲になると離れる人もいれば、未来が見えないと不安になる人もいる</li>
+<li>自分にとってストレッチの効いたミッションがその環境になくなったら
+
+<ul>
+<li>成長するとスコープが大きくなる</li>
+</ul></li>
+<li>何をやりたいのか？
+
+<ul>
+<li>長期的な視点と、短期的な視点が必要</li>
+</ul></li>
+<li>入るための道具と、入ってから得られる道具は違う
+
+<ul>
+<li>道具を目的に合わせていったん整理する</li>
+<li>入るための道具は一本強いのがあれば大丈夫では</li>
+<li>意味ない筋肉はあまりないけど、見せる筋肉はここだけ、みたいな</li>
+<li>これやって意味あるのかな？と思うより、信じて行うことが大事</li>
+</ul></li>
+<li>やってみたら意味があったこと
+
+<ul>
+<li>マーケティングとか。昔はバカにしていた</li>
+</ul></li>
+<li>人と比較するのはやめましょう。しかしポジティブな人たちと一緒に働くことが重要</li>
+<li>お互いに何が強いのか尊重しあえるチームがヘルシー</li>
+<li>いいやつになること。口角をあげよう。話しかけられるような人になろう</li>
+<li>Give First
+
+<ul>
+<li>相手が論理的に話しているのか、感情的に話しているのか。慰めてほしいのか、アドバイスがほしいのかを見極めて話そう</li>
+<li>相手から思わしくない反応があるときもあるが「こんなにしてやってるのに」と思った時点で本当のGiveではない。Giveし続けることが大事。</li>
+</ul></li>
+</ul>
+
+<h2>Session1: メガベンとスタートアップの現場の本音。採用、異動、開発現場、組織文化、給与、評価についてポジもネガも包み隠さず話します</h2>
+
+<p>どんな人が採用されやすいのか？</p>
+
+<ul>
+<li>採用基準は？
+
+<ul>
+<li>その人がチームに入ったときに何が起きるのか、想像できること</li>
+<li>自走できるかどうか</li>
+<li>型を身につけているかどうか。軸足は残してもらって、プラスチャレンジをしてもらいたい</li>
+<li>スタートアップはそれぞれの強みをいかしてチームで進んでいけることが重要</li>
+</ul></li>
+<li>面接でどんな質問してる？
+
+<ul>
+<li>どんな瞬間が嬉しいか？</li>
+<li>成果とアプローチどちらか一個でいいので、すごいのを教えてください
+
+<ul>
+<li>よくあるのが、成果なんだけどチームの成果です、ってパターン</li>
+<li>個人の話を語ってほしい</li>
+</ul></li>
+<li>その人の得意技はなんなのか？</li>
+<li>ビジネスに対する理解や興味はどのくらいあるか？</li>
+<li>チームメートにどこを頼られますか？</li>
+</ul></li>
+<li>開発言語やツールはどうやって決まるのか
+
+<ul>
+<li>現場の声は比較的反映される（CA）
+
+<ul>
+<li>どっかの部署で使ってみて、うまくいったら全社に展開するパターンが多い</li>
+</ul></li>
+<li>どれだけ再利用できるのか？（EXAWIZARDS）
+
+<ul>
+<li>ドキュメンテーション必須</li>
+<li>有識者が決定したら、議論の余地はない</li>
+</ul></li>
+</ul></li>
+<li>開発組織の文化
+
+<ul>
+<li>自分が言ったものが伝わらない前提でコミュニケーションする（EXAWIZARDS）</li>
+<li>成果物をきちんと計測／数値化して、自分の仕事に自信を持ってもらう</li>
+</ul></li>
+<li>評価制度
+
+<ul>
+<li>技術的に難易度が高いことへの挑戦、ビジネスの成功は分離して考える（EXAWIZARDS）</li>
+<li>評価はしない。フィードバックはする（PLAID）</li>
+<li>ここ1、2年でようやく整ってきた。グレード制。透明性を重視（CA）</li>
+</ul></li>
+<li>第二新卒の採用基準
+
+<ul>
+<li>いまの環境がいやだ！という人は、自分の会社に来てもそうなってしまうのではないか、と思ってしまう</li>
+<li>個人でアウトプットしている人</li>
+</ul></li>
+<li>技術領域の広げ方
+
+<ul>
+<li>一年に一つ新しいことをやるといい。同時に複数のことはやらない</li>
+<li>尖っていないから表に出てないけど、手広くやって社内で活躍している人も多い（CA）</li>
+<li>スタートアップは何でもやらなきゃいけない。でも軸がある人の方が良い</li>
+</ul></li>
+</ul>
+
+<h2>Session2: なぜ私はこのキャリアパスを歩んできたか？スタートアップとメガベンキャリアを選択してきた第一線エンジニアに聞く</h2>
+
+<h3>戦略性：そのキャリア、狙ってましたか？</h3>
+
+<ul>
+<li>掛け算的なキャリアにすべし</li>
+</ul>
+
+<h3>キャリアの意思決定</h3>
+
+<ul>
+<li>今後自分がやりたい領域にいけば。自分の場合はスマホシフトの時期に、それにちゃんと向き合っている会社へ行った（黒木さん）</li>
+<li>やりきった感。何をやりたいんだ自分は、となった時期があったが、どこに行っていいかわからなかったので転職をいったんやめた。プライベートを充実させ、悩みから離れた。社内転職して気分を変えた。（二串さん）</li>
+<li>120％頑張れば届く、ところにチャレンジする。それ以上ストレッチすると失敗する。手の届くところを高くするために、日々精進すべし</li>
+<li>転職するなら、なぜこの会社を辞めたいのか。なぜこの会社に入りたいのか。これがちゃんと説明できるべき</li>
+</ul>
+
+<h2>Session3: 2025年までのエンジニア生存戦略</h2>
+
+<p>この過去5年で起きているトレンドの変化</p>
+
+<ul>
+<li>オンプレがクラウドになった。いろんなことがソフトウェアに飲み込まれた</li>
+<li>Firebase とかが出てきて、バックエンドエンジニアへの需要に変化が？</li>
+<li>メルカリ筆頭にスタートアップ増えた。資金調達とか</li>
+<li>デジタルトランスフォーメーション</li>
+<li>Horizontal Saas はレッドオーシャン化した。Private な Saas とか、ターゲットを絞った Saas が流行
+需要の変化</li>
+<li>オフショアを活用すると、その単価と競争しないといけない
+
+<ul>
+<li>その領域、その分野しかできない、となると需要は減る</li>
+<li>掛け算ができていないと需要は減る</li>
+</ul></li>
+<li>自分で企画はできないけども、事業は理解できる、とかでないと。技術だけできるワガママなエンジニアはもう生き残れない</li>
+<li>技術アンテナが立っていることが重要。Java/PHP をやっていること自体は悪くない。ただ、海外にライバルが多い</li>
+<li>システム全体を設計できるか？が重要</li>
+<li>どれだけシステムの目的志向で動けているか</li>
+<li>技術的な知識やドメインの知識は必要条件であって、十分条件ではない
+
+<ul>
+<li>サービスを届けられて、事業が成功すれば、最悪知らなくていい。知っていないと普通はできないから知るべき、というだけ</li>
+</ul></li>
+<li>ソフトウェアがすべてを飲み込むことで、大きなことを小さなチームでできるようになった</li>
+<li>コミュニケーション能力があって、好奇心を持つこと。そうでないとチーム内で浮いてしまう。9割ディスカッションしていて、1割作業する、とか、極端に言えばその方がいい</li>
+<li>仕様が決まっていなかったら、こちらから提案する、という姿勢</li>
+</ul>
+
+<h3>求人ニーズの変化</h3>
+
+<ul>
+<li>未経験を取らなくなった</li>
+<li>じゃぶじゃぶした VC 投資は減ってくるはず。スタートアップは減っていく</li>
+<li>大企業が DX を進める文脈で、小さいチームで小さいサービスを作っていく、というのは今後も続く</li>
+<li>サーバーサイドは本質的に、サービスとして実際の運用をしたことがないとできない</li>
+<li>会社は何らかのサービスを提供している。それを巻き取るような動きをしていけば経験が積める</li>
+</ul>
+
+<hr />
+
+<p>メモは以上。</p>
+
+<p>エンジニアとしての生存戦略を考えるという点で、とても参考になる話ばかりでした。<br />
+第一線で活躍されている方々を見たり話を聞いたりすると、やる気が湧いてきます。登壇者の方も語っていましたが、ポジティブなエネルギーを発している人と仕事をするってことが重要ですね。<br />
+僕もまだまだ、エンジニアとして食っていくぞ。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>alty partyに参加させていただきました。</title>
+		<link>/2009/08/31_altyparty</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 30 Aug 2009 15:07:41 +0000</pubDate>
+				<category><![CDATA[Event]]></category>
+		<guid isPermaLink="false">/wptest/2009/08/alty-party%e3%81%ab%e5%8f%82%e5%8a%a0%e3%81%95%e3%81%9b%e3%81%a6%e3%81%84%e3%81%9f%e3%81%a0%e3%81%8d%e3%81%be%e3%81%97%e3%81%9f%e3%80%82.php</guid>
+
+					<description><![CDATA[final alty party THE FINAL ＠東京ドームホテルというイベントに参加させていただきました。（天下一カウボーイ大会の2次会的なイベントだそうです）その様子を写真でお送りします。 iPhoneで撮った写真ですが、手ブレがひどくて見づらい写真ばかりになってしまいました・・・。 開会の様子 スペシャルゲスト、ハドソンの中本氏と、アノドス森氏の対談 対談中のスライド。テーマは独立について。 プレゼントの抽選会 当たるとスクリーンがこんな画面に。森氏がにんじんを持ってます。 いろいろ食べました。飲みました。（写真はもうデザートですが） ホテルのお食事はどれも美味しいものばかりでした。大満足・・・。 プレゼント抽選会の様子。当選者はもれなく、かわいいカウガール二人に縄で縛ってもらえます。うわああああ、なんというサービスｗｗｗ 清水氏、閉会の挨拶。 それを聞く人々。会場、広いです・・・。 こちらもスペシャルゲストの漫画家、平沢たかゆき氏。平沢氏の書いたオリジナル漫画が、参加者全員のお土産に・・・！内容については・・・ごにょごにょ。 閉会後、天下一カウボーイ大会参加者の皆様で記念撮影をされていました。 帰宅後、お土産をチェック。「残暑見舞」とあります。 開けると、Bio_100%オリジナルビールが2本。 どうやら「青いビール」みたいです。また「色モノ」ですかｗ こんなところにもBioくんが！芸が細かいです。 天下一カウボーイ大会参加者のためのイベントということで、私は畑違いの人間でありいわゆる「アウェー」な感じでしたが、主催者、参加者の皆様ともに「自分の仕事で世界を変える」という情熱を持った方々であることがひしひしと伝わってきました。 alty partyはアノドス森氏のポケットマネーで開催されているという衝撃のイベントですが、今回が最後だそうです。これだけのパーティをポケットマネーでやってしまうという太っ腹さ、粋狂さにはただただ感心します（冗談ではなく）。ここまで「振り切れてる」ことは、普通はできません・・・。 お土産ビールを、飲んでみた。&#8211; 2009-09-01 注いでみた。どう見ても真っ青です。本当にありがとうございました。 味は結構イケます。が、いかんせんこの色なので、恐る恐る飲むしかありませんｗｗｗ このビール、ニードという会社さんによってプロデュースされたものみたいです。サイトを見るとどうみてウェブ制作会社なのですが・・・なんでビール造ってるんだろうこの会社。しかし、ちょっと飲みたくなってきちゃいました・・・青くないビールを。]]></description>
+										<content:encoded><![CDATA[<p><a href="http://altyparty.com/">final alty party THE FINAL ＠東京ドームホテル</a>というイベントに参加させていただきました。（<a href="http://wccc.onosendai.jp/">天下一カウボーイ大会</a>の2次会的なイベントだそうです）その様子を写真でお送りします。<br />
+<span class="memo">iPhoneで撮った写真ですが、手ブレがひどくて見づらい写真ばかりになってしまいました・・・。</span></p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img fetchpriority="high" decoding="async" alt="alty party その1" src="/images/2009/08/20090830_1.jpg" width="450" height="600" class="mt-image-none" style="" /></span><br />
+開会の様子</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img decoding="async" alt="alty party その2" src="/images/2009/08/20090830_2.jpg" width="450" height="600" class="mt-image-none" style="" /></span><br />スペシャルゲスト、ハドソンの中本氏と、アノドス森氏の対談</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img decoding="async" alt="alty party その3" src="/images/2009/08/20090830_3.jpg" width="450" height="600" class="mt-image-none" style="" /></span><br />対談中のスライド。テーマは独立について。</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="alty party その4" src="/images/2009/08/20090830_4.jpg" width="450" height="600" class="mt-image-none" style="" /></span><br />プレゼントの抽選会</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="alty party その5" src="/images/2009/08/20090830_5.jpg" width="450" height="600" class="mt-image-none" style="" /></span><br />当たるとスクリーンがこんな画面に。森氏がにんじんを持ってます。</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="alty party その6" src="/images/2009/20090830_6.jpg" width="450" height="600" class="mt-image-none" style="" /></span><br />いろいろ食べました。飲みました。（写真はもうデザートですが）<br />
+ホテルのお食事はどれも美味しいものばかりでした。大満足・・・。</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="alty party その7" src="/images/2009/08/20090830_7.jpg" width="450" height="600" class="mt-image-none" style="" /></span><br />プレゼント抽選会の様子。当選者はもれなく、かわいいカウガール二人に縄で縛ってもらえます。うわああああ、なんというサービスｗｗｗ</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="alty party その8" src="/images/2009/08/20090830_8.jpg" width="450" height="600" class="mt-image-none" style="" /></span><br />清水氏、閉会の挨拶。</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="alty party その9" src="/images/2009/08/20090830_9.jpg" width="450" height="600" class="mt-image-none" style="" /></span><br />それを聞く人々。会場、広いです・・・。</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="alty party その10" src="/images/2009/08/20090830_10.jpg" width="450" height="600" class="mt-image-none" style="" /></span><br />こちらもスペシャルゲストの漫画家、平沢たかゆき氏。平沢氏の書いたオリジナル漫画が、参加者全員のお土産に・・・！内容については・・・ごにょごにょ。</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="alty party その11" src="/images/2009/08/20090830_11.jpg" width="450" height="600" class="mt-image-none" style="" /></span><br />閉会後、天下一カウボーイ大会参加者の皆様で記念撮影をされていました。</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="alty party その12" src="/images/2009/08/20090830_12.jpg" width="450" height="600" class="mt-image-none" style="" /></span><br />帰宅後、お土産をチェック。「残暑見舞」とあります。</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="alty party その13" src="/images/2009/08/20090830_13.jpg" width="450" height="600" class="mt-image-none" style="" /></span><br />開けると、Bio_100%オリジナルビールが2本。</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="alty party その14" src="/images/2009/08/20090830_14.jpg" width="450" height="600" class="mt-image-none" style="" /></span><br />どうやら「青いビール」みたいです。また「色モノ」ですかｗ</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="alty party その15" src="/images/2009/08/20090830_15.jpg" width="450" height="600" class="mt-image-none" style="" /></span><br />こんなところにもBioくんが！芸が細かいです。</p>
+
+<p>天下一カウボーイ大会参加者のためのイベントということで、私は畑違いの人間でありいわゆる「アウェー」な感じでしたが、主催者、参加者の皆様ともに「自分の仕事で世界を変える」という情熱を持った方々であることがひしひしと伝わってきました。<br />
+alty partyはアノドス森氏のポケットマネーで開催されているという衝撃のイベントですが、今回が最後だそうです。これだけのパーティをポケットマネーでやってしまうという太っ腹さ、粋狂さにはただただ感心します（冗談ではなく）。ここまで「振り切れてる」ことは、普通はできません・・・。</p>
+
+<p><span id="more-93"></span></p>
+
+<div class="postscript">
+<ins datetime="2009-09-01">
+<h3>お土産ビールを、飲んでみた。<span>&#8211; 2009-09-01</span></h3>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="alty party お土産ビール その1" src="/images/2009/08/20090830_16.jpg" width="450" height="600" class="mt-image-none" style="" /></span><br />
+注いでみた。どう見ても真っ青です。本当にありがとうございました。</p>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="alty party お土産ビール その2" src="/images/2009/08/20090830_17.jpg" width="450" height="600" class="mt-image-none" style="" /></span><br />
+味は結構イケます。が、いかんせんこの色なので、恐る恐る飲むしかありませんｗｗｗ</p>
+<p>このビール、<a href="http://nide.jp/">ニード</a>という会社さんによってプロデュースされたものみたいです。サイトを見るとどうみてウェブ制作会社なのですが・・・<a href="http://nidebeer.jp/">なんでビール造ってるんだろうこの会社</a>。しかし、ちょっと飲みたくなってきちゃいました・・・青くないビールを。</p>
+</ins>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>CSS Nite LP, Disk 6に参加した際のメモ</title>
+		<link>/2009/06/29_cssnitelp6</link>
+					<comments>/2009/06/29_cssnitelp6#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Mon, 29 Jun 2009 12:09:09 +0000</pubDate>
+				<category><![CDATA[Event]]></category>
+		<category><![CDATA[CSSNite]]></category>
+		<guid isPermaLink="false">/wptest/2009/06/css-nite-lp-disk-6%e3%81%ab%e5%8f%82%e5%8a%a0%e3%81%97%e3%81%9f%e9%9a%9b%e3%81%ae%e3%83%a1%e3%83%a2.php</guid>
+
+					<description><![CDATA[6月27日（土）に参加したCSS Nite LP, Disk 6に参加した際のメモ＋αを公開します。 <a href="/2009/06/29_cssnitelp6">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>6月27日（土）に参加した<a href="http://lp6.cssnite.jp/">CSS Nite LP, Disk 6</a>に参加した際のメモ＋αを公開します。</p>
+
+<div class="section">
+<h3>Soy CMS</h3>
+<p>会場入りしたのが14時半頃という大遅刻をやらかしてしまったため、このセッションはほとんど最後の方しか聞くことができませんでした。</p>
+<ul class="disclist">
+<li>管理画面を丸ごとスクラッチで作り直すことも割と簡単に可能。</li>
+<li>動的ページ生成
+<ul class="disclist">
+<li>固定リンクの生成についてはmod_rewriteを使って実際にはないhtmlファイルをあるかのように見せている。本当にそのhtmlファイルが存在した場合はそちらが優先して表示される。</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>Web Release 2</h3>
+<ul class="disclist">
+<li>大事なのは「柔軟性」</li>
+<li>CMSに求められる柔軟性
+<ul class="disclist">
+<li>制作時：テンプレート開発</li>
+<li>コンテンツ入力：</li>
+</ul>
+</li>
+<li>KPIを高めるためにはPDCAをまわす</li>
+<li>短期間で低コストでできること</li>
+<li>次のリニューアルで再利用できるか：TCO</li>
+<li>特徴
+<ul class="disclist">
+<li>SEO効果の高い、静的コンテンツ生成型</li>
+<li>デザイン、レイアウト、サイト構造に制限が無い</li>
+<li>Web標準に対応</li>
+<li>リポジトリー型</li>
+<li>パッケージ型のためインストール及び管理が極めて用意</li>
+<li>ハイパフォーマンス<br />
+（再構築的な処理が非常に高速）</li>
+</ul>
+</li>
+<li>CMSサーバーとWWWサーバーが別になっていて、CMSサーバーからWWWサーバーに自動的にFTPする</li>
+<li>価格
+<ul class="disclist">
+<li>Enterprise Editionn：300万円（税別）</li>
+<li>Workgroup Edition：50万円（税別）500ページまで</li>
+</ul>
+</li>
+<li>オプションは一切なし</li>
+<li>WebReleaseは2000年にバージョン1がリリースされているので９年くらいの歴史</li>
+<li>ミッドレンジというクラスではトップシェア</li>
+<li>１本買えば、複数のサイトを管理することができるライセンスになっている（本当？WWWサーバー1つに複数ドメインが割り当てられているようなケースだけでは？）</li>
+<li>WebRelease2を選ぶ理由
+<ul class="disclist">
+<li>Simpliity &amp; Complexity</li>
+<li>まるで「白いキャンバス」<br />
+Webの既成概念にとらわれないレイアウト、サイト構造が実現可能</li>
+</ul>
+</li>
+<li>WebRelease 2 バージョン2.4 が近日中にリリースされる
+<ul class="disclist">
+<li>追加される新機能</li>
+<li>承認ワークフロー</li>
+<li>WYSIGエディター</li>
+<li>タグ追加</li>
+<li>関数追加</li>
+</ul>
+</li>
+<li>デザインが決定する前にコンテンツを入れていくことができるのでサイト構築フローが改善される</li>
+<li>CMSサーバーとしてMacBookローカルにインストールして動くくらいのシステム用件だよ</li>
+<li>テンプレート
+<ul class="disclist">
+<li>要素の名前には日本語が使える</li>
+<li>HTMLのソースに <code>%要素名%</code> とすることで要素を呼び出すことができる</li>
+<li>アスキーコードで書けるものは全て生成できる</li>
+</ul>
+</li>
+</ul>
+<h4>事例紹介デモ <span class="author">株式会社ボールさん</span></h4>
+<ul class="disclist">
+<li>「Nissan NOTE」 &#8211; 低燃費少女ハイジ
+<ul class="disclist">
+<li>フルFlashサイト</li>
+<li>XMLをWebRelease生成</li>
+<li>CSVデータを取り込んでページを生成する機能を使った</li>
+<li>データCSVからXMLに吐き出させ、JSでパースして使った</li>
+<li>HTML晩のページもある。テンプレートを変更し、XMLではなくてXHTMLを生成させて対応</li>
+</ul>
+</li>
+<li>雑誌「ACROSS」
+<ul class="disclist">
+<li>5000ページくらいの規模のサイト</li>
+<li>既にコンテンツをデータ化してあったのでリニューアルした際に、コンテンツの再入力する必要がなかった</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>CMS Designer</h3>
+<ul class="disclist">
+<li>プラットフォームに依存しすぎるな</li>
+<li>MTの問題点
+<ul class="disclist">
+<li>どこを書き換えるとどこが変更されるのか・・・</li>
+<li>サイト全体の構成を知らないと、テンプレートを書き換えるのが大変<br />
+</li>
+</ul>
+</li>
+<li>CMS Designerの特徴
+<ul class="disclist">
+<li>動的生成</li>
+<li>各ページが1つのCMSのように振る舞う<br />
+</li>
+</ul>
+</li>
+<li>CMSに過度に依存せずに必要な部分だけに導入できる</li>
+<li>フィールドの定義はXMlファイルでできている。このXMLファイルを更新すると、編集画面に反映される。</li>
+<li>テンプレート言語
+<ul class="disclist">
+<li><code>&lt;cmsd: ...&gt;</code></li>
+<li><code>&lt;xsl: ...&gt;</code></li>
+</ul>
+</li>
+<li>拡張子はphpにする必要がある。</li>
+<li>phpにできないときは.htaccessのmod_rewriteを使って対応する必要がある</li>
+<li>ライブコーディングタイム
+<ul class="disclist">
+<li>テンプレート例文<br />
+<pre><code>&lt;cmsd:entrylist name=&quot;event1&quot;&gt;
+&lt;cmsd:design&gt;
+&lt;xsl:template match=&quot;entrylist&quot;&gt;
+&lt;xsl:for-each select=&quot;entry&quot;&gt;
+&lt;div class=&quot;event&quot;&gt;
+&lt;a href=&quot;event_article.html&quot;&gt;&lt;xsl:value-of select=&quot;title&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/xsl:for-each&gt;
+&lt;/xsl:template&gt;
+&lt;/xmsd:design&gt;
+&lt;/cmsd:entrylist&gt;</code></pre></li>
+</ul>
+</li>
+<li>テンプレート言語を埋め込んだphpファイルをFTPでアップするだけ</li>
+<li>その他の機能
+<ul class="disclist">
+<li>日時指定公開／公開終了</li>
+<li>ユーザー権限
+<ul class="disclist">
+<li>特定のユーザーには「削除」できないようにする</li>
+<li>自分が登録したエントリしか見えない（ショッピングモールサイトなど）</li>
+</ul>
+</li>
+<li>ページキャッシュ
+<ul class="disclist">
+<li>静的生成とほぼ同等のパフォーマンス</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>まとめ
+<ul class="disclist">
+<li>シニアにも好評</li>
+<li>52,290円</li>
+<li>お試しは無料 （ユーザー登録なしでダウンロード可）</li>
+</ul>
+</li>
+<li>テンプレートタグに関しては、充実した公式リファレンスマニュアルがある</li>
+<li>2005年4月に最初のバージョンがリリース</li>
+<li>元々xslでできることはなんでもできる<br />
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>RCMS</h3>
+<ul class="disclist">
+<li>「コンテンツを管理して、それをサイトとして表現する」</li>
+<li>サイト全体をCMSに乗せる必要がある</li>
+<li>元々、早稲田大学ラグビー部の公式サイトのシステムだった
+<ul class="disclist">
+<li>２０００年からCMSで稼働</li>
+<li>月間３００万PV</li>
+<li>7月にYoutube連携機能を使って公式チャンネル開設</li>
+</ul>
+</li>
+<li>RCMSは「誰でも」「どんなWebサイトでも」作れるが設計思想
+<ul class="disclist">
+<li>SaaS版を最初から提供</li>
+<li>情報入力と情報設計を混在させない</li>
+<li>メタデータでコンテンツを保存</li>
+<li>「ページ」でWebサイトの表現を考えない</li>
+<li>ページはコンテンツが集まってできた集合体</li>
+<li>関連性＋コンテンツ＝無限の情報<br />
+</li>
+<li>コンテンツをどう配置するか＋そのコンテンツをどう表現するか＝IA</li>
+<li><a href="http://e-words.jp/w/SaaS.html">SaaS？？？</a>（SaaSという用語についての説明がなかったため、ついていけませんでした）</li>
+</ul>
+</li>
+<li>モジュールが100種類以上あるので、プログラミングはほぼ不要</li>
+<li>SaaSなのでインストール不要。すぐ使える。</li>
+<li>インストール型の悩み→バージョンアップやセキュリティ　などの悩みがない</li>
+<li>100種類以上の機能
+<ul class="disclist">
+<li>全てスクラッチ、自社開発</li>
+</ul>
+</li>
+<li>SaaS(ASP)と、サーバインストール（パッケージとして）の提供</li>
+<li>簡易管理画面</li>
+<li>表示する機能を選べる</li>
+<li>ページ毎、モジュール毎、ブログ毎などきめ細かなCSS設定が可能</li>
+<li>モバイル対応 ・・・というよりはマルチデバイス対応</li>
+<li>対応するHTMLはHTML 4.01 Tranditionalが基本</li>
+<li>他言語サイト構築機能
+<ul class="disclist">
+<li>コンテンツに対して翻訳文を追加するだけ</li>
+</ul>
+</li>
+<li>独自の開発モデル
+<ul class="disclist">
+<li>β版を無料提供　→　FBに対して開発チームが対応　→　正式版（有料）をリリース<br />
+</li>
+</ul>
+</li>
+</ul>
+<div class="section">
+<h4>プレゼン終了後</h4>
+<ul class="disclist">
+<li>鷹野さんからプレゼンテーターへの辛口なお説教</li>
+<li>小林さんからの補足
+<ul class="disclist">
+<li>プログラミングができなくても、豊富な機能でカバーできるところが良い</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<h3>a blog CMS</h3>
+<ul class="disclist">
+<li>a blog</li>
+<li>2004年 a-blog発売</li>
+<li>2009年 有料ライセンス2000以上</li>
+<li>PHPのプログラムでできている</li>
+<li>ページは動的生成</li>
+<li>つかう機能は、はじめから
+<ul class="disclist">
+<li>フォーム機能</li>
+<li>ユーザー権限別の管理</li>
+<li>カスタムフィールド</li>
+<li>SEOとLPO</li>
+<li>キャッシュ機能</li>
+<li>モバイル対応</li>
+</ul>
+</li>
+<li>デモ
+<ul class="disclist">
+<li> 静的なページをCMSに組み込んでみる</li>
+<li>themesフォルダに静的htmlとその他ファイル一式を突っ込んで、管理画面からそれを設定</li>
+</ul>
+</li>
+<li>テンプレート
+<ul class="disclist">
+<li>基本は普通のHTML</li>
+<li>属性値などに少々、専門の記述を加えるだけ</li>
+<li>属性値で特定のパラメータを与えると、入力必須のフィールドになる</li>
+<li><pre><code>&lt;!-- BEGIN MODULE Form --&gt; ... &lt;!-- END MODULE Form --&gt;</code></pre></li>
+</ul>
+</li>
+<li>ログイン状態になると、通常のページに「編集」などのコントロールが表示される</li>
+<li>管理画面の作り込みが可能</li>
+<li>カスタムフィールドでコンテンツの検索・絞り込み機能が簡単に作れる</li>
+<li>ブロック単位の管理</li>
+<li>標準搭載のフォーム
+<ul class="disclist">
+<li>フォームオプション</li>
+<li>フォームの各項目に属性が設定できる</li>
+</ul>
+</li>
+<li>おさらい
+<ul class="disclist">
+<li>がんばるWeb制作者のためのCMS</li>
+<li>a-blog cmsひとつでコンテンツ管理</li>
+<li>XHTML+CSSの既存の知識で導入できる</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>Bingo!CMS（ショートセッション）</h3>
+<ul class="disclist">
+<li>一通りCMSとしての機能は入っている      </li>
+<li>画像のトリミングが管理画面からできる</li>
+<li>画像の一括アップロード</li>
+<li>Flicker検索機能<br />
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>Jimdo（ショートセッション）</h3>
+<ul class="disclist">
+<li>KDDIが提供するサービス</li>
+<li>ドイツ産</li>
+<li>Ajaxベースのオンラインウェブサイトビルダー</li>
+<li>無料版／有料版（900円くらい）</li>
+<li>大規模ウェブサイトには向かない</li>
+<li>ブロック単位の管理</li>
+<li>既にコンテンツが入っているものを書き換えていく</li>
+<li>実際のサイトと同じ見た目の管理画面
+<ul class="disclist">
+<li>オフィスソフトしか使えない人でも更新できる管理画面を追求した</li>
+</ul>
+</li>
+<li>APP Store的なプラットフォームを作ろうとしている
+<ul class="disclist">
+<li>今年秋公開予定</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>Power CMS for MT（ショートセッション）</h3>
+<ul class="disclist">
+<li>MTを拡張する様々なプラグイン</li>
+<li>結局MTでいいじゃん・・・</li>
+<li>MT経験者であれば今日からでも使えます</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>パネルディスカッション</h3>
+<ul class="disclist">
+<li>議題：ぶっちゃけMTとWordPressってどうよ
+<ul class="disclist">
+<li>ブログに特化したソフトなのでは</li>
+<li>複雑なMTタグを覚えなくてはならないし、WordPressはPHPがかけないと柔軟性がない</li>
+<li>WordPressは進化が速いので注目している</li>
+<li>MTは管理画面が使いづらい</li>
+<li>MTはWindows的なイメージ、WordPressはLinuxっぽいな・・・</li>
+<li>MTでは「誰が楽になったのか分からない」</li>
+<li>MTのいいとこ
+<ul class="disclist">
+<li>日本で一番、理解されている（ユーザーの多い）テンプレート言語</li>
+<li>バックエンドのプログラマーと組んで開発するならおすすめ</li>
+</ul>
+</li>
+<li>WordPressのいいとこ
+<ul class="disclist">
+<li>PHP書けて、一人でぐちゃぐちゃできるひとにおすすめ</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>議題：製品のウリとか</li>
+<li>議題：今後の戦略とか</li>
+<li>議題：サイト全体型か、部分型か</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>参加した感想</h3>
+<p>CMSといえばMTしかマトモに使ったことがないため「国産CMSにどんなものがあるのか、てっとり早く知ること」という目的を持って参加しましたが、これは達成できたように思います。ただ、勉強会というより品評会という感じがしました。</p>
+<p>それとプレゼンテーションの質にやたら差があったことが残念です。果たして自分が各製品を正等に評価できたのかどうか、自信が持てません。</p>
+<p>しかし、日本のソフトウェアメーカーがここまで鎬を削って様々な製品を開発していることが分かった、というだけで有意義な時間でした。CSS Niteさんが今後も興味深い企画を立ててくれることを、期待しております。</p>
+</div>
+
+<div class="section">
+<h3>最後に</h3>
+<p>この記事はあくまで私個人のメモを書き起こしたものですので、正確な情報は<a href="http://lp6.cssnite.jp/">CSS Niteの公式ページ</a>や、各製品の公式な情報をご参照ください。</p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2009/06/29_cssnitelp6/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Sugamo.css第5回に参加したメモ</title>
+		<link>/2009/06/21_sugamocss5</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 21 Jun 2009 05:20:34 +0000</pubDate>
+				<category><![CDATA[Event]]></category>
+		<category><![CDATA[Sugamo.css]]></category>
+		<guid isPermaLink="false">/wptest/2009/06/sugamo-css%e7%ac%ac5%e5%9b%9e%e3%81%ab%e5%8f%82%e5%8a%a0%e3%81%97%e3%81%9f%e3%83%a1%e3%83%a2.php</guid>
+
+					<description><![CDATA[Sugamo.css 第5回に参加してきました <a href="/2009/06/21_sugamocss5">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://archiva.jp/web/sugamo_css/sugamo_css.html">Sugamo.css</a> 第5回に参加してきました。参加者全員、初めてお会いする方だったのでちょっと緊張（CSS Niteとかでお見かけした方とかもいました）。</p>
+
+<p>会の雰囲気は終始和やか。とは言え、JavaScript/HTML5/SVG/perl/各種エディタ/デザインパターン/モジュール化などなどについて高度な技術話が飛び交っておりまして、ショボい私は半分くらい着いていけませんでした（笑）<br />
+ルノアールの会議室で行われた本編4時間はあっという間に過ぎ去り、近くの居酒屋で2次会がありました。以下、本編と2次会がごっちゃになっていますが、あいまいな記憶の中から拾った会話のメモ。リアルタイムにメモっていたものではないので、間違いがあったらサーセン・・・。</p>
+
+<div class="section">
+<h3>いろいろ</h3>
+<ul class="disclist">
+<li>大企業にいないと分からないこともある。<br />
+レガシーブラウザ対応とか、複数人のチームでやる仕事とか。</li>
+<li>某社ではトレーナーがついてイロイロお仕事を教えてくれる</li>
+<li>某社では最近、ページのスピードチェックをするようになったよ<br />
+<a href="http://code.google.com/p/page-speed/">page-speed &#8211; Google Code</a></li>
+<li>この不況だというのに皆バンバン転職してるよね</li>
+<li><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4839914192/likealunatic-22/ref=nosim/" name="amazletlink">ウェブ戦略としての「ユーザーエクスペリエンス」</a>は内容は良いが訳の評価が良くないので原著を買った方が良い（英語が読めればｗ）</li>
+<li><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4102177213/likealunatic-22/ref=nosim/" name="amazletlink">複雑系</a>って本はおもしろいよ！</li>
+<li>kosei27さんが<a href="https://addons.mozilla.org/ja/firefox/addon/394">ViewSourthWith</a>を使ってCSS／JSのソースをいっぺんに開いていたのが印象的でした。どんなサイトでも一瞬で丸裸（？）に。</li>
+<li>韓国ではMicrosoftのシェアが超高い（90％後半・・・？）のでIEでしか使えないサイトが多い。</li>
+<li>韓国の人は流行ものが大好き。最近はMacが流行る傾向も。よってIE以外でも使えるサイトも増えつつある。</li>
+<li>この業種はネットワークゲームプレイヤーが意外に多い。ファンサイトの管理者だった方がちらほら（私も含めて）。</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>.Sigさんからコーダーな方々へ質問</h3>
+<p>仕事が自分に降りてくる段階で、デザインPSD以外にコンテンツに関する詳細な指示書（ワイヤーフレーム的なもの？）はもらうか</p>
+<ul class="disclist">
+<li>詳細なっていうのは例えばフォームのここの要素にこういうラベル（label要素）を付けてね、というような内容のもの</li>
+<li>それって指示者がコーディングわかってないと書けない</li>
+<li>まずサイトマップは必要でしょ</li>
+<li>デザインPSDはいっぺんにできあがったものがもらうわけではなくて、<span title="さみだれ">五月雨</span>に来ることがほとんどなので、サイト全体の設計をかっちりできることは少ない。五月雨に来たものを順々に、こっちが空気を読みながら組んでいく。</li>
+<li>指示者（ここではディレクターのことかな）にはそれなりにやることがたくさんある。各ポジションの歩み寄りも必要（それが「空気を読む」ってことかと）。それ（指示書）を要求するような職場はエンジニアが偉すぎなんじゃないか。</li>
+</ul>
+</div>
+
+<div class="section">
+<h3><a href="http://gyauza.egoism.jp/clip/archives/2009/05/javascript-oop1/">まんじゅう</a>（prototypeプロパティを使ったオブジェクト指向JavaScript）の話とか</h3>
+<ul class="disclist">
+<li>中身を意識しなくても使えるところがすごいよ！工場の中身を知らなくても自動車ができる、みたいな。</li>
+<li>同じものを何度も作るようなときは1個1個作るより、prototype使った方が軽いよ</li>
+<li>高速化と言えば<a href="http://d.hatena.ne.jp/amachang/20071010/1192012056">一行で IE の JavaScript を高速化する方法</a>とかあったよね。でも実際のページでは大して変わらないとか。高速化って体感できる程であることってあまりない。</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>エディタの話とか</h3>
+<p>Sig.さんからVimの基本操作についてレクチャーがあり、その周辺でエディタ話が盛り上がってました。</p>
+<ul class="disclist">
+<li>VimやEmacsはコミュニティが熱いよ！TwitterやIRCなどもエディタでやっちゃうすごい人（？）もいるよ！</li>
+<li>Emacsはホントなんでも（API叩いてウェブサービスを使ったり、ガジェットを表示させたり）できる。Vimは7になってスクリプトが使えるようになっていろいろできるようになった。</li>
+<li>MacでVimを使うにはコンソールから「vim」って入力して立ち上げるvimと、<a href="http://code.google.com/p/macvim-kaoriya/">MacVim</a>がある。コンソールから使うvimは<a href="http://www.google.co.jp/search?hl=ja&amp;safe=off&amp;rlz=1B3GGGL_jaJP218JP219&amp;q=mac+osx+vim+%E6%97%A5%E6%9C%AC%E8%AA%9E&amp;btnG=%E6%A4%9C%E7%B4%A2&amp;lr=">日本語の扱いをどうするかが肝</a>。</li>
+<li><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774120189/likealunatic-22/ref=nosim/" name="amazletlink">ViIMproved‐Vim完全バイブル</a>ってもう絶版・・・？</li>
+<li>秀丸とEmEditorはも根強い人気がある。同僚の作ったマクロで開発することもあるとか。</li>
+<li>秀丸ってEmEditorに比べて重くない？</li>
+<li>テンプレート機能を使いたいのでDreamweaverは手放せないよ</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>技術ネタの発表</h3>
+<p>yomotsuさんから「モニターを逆さまに置いている人用 Web サービス」が発表になりました。Googleのトップが上下逆さまになって表示されちゃいます（それで普通に使える）。SVGとかcanvasとかforeignObjectとかを駆使して実現しているらしいです。<br />
+Operaだと重くなるとか。IEは別の方法（filterとか）を使ってやっているとか。<br />
+新しいことに挑戦するってスバラシイ！</p>
+</div>
+
+<div class="section">
+<h3>感想</h3>
+<p>ついていけない話が多かったのでかなり凹みましたが、いい刺激になりました。結構身近なところにすごい人っているものです。追いつけ追い越せで私もがんばります。それから、エンジニアってやっぱりエディタの話で盛り上がるんだってことを再確認（笑）<br />
+主催のSig.さん、参加者の皆様ありがとうございました。</p>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>MT以外のCMS（国産）の話を聞きに</title>
+		<link>/2009/05/26_cssnitelp6</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 26 May 2009 08:44:58 +0000</pubDate>
+				<category><![CDATA[Event]]></category>
+		<category><![CDATA[CSSNite]]></category>
+		<guid isPermaLink="false">/wptest/2009/05/mt%e4%bb%a5%e5%a4%96%e3%81%aecms%ef%bc%88%e5%9b%bd%e7%94%a3%ef%bc%89%e3%81%ae%e8%a9%b1%e3%82%92%e8%81%9e%e3%81%8d%e3%81%ab.php</guid>
+
+					<description><![CDATA[CSS Nite LP, Disk 6「CMSリベンジ編」に参加します。 バナーを掲載の上でトラックバックをすると割引になるということなので、そのため（？）のあさましいエントリーです・・・orz CMSといえば普段の業務ではMovableTypeを使用しています。というか、CMS＝MovableTypeという有様なので、そのほかのCMSについても知ってみたいという思いもあり、あわよくば業務に導入したいと思っているわけです。そんな私にとって、こういった形で複数のCMSを一度に比較・検討できるイベントというのは非常にストライクです。 業務における新しい可能性を見出せるかもしれないという期待を胸に、しっかりと聴講したいと思います。]]></description>
+										<content:encoded><![CDATA[<p><a href="http://lp6.cssnite.jp/">CSS Nite LP, Disk 6「CMSリベンジ編」</a>に参加します。</p>
+
+<p><a href="http://lp6.cssnite.jp/"><img loading="lazy" decoding="async" src="http://cssnite.jp/images/lp6-logo.gif" alt="CSS Nite LP, Disk 6「CMSリベンジ編」（2009年6月27日開催）" width="200" height="200" /></a></p>
+
+<p>バナーを掲載の上でトラックバックをすると割引になるということなので、そのため（？）のあさましいエントリーです・・・orz</p>
+
+<p>CMSといえば普段の業務ではMovableTypeを使用しています。というか、CMS＝MovableTypeという有様なので、そのほかのCMSについても知ってみたいという思いもあり、あわよくば業務に導入したいと思っているわけです。そんな私にとって、こういった形で複数のCMSを一度に比較・検討できるイベントというのは非常にストライクです。</p>
+
+<p>業務における新しい可能性を見出せるかもしれないという期待を胸に、しっかりと聴講したいと思います。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>セマンティックWebコンファレンス2009に参加してみました</title>
+		<link>/2009/03/16_semanticweb2009</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Mon, 16 Mar 2009 14:54:06 +0000</pubDate>
+				<category><![CDATA[Event]]></category>
+		<guid isPermaLink="false">/wptest/2009/03/%e3%82%bb%e3%83%9e%e3%83%b3%e3%83%86%e3%82%a3%e3%83%83%e3%82%afweb%e3%82%b3%e3%83%b3%e3%83%95%e3%82%a1%e3%83%ac%e3%83%b3%e3%82%b92009%e3%81%ab%e5%8f%82%e5%8a%a0%e3%81%97%e3%81%a6%e3%81%bf%e3%81%be.php</guid>
+
+					<description><![CDATA[マンティックWebコンファレンス2009に参加してきました。 <a href="/2009/03/16_semanticweb2009">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://twitter.com/kazuhito/status/1179472806">kazuhitoさんのつぶやき</a>により知った、<a href="http://s-web.sfc.keio.ac.jp/conference2009/">セマンティックWebコンファレンス2009</a>に参加してきました。<br />
+主催は慶応義塾大学SFC研究所であり、会場は慶応義塾大学 三田キャンパス。プレゼンテーターは大学教授や企業の研究者の方々というわけで、アカデミックな切り口でWebを考える良い機会に恵まれました。まぁ、無料だったというのも参加の動機だったりしますがw<br />
+会場についてみると、教授と思しき研究者の方や、営業っぽいスーツの男性が多く、自分がカジュアルな格好をしてきたことに後悔・・・。</p>
+
+<p>肝心の内容ですが、しがない実装屋である私にとっては難しすぎる内容ばかりで、残念ながら詳細なレポートを書くことができません。。。なお、プレゼンテーションに用いられたスライドは全て<a href="http://s-web.sfc.keio.ac.jp/conference2009/">公式ページ</a>からダウンロードできます。<br />
+少しショッキングな「Web3.0」というキーワードも登場しましたが、テーマが「セマンティックWeb」ということで、「オントロジー」「OWL」「RDF」「メタデータ」といったキーワードがよく用いられていました。<br />
+まず「オントロジー」という言葉の意味が理解できていない自分にとっては、まずその旨のプレゼンテーションはちんぷんかんぷんであり、朝が早かったこともあり船をこいでしまう場面も・・・。</p>
+
+<p>ただ、午後のプログラムは「実用化システムと研究プロジェクト紹介」というテーマで、実装屋の私にも共感できるお話がいくつか。例えば、東京電力・岡部雅夫氏の「業務知識の組織的蓄積を支援するオントロジー」では、次のようなお話を聞くことができました。</p>
+
+<blockquote>
+<h3>製造現場における2つの熟練</h3>
+<dl class="disclist">
+<dt>匠的熟練</dt>
+<dd>旋盤でミクロン単位の精度が出せる等の極めて一部の熟練技能者しか保有していない技術・技能</dd>
+<dt>知的熟練（問題発見・解決型熟練）</dt>
+<dd>例えば、組立職場においては職場内のほとんどの職務をこなせ、品質不具合の原因を究明でき、生産設備の不具合も簡単なものであれば、保全部門に依頼せずにある程度は自分で処理できるような技術・技能</dd>
+</dl>
+</blockquote>
+
+<p>近年この「知的熟練」の重要性が高まっており、それをセマンティックな技術の活用によってその支援をしよう・・・というような内容だったと、思います。</p>
+
+<p>また、パネルディスカッションでのメタデータ株式会社・野村直之氏の「エンタープライズ3.0に向けて」というプレゼンでは「Enterpriseにセマンティックが入る理由」と題して</p>
+
+<blockquote>
+<p>外のネット（Web）で成功した“ソーシャル”は企業ではコケそう<br />
+↓<br />
+検索・マッチングエージェント（サービス）をセマンティック技術で作って人手不足を補うべし</p>
+</blockquote>
+
+<p>ということで、エンタープライズ2.0（企業SNS、ブログ、Wiki、RSS、Sブックマークなど）を導入した企業の支援技術としてセマンティックをあげています。ご本人がおっしゃっるには</p>
+
+<blockquote>
+<p>通常業務に加え、「社内ブログを書け」とか「社内Wikiに投稿しろ」とか「社内SNSを活性化しろ」とか、こういった状況ではあんまりだ。ただでさえコストダウンで人手不足であるのに、これでは現場のスタッフが怒っても仕方がない。</p>
+</blockquote>
+
+<p>ということであります。私も以前の職場では社内SNSを導入していたことがあるだけに、共感できるところがありました。</p>
+
+<p>割と実用的なところではYahoo!の方からのSearchMonkeyについてのプレゼンテーションがありました。恥ずかしながらSearchMonkeyが何だか、あまりよく知らなかったのですが、これでよく分かりました。簡単に言うなれば、「サイト管理者が用意したメタデータを、専用のプラグインで処理することによって、検索結果をより使いやすく魅力的にする仕組み」といったところでしょうか。<br />
+メタデータにはMicroformatsが使えますから、私たちマークアップエンジニアが参加できる領域ですね。ちなみにこれは米ヤフーでのプロダクトですが、Yahoo!JAPANでも「導入鋭意検討中」だそうです。導入となれば、日本のWebにとって素敵なニュースとなることは間違いありません。</p>
+
+<p>パネルディスカッションは、会場の参加者との質疑応答で幕を閉じました。最後の質問は「Web3.0／エンタープライズ3.0を代表するようなメディアは？」という印象的なものでしたが、パネラーの方々からは「明確にこれというメディアはない」とされた上で</p>
+
+<ul class="disclist">
+<li>幅広く企業を超えたネットワークが必要</li>
+<li>一人で使っても役に立つ（「ソーシャル」ではない）サービスが登場するのでは</li>
+<li>プライバシーの問題もあるが、トレーサビリティはもっと向上するのでは</li>
+<li>現在は「ハードを売ってナンボ。ソフトはおまけ」という商売をしているが、「サービスを売って、ハードはそれを動かすインフラ」という風に変わればいいのに・・・</li>
+</ul>
+
+<p>というご意見が。</p>
+
+<p>普段の我々の業務ではまず顔を合わせることのない「技術の上流にいる方々」のお考えに触れることができ、良い刺激を受けました。実務にすぐに生かすことはできないかもしれませんが、いずれ考えるヒントになるであろうと思っています。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>パソナテック10周年記念イベントにて 印象に残った言葉</title>
+		<link>/2008/06/18_pasonatech</link>
+					<comments>/2008/06/18_pasonatech#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 18 Jun 2008 14:45:11 +0000</pubDate>
+				<category><![CDATA[Event]]></category>
+		<category><![CDATA[Misc]]></category>
+		<guid isPermaLink="false">/wptest/2008/06/%e3%83%91%e3%82%bd%e3%83%8a%e3%83%86%e3%83%83%e3%82%af10%e5%91%a8%e5%b9%b4%e8%a8%98%e5%bf%b5%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%81%ab%e3%81%a6-%e5%8d%b0%e8%b1%a1%e3%81%ab%e6%ae%8b%e3%81%a3.php</guid>
+
+					<description><![CDATA[今更のエントリーになりますが、先週の土曜にはパソナテック10周年記念イベントに参加してきました。 パネリストの一人であった福井 信蔵氏のお話の中で「コントロールする」という言葉が印象に残っています。 「良いデザインをしようとするならば、ユーザーの認知をコントロールする必要がある」という文脈の中で、「すべてをコントロールできているか否か」で成果物は全く異なったものになってしまう、というようなお話だったかと思います。 コントロールできる部分が大きければ表現の幅が広がるので、そのために必要な技術は何が何でも習得すべし、ということでした。 全くその通りだと共感しましたし、非常に耳が痛い思いでした。私がもの作りに対して感じている不満を、見事に表現した言葉でした。私が感じている不自由さというのは正に「コントロールできないこと」からくる表現力の不足なのだ、と痛感しています。 この「気づきの機会」を与えてくださったパネリストの方々とパソナテックに感謝しています。 精進、精進ですね！]]></description>
+										<content:encoded><![CDATA[<p>今更のエントリーになりますが、先週の土曜には<a href="http://www.pasonatech.co.jp/10th/event/102_entry/index.jsp">パソナテック10周年記念イベント</a>に参加してきました。</p>
+
+<p>パネリストの一人であった福井 信蔵氏のお話の中で「コントロールする」という言葉が印象に残っています。<br />
+「良いデザインをしようとするならば、ユーザーの認知をコントロールする必要がある」という文脈の中で、「すべてをコントロールできているか否か」で成果物は全く異なったものになってしまう、というようなお話だったかと思います。</p>
+
+<p>コントロールできる部分が大きければ表現の幅が広がるので、そのために必要な技術は何が何でも習得すべし、ということでした。</p>
+
+<p>全くその通りだと共感しましたし、非常に耳が痛い思いでした。私がもの作りに対して感じている不満を、見事に表現した言葉でした。私が感じている<em>不自由さ</em>というのは正に<strong>「コントロールできないこと」からくる表現力の不足</strong>なのだ、と痛感しています。</p>
+
+<p>この「気づきの機会」を与えてくださったパネリストの方々とパソナテックに感謝しています。<br />
+精進、精進ですね！</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2008/06/18_pasonatech/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>4月19日 あすなろBLOGカンファレンス『スタート×キッカケ×ブログ』 サードセッション &#8211; 「ライフハック徹底討論会2nd」</title>
+		<link>/2008/04/20_startkikkakeblog3rd</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 20 Apr 2008 09:03:19 +0000</pubDate>
+				<category><![CDATA[Event]]></category>
+		<category><![CDATA[Conference]]></category>
+		<category><![CDATA[PasonaTech]]></category>
+		<guid isPermaLink="false">/wptest/2008/04/4%e6%9c%8819%e6%97%a5-%e3%81%82%e3%81%99%e3%81%aa%e3%82%8dblog%e3%82%ab%e3%83%b3%e3%83%95%e3%82%a1%e3%83%ac%e3%83%b3%e3%82%b9%e3%80%8e%e3%82%b9%e3%82%bf%e3%83%bc%e3%83%88%c3%97%e3%82%ad%e3%83%83-3.php</guid>
+
+					<description><![CDATA[昨日、パソナテック10周年記念イベント 第2回あすなろBLOGカンファレンス『スタート×キッカケ×ブログ』に参加して参りました。その際にメモしたことをファーストセッション・セカンドセッション・サードセッションに分けて、エントリーします。
+このエントリーではサードセッション「ライフハック徹底討論会2nd」をお送りします。
+パネラーは大橋 悦夫氏（シゴタノ！の中の人）、堀 E. 正岳氏（Lifehacking.jpの中の人）、増田 光俊氏の3名。堀川 貴満氏（あすなろBLOGプロデューサー）です。 <a href="/2008/04/20_startkikkakeblog3rd">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>昨日、<a href="http://www.pasonatech.co.jp/blog_event/event080419.html">パソナテック10周年記念イベント
+第2回あすなろBLOGカンファレンス『スタート×キッカケ×ブログ』</a>に参加して参りました。その際にメモしたことをファーストセッション・セカンドセッション・サードセッションに分けて、エントリーします。<br />
+このエントリーではサードセッション「ライフハック徹底討論会2nd」をお送りします。
+パネラーは</p>
+
+<ul class="disclist">
+<li><a href="http://cyblog.jp/">シゴタノ！</a>の<em>大橋 悦夫</em>氏</li>
+<li><a href="http://lifehacking.jp/">Lifehacking.jp</a>の<em>堀 E. 正岳</em>氏</li>
+<li><a href="http://blog.pasonatech.co.jp/masuda/">とりあえず、やってみる！（あすなろBLOG）</a>の<em>増田 光俊</em>氏</li>
+</ul>
+
+<p>の3名。<br />
+ファシリテーターは<a href="http://blog.pasonatech.co.jp/counselor/horikawa/">チェケラッ！（あすなろBLOG）</a>の<em>堀川 貴満</em>氏（あすなろBLOGプロデューサー）です。<br />
+なお、以下の本文中に出てくるお名前は全て敬称略とさせていただきますことをご了承ください。</p>
+
+<div class="section">
+<h3>ブログを続けるコツ</h3>
+<dl class="discussion">
+<dt>大橋：</dt>
+<dd><p>ブログは8つ目。<br />
+1個やってうまくいかなかったら、次をやってみる。</p>
+<p>「仕事のやり方」に興味があることが次第にわかった。<br />
+昔自分が撒いた種を掘り返してみると、ネタがあるかも</p></dd>
+<dt>堀：</dt>
+<dd><p>何でもいいから出してしまうと、スランプのときはいいのかな。<br />
+なんでもいいから書き出してみる。</p>
+<p>アクセス解析を使って、目標を数として意識する。ライバルを見つけると吉。<br />
+シンクロ率が維持されているうちは大丈夫。</p>
+<p>ネットの世界では自分はこういう風に見られないというイメージを持って書くと、本当の自分がそうなってくる。</p>
+</dd>
+<dt>増田：</dt>
+<dd>
+<p>まずは明確な目標を持っているかどうか。<br />
+目標と実際のベクトルがずれはじめてくると書けなくなってくる。<br />
+自分の目標は「人と繋がりたい」。</p>
+<p>今日は書くことないなーと思ったら「<em>自分の当たり前は、他人の当たり前ではない</em>」という言葉を思い出す。<br />
+自分の当たり前と思っていることは他人にとっては有効なのかもしれないので、それを出す。</p>
+</dd>
+</dl>
+</div>
+
+<div class="section">
+<h3>ライフハックとは？</h3>
+<dl class="discussion">
+<dt>堀：</dt>
+<dd>
+<ul class="disclist">
+<li>ライフハックとはプログラマーから始まった。</li>
+<li>「頭の悪い自分」を「頭の良い自分」がサポートしてあげる。</li>
+<li>小さな変化で大きな変化を作れないか。<br />
+「<em>小さな習慣で自分を変えて行く</em>」というのがテーマ。</li>
+</ul></dd>
+<dt>大橋：</dt>
+<dd><p>「再現性を持たせる工夫」である。</p>
+<ul class="disclist">
+<li><em>同じ失敗を繰り返さない → 予防線を張っておく</em></li>
+<li><em>同じ成功を繰り返す → 手順をメモしておく</em></li>
+<li>自分にとってこのやり方が一番いいんだ、というのを模索するための方法。</li>
+</ul></dd>
+<dt>増田：</dt>
+<dd><ul class="disclist">
+<li>人生という航海を良い方向にもっていく舵取りそのもの。</li>
+<li>人生を楽しくしていこう。</li>
+<li>小さな達成感を得るために、今日まず第一歩を。</li>
+</ul></dd>
+</dl>
+</div>
+
+<div class="section">
+<h3>ライフハックを続けるコツ</h3>
+<dl class="discussion">
+<dt>大橋：</dt>
+<dd><ul class="disclist">
+<li>仕事でも生活でも一番大事なのは時間。</li>
+<li>時間はにょろにょろと止めどなく出てくる「ところてん」のようなもの。それをチョキンと切り取って使う。</li>
+<li>何かとケータイにリマインダーメールが来るようにしている。</li>
+<li>よってケータイ見るとやるべきことが書いてある、というわけ。</li>
+<li>「できてる、できてるな」という小さな達成感を味わう。</li>
+</ul></dd>
+<dt>増田：</dt>
+<dd><p><em>気持ちいいかどうか</em></p>
+<ul class="disclist">
+<li>気持ちよければ続く。</li>
+<li>気持ちよさを感じられるかどうかで、続けられるかが決まる。</li>
+<li>いかにストレスを感じずに生きられるか。</li>
+<li>続けたいライフハックは気持ちいいですか？</li>
+<li>自分に合わないものは続かない。</li>
+<li>やめるわけにはいかないものは、どうにかして自分が気持よく感じられるようにする。</li>
+</ul></dd>
+<dt>堀：</dt>
+<dd><ul class="disclist">
+<li>継続があまりできない性格なので、むしろ「継続しない」という発想に移った。</li>
+<li>7回までしかやらない、と決めてやっても慣性で10回くらいやってしまうものもある。そうなればしめたもの。</li>
+</ul></dd>
+</dl>
+</div>
+
+<div class="section">
+<h3>これからのライフハック</h3>
+<dl class="discussion">
+<dt>増田：</dt>
+<dd><ul class="disclist">
+<li>小手先のものよりも、マインドに関するものが大事になってくるのではないか。</li>
+<li>ビジネスのハックも大切だが、プライベートのハックも。</li>
+</ul></dd>
+<dt>堀：</dt>
+<dd><ul class="disclist">
+<li>最近はライフハックが反乱しすぎ。自己啓発本などもバンバン出ている。</li>
+<li><em>自分にとって必要なたった1つのものを見つけられればいい。 → 集約化</em></li>
+</ul></dd>
+<dt>大橋：</dt>
+<dd><ul class="disclist">
+<li>ライフハックを基盤に仕事ができるのは今のうちだけだと思っている。次のステップに進むための基盤になればいい。</li>
+<li>歴史上、こういう人がいたな、くらいに自分はなればいいと思って活動している。</li>
+</ul></dd>
+</dl>
+</div>
+
+<div class="section">
+<h3>―質疑応答―</h3>
+<dl class="faq">
+<dt>Q:記事が読まれるか読まれないかは、どういうところにポイントがあるのか</dt>
+<dd><p>大橋：求められているかどうか。</p>
+<p>堀：爆弾ネタを投下するペースを考える。
+A級・B級・C級などのレベル付けをして、計画的にエントリーすることによって読者を引き付ける</p></dd>
+<dt>Q:誰か他の方の本やブログでよかったもの</dt>
+<dd><p>増田：「<a href="http://www.amazon.co.jp/gp/product/4870318059?ie=UTF8&amp;tag=likealunatic-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4870318059">夢をかなえるゾウ</a><img loading="lazy" decoding="async" src="http://www.assoc-amazon.jp/e/ir?t=likealunatic-22&amp;l=as2&amp;o=9&amp;a=4870318059" width="1" height="1" alt="" />」という本に衝撃を受けた。身近な言葉で書かれていて読みやすい。<br />
+衝撃を受けるものというのは、今までの概念が覆されるもの。</p>
+<p>堀：<a href="http://download.srv.cs.cmu.edu/~pausch/">ランディ・パウシュ</a>の『タイムマネジメント』。<span class="memo">（ググっても出てこなかったので、本ではない・・・？）</span><br />
+余命数ヶ月という状況下でタイムマネジメントについて語るのがすごい。</p>
+<p>大橋：スティーブ・ジョブスのにスピーチ。<span class="memo">（<a href="http://sago.livedoor.biz/archives/50248740.html">スタンフォード大学の卒業式のスピーチのことかな・・・？</a>そこまでメモできませんでした）</span><br />
+「今日が最後の日であったらどうする？」などのテーマについて語っている。</p>
+<p>また、最近は有機野菜についてハマっていて、それについての本も読んでいる。<br />
+自分の専門と全く関係のないジャンルの本を読んでみるとまた違った発見があるかもしれない</p></dd>
+</dl>
+</div>
+
+<p><span id="more-50"></span></p>
+
+<div class="section">
+<p>以上でこのカンファレンスについてのレポートは終了です。</p>
+<p>個人的には<a href="http://d.hatena.ne.jp/wa-ren/">キャズムを超えろ！</a>の和蓮和尚氏と、
+<a href="http://lifehacking.jp/">Lifehacking.jp</a>の堀 E. 正岳氏のお話を聞けたことにとても満足です。<br />
+帰り際に受付近くで販売されていた<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774134635/likealunatic-22/ref=nosim/" name="amazletlink">Life Hacks PRESS vol.2</a>も、勢いで購入してしまいました。
+パラパラと読んでみたところ、役に立ちそうな知恵やWebサービスなどがたくさん紹介されていましたので、少しづつ生活に取り入れていこうかと思います。</p>
+<p>有意義な時間を過ごすことができました。関係者及び参加者の皆様、ありがとうございました。</p>
+<div class="amazlet-box" style="margin-bottom:0px;">
+<div class="amazlet-image" style="float:left;">
+<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774134635/likealunatic-22/ref=nosim/" name="amazletlink"><img decoding="async" src="http://ecx.images-amazon.com/images/I/51H6Tg6BdiL._SL160_.jpg" alt="Life Hacks PRESS vol.2" style="border: none;" /></a>
+</div>
+<div class="amazlet-info" style="float:left;margin-left:15px;line-height:120%">
+<div class="amazlet-name" style="margin-bottom:10px;line-height:120%">
+<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774134635/likealunatic-22/ref=nosim/" name="amazletlink">Life Hacks PRESS vol.2</a>
+<div class="amazlet-powered-date" style="font-size:7pt;margin-top:5px;font-family:verdana;line-height:120%">posted with <a href="http://www.amazlet.com/browse/ASIN/4774134635/likealunatic-22/ref=nosim/" title="Life Hacks PRESS vol.2" >amazlet</a> at 08.04.20
+</div>
+</div>
+<div class="amazlet-detail">堀 E. 正岳 荒木 早苗 太田 憲治 大橋 悦夫 <br />技術評論社 <br />売り上げランキング: 87<br /></div>
+<div class="amazlet-link" style="margin-top: 5px">
+<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774134635/likealunatic-22/ref=nosim/" name="amazletlink">Amazon.co.jp で詳細を見る</a>
+</div>
+</div>
+<div class="amazlet-footer" style="clear: left"></div>
+</div>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: IEのDOMで特徴的だと思ったこと３点	</title>
+	<atom:link href="/2007/12/11_iedom/feed" rel="self" type="application/rss+xml" />
+	<link>/2007/12/11_iedom</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:39 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: ただのにっき		</title>
+		<link>/2007/12/11_iedom/comment-page-1#comment-30</link>
+
+		<dc:creator><![CDATA[ただのにっき]]></dc:creator>
+		<pubDate>Fri, 03 Oct 2008 16:02:43 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/12/ie%e3%81%aedom%e3%81%a7%e7%89%b9%e5%be%b4%e7%9a%84%e3%81%a0%e3%81%a8%e6%80%9d%e3%81%a3%e3%81%9f%e3%81%93%e3%81%a8%ef%bc%93%e7%82%b9.php#comment-30</guid>
+
+					<description><![CDATA[&lt;p&gt;&lt;strong&gt;[JavaScript]IEのDOMについて&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;テーブルに動的にtr要素を追加しようとして FireBugでデバッグしながらさんざん苦労してできたと思ったら IEで動かないことが判明・・・ ぐぐってみ...&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p><strong>[JavaScript]IEのDOMについて</strong></p>
+
+<p>テーブルに動的にtr要素を追加しようとして FireBugでデバッグしながらさんざん苦労してできたと思ったら IEで動かないことが判明・・・ ぐぐってみ&#8230;</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

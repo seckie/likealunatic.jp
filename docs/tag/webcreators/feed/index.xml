@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>WebCreators &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/webcreators/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>WebCreators &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>ネガティブマージンによる段組みレイアウト</title>
+		<link>/2008/09/18_webcresample</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 18 Sep 2008 11:30:50 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[WebCreators]]></category>
+		<guid isPermaLink="false">/wptest/2008/09/%e3%83%8d%e3%82%ac%e3%83%86%e3%82%a3%e3%83%96%e3%83%9e%e3%83%bc%e3%82%b8%e3%83%b3%e3%81%ab%e3%82%88%e3%82%8b%e6%ae%b5%e7%b5%84%e3%81%bf%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88.php</guid>
+
+					<description><![CDATA[web creators 2008年10月号の巻頭特集に寄稿したネタの中から、サンプルを紹介してみよう企画、第1弾。 <a href="/2008/09/18_webcresample">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img decoding="async" alt="18_webcresample.gif" src="/images/2008/09/18_webcresample.gif" width="200" height="98" class="mt-image-none introphoto" /></span>
+web creators 2008年10月号の巻頭特集に寄稿したネタの中から、サンプルを紹介してみよう企画、第1弾。<br />
+ネタ概要は<a href="http://www.amazon.co.jp/gp/redirect.html?ie=UTF8&amp;location=http%3A%2F%2Fwww.amazon.co.jp%2FWeb-creators-%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%25E3%2582%25AF%25E3%2583%25AA%25E3%2582%25A8%25E3%2582%25A4%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25BA-2008%25E5%25B9%25B4-10%25E6%259C%2588%25E5%258F%25B7%2Fdp%2FB001E1PGS0%3Fie%3DUTF8%26s%3Dbooks%26qid%3D1221738352%26sr%3D1-1&amp;tag=likealunatic-22&amp;linkCode=ur2&amp;camp=247&amp;creative=1211">本を買って誌面で見てね＾＾</a><img decoding="async" src="http://www.assoc-amazon.jp/e/ir?t=likealunatic-22&amp;l=ur2&amp;o=9" width="1" height="1" alt="" />というところなので、ここでは書きません。</p>
+
+<p class="link"><a href="/2008/09/18_sample/">ネガティブマージンを使って段組みにしたサンプル</a></p>
+
+<p>ポイントは、ある要素の上marginをマイナスにすることにより、レイアウトをずらして直前の要素に重ねているところ。</p>
+
+<p>サンプルでそれをしているのは、見出しとリンクボタンが横並びになっているところなのですが、サンプルを見れば分かる通り、両方とも画像です。</p>
+
+<p>上にレイアウトをずらしているに過ぎないので、テキストなどの縦幅が可変の要素が中に入っていると、フォントの異なる環境での閲覧や、文字サイズ変更などによって、後続のレイアウトに影響が出ます。そんなわけで、縦幅可変になる要素のレイアウトにはあまり向いてません。</p>
+
+<p>何だかここまで書くと、絶対配置でいいような気がしますね＾＾；floatも絶対配置も使いたくない、けれども段組にしなきゃならない、というレアなケースで活躍する・・・かもしれません・・・。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

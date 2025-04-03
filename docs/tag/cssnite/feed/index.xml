@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>CSSNite &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/cssnite/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:40 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>CSSNite &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>CSS Nite LP, Disk 6に参加した際のメモ</title>
+		<link>/2009/06/29_cssnitelp6</link>
+					<comments>/2009/06/29_cssnitelp6#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Mon, 29 Jun 2009 12:09:09 +0000</pubDate>
+				<category><![CDATA[Event]]></category>
+		<category><![CDATA[CSSNite]]></category>
+		<guid isPermaLink="false">/wptest/2009/06/css-nite-lp-disk-6%e3%81%ab%e5%8f%82%e5%8a%a0%e3%81%97%e3%81%9f%e9%9a%9b%e3%81%ae%e3%83%a1%e3%83%a2.php</guid>
+
+					<description><![CDATA[6月27日（土）に参加したCSS Nite LP, Disk 6に参加した際のメモ＋αを公開します。 <a href="/2009/06/29_cssnitelp6">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>6月27日（土）に参加した<a href="http://lp6.cssnite.jp/">CSS Nite LP, Disk 6</a>に参加した際のメモ＋αを公開します。</p>
+
+<div class="section">
+<h3>Soy CMS</h3>
+<p>会場入りしたのが14時半頃という大遅刻をやらかしてしまったため、このセッションはほとんど最後の方しか聞くことができませんでした。</p>
+<ul class="disclist">
+<li>管理画面を丸ごとスクラッチで作り直すことも割と簡単に可能。</li>
+<li>動的ページ生成
+<ul class="disclist">
+<li>固定リンクの生成についてはmod_rewriteを使って実際にはないhtmlファイルをあるかのように見せている。本当にそのhtmlファイルが存在した場合はそちらが優先して表示される。</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>Web Release 2</h3>
+<ul class="disclist">
+<li>大事なのは「柔軟性」</li>
+<li>CMSに求められる柔軟性
+<ul class="disclist">
+<li>制作時：テンプレート開発</li>
+<li>コンテンツ入力：</li>
+</ul>
+</li>
+<li>KPIを高めるためにはPDCAをまわす</li>
+<li>短期間で低コストでできること</li>
+<li>次のリニューアルで再利用できるか：TCO</li>
+<li>特徴
+<ul class="disclist">
+<li>SEO効果の高い、静的コンテンツ生成型</li>
+<li>デザイン、レイアウト、サイト構造に制限が無い</li>
+<li>Web標準に対応</li>
+<li>リポジトリー型</li>
+<li>パッケージ型のためインストール及び管理が極めて用意</li>
+<li>ハイパフォーマンス<br />
+（再構築的な処理が非常に高速）</li>
+</ul>
+</li>
+<li>CMSサーバーとWWWサーバーが別になっていて、CMSサーバーからWWWサーバーに自動的にFTPする</li>
+<li>価格
+<ul class="disclist">
+<li>Enterprise Editionn：300万円（税別）</li>
+<li>Workgroup Edition：50万円（税別）500ページまで</li>
+</ul>
+</li>
+<li>オプションは一切なし</li>
+<li>WebReleaseは2000年にバージョン1がリリースされているので９年くらいの歴史</li>
+<li>ミッドレンジというクラスではトップシェア</li>
+<li>１本買えば、複数のサイトを管理することができるライセンスになっている（本当？WWWサーバー1つに複数ドメインが割り当てられているようなケースだけでは？）</li>
+<li>WebRelease2を選ぶ理由
+<ul class="disclist">
+<li>Simpliity &amp; Complexity</li>
+<li>まるで「白いキャンバス」<br />
+Webの既成概念にとらわれないレイアウト、サイト構造が実現可能</li>
+</ul>
+</li>
+<li>WebRelease 2 バージョン2.4 が近日中にリリースされる
+<ul class="disclist">
+<li>追加される新機能</li>
+<li>承認ワークフロー</li>
+<li>WYSIGエディター</li>
+<li>タグ追加</li>
+<li>関数追加</li>
+</ul>
+</li>
+<li>デザインが決定する前にコンテンツを入れていくことができるのでサイト構築フローが改善される</li>
+<li>CMSサーバーとしてMacBookローカルにインストールして動くくらいのシステム用件だよ</li>
+<li>テンプレート
+<ul class="disclist">
+<li>要素の名前には日本語が使える</li>
+<li>HTMLのソースに <code>%要素名%</code> とすることで要素を呼び出すことができる</li>
+<li>アスキーコードで書けるものは全て生成できる</li>
+</ul>
+</li>
+</ul>
+<h4>事例紹介デモ <span class="author">株式会社ボールさん</span></h4>
+<ul class="disclist">
+<li>「Nissan NOTE」 &#8211; 低燃費少女ハイジ
+<ul class="disclist">
+<li>フルFlashサイト</li>
+<li>XMLをWebRelease生成</li>
+<li>CSVデータを取り込んでページを生成する機能を使った</li>
+<li>データCSVからXMLに吐き出させ、JSでパースして使った</li>
+<li>HTML晩のページもある。テンプレートを変更し、XMLではなくてXHTMLを生成させて対応</li>
+</ul>
+</li>
+<li>雑誌「ACROSS」
+<ul class="disclist">
+<li>5000ページくらいの規模のサイト</li>
+<li>既にコンテンツをデータ化してあったのでリニューアルした際に、コンテンツの再入力する必要がなかった</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>CMS Designer</h3>
+<ul class="disclist">
+<li>プラットフォームに依存しすぎるな</li>
+<li>MTの問題点
+<ul class="disclist">
+<li>どこを書き換えるとどこが変更されるのか・・・</li>
+<li>サイト全体の構成を知らないと、テンプレートを書き換えるのが大変<br />
+</li>
+</ul>
+</li>
+<li>CMS Designerの特徴
+<ul class="disclist">
+<li>動的生成</li>
+<li>各ページが1つのCMSのように振る舞う<br />
+</li>
+</ul>
+</li>
+<li>CMSに過度に依存せずに必要な部分だけに導入できる</li>
+<li>フィールドの定義はXMlファイルでできている。このXMLファイルを更新すると、編集画面に反映される。</li>
+<li>テンプレート言語
+<ul class="disclist">
+<li><code>&lt;cmsd: ...&gt;</code></li>
+<li><code>&lt;xsl: ...&gt;</code></li>
+</ul>
+</li>
+<li>拡張子はphpにする必要がある。</li>
+<li>phpにできないときは.htaccessのmod_rewriteを使って対応する必要がある</li>
+<li>ライブコーディングタイム
+<ul class="disclist">
+<li>テンプレート例文<br />
+<pre><code>&lt;cmsd:entrylist name=&quot;event1&quot;&gt;
+&lt;cmsd:design&gt;
+&lt;xsl:template match=&quot;entrylist&quot;&gt;
+&lt;xsl:for-each select=&quot;entry&quot;&gt;
+&lt;div class=&quot;event&quot;&gt;
+&lt;a href=&quot;event_article.html&quot;&gt;&lt;xsl:value-of select=&quot;title&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/xsl:for-each&gt;
+&lt;/xsl:template&gt;
+&lt;/xmsd:design&gt;
+&lt;/cmsd:entrylist&gt;</code></pre></li>
+</ul>
+</li>
+<li>テンプレート言語を埋め込んだphpファイルをFTPでアップするだけ</li>
+<li>その他の機能
+<ul class="disclist">
+<li>日時指定公開／公開終了</li>
+<li>ユーザー権限
+<ul class="disclist">
+<li>特定のユーザーには「削除」できないようにする</li>
+<li>自分が登録したエントリしか見えない（ショッピングモールサイトなど）</li>
+</ul>
+</li>
+<li>ページキャッシュ
+<ul class="disclist">
+<li>静的生成とほぼ同等のパフォーマンス</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>まとめ
+<ul class="disclist">
+<li>シニアにも好評</li>
+<li>52,290円</li>
+<li>お試しは無料 （ユーザー登録なしでダウンロード可）</li>
+</ul>
+</li>
+<li>テンプレートタグに関しては、充実した公式リファレンスマニュアルがある</li>
+<li>2005年4月に最初のバージョンがリリース</li>
+<li>元々xslでできることはなんでもできる<br />
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>RCMS</h3>
+<ul class="disclist">
+<li>「コンテンツを管理して、それをサイトとして表現する」</li>
+<li>サイト全体をCMSに乗せる必要がある</li>
+<li>元々、早稲田大学ラグビー部の公式サイトのシステムだった
+<ul class="disclist">
+<li>２０００年からCMSで稼働</li>
+<li>月間３００万PV</li>
+<li>7月にYoutube連携機能を使って公式チャンネル開設</li>
+</ul>
+</li>
+<li>RCMSは「誰でも」「どんなWebサイトでも」作れるが設計思想
+<ul class="disclist">
+<li>SaaS版を最初から提供</li>
+<li>情報入力と情報設計を混在させない</li>
+<li>メタデータでコンテンツを保存</li>
+<li>「ページ」でWebサイトの表現を考えない</li>
+<li>ページはコンテンツが集まってできた集合体</li>
+<li>関連性＋コンテンツ＝無限の情報<br />
+</li>
+<li>コンテンツをどう配置するか＋そのコンテンツをどう表現するか＝IA</li>
+<li><a href="http://e-words.jp/w/SaaS.html">SaaS？？？</a>（SaaSという用語についての説明がなかったため、ついていけませんでした）</li>
+</ul>
+</li>
+<li>モジュールが100種類以上あるので、プログラミングはほぼ不要</li>
+<li>SaaSなのでインストール不要。すぐ使える。</li>
+<li>インストール型の悩み→バージョンアップやセキュリティ　などの悩みがない</li>
+<li>100種類以上の機能
+<ul class="disclist">
+<li>全てスクラッチ、自社開発</li>
+</ul>
+</li>
+<li>SaaS(ASP)と、サーバインストール（パッケージとして）の提供</li>
+<li>簡易管理画面</li>
+<li>表示する機能を選べる</li>
+<li>ページ毎、モジュール毎、ブログ毎などきめ細かなCSS設定が可能</li>
+<li>モバイル対応 ・・・というよりはマルチデバイス対応</li>
+<li>対応するHTMLはHTML 4.01 Tranditionalが基本</li>
+<li>他言語サイト構築機能
+<ul class="disclist">
+<li>コンテンツに対して翻訳文を追加するだけ</li>
+</ul>
+</li>
+<li>独自の開発モデル
+<ul class="disclist">
+<li>β版を無料提供　→　FBに対して開発チームが対応　→　正式版（有料）をリリース<br />
+</li>
+</ul>
+</li>
+</ul>
+<div class="section">
+<h4>プレゼン終了後</h4>
+<ul class="disclist">
+<li>鷹野さんからプレゼンテーターへの辛口なお説教</li>
+<li>小林さんからの補足
+<ul class="disclist">
+<li>プログラミングができなくても、豊富な機能でカバーできるところが良い</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<h3>a blog CMS</h3>
+<ul class="disclist">
+<li>a blog</li>
+<li>2004年 a-blog発売</li>
+<li>2009年 有料ライセンス2000以上</li>
+<li>PHPのプログラムでできている</li>
+<li>ページは動的生成</li>
+<li>つかう機能は、はじめから
+<ul class="disclist">
+<li>フォーム機能</li>
+<li>ユーザー権限別の管理</li>
+<li>カスタムフィールド</li>
+<li>SEOとLPO</li>
+<li>キャッシュ機能</li>
+<li>モバイル対応</li>
+</ul>
+</li>
+<li>デモ
+<ul class="disclist">
+<li> 静的なページをCMSに組み込んでみる</li>
+<li>themesフォルダに静的htmlとその他ファイル一式を突っ込んで、管理画面からそれを設定</li>
+</ul>
+</li>
+<li>テンプレート
+<ul class="disclist">
+<li>基本は普通のHTML</li>
+<li>属性値などに少々、専門の記述を加えるだけ</li>
+<li>属性値で特定のパラメータを与えると、入力必須のフィールドになる</li>
+<li><pre><code>&lt;!-- BEGIN MODULE Form --&gt; ... &lt;!-- END MODULE Form --&gt;</code></pre></li>
+</ul>
+</li>
+<li>ログイン状態になると、通常のページに「編集」などのコントロールが表示される</li>
+<li>管理画面の作り込みが可能</li>
+<li>カスタムフィールドでコンテンツの検索・絞り込み機能が簡単に作れる</li>
+<li>ブロック単位の管理</li>
+<li>標準搭載のフォーム
+<ul class="disclist">
+<li>フォームオプション</li>
+<li>フォームの各項目に属性が設定できる</li>
+</ul>
+</li>
+<li>おさらい
+<ul class="disclist">
+<li>がんばるWeb制作者のためのCMS</li>
+<li>a-blog cmsひとつでコンテンツ管理</li>
+<li>XHTML+CSSの既存の知識で導入できる</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>Bingo!CMS（ショートセッション）</h3>
+<ul class="disclist">
+<li>一通りCMSとしての機能は入っている      </li>
+<li>画像のトリミングが管理画面からできる</li>
+<li>画像の一括アップロード</li>
+<li>Flicker検索機能<br />
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>Jimdo（ショートセッション）</h3>
+<ul class="disclist">
+<li>KDDIが提供するサービス</li>
+<li>ドイツ産</li>
+<li>Ajaxベースのオンラインウェブサイトビルダー</li>
+<li>無料版／有料版（900円くらい）</li>
+<li>大規模ウェブサイトには向かない</li>
+<li>ブロック単位の管理</li>
+<li>既にコンテンツが入っているものを書き換えていく</li>
+<li>実際のサイトと同じ見た目の管理画面
+<ul class="disclist">
+<li>オフィスソフトしか使えない人でも更新できる管理画面を追求した</li>
+</ul>
+</li>
+<li>APP Store的なプラットフォームを作ろうとしている
+<ul class="disclist">
+<li>今年秋公開予定</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>Power CMS for MT（ショートセッション）</h3>
+<ul class="disclist">
+<li>MTを拡張する様々なプラグイン</li>
+<li>結局MTでいいじゃん・・・</li>
+<li>MT経験者であれば今日からでも使えます</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>パネルディスカッション</h3>
+<ul class="disclist">
+<li>議題：ぶっちゃけMTとWordPressってどうよ
+<ul class="disclist">
+<li>ブログに特化したソフトなのでは</li>
+<li>複雑なMTタグを覚えなくてはならないし、WordPressはPHPがかけないと柔軟性がない</li>
+<li>WordPressは進化が速いので注目している</li>
+<li>MTは管理画面が使いづらい</li>
+<li>MTはWindows的なイメージ、WordPressはLinuxっぽいな・・・</li>
+<li>MTでは「誰が楽になったのか分からない」</li>
+<li>MTのいいとこ
+<ul class="disclist">
+<li>日本で一番、理解されている（ユーザーの多い）テンプレート言語</li>
+<li>バックエンドのプログラマーと組んで開発するならおすすめ</li>
+</ul>
+</li>
+<li>WordPressのいいとこ
+<ul class="disclist">
+<li>PHP書けて、一人でぐちゃぐちゃできるひとにおすすめ</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>議題：製品のウリとか</li>
+<li>議題：今後の戦略とか</li>
+<li>議題：サイト全体型か、部分型か</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>参加した感想</h3>
+<p>CMSといえばMTしかマトモに使ったことがないため「国産CMSにどんなものがあるのか、てっとり早く知ること」という目的を持って参加しましたが、これは達成できたように思います。ただ、勉強会というより品評会という感じがしました。</p>
+<p>それとプレゼンテーションの質にやたら差があったことが残念です。果たして自分が各製品を正等に評価できたのかどうか、自信が持てません。</p>
+<p>しかし、日本のソフトウェアメーカーがここまで鎬を削って様々な製品を開発していることが分かった、というだけで有意義な時間でした。CSS Niteさんが今後も興味深い企画を立ててくれることを、期待しております。</p>
+</div>
+
+<div class="section">
+<h3>最後に</h3>
+<p>この記事はあくまで私個人のメモを書き起こしたものですので、正確な情報は<a href="http://lp6.cssnite.jp/">CSS Niteの公式ページ</a>や、各製品の公式な情報をご参照ください。</p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2009/06/29_cssnitelp6/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>MT以外のCMS（国産）の話を聞きに</title>
+		<link>/2009/05/26_cssnitelp6</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 26 May 2009 08:44:58 +0000</pubDate>
+				<category><![CDATA[Event]]></category>
+		<category><![CDATA[CSSNite]]></category>
+		<guid isPermaLink="false">/wptest/2009/05/mt%e4%bb%a5%e5%a4%96%e3%81%aecms%ef%bc%88%e5%9b%bd%e7%94%a3%ef%bc%89%e3%81%ae%e8%a9%b1%e3%82%92%e8%81%9e%e3%81%8d%e3%81%ab.php</guid>
+
+					<description><![CDATA[CSS Nite LP, Disk 6「CMSリベンジ編」に参加します。 バナーを掲載の上でトラックバックをすると割引になるということなので、そのため（？）のあさましいエントリーです・・・orz CMSといえば普段の業務ではMovableTypeを使用しています。というか、CMS＝MovableTypeという有様なので、そのほかのCMSについても知ってみたいという思いもあり、あわよくば業務に導入したいと思っているわけです。そんな私にとって、こういった形で複数のCMSを一度に比較・検討できるイベントというのは非常にストライクです。 業務における新しい可能性を見出せるかもしれないという期待を胸に、しっかりと聴講したいと思います。]]></description>
+										<content:encoded><![CDATA[<p><a href="http://lp6.cssnite.jp/">CSS Nite LP, Disk 6「CMSリベンジ編」</a>に参加します。</p>
+
+<p><a href="http://lp6.cssnite.jp/"><img decoding="async" src="http://cssnite.jp/images/lp6-logo.gif" alt="CSS Nite LP, Disk 6「CMSリベンジ編」（2009年6月27日開催）" width="200" height="200" /></a></p>
+
+<p>バナーを掲載の上でトラックバックをすると割引になるということなので、そのため（？）のあさましいエントリーです・・・orz</p>
+
+<p>CMSといえば普段の業務ではMovableTypeを使用しています。というか、CMS＝MovableTypeという有様なので、そのほかのCMSについても知ってみたいという思いもあり、あわよくば業務に導入したいと思っているわけです。そんな私にとって、こういった形で複数のCMSを一度に比較・検討できるイベントというのは非常にストライクです。</p>
+
+<p>業務における新しい可能性を見出せるかもしれないという期待を胸に、しっかりと聴講したいと思います。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>CSS Nite in Ginza, Vol.21参加レポート</title>
+		<link>/2008/01/19_cssniteginza</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sat, 19 Jan 2008 05:28:46 +0000</pubDate>
+				<category><![CDATA[Event]]></category>
+		<category><![CDATA[CSSNite]]></category>
+		<guid isPermaLink="false">/wptest/2008/01/css-nite-in-ginza-vol-21%e5%8f%82%e5%8a%a0%e3%83%ac%e3%83%9d%e3%83%bc%e3%83%88.php</guid>
+
+					<description><![CDATA[先日CSS Nite in Ginza, Vol.21に参加しましたのでレポートを掲載します。今回のテーマは携帯サイトです。私のメモと記憶を書き起こしたものなので、私の興味に偏ったレポートとなることをご容赦ください。 <a href="/2008/01/19_cssniteginza">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>先日<a href="http://cssnite.jp/ginza/vol21/">CSS Nite in Ginza, Vol.21</a>に参加しましたのでレポートを掲載します。今回のテーマは携帯サイトです。</p>
+
+<div class="section">
+<h3>携帯サイトのコーディング事情?基本編 <span class="author">&#8211; 宮永 邦彦氏（アイデアマンズ株式会社）</span></h3>
+<ul class="disclist-comment">
+<li>キャリア別 CSSのサポート度合い<br />
+Y!ケータイ &gt; EZweb &gt;&gt;&gt;&gt;&gt; iモード</li>
+<li>iモードのCSS<br />
+style属性に直接書く書式のみサポート</li>
+<li>Y!ケータイとEZwebのCSSサポートの比較<br />
+EZwebは・・・
+<ul>
+<li><code>font-weight:bold;</code> 不可</li>
+<li><code>border-style</code> solid以外不可</li>
+<li><code>width</code> 不可</li>
+</ul></li>
+<li>太字表示は機種依存する → フォントに依存するデザインはNG</li>
+<li>テスト環境はFirefox + <a href="http://chrispederick.com/work/user-agent-switcher/">User Agent Switcher</a>、実機チェックは8機種くらいでしている</li>
+</ul>
+<div class="photobox2clm">
+<ul>
+<li><a href="/img/2008/01/19_cssniteginza01.jpg" title="携帯サイトのコーディング事情?基本編 (1)" class="thickbox" rel="cssniteginza21"><img decoding="async" src="/img/2008/01/19_cssniteginza01_thumb.jpg" alt="写真: 携帯サイトのコーディング事情?基本編 (1)" width="200" height="150" /></a></li>
+<li><a href="/img/2008/01/19_cssniteginza02.jpg" title="携帯サイトのコーディング事情?基本編 (2)" class="thickbox" rel="cssniteginza21"><img decoding="async" src="/img/2008/01/19_cssniteginza02_thumb.jpg" alt="写真: 携帯サイトのコーディング事情?基本編 (2)" width="200" height="150" /></a></li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<h3>携帯用サービスにおける実装とデザインの現実 <span class="author">&#8211; 原 一浩氏、寺田 学氏、尾花 衣美氏（空飛ぶ株式会社）</span></h3>
+<p><a href="http://aqv.jp/">アクビィ</a>制作チームによる、アクビィの実制作に基づくプレゼンテーションでした。</p>
+<ul class="disclist-comment">
+<li>開発環境はDreamweaver CS3</li>
+<li>テスト環境
+<ul>
+<li>iモード外字キット <a href="http://www.nttdocomo.co.jp/service/imode/make/content/pictograph/tool/">i絵文字</a>を使って絵文字を表示</li>
+<li>Firefox + <a href="http://chrispederick.com/work/user-agent-switcher/">User Agent Switcher</a></li>
+<li>Firefox + <a href="http://www.infoaxia.com/tools/webdeveloper/">Web Developer</a>でウィンドウサイズを制限</li>
+<li>PCで見ると「手元でカチカチやる感じ」がないのでNintendo DSでもテスト</li>
+</ul></li>
+<li>画像よりも絵文字を使う（ファイルサイズ・リクエストファイル数の削減）</li>
+<li>ファーストビュー → QVGAを基準に</li>
+<li>機種により液晶のガンマ値・明るさが違う<br />
+sRGB色空間を使うと、色の違いはあまり出ない</li>
+<li>ユーザーのUser Agent判定をPHPで実装</li>
+<li>PCからのアクセスをIPアドレス制限ではじく</li>
+<li>文字コードはShift_JISだが、内部ではUTF-8</li>
+<li>Cookieは実質使えないので、GETパラメータを使ってセッションを引き回している</li>
+<li>アクセス解析には<a href="http://awstats.sourceforge.net/">AWStats</a>と<a href="http://www.google.com/analytics/ja-JP/">Google Analytics</a>を利用</li>
+</ul>
+<div class="photobox2clm">
+<ul>
+<li><a href="/img/2008/01/19_cssniteginza03.jpg" title="携帯用サービスにおける実装とデザインの現実 (1)" class="thickbox" rel="cssniteginza21"><img loading="lazy" decoding="async" src="/img/2008/01/19_cssniteginza03_thumb.jpg" alt="写真: 携帯用サービスにおける実装とデザインの現実 (1)" width="200" height="150" /></a></li>
+<li><a href="/img/2008/01/19_cssniteginza04.jpg" title="携帯用サービスにおける実装とデザインの現実 (2)" class="thickbox" rel="cssniteginza21"><img loading="lazy" decoding="async" src="/img/2008/01/19_cssniteginza04_thumb.jpg" alt="写真: 携帯用サービスにおける実装とデザインの現実 (2)" width="200" height="150" /></a></li>
+</ul>
+</div>
+</div>
+
+<p><span id="more-40"></span></p>
+
+<p class="postscript">私のメモと記憶を書き起こしたものなので、私の興味に偏ったレポートとなりますことをご容赦ください。また、実際のプレゼンと異なっている点などがございましたらご指摘いただけると幸いです。そこはきっと私の記憶違いです。</p>
+
+<p>アップルストアの無料版は今月から３回だけ、限定で復活とのことです。場所といい時間帯といい、仕事の帰りにフラッと寄れるのが良いですね。都合が良ければ来月も行きたいと思います。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Web標準の日々に参加しました</title>
+		<link>/2007/07/the_days_of_web_standars</link>
+					<comments>/2007/07/the_days_of_web_standars#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 19 Jul 2007 13:48:42 +0000</pubDate>
+				<category><![CDATA[Event]]></category>
+		<category><![CDATA[CSSNite]]></category>
+		<guid isPermaLink="false">/wptest/2007/07/web%e6%a8%99%e6%ba%96%e3%81%ae%e6%97%a5%e3%80%85%e3%81%ab%e5%8f%82%e5%8a%a0%e3%81%97%e3%81%be%e3%81%97%e3%81%9f.php</guid>
+
+					<description><![CDATA[先の連休にはWeb業界のフジロックとまで呼ばれる、Web標準の日々に参加してきました。 個人的には前回参加したCSS Nite LP, Disk 3 &#34;Coder&#8217;s High&#34;で燃え尽きた感があったので、今回のイベントはあまり乗り気ではなかったのですが・・・。これだけ豪華な内容で、かつ参加費も昨年のWeb標準の日に比べると格安ときた。しかしなんといってもこの&#34;祭り&#34;に乗り遅れるわけには行きません！というわけで2日券を購入して参加しました。 セッション登録申し込みが遅れたせいか、本命と睨むセッションには登録ができませんでしたが、当日に並んでみると意外にすんなり入場できてしまったり。そんなわけで、立ち見したものも含め、結果的に私が参加したセッションは下記になりました。 7月15日（日曜日） A1: WCAG 2.0: 見えてきたアクセシビリティの新基準（植木 真 氏） Z2: W3Cのこと、本当にご存知ですか？（萩野 達也 氏） A2: スクリーンリーダー開発者が明かすコンテンツ制作のツボ（大塚 雅永 氏） V3: デザイナーズ・ハイ デザインタイトルマッチ！（矢野 りん 氏） X4: 転ばぬ先のプロジェクトデザイン（木達 一仁 氏） 7月16日（月曜日） X5: 複合文書から見たXHTML+CSSとスキーマ活用（石川 雅康 氏） D6: Web制作におけるアートディレクションとテクニカルディレクション（神森 勉 氏、佐分利 仁 氏） D7: ビジネス・アーキテクツのコミュニケーションデザイン（森田 雄 氏） J8: DOMから始めるJavaScriptモダンスクリプティングの基礎 初日の木達さんのセッション（X4）だけは絶対に受講したかったので、セッション登録していないにも関わらず並んで受講しました。ここで意外と余裕に座れてしまったのと、木達さんのお話が素晴らしかったので「二日目はディレクションだな」とここで頭を切り替えることができました。 二日目は「セッション登録なしでもなんとかなる」と、アンカーテクノロジーのお二人のD6、ビジネス・アーキテクツ森田さんのD7を続けて立ち見で受講。両セッションとも「分かる人には分かる」内容だったなぁ・・・という感想を持ちつつ、他ではとても聞くことができない大変に有難いお話でした。 そして何よりもこれらのセッションでは「よい仕事がしたい」という熱意が、会場中を満たしていた気がします。そこがよかった。具体的な内容については、ここでは言及しません。 そして最後に羽田野さんのJavaScriptのセッションを受講。&#34;Web標準の日々&#34;にふさわしく「JavaScriptは主役になってはいけない」・「JavaScriptが無効でもコンテンツの内容がきちんと伝わるHTMLを書く」という主張が軸となる、非常にテンポの良いセッションでした。内容もタメになったし、言うことなしです。今度、羽田野さんのDOMの本でも買おう。 受講したセッションの中で、自分的にナンバーワンだったのは木達さんのセッションでした。これだけは復習も兼ねて後でまとめを記事に書こうと思っています。今度の休日にでも。 とにかく関係者の方々も参加者の方々も、大変にお疲れ様でした！皆様にこの場をもってお伝えしたいことは、「とても楽しめました」という感謝の気持ちです。本当にありがとうございました！]]></description>
+										<content:encoded><![CDATA[<p>先の連休には<dfn>Web業界のフジロック</dfn>とまで呼ばれる、<a href="http://days2007.cssnite.jp/">Web標準の日々</a>に参加してきました。</p>
+
+<p>個人的には前回参加した<a href="http://lp3.cssnite.jp/">CSS Nite LP, Disk 3 &quot;Coder&#8217;s High&quot;</a>で燃え尽きた感があったので、今回のイベントはあまり乗り気ではなかったのですが・・・。これだけ豪華な内容で、かつ参加費も昨年の<a href="http://cssnite.jp/theday/">Web標準の日</a>に比べると格安ときた。しかしなんといってもこの&quot;祭り&quot;に乗り遅れるわけには行きません！というわけで2日券を購入して参加しました。</p>
+
+<p>セッション登録申し込みが遅れたせいか、本命と睨むセッションには登録ができませんでしたが、当日に並んでみると意外にすんなり入場できてしまったり。そんなわけで、立ち見したものも含め、結果的に私が参加したセッションは下記になりました。</p>
+
+<dl class="disclist">
+<dt>7月15日（日曜日）</dt>
+<dd>A1: <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0: 見えてきたアクセシビリティの新基準（植木 真 氏）</dd>
+<dd>Z2: <abbr title="World Wide Web Consortium">W3C</abbr>のこと、本当にご存知ですか？（萩野 達也 氏）</dd>
+<dd>A2: スクリーンリーダー開発者が明かすコンテンツ制作のツボ（大塚 雅永 氏）</dd>
+<dd>V3: デザイナーズ・ハイ デザインタイトルマッチ！（矢野 りん 氏）</dd>
+<dd>X4: 転ばぬ先のプロジェクトデザイン（木達 一仁 氏）</dd>
+<dt>7月16日（月曜日）</dt>
+<dd>X5: 複合文書から見た<abbr title="Extensible HyperText Markup Language">XHTML</abbr>+<abbr title="Cascading Style Sheets">CSS</abbr>とスキーマ活用（石川 雅康 氏）</dd>
+<dd>D6: Web制作におけるアートディレクションとテクニカルディレクション（神森 勉 氏、佐分利 仁 氏）</dd>
+<dd>D7: ビジネス・アーキテクツのコミュニケーションデザイン（森田 雄 氏）</dd>
+<dd>J8: <acronym title="Document Object Model">DOM</acronym>から始めるJavaScriptモダンスクリプティングの基礎</dd>
+</dl>
+
+<p>初日の木達さんのセッション（X4）だけは絶対に受講したかったので、セッション登録していないにも関わらず並んで受講しました。ここで意外と余裕に座れてしまったのと、木達さんのお話が素晴らしかったので「二日目はディレクションだな」とここで頭を切り替えることができました。</p>
+
+<p>二日目は「セッション登録なしでもなんとかなる」と、アンカーテクノロジーのお二人の<dfn>D6</dfn>、ビジネス・アーキテクツ森田さんの<dfn>D7</dfn>を続けて立ち見で受講。両セッションとも「分かる人には分かる」内容だったなぁ・・・という感想を持ちつつ、他ではとても聞くことができない大変に有難いお話でした。<br />
+そして何よりもこれらのセッションでは「よい仕事がしたい」という熱意が、会場中を満たしていた気がします。そこがよかった。具体的な内容については、ここでは言及しません。</p>
+
+<p>そして最後に羽田野さんのJavaScriptのセッションを受講。&quot;Web標準の日々&quot;にふさわしく「JavaScriptは主役になってはいけない」・「JavaScriptが無効でもコンテンツの内容がきちんと伝わる<abbr title="Hyper Text Markup Laguage">HTML</abbr>を書く」という主張が軸となる、非常にテンポの良いセッションでした。内容もタメになったし、言うことなしです。今度、羽田野さんの<acronym title="Document Object Model">DOM</acronym>の本でも買おう。</p>
+
+<p>受講したセッションの中で、自分的にナンバーワンだったのは木達さんのセッションでした。これだけは復習も兼ねて後でまとめを記事に書こうと思っています。今度の休日にでも。</p>
+
+<p>とにかく関係者の方々も参加者の方々も、大変にお疲れ様でした！皆様にこの場をもってお伝えしたいことは、「とても楽しめました」という感謝の気持ちです。本当にありがとうございました！</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2007/07/the_days_of_web_standars/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

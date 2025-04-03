@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Media &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/media/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:04 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Media &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>PNG8でアルファチャンネルが使えることを最近知った件</title>
+		<link>/2010/07/png8alpha</link>
+					<comments>/2010/07/png8alpha#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 01 Jul 2010 15:01:31 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Media]]></category>
+		<category><![CDATA[PNG]]></category>
+		<guid isPermaLink="false">/?p=692</guid>
+
+					<description><![CDATA[「続・ハイパフォーマンスWebサイト」を読んで、今ではPNG8がデフォルトですよ、みたいな内容が書いてあってあえてPNG形式を避けてきた自分は衝撃を受けました。 <a href="/2010/07/png8alpha">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" src="/wp-content/uploads/2010/07/20100701intro.png" alt="" width="160" height="160" class="alignnone size-full wp-image-693 photoEven" srcset="/wp-content/uploads/2010/07/20100701intro.png 160w, /wp-content/uploads/2010/07/20100701intro-150x150.png 150w" sizes="(max-width: 160px) 100vw, 160px" />
+<a href="http://www.amazon.co.jp/gp/product/4873114462?ie=UTF8&amp;tag=likealunatic-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4873114462">続・ハイパフォーマンスWebサイト ―ウェブ高速化のベストプラクティス</a><img decoding="async" src="http://www.assoc-amazon.jp/e/ir?t=likealunatic-22&amp;l=as2&amp;o=9&amp;a=4873114462" width="1" height="1" alt="" style="border:none !important; margin:0px !important;" />を読んで、今ではPNG8がデフォルトですよ、みたいな内容が書いてあったのでPNG形式を敬遠してきた自分はたいそう驚きました。</p>
+
+<blockquote cite="http://www.oreilly.co.jp/books/9784873114460/"><p>写真にはJPEG、アニメーションにはGIF、その他すべてのものにはPNG（可能な限りPNG8）を使う</p></blockquote>
+
+<p>ということだそうです。</p>
+
+<p>同書でも紹介されていたsitepointの記事、<a href="http://www.sitepoint.com/blogs/2007/09/18/png8-the-clear-winner/">PNG8 &#8211; The Clear Winner</a>を読むと、「PNG8最高だよ！」みたいなことが書いてあります。要約（というか超訳）すると</p>
+
+<blockquote cite="http://www.sitepoint.com/blogs/2007/09/18/png8-the-clear-winner/"><ul>
+<li>PNG8はGIFのような256色パレットベースのカラーモデルを持っている</li>
+<li>GIFのようにアニメーションはできない</li>
+<li>GIFのように一部の色を完全に透明にすることができる</li>
+</ul>
+<p>しかしなんと、Fireworksを使えばアルファチャンネル付きのPNG8を書き出すことができる。少なくともバージョン3から実装されている。<br />
+アルファチャンネル付きで書き出した部分はIE6などの未対応ブラウザでは完全に透明なピクセルとして表示される。境目はジャギってしまうけど、そこまで見た目を損なうものではない。</p></blockquote>
+
+<p>なんと、Fireworksしかこのアルファチャンネル付き書き出しには対応していないそうです。しかもバージョン3からって・・・本当に目から鱗です・・・。<br />
+とりあえず実践してみようということでデモを作成しました。</p>
+
+<p><a href="/demo/png8alpha/">デモ &#8211; PNG8 with Alpha Channel Test</a></p>
+
+<p>はい、ドラゴンボールです。ドラゴンボールの影の部分がアルファチャンネル付きになっています。PNG8、PNG32、GIF、JPEGを比較のため、並べてみました。ちょっとサンプル画像の色数が多いため、ファイルサイズではJPEG（画質80）が最も軽くなっています。<br />
+特筆すべきはGIFと比べてファイルサイズが小さいこと。約20KBと約14KBなので、その差は歴然。<br />
+もっと色数が少なくていい画像ならそんなに違和感（グラデーション部分のガタガタ感とか）も出ないだろうし、PNG8の良さがもっと引き出せたのではないでしょうか。</p>
+
+<p>ちなみにデモをIE6で見ると、以下のスクリーンショットのようになります。</p>
+
+<p class="pic"><a href="/wp-content/uploads/2010/07/20100701_ss_ie6.png"><img decoding="async" src="/wp-content/uploads/2010/07/20100701_ss_ie6-158x300.png" alt="" title="アルファチャンネル付きPNG8とPNG32をIE6で表示したスクリーンショット" width="158" height="300" class="alignnone size-medium wp-image-694" srcset="/wp-content/uploads/2010/07/20100701_ss_ie6-158x300.png 158w, /wp-content/uploads/2010/07/20100701_ss_ie6.png 390w" sizes="(max-width: 158px) 100vw, 158px" /></a></p>
+
+<p>ドロップシャドウ部分がまるまるなくなっています。PNG32（filterハックなし）の場合、透明部分がグレーになって表示されてしまうのはご存知の通りです。</p>
+
+<p>透明度が必要なデザインの対応として、PNG32とfilterベースのハックを使って完全な表現を目指すのか、PNG8を使ってProgressive Enhancement的な制作を行うのか、というように選択肢が増える感じでしょうね。<br />
+filterプロパティを使った対応はその代償としてパフォーマンスを大幅に下げてしまいます。&quot;ハイパフォーマンスWebサイト&quot;を目指すのであれば、アルファチャンネル付きPNG8を使うという選択肢を検討してもいいかもしれません。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2010/07/png8alpha/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

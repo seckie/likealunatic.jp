@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: modern.IE×VMWareFusion 試してみた	</title>
+	<atom:link href="/2013/04/modernie/feed" rel="self" type="application/rss+xml" />
+	<link>/2013/04/modernie</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:13:52 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: ModernIE様のおかげでmacでwin環境がタダで出来ました。 - Layman&#039;s Web Creation.		</title>
+		<link>/2013/04/modernie/comment-page-1#comment-30232</link>
+
+		<dc:creator><![CDATA[ModernIE様のおかげでmacでwin環境がタダで出来ました。 - Layman&#039;s Web Creation.]]></dc:creator>
+		<pubDate>Tue, 26 Aug 2014 10:31:19 +0000</pubDate>
+		<guid isPermaLink="false">/?p=1002#comment-30232</guid>
+
+					<description><![CDATA[&lt;p&gt;[&#8230;]  modern.IE×VMWareFusion 試してみた [&#8230;]&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;]  modern.IE×VMWareFusion 試してみた [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: ModernIE様のおかげでmacでwin環境がタダで出来ました。 &#124; Layman&#039;s Web Creation.		</title>
+		<link>/2013/04/modernie/comment-page-1#comment-498</link>
+
+		<dc:creator><![CDATA[ModernIE様のおかげでmacでwin環境がタダで出来ました。 &#124; Layman&#039;s Web Creation.]]></dc:creator>
+		<pubDate>Wed, 17 Apr 2013 13:49:25 +0000</pubDate>
+		<guid isPermaLink="false">/?p=1002#comment-498</guid>
+
+					<description><![CDATA[&lt;p&gt;[...] この記事では以下のの記事を参考にしました。 modern.IE×VMWareFusion 試してみた http://blog.reybango.com/2013/02/04/making-internet-explorer-testing-easier-with-new-ie-vms/ [...]&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] この記事では以下のの記事を参考にしました。 modern.IE×VMWareFusion 試してみた <a href="http://blog.reybango.com/2013/02/04/making-internet-explorer-testing-easier-with-new-ie-vms/" rel="nofollow ugc">http://blog.reybango.com/2013/02/04/making-internet-explorer-testing-easier-with-new-ie-vms/</a> [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

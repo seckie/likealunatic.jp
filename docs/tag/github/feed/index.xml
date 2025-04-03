@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>GitHub &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/github/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:15:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>GitHub &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>サイトの裏側を書き直した</title>
+		<link>/2014/04/rebuild</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Sun, 13 Apr 2014 16:53:41 +0000</pubDate>
+				<category><![CDATA[What's New?]]></category>
+		<category><![CDATA[GitHub]]></category>
+		<category><![CDATA[Grunt]]></category>
+		<guid isPermaLink="false">/?p=1067</guid>
+
+					<description><![CDATA[自分のサイトを更新するモチベーションが沸々と約2年半ぶりに湧き上がり、現在業務で使っているツールや知識を使って裏側を書き直した。 今回変えたのは以下のような点。 Grunt 導入 プロトタイプ環境と本番環境を分けた WordPressシステムファイル以外のソースコードを GitHub で管理するようにした Twitter API version 1.1 への対応（遅っ！） Twitter API を利用しているのはトップページでリスト表示をしているところだけだが、Twitter API 1.0 が廃止されてから1年近く放置してしまった…。お恥ずかしい限り。 Grunt を導入したことでパッケージ管理をぜんぶ bower に任せられたし、必要なやつだけ grunt-contrib-copy でコピーして deploy 環境に置く、みたいなことができてめちゃくちゃ整理ができた。2年半前と開発環境はえらい違い。 突貫工事だったので JavaScript とか LESS とかは適当。まだ途中のところとかあるし。 あとでやりたいこと↓ JavaScript を CoffeeScript で書き直す Bootstrap を始めとしたパッケージ群を最新版にして WordPress テーマを書き直す]]></description>
+										<content:encoded><![CDATA[<p>自分のサイトを更新するモチベーションが沸々と約2年半ぶりに湧き上がり、現在業務で使っているツールや知識を使って裏側を書き直した。
+今回変えたのは以下のような点。</p>
+
+<ul>
+<li>Grunt 導入</li>
+<li>プロトタイプ環境と本番環境を分けた</li>
+<li>WordPressシステムファイル以外のソースコードを <a href="https://github.com/seckie/likealunatic">GitHub で管理するようにした</a></li>
+<li>Twitter API version 1.1 への対応（遅っ！）</li>
+</ul>
+
+<p>Twitter API を利用しているのはトップページでリスト表示をしているところだけだが、Twitter API 1.0 が廃止されてから1年近く放置してしまった…。お恥ずかしい限り。</p>
+
+<p>Grunt を導入したことでパッケージ管理をぜんぶ bower に任せられたし、必要なやつだけ grunt-contrib-copy でコピーして deploy 環境に置く、みたいなことができてめちゃくちゃ整理ができた。2年半前と開発環境はえらい違い。</p>
+
+<p>突貫工事だったので JavaScript とか LESS とかは適当。まだ途中のところとかあるし。<br />
+あとでやりたいこと↓</p>
+
+<ul>
+<li>JavaScript を CoffeeScript で書き直す</li>
+<li>Bootstrap を始めとしたパッケージ群を最新版にして WordPress テーマを書き直す</li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>初めて pull request を体験するなど</title>
+		<link>/2013/06/fuelphptranslation</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Mon, 17 Jun 2013 13:32:39 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[FuelPHP]]></category>
+		<category><![CDATA[GitHub]]></category>
+		<guid isPermaLink="false">/?p=1028</guid>
+
+					<description><![CDATA[最近、仕事で FuelPHP という PHP フレームワークを使う機会があります。いわゆる Cake PHP 的な MVC フレームワークで、PHP 5.3 以降対応としたことにより、今風に書かれているらしいです。 もう先月の話になるのですが、FuelPHP 1.6 翻訳ウィークというオンラインイベントを通じて、Fuel PHP 1.6 の日本語ドキュメントのメンテナンスに参加しました。 翻訳作業には GitHub を通じて誰でも参加できるようになっており、初めて他人のプロジェクトに pull request を送るという体験をしました。日本語でやり取りができたので、はじめの一歩としては敷居が低かったと思います。 それにしても GitHub、やりとりのほとんどをブラウザ上で完結できてしまうほど、進化していたんですね。しかしこれだと git の勉強にはならないなー。]]></description>
+										<content:encoded><![CDATA[<p>最近、仕事で <a href="http://fuelphp.com/">FuelPHP</a> という PHP フレームワークを使う機会があります。いわゆる Cake PHP 的な MVC フレームワークで、PHP 5.3 以降対応としたことにより、今風に書かれているらしいです。</p>
+
+<p>もう先月の話になるのですが、<a href="http://atnd.org/events/39849">FuelPHP 1.6 翻訳ウィーク</a>というオンラインイベントを通じて、<a href="http://fuelphp.jp/docs/1.6/">Fuel PHP 1.6 の日本語ドキュメント</a>の<a href="https://github.com/NEKOGET/FuelPHP_docs_jp/tree/1.6/develop_japanese">メンテナンス</a>に参加しました。</p>
+
+<p>翻訳作業には GitHub を通じて誰でも参加できるようになっており、初めて他人のプロジェクトに pull request を送るという体験をしました。日本語でやり取りができたので、はじめの一歩としては敷居が低かったと思います。</p>
+
+<p>それにしても GitHub、やりとりのほとんどをブラウザ上で完結できてしまうほど、進化していたんですね。しかしこれだと git の勉強にはならないなー。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>GitHubを初めて使ってみた</title>
+		<link>/2011/08/github</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 04 Aug 2011 13:16:01 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[git]]></category>
+		<category><![CDATA[GitHub]]></category>
+		<guid isPermaLink="false">/?p=782</guid>
+
+					<description><![CDATA[ヘルプに書いてある通りにやったらできた。本当に、そのまんま。 http://help.github.com/win-set-up-git/ <a href="/2011/08/github">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>ヘルプに書いてある通りにやったらできた。本当に、そのまんま。<br />
+<a href="http://help.github.com/win-set-up-git/">Help.GitHub &#8211; Set Up Git</a><br />
+<a href="http://help.github.com/create-a-repo/">Help.GitHub &#8211; Create A Repo</a></p>
+
+<p>Macでのやり方はこちら<br />
+<a href="http://help.github.com/mac-set-up-git/">Help.GitHub &#8211; Set Up Git</a></p>
+
+<p>SSH keyを登録するところがキモだが、コマンドまで全てちゃんとヘルプに書いてあるのでつまずいたところはなかった。拍子抜け。</p>
+
+<p>最初に作ってみたレポジトリがこれ。<br />
+<a href="https://github.com/seckie/jQuery.ui.vScroll">seckie/jQuery.ui.vScroll &#8211; GitHub</a></p>
+
+<p>今年の春に作ったものだけど、今また案件で使う必要があって引っ張り出したら無駄なところがあったりしてちょっといじることになった。案件の制作物は当然会社のレポジトリに置くんだけど、これは個人的に作ったものだったりしたので、せっかくなのでGitHubに挑戦してみた。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

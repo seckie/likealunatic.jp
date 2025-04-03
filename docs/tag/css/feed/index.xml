@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>CSS &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/css/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:40 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>CSS &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>img要素を使ったCSSロールオーバー＋α</title>
+		<link>/2009/10/27_cssrollover</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 27 Oct 2009 12:08:50 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<guid isPermaLink="false">/wptest/2009/10/img%e8%a6%81%e7%b4%a0%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9fcss%e3%83%ad%e3%83%bc%e3%83%ab%e3%82%aa%e3%83%bc%e3%83%90%e3%83%bc%ef%bc%8b%ce%b1.php</guid>
+
+					<description><![CDATA[画像をリストで配置したグローバルナビゲーションにロールオーバーを設定する時、JavaScriptを使わずCSSだけで実現するパターンをご紹介。 <a href="/2009/10/27_cssrollover">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>画像をリストで配置したグローバルナビゲーションにロールオーバーを設定する時の話。JavaScriptを使わずCSSだけで実現するロールオーバーはいくつかやり方があると思いますが、以下のパターンをよく使っています。</p>
+
+<div class="section">
+<h3>パターン1</h3>
+<h4>完成イメージ</h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img decoding="async" alt="パターン1のスクリーンショット" src="/images/2009/10/ss3.gif" width="466" height="48" class="mt-image-none" style="" /></span></p>
+<h4>デモ</h4>
+<p><a href="/sample/20091027_1/">img要素を使ったCSSロールオーバー＋α デモ1</a></p>
+<h4>XHTML</h4>
+<pre><code>&lt;ul id=&quot;globalNav&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/img/nav1.gif&quot; alt=&quot;ナビ1&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/img/nav2.gif&quot; alt=&quot;ナビ2&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/img/nav3.gif&quot; alt=&quot;ナビ3&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/img/nav4.gif&quot; alt=&quot;ナビ4&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/img/nav5.gif&quot; alt=&quot;ナビ5&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<h4>CSS</h4>
+<pre><code>#globalNav {
+height: 30px; /* ナビ画像の高さ */
+background: url(nav_active.gif) no-repeat 0 0;
+overflow: hidden;
+}
+#globalNav li {
+float: left;
+width: 90px;
+}
+#globalNav li a {
+display: block;
+*zoom: 1; /* ie6,7 */
+}
+#globalNav li a:hover,
+#globalNav li a:active {
+text-indent: -9999px;
+}</code></pre>
+<p>全てのナビがロールオーバーした状態の画像を用意し、#globalNavの背景に設定します。</p>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img decoding="async" alt="パターン1 スライスを切る様子" src="/images/2009/10/ss1.gif" width="480" height="48" class="mt-image-none" style="" /></span></p>
+<p>li要素に明示的な幅指定を行っておき、その子であるa要素に<code>display:block;</code>を設定。<br />
+<code>a:hover</code>時に<code>text-indent:-9999px;</code>を設定することでimg要素を画面外に飛ばし、背景画像を見せることでロールオーバーさせています。</p>
+<p>この手法の欠点は、各ボタンを格納するli要素に明示的に幅を指定しないと意図した表示にならないという点。仮に、各ボタンの横幅が異なっている場合、各li要素にclassとかidを振って別々の幅を指定してやらないといけないということになります。</p>
+</div>
+
+<div class="section">
+<h3>パターン2</h3>
+<p>各ボタンの横幅が異なっているけれど、各li要素にclassやidを書きたくない場合・・・このシチュエーションって結構経験していて悩んでいたのですが、どうにか実現することができたのがこのパターンです。</p>
+<p><del datetime="2009-10-28">XHTMLはパターン1と同じとして。</del></p>
+<h4>完成イメージ</h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img decoding="async" alt="パターン2のスクリーンショット" src="/images/2009/10/ss4.gif" width="420" height="32" class="mt-image-none" style="" /></span></p>
+<h4>デモ</h4>
+<p><a href="/sample/20091027_2/">img要素を使ったCSSロールオーバー＋α デモ2</a></p>
+<h4>XHTML</h4>
+<pre><code>&lt;ul id=&quot;globalNav&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;nav_products.gif&quot; alt=&quot;ナビ1&quot; width=&quot;82&quot; height=&quot;18&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;nav_gallery.gif&quot; alt=&quot;ナビ2&quot; width=&quot;64&quot; height=&quot;18&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;nav_blog.gif&quot; alt=&quot;ナビ3&quot; width=&quot;39&quot; height=&quot;18&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;nav_about.gif&quot; alt=&quot;ナビ4&quot; width=&quot;56&quot; height=&quot;18&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;nav_contact.gif&quot; alt=&quot;ナビ5&quot; width=&quot;71&quot; height=&quot;18&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<h4>CSS</h4>
+<pre><code>#globalNav {
+height: 18px; /* ナビ画像の高さ */
+overflow: hidden;
+background: url(nav_active.gif) no-repeat 0 0;
+font-size: 10px;
+}
+#globalNav li {
+float: left;
+margin-right: 20px;
+*zoom: 1; /* ie6,7 */
+}
+#globalNav a {
+display: -moz-inline-box;
+display: inline-block;
+*zoom: 1; /* ie6,7 */
+vertical-align: bottom;
+}
+#globalNav a:hover,
+#globalNav a:active {
+padding-top: 9999px;
+}</code></pre>
+<p>li要素には幅指定を行いません。そして、右のボタンとの余白を<code>margin-right</code>で設定しますが、全てのボタンでこれが同一になるように画像のスライスを調節します。一番右のmarginが領域を飛び出してしまうケースもあると思いますが、その辺は適当にうまくやります。</p>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="パターン2 スライスを切る様子" src="/images/2009/10/ss2.gif" width="480" height="48" class="mt-image-none" style="" /></span></p>
+<p>a要素は<code>display:inline-block;</code>になるようにします。
+<ins datetime="2009-10-28">そしてinline-blockなのでvertical-alignの調整も行っておきましょう。</ins>
+inline-blockについては<a href="http://cssnite.jp/archives/post_1153.html">CSS Nite in Ginza, Vol.27</a>での<a href="http://www.yomotsu.net/works/081016cssnite/">小山田さんのセッション（のスライド）</a>が参考になります。</p>
+<ins datetime="2009-10-28"><p>また、img要素にwidth、height属性をそれぞれ明示的に指定をする必要があります。これはFirefox2で正しく表示するために必要です。<br /></p></ins>
+<p>そして<code>a:hover</code>の<code>padding-top</code>に大きな値を指定して、含んでいるimg要素を追い出すようにしてやれば、完了です。追い出した部分を非表示にするために、#globalNavにheightの明示的な指定と<code>overflow:hidden;</code>の指定が必要なのでお忘れなく。（この2つはfloat解除の意味合いもありますが）</p>
+</div>
+
+<p><span id="more-97"></span></p>
+
+<div class="postscript">
+<h3>追記 <span>&#8211; 2009-10-28</span></h3>
+<p><code>display:-moz-inline-box</code>と<code>display:inline-block</code>の順序が逆だったので修正。まぁどちらでも結果オーライなことにはなっていますが、<a href="http://www.yomotsu.net/works/081016cssnite/">CSS Nite in Ginza, Vol.27 小山田さんのセッション（のスライド）</a>におけるコードを尊重させていただきたいと思います。</p>
+<h3>追記 その2 <span>&#8211; 2009-10-28</span></h3>
+<p>Firefox2においての表示不具合への対処について、本文に追記しました。Firefox2で正しく表示するためには<code>a {display:-moz-inline-box;}</code>とするだけでなく、中に含むimg要素にwidth・height属性の指定を行い、さらに<code>a {vertical-align:bottom;}</code>の指定の2点が必要です。</p>
+<p>これらの指定がない場合、Firefox2で初回読み込み時に限って画像が正しく表示されませんでした。ただし2回目の読み込みでは正常な表示だったので、画像がキャッシュされていない状態において幅・高さが検出できないために起こる現象のようです。</p>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[Memo]:visitedクラスを利用した行動ターゲティング広告</title>
+		<link>/2008/11/12_visitedlink</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 12 Nov 2008 01:54:40 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Security]]></category>
+		<guid isPermaLink="false">/wptest/2008/11/memovisited%e3%82%af%e3%83%a9%e3%82%b9%e3%82%92%e5%88%a9%e7%94%a8%e3%81%97%e3%81%9f%e8%a1%8c%e5%8b%95%e3%82%bf%e3%83%bc%e3%82%b2%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0%e5%ba%83%e5%91%8a.php</guid>
+
+					<description><![CDATA[とても興味深い内容だったのでメモ。 行動ターゲティング広告はどこまで許されるのか&#160;インターネット-最新ニュース:IT-PLUS visited疑似クラスのビーコンを拾うサービスが登場 個人で使うドリコム式行動ターゲティング広告 id:Hamachiya2さんのデモのソースを見るとCSSの:visited擬似クラスと、JavaScriptを併用した形で、動的にコンテンツを入れ替える方法が分かります。 まずCSSで:visited擬似クラスに別のスタイルを書いておいて a { display: block; height: 22px; overflow: hidden; } a:visited { height: 16px; } JavaScriptの以下のようなコードで、訪問の有無を調べています。 var defHeight = 22; var visHeight = 16; ...中略... // 引数にはa要素ノードを入れる // その高さがデフォルトでない（既訪問リンク）ならtrueを返す // その高さがデフォルト（未訪問リンク）ならfalse返す function checkVisited(elm) { return (elm.offsetHeight != defHeight); } 実行はwindow.onloadのイベントで。なるほど。 自らの意図しない情報が、このように簡単に取得されてしまうのかと思うと、気持ちが悪いな・・・と思うと同時に、簡単であるが故に防ぎようがないと思いました。]]></description>
+										<content:encoded><![CDATA[<p>とても興味深い内容だったのでメモ。</p>
+
+<ul class="disclist">
+<li><a href="http://it.nikkei.co.jp/internet/news/index.aspx?n=MMITbe000015102008">行動ターゲティング広告はどこまで許されるのか&nbsp;インターネット-最新ニュース:IT-PLUS</a></li>
+<li><a href="http://bakera.jp/ebi/topic/3298">visited疑似クラスのビーコンを拾うサービスが登場</a></li>
+<li><a href="http://d.hatena.ne.jp/Hamachiya2/20081029/visited">個人で使うドリコム式行動ターゲティング広告</a></li>
+</ul>
+
+<p><a href="http://hamachiya.com/junk/visited.html">id:Hamachiya2さんのデモ</a>のソースを見るとCSSの:visited擬似クラスと、JavaScriptを併用した形で、動的にコンテンツを入れ替える方法が分かります。</p>
+
+<p>まずCSSで:visited擬似クラスに別のスタイルを書いておいて</p>
+
+<pre><code>a {
+display: block;
+height: 22px;
+overflow: hidden;
+}
+a:visited {
+height: 16px;
+}</code></pre>
+
+<p>JavaScriptの以下のようなコードで、訪問の有無を調べています。</p>
+
+<pre><code>var defHeight = 22;
+var visHeight = 16;
+...中略...
+// 引数にはa要素ノードを入れる
+// その高さがデフォルトでない（既訪問リンク）ならtrueを返す
+// その高さがデフォルト（未訪問リンク）ならfalse返す
+function checkVisited(elm) {
+return (elm.offsetHeight != defHeight);
+}</code></pre>
+
+<p>実行はwindow.onloadのイベントで。なるほど。</p>
+
+<p>自らの意図しない情報が、このように簡単に取得されてしまうのかと思うと、気持ちが悪いな・・・と思うと同時に、簡単であるが故に防ぎようがないと思いました。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[memo]Flashより全面に、HTMLの要素を表示したい場合の指定</title>
+		<link>/2008/11/11_memo_flashobjecthtml</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 11 Nov 2008 02:46:02 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[Memo]]></category>
+		<guid isPermaLink="false">/wptest/2008/11/memoflash%e3%82%88%e3%82%8a%e5%85%a8%e9%9d%a2%e3%81%ab%e3%80%81html%e3%81%ae%e8%a6%81%e7%b4%a0%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%97%e3%81%9f%e3%81%84%e5%a0%b4%e5%90%88%e3%81%ae%e6%8c%87%e5%ae%9a.php</guid>
+
+					<description><![CDATA[Flash呼び出しのobjectタグに &#60;param name=&#34;wmode&#34; value=&#34;transparent&#34; /&#62; を加える。あとはz-indexプロパティの調整など。]]></description>
+										<content:encoded><![CDATA[<p>Flash呼び出しのobjectタグに</p>
+
+<pre><code>&lt;param name=&quot;wmode&quot; value=&quot;transparent&quot; /&gt;</code></pre>
+
+<p>を加える。あとはz-indexプロパティの調整など。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>ネガティブマージンによる段組みレイアウト</title>
+		<link>/2008/09/18_webcresample</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 18 Sep 2008 11:30:50 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[WebCreators]]></category>
+		<guid isPermaLink="false">/wptest/2008/09/%e3%83%8d%e3%82%ac%e3%83%86%e3%82%a3%e3%83%96%e3%83%9e%e3%83%bc%e3%82%b8%e3%83%b3%e3%81%ab%e3%82%88%e3%82%8b%e6%ae%b5%e7%b5%84%e3%81%bf%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88.php</guid>
+
+					<description><![CDATA[web creators 2008年10月号の巻頭特集に寄稿したネタの中から、サンプルを紹介してみよう企画、第1弾。 <a href="/2008/09/18_webcresample">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="18_webcresample.gif" src="/images/2008/09/18_webcresample.gif" width="200" height="98" class="mt-image-none introphoto" /></span>
+web creators 2008年10月号の巻頭特集に寄稿したネタの中から、サンプルを紹介してみよう企画、第1弾。<br />
+ネタ概要は<a href="http://www.amazon.co.jp/gp/redirect.html?ie=UTF8&amp;location=http%3A%2F%2Fwww.amazon.co.jp%2FWeb-creators-%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%25E3%2582%25AF%25E3%2583%25AA%25E3%2582%25A8%25E3%2582%25A4%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25BA-2008%25E5%25B9%25B4-10%25E6%259C%2588%25E5%258F%25B7%2Fdp%2FB001E1PGS0%3Fie%3DUTF8%26s%3Dbooks%26qid%3D1221738352%26sr%3D1-1&amp;tag=likealunatic-22&amp;linkCode=ur2&amp;camp=247&amp;creative=1211">本を買って誌面で見てね＾＾</a><img loading="lazy" decoding="async" src="http://www.assoc-amazon.jp/e/ir?t=likealunatic-22&amp;l=ur2&amp;o=9" width="1" height="1" alt="" />というところなので、ここでは書きません。</p>
+
+<p class="link"><a href="/2008/09/18_sample/">ネガティブマージンを使って段組みにしたサンプル</a></p>
+
+<p>ポイントは、ある要素の上marginをマイナスにすることにより、レイアウトをずらして直前の要素に重ねているところ。</p>
+
+<p>サンプルでそれをしているのは、見出しとリンクボタンが横並びになっているところなのですが、サンプルを見れば分かる通り、両方とも画像です。</p>
+
+<p>上にレイアウトをずらしているに過ぎないので、テキストなどの縦幅が可変の要素が中に入っていると、フォントの異なる環境での閲覧や、文字サイズ変更などによって、後続のレイアウトに影響が出ます。そんなわけで、縦幅可変になる要素のレイアウトにはあまり向いてません。</p>
+
+<p>何だかここまで書くと、絶対配置でいいような気がしますね＾＾；floatも絶対配置も使いたくない、けれども段組にしなきゃならない、というレアなケースで活躍する・・・かもしれません・・・。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>LineNumberWriter開発メモ</title>
+		<link>/2008/04/05_linenumberwriter</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sat, 05 Apr 2008 09:59:09 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[LineNumberWriter]]></category>
+		<guid isPermaLink="false">/wptest/2008/04/linenumberwriter%e9%96%8b%e7%99%ba%e3%83%a1%e3%83%a2.php</guid>
+
+					<description><![CDATA[LineNumberWriterを作るに当たって気づいた点やその他補足など。自分で書いていて改めて気付きましたけど、かなりの欠陥品です...orz <a href="/2008/04/05_linenumberwriter">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/2008/04/04_linenumberwriter.php">LineNumberWriter</a>を作るに当たって気づいた点やその他補足など。自分で書いていて改めて気付きましたけど、かなりの欠陥品です&#8230;orz</p>
+
+<div class="section">
+<h3>基本設計</h3>
+<p>行番号を振るための処理は、基本的に<a href="http://code.google.com/p/syntaxhighlighter/">syntaxhighlithter.js</a>とほとんど同じ。というか、syntaxhighlighter.jsを参考にして作りました。</p>
+<p>処理の流れとしては、</p>
+<ol class="decimallist">
+<li>まずページ内に&lt;pre&gt;&lt;code&gt;とマークアップされている部分を取得します。</li>
+<li><del datetime="2008-04-07T22:29+09:00" title="2008年4月7日 削除">それら個々を&lt;ol&gt;&lt;li&gt;番号順リストのマークアップに変換します。</del><ins datetime="2008-04-07T22:29+09:00" title="2008年4月7日 追記">それら個々を&lt;ol&gt;&lt;li&gt;番号順リストのマークアップに変換したものと、そのままのもの（プレーンテキスト）、それぞれ二つづつを生成します。プレーンテキストの方はデフォルトで非表示にします</ins></li>
+<li>奇数行と偶数行のli要素それぞれに別のclass属性値を設定します。</li>
+<li><ins datetime="2008-04-07T22:29+09:00" title="2008年4月7日 追記">変換後のコードとプレーンテキストとを切り替えるヘッダー部分を生成します。</ins></li>
+<li><del datetime="2008-04-07T22:29+09:00" title="2008年4月7日 削除">最後にdiv要素で包みます（後でスタイルを整える都合）。</del><ins datetime="2008-04-07T22:29+09:00" title="2008年4月7日 追記">最後にこれらをdiv要素内に書き出し、元の&lt;pre&gt;&lt;code&gt;部分と差し替えます。</ins></li>
+</ol>
+<pre><code>&lt;pre&gt;&lt;code&gt;function sample() {
+alert(&quot;sample&quot;);
+}&lt;/code&gt;&lt;/pre&gt;</code></pre>
+<p>これが</p>
+<pre><code>&lt;div class=&quot;LNW&quot;&gt;
+&lt;div class=&quot;header&quot; style=&quot;display:none&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;ctrl1&quot;&gt;with line number&lt;/a&gt;
+&lt;span class=&quot;ctrl2&quot;&gt;plain text&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;header&quot;&gt;
+&lt;span class=&quot;ctrl1&quot;&gt;with line number&lt;/span&gt;
+&lt;a href=&quot;#&quot; class=&quot;ctrl2&quot;&gt;plain text&lt;/a&gt;
+&lt;/div&gt;
+&lt;ol&gt;
+&lt;li class=&quot;odd&quot;&gt;function&amp;nbsp;sample()&amp;nbsp;{&lt;/li&gt;
+&lt;li class=&quot;even&quot;&gt;&amp;nbsp;&amp;nbsp;alert(&amp;quot;sample&amp;quot;);&lt;/li&gt;
+&lt;li class=&quot;odd&quot;&gt;}&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre style=&quot;display:none&quot;&gt;&lt;code&gt;function sample() {
+alert(&quot;sample&quot;);
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</code></pre>
+<p>こうなります。</p>
+</div>
+
+<p><span id="more-46"></span></p>
+
+<div class="section">
+<h3>改行をどうやって拾うか</h3>
+<p>取得したDOM要素のinnerHTMLプロパティから拾えれば全く問題なかったんです。innerHTMLから改行を拾う処理はこんな感じ。</p>
+<pre><code>var str = codeElement.innerHTML;
+str = str.replace(/\r?\n/g, "\r");</code></pre>
+<p>で、splitメソッドで分割して、li要素に突っ込んでいけばOKと思っていました。</p>
+<pre><code>var line = str.split("\r");
+var i,l,li;
+for(i=0,l=line.length; i&lt;l; i++) {
+li = document.createElement("li");
+li.innerHTML = line[i];
+}</code></pre>
+<p>ところが、、WinIEがどうやっても改行を拾ってくれません。innerHTMLにした瞬間に全部改行が消えてしまう・・・！</p>
+<p>そこで、取得した要素のコード部分をテキストノードとして拾い、そのnodeValueから拾ったら、うまくいきました。ただしこのやり方だと、テキストノード以外のノード（要素ノードとか）が混じっていると処理が複雑になりすぎてしまう・・・。ここで壁にぶち当たります。</p>
+<p>「今の自分にはこりゃ作れない」という気になってきたので気分を切り替え、そういう仕様と割り切っていっそのこと<em>タグを使用不可にすればいいじゃん</em>と考えました。取得したDOM要素内には常にテキストノードだけが入っている状態なら良いわけですから。</p>
+</div>
+
+<div class="section">
+<h3>Safariのヘンなところ発見</h3>
+<p>コードの一行目に含まれているのが改行のみの場合、Safariがその改行を拾ってくれません。一行目が改行だけってシチュエーションがまずないので、これもスルーしています。</p>
+<p>次のようになるべきコードが</p>
+<pre><code>  &lt;ol&gt;
+&lt;li class=&quot;odd&quot;&gt;&lt;/li&gt;
+&lt;li class=&quot;even&quot;&gt;function&amp;nbsp;sample()&amp;nbsp;{&lt;/li&gt;
+&lt;li class=&quot;odd&quot;&gt;&amp;nbsp;&amp;nbsp;alert(&amp;quot;sample&amp;quot;);&lt;/li&gt;
+&lt;li class=&quot;even&quot;&gt;}&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+<p>Safariでは次のようになります。</p>
+<pre><code>  &lt;ol&gt;
+&lt;li class=&quot;odd&quot;&gt;function&amp;nbsp;sample()&amp;nbsp;{&lt;/li&gt;
+&lt;li class=&quot;even&quot;&gt;&amp;nbsp;&amp;nbsp;alert(&amp;quot;sample&amp;quot;);&lt;/li&gt;
+&lt;li class=&quot;odd&quot;&gt;}&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+</div>
+
+<div class="section">
+<h3>ブラウザ振り分け処理</h3>
+<p>WinIEだけ別処理にしたいので振り分けます。確かWinIEだけ実装している、document.allオブジェクトを利用してみました。が、Operaもひっかかってきた（Operaもdocument.allを実装していた）ので、Operaだけが実装しているwindow.operaオブジェクトをさらに利用します。</p>
+<pre><code>if(document.all &amp;&amp; !window.opera) {
+WinIE用の処理
+} else {
+その他のブラウザ用の処理
+}</code></pre>
+<p>ホントはもっとスマートなやり方があると思います・・・。</p>
+</div>
+
+<div class="section">
+<h3>半角スペースの変換問題</h3>
+<p>いっぽう、WinIE以外のブラウザではinnerHTMLから改行が拾えるからタグ使えるんじゃね？と思っていたら、別の問題にぶち当たりました。次に問題となったのは半角スペースです。</p>
+<p>まず前提として、コードのインデントなどに使われる半角スペースを拾い、&amp;nbsp;へと変換する処理を行っています。タグに属性値をセットしている場合、この処理で属性名前の半角スペースを拾われてしまい、ヘンテコな状態に変換されてしまいました。</p>
+<pre><code>sample text
+&lt;a href=&quot;sample.html&quot;&gt;sample text&lt;/a&gt;
+sample text</code></pre>
+<p>これが</p>
+<pre><code>sample&amp;nbsp;text
+&amp;nbsp;&amp;nbsp;&lt;a&amp;nbsp;href=&quot;sample.html&quot;&gt;sample&amp;nbsp;text&lt;/a&gt;
+&amp;nbsp;&amp;nbsp;sample&amp;nbsp;text</code></pre>
+<p>こうなっちゃいました。<br />
+というわけで、結局タグは使えない仕様で行くことに決定。</p>
+</div>
+
+<div class="section">
+<h3>CSSでも&#8230;</h3>
+<p>CSSを書く段階になってもWinIEに苦しめられます。</p>
+<p>横に長いコードを詰め込んだときにスクロールバーを出すためにoverflow:autoを設定するわけですが、スクロールバーが出た状態のWinIEがとてもヘン。それから、ol要素にoverflow設定をするとIE6で幅がヘンなことに。syntaxhighlighter.jsを参考に、全体をdiv要素で包み、そちらにoverflow設定をするこにしました。</p>
+<p>また、横スクロールバーが出た際にWinIEは、スクロールバーの高さ分をそのボックスの高さに含めてしまう模様。そしてそのせいで、横スクロールバーが出ると同時に、縦スクロールバーも出てしまう・・・。</p>
+<p>横長なコードのくせに1行か2行しかない場合が最悪で、コードが横スクロールバーに隠れてしまい、ロクに見ることができなくなってしまいます。これはお話にならない！というわけでWinIEだけハックで下paddingを設定し、スクロールバー分の高さを稼ぎました。これによって縦スクロールバーが出なくなり、コードの閲覧性は上がりました。が、スクロールバーが出た時に下marginが狭くなるという副作用が・・・。もうここでお手上げとなりました。</p>
+</div>
+
+<p>CSSが書ける方であれば、linenumberwriter.cssのソースコードをいじれば、変換後のスタイルを自由に変更できます。お気に入りのスタイルにどうぞ。</p>
+
+<p><del datetime="2008-04-07T22:29+09:00" title="2008年4月7日 削除">div.LNWの上下のmargin、color、font-size辺り、それから各要素のbackground-colorやborder辺りがいじりどころだと思います。</del><ins datetime="2008-04-07T22:29+09:00" title="2008年4月7日 追記">0.2にバージョンアップするに当たり、CSSも大分見直しました。</ins></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[IE6]ブロック要素を中央寄せにするために、text-alignを使う件</title>
+		<link>/2008/02/13_centering</link>
+					<comments>/2008/02/13_centering#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 13 Feb 2008 07:06:54 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[IE]]></category>
+		<guid isPermaLink="false">/wptest/2008/02/ie6%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e8%a6%81%e7%b4%a0%e3%82%92%e4%b8%ad%e5%a4%ae%e5%af%84%e3%81%9b%e3%81%ab%e3%81%99%e3%82%8b%e3%81%9f%e3%82%81%e3%81%ab%e3%80%81text-align%e3%82%92%e4%bd%bf.php</guid>
+
+					<description><![CDATA[そこで、IE6互換モードのために親ボックスに text-align:center を適用し、中央寄せにするテクニックが当たり前のように使われています。が、あえて　text-align:center を使わずに中央寄せにするコードをご紹介します。ただし、幅固定レイアウト限定のテクニックです。 <a href="/2008/02/13_centering">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>ブロック要素を中央寄せにレイアウトする場合、左右marginをautoに設定するのが正しい<abbr title="Cascading Style Sheet">CSS</abbr>の書き方ですが、<abbr title="Internet Explorer">IE</abbr>6の過去互換モードではこれが正しく動作しないのは有名です。</p>
+
+<p><img loading="lazy" decoding="async" src="/img/2008/02/13_centering1.gif" alt="スクリーンショット：text-align:centerを使わずに中央寄せしようとすると" width="420" height="180" class="ss"  /></p>
+
+<p>そこで、IEのために親ボックスに<code>text-align:center</code>を適用し、中央寄せにするというバッドノウハウと呼べなくもないテクニックが当たり前のように使われています。</p>
+
+<p>text-alignプロパティは継承されますから、親ボックスに<code>text-align:center</code>を設定した場合、子孫ボックスでは<code>text-align:left</code>と改めて設定して値を上書きすることがほとんどです。このtext-alignの上書きが面倒なのはもちろんですが、意図しない子孫要素にまで影響が及んでしまうので、できるならこのテクニックは使いたくないなー、というのが私の考えです。そこで、<code>text-align:center</code>を使わずになんとかしようというアイデアをご紹介します。</p>
+
+<p>親ボックスが div#wrapper で幅400px、中央寄せにしたい子ボックスが div#content で幅300pxという例でコードを考えていきます。次のコードは、<code>text-align:center</code>を使った一般的なものです。</p>
+
+<pre><code>div#wrapper {
+width: 400px;
+text-align: center;
+}
+div#content {
+width: 300px;
+margin: 0 auto;
+text-align: left;
+}</code></pre>
+
+<p>これを以下のようにすることで、<code>text-align:center</code>を使わずに、同じ表現をすることができます。</p>
+
+<pre><code>div#wrapper {
+width: 400px;
+}
+div#content {
+width: 300px;
+margin: 0 auto 0 50px;
+}</code></pre>
+
+<p>実際に中央寄せにした場合に左右に空くmarginを計算し、子ボックスの左marginに設定してやり、右marginはautoにします。これで、<code>text-align:left</code>のまま、主要なブラウザ全てで中央寄せを実現できます。<br />
+このコードをIE6の互換モードで表示したのが、次のスクリーンショットです。（実際は見やすくするために<code>background-color</code>や<code>padding</code>も併用しています）</p>
+
+<p><img loading="lazy" decoding="async" src="/img/2008/02/13_centering2.gif" alt="スクリーンショット：text-align:centerを使わずに中央寄せ" width="420" height="180" class="ss"  /></p>
+
+<p>ただし、弱点もあります。<em>親ボックスが幅固定のレイアウトに限って有効なテクニック</em>なので、<em>リキッドレイアウトやエラスティックレイアウトでは使えないのはもちろん、body要素が直接含むボックスには使えない</em>（body要素はウィンドウサイズによって幅が変わるため）という点です。<br />
+幅固定レイアウトでは絶大な（？）威力を発揮します。</p>
+
+<p>ちょっとしたCSSのアイデアなのですが、あまり使ってる人見かけないな?と思ったのでご紹介しようと思いました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2008/02/13_centering/feed</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>置換インライン要素の縦方向の位置をborderで調整してみる</title>
+		<link>/2007/11/26_border</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Mon, 26 Nov 2007 13:39:03 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<guid isPermaLink="false">/wptest/2007/11/%e7%bd%ae%e6%8f%9b%e3%82%a4%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e8%a6%81%e7%b4%a0%e3%81%ae%e7%b8%a6%e6%96%b9%e5%90%91%e3%81%ae%e4%bd%8d%e7%bd%ae%e3%82%92border%e3%81%a7%e8%aa%bf%e6%95%b4%e3%81%97.php</guid>
+
+					<description><![CDATA[ラジオボタンやチェックボックス、画像などの縦位置の調整をするのはvertical-alignプロパティだけというのは不便！というわけで、borderで強引に調整しようとしてみました。 <a href="/2007/11/26_border">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>同じ行内にラジオボタンもしくはちっちゃな画像とか（つまり置換インライン要素）とテキストが混じっている場合、テキストの表示される縦方向の位置がブラウザによって結構違っていたりして、困りませんか？これを調整するには普通、ラジオボタンにvertical-alignプロパティを指定しますよね。baseline（規定値）とか、middleとか、bottomとか。</p>
+
+<p>しかしvertical-alignプロパティで同じ値を指定しても、やっぱりブラウザによって微妙に位置がズレてしまうし、ピクセル単位での細かい指定ができません。これをborderで強引にやってみました。</p>
+
+<p>置換インライン要素に縦方向のborderを設定してやることによって、borderの太さ分だけ縦位置をズラしてあげることができる……はずです。もちろんvertical-alignも併用するといいでしょう。<br />
+border-colorは背景色と同じにできるのがベストですが、背景画像があったりするとアウトなのでtransparentにします。</p>
+
+<p style="margin-bottom:0;">以下、実際にやってみたサンプルへのリンクです。</p>
+
+<ul class="disclist" style="magin-top:0;">
+<li><a href="/2007/11/26_border_sample.html">置換インライン要素の縦方向の位置をborderで調節してみたサンプル<br />
+&#8211; XHTML1.0 Strict(XML宣言有り)</a></li>
+<li><a href="/2007/11/26_border_sample_noxml.html">置換インライン要素の縦方向の位置をborderで調節してみたサンプル<br />
+&#8211; XHTML1.0 Strict(XML宣言無し)</a></li>
+</ul>
+
+<p>サンプルを見た方は既にお気づきかもしれませんが、残念ながら<strong>すごい微妙です</strong>。私がサンプルを表示確認をしたブラウザは<abbr title="Internet Explorer">IE</abbr>6、<abbr title="Internet Explorer">IE</abbr>7、Firefox2、Opera9、Safari3です。</p>
+
+<p><span id="more-34"></span></p>
+
+<p>まず、サンプルは (1)チェックボックス と (2)ラジオボタン と (3)ビュレットの画像 の3種類をテキストと同じ行に並べて、それぞれにスタイルを適用しています。適用しているプロパティはサンプルに表示の通りで、</p>
+
+<ol class="decimallist">
+<li><code>vertical-align:baseline;</code></li>
+<li><code>vertical-align:baseline; padding-bottom:2px solid transparent;</code></li>
+<li><code>vertical-align:baseline; padding-bottom:2px solid transparent; padding-bottom:10px;</code></li>
+</ol>
+
+<p>のそれぞれ3種類となっています。padding-bottom:10px;と値が大きいのは、効いているのか効いていないのかが一目で分かるようにするためです。</p>
+
+<p><a href="/img/2007/11/26_border_sample.gif" title="置換インライン要素の縦方向の位置をborderで調節してみたサンプル" class="thickbox"><img loading="lazy" decoding="async" src="/img/2007/11/26_border_sample_thumb.gif" alt="スクリーンショット: 各ブラウザでの表示結果" width="196" height="200" class="introphoto" /></a>
+このスクリーンショットはXML宣言有りのXHTML文書を各ブラウザで表示したものです。IE6は過去互換モードになります。ブラウザごとに表示がかなり違っているのが分かります…。</p>
+
+<ol class="decimallist">
+<li>まず、IE6がborder-color:transparent;に対応していないことが分かります。またビュレット画像は透過pngなので当然のごとくこれも透けてないですね。</li>
+<li>それからIE6・IE7・Opera9ではチェックボックスやラジオボタンのデフォルトのスタイル（IEのはWindowsXPの&quot;テーマ&quot;）が、borderを適用したことによってリセットされてしまっています。結構カッコワルイです……。<br />
+しかしこの3ブラウザにはその代わり、borderによる縦方向の位置調整の効果は出ているようです。</li>
+<li>Opera9にだけ、チェックボックスとラジオボタンへのpadding指定で、変化が現れています。</li>
+<li>Firefox2とSafari3はチェックボックスとラジオボタンへのborder指定を華麗に無視。当然paddingも無視です。</li>
+<li>一方画像の場合、IE6が過去互換モードなのでpaddingを無視している以外、正常に指定が反映されています。</li>
+</ol>
+
+<p>以上のことから結論を考察すると、</p>
+
+<dl class="disclist">
+<dt><em>チェックボックスとラジオボタン</em></dt>
+<dd>border指定を解釈するブラウザ（IE6・IE7・Opera9）はブラウザ独自のテーマをリセットされてしまい、かっこ悪くなる。</dd>
+<dd>border指定を解釈しないブラウザ（Firefox2・Safari3）はそもそも表示に変化が現れない。</dd>
+<dd>paddingを解釈するのはOpera9のみ。</dd>
+<dd>よって結局、vertical-alignのみで頑張るのが良さそう。</dd>
+<dt><em>画像</em></dt>
+<dd>IE6以外はborderでもpaddingでも縦位置を調整できる。</dd>
+<dd>IE6はborder-color:transparent;をサポートしてない＆（過去互換モードでは）paddingを解釈しないので、border-colorを背景色と同じにすれば調整に使えないことはない。だけど背景画像が敷いてあると、この方法もアウト。</dd>
+</dl>
+
+<p>と、いったところでしょうか。<br />
+ちょっとした調整に使う裏技としてご紹介できるかと思ったのですが、ちゃんと検証してみるとかなり微妙な結果となってしまいました。各ブラウザの挙動をちゃんと把握していれば、使えないことはない、というところでしょうか。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>hasLayout問題を解決するzoom:1;の落とし穴</title>
+		<link>/2007/09/16_zoom1</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 16 Sep 2007 07:13:57 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[IE]]></category>
+		<guid isPermaLink="false">/wptest/2007/09/haslayout%e5%95%8f%e9%a1%8c%e3%82%92%e8%a7%a3%e6%b1%ba%e3%81%99%e3%82%8bzoom1%e3%81%ae%e8%90%bd%e3%81%a8%e3%81%97%e7%a9%b4.php</guid>
+
+					<description><![CDATA[スタイルリセットの段階でzoom:1;を書いてしまうと、IEにおいてfloatが意図しないところでclearされてしまうことがあります。制作チーム全員がこの挙動を理解することが必須となるので、複数人でチームを組んで制作・運営をしている大規模サイトの制作においては、スタイルリセットにzoom:1;を組み込むべきではない、と言えます。 <a href="/2007/09/16_zoom1">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><abbr title="Internet Explorer">IE</abbr>のヘンテコな<abbr title="Cascading Style Sheets">CSS</abbr>解釈の原因と言われる<a href="http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/reference/properties/hasLayout.asp">hasLayout</a>プロパティ。<br />
+どうやらこのhasLayoutプロパティの値がfalse（デフォルト値）の場合に、いろいろとまずいことが起こるようです。<abbr title="Internet Explorer">IE</abbr>だけfloatした要素周辺のmarginやpaddingがおかしかったり、相対配置/絶対配置した要素がどこかに消えてしまったりする・・・という経験はcssレイアウトの際に誰もがぶつかる問題です。</p>
+
+<p>また、hasLayoutがTrueとFalseの要素が混在している場合には、<em><abbr title="Internet Explorer">IE</abbr>7のズーム機能を利用した際に、隣あった要素が重なってしまったりします</em>。<br />
+この辺は<a href="http://coliss.com/">コリス</a>さんの<a href="http://coliss.com/articles/build-websites/operation/css/143.html">IEでのCSSのバグを回避するhasLayout</a>に分かりやすい説明があります。</p>
+
+<p>このhasLayoutの問題を解決するためにzoomプロパティが利用されることがあります。（zoomプロパティは<abbr title="Internet Explorer">IE</abbr>の独自拡張であるため、これを使うこと自体どうか、という意見もありますがここでは触れません）<br />
+具体的には次のように、</p>
+
+<pre><code>* {
+margin: 0;
+padding: 0;
+zoom: 1;
+}</code></pre>
+
+<p>ユニバーサルセレクタに指定したり、</p>
+
+<pre><code>body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+margin:0;
+padding: 0;
+zoom:1;
+}</code></pre>
+
+<p>などとして、ブラウザスタイルをリセットする際に同時に指定するのが一般的なようです。しかし、<code>zoom:1;</code>をli要素に指定してしまうと<a href="http://blog.ikesai.com/log/2007/06/zoom.html" title="全称セレクタにzoomを使うとバグる：Blog --- WEBデザインのリンク集 : ikesai.com">マーカーの表示がおかしくなってしまう問題があります</a>。<br />
+これに対しては</p>
+
+<pre><code>li {zoom: normal;}</code></pre>
+
+<p>としてzoomプロパティの値をデフォルトに戻すことで対処をできるようです。</p>
+
+<p>ここまでは前提で、本題はここからです。</p>
+
+<p>そんなわけで実際に業務で、スタイルリセットに<code>zoom:1;</code>を導入してみたのですが、さらなる落とし穴があることに気づいてしまいました。<br />
+<a href="http://stopnlisten.no.land.to/">STOPN&#8217; LISTEN</a>さんの<a href="http://stopnlisten.no.land.to/2006/11/ie7clearfixclear.html">clearfixに関するの記事</a>をご覧いただくとお分かりになると思うのですが・・・そうです。<code>zoom:1;</code>はclearfixにも使われるのです。</p>
+
+<p>つまり、何でもかんでもzoom:1;にしてしまうと、<strong>floatが意図しないところでclearされてしまう恐れがあります</strong>。具体的には次の図のような例で、問題が起こります。</p>
+
+<p class="example" style="width:350px;"><img loading="lazy" decoding="async" src="/img/2007/09/16_example01.gif" alt="図: *{zoom:1}で問題の起こるレイアウトの例" width="350" height="150" /></p>
+
+<div class="section">
+<h3><abbr title="Extensible HyperText Markup Language">XHTML</abbr>のコード</h3>
+<pre><code>&lt;p&gt;&lt;img src=&quot;/img/2007/09/16_example_img.gif&quot; alt=&quot;画像&quot; width=&quot;120&quot; height=&quot;90&quot; class=&quot;photo&quot; /&gt; 段落1テキスト段落1テキスト段落1テキスト段落1テキスト段落1テキスト段落1テキスト段落1テキスト段落1テキスト段落1テキスト&lt;/p&gt;
+&lt;p&gt;段落2テキスト段落2テキスト段落2テキスト段落2テキスト段落2テキスト段落2テキスト段落2テキスト段落2テキスト段落2テキスト&lt;/p&gt;</code></pre>
+</div>
+
+<p>最初の段落に含まれている画像に対してfloat:leftを指定し、本文を右側に回りこませているという、何の変哲もないレイアウトです。<em>回り込んでいる本文が途中で段落分けされていることがポイントです</em>。<br />
+ここで<code>* {zoom: 1;}</code>を指定すると、以下の図のようになります。</p>
+
+<p class="example" style="width:350px;"><img loading="lazy" decoding="async" src="/img/2007/09/16_example02.gif" alt="図: *{zoom:1}でレイアウトに問題が起こった状態の例" width="350" height="160" /></p>
+
+<p><a href="/2007/09/16_zoom1_sample.html">図と同じサンプルページも用意しました（<abbr title="Internet Explorer">IE</abbr>6/7で見てくださいね）。</a></p>
+
+<p><em>段落分けされた途端、clearされてしまっている</em>のがお分かりになるかと思います。これは<em>p要素に対して<code>zoom:1;</code>が効いている</em>からです。これを回避するには<em><code>p {zoom:normal;}</code>のようにしてデフォルトの値を上書きする</em>しかありません。個人的にこれは全くナンセンスだと思うのですが・・・。</p>
+
+<p>スタイルリセットの段階で<code>zoom:1;</code>を指定してしまうと、そのサイトのコンテンツは全てがこの挙動になってしまいます。</p>
+
+<p>サイトをリニューアルする際に<code>zoom:1;</code>を新たに導入する、という場合には注意が必要です。今まで正常に表示されていたコンテンツが、先述の例のようにレイアウトが変わってしまうことがあるからです。</p>
+
+<p>サイトを一人で制作し運営していく分には、この挙動を理解した上で制作をすることになるので、全く問題はないと思います。しかし、複数人でチームを組んで一つのサイトを制作・運営する場合には状況が違います。<br />
+制作チーム全員がこの挙動を理解することが必須となるのです。人数の多いチームともなると、これはなかなかに簡単なことではありません。</p>
+
+<p>よって、複数人でチームを組んで制作・運営をしている大規模サイトの制作においては、<strong>スタイルリセットに<code>zoom:1;</code>を組み込むべきではない</strong>、と言えます。</p>
+
+<p>ただ、やはり<code>zoom:1;</code>の便利さは捨てがたいものがあります。idセレクタや子孫セレクタなどを使用して、<strong>特定の領域にだけ限定的に利用する</strong>分には問題はないでしょう。</p>
+
+<p><code>zoom:1;</code>は便利ですが<em>ご利用は計画的に</em>ということです。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

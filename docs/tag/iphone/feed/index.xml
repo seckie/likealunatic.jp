@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>iPhone &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/iphone/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:13:52 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>iPhone &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>[Mac/iPhone]壁紙アプリKuvvaとDeko</title>
+		<link>/2013/02/kuvva-deko</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 10 Feb 2013 03:35:40 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[iPhone]]></category>
+		<category><![CDATA[Mac]]></category>
+		<guid isPermaLink="false">/?p=973</guid>
+
+					<description><![CDATA[最近ハマっている壁紙アプリがあるのでご紹介。2つあります。 Kuvva KuvvaはMacとiPhone向けの壁紙アプリ。アプリとウェブサービスが連動しており、ウェブサービス側からアプリへと壁紙を配信する仕組み。ウェブサービスに無料のアカウント登録をすれば、「お気に入り(Favorites)」などの情報をMacとiPhoneで共有することができる。 iPhoneアプリやサイトからは、登録されているアーティストごとに作品の一覧を見ることができ「お気に入り」を管理できる。 もちろんMacアプリで直接「Add to favorites」も可能。 Deko DekoはiOS向け壁紙アプリ。特定のパターンから画像をジェネレートし、壁紙として保存したり、シェアしたりできる。 画面を左右にフリックするとパターンが変化するのだけど、速くフリックすると新しいパターンに、遅くフリックすると同じパターンで色違いになったりする。どういうルールで変化するのかいまいち分からないし、使いやすいとは言えないけど、独特のインターフェースだなあと。なにより、どういう画像ができるか分からないという偶然性が魅力的。 実際に壁紙にしてみると、こんな感じ。 アプリのダウンロードは無料だけど、高解像度で画像を保存するために1.99$のアドオンが必要。一度支払うだけでOK。 あとがき 気軽にアートに触れることができる、こういったアプリやウェブサービスが出てくるのは嬉しいですね。決して大衆向けとは言えないかもしれませんが、盛り上がって行くといいなあと思います。 ネタ元 仕事中でも気分転換！ 壁紙を定期的に自動で変更するアプリ『Kuvva』 : ライフハッカー［日本版］ Deko &#8211; Generative Wallpapers for iOS / @suprjohan]]></description>
+										<content:encoded><![CDATA[<p>最近ハマっている壁紙アプリがあるのでご紹介。2つあります。</p>
+
+<h3>Kuvva</h3>
+
+<p><a href="http://www.kuvva.com/" title="Kuvva wallpapers for iPhone and Mac">Kuvva</a>はMacとiPhone向けの壁紙アプリ。アプリとウェブサービスが連動しており、ウェブサービス側からアプリへと壁紙を配信する仕組み。ウェブサービスに無料のアカウント登録をすれば、「お気に入り(Favorites)」などの情報をMacとiPhoneで共有することができる。</p>
+
+<p>iPhoneアプリやサイトからは、登録されているアーティストごとに作品の一覧を見ることができ「お気に入り」を管理できる。</p>
+
+<p><a href="/wp-content/uploads/2013/02/kuvva-mac2.png"><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2013/02/kuvva-mac2-300x239.png" alt="Kuvva Website" width="300" height="239" class="alignnone size-medium wp-image-982" srcset="/wp-content/uploads/2013/02/kuvva-mac2-300x239.png 300w, /wp-content/uploads/2013/02/kuvva-mac2-1024x817.png 1024w, /wp-content/uploads/2013/02/kuvva-mac2-375x300.png 375w, /wp-content/uploads/2013/02/kuvva-mac2.png 1219w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>もちろんMacアプリで直接「Add to favorites」も可能。</p>
+
+<p><a href="/wp-content/uploads/2013/02/kuvva-mac.png"><img decoding="async" src="/wp-content/uploads/2013/02/kuvva-mac-300x187.png" alt="Kuvva for Mac" width="300" height="187" class="alignnone size-medium wp-image-979" srcset="/wp-content/uploads/2013/02/kuvva-mac-300x187.png 300w, /wp-content/uploads/2013/02/kuvva-mac-480x300.png 480w, /wp-content/uploads/2013/02/kuvva-mac.png 720w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<h3>Deko</h3>
+
+<p><a href="http://aerodeko.com/" title="Aero Deko">Deko</a>はiOS向け壁紙アプリ。特定のパターンから画像をジェネレートし、壁紙として保存したり、シェアしたりできる。</p>
+
+<p><a href="/wp-content/uploads/2013/02/deko1.png"><img decoding="async" src="/wp-content/uploads/2013/02/deko1-200x300.png" alt="deko1" width="200" height="300" class="alignnone size-medium wp-image-983" srcset="/wp-content/uploads/2013/02/deko1-200x300.png 200w, /wp-content/uploads/2013/02/deko1.png 640w" sizes="(max-width: 200px) 100vw, 200px" /></a></p>
+
+<p>画面を左右にフリックするとパターンが変化するのだけど、速くフリックすると新しいパターンに、遅くフリックすると同じパターンで色違いになったりする。どういうルールで変化するのかいまいち分からないし、使いやすいとは言えないけど、独特のインターフェースだなあと。なにより、どういう画像ができるか分からないという偶然性が魅力的。</p>
+
+<p><a href="/wp-content/uploads/2013/02/deko2.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/deko2-200x300.png" alt="deko2" width="200" height="300" class="alignnone size-medium wp-image-984" srcset="/wp-content/uploads/2013/02/deko2-200x300.png 200w, /wp-content/uploads/2013/02/deko2.png 640w" sizes="(max-width: 200px) 100vw, 200px" /></a></p>
+
+<p>実際に壁紙にしてみると、こんな感じ。</p>
+
+<p><a href="/wp-content/uploads/2013/02/deko3.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/deko3-200x300.png" alt="deko3" width="200" height="300" class="alignnone size-medium wp-image-985" srcset="/wp-content/uploads/2013/02/deko3-200x300.png 200w, /wp-content/uploads/2013/02/deko3.png 640w" sizes="(max-width: 200px) 100vw, 200px" /></a></p>
+
+<p>アプリのダウンロードは無料だけど、高解像度で画像を保存するために1.99$のアドオンが必要。一度支払うだけでOK。</p>
+
+<p><a href="/wp-content/uploads/2013/02/deko4.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/deko4-200x300.png" alt="deko4" width="200" height="300" class="alignnone size-medium wp-image-986" srcset="/wp-content/uploads/2013/02/deko4-200x300.png 200w, /wp-content/uploads/2013/02/deko4.png 640w" sizes="(max-width: 200px) 100vw, 200px" /></a></p>
+
+<h3>あとがき</h3>
+
+<p>気軽にアートに触れることができる、こういったアプリやウェブサービスが出てくるのは嬉しいですね。決して大衆向けとは言えないかもしれませんが、盛り上がって行くといいなあと思います。</p>
+
+<h4>ネタ元</h4>
+
+<ul>
+<li><a href="http://www.lifehacker.jp/2013/01/130118kuvva.html" title="仕事中でも気分転換！ 壁紙を定期的に自動で変更するアプリ『Kuvva』 : ライフハッカー［日本版］">仕事中でも気分転換！ 壁紙を定期的に自動で変更するアプリ『Kuvva』 : ライフハッカー［日本版］</a></li>
+<li><a href="http://www.creativeapplications.net/iphone/deko-generative-wallpapers-for-ios/" title="Deko - Generative Wallpapers for iOS / @suprjohan">Deko &#8211; Generative Wallpapers for iOS / @suprjohan</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>git &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/git/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:04 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>git &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>GitHubを初めて使ってみた</title>
+		<link>/2011/08/github</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 04 Aug 2011 13:16:01 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[git]]></category>
+		<category><![CDATA[GitHub]]></category>
+		<guid isPermaLink="false">/?p=782</guid>
+
+					<description><![CDATA[ヘルプに書いてある通りにやったらできた。本当に、そのまんま。 http://help.github.com/win-set-up-git/ <a href="/2011/08/github">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>ヘルプに書いてある通りにやったらできた。本当に、そのまんま。<br />
+<a href="http://help.github.com/win-set-up-git/">Help.GitHub &#8211; Set Up Git</a><br />
+<a href="http://help.github.com/create-a-repo/">Help.GitHub &#8211; Create A Repo</a></p>
+
+<p>Macでのやり方はこちら<br />
+<a href="http://help.github.com/mac-set-up-git/">Help.GitHub &#8211; Set Up Git</a></p>
+
+<p>SSH keyを登録するところがキモだが、コマンドまで全てちゃんとヘルプに書いてあるのでつまずいたところはなかった。拍子抜け。</p>
+
+<p>最初に作ってみたレポジトリがこれ。<br />
+<a href="https://github.com/seckie/jQuery.ui.vScroll">seckie/jQuery.ui.vScroll &#8211; GitHub</a></p>
+
+<p>今年の春に作ったものだけど、今また案件で使う必要があって引っ張り出したら無駄なところがあったりしてちょっといじることになった。案件の制作物は当然会社のレポジトリに置くんだけど、これは個人的に作ったものだったりしたので、せっかくなのでGitHubに挑戦してみた。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[memo]Git Bash内でコピペ</title>
+		<link>/2010/06/gitbashcopypaste</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Mon, 07 Jun 2010 10:41:05 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[git]]></category>
+		<category><![CDATA[Memo]]></category>
+		<guid isPermaLink="false">/?p=687</guid>
+
+					<description><![CDATA[タイトルバーを右クリックして出るコンテキストメニューで「編集」から範囲選択し、コピーができる。 <a href="/2010/06/gitbashcopypaste">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<blockquote cite="http://magpad.jugem.jp/?eid=82"><p>Git Bashのタイトルバーを右クリックすると、編集や範囲指定のメニューが出てくる。</p></blockquote>
+
+<p class="cite"><a href="http://magpad.jugem.jp/?eid=82">Git Bash内でコピペをする方法 | public static void main</a></p>
+
+<p>助かりました！<br />
+データ納品型の案件だと、ファイルの修正箇所を差分として伝えなくてはならないことが多々あります。そういう時にコミットのログやdiffを差分として納品すりゃ楽チンですねー。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

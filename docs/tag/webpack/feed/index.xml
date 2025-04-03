@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>webpack &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/webpack/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:11:38 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>webpack &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>webpack にまつわるぐだぐだ。キャッシュ対策と CommonsChunkPlugin</title>
+		<link>/2017/05/webpack</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Thu, 11 May 2017 08:30:11 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[webpack]]></category>
+		<guid isPermaLink="false">/?p=1246</guid>
+
+					<description><![CDATA[webpack (version 2) の公式ドキュメントではバンドルファイルのブラウザキャッシュ対策として、ファイル名にハッシュ値を埋め込む方法が提案されている。 こうするとアプリのコードを変更する度に、バンドルファイル名に埋め込まれたハッシュ値も更新され、ブラウザキャッシュ対策ができる、という寸法だが…。 当然ファイル名が変わるわけだから、&#60;sript&#62; タグも更新しなくてはならない。それを解決するには、HTML ファイルも動的に扱わなければならない。chunk-manifest-webpack-plugin と html-webpack-plugin を導入し、HTML のテンプレーティングを行い…、となると今使っている Pug はどうなる…、となってさらにさらに掘り下げないといけなくなり、はっきり言ってソリューションとして無理がある。 閑話休題。 webpack をヘビーに使っていると、サードパーティーフレームワークやライブラリのコード（npm install でインストールしたようなモジュール）を出力ファイル（バンドルファイル）から切り離したくなる。 バンドルファイルにライブラリが直接含まれるが故に、以下のような事象に直面したことがある開発者は多いのではないだろうか。 複数人で開発していて各自のライブラリのバージョンが微妙に異なり、Git経由でやり取りされるバンドルファイルに環境の差分までが含まれてしまう 使っているライブラリが増えて、コンパイルがとても遅くなる 解決策として、フレームワークやライブラリはまとめて別のバンドルファイルにする、もしくは単独で配布されたものを &#60;script&#62; タグを読み込む、という解決方法を取ることもできる。 これを可能にするのが externals オプションで、ここで宣言された名前については、依存関係がグローバルスコープから参照されるようになる。 externals: { jquery: 'jQuery' } と webpack.config.js に設定しておくと、 import jQuery from 'jquery'; というコードはグローバルスコープの jQuery を参照するようになり、バンドルファイルに jQuery のコードは含まれないようになる。 もちろんこの場合には jQuery は新たに別の &#60;script&#62; タグで読み込む必要ある。 よりスマートな解決策としての CommonsChunkPlugin CommonsChunkPlugin を使うと、複数のバンドルファイルから共通の依存モジュールを切り出してくれる。 サードパーティーライブラリをアプリのコードと分割する、という使い方ももちろんできる。 公式で示されている設定は以下のようなものだ。 plugins: [ new webpack.optimize.CommonsChunkPlugin({ name: "vendor", minChunks: function(module){ // node_modules のディレクトリ下に含まれるものだけに絞る return module.context &#38;&#38; module.context.indexOf("node_modules") !== -1; } }), new webpack.optimize.CommonsChunkPlugin({ name: "manifest", // 名前は "manifest" でないとダメ minChunks: Infinity // entryがいくつあろうと生成。省略可 }), ] サードパーティーコードを別にしたいだけなら vendor だけでも目的は果たせるが、manifest を入れると、webpack バンドル共通部分（ソースには webpackBootstrap とコメントが書かれている部分）が manifest.js として別ファイルに書き出される。こうするとビルドするたびに vendor のハッシュ値が変更されることを防げるとのこと。 でもこれ、先述のハッシュ値をファイル名に含めるキャッシュ対策をやっていないと、意味はなさそう。なぜならハッシュ値はバンドルファイルのコード内には現れないから。 manifest を定義した場合、以下のように manifest.js も読み込まないとコードは動かないので注意。 &#60;script src="/js/manifest.js"&#62;&#60;/script&#62; &#60;script src="/js/vendor.js"&#62;&#60;/script&#62; &#60;script &#8230; <a href="/2017/05/webpack">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>webpack (version 2) の公式ドキュメントではバンドルファイルのブラウザキャッシュ対策として、<a href="https://webpack.js.org/guides/caching/#generating-unique-hashes-for-each-file">ファイル名にハッシュ値を埋め込む方法が提案されている</a>。</p>
+
+<p>こうするとアプリのコードを変更する度に、バンドルファイル名に埋め込まれたハッシュ値も更新され、ブラウザキャッシュ対策ができる、という寸法だが…。<br />
+当然ファイル名が変わるわけだから、<code>&lt;sript&gt;</code> タグも更新しなくてはならない。それを解決するには、HTML ファイルも動的に扱わなければならない。<a href="https://github.com/soundcloud/chunk-manifest-webpack-plugin">chunk-manifest-webpack-plugin</a> と <a href="https://github.com/jantimon/html-webpack-plugin">html-webpack-plugin</a> を導入し、HTML のテンプレーティングを行い…、となると今使っている <a href="https://pugjs.org/api/getting-started.html">Pug</a> はどうなる…、となってさらにさらに掘り下げないといけなくなり、はっきり言ってソリューションとして無理がある。</p>
+
+<p>閑話休題。</p>
+
+<p>webpack をヘビーに使っていると、サードパーティーフレームワークやライブラリのコード（<code>npm install</code> でインストールしたようなモジュール）を出力ファイル（バンドルファイル）から切り離したくなる。
+バンドルファイルにライブラリが直接含まれるが故に、以下のような事象に直面したことがある開発者は多いのではないだろうか。</p>
+
+<ul>
+<li>複数人で開発していて各自のライブラリのバージョンが微妙に異なり、Git経由でやり取りされるバンドルファイルに環境の差分までが含まれてしまう</li>
+<li>使っているライブラリが増えて、コンパイルがとても遅くなる</li>
+</ul>
+
+<p>解決策として、フレームワークやライブラリはまとめて別のバンドルファイルにする、もしくは単独で配布されたものを <code>&lt;script&gt;</code> タグを読み込む、という解決方法を取ることもできる。
+これを可能にするのが <code>externals</code> オプションで、ここで宣言された名前については、依存関係がグローバルスコープから参照されるようになる。</p>
+
+<pre><code class="javascript">externals: {
+  jquery: 'jQuery'
+}
+</code></pre>
+
+<p>と <code>webpack.config.js</code> に設定しておくと、 <code>import jQuery from 'jquery';</code> というコードはグローバルスコープの <code>jQuery</code> を参照するようになり、バンドルファイルに jQuery のコードは含まれないようになる。
+もちろんこの場合には jQuery は新たに別の <code>&lt;script&gt;</code> タグで読み込む必要ある。</p>
+
+<h2>よりスマートな解決策としての CommonsChunkPlugin</h2>
+
+<p><a href="https://webpack.js.org/plugins/commons-chunk-plugin/">CommonsChunkPlugin</a> を使うと、複数のバンドルファイルから共通の依存モジュールを切り出してくれる。
+サードパーティーライブラリをアプリのコードと分割する、という使い方ももちろんできる。
+公式で示されている設定は以下のようなものだ。</p>
+
+<pre><code>plugins: [
+  new webpack.optimize.CommonsChunkPlugin({
+    name: "vendor",
+    minChunks: function(module){
+      // node_modules のディレクトリ下に含まれるものだけに絞る
+      return module.context &amp;&amp; module.context.indexOf("node_modules") !== -1;
+    }
+  }),
+  new webpack.optimize.CommonsChunkPlugin({
+    name: "manifest", // 名前は "manifest" でないとダメ
+    minChunks: Infinity // entryがいくつあろうと生成。省略可
+  }),
+]
+</code></pre>
+
+<p>サードパーティーコードを別にしたいだけなら <code>vendor</code> だけでも目的は果たせるが、<code>manifest</code> を入れると、webpack バンドル共通部分（ソースには <code>webpackBootstrap</code> とコメントが書かれている部分）が <code>manifest.js</code> として別ファイルに書き出される。こうするとビルドするたびに <code>vendor</code> のハッシュ値が変更されることを防げるとのこと。<br />
+でもこれ、先述のハッシュ値をファイル名に含めるキャッシュ対策をやっていないと、意味はなさそう。なぜならハッシュ値はバンドルファイルのコード内には現れないから。</p>
+
+<p><code>manifest</code> を定義した場合、以下のように <code>manifest.js</code> も読み込まないとコードは動かないので注意。</p>
+
+<pre><code class="html">&lt;script src="/js/manifest.js"&gt;&lt;/script&gt;
+&lt;script src="/js/vendor.js"&gt;&lt;/script&gt;
+&lt;script src="/js/bundle.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h2>References</h2>
+
+<ul>
+<li><a href="https://webpack.js.org/guides/caching/">Caching</a></li>
+<li><a href="https://webpack.js.org/configuration/externals/">Externals</a></li>
+<li><a href="https://webpack.js.org/guides/code-splitting-libraries/">Code Splitting &#45; Libraries</a></li>
+<li><a href="https://webpack.js.org/plugins/commons-chunk-plugin/">CommonsChunkPlugin</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

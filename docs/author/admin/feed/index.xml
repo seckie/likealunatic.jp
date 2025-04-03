@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>seckie &#8211; Like@Lunatic</title>
+	<atom:link href="/author/admin/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:13:52 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>seckie &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>PHP FPM のチューニング</title>
+		<link>/2017/04/php-fpm</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 20 Apr 2017 08:54:22 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Nginx]]></category>
+		<category><![CDATA[Performance]]></category>
+		<category><![CDATA[PHP]]></category>
+		<guid isPermaLink="false">/?p=1229</guid>
+
+					<description><![CDATA[Nginx + WordPress でサイト運用する場合、PHP FPM のチューニングが必要になる場合がある <a href="/2017/04/php-fpm">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>このサイトはNginx + WordPress で運用しているだが、設置当初はサイトが重くて仕方なかった。<br />
+<code>top</code> コマンドで状況を調べてみるとメモリを使い切っていたので、途方に暮れて解決策をググったところ、以下の記事を発見。
+有用な記事をありがとうございました。</p>
+
+<p><a href="http://www.crystalsnowman.com/?p=1309">CentOS php&#45;fpmの設定を変更してメモリ消費を減らした方法 &#124; CrystalSnowman&#46;com</a></p>
+
+<p>サーバーはさくらのVPS (Cent OS 6、メモリ 1GB) なので、この記事とまさに同じ状況らしい。
+これを参考に PHP FPM の設定 (<code>/etc/php-fpm.d/www.conf</code>) を以下のように変更し、現状運用中。</p>
+
+<pre><code>pm = dynamic
+pm.max_children = 10 ; default 50
+pm.start_servers = 5
+pm.min_spare_servers = 2 ; default 5
+pm.max_spare_servers = 6 ; default 35
+</code></pre>
+
+<p>設定変更前と比較にならないくらい軽く（というか普通に）なった。ここのようにアクセス数の少ないサイトはこういった設定で問題ないらしい。</p>
+
+<p>PHP FPM はデフォルトで最大50ものプロセスを立ち上げようとするということは、比較的ハイスペックな環境を想定して設計されているのだろうか。果たして。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>WP Pusher による WordPress テーマの自動デプロイ</title>
+		<link>/2017/04/wppusher</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Fri, 14 Apr 2017 10:35:26 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">/?p=1218</guid>
+
+					<description><![CDATA[WP Pusher というプラグインを導入し、GitHub のレポジトリの master ブランチに push したらサイトの WordPress テーマが自動的に更新されるという運用にしてみた。 seckie/likealunatic: Like@Lunatic website source code サイトの静的ファイルがテーマディレクトリの外に散在していた状態だったから、それもできなかったわけだ。今回自作テーマを大幅に整理したことで、テンプレートも静的ファイルもすべて1つのテーマフォルダに収めることができた。（まあ当たり前の状態になったというべきか…） GitHub の Webhooks による自動更新は以前からやりたかったのだが、CI ツールを使ったことのない僕にはハードルが高かった。しかし調べてみると、プラグインでそういうものがある、という情報があった ので導入してみることにした。該当記事の紹介によると、ビルドを Travis CI で行い、その後 dist ブランチに自動的にプッシュ、それを Webhooks で拾って本番にデプロイ、というフローになっている。しかし僕の環境だとビルドはローカルでやっているので Travis CI を使うフローは不要になる。シンプルに GitHub と WP Pusher だけの形で実現できた。 ただしハマったポイントが一つある。 WP Pusher は公式プラグインディレクトリに置いていないので、FTP を使ってアップロードした。すると、該当ファイルとディレクトリのオーナーは当然その FTP ユーザーになる。それによってパーミッションの問題が発生。 このサイトは Nginx + WordPress で動作している。 Nginx を使っている場合、wp-content ディレクトリなどに対して nginx ユーザーに書き込み権限を与えておけば、 WordPress (PHP) から自動更新やらプラグインの追加削除が行えるようになる。そうでない場合、WordPress は FTP 経由でファイルを出し入れしようとして FTP 情報を入力するプロンプト画面を表示する。 WP Pusher による自動デプロイも例外ではなく、パーミッションが適切でないと WordPress がそのページを表示しようとしてしまい、正しく通信できないらしい。 ちなみにエラーは GitHub の 該当 Webhook のページ下方に &#8220;Recent Deliveries&#8221; というセクションがあるのでそこで確認できる。 Webhook を設定すると通信確認のためなのか Recent Deliveries に1つ通信が記録される。それがエラーになっていた場合、Response が &#8220;500&#8221; となっているはず。Body のセクションを確認すると「FTP credentials を入力してください」という感じの HTML が出力されている。 これは正常な状態。 今回のケースでは wp-content 以下すべてのファイル、ディレクトリオーナーを nginx ユーザーに変更したら解決した。 ちなみにこのことは WP Pusher Troubleshooting のページにもちらっと記述があった…。なんだろうこの徒労感。 参考 Github から WordPress のテーマを自動更新するとめちゃくちゃ快適だった。 – Toro&#95;Unit ファイルパーミッションの変更 &#45; WordPress &#8230; <a href="/2017/04/wppusher">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://docs.wppusher.com/">WP Pusher</a> というプラグインを導入し、GitHub のレポジトリの master ブランチに push したらサイトの WordPress テーマが自動的に更新されるという運用にしてみた。</p>
+
+<p><a href="https://github.com/seckie/likealunatic">seckie/likealunatic: Like@Lunatic website source code</a></p>
+
+<p>サイトの静的ファイルがテーマディレクトリの外に散在していた状態だったから、それもできなかったわけだ。今回自作テーマを大幅に整理したことで、テンプレートも静的ファイルもすべて1つのテーマフォルダに収めることができた。（まあ当たり前の状態になったというべきか…）</p>
+
+<p>GitHub の Webhooks による自動更新は以前からやりたかったのだが、CI ツールを使ったことのない僕にはハードルが高かった。しかし調べてみると、<a href="https://torounit.com/blog/2016/01/20/2176/">プラグインでそういうものがある、という情報があった</a> ので導入してみることにした。該当記事の紹介によると、ビルドを Travis CI で行い、その後 dist ブランチに自動的にプッシュ、それを Webhooks で拾って本番にデプロイ、というフローになっている。しかし僕の環境だとビルドはローカルでやっているので Travis CI を使うフローは不要になる。シンプルに GitHub と WP Pusher だけの形で実現できた。</p>
+
+<p>ただしハマったポイントが一つある。</p>
+
+<p>WP Pusher は公式プラグインディレクトリに置いていないので、FTP を使ってアップロードした。すると、該当ファイルとディレクトリのオーナーは当然その FTP ユーザーになる。それによってパーミッションの問題が発生。</p>
+
+<p>このサイトは <a href="https://wpdocs.osdn.jp/Nginx">Nginx + WordPress</a> で動作している。
+Nginx を使っている場合、wp-content ディレクトリなどに対して <strong><code>nginx</code></strong> ユーザーに書き込み権限を与えておけば、 WordPress (PHP) から自動更新やらプラグインの追加削除が行えるようになる。そうでない場合、WordPress は FTP 経由でファイルを出し入れしようとして FTP 情報を入力するプロンプト画面を表示する。<br />
+WP Pusher による自動デプロイも例外ではなく、パーミッションが適切でないと WordPress がそのページを表示しようとしてしまい、正しく通信できないらしい。</p>
+
+<p>ちなみにエラーは GitHub の 該当 Webhook のページ下方に &#8220;Recent Deliveries&#8221; というセクションがあるのでそこで確認できる。
+Webhook を設定すると通信確認のためなのか Recent Deliveries に1つ通信が記録される。それがエラーになっていた場合、Response が &#8220;500&#8221; となっているはず。Body のセクションを確認すると「FTP credentials を入力してください」という感じの HTML が出力されている。</p>
+
+<p><a href="/wp-content/uploads/2017/04/2017-04-14-17.56.49.png"><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2017/04/2017-04-14-17.56.49-300x189.png" alt="GitHub Webhook setting screen" width="300" height="189" class="alignnone size-medium wp-image-1219" srcset="/wp-content/uploads/2017/04/2017-04-14-17.56.49-300x189.png 300w, /wp-content/uploads/2017/04/2017-04-14-17.56.49-768x485.png 768w, /wp-content/uploads/2017/04/2017-04-14-17.56.49-1024x647.png 1024w, /wp-content/uploads/2017/04/2017-04-14-17.56.49-475x300.png 475w, /wp-content/uploads/2017/04/2017-04-14-17.56.49.png 1504w" sizes="(max-width: 300px) 100vw, 300px" /></a><br />
+これは正常な状態。</p>
+
+<p>今回のケースでは wp-content 以下すべてのファイル、ディレクトリオーナーを nginx ユーザーに変更したら解決した。
+ちなみにこのことは <a href="http://docs.wppusher.com/article/30-troubleshooting">WP Pusher Troubleshooting のページにもちらっと記述があった</a>…。なんだろうこの徒労感。</p>
+
+<h2>参考</h2>
+
+<ul>
+<li><a href="https://torounit.com/blog/2016/01/20/2176/">Github から WordPress のテーマを自動更新するとめちゃくちゃ快適だった。 – Toro&#95;Unit</a></li>
+<li><a href="https://wpdocs.osdn.jp/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%91%E3%83%BC%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%A4%89%E6%9B%B4#.E3.83.91.E3.83.BC.E3.83.9F.E3.83.83.E3.82.B7.E3.83.A7.E3.83.B3_777_.E3.81.AE.E5.8D.B1.E9.99.BA.E6.80.A7">ファイルパーミッションの変更 &#45; WordPress Codex 日本語版</a></li>
+<li><a href="http://docs.wppusher.com/article/30-troubleshooting">Troubleshooting &#45; WP Pusher Knowledge Base</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>サイトのアップデート</title>
+		<link>/2017/04/update</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Fri, 14 Apr 2017 10:31:31 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<guid isPermaLink="false">/?p=1216</guid>
+
+					<description><![CDATA[Bootstrapのアップグレードを中心にサイトをアップデートしました <a href="/2017/04/update">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>直近の仕事が延期になってぽっかりと時間が空いたので、このサイトのメンテを一気にやった。</p>
+
+<ul>
+<li>Bootstrap のアップグレード（v.1 -> v.3）</li>
+<li>タスクランナーを Grunt から gulp に乗り換え</li>
+<li>CSS プリプロセッサは Stylus から Sass (indented syntax) へ乗り換え</li>
+<li>JavaScript は ES2015 + Babel を Webpack でビルドする環境へ</li>
+<li>WordPress テーマディレクトリの整理</li>
+<li>WP touch プラグインを廃止。スマホ向けスタイルは Bootstrap ベースで自作</li>
+<li>WP Pusher による自動デプロイ</li>
+</ul>
+
+<p>何年もサボっていたのでもう色々古かった。
+Bootstrap はタイポグラフィーが格段に良くなりました。感心。それとモバイルファースト感が増していて、時代が移り変わった感じがします。
+とはいえ今回使った v3.3.7 は<a href="https://github.com/twbs/bootstrap/releases">2016年7月のリリースバージョン</a>となっていて、そんなに最新のトレンドっていう訳でもないです…。
+というかこのリリースノートを見る限り Bootstrap ってもうあまり活発にメンテされていない感じか。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>スティーブ・ヴァイ来日公演を見に行ってきた</title>
+		<link>/2013/08/stevevailive</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sat, 03 Aug 2013 12:57:02 +0000</pubDate>
+				<category><![CDATA[Miscellany]]></category>
+		<category><![CDATA[Music]]></category>
+		<guid isPermaLink="false">/?p=1033</guid>
+
+					<description><![CDATA[超絶ギターを弾きながら歌ったり踊ったり、ギターを振り回したり背中で弾いたり舌で弾いたり、メンバーと一緒になってLEDがビカビカに光る奇抜な衣装や演出をしたり、客をステージに上げて歌わせてその場でセッションしたり、とにかくオーディエンスを楽しませようという精神がすさまじくて、MCなどではお茶目でウィットに富んだトークをしてくれて、でもどこまでも謙虚で、自分の音楽を楽しんでくれるオーディエンスへの気配りと感謝を一時も忘れない。
+そんな漢だった、Steve Vai という人間は。 <a href="/2013/08/stevevailive">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="/wp-content/uploads/2013/08/20130802stevevai.jpg"><img decoding="async" src="/wp-content/uploads/2013/08/20130802stevevai-225x300.jpg" alt="The Story of Light Tour 2013 のTシャツ" width="225" height="300" class="alignleft size-medium wp-image-1034" srcset="/wp-content/uploads/2013/08/20130802stevevai-225x300.jpg 225w, /wp-content/uploads/2013/08/20130802stevevai.jpg 630w" sizes="(max-width: 225px) 100vw, 225px" /></a></p>
+
+<p>昨晩は横浜ベイホールに<a href="http://yo-gaku.eplus2.jp/article/367687745.html">スティーブ・ヴァイ来日公演</a>を見に行って来た。</p>
+
+<p>超絶ギターを弾きながら歌ったり踊ったり、ギターを振り回したり背中で弾いたり舌で弾いたり、メンバーと一緒になってLEDがビカビカに光る奇抜な衣装や演出をしたり、客をステージに上げて歌わせてその場でセッションしたり、とにかくオーディエンスを楽しませようという精神がすさまじくて、MCなどではお茶目でウィットに富んだトークをしてくれて、でもどこまでも謙虚で、自分の音楽を楽しんでくれるオーディエンスへの気配りと感謝を一時も忘れない。</p>
+
+<p>そんな漢だった、Steve Vai という人間は。</p>
+
+<p>彼は超絶ギタリストであるだけでなく、間違いなく極上のエンターテイナーであり、いつも観客の声援にニコニコと応える、素晴らしい人格者だった。</p>
+
+<p>かつて10代の頃、誰にでも自分にとってのアイドルがいたと思う。彼らをライブコンサートなどで、実在する人間として実際に目の当たりにする興奮。この忘れていた興奮を、思い出した。</p>
+
+<p>Steve は僕にとって間違いなくアイドルであり、彼が目の前に存在し、立ち居振る舞っていること自体に本当に興奮したし、人間離れした演奏とステージをこの目で見ることができた。
+もう彼は50歳を超えているはずであるが、年齢を全く感じさせない、（ある意味いつも通りの？）エネルギッシュなステージを見せてくれた。
+これが目の前で、現実として起こったことである。その事実にひたすら感動した。</p>
+
+<p>彼がまた日本に来てくれることを、心から願わずにはいられないのである。</p>
+
+<p>P.S.<br />
+また一つ嬉しかったのは、Steveがしゃべっていることが大体理解できたことだ。
+自分の英語力は少しずつだが進歩している。ここ2年ほどやってきた英会話は無駄ではなかったようだ。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>初めて pull request を体験するなど</title>
+		<link>/2013/06/fuelphptranslation</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Mon, 17 Jun 2013 13:32:39 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[FuelPHP]]></category>
+		<category><![CDATA[GitHub]]></category>
+		<guid isPermaLink="false">/?p=1028</guid>
+
+					<description><![CDATA[最近、仕事で FuelPHP という PHP フレームワークを使う機会があります。いわゆる Cake PHP 的な MVC フレームワークで、PHP 5.3 以降対応としたことにより、今風に書かれているらしいです。 もう先月の話になるのですが、FuelPHP 1.6 翻訳ウィークというオンラインイベントを通じて、Fuel PHP 1.6 の日本語ドキュメントのメンテナンスに参加しました。 翻訳作業には GitHub を通じて誰でも参加できるようになっており、初めて他人のプロジェクトに pull request を送るという体験をしました。日本語でやり取りができたので、はじめの一歩としては敷居が低かったと思います。 それにしても GitHub、やりとりのほとんどをブラウザ上で完結できてしまうほど、進化していたんですね。しかしこれだと git の勉強にはならないなー。]]></description>
+										<content:encoded><![CDATA[<p>最近、仕事で <a href="http://fuelphp.com/">FuelPHP</a> という PHP フレームワークを使う機会があります。いわゆる Cake PHP 的な MVC フレームワークで、PHP 5.3 以降対応としたことにより、今風に書かれているらしいです。</p>
+
+<p>もう先月の話になるのですが、<a href="http://atnd.org/events/39849">FuelPHP 1.6 翻訳ウィーク</a>というオンラインイベントを通じて、<a href="http://fuelphp.jp/docs/1.6/">Fuel PHP 1.6 の日本語ドキュメント</a>の<a href="https://github.com/NEKOGET/FuelPHP_docs_jp/tree/1.6/develop_japanese">メンテナンス</a>に参加しました。</p>
+
+<p>翻訳作業には GitHub を通じて誰でも参加できるようになっており、初めて他人のプロジェクトに pull request を送るという体験をしました。日本語でやり取りができたので、はじめの一歩としては敷居が低かったと思います。</p>
+
+<p>それにしても GitHub、やりとりのほとんどをブラウザ上で完結できてしまうほど、進化していたんですね。しかしこれだと git の勉強にはならないなー。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>FillSpector for iOSというゲームがおもしろい</title>
+		<link>/2013/04/fill-spector-for-ios</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 21 Apr 2013 14:08:14 +0000</pubDate>
+				<category><![CDATA[Miscellany]]></category>
+		<category><![CDATA[Game]]></category>
+		<guid isPermaLink="false">/?p=1020</guid>
+
+					<description><![CDATA[同僚がFacebookで紹介していたFill Spector for iOSというゲームが面白かったのでやりこんでいる。 <a href="/2013/04/fill-spector-for-ios">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>同僚がFacebookで紹介していたのでダウンロードしてみたら、面白かったのでやりこんでいる。<br />
+プレイ動画を撮ってみた。こんな感じのゲーム。</p>
+
+<iframe width="480" height="360" src="http://www.youtube.com/embed/r7UtUhBACxA" frameborder="0" allowfullscreen></iframe>
+
+<p>システムはいたってシンプルで、キャラクターを操作して時間内に一本道を進んでいくだけ。<br />
+ただ操作にコツが必要で、慣れないうちはキャラクターがまったく前に進んでくれない。そのコツをつかむまでは何この罰ゲームっていうくらい本当に動かないので、やり出してすぐ投げ出しそうになった（笑）</p>
+
+<p>しかしコツが分かってキャラクターが動かせるようになると、一気に快感が押し寄せてくる、そんなゲーム。（そのコツとやらについてはアプリの「How to Play」で公式の動画が説明しているので、割愛。）<br />
+扱いにくいジャジャ馬を力でねじ伏せて乗りこなす喜びというか、そういう楽しみ方ができるゲームって結構希少だと思うんだなあ。</p>
+
+<p><a href="http://fillspector.com/ip/index_j.html">FillSpector for iOS</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>modern.IE×VMWareFusion 試してみた</title>
+		<link>/2013/04/modernie</link>
+					<comments>/2013/04/modernie#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sat, 13 Apr 2013 06:24:23 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[modern.IE]]></category>
+		<category><![CDATA[VMWareFusion]]></category>
+		<guid isPermaLink="false">/?p=1002</guid>
+
+					<description><![CDATA[modern.IE×VMWareFusion 試してみた <a href="/2013/04/modernie">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/04/modernie.png" alt="modern.ie" width="600" height="440" class="alignnone size-full wp-image-1003" srcset="/wp-content/uploads/2013/04/modernie.png 600w, /wp-content/uploads/2013/04/modernie-300x220.png 300w, /wp-content/uploads/2013/04/modernie-409x300.png 409w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+
+<p>最初に言ってしまえば、以下の記事をまず読もう。導入手順が詳しく書いてあります。ありがとうございます。
+<a href="http://design-spice.com/2013/04/03/mac-ie-test/">http://design-spice.com/2013/04/03/mac-ie-test/</a></p>
+
+<p><a href="http://www.modern.ie/ja">http://www.modern.ie/ja</a> にアクセスし、<br />
+仮想環境 ＞ Download a Virtual Machine. For Mac, Linux, or Windows. ＞ Get the VM ＞ 目的のOS→Mac ＞ プラットフォーム→VMWareFusion で目的のOSのファイルをダウンロード。ダウンロードした.sfxファイルをターミナルから</p>
+
+<pre><code>$ chmod +x DOWNLOADED_FIKE.sfx
+$ ./DOWNLOADED_FIKE.sfx
+</code></pre>
+
+<p>と実行すると、解凍されてディスクイメージファイルができる。<br />
+で、そのファイルをVMWare Fusionで開いたら実行できた。<a href="http://blog.reybango.com/2013/02/04/making-internet-explorer-testing-easier-with-new-ie-vms/">詳細はこちらにて</a></p>
+
+<p>以下、気づいたこととか。</p>
+
+<ul>
+<li>Windows XPでの英語以外のLanguage Packはサポートされない。（アクティベーションしないと入れられないため）
+
+<ul>
+<li>参考1： <a href="http://blog.reybango.com/2013/02/04/making-internet-explorer-testing-easier-with-new-ie-vms/comment-page-1/#comment-127134">http://blog.reybango.com/2013/02/04/making-internet-explorer-testing-easier-with-new-ie-vms/comment-page-1/#comment-127134</a></li>
+<li>参考2： <a href="http://blog.reybango.com/2013/02/04/making-internet-explorer-testing-easier-with-new-ie-vms/comment-page-1/#comment-127136">http://blog.reybango.com/2013/02/04/making-internet-explorer-testing-easier-with-new-ie-vms/comment-page-1/#comment-127136</a></li>
+</ul></li>
+<li>よってWindowsXP VMはOSレベルで日本語のテキストを表示することができないようだ（なんか惜しい。。）</li>
+<li>Wiondows Updateはできるが、UpdateかけるとIE8がインストールされる。（しかし落ち着いて、コントロールパネルからアンインストールすべし）</li>
+<li><a href="http://blog.reybango.com/2013/02/04/making-internet-explorer-testing-easier-with-new-ie-vms/">公式の人のブログ</a>では<strong>Windows Updateをかけることと、ウィルス対策プログラムを入れることを強く推奨してる</strong></li>
+<li>アクティベーションの関係で一定期間経ったら使えなくなるので、ダウンロード＆インストールしなおす必要あり</li>
+<li>Windows XPのVMは90日で期限切れになる</li>
+<li>Windows VISTA以降のVMは30日で期限切れ。コマンドラインで“slmgr –rearm“ を実行すれば2回、期間を延長可能。計90日使える。</li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2013/04/modernie/feed</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>[Mac/iPhone]壁紙アプリKuvvaとDeko</title>
+		<link>/2013/02/kuvva-deko</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 10 Feb 2013 03:35:40 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[iPhone]]></category>
+		<category><![CDATA[Mac]]></category>
+		<guid isPermaLink="false">/?p=973</guid>
+
+					<description><![CDATA[最近ハマっている壁紙アプリがあるのでご紹介。2つあります。 Kuvva KuvvaはMacとiPhone向けの壁紙アプリ。アプリとウェブサービスが連動しており、ウェブサービス側からアプリへと壁紙を配信する仕組み。ウェブサービスに無料のアカウント登録をすれば、「お気に入り(Favorites)」などの情報をMacとiPhoneで共有することができる。 iPhoneアプリやサイトからは、登録されているアーティストごとに作品の一覧を見ることができ「お気に入り」を管理できる。 もちろんMacアプリで直接「Add to favorites」も可能。 Deko DekoはiOS向け壁紙アプリ。特定のパターンから画像をジェネレートし、壁紙として保存したり、シェアしたりできる。 画面を左右にフリックするとパターンが変化するのだけど、速くフリックすると新しいパターンに、遅くフリックすると同じパターンで色違いになったりする。どういうルールで変化するのかいまいち分からないし、使いやすいとは言えないけど、独特のインターフェースだなあと。なにより、どういう画像ができるか分からないという偶然性が魅力的。 実際に壁紙にしてみると、こんな感じ。 アプリのダウンロードは無料だけど、高解像度で画像を保存するために1.99$のアドオンが必要。一度支払うだけでOK。 あとがき 気軽にアートに触れることができる、こういったアプリやウェブサービスが出てくるのは嬉しいですね。決して大衆向けとは言えないかもしれませんが、盛り上がって行くといいなあと思います。 ネタ元 仕事中でも気分転換！ 壁紙を定期的に自動で変更するアプリ『Kuvva』 : ライフハッカー［日本版］ Deko &#8211; Generative Wallpapers for iOS / @suprjohan]]></description>
+										<content:encoded><![CDATA[<p>最近ハマっている壁紙アプリがあるのでご紹介。2つあります。</p>
+
+<h3>Kuvva</h3>
+
+<p><a href="http://www.kuvva.com/" title="Kuvva wallpapers for iPhone and Mac">Kuvva</a>はMacとiPhone向けの壁紙アプリ。アプリとウェブサービスが連動しており、ウェブサービス側からアプリへと壁紙を配信する仕組み。ウェブサービスに無料のアカウント登録をすれば、「お気に入り(Favorites)」などの情報をMacとiPhoneで共有することができる。</p>
+
+<p>iPhoneアプリやサイトからは、登録されているアーティストごとに作品の一覧を見ることができ「お気に入り」を管理できる。</p>
+
+<p><a href="/wp-content/uploads/2013/02/kuvva-mac2.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/kuvva-mac2-300x239.png" alt="Kuvva Website" width="300" height="239" class="alignnone size-medium wp-image-982" srcset="/wp-content/uploads/2013/02/kuvva-mac2-300x239.png 300w, /wp-content/uploads/2013/02/kuvva-mac2-1024x817.png 1024w, /wp-content/uploads/2013/02/kuvva-mac2-375x300.png 375w, /wp-content/uploads/2013/02/kuvva-mac2.png 1219w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<p>もちろんMacアプリで直接「Add to favorites」も可能。</p>
+
+<p><a href="/wp-content/uploads/2013/02/kuvva-mac.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/kuvva-mac-300x187.png" alt="Kuvva for Mac" width="300" height="187" class="alignnone size-medium wp-image-979" srcset="/wp-content/uploads/2013/02/kuvva-mac-300x187.png 300w, /wp-content/uploads/2013/02/kuvva-mac-480x300.png 480w, /wp-content/uploads/2013/02/kuvva-mac.png 720w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+
+<h3>Deko</h3>
+
+<p><a href="http://aerodeko.com/" title="Aero Deko">Deko</a>はiOS向け壁紙アプリ。特定のパターンから画像をジェネレートし、壁紙として保存したり、シェアしたりできる。</p>
+
+<p><a href="/wp-content/uploads/2013/02/deko1.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/deko1-200x300.png" alt="deko1" width="200" height="300" class="alignnone size-medium wp-image-983" srcset="/wp-content/uploads/2013/02/deko1-200x300.png 200w, /wp-content/uploads/2013/02/deko1.png 640w" sizes="(max-width: 200px) 100vw, 200px" /></a></p>
+
+<p>画面を左右にフリックするとパターンが変化するのだけど、速くフリックすると新しいパターンに、遅くフリックすると同じパターンで色違いになったりする。どういうルールで変化するのかいまいち分からないし、使いやすいとは言えないけど、独特のインターフェースだなあと。なにより、どういう画像ができるか分からないという偶然性が魅力的。</p>
+
+<p><a href="/wp-content/uploads/2013/02/deko2.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/deko2-200x300.png" alt="deko2" width="200" height="300" class="alignnone size-medium wp-image-984" srcset="/wp-content/uploads/2013/02/deko2-200x300.png 200w, /wp-content/uploads/2013/02/deko2.png 640w" sizes="(max-width: 200px) 100vw, 200px" /></a></p>
+
+<p>実際に壁紙にしてみると、こんな感じ。</p>
+
+<p><a href="/wp-content/uploads/2013/02/deko3.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/deko3-200x300.png" alt="deko3" width="200" height="300" class="alignnone size-medium wp-image-985" srcset="/wp-content/uploads/2013/02/deko3-200x300.png 200w, /wp-content/uploads/2013/02/deko3.png 640w" sizes="(max-width: 200px) 100vw, 200px" /></a></p>
+
+<p>アプリのダウンロードは無料だけど、高解像度で画像を保存するために1.99$のアドオンが必要。一度支払うだけでOK。</p>
+
+<p><a href="/wp-content/uploads/2013/02/deko4.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2013/02/deko4-200x300.png" alt="deko4" width="200" height="300" class="alignnone size-medium wp-image-986" srcset="/wp-content/uploads/2013/02/deko4-200x300.png 200w, /wp-content/uploads/2013/02/deko4.png 640w" sizes="(max-width: 200px) 100vw, 200px" /></a></p>
+
+<h3>あとがき</h3>
+
+<p>気軽にアートに触れることができる、こういったアプリやウェブサービスが出てくるのは嬉しいですね。決して大衆向けとは言えないかもしれませんが、盛り上がって行くといいなあと思います。</p>
+
+<h4>ネタ元</h4>
+
+<ul>
+<li><a href="http://www.lifehacker.jp/2013/01/130118kuvva.html" title="仕事中でも気分転換！ 壁紙を定期的に自動で変更するアプリ『Kuvva』 : ライフハッカー［日本版］">仕事中でも気分転換！ 壁紙を定期的に自動で変更するアプリ『Kuvva』 : ライフハッカー［日本版］</a></li>
+<li><a href="http://www.creativeapplications.net/iphone/deko-generative-wallpapers-for-ios/" title="Deko - Generative Wallpapers for iOS / @suprjohan">Deko &#8211; Generative Wallpapers for iOS / @suprjohan</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

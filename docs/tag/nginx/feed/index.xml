@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Nginx &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/nginx/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:11:38 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Nginx &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>PHP FPM のチューニング</title>
+		<link>/2017/04/php-fpm</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 20 Apr 2017 08:54:22 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Nginx]]></category>
+		<category><![CDATA[Performance]]></category>
+		<category><![CDATA[PHP]]></category>
+		<guid isPermaLink="false">/?p=1229</guid>
+
+					<description><![CDATA[Nginx + WordPress でサイト運用する場合、PHP FPM のチューニングが必要になる場合がある <a href="/2017/04/php-fpm">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>このサイトはNginx + WordPress で運用しているだが、設置当初はサイトが重くて仕方なかった。<br />
+<code>top</code> コマンドで状況を調べてみるとメモリを使い切っていたので、途方に暮れて解決策をググったところ、以下の記事を発見。
+有用な記事をありがとうございました。</p>
+
+<p><a href="http://www.crystalsnowman.com/?p=1309">CentOS php&#45;fpmの設定を変更してメモリ消費を減らした方法 &#124; CrystalSnowman&#46;com</a></p>
+
+<p>サーバーはさくらのVPS (Cent OS 6、メモリ 1GB) なので、この記事とまさに同じ状況らしい。
+これを参考に PHP FPM の設定 (<code>/etc/php-fpm.d/www.conf</code>) を以下のように変更し、現状運用中。</p>
+
+<pre><code>pm = dynamic
+pm.max_children = 10 ; default 50
+pm.start_servers = 5
+pm.min_spare_servers = 2 ; default 5
+pm.max_spare_servers = 6 ; default 35
+</code></pre>
+
+<p>設定変更前と比較にならないくらい軽く（というか普通に）なった。ここのようにアクセス数の少ないサイトはこういった設定で問題ないらしい。</p>
+
+<p>PHP FPM はデフォルトで最大50ものプロセスを立ち上げようとするということは、比較的ハイスペックな環境を想定して設計されているのだろうか。果たして。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

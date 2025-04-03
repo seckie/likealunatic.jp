@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: PNG8でアルファチャンネルが使えることを最近知った件	</title>
+	<atom:link href="/2010/07/png8alpha/feed" rel="self" type="application/rss+xml" />
+	<link>/2010/07/png8alpha</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:04 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: 透過を保ちつつpngを高圧縮するMacの無料アプリImageAlpha。素でIE6対応		</title>
+		<link>/2010/07/png8alpha/comment-page-1#comment-392</link>
+
+		<dc:creator><![CDATA[透過を保ちつつpngを高圧縮するMacの無料アプリImageAlpha。素でIE6対応]]></dc:creator>
+		<pubDate>Thu, 19 Jul 2012 15:38:30 +0000</pubDate>
+		<guid isPermaLink="false">/?p=692#comment-392</guid>
+
+					<description><![CDATA[&lt;p&gt;[...] PNG8でアルファチャンネルが使えることを最近知った件 - Like@Lunatic        [...]&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] PNG8でアルファチャンネルが使えることを最近知った件 &#8211; Like@Lunatic        [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

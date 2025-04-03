@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: WinXPローカルでXAMPPを使ってMovable Typeを動かす―2010年3月版 その1	</title>
+	<atom:link href="/2010/03/xampp_and_mt_1/feed" rel="self" type="application/rss+xml" />
+	<link>/2010/03/xampp_and_mt_1</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:04 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: XAMPP1.7.7-MovableType 5.12 &#124; Matari		</title>
+		<link>/2010/03/xampp_and_mt_1/comment-page-1#comment-709</link>
+
+		<dc:creator><![CDATA[XAMPP1.7.7-MovableType 5.12 &#124; Matari]]></dc:creator>
+		<pubDate>Sat, 11 Jan 2014 00:32:57 +0000</pubDate>
+		<guid isPermaLink="false">/?p=478#comment-709</guid>
+
+					<description><![CDATA[&lt;p&gt;[&#8230;] 　参考：『最新版』XAMPP上にWordPressを簡単インストール 　　　　WinXPローカルでXAMPPを使ってMovable Typeを動かす *インストールは「C:/xampp」にする  [&#8230;]&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] 　参考：『最新版』XAMPP上にWordPressを簡単インストール 　　　　WinXPローカルでXAMPPを使ってMovable Typeを動かす *インストールは「C:/xampp」にする  [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: XAMPP1.7.7 &#171; Ma-TaRi		</title>
+		<link>/2010/03/xampp_and_mt_1/comment-page-1#comment-372</link>
+
+		<dc:creator><![CDATA[XAMPP1.7.7 &#171; Ma-TaRi]]></dc:creator>
+		<pubDate>Sun, 01 Jan 2012 08:53:03 +0000</pubDate>
+		<guid isPermaLink="false">/?p=478#comment-372</guid>
+
+					<description><![CDATA[&lt;p&gt;[...] 　参考：『最新版』XAMPP上にWordPressを簡単インストール 　　　　WinXPローカルでXAMPPを使ってMovable Typeを動かす [...]&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] 　参考：『最新版』XAMPP上にWordPressを簡単インストール 　　　　WinXPローカルでXAMPPを使ってMovable Typeを動かす [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: &#187; xamppにMT5をインストールするのまとめ tiptop		</title>
+		<link>/2010/03/xampp_and_mt_1/comment-page-1#comment-356</link>
+
+		<dc:creator><![CDATA[&#187; xamppにMT5をインストールするのまとめ tiptop]]></dc:creator>
+		<pubDate>Tue, 07 Jun 2011 10:40:09 +0000</pubDate>
+		<guid isPermaLink="false">/?p=478#comment-356</guid>
+
+					<description><![CDATA[&lt;p&gt;[...] Windws XP xampp 1.7.3 movabletype5 参考サイト WinXPローカルでXAMPPを使ってMovable Typeを動かす [...]&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] Windws XP xampp 1.7.3 movabletype5 参考サイト WinXPローカルでXAMPPを使ってMovable Typeを動かす [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: XAMPP導入からブログサイトを立ち上げるまで XAMPPを導入-実践編その１ &#124; KenQsan.com		</title>
+		<link>/2010/03/xampp_and_mt_1/comment-page-1#comment-352</link>
+
+		<dc:creator><![CDATA[XAMPP導入からブログサイトを立ち上げるまで XAMPPを導入-実践編その１ &#124; KenQsan.com]]></dc:creator>
+		<pubDate>Sun, 08 May 2011 05:22:31 +0000</pubDate>
+		<guid isPermaLink="false">/?p=478#comment-352</guid>
+
+					<description><![CDATA[&lt;p&gt;[...] さんのブログ Like@Lunatic Blogですごく解かりやすく解説してくれています。 WinXPローカルでXAMPPを使ってMovable Typeを動かす―2010年3月版 その1 XAMPP [...]&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] さんのブログ Like@Lunatic Blogですごく解かりやすく解説してくれています。 WinXPローカルでXAMPPを使ってMovable Typeを動かす―2010年3月版 その1 XAMPP [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

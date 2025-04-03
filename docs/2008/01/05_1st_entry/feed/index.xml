@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: 2008年もよろしくお願いいたします	</title>
+	<atom:link href="/2008/01/05_1st_entry/feed" rel="self" type="application/rss+xml" />
+	<link>/2008/01/05_1st_entry</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:39 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: ProjectDD Blog		</title>
+		<link>/2008/01/05_1st_entry/comment-page-1#comment-31</link>
+
+		<dc:creator><![CDATA[ProjectDD Blog]]></dc:creator>
+		<pubDate>Sun, 20 Jan 2008 06:58:05 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2008/01/2008%e5%b9%b4%e3%82%82%e3%82%88%e3%82%8d%e3%81%97%e3%81%8f%e3%81%8a%e9%a1%98%e3%81%84%e3%81%84%e3%81%9f%e3%81%97%e3%81%be%e3%81%99.php#comment-31</guid>
+
+					<description><![CDATA[&lt;p&gt;&lt;strong&gt;新年あけましておめでとうございます&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;今年もよろしくお願いします！ 2008年も『旅』を売るWebデザイナーとして、...&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p><strong>新年あけましておめでとうございます</strong></p>
+
+<p>今年もよろしくお願いします！ 2008年も『旅』を売るWebデザイナーとして、&#8230;</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

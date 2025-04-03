@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Vim &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/vim/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:17 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Vim &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>surround.vimの使い方で気づいたこと</title>
+		<link>/2011/12/surroundvim</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 06 Dec 2011 16:58:42 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Vim]]></category>
+		<guid isPermaLink="false">/?p=807</guid>
+
+					<description><![CDATA[surround.vimがいつからかVisual mode+sで起動しなくなり、Visual mode+Sにキーバインドが変更になった。 Visual mode+sを普通に使っていた僕にとってこれは手痛い変更。Visual選択してからShift押してsなんて、かったるくてやってられない。 しかし改めてドキュメントを読んでいると、ys+[なんたら]が強力であることが分かって、そっちに乗り換えるのが正しい使い方なんだろうなと思った。 例えばこれを &#60;h1&#62;大見出し&#60;/h1&#62; こうしたいとする &#60;h1&#62;&#60;a href="#"&#62;大見出し&#60;/a&#62;&#60;/h1&#62; 今までは vits&#60;a href="#"&#60;Enter&#62; とやっていた（Visual modeでタグの内側を選択してからsでsurround.vimを起動してタグを打ち込んでEnter）。 でも今はこうしなきゃいけない。 vitS&#60;a href="#"&#60;Enter&#62; 途中でShift+sは苦痛。 しかしこうできることが分かった。 ysit&#60;a href="#"&#60;Enter&#62; （タグの内側に対してsurround.vimを起動。タグを打ち込んでEnter） 久しぶりに「おおっ」と思った気づきなので、思わす記事を書いてしまった。 世間ではVim Advent Calendar 2011をやってるみたいです。Check it out!!]]></description>
+										<content:encoded><![CDATA[<p><a href="https://github.com/tpope/vim-surround">surround.vim</a>がいつからかVisual mode+<code>s</code>で起動しなくなり、Visual mode+<code>S</code>にキーバインドが変更になった。</p>
+
+<p>Visual mode+<code>s</code>を普通に使っていた僕にとってこれは手痛い変更。Visual選択してからShift押して<code>s</code>なんて、かったるくてやってられない。</p>
+
+<p>しかし改めてドキュメントを読んでいると、<code>ys+[なんたら]</code>が強力であることが分かって、そっちに乗り換えるのが正しい使い方なんだろうなと思った。</p>
+
+<p>例えばこれを</p>
+
+<pre><code>&lt;h1&gt;大見出し&lt;/h1&gt;
+</code></pre>
+
+<p>こうしたいとする</p>
+
+<pre><code>&lt;h1&gt;&lt;a href="#"&gt;大見出し&lt;/a&gt;&lt;/h1&gt;
+</code></pre>
+
+<p>今までは</p>
+
+<pre><code>vits&lt;a href="#"&lt;Enter&gt;
+</code></pre>
+
+<p>とやっていた（Visual modeでタグの内側を選択してからsでsurround.vimを起動してタグを打ち込んでEnter）。
+でも今はこうしなきゃいけない。</p>
+
+<pre><code>vitS&lt;a href="#"&lt;Enter&gt;
+</code></pre>
+
+<p>途中でShift+sは苦痛。
+しかしこうできることが分かった。</p>
+
+<pre><code>ysit&lt;a href="#"&lt;Enter&gt;
+</code></pre>
+
+<p>（タグの内側に対してsurround.vimを起動。タグを打ち込んでEnter）<br />
+久しぶりに「おおっ」と思った気づきなので、思わす記事を書いてしまった。</p>
+
+<p>世間では<a href="http://atnd.org/events/21925">Vim Advent Calendar 2011</a>をやってるみたいです。Check it out!!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Re: gVim でウィンドウの位置とサイズを記憶する</title>
+		<link>/2010/09/gvimwinpos</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 07 Sep 2010 04:18:18 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Vim]]></category>
+		<guid isPermaLink="false">/?p=734</guid>
+
+					<description><![CDATA[マルチモニタ環境で、セカンドモニタにVimを開いた状態で:tabeとか:vspするとメインモニタにVimが何故か強制的に移動してしまい困っていました。それを見事解決できたのがこちらのVim Script。 Vim-users.jp &#8211; Hack #120: gVim でウィンドウの位置とサイズを記憶する このスクリプトを.gvimrcに書き込んでおけば、$HOMEに.vimwinposというファイルが作られそこに前回Vim終了時のウィンドウのX座標、Y座標、横幅、縦幅が保存されます。 1点気をつけるべき点がありました。.gvimrc内にtransparencyオプションの設定がしてある場合、それより後に書かないとウィンドウの位置が強制的にメインモニタ内に移動してしまいます。 （理由は定かではありませんがtransparencyオプションが使用するWindowsの描画機能の影響・・・？） これを回避できれば全く問題なしです。ありがとうございました！]]></description>
+										<content:encoded><![CDATA[<p>マルチモニタ環境で、セカンドモニタにVimを開いた状態で<code>:tabe</code>とか<code>:vsp</code>するとメインモニタにVimが何故か強制的に移動してしまい困っていました。それを見事解決できたのがこちらのVim Script。</p>
+
+<p class="ref"><a href="http://vim-users.jp/2010/01/hack120/">Vim-users.jp &#8211; Hack #120: gVim でウィンドウの位置とサイズを記憶する</a></p>
+
+<p>このスクリプトを<span class="file">.gvimrc</span>に書き込んでおけば、<span class="path">$HOME</span>に<span class="file">.vimwinpos</span>というファイルが作られそこに前回Vim終了時のウィンドウのX座標、Y座標、横幅、縦幅が保存されます。</p>
+
+<p>1点気をつけるべき点がありました。<span class="file">.gvimrc</span>内に<code>transparency</code>オプションの設定がしてある場合、それより後に書かないとウィンドウの位置が強制的にメインモニタ内に移動してしまいます。<br />
+（理由は定かではありませんが<code>transparency</code>オプションが使用するWindowsの描画機能の影響・・・？）<br />
+これを回避できれば全く問題なしです。ありがとうございました！</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>autocomplpop.vimでclass属性値入力時に出るエラーを回避する</title>
+		<link>/2009/09/29_acpvim</link>
+					<comments>/2009/09/29_acpvim#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 29 Sep 2009 13:30:25 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Vim]]></category>
+		<guid isPermaLink="false">/wptest/2009/09/autocomplpop-vim%e3%81%a7class%e5%b1%9e%e6%80%a7%e5%80%a4%e5%85%a5%e5%8a%9b%e6%99%82%e3%81%ab%e5%87%ba%e3%82%8b%e3%82%a8%e3%83%a9%e3%83%bc%e3%82%92%e5%9b%9e%e9%81%bf%e3%81%99%e3%82%8b.php</guid>
+
+					<description><![CDATA[KaoriYaのWindows版Vimにautocomplpop.vimを入れると、HTMLファイル編集時に不快なエラーが出るようになるので、その回避方法。 <a href="/2009/09/29_acpvim">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://www.kaoriya.net/">KaoriYa</a>のWindows版Vimに<a href="http://www.vim.org/scripts/script.php?script_id=1879">autocomplpop.vim</a>を入れると以下のスクリーンショットのようなエラーが出るようになります。</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img fetchpriority="high" decoding="async" alt="スクリーンショット：class属性値を入力するとエラーが出て鬱陶しい" src="/images/2009/09/29_acp.gif" width="486" height="157" class="mt-image-none" style="" /></span></p>
+
+<p>コレ、HTMLのclass属性値を入力しようとすると出るエラーなのですが、どうやら編集中のHTMLファイルに関連付けられているCSSを見に行って、そこに定義されていないクラスを入力しようとすると出るようです。便利なようですが、スクリプトのために書くclass属性値もなんかもあるわけで、そういうのでいちいちエラー窓が開いていては入力しにくくて仕方ありません。<br />
+そこで、このエラーが出ないようにする、というか、class属性値をいちいちチェックしないようにする方法を。</p>
+
+<p>まずVimのホームディレクトリから runtime/autoload/ とたどっていくと htmlcomplete.vim というファイルがあります。つまり、コレですね <code>$VIMRUNTIME/autoload/htmlcomplete.vim</code><br />
+コレの中身を以下のように編集します。</p>
+
+<p>245〜256行目</p>
+
+<pre><code>        &quot;let headclasslines = filter(copy(styleheadlines), &quot;v:val =~ '\\([a-zA-Z0-9:]\\+\\)\\?\\.[a-zA-Z0-9_-]\\+'&quot;)
+else
+let stylesheet = split(headjoined, '[{}]')
+&quot; Get all lines which fit id syntax
+&quot;let classlines = filter(copy(stylesheet), &quot;v:val =~ '#[a-zA-Z0-9_-]\\+'&quot;)
+&quot; Filter out possible color definitions
+&quot;call filter(classlines, &quot;v:val !~ ':\\s*#[a-zA-Z0-9_-]\\+'&quot;)
+&quot; Filter out complex border definitions
+&quot;call filter(classlines, &quot;v:val !~ '\\(none\\|hidden\\|dotted\\|dashed\\|solid\\|double\\|groove\\|ridge\\|inset\\|outset\\)\\s*#[a-zA-Z0-9_-]\\+'&quot;)
+&quot;let templines = join(classlines, ' ')
+&quot;let headclasslines = split(templines)
+&quot;call filter(headclasslines, &quot;v:val =~ '#[a-zA-Z0-9_-]\\+'&quot;)</code></pre>
+
+<p>294〜313行目</p>
+
+<pre><code>            &quot;let classlines = filter(copy(stylesheet), &quot;v:val =~ '\\([a-zA-Z0-9:]\\+\\)\\?\\.[a-zA-Z0-9_-]\\+'&quot;)
+else
+let stylesheet = split(stylefile, '[{}]')
+&quot; Get all lines which fit id syntax
+&quot;let classlines = filter(copy(stylesheet), &quot;v:val =~ '#[a-zA-Z0-9_-]\\+'&quot;)
+&quot; Filter out possible color definitions
+&quot;call filter(classlines, &quot;v:val !~ ':\\s*#[a-zA-Z0-9_-]\\+'&quot;)
+&quot; Filter out complex border definitions
+&quot;call filter(classlines, &quot;v:val !~ '\\(none\\|hidden\\|dotted\\|dashed\\|solid\\|double\\|groove\\|ridge\\|inset\\|outset\\)\\s*#[a-zA-Z0-9_-]\\+'&quot;)
+&quot;let templines = join(classlines, ' ')
+&quot;let stylelines = split(templines)
+&quot;let classlines = filter(stylelines, &quot;v:val =~ '#[a-zA-Z0-9_-]\\+'&quot;)
+endif
+endif
+&quot; We gathered classes definitions from all external files
+&quot;let classes += classlines
+endfor
+if internal == 1
+&quot;let classes += headclasslines</code></pre>
+
+<p>つまり、<code>classlines</code>というコードが登場する行を全てコメントアウトします。こうしたら、エラーが出なくなりました。</p>
+
+<p>スマートな方法ではありませんが、とりあえず普通に動くのでOKってことで。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2009/09/29_acpvim/feed</wfw:commentRss>
+			<slash:comments>6</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>vimrcをリローダブルにしてみた</title>
+		<link>/2009/07/24_vimrc</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Fri, 24 Jul 2009 02:33:34 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Vim]]></category>
+		<guid isPermaLink="false">/wptest/2009/07/vimrc%e3%82%92%e3%83%aa%e3%83%ad%e3%83%bc%e3%83%80%e3%83%96%e3%83%ab%e3%81%ab%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f.php</guid>
+
+					<description><![CDATA[Vimの極め方（http://whileimautomaton.net/2008/08/vimworkshop3-kana-presentation）を読んで、vimrcをリローダブルにしてみました <a href="/2009/07/24_vimrc">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://whileimautomaton.net/2008/08/vimworkshop3-kana-presentation">Vimの極め方</a>を読んで、ごにょごにょといろいろやったことの中から、リローダブルなvimrcに関する部分をメモ。</p>
+
+<p>vimrcにキーマップを書き込む時、以下のように書くとコマンドが登録できます。<br />
+以下の例はノーマルモードの時に<kbd>&lt;Space&gt;s.</kbd>と入力するとコマンドを実行する例。<kbd>&lt;Space&gt;</kbd>はスペースキーのこと。</p>
+
+<pre><code>nnoremap &lt;Space&gt;s.
+\        :&lt;C-u&gt;<em>任意のコマンド</em>&lt;CR&gt;</code></pre>
+
+<p>こっちの書き方でもOK。</p>
+
+<pre><code>nnoremap &lt;Space&gt;s. &lt;Esc&gt;:&lt;C-u&gt;<em>任意のコマンド</em>&lt;CR&gt;</code></pre>
+
+<div class="section">
+<h3>というわけで、vimrcをリローダブルにしてみました。</h3>
+<p>私の環境ではWindowsにKaoriyaのGVimという環境なので、以下のように書きました。<del datetime="2009-08-09"><kbd>&lt;Space&gt;s.</kbd>でvimrc、<kbd>&lt;Space&gt;gs.</kbd>でgvimrcを</del><ins datetime="2009-08-09"><kbd>&lt;Space&gt;s.</kbd>でvimrcとgvimrcを</ins>リロードします。</p>
+<pre><code>nnoremap &lt;Space&gt;s.
+\        :&lt;C-u&gt;source $VIM\vimrc&lt;CR&gt; :&lt;C-u&gt;source $VIM\gvimrc&lt;CR&gt;</code></pre>
+<p>こっちの書き方でも（ｒｙ</p>
+<pre><code>nnoremap &lt;Space&gt;s. :&lt;C-u&gt;source $VIM\vimrc&lt;CR&gt; :&lt;C-u&gt;source $VIM\gvimrc&lt;CR&gt;</code></pre>
+<p>それからこの設定をしただけだと、このコマンドを実行しようとするとなぜか「コマンドが既にあります: 再定義するには ! を追加してください」というエラーが出ましたので、エラーメッセージにある vimディレクトリ\runtime\vimrc_example.vim の85行目、<code>command</code>を<code>command!</code>に修正です。</p>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/07/24_gvim.gif"><img decoding="async" alt="「コマンドが既にあります: 再定義するには ! を追加してください」というエラー" src="/images/2009/07/24_gvim-thumb-400x57-100.gif" width="400" height="57" class="mt-image-none" style="" /></a></span></p>
+<p>これでvimrc、gvimrcがリローダブルになりました。やった！<br />
+そういえばVimのネタをブログに書くのは初めてかも。</p>
+</div>
+
+<div class="postscript">
+<h3>追記 <span>&#8211; 2009-08-09</span></h3>
+<ul class="disclist">
+<li>$VIMとすればvimディレクトリに、$HOMEとすればホームディレクトリが表現できることに気づいたので、コードを修正。</li>
+<li>vimrcとgvimrcを両方いっぺんにリロードした方がいいじゃん！ということに気づき、こちらも修正。</li>
+</ul>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

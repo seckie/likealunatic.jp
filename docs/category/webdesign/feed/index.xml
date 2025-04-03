@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Web Design &#8211; Like@Lunatic</title>
+	<atom:link href="/category/webdesign/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:18:24 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Web Design &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Noto Serif CJK JP を Web フォントとして使う</title>
+		<link>/2018/05/noto-serif-cjk-web-fonts</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Sun, 06 May 2018 07:50:18 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<guid isPermaLink="false">/?p=1351</guid>
+
+					<description><![CDATA[仕事で明朝体のサイトを作ることになったので Noto Serif CJK が Web フォントとして使えないか、と調査した。 Noto Sans JP は CDN 配信されている が、Noto Serif JP は配信されていないので、自前でファイルを持つ必要があるのだ。これはめんどくさいぞ…。 まずは Noto CJK – Google Noto Fonts の &#8220;Region-specific Subset OpenType/CFF (Subset OTF)&#8221; というセクションから使いたいウェイトをダウンロード。今回は NotoSerifCJK-Regular.ttc を選択した。 Web フォントとして使用するために ttc ファイルを woff2 と woff に変換する。今回は WOFFコンバータ を使うことにした。 できたデモがこちら。 NotoSerifCJK-Regular をWeb フォントとして使用するデモ ファイルサイズは woff2 で 4.5 MB、woff で 5.2 MB だ。これでも &#8220;Regision-specific Subset&#8221; とサブセット化されているものだが、まだ実用に耐えうるサイズじゃない。Chrome のネットワークエミュレーションで &#8220;Fast 3G&#8221; を選択するとダウンロードするのに 24.51 秒かかる。ちなみに通常の環境（光＋Wifi）だと 674 ミリ秒。うーむ。 というわけでさらなるサブセット化に取り組むことにする。これには サブセットフォントメーカー を使う。 ネット検索し、「第一水準漢字＋記号＋ローマ字＋カタカナ＋ひらがな」のソースを探すが、信頼に足るものがいまいち見つからない。 まずはこちらさんを試す。 ん、なんだか漢字少なすぎじゃない？ ではこちらさんはどうだろう。 えぇ…、「j」がないよ…。 で、結局、漢字のセクションだけ後者、それ以外を前者から頂戴する形でサブセット化。 うむ。まぁこれでよかろう。 サーバーにアップロードして、と。 サブセット化した NotoSerifCJK-Regular を使用するデモ Chrome DevTools で同じ条件（Fast 3G）で見てみると…、3.87秒。及第点じゃないだろうか。 本日はこの辺で。 References Articles Google Fonts「Noto Serif CJK JP（源ノ明朝）」の使い方｜プラカンブログ &#124; WEB制作会社プラスデザインカンパニー Google Fonts「Noto Serif CJK JP」を使ってみる ｜ Tips Note by TAM &#91;CSS&#93;Web制作者が知っておきたい、Webフォントを快適に表示するCSSの新しいプロパティ「font&#45;display」 &#124; コリス 日本語Webフォントをサブセット化して軽量化する方法 &#124; &#8230; <a href="/2018/05/noto-serif-cjk-web-fonts">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>仕事で明朝体のサイトを作ることになったので <a href="https://www.google.com/get/noto/help/cjk/">Noto Serif CJK</a> が Web フォントとして使えないか、と調査した。
+<a href="https://fonts.google.com/earlyaccess#Noto+Sans+JP">Noto Sans JP は CDN 配信されている</a> が、Noto Serif JP は配信されていないので、自前でファイルを持つ必要があるのだ。これはめんどくさいぞ…。</p>
+
+<p>まずは <a href="https://www.google.com/get/noto/help/cjk/">Noto CJK – Google Noto Fonts</a> の &#8220;Region-specific Subset OpenType/CFF (Subset OTF)&#8221; というセクションから使いたいウェイトをダウンロード。今回は NotoSerifCJK-Regular.ttc を選択した。</p>
+
+<p>Web フォントとして使用するために ttc ファイルを woff2 と woff に変換する。今回は <a href="https://opentype.jp/woffconv.htm">WOFFコンバータ</a> を使うことにした。
+できたデモがこちら。</p>
+
+<p><a href="/fonts/demo.html" class="btn btn-info" role="button">NotoSerifCJK-Regular をWeb フォントとして使用するデモ</a></p>
+
+<p>ファイルサイズは woff2 で 4.5 MB、woff で 5.2 MB だ。これでも &#8220;Regision-specific Subset&#8221; とサブセット化されているものだが、まだ実用に耐えうるサイズじゃない。Chrome のネットワークエミュレーションで &#8220;Fast 3G&#8221; を選択するとダウンロードするのに 24.51 秒かかる。ちなみに通常の環境（光＋Wifi）だと 674 ミリ秒。うーむ。</p>
+
+<p><a href="/wp-content/uploads/2018/05/ac7d48b1c976439809a4dbcfef6da2e5.png"><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2018/05/ac7d48b1c976439809a4dbcfef6da2e5-1024x646.png" alt="Noto Serif JP - 単にwoffに変換した状態" width="584" height="368" class="alignnone size-large wp-image-1352" srcset="/wp-content/uploads/2018/05/ac7d48b1c976439809a4dbcfef6da2e5-1024x646.png 1024w, /wp-content/uploads/2018/05/ac7d48b1c976439809a4dbcfef6da2e5-300x189.png 300w, /wp-content/uploads/2018/05/ac7d48b1c976439809a4dbcfef6da2e5-768x485.png 768w, /wp-content/uploads/2018/05/ac7d48b1c976439809a4dbcfef6da2e5-475x300.png 475w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+
+<p>というわけでさらなるサブセット化に取り組むことにする。これには <a href="https://opentype.jp/subsetfontmk.htm">サブセットフォントメーカー</a> を使う。
+ネット検索し、「第一水準漢字＋記号＋ローマ字＋カタカナ＋ひらがな」のソースを探すが、信頼に足るものがいまいち見つからない。</p>
+
+<p>まずは<a href="https://gist.githubusercontent.com/yokotak0527/6354609/raw/7df06d2931cec43a2144e84f2f54e35f18da2db5/gistfile1.txt">こちらさん</a>を試す。
+ん、なんだか漢字少なすぎじゃない？</p>
+
+<p><a href="/wp-content/uploads/2018/05/6877b20154b4e0f0aa643517e49b78eb.png"><img decoding="async" src="/wp-content/uploads/2018/05/6877b20154b4e0f0aa643517e49b78eb-1024x530.png" alt="Noto Serif JP - サブセット化1" width="584" height="302" class="alignnone size-large wp-image-1355" srcset="/wp-content/uploads/2018/05/6877b20154b4e0f0aa643517e49b78eb-1024x530.png 1024w, /wp-content/uploads/2018/05/6877b20154b4e0f0aa643517e49b78eb-300x155.png 300w, /wp-content/uploads/2018/05/6877b20154b4e0f0aa643517e49b78eb-768x398.png 768w, /wp-content/uploads/2018/05/6877b20154b4e0f0aa643517e49b78eb-500x259.png 500w, /wp-content/uploads/2018/05/6877b20154b4e0f0aa643517e49b78eb.png 1618w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+
+<p>では<a href="https://drive.google.com/file/d/0Bza38quoCtHqM004SE1QUVlNLWc/view">こちらさん</a>はどうだろう。
+えぇ…、「j」がないよ…。</p>
+
+<p><a href="/wp-content/uploads/2018/05/36cadf5438b55915b05137941fa4be47.png"><img decoding="async" src="/wp-content/uploads/2018/05/36cadf5438b55915b05137941fa4be47-1024x533.png" alt="Noto Serif JP - サブセット化2" width="584" height="304" class="alignnone size-large wp-image-1356" srcset="/wp-content/uploads/2018/05/36cadf5438b55915b05137941fa4be47-1024x533.png 1024w, /wp-content/uploads/2018/05/36cadf5438b55915b05137941fa4be47-300x156.png 300w, /wp-content/uploads/2018/05/36cadf5438b55915b05137941fa4be47-768x400.png 768w, /wp-content/uploads/2018/05/36cadf5438b55915b05137941fa4be47-500x260.png 500w, /wp-content/uploads/2018/05/36cadf5438b55915b05137941fa4be47.png 1606w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+
+<p>で、結局、漢字のセクションだけ後者、それ以外を前者から頂戴する形でサブセット化。
+うむ。まぁこれでよかろう。</p>
+
+<p><a href="/wp-content/uploads/2018/05/a7ca6af25ce068fcf20c530ed11a4381.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2018/05/a7ca6af25ce068fcf20c530ed11a4381-1024x535.png" alt="Noto Serif JP - サブセット化3" width="584" height="305" class="alignnone size-large wp-image-1357" srcset="/wp-content/uploads/2018/05/a7ca6af25ce068fcf20c530ed11a4381-1024x535.png 1024w, /wp-content/uploads/2018/05/a7ca6af25ce068fcf20c530ed11a4381-300x157.png 300w, /wp-content/uploads/2018/05/a7ca6af25ce068fcf20c530ed11a4381-768x401.png 768w, /wp-content/uploads/2018/05/a7ca6af25ce068fcf20c530ed11a4381-500x261.png 500w, /wp-content/uploads/2018/05/a7ca6af25ce068fcf20c530ed11a4381.png 1620w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+
+<p>サーバーにアップロードして、と。</p>
+
+<p><a href="/fonts/demo.html" class="btn btn-info" role="button">サブセット化した NotoSerifCJK-Regular を使用するデモ</a></p>
+
+<p>Chrome DevTools で同じ条件（Fast 3G）で見てみると…、3.87秒。及第点じゃないだろうか。</p>
+
+<p><a href="/wp-content/uploads/2018/05/345b52b806890fc972c90b33d18b7a6c.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2018/05/345b52b806890fc972c90b33d18b7a6c-1024x756.png" alt="Noto Serif JP - Noto Serif JP - サブセット化した後の計測" width="584" height="431" class="alignnone size-large wp-image-1358" srcset="/wp-content/uploads/2018/05/345b52b806890fc972c90b33d18b7a6c-1024x756.png 1024w, /wp-content/uploads/2018/05/345b52b806890fc972c90b33d18b7a6c-300x222.png 300w, /wp-content/uploads/2018/05/345b52b806890fc972c90b33d18b7a6c-768x567.png 768w, /wp-content/uploads/2018/05/345b52b806890fc972c90b33d18b7a6c-406x300.png 406w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+
+<p>本日はこの辺で。</p>
+
+<h2>References</h2>
+
+<h3>Articles</h3>
+
+<ul>
+<li><a href="https://www.plusdesign.co.jp/blog/?p=8854">Google Fonts「Noto Serif CJK JP（源ノ明朝）」の使い方｜プラカンブログ &#124; WEB制作会社プラスデザインカンパニー</a></li>
+<li><a href="https://www.tam-tam.co.jp/tipsnote/html_css/post13175.html">Google Fonts「Noto Serif CJK JP」を使ってみる ｜ Tips Note by TAM</a></li>
+<li><a href="https://coliss.com/articles/build-websites/operation/css/about-font-display.html">&#91;CSS&#93;Web制作者が知っておきたい、Webフォントを快適に表示するCSSの新しいプロパティ「font&#45;display」 &#124; コリス</a></li>
+<li><a href="https://heysho.com/webfont/">日本語Webフォントをサブセット化して軽量化する方法 &#124; HEYSHO&#46;COM</a> </li>
+<li><a href="http://brian.hatenablog.jp/entry/how-to-set-web-fonts">10分で設定完了！Webフォントの使い方や軽量化・はてなブログでの設定手順、優良リソースなどまとめ【おすすめ日本語フォントも】 &#45; Brian&#8217;z Imagination</a></li>
+</ul>
+
+<h3>Resources</h3>
+
+<ul>
+<li><a href="https://www.google.com/get/noto/help/cjk/">Noto CJK – Google Noto Fonts</a></li>
+<li><a href="https://opentype.jp/subsetfontmk.htm">サブセットフォントメーカー</a></li>
+<li><a href="https://opentype.jp/woffconv.htm">WOFFコンバータ</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>PNG8でアルファチャンネルが使えることを最近知った件</title>
+		<link>/2010/07/png8alpha</link>
+					<comments>/2010/07/png8alpha#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 01 Jul 2010 15:01:31 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Media]]></category>
+		<category><![CDATA[PNG]]></category>
+		<guid isPermaLink="false">/?p=692</guid>
+
+					<description><![CDATA[「続・ハイパフォーマンスWebサイト」を読んで、今ではPNG8がデフォルトですよ、みたいな内容が書いてあってあえてPNG形式を避けてきた自分は衝撃を受けました。 <a href="/2010/07/png8alpha">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/07/20100701intro.png" alt="" width="160" height="160" class="alignnone size-full wp-image-693 photoEven" srcset="/wp-content/uploads/2010/07/20100701intro.png 160w, /wp-content/uploads/2010/07/20100701intro-150x150.png 150w" sizes="(max-width: 160px) 100vw, 160px" />
+<a href="http://www.amazon.co.jp/gp/product/4873114462?ie=UTF8&amp;tag=likealunatic-22&amp;linkCode=as2&amp;camp=247&amp;creative=1211&amp;creativeASIN=4873114462">続・ハイパフォーマンスWebサイト ―ウェブ高速化のベストプラクティス</a><img loading="lazy" decoding="async" src="http://www.assoc-amazon.jp/e/ir?t=likealunatic-22&amp;l=as2&amp;o=9&amp;a=4873114462" width="1" height="1" alt="" style="border:none !important; margin:0px !important;" />を読んで、今ではPNG8がデフォルトですよ、みたいな内容が書いてあったのでPNG形式を敬遠してきた自分はたいそう驚きました。</p>
+
+<blockquote cite="http://www.oreilly.co.jp/books/9784873114460/"><p>写真にはJPEG、アニメーションにはGIF、その他すべてのものにはPNG（可能な限りPNG8）を使う</p></blockquote>
+
+<p>ということだそうです。</p>
+
+<p>同書でも紹介されていたsitepointの記事、<a href="http://www.sitepoint.com/blogs/2007/09/18/png8-the-clear-winner/">PNG8 &#8211; The Clear Winner</a>を読むと、「PNG8最高だよ！」みたいなことが書いてあります。要約（というか超訳）すると</p>
+
+<blockquote cite="http://www.sitepoint.com/blogs/2007/09/18/png8-the-clear-winner/"><ul>
+<li>PNG8はGIFのような256色パレットベースのカラーモデルを持っている</li>
+<li>GIFのようにアニメーションはできない</li>
+<li>GIFのように一部の色を完全に透明にすることができる</li>
+</ul>
+<p>しかしなんと、Fireworksを使えばアルファチャンネル付きのPNG8を書き出すことができる。少なくともバージョン3から実装されている。<br />
+アルファチャンネル付きで書き出した部分はIE6などの未対応ブラウザでは完全に透明なピクセルとして表示される。境目はジャギってしまうけど、そこまで見た目を損なうものではない。</p></blockquote>
+
+<p>なんと、Fireworksしかこのアルファチャンネル付き書き出しには対応していないそうです。しかもバージョン3からって・・・本当に目から鱗です・・・。<br />
+とりあえず実践してみようということでデモを作成しました。</p>
+
+<p><a href="/demo/png8alpha/">デモ &#8211; PNG8 with Alpha Channel Test</a></p>
+
+<p>はい、ドラゴンボールです。ドラゴンボールの影の部分がアルファチャンネル付きになっています。PNG8、PNG32、GIF、JPEGを比較のため、並べてみました。ちょっとサンプル画像の色数が多いため、ファイルサイズではJPEG（画質80）が最も軽くなっています。<br />
+特筆すべきはGIFと比べてファイルサイズが小さいこと。約20KBと約14KBなので、その差は歴然。<br />
+もっと色数が少なくていい画像ならそんなに違和感（グラデーション部分のガタガタ感とか）も出ないだろうし、PNG8の良さがもっと引き出せたのではないでしょうか。</p>
+
+<p>ちなみにデモをIE6で見ると、以下のスクリーンショットのようになります。</p>
+
+<p class="pic"><a href="/wp-content/uploads/2010/07/20100701_ss_ie6.png"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/07/20100701_ss_ie6-158x300.png" alt="" title="アルファチャンネル付きPNG8とPNG32をIE6で表示したスクリーンショット" width="158" height="300" class="alignnone size-medium wp-image-694" srcset="/wp-content/uploads/2010/07/20100701_ss_ie6-158x300.png 158w, /wp-content/uploads/2010/07/20100701_ss_ie6.png 390w" sizes="(max-width: 158px) 100vw, 158px" /></a></p>
+
+<p>ドロップシャドウ部分がまるまるなくなっています。PNG32（filterハックなし）の場合、透明部分がグレーになって表示されてしまうのはご存知の通りです。</p>
+
+<p>透明度が必要なデザインの対応として、PNG32とfilterベースのハックを使って完全な表現を目指すのか、PNG8を使ってProgressive Enhancement的な制作を行うのか、というように選択肢が増える感じでしょうね。<br />
+filterプロパティを使った対応はその代償としてパフォーマンスを大幅に下げてしまいます。&quot;ハイパフォーマンスWebサイト&quot;を目指すのであれば、アルファチャンネル付きPNG8を使うという選択肢を検討してもいいかもしれません。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2010/07/png8alpha/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>iPhoneのiPodアプリ風見出しインターフェースをJSで作ってみた</title>
+		<link>/2009/11/08_iphoneh</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 08 Nov 2009 03:10:53 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<guid isPermaLink="false">/wptest/2009/11/iphone%e3%81%aeipod%e3%82%a2%e3%83%97%e3%83%aa%e9%a2%a8%e8%a6%8b%e5%87%ba%e3%81%97%e3%82%a4%e3%83%b3%e3%82%bf%e3%83%bc%e3%83%95%e3%82%a7%e3%83%bc%e3%82%b9%e3%82%92js%e3%81%a7%e4%bd%9c%e3%81%a3.php</guid>
+
+					<description><![CDATA[iPhoneにプリインストールしてあるiPodアプリのインターフェースを再現するJavaScriptです。要jQuery。 <a href="/2009/11/08_iphoneh">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>昨日の<a href="http://twitter.com/Sugamo_css">Sugamo.css</a>で発表したコネタをポストします。</p>
+
+<p><a href="/sample/iphoneh/">デモ：iPhoneのiPodアプリ風のインターフェースを再現するJS</a><br />
+<a href="/sample/iphoneh/iphoneh.js">JSファイル：iPhoneのiPodアプリ風のインターフェースを再現するJS</a></p>
+
+<p>これはiPhoneにプリインストールしてあるiPodアプリのインターフェースを再現するJavaScriptです。要jQuery。</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="スクリーンショット：iPhoneのiPod風のインターフェースを再現するJS" src="/images/2009/11/08_iphonehss.gif" width="400" height="250" class="mt-image-none" style="" /></span></p>
+
+<p>iPodアプリで曲目リストやアーティストのリストを閲覧する際、「あ行」「か行」「さ行」みたいに並んでいるリストをスクロールしていくと、「あ行」のリストを見ているときは「あ」という見出しが画面上部に固定され、現在見ているリストがどの見出しに属するものなのかが見て分かるようになっています。つまり見出しがスクロールアウトされず、スクロールに着いてくる形になっているわけです。おそらく、一つのリストがとても長い場合は特に効果を発揮するかと思います。地味ですが確実にユーザビリティは向上するだろうという、粋な効果です。さすがApple。<br />
+何を言っているかよく分からない、という人はとりあえずデモを見てください・・・。</p>
+
+<p><span id="more-99"></span></p>
+
+<div class="section">
+<h3>使い方</h3>
+<p>(X)HTMLは「見出し＋リスト（内容）＋それらを包むDIV」っていう構造になっていればOKです。内容部分はリストじゃなくても可。デモだと下記のようになっています。</p>
+<pre><code>&lt;div class=&quot;genre&quot;&gt;
+&lt;h3 class=&quot;header&quot;&gt;&lt;span&gt;A&lt;/span&gt;&lt;/h3&gt;
+&lt;div class=&quot;body&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;Aで始まるアーティスト&lt;/li&gt;
+&lt;li&gt;Aで始まるアーティスト&lt;/li&gt;
+&lt;li&gt;Aで始まるアーティスト&lt;/li&gt;
+&lt;li&gt;Aで始まるアーティスト&lt;/li&gt;
+&lt;li&gt;Aで始まるアーティスト&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>必要なJSファイルを読み込んだ後、<br />
+<code>$(対象の見出しを指定するセレクタ).iphoneH();</code><br />
+をドキュメントロード後に呼び出すように記述します。</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;iphoneh.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function() {
+$('h3.header').iphoneH();
+});
+&lt;/script&gt;</code></pre>
+<p>理屈を言えば、親DIVを基準に、見出しを<code>position:absolute</code>にして<code>top</code>の値をscrollイベントでいじっています。</p>
+<p>見出しや内容部分は適当にスタイリングしましょう。デモだと元ネタが分かりやすいようにiPodアプリ風にまんまスタイリングしました。見出し部分に透過pngを使っていますが、IE6対策でどうのこうのとかはやっていません。</p>
+<p>他のデザインに当てはめたときに正常に動くかはよく分からないです。多分その辺に突っ込みどころはたくさんあると思いますが（以下略</p>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>img要素を使ったCSSロールオーバー＋α</title>
+		<link>/2009/10/27_cssrollover</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 27 Oct 2009 12:08:50 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<guid isPermaLink="false">/wptest/2009/10/img%e8%a6%81%e7%b4%a0%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9fcss%e3%83%ad%e3%83%bc%e3%83%ab%e3%82%aa%e3%83%bc%e3%83%90%e3%83%bc%ef%bc%8b%ce%b1.php</guid>
+
+					<description><![CDATA[画像をリストで配置したグローバルナビゲーションにロールオーバーを設定する時、JavaScriptを使わずCSSだけで実現するパターンをご紹介。 <a href="/2009/10/27_cssrollover">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>画像をリストで配置したグローバルナビゲーションにロールオーバーを設定する時の話。JavaScriptを使わずCSSだけで実現するロールオーバーはいくつかやり方があると思いますが、以下のパターンをよく使っています。</p>
+
+<div class="section">
+<h3>パターン1</h3>
+<h4>完成イメージ</h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="パターン1のスクリーンショット" src="/images/2009/10/ss3.gif" width="466" height="48" class="mt-image-none" style="" /></span></p>
+<h4>デモ</h4>
+<p><a href="/sample/20091027_1/">img要素を使ったCSSロールオーバー＋α デモ1</a></p>
+<h4>XHTML</h4>
+<pre><code>&lt;ul id=&quot;globalNav&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/img/nav1.gif&quot; alt=&quot;ナビ1&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/img/nav2.gif&quot; alt=&quot;ナビ2&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/img/nav3.gif&quot; alt=&quot;ナビ3&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/img/nav4.gif&quot; alt=&quot;ナビ4&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/img/nav5.gif&quot; alt=&quot;ナビ5&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<h4>CSS</h4>
+<pre><code>#globalNav {
+height: 30px; /* ナビ画像の高さ */
+background: url(nav_active.gif) no-repeat 0 0;
+overflow: hidden;
+}
+#globalNav li {
+float: left;
+width: 90px;
+}
+#globalNav li a {
+display: block;
+*zoom: 1; /* ie6,7 */
+}
+#globalNav li a:hover,
+#globalNav li a:active {
+text-indent: -9999px;
+}</code></pre>
+<p>全てのナビがロールオーバーした状態の画像を用意し、#globalNavの背景に設定します。</p>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="パターン1 スライスを切る様子" src="/images/2009/10/ss1.gif" width="480" height="48" class="mt-image-none" style="" /></span></p>
+<p>li要素に明示的な幅指定を行っておき、その子であるa要素に<code>display:block;</code>を設定。<br />
+<code>a:hover</code>時に<code>text-indent:-9999px;</code>を設定することでimg要素を画面外に飛ばし、背景画像を見せることでロールオーバーさせています。</p>
+<p>この手法の欠点は、各ボタンを格納するli要素に明示的に幅を指定しないと意図した表示にならないという点。仮に、各ボタンの横幅が異なっている場合、各li要素にclassとかidを振って別々の幅を指定してやらないといけないということになります。</p>
+</div>
+
+<div class="section">
+<h3>パターン2</h3>
+<p>各ボタンの横幅が異なっているけれど、各li要素にclassやidを書きたくない場合・・・このシチュエーションって結構経験していて悩んでいたのですが、どうにか実現することができたのがこのパターンです。</p>
+<p><del datetime="2009-10-28">XHTMLはパターン1と同じとして。</del></p>
+<h4>完成イメージ</h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="パターン2のスクリーンショット" src="/images/2009/10/ss4.gif" width="420" height="32" class="mt-image-none" style="" /></span></p>
+<h4>デモ</h4>
+<p><a href="/sample/20091027_2/">img要素を使ったCSSロールオーバー＋α デモ2</a></p>
+<h4>XHTML</h4>
+<pre><code>&lt;ul id=&quot;globalNav&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;nav_products.gif&quot; alt=&quot;ナビ1&quot; width=&quot;82&quot; height=&quot;18&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;nav_gallery.gif&quot; alt=&quot;ナビ2&quot; width=&quot;64&quot; height=&quot;18&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;nav_blog.gif&quot; alt=&quot;ナビ3&quot; width=&quot;39&quot; height=&quot;18&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;nav_about.gif&quot; alt=&quot;ナビ4&quot; width=&quot;56&quot; height=&quot;18&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;nav_contact.gif&quot; alt=&quot;ナビ5&quot; width=&quot;71&quot; height=&quot;18&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<h4>CSS</h4>
+<pre><code>#globalNav {
+height: 18px; /* ナビ画像の高さ */
+overflow: hidden;
+background: url(nav_active.gif) no-repeat 0 0;
+font-size: 10px;
+}
+#globalNav li {
+float: left;
+margin-right: 20px;
+*zoom: 1; /* ie6,7 */
+}
+#globalNav a {
+display: -moz-inline-box;
+display: inline-block;
+*zoom: 1; /* ie6,7 */
+vertical-align: bottom;
+}
+#globalNav a:hover,
+#globalNav a:active {
+padding-top: 9999px;
+}</code></pre>
+<p>li要素には幅指定を行いません。そして、右のボタンとの余白を<code>margin-right</code>で設定しますが、全てのボタンでこれが同一になるように画像のスライスを調節します。一番右のmarginが領域を飛び出してしまうケースもあると思いますが、その辺は適当にうまくやります。</p>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="パターン2 スライスを切る様子" src="/images/2009/10/ss2.gif" width="480" height="48" class="mt-image-none" style="" /></span></p>
+<p>a要素は<code>display:inline-block;</code>になるようにします。
+<ins datetime="2009-10-28">そしてinline-blockなのでvertical-alignの調整も行っておきましょう。</ins>
+inline-blockについては<a href="http://cssnite.jp/archives/post_1153.html">CSS Nite in Ginza, Vol.27</a>での<a href="http://www.yomotsu.net/works/081016cssnite/">小山田さんのセッション（のスライド）</a>が参考になります。</p>
+<ins datetime="2009-10-28"><p>また、img要素にwidth、height属性をそれぞれ明示的に指定をする必要があります。これはFirefox2で正しく表示するために必要です。<br /></p></ins>
+<p>そして<code>a:hover</code>の<code>padding-top</code>に大きな値を指定して、含んでいるimg要素を追い出すようにしてやれば、完了です。追い出した部分を非表示にするために、#globalNavにheightの明示的な指定と<code>overflow:hidden;</code>の指定が必要なのでお忘れなく。（この2つはfloat解除の意味合いもありますが）</p>
+</div>
+
+<p><span id="more-97"></span></p>
+
+<div class="postscript">
+<h3>追記 <span>&#8211; 2009-10-28</span></h3>
+<p><code>display:-moz-inline-box</code>と<code>display:inline-block</code>の順序が逆だったので修正。まぁどちらでも結果オーライなことにはなっていますが、<a href="http://www.yomotsu.net/works/081016cssnite/">CSS Nite in Ginza, Vol.27 小山田さんのセッション（のスライド）</a>におけるコードを尊重させていただきたいと思います。</p>
+<h3>追記 その2 <span>&#8211; 2009-10-28</span></h3>
+<p>Firefox2においての表示不具合への対処について、本文に追記しました。Firefox2で正しく表示するためには<code>a {display:-moz-inline-box;}</code>とするだけでなく、中に含むimg要素にwidth・height属性の指定を行い、さらに<code>a {vertical-align:bottom;}</code>の指定の2点が必要です。</p>
+<p>これらの指定がない場合、Firefox2で初回読み込み時に限って画像が正しく表示されませんでした。ただし2回目の読み込みでは正常な表示だったので、画像がキャッシュされていない状態において幅・高さが検出できないために起こる現象のようです。</p>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>MTのコンテキストについての考察と解説</title>
+		<link>/2009/09/16_mtcontext</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 16 Sep 2009 09:43:23 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<guid isPermaLink="false">/wptest/2009/09/mt%e3%81%ae%e3%82%b3%e3%83%b3%e3%83%86%e3%82%ad%e3%82%b9%e3%83%88%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6%e3%81%ae%e8%80%83%e5%af%9f%e3%81%a8%e8%a7%a3%e8%aa%ac.php</guid>
+
+					<description><![CDATA[MovableTypeのテンプレートを書くにあたってまず理解すべきなのは、MTタグやテンプレートの種類よりも、まずコンテキストなのではないかと思います。このコンテキストについて解説しようと試みます。 <a href="/2009/09/16_mtcontext">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>MovableTypeのテンプレートを書くにあたってまず理解すべきなのは、MTタグやテンプレートの種類よりも、まずコンテキストなのではないかと思います。CSSによるレイアウトを学ぶにあたって、ブロックモデルを理解すべきであるのと一緒です。というわけで、このコンテキストについて解説しようと試みます。</p>
+
+<div class="section">
+<h3>コンテキストとは</h3>
+<p>直訳すれば「文脈」です。ここではテンプレートにおける前後の文脈のことをそう呼びます。自然言語における人間の会話や文章にも前後の文脈というものが存在しますから、会話を例に挙げます。</p>
+<div class="example">
+<dl class="disclist">
+<dt>Aさん：今日は天気がいいですね。</dt>
+<dd>→「今日の天気」のコンテキスト</dd>
+</dl>
+</div>
+<p>MTのテンプレートでは現在のコンテキストに適合しないMTタグを使おうとすると、エラーが出るようになっています。</p>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="コンテキストに適合しないタグを使おうとするとエラーが出る" src="/images/2009/09/16_mtcontext_1.gif" width="360" height="220" class="mt-image-none" style="" /></span></p>
+<p>人間の会話において、文脈に沿っていない話題や発言をすると会話が成立しなくなるのと同じです。</p>
+<div class="example">
+<dl class="disclist">
+<dt>Aさん：今日は天気がいいですね。</dt>
+<dd>→「今日の天気」のコンテキスト</dd>
+<dt>Bさん：はい、僕はハンバーグが好きです。</dt>
+<dd>→コンテキストに沿っていないのでエラー</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<h3>コンテキストの種類と、テンプレートとの関係</h3>
+<p>MTのコンテキストは大別すると「ブログ記事」・「ブログ記事リスト（アーカイブ）」・「ウェブページ」の3つです。そしてこれはテンプレート一覧の「アーカイブテンプレート」の種類でもあります。これらのテンプレートは、最初から該当のコンテキストを持っており、「ブログ記事」アーカイブは最初から「ブログ記事」コンテキストを持っています。</p>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/09/16_mtcontext.gif"><img loading="lazy" decoding="async" alt="「アーカイブテンプレート」の一覧の例" src="/images/2009/09/16_mtcontext-thumb-400x118-120.gif" width="400" height="118" class="mt-image-none" style="" /></a></span></p>
+<p>「ブログ記事リスト」では「日付別」・「ユーザー別」・「カテゴリ別」という、大別して3つの分類を「<a href="http://www.movabletype.jp/documentation/designer/archive_mapping.html">アーカイブマッピング</a>」で与えることができます。このテンプレートに該当するコンテキストが与えられるだけでなく、この指定を元にページファイルが生成されます。</p>
+<p>例えば「カテゴリ」アーカイブマッピングを選択したテンプレートでは、最初から「ブログ記事リスト」コンテキストと、「カテゴリ」コンテキストを持ちます。</p>
+</div>
+
+<div class="section">
+<h3>コンテキストの指定方法</h3>
+<p>任意のコンテキストを作り出すために使用するのが<code>MTEntries</code>や、<code>MTArchives</code>、<code>MTPages</code>などのブロックタグです。これらのタグで囲んだ部分はそのタグが表すコンテキストが設定され、指定の回数分繰り返されます。例えば以下の例は、「最新5件の記事のタイトル」を出力します。</p>
+<pre><code>&lt;mt:Entries lastn=&quot;5&quot;&gt;
+&lt;p&gt;&lt;$mt:EntryTitle$&gt;&lt;/p&gt;
+&lt;/mt:Entries&gt;</code></pre>
+<p><code>&lt;mt:Entries&gt;</code>に囲まれた部分が5回繰り返されますが、その内容は「ブログ記事」コンテキストの最新5件であることを<code>&lt;mt:Entries lastn=&quot;5&quot;&gt;</code>が表しています。</p>
+<p>このように、任意のコンテキストを作り出すMTタグは数多く存在しており、その全てはブロックタグです。ブロックタグで囲んだ内容はそのタグの属するコンテキストになる、と覚えておけばよいでしょう。</p>
+</div>
+
+<div class="section">
+<h3>コンテキストは入れ子にできる</h3>
+<p>ブロックタグを入れ子にしたり、特定のアーカイブテンプレート内にブロックタグを記述することによって、コンテキストを入れ子にすることができます。入れ子にしたコンテキストでは、特に指定をしない限り、親のコンテキスト内で対象を絞り込んだものとなります。</p>
+<p>例えば以下は記事ごとに、記事本文に続いてコメント一覧を表示するための記述です。</p>
+<pre><code>&lt;mt:Entries lastn=&quot;5&quot;&gt;
+&lt;div class=&quot;entry&quot;&gt;
+&lt;h3&gt;&lt;$mt:EntryTitle$&gt;&lt;/h3&gt;
+&lt;div class=&quot;entry-body&quot;&gt;
+&lt;$mt:EntryBody$&gt;
+&lt;/div&gt;
+&lt;div class=&quot;comments&quot;&gt;
+&lt;h4&gt;記事へのコメント&lt;/h4&gt;
+&lt;ul&gt;
+&lt;mt:Comments&gt;
+&lt;li&gt;
+&lt;$mt:CommentAuthor$&gt;さんのコメント：&lt;br /&gt;
+&lt;$mt:CommentBody$&gt;
+&lt;/li&gt;
+&lt;/mt:Comments&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/mt:Entries&gt;</code></pre>
+<p><code>&lt;mt:Entries&gt;</code>に<code>&lt;mt:Comments&gt;</code>を入れ子にすることによって、「特定のエントリーへのコメント」に絞り込んで出力させています。なお、特にコンテキストの指定がない状態で<code>&lt;mt:Comments&gt;</code>タグを使用すると、そのブログに対して投稿されたコメント全てが対象となります。</p>
+</div>
+
+<div class="postscript">
+<p>このエントリーの内容はMovableType4（現時点での最新製品版：Version 4.261）におけるものです。まもなく出荷となるMovableType5では<a href="http://www.movabletype.jp/documentation/mt5/about.html">「ウェブサイト」という概念が追加されるそうですし</a>、コンテキストの種類には追加や修正があるかもしれません。</p>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>電話番号入力フォームのmaxlength</title>
+		<link>/2009/07/02_telform_maxlength</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 02 Jul 2009 07:06:44 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Form]]></category>
+		<category><![CDATA[HTML]]></category>
+		<guid isPermaLink="false">/wptest/2009/07/%e9%9b%bb%e8%a9%b1%e7%95%aa%e5%8f%b7%e5%85%a5%e5%8a%9b%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%e3%81%aemaxlength.php</guid>
+
+					<description><![CDATA[電話番号の市外局番は最高5桁だという話。 <a href="/2009/07/02_telform_maxlength">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>次のような電話番号入力フォームは正しくできていると言えるでしょうか？</p>
+
+<pre><code>&lt;input type=&quot;text&quot; size=&quot;20&quot; maxlength=&quot;4&quot; value=&quot;&quot; name=&quot;tel1&quot; id=&quot;tel1&quot; /&gt; -
+&lt;input type=&quot;text&quot; size=&quot;20&quot; maxlength=&quot;4&quot; value=&quot;&quot; name=&quot;tel2&quot; id=&quot;tel2&quot; /&gt; -
+&lt;input type=&quot;text&quot; size=&quot;20&quot; maxlength=&quot;4&quot; value=&quot;&quot; name=&quot;tel3&quot; id=&quot;tel3&quot; /&gt;</code></pre>
+
+<p><q>答えはNo。その理由は <code>maxlength=&quot;5&quot;</code> にすべきだから</q>、と職場の<abbr title="Technical Director">TD</abbr>さんが教えてくれました。5桁の市外局番が存在するなんて、知らなかったです・・・。</p>
+
+<ul class="disclist ref">
+<li>参考1：<a href="http://www.soumu.go.jp/main_sosiki/joho_tsusin/top/tel_number/q_and_a-2001aug.html#q2">電話番号に関するＱ＆Ａ &#8211; 市外局番・市内局番とはどのようなものですか？ </a></li>
+<li>参考2：<a href="http://townpage.goo.ne.jp/SearchKihon.php?maxgyocode=c01&amp;maxgyoname=%A5%B0%A5%EB%A5%E1&amp;gyonext=1&amp;keyword=&amp;prefcode=01&amp;prefname=%CB%CC%B3%A4%C6%BB&amp;citycode=347&amp;cityname=%BB%B3%B1%DB%B7%B4%C4%B9%CB%FC%C9%F4%C4%AE&amp;mapscale=9">グルメ 北海道 山越郡長万部町 &#8211; gooタウンページ</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>LightBox系スクリプト 16選</title>
+		<link>/2009/06/24_lightbox16</link>
+					<comments>/2009/06/24_lightbox16#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 23 Jun 2009 16:10:36 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Lightbox]]></category>
+		<guid isPermaLink="false">/wptest/2009/06/lightbox%e7%b3%bb%e3%82%b9%e3%82%af%e3%83%aa%e3%83%97%e3%83%88-16%e9%81%b8.php</guid>
+
+					<description><![CDATA[Lightbox系スクリプトの情報が一覧表になっているThe Lightbox Clones Matrixという素晴らしいサイトがあります。ここから自分なりに一通り見て回って、クオリティ的に使えそうなものをピックアップしてみました。 <a href="/2009/06/24_lightbox16">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Lightbox系スクリプトの情報が一覧表になっている<a href="http://planetozh.com/projects/lightbox-clones/">The Lightbox Clones Matrix</a>という素晴らしいサイトがあります。ここから一通り見て回って、自分なりに使えそうなものをピックアップしてみました。<del datetime="2009-06-25">ほとんど勢いでまとめたものなので、情報としての正確性は低いかもしれませんが、ご容赦を。</del>半分は自分用ってノリです。</p>
+
+<p>自分はLightbox系のスクリプトを選ぶ時、そのサイトに予め組み込まれている（組み込む予定の）JSライブラリで使えるかどうかを基準に選ぶことが多いです。なので、必要とするJSライブラリ別にカテゴライズして並べています。</p>
+
+<div class="section">
+<h3>ライブラリ不要</h3>
+<div class="section">
+<h4><a href="http://highslide.com/">Highslide JS</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/highslidejs.jpg"><img loading="lazy" decoding="async" alt="Highslide JS" src="/images/2009/06/highslidejs-thumb-300x240-67.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>&#8211;</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー、インライン、インラインフレーム、Ajax、Flash</dd>
+<dt>対象指定：</dt>
+<dd>class属性＆onclick属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://creativecommons.org/licenses/by-nc/2.5/deed.ja">CCライセンス 表示-非営利 2.5 一般</a><br />
+非商用：無償、商用-1サイト：29ドル、商用-無制限：179ドル</dd>
+<dt>備考：</dt>
+<dd>表示コンテンツのドラッグ移動が可能。Inline／Ajax／Iframe表示時には右端ドラッグでサイズ変更が可能。</dd>
+</dl>
+</div>
+<div class="section">
+<h4><a href="http://www.ibegin.com/labs/ibox/">iBox</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/ibox.jpg"><img loading="lazy" decoding="async" alt="iBox" src="/images/2009/06/ibox-thumb-300x240-68.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>&#8211;</dd>
+<dt>対応形式：</dt>
+<dd>画像、Ajax、インライン、Youtube動画などのムービー</dd>
+<dt>対象指定：</dt>
+<dd>rel属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://www.ibegin.com/labs/ibox/#license">無償</a></dd>
+<dt>備考：</dt>
+<dd>アニメーションがなく軽量。使い勝手はThickboxみたいな感じ。</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<h3>jQuery</h3>
+<div class="section">
+<h4><a href="http://fancy.klade.lv/">FancyBox</a> <span class="memo">→オススメ</span></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/fancybox.jpg"><img loading="lazy" decoding="async" alt="FancyBox" src="/images/2009/06/fancybox-thumb-300x240-64.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>jQuery、jQuery Easing（オプション）</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー、インライン（Flashなど含む）、Ajax、Iframe</dd>
+<dt>対象指定：</dt>
+<dd>jQueryセレクタ、rel属性（画像ギャラリー指定時）、class属性（インラインフレーム指定時）</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license">MITライセンス</a></dd>
+<dt>備考：</dt>
+<dd>jQuery Easingプラグインなしだと、ズームアニメーション時のイージング効果がなしになる。</dd>
+</dl>
+</div>
+<del datetime="2009-06-25" title="2009年6月25日 掲載削除">
+<div class="section">
+<h4><a href="http://orderedlist.com/articles/fancyzoom-meet-jquery">FancyZoom(jQuery)</a></h4>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>jQuery</dd>
+<dt>対応形式：</dt>
+<dd>画像、インライン（Flashなど含む）</dd>
+<dt>対象指定：</dt>
+<dd>jQueryセレクタ</dd>
+<dt>ライセンス：</dt>
+<dd>不明</dd>
+<dt>備考：</dt>
+<dd>ウィンドウのシャドウ部分などの透過pngパーツが、IE6では透過gifで代用されており見た目が落ちる。</dd>
+</dl>
+</div>
+</del>
+<div class="section">
+<h4><a href="http://leandrovieira.com/projects/jquery/lightbox/">jQuery lightBox plugin</a> <span class="memo">→オススメ</span></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/jquery_lightbox.jpg"><img loading="lazy" decoding="async" alt="jQuery lightBox plugin" src="/images/2009/06/jquery_lightbox-thumb-300x240-70.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>jQuery</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー</dd>
+<dt>対象指定：</dt>
+<dd>jQueryセレクタ</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://creativecommons.org/licenses/by-sa/2.5/br/deed.jaCC">ライセンス 表示-継承 2.5 ブラジル</a></dd>
+<dt>備考：</dt>
+<dd>UIは本家Lightboxと全く同じ。裏の仕組みがjQueryで動くようにアレンジされたLightbox。jQueryセレクタの指定に複数要素が該当する場合、自動的に画像ギャラリーモードになる模様。<a href="http://leandrovieira.com/projects/jquery/lightbox/#extend">本家Lightboxとは違って色々なパラメーターがあり、カスタマイズができる</a>。</dd>
+</dl>
+</div>
+<div class="section">
+<h4><a href="http://www.no-margin-for-errors.com/projects/prettyPhoto-jquery-lightbox-clone/">prettyPhoto</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/prettyphoto.jpg"><img loading="lazy" decoding="async" alt="prettyPhoto a jQuery lightbox clone" src="/images/2009/06/prettyphoto-thumb-300x240-74.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>jQuery</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー、Flash、RealMedia、インラインフレーム</dd>
+<dt>対象指定：</dt>
+<dd>rel属性、href属性のパラメータ、jQueryセレクタ、オプションでtitle属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://creativecommons.org/licenses/by/2.5/deed.ja">CCライセンス 2.5</a></dd>
+<dt>備考：</dt>
+<dd>対応形式のメディアそれぞれを混合したギャラリー表示が可能。デフォルトのスタイルは黒いUI。</dd>
+</dl>
+</div>
+<div class="section">
+<h4><a href="http://jquery.com/demo/thickbox/">ThickBox</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/thickbox.jpg"><img loading="lazy" decoding="async" alt="Thickbox" src="/images/2009/06/thickbox-thumb-300x240-78.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>jQuery</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー、インライン、インラインフレーム、Ajax</dd>
+<dt>対象指定：</dt>
+<dd>class属性、title属性、href属性のパラメータ</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license">MITライセンス</a></dd>
+<dt>備考：</dt>
+<dd>jQueryを使うLighbox系スクリプトの代表的な存在。多様な形式に対応。アニメーションはしないが、その分軽快に動作する。</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<h3>Prototype.js <ins datetime="2009-06-25">+ script.aculo.us</ins></h3>
+<del datetime="2009-06-25" title="2009年6月25日 掲載削除">
+<div class="section">
+<h4><a href="http://orderedlist.com/articles/fancyzoom-meet-prototype">FancyZoom</a></h4>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>Prototype.js、script.aculo.us</dd>
+<dt>対応形式：</dt>
+<dd>インライン</dd>
+<dt>対象指定：</dt>
+<dd>href属性</dd>
+<dt>ライセンス：</dt>
+<dd>不明</dd>
+<dt>備考：</dt>
+<dd>対象のインラインコンテンツのIDをhref属性で指定できる・・・だけ？ウィンドウのシャドウ部分などの透過pngパーツが、IE6では透過gifで代用されており見た目が落ちる。</dd>
+</dl>
+</div>
+</del>
+<ins datetime="2009-06-25" title="2009年6月25日 掲載追加">
+<div class="section">
+<h4><a href="http://www.huddletogether.com/projects/lightbox2/">Lightbox2</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/lightbox2.jpg"><img loading="lazy" decoding="async" alt="Lightbox2" src="/images/2009/06/lightbox2-thumb-300x240-97.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>Prototype.js、script.aculo.us</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー</dd>
+<dt>対象指定：</dt>
+<dd>rel属性、title属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://creativecommons.org/licenses/by/2.5/deed.ja">CCライセンス 表示 2.5 一般</a></dd>
+<dt>備考：</dt>
+<dd>元祖Lightbox。オプション設定などはないが、使い方は単純明快。</dd>
+</dl>
+</div>
+</ins>
+<div class="section">
+<h4><a href="http://www.nickstakenburg.com/projects/lightview/">Lightview</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/lightview.jpg"><img loading="lazy" decoding="async" alt="Lightview" src="/images/2009/06/lightview-thumb-300x240-71.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>Prototype.js、script.aculo.us</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー、Flash、QuickTime、Ajax、インラインフレーム、インライン</dd>
+<dt>対象指定：</dt>
+<dd>class属性、title属性、rel属性</dd>
+<dt>ライセンス：</dt>
+<dd>非商用の場合、<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.ja">CCライセンス:表示-非営利-改変禁止 3.0 Unported</a><br />
+商用の場合、<a href="http://creativecommons.org/licenses/by-nd/3.0/deed.ja">CCライセンス:表示-改変禁止 3.0</a><br />
+有償。非商用（1ドメイン）：3$、非商用（制限なし）：$15、商用（1ドメイン）：49$、商用（制限なし）：$295</dd>
+<dt>備考：</dt>
+<dd>多機能Lightbox。有償だけあってクオリティは高いが、たくさんのオプションがあるので使いこなすのは骨が折れるかも。</dd>
+</dl>
+</div>
+<div class="section">
+<h4><a href="http://www.wildbit.com/labs/modalbox/">ModalBox</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/modalbox.jpg"><img loading="lazy" decoding="async" alt="ModalBox" src="/images/2009/06/modalbox-thumb-300x240-72.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>Prototype.js、script.aculo.us</dd>
+<dt>対応形式：</dt>
+<dd>プレーンHTML（文字列）、DOMノード</dd>
+<dt>対象指定：</dt>
+<dd>href属性、title属性、onclick属性</dd>
+<dt>ライセンス：</dt>
+<dd>不明</dd>
+<dt>備考：</dt>
+<dd>画面上部からニョロっとオーバーレイボックスが出現する。導入説明が親切。</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<h3>MooTools</h3>
+<div class="section">
+<h4><a href="http://bertramakers.com/moolabs/imagezoom.php">ImageZoom</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/imagezoom.jpg"><img loading="lazy" decoding="async" alt="ImageZoom" src="/images/2009/06/imagezoom-thumb-300x240-69.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>MooTools</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー</dd>
+<dt>対象指定：</dt>
+<dd>rel属性、オプションでtitle属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.ja">CCライセンス 表示-継承 3.0 Unported</a></dd>
+<dt>備考：</dt>
+<dd>対応形式が画像のみと少ないが、ズームするアニメーションがお洒落。拡大状態を複数開けるのが個性的。</dd>
+</dl>
+</div>
+<div class="section">
+<h4><a href="http://www.phatfusion.net/multibox/">phatfusion</a> <span class="memo">→オススメ</span></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/phatfusion.jpg"><img loading="lazy" decoding="async" alt="phatfusion" src="/images/2009/06/phatfusion-thumb-300x240-73.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>MooTools v1.11</dd>
+<dt>対応形式：</dt>
+<dd>画像、Flash、QuickTime、WindowsMedia、RealMedia、MP3、Ajax、インラインフレーム、インラインHTML</dd>
+<dt>対象指定：</dt>
+<dd>スクリプト、rel属性、title属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license">MITライセンス</a></dd>
+<dt>備考：</dt>
+<dd>対応形式のメディアそれぞれを混合したギャラリー表示が可能。デフォルトのスタイルだとUIが黒い。この辺はスクリプト呼び出し時のオプションでカスタマイズ可能。多機能でクオリティ高し。</dd>
+</dl>
+</div>
+<ins datetime="2009-06-25" title="2009年6月25日 掲載追加">
+<div class="section">
+<h4><a href="http://www.coders.me/ejemplos/sexy-lightbox/">SexyLightBox</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/sexy_lightbox.jpg"><img loading="lazy" decoding="async" alt="SexyLightbox" src="/images/2009/06/sexy_lightbox-thumb-300x240-96.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>MooTools</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー</dd>
+<dt>対象指定：</dt>
+<dd>スクリプト、class属性、rel属性、title属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license">MITライセンス</a></dd>
+<dt>備考：</dt>
+<dd>画面上部からビヨーンと登場するという、変わったアニメーションが特徴的。公式サイトの字が読めない。.meというドメインがモンテネグロのドメインなので、モンテネグロのサイト・・・？</dd>
+</dl>
+</div>
+</ins>
+<div class="section">
+<h4><a href="http://www.digitalia.be/software/slimbox">Slimbox</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/slimbox.jpg"><img loading="lazy" decoding="async" alt="Slimbox" src="/images/2009/06/slimbox-thumb-300x240-76.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>MooTools 1.2</dd>
+<dt>対応形式：</dt>
+<dt>対象指定：</dt>
+<dd>スクリプト、rel属性、title属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license">MITライセンス</a></dd>
+<dt>備考：</dt>
+<dd>UIはLightboxと全く同じ。Slimというだけあってライトウェイトであることがウリらしい。スクリプトの書き方次第でダイレクトにSlimboxを呼び出すことも可能。jQueryバージョンもあるとのこと（http://www.digitalia.be/software/slimbox2）。</dd>
+</dl>
+</div>
+<div class="section">
+<h4><a href="http://gueschla.com/labs/smoothbox/">Smoothbox, Thickbox for mootools</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/smoothbox.jpg"><img loading="lazy" decoding="async" alt="Smoothbox, Thickbox for MooTools" src="/images/2009/06/smoothbox-thumb-300x240-77.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>MooTools</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー、インライン、インラインフレーム、Ajax</dd>
+<dt>対象指定：</dt>
+<dd>class属性、title属性、href属性のパラメータ</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license">MITライセンス</a></dd>
+<dt>備考：</dt>
+<dd>ThickboxのMooTool版。UIはThickBoxと同じ。IE8には非対応だった（オーバーレイ部分が真っ黒に）。</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<h3>YUI</h3>
+<div class="section">
+<h4><a href="http://thecodecentral.com/2008/01/01/yui-based-lightbox-final">YUI Based Lightbox</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/yui_lightbox.jpg"><img loading="lazy" decoding="async" alt="YUI Lightbox" src="/images/2009/06/yui_lightbox-thumb-300x240-79.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>YUI</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー</dd>
+<dt>対象指定：</dt>
+<dd>スクリプト、id属性（img要素）</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.ja">CCライセンス 表示-継承 3.0 Unported</a></dd>
+<dt>備考：</dt>
+<dd>コントロールパネルを表示されたり、画像のキャプションを入れるボックスを表示されたり。画像表示領域と、キャプションはドラッグで移動可能。</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<h3>その他</h3>
+<div class="section">
+<h4><a href="http://www.shadowbox-js.com/">Shadowbox.js</a></h4>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/shadowbox.jpg"><img loading="lazy" decoding="async" alt="Shadowbox.js" src="/images/2009/06/shadowbox-thumb-300x240-75.jpg" width="300" height="240" class="mt-image-none" style="" /></a></span></p>
+<dl class="squarelist">
+<dt>必要ライブラリ：</dt>
+<dd>基本的には不要（※）<br />
+※JSライブラリ（Adapter）を先に読み込ませると自動的に感知して、それと一緒に動作するようになる（らしい）。Adapterとして使えるのは Prototype、jQuery、MooTools (requires 1.2 Core)、Dojo Toolkit、Yahoo! User Interface Library (requires yahoo-dom-event.js)、Ext (requires ext-core.js)。</dd>
+<dt>対応形式：</dt>
+<dd>画像、画像ギャラリー、イメージマップ、Flash、各種ムービー、インラインフレーム、インライン、フォーム等</dd>
+<dt>対象指定：</dt>
+<dd>スクリプト、rel属性、title属性</dd>
+<dt>ライセンス：</dt>
+<dd><a href="http://www.shadowbox-js.com/LICENSE">Shadowbox.js License</a><br />
+→有償。Single Developer: $20.00、Multiple Developer: $50.00</dd>
+<dt>備考：</dt>
+<dd>超高機能。アニメーションは控えめで上質感を感じさせる。スクリプト呼び出し時に引数として様々なオプションを指定可能。</dd>
+</dl>
+</div>
+</div>
+
+<p><span id="more-86"></span></p>
+
+<div class="postscript">
+<h3>追記</h3>
+<dl class="disclist">
+<dt><ins datetime="2009-06-25">2009年6月25日</ins></dt>
+<dd><ins datetime="2009-06-25"><a href="http://orderedlist.com/articles/fancyzoom-meet-prototype">FancyZoom(Prototype)</a>と<a href="http://orderedlist.com/articles/fancyzoom-meet-jquery">FancyZoom(jQuery)</a>を削除。
+<a href="http://www.huddletogether.com/projects/lightbox2/">Lightbox2</a>と<a href="http://www.coders.me/ejemplos/sexy-lightbox/">SexyLightBox</a>を追加。各ライセンス表記にリンクを追加</ins></dd>
+</dl>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2009/06/24_lightbox16/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>LineNumberWriterを0.4にバージョンアップ</title>
+		<link>/2009/06/16_linenumberwriter04</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 16 Jun 2009 04:56:11 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[LineNumberWriter]]></category>
+		<guid isPermaLink="false">/wptest/2009/06/linenumberwriter%e3%82%920-4%e3%81%ab%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%82%a2%e3%83%83%e3%83%97.php</guid>
+
+					<description><![CDATA[1年以上放置していたので今更感がありますが、LineNumberWriterをバージョンアップしました。今回から、変換対象のコード内でタグが使えるようになります。例えば以下のように、strong要素やspan要素などを挿入することが可能です。（※） &#60;strong&#62;で囲んでみました &#60;span style=&#34;color:#F33;&#34;&#62;で囲んでみました ※もちろん(X)HTMLの文法的にcode要素に含められない内容（ブロック要素など）は含めちゃダメですよ。 今度Sugamo.cssという企画に参加することにしたので、何かプライベートワークをやっていかなきゃいけないような気になり、とりあえずコレのバージョンアップでも、と着手しました。 実は前からタグが使えるようにしたくてちょくちょくいじってはいたんですが、IEの独自仕様でまた色々とつまづいてしまい、挫折しちゃってたんです。でもまぁ最近、良いアイデアが浮かんだのでどうにか形になった、という。 ダウンロードしようなどという奇特な方はこちらからどうぞ。]]></description>
+										<content:encoded><![CDATA[<p>1年以上放置していたので今更感がありますが、<a href="/2008/04/04_linenumberwriter.php">LineNumberWriter</a>をバージョンアップしました。今回から、変換対象のコード内でタグが使えるようになります。例えば以下のように、<code>strong</code>要素や<code>span</code>要素などを挿入することが可能です。（※）</p>
+
+<pre><code><strong>&lt;strong&gt;で囲んでみました</strong>
+<span style="color:#F33">&lt;span style=&quot;color:#F33;&quot;&gt;で囲んでみました</span></code></pre>
+
+<p>※もちろん(X)HTMLの文法的にcode要素に含められない内容（ブロック要素など）は含めちゃダメですよ。</p>
+
+<p>今度<a href="http://archiva.jp/web/sugamo_css/sugamo_css.html">Sugamo.css</a>という企画に参加することにしたので、何かプライベートワークをやっていかなきゃいけないような気になり、とりあえずコレのバージョンアップでも、と着手しました。<br />
+実は前からタグが使えるようにしたくてちょくちょくいじってはいたんですが、IEの独自仕様でまた色々とつまづいてしまい、挫折しちゃってたんです。でもまぁ最近、良いアイデアが浮かんだのでどうにか形になった、という。</p>
+
+<p><a href="/2008/04/04_linenumberwriter.php">ダウンロードしようなどという奇特な方はこちらからどうぞ。</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

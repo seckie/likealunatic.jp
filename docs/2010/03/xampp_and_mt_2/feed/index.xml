@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: WinXPローカルでXAMPPを使ってMovable Typeを動かす―2010年3月版 その2	</title>
+	<atom:link href="/2010/03/xampp_and_mt_2/feed" rel="self" type="application/rss+xml" />
+	<link>/2010/03/xampp_and_mt_2</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:04 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: &#187; xamppにMT5をインストールするのまとめ tiptop		</title>
+		<link>/2010/03/xampp_and_mt_2/comment-page-1#comment-357</link>
+
+		<dc:creator><![CDATA[&#187; xamppにMT5をインストールするのまとめ tiptop]]></dc:creator>
+		<pubDate>Tue, 07 Jun 2011 10:40:25 +0000</pubDate>
+		<guid isPermaLink="false">/?p=528#comment-357</guid>
+
+					<description><![CDATA[&lt;p&gt;[...] ActivePerlの方を入れなおすことに。 参考サイトと同じ「AcrivePerl5.10.1.1007」に変更。 [...]&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] ActivePerlの方を入れなおすことに。 参考サイトと同じ「AcrivePerl5.10.1.1007」に変更。 [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: windowsでppmを使用する際の注意事項 &#124; ダリの雑記：WEBプログラム版		</title>
+		<link>/2010/03/xampp_and_mt_2/comment-page-1#comment-348</link>
+
+		<dc:creator><![CDATA[windowsでppmを使用する際の注意事項 &#124; ダリの雑記：WEBプログラム版]]></dc:creator>
+		<pubDate>Mon, 21 Mar 2011 08:58:43 +0000</pubDate>
+		<guid isPermaLink="false">/?p=528#comment-348</guid>
+
+					<description><![CDATA[&lt;p&gt;[...] WinXPローカルでXAMPPを使ってMovable Typeを動かす―2010年3月版 その2   [...]&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] WinXPローカルでXAMPPを使ってMovable Typeを動かす―2010年3月版 その2   [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

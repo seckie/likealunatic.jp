@@ -1,0 +1,381 @@
+@charset "UTF-8";
+/*
+  Theme Name: Like@Lunatic 30
+  Theme URI: https://likealunatic.jp/
+  Author: Naoki Sekiguchi
+  Author URI: https://likealunatic.jp/
+  Description: A theme for likealunatic.jp. Based on bootstrap, from twitter.
+  Template: twentyeleven
+  Version: 1.0
+  Since: 2012-01-02
+  */
+/**
+ * base
+ */
+body {
+  font-family: HiraginoSans-W3, HelveticaNeue, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic", Meiryo, "メイリオ", Osaka, sans-serif;
+}
+
+pre code {
+  padding: 0;
+  background-color: transparent;
+}
+
+/**
+ * general class
+ */
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/**
+ * overwrite "bootstrap" style
+ */
+.modal-dialog {
+  max-width: 93.75%;
+}
+
+.modal-header:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.modal-body img {
+  max-width: 100%;
+}
+
+/* area_hd
+ * ----------------------------------------*/
+.area_hd {
+  margin: 0;
+}
+
+.area_hd .brand a:hover {
+  text-decoration: none;
+}
+
+.area_hd .nav a img {
+  vertical-align: -1px;
+}
+
+.box, .contents-index article,
+.contents-index .tweet {
+  float: left;
+  width: 220px;
+  margin: 0 0 15px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* area_bd
+ * ----------------------------------------*/
+.area_bd {
+  padding: 30px 0 30px;
+}
+
+.area_bd .description {
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+.contents-index:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.contents-index ul {
+  margin: 0;
+}
+
+.contents-index article h3,
+.contents-index .tweet h3 {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.21;
+}
+
+.contents-index article h3 img,
+.contents-index .tweet h3 img {
+  float: left;
+  margin: 1px 10px 4px 0;
+  vertical-align: top;
+}
+
+.contents-index article .summary,
+.contents-index .tweet .summary {
+  clear: both;
+  overflow: hidden;
+}
+
+.contents-index article footer,
+.contents-index .tweet footer {
+  clear: both;
+  padding-top: 8px;
+}
+
+.contents-index article footer p,
+.contents-index .tweet footer p {
+  display: inline-block;
+  font-size: 11px;
+  margin: 0;
+}
+
+.contents-index article footer p.categories,
+.contents-index .tweet footer p.categories {
+  margin-right: 1em;
+}
+
+.contents-index .img {
+  float: left;
+  margin: 0 10px 4px 0;
+}
+
+.contents-index .footer {
+  clear: both;
+  padding-top: 8px;
+  border-top: 1px solid #EEEEEE;
+}
+
+.contents-index .footer p {
+  display: inline-block;
+  margin: 0;
+  font-size: 11px;
+}
+
+.contents-index .footer p.author {
+  margin-right: 1em;
+}
+
+.tweets:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.tweets ul {
+  margin: 0;
+}
+
+/* area_ft
+ * ----------------------------------------*/
+.area_ft {
+  padding: 35px 0;
+  background-color: #222;
+  border-color: #080808;
+  color: #9d9d9d;
+}
+
+.area_ft .copyright {
+  margin: 0;
+}
+
+.area_ft .copyright small {
+  margin-right: .5em;
+  font-size: 100%;
+}
+
+.area_ft .copyright a {
+  color: #9d9d9d;
+  text-decoration: underline;
+}
+
+.area_ft .copyright a:hover, .area_ft .copyright a:focus, .area_ft .copyright a:active {
+  color: white;
+}
+
+/* styles from "twentyeleven" theme
+ * ----------------------------------------*/
+.entry-header {
+  position: relative;
+}
+
+.entry-meta .sep {
+  margin: 0 .5em;
+}
+
+/* Comments link */
+/* overwrite "twentyeleven" theme
+ * ----------------------------------------*/
+article.post {
+  overflow: hidden;
+}
+
+article.post + article.post {
+  margin-top: 36px;
+}
+
+article.post .entry-title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+article.post .entry-content {
+  line-height: 1.75;
+}
+
+article.post .entry-content h1, article.post .entry-content h2, article.post .entry-content h3, article.post .entry-content h4, article.post .entry-content h5, article.post .entry-content h6, article.post .entry-content p, article.post .entry-content ul, article.post .entry-content ol, article.post .entry-content dl, article.post .entry-content table {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+article.post .alignleft {
+  float: left;
+  margin-right: 10px;
+}
+
+article.post .alignright {
+  float: right;
+  margin-left: 10px;
+}
+
+#commentform p {
+  position: relative;
+}
+
+#commentform input[type="text"] {
+  width: 100%;
+  max-width: 270px;
+}
+
+#commentform textarea {
+  width: 100%;
+  max-width: 510px;
+}
+
+#commentform .comment-notes .required {
+  position: static;
+}
+
+.commentlist {
+  margin: 24px 0 36px;
+}
+
+.commentlist li {
+  list-style-type: none;
+}
+
+.commentlist .comment {
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.commentlist .comment:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.commentlist .comment-author .photo {
+  float: left;
+  margin-right: 10px;
+}
+
+.commentlist .comment-content {
+  margin-left: 78px;
+}
+
+.featured-image {
+  margin: 24px 0;
+}
+
+.featured-image img {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.entry-meta {
+  margin: 18px 0;
+}
+
+.entry-meta .by-author {
+  margin-left: .5em;
+}
+
+.entry-meta .comments-link b {
+  font-size: 14px;
+}
+
+.entry-meta .comments-link b:before {
+  content: " ( ";
+}
+
+.entry-meta .comments-link b:after {
+  content: " ) ";
+}
+
+footer.entry-meta {
+  margin-top: 36px;
+  margin-bottom: 18px;
+}
+
+.widget {
+  clear: both;
+}
+
+.widget_archive {
+  padding-bottom: 18px;
+}
+
+.tagcloud {
+  padding-bottom: 18px;
+}
+
+.pagination {
+  display: block;
+}
+
+.pagination:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.pagination .prev {
+  float: left;
+  max-width: 50%;
+}
+
+.pagination .next {
+  float: right;
+  max-width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .area_bd {
+    width: 100%;
+    padding: 30px 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  article.post iframe,
+  article.post img,
+  article.post svg {
+    max-width: 100%;
+    height: auto;
+  }
+  .box, .contents-index article,
+  .contents-index .tweet {
+    width: 100%;
+  }
+  .contents-index .tweet {
+    width: 100%;
+  }
+}

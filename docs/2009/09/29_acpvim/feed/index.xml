@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: autocomplpop.vimでclass属性値入力時に出るエラーを回避する	</title>
+	<atom:link href="/2009/09/29_acpvim/feed" rel="self" type="application/rss+xml" />
+	<link>/2009/09/29_acpvim</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:17 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: Vim相关资料大全 &#124; 天天三国杀		</title>
+		<link>/2009/09/29_acpvim/comment-page-1#comment-511</link>
+
+		<dc:creator><![CDATA[Vim相关资料大全 &#124; 天天三国杀]]></dc:creator>
+		<pubDate>Sun, 16 Jun 2013 14:33:03 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2009/09/autocomplpop-vim%e3%81%a7class%e5%b1%9e%e6%80%a7%e5%80%a4%e5%85%a5%e5%8a%9b%e6%99%82%e3%81%ab%e5%87%ba%e3%82%8b%e3%82%a8%e3%83%a9%e3%83%bc%e3%82%92%e5%9b%9e%e9%81%bf%e3%81%99%e3%82%8b.php#comment-511</guid>
+
+					<description><![CDATA[&lt;p&gt;[...]  autocomplpop.vimでclass属性値入力時に出るエラーを回避する [...]&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;]  autocomplpop.vimでclass属性値入力時に出るエラーを回避する [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: admin		</title>
+		<link>/2009/09/29_acpvim/comment-page-1#comment-368</link>
+
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 13 Dec 2011 03:07:41 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2009/09/autocomplpop-vim%e3%81%a7class%e5%b1%9e%e6%80%a7%e5%80%a4%e5%85%a5%e5%8a%9b%e6%99%82%e3%81%ab%e5%87%ba%e3%82%8b%e3%82%a8%e3%83%a9%e3%83%bc%e3%82%92%e5%9b%9e%e9%81%bf%e3%81%99%e3%82%8b.php#comment-368</guid>
+
+					<description><![CDATA[&lt;p&gt;In reply to &lt;a href=&quot;/2009/09/29_acpvim/comment-page-1#comment-367&quot;&gt;Ryan&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To: Ryan&lt;br /&gt;
+Hello. Thank you for your kindness. Your solution is cool!!&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/2009/09/29_acpvim/comment-page-1#comment-367">Ryan</a>.</p>
+
+<p>To: Ryan<br />
+Hello. Thank you for your kindness. Your solution is cool!!</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Ryan		</title>
+		<link>/2009/09/29_acpvim/comment-page-1#comment-367</link>
+
+		<dc:creator><![CDATA[Ryan]]></dc:creator>
+		<pubDate>Mon, 12 Dec 2011 18:17:03 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2009/09/autocomplpop-vim%e3%81%a7class%e5%b1%9e%e6%80%a7%e5%80%a4%e5%85%a5%e5%8a%9b%e6%99%82%e3%81%ab%e5%87%ba%e3%82%8b%e3%82%a8%e3%83%a9%e3%83%bc%e3%82%92%e5%9b%9e%e9%81%bf%e3%81%99%e3%82%8b.php#comment-367</guid>
+
+					<description><![CDATA[&lt;p&gt;You can fix this issue by inserting the following above line 288 of autoload/htmlcomplete.vim:&lt;/p&gt;
+
+&lt;p&gt;let classlines = []&lt;/p&gt;
+
+&lt;p&gt;I have alerted the developer on his BitBucket project repository: https://bitbucket.org/ns9tks/vim-autocomplpop/issue/37/undefined-variable-classlines-e15-invalid&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>You can fix this issue by inserting the following above line 288 of autoload/htmlcomplete.vim:</p>
+
+<p>let classlines = []</p>
+
+<p>I have alerted the developer on his BitBucket project repository: <a href="https://bitbucket.org/ns9tks/vim-autocomplpop/issue/37/undefined-variable-classlines-e15-invalid" rel="nofollow ugc">https://bitbucket.org/ns9tks/vim-autocomplpop/issue/37/undefined-variable-classlines-e15-invalid</a></p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: htmlcomplete#CompleteTags 的 bug &#124; minbaby		</title>
+		<link>/2009/09/29_acpvim/comment-page-1#comment-363</link>
+
+		<dc:creator><![CDATA[htmlcomplete#CompleteTags 的 bug &#124; minbaby]]></dc:creator>
+		<pubDate>Wed, 17 Aug 2011 00:34:15 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2009/09/autocomplpop-vim%e3%81%a7class%e5%b1%9e%e6%80%a7%e5%80%a4%e5%85%a5%e5%8a%9b%e6%99%82%e3%81%ab%e5%87%ba%e3%82%8b%e3%82%a8%e3%83%a9%e3%83%bc%e3%82%92%e5%9b%9e%e9%81%bf%e3%81%99%e3%82%8b.php#comment-363</guid>
+
+					<description><![CDATA[&lt;p&gt;[...] variable :classlines）。網路上找到有人回報給 acp.vim 作者，日本那邊也有人hack acp.vim 來避開這個問題，不過其實問題不在 autocomplpop，而是 vim 內的 htmlcomplete 的問題，這個 [...]&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] variable :classlines）。網路上找到有人回報給 acp.vim 作者，日本那邊也有人hack acp.vim 來避開這個問題，不過其實問題不在 autocomplpop，而是 vim 內的 htmlcomplete 的問題，這個 [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: admin		</title>
+		<link>/2009/09/29_acpvim/comment-page-1#comment-293</link>
+
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 04 Mar 2010 09:24:20 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2009/09/autocomplpop-vim%e3%81%a7class%e5%b1%9e%e6%80%a7%e5%80%a4%e5%85%a5%e5%8a%9b%e6%99%82%e3%81%ab%e5%87%ba%e3%82%8b%e3%82%a8%e3%83%a9%e3%83%bc%e3%82%92%e5%9b%9e%e9%81%bf%e3%81%99%e3%82%8b.php#comment-293</guid>
+
+					<description><![CDATA[&lt;p&gt;In reply to &lt;a href=&quot;/2009/09/29_acpvim/comment-page-1#comment-292&quot;&gt;EthanZ6174&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;EthanZ6174
+  Hello.
+  I&#039;m afraid that I&#039;m not author of this plugin, but thank you for the information on your Ubuntu VIM!&lt;/p&gt;
+&lt;/blockquote&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/2009/09/29_acpvim/comment-page-1#comment-292">EthanZ6174</a>.</p>
+
+<blockquote>
+  <p>EthanZ6174
+  Hello.
+  I&#8217;m afraid that I&#8217;m not author of this plugin, but thank you for the information on your Ubuntu VIM!</p>
+</blockquote>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: EthanZ6174		</title>
+		<link>/2009/09/29_acpvim/comment-page-1#comment-292</link>
+
+		<dc:creator><![CDATA[EthanZ6174]]></dc:creator>
+		<pubDate>Wed, 03 Mar 2010 11:18:58 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2009/09/autocomplpop-vim%e3%81%a7class%e5%b1%9e%e6%80%a7%e5%80%a4%e5%85%a5%e5%8a%9b%e6%99%82%e3%81%ab%e5%87%ba%e3%82%8b%e3%82%a8%e3%83%a9%e3%83%bc%e3%82%92%e5%9b%9e%e9%81%bf%e3%81%99%e3%82%8b.php#comment-292</guid>
+
+					<description><![CDATA[&lt;p&gt;are you the author of this plugin?&lt;/p&gt;
+
+&lt;p&gt;my vim has this kind of problem too, and my OS  is  ubuntu...&lt;/p&gt;
+
+&lt;p&gt;so... i wanna say, it is not a problem which is windows only...&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>are you the author of this plugin?</p>
+
+<p>my vim has this kind of problem too, and my OS  is  ubuntu&#8230;</p>
+
+<p>so&#8230; i wanna say, it is not a problem which is windows only&#8230;</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

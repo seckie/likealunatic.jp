@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Grunt &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/grunt/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:13:52 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Grunt &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>grunt-contrib-jshint の設定</title>
+		<link>/2014/04/grunt-contrib-jshint</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Wed, 16 Apr 2014 04:38:01 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[Grunt]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<guid isPermaLink="false">/?p=1079</guid>
+
+					<description><![CDATA[Gruntfile.coffee に以下のように書く。 grunt.loadNpmTasks 'grunt-contrib-jshint' grunt.initConfig( jshint: main: options: jshintrc: true src: [ 'app' + sitePath + 'js/script.js' ] ... watch: js: options: livereload: true files: [ 'app' + sitePath + 'js/*' ] tasks: [ 'jshint' ] ) options.jshintrc = true を設定するとそれ以外の options は無視され同階層に置かれた .jshintrc ファイルを参照するようになる。 .jshintrc はJSON形式で記述する。 結果的に以下のような設定に。 { "node": true, "esnext": true, "bitwise": true, "camelcase": true, "curly": true, ... "globals": { "window": true, "document": true, "jQuery": true, "$": true, "_": true, "Backbone": true }, "-W116": true, "-W041": true } globals には「XXXグローバルオブジェクトがない」的な警告が出るときに、予め「このグローバルオブジェクトはあるから、警告出すな」とJSHint側に伝えておく設定。 -WXXX: true は特定のエラーを無視したいときに追加する設定。このエラーコード（ドキュメントの原文では warning code）は grunt --verbose（もしくは grunt -v）として verbose モードで Grunt タスクを起動すると表示されるようになる。 表示例： ^ [W116] Expected '!==' and instead saw '!='. ここでは W116 というのが warning code なのでそれを &#8230; <a href="/2014/04/grunt-contrib-jshint">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Gruntfile.coffee に以下のように書く。</p>
+
+<pre><code class="js">grunt.loadNpmTasks 'grunt-contrib-jshint'
+grunt.initConfig(
+  jshint:
+    main:
+      options:
+        jshintrc: true
+      src: [ 'app' + sitePath + 'js/script.js' ]
+  ...
+  watch:
+    js:
+      options:
+        livereload: true
+      files: [ 'app' + sitePath + 'js/*' ]
+      tasks: [ 'jshint' ]
+)
+</code></pre>
+
+<p><code>options.jshintrc = true</code> を設定するとそれ以外の options は無視され同階層に置かれた .jshintrc ファイルを参照するようになる。</p>
+
+<p>.jshintrc はJSON形式で記述する。<br />
+結果的に以下のような設定に。</p>
+
+<pre><code class="js">{
+  "node": true,
+  "esnext": true,
+  "bitwise": true,
+  "camelcase": true,
+  "curly": true,
+  ...
+  "globals": {
+    "window": true,
+    "document": true,
+    "jQuery": true,
+    "$": true,
+    "_": true,
+    "Backbone": true
+  },
+  "-W116": true,
+  "-W041": true
+}
+</code></pre>
+
+<p><code>globals</code> には「XXXグローバルオブジェクトがない」的な警告が出るときに、予め「このグローバルオブジェクトはあるから、警告出すな」とJSHint側に伝えておく設定。<br />
+<code>-WXXX: true</code> は特定のエラーを無視したいときに追加する設定。このエラーコード（ドキュメントの原文では warning code）は <code>grunt --verbose</code>（もしくは <code>grunt -v</code>）として verbose モードで Grunt タスクを起動すると表示されるようになる。</p>
+
+<p>表示例：</p>
+
+<pre><code>^ [W116] Expected '!==' and instead saw '!='.
+</code></pre>
+
+<p>ここでは <code>W116</code> というのが warning code なのでそれを <code>"-W116": true</code> のように options に追加すると、警告は出なくなる。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>サイトの裏側を書き直した</title>
+		<link>/2014/04/rebuild</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Sun, 13 Apr 2014 16:53:41 +0000</pubDate>
+				<category><![CDATA[What's New?]]></category>
+		<category><![CDATA[GitHub]]></category>
+		<category><![CDATA[Grunt]]></category>
+		<guid isPermaLink="false">/?p=1067</guid>
+
+					<description><![CDATA[自分のサイトを更新するモチベーションが沸々と約2年半ぶりに湧き上がり、現在業務で使っているツールや知識を使って裏側を書き直した。 今回変えたのは以下のような点。 Grunt 導入 プロトタイプ環境と本番環境を分けた WordPressシステムファイル以外のソースコードを GitHub で管理するようにした Twitter API version 1.1 への対応（遅っ！） Twitter API を利用しているのはトップページでリスト表示をしているところだけだが、Twitter API 1.0 が廃止されてから1年近く放置してしまった…。お恥ずかしい限り。 Grunt を導入したことでパッケージ管理をぜんぶ bower に任せられたし、必要なやつだけ grunt-contrib-copy でコピーして deploy 環境に置く、みたいなことができてめちゃくちゃ整理ができた。2年半前と開発環境はえらい違い。 突貫工事だったので JavaScript とか LESS とかは適当。まだ途中のところとかあるし。 あとでやりたいこと↓ JavaScript を CoffeeScript で書き直す Bootstrap を始めとしたパッケージ群を最新版にして WordPress テーマを書き直す]]></description>
+										<content:encoded><![CDATA[<p>自分のサイトを更新するモチベーションが沸々と約2年半ぶりに湧き上がり、現在業務で使っているツールや知識を使って裏側を書き直した。
+今回変えたのは以下のような点。</p>
+
+<ul>
+<li>Grunt 導入</li>
+<li>プロトタイプ環境と本番環境を分けた</li>
+<li>WordPressシステムファイル以外のソースコードを <a href="https://github.com/seckie/likealunatic">GitHub で管理するようにした</a></li>
+<li>Twitter API version 1.1 への対応（遅っ！）</li>
+</ul>
+
+<p>Twitter API を利用しているのはトップページでリスト表示をしているところだけだが、Twitter API 1.0 が廃止されてから1年近く放置してしまった…。お恥ずかしい限り。</p>
+
+<p>Grunt を導入したことでパッケージ管理をぜんぶ bower に任せられたし、必要なやつだけ grunt-contrib-copy でコピーして deploy 環境に置く、みたいなことができてめちゃくちゃ整理ができた。2年半前と開発環境はえらい違い。</p>
+
+<p>突貫工事だったので JavaScript とか LESS とかは適当。まだ途中のところとかあるし。<br />
+あとでやりたいこと↓</p>
+
+<ul>
+<li>JavaScript を CoffeeScript で書き直す</li>
+<li>Bootstrap を始めとしたパッケージ群を最新版にして WordPress テーマを書き直す</li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

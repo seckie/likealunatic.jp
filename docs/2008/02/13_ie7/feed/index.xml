@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: IE7への自動更新が開始されました	</title>
+	<atom:link href="/2008/02/13_ie7/feed" rel="self" type="application/rss+xml" />
+	<link>/2008/02/13_ie7</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:39 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: Naoki Sekiguchi		</title>
+		<link>/2008/02/13_ie7/comment-page-1#comment-33</link>
+
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Sat, 08 Mar 2008 13:04:48 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2008/02/ie7%e3%81%b8%e3%81%ae%e8%87%aa%e5%8b%95%e6%9b%b4%e6%96%b0%e3%81%8c%e9%96%8b%e5%a7%8b%e3%81%95%e3%82%8c%e3%81%be%e3%81%97%e3%81%9f.php#comment-33</guid>
+
+					<description><![CDATA[&lt;blockquote&gt;
+  &lt;p&gt;MS-00さん
+  情報ありがとうございます！&lt;/p&gt;
+&lt;/blockquote&gt;
+]]></description>
+			<content:encoded><![CDATA[<blockquote>
+  <p>MS-00さん
+  情報ありがとうございます！</p>
+</blockquote>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: MS-00		</title>
+		<link>/2008/02/13_ie7/comment-page-1#comment-32</link>
+
+		<dc:creator><![CDATA[MS-00]]></dc:creator>
+		<pubDate>Thu, 06 Mar 2008 05:27:59 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2008/02/ie7%e3%81%b8%e3%81%ae%e8%87%aa%e5%8b%95%e6%9b%b4%e6%96%b0%e3%81%8c%e9%96%8b%e5%a7%8b%e3%81%95%e3%82%8c%e3%81%be%e3%81%97%e3%81%9f.php#comment-32</guid>
+
+					<description><![CDATA[&lt;p&gt;IE8のベータ版がリリースされましたねー。
+&lt;a href=&quot;http://www.microsoft.com/windows/products/winfamily/ie/ie8/readiness/Install.htm&quot; rel=&quot;nofollow&quot;&gt;&lt;a href=&quot;http://www.microsoft.com/windows/products/winfamily/ie/ie8/readiness/Install.htm&quot; rel=&quot;nofollow&quot;&gt;http://www.microsoft.com/windows/products/winfamily/ie/ie8/readiness/Install.htm&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>IE8のベータ版がリリースされましたねー。
+<a href="http://www.microsoft.com/windows/products/winfamily/ie/ie8/readiness/Install.htm" rel="nofollow"></a><a href="http://www.microsoft.com/windows/products/winfamily/ie/ie8/readiness/Install.htm" rel="nofollow">http://www.microsoft.com/windows/products/winfamily/ie/ie8/readiness/Install.htm</a></p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

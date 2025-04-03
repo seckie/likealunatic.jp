@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: パンくずリストのマークアップ考察	</title>
+	<atom:link href="/2007/03/24_locus_markup/feed" rel="self" type="application/rss+xml" />
+	<link>/2007/03/24_locus_markup</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:54 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: PlojectDD Blog		</title>
+		<link>/2007/03/24_locus_markup/comment-page-1#comment-5</link>
+
+		<dc:creator><![CDATA[PlojectDD Blog]]></dc:creator>
+		<pubDate>Tue, 27 Mar 2007 15:47:25 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/03/%e3%83%91%e3%83%b3%e3%81%8f%e3%81%9a%e3%83%aa%e3%82%b9%e3%83%88%e3%81%ae%e3%83%9e%e3%83%bc%e3%82%af%e3%82%a2%e3%83%83%e3%83%97%e8%80%83%e5%af%9f.php#comment-5</guid>
+
+					<description><![CDATA[&lt;p&gt;&lt;strong&gt;JIS X8341-3 5.2g パンくずリストのアクセシビリティ&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;JIS X8341-3 5.2g 閲覧しているページがウェブサイトの構造のどこに...&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p><strong>JIS X8341-3 5.2g パンくずリストのアクセシビリティ</strong></p>
+
+<p>JIS X8341-3 5.2g 閲覧しているページがウェブサイトの構造のどこに&#8230;</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Naoki Sekiguchi		</title>
+		<link>/2007/03/24_locus_markup/comment-page-1#comment-4</link>
+
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Tue, 27 Mar 2007 14:04:32 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/03/%e3%83%91%e3%83%b3%e3%81%8f%e3%81%9a%e3%83%aa%e3%82%b9%e3%83%88%e3%81%ae%e3%83%9e%e3%83%bc%e3%82%af%e3%82%a2%e3%83%83%e3%83%97%e8%80%83%e5%af%9f.php#comment-4</guid>
+
+					<description><![CDATA[&lt;p&gt;＞はやしさん
+コメントありがとうございます！
+なるほど。dl要素はちゃんと「定義リスト」って読み上げられるのですね。
+音声ブラウザの設定で読み上げ方が変わるのかとか、やはり実際に使ってみないことにはわからないですよね・・。&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>＞はやしさん
+コメントありがとうございます！
+なるほど。dl要素はちゃんと「定義リスト」って読み上げられるのですね。
+音声ブラウザの設定で読み上げ方が変わるのかとか、やはり実際に使ってみないことにはわからないですよね・・。</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: はやしだいすけ		</title>
+		<link>/2007/03/24_locus_markup/comment-page-1#comment-3</link>
+
+		<dc:creator><![CDATA[はやしだいすけ]]></dc:creator>
+		<pubDate>Tue, 27 Mar 2007 03:51:42 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/03/%e3%83%91%e3%83%b3%e3%81%8f%e3%81%9a%e3%83%aa%e3%82%b9%e3%83%88%e3%81%ae%e3%83%9e%e3%83%bc%e3%82%af%e3%82%a2%e3%83%83%e3%83%97%e8%80%83%e5%af%9f.php#comment-3</guid>
+
+					<description><![CDATA[&lt;p&gt;1項目の定義リスト、
+現在位置、
+ホームのなかの、
+キャンペーンのなかの、
+おにぎり100円セール、
+定義リスト終了。
+って、読み上げられるんじゃない？設定の問題かなぁ。&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>1項目の定義リスト、
+現在位置、
+ホームのなかの、
+キャンペーンのなかの、
+おにぎり100円セール、
+定義リスト終了。
+って、読み上げられるんじゃない？設定の問題かなぁ。</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

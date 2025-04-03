@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>FuelPHP &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/fuelphp/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:13:52 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>FuelPHP &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>初めて pull request を体験するなど</title>
+		<link>/2013/06/fuelphptranslation</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Mon, 17 Jun 2013 13:32:39 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[FuelPHP]]></category>
+		<category><![CDATA[GitHub]]></category>
+		<guid isPermaLink="false">/?p=1028</guid>
+
+					<description><![CDATA[最近、仕事で FuelPHP という PHP フレームワークを使う機会があります。いわゆる Cake PHP 的な MVC フレームワークで、PHP 5.3 以降対応としたことにより、今風に書かれているらしいです。 もう先月の話になるのですが、FuelPHP 1.6 翻訳ウィークというオンラインイベントを通じて、Fuel PHP 1.6 の日本語ドキュメントのメンテナンスに参加しました。 翻訳作業には GitHub を通じて誰でも参加できるようになっており、初めて他人のプロジェクトに pull request を送るという体験をしました。日本語でやり取りができたので、はじめの一歩としては敷居が低かったと思います。 それにしても GitHub、やりとりのほとんどをブラウザ上で完結できてしまうほど、進化していたんですね。しかしこれだと git の勉強にはならないなー。]]></description>
+										<content:encoded><![CDATA[<p>最近、仕事で <a href="http://fuelphp.com/">FuelPHP</a> という PHP フレームワークを使う機会があります。いわゆる Cake PHP 的な MVC フレームワークで、PHP 5.3 以降対応としたことにより、今風に書かれているらしいです。</p>
+
+<p>もう先月の話になるのですが、<a href="http://atnd.org/events/39849">FuelPHP 1.6 翻訳ウィーク</a>というオンラインイベントを通じて、<a href="http://fuelphp.jp/docs/1.6/">Fuel PHP 1.6 の日本語ドキュメント</a>の<a href="https://github.com/NEKOGET/FuelPHP_docs_jp/tree/1.6/develop_japanese">メンテナンス</a>に参加しました。</p>
+
+<p>翻訳作業には GitHub を通じて誰でも参加できるようになっており、初めて他人のプロジェクトに pull request を送るという体験をしました。日本語でやり取りができたので、はじめの一歩としては敷居が低かったと思います。</p>
+
+<p>それにしても GitHub、やりとりのほとんどをブラウザ上で完結できてしまうほど、進化していたんですね。しかしこれだと git の勉強にはならないなー。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

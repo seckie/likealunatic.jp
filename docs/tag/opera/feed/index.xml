@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Opera &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/opera/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:54 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Opera &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Opera/Safariでレイアウトが崩れる現象</title>
+		<link>/2007/03/27_operasafari</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 27 Mar 2007 13:32:45 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Opera]]></category>
+		<category><![CDATA[Safari]]></category>
+		<guid isPermaLink="false">/wptest/2007/03/operasafari%e3%81%a7%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%81%8c%e5%b4%a9%e3%82%8c%e3%82%8b%e7%8f%be%e8%b1%a1.php</guid>
+
+					<description><![CDATA[@import で呼び出すファイルのパスが間違っていると、理解不能なレイアウト崩れが発生することがあります。<abbr title="Hyper Text Markup Language">HTML</abbr> 4.01 Tranditional（システム識別子有り）のドキュメントで、Opera9、Safari2においてこの現象を確認しました。 <a href="/2007/03/27_operasafari">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>@import で呼び出すファイルのパスが間違っていると、詳細不明なレイアウト崩れが発生することがあります。<abbr title="Hyper Text Markup Language">HTML</abbr> 4.01 Tranditional（システム識別子有り）のドキュメントで、Opera9、Safari2においてこの現象を確認しました。その他のブラウザでは、ファイルのパスが間違っていれば無視されるだけです。詳細不明な、と書くだけに理屈では説明できない、理解不能な崩れ方をします。</p>
+
+<p>Like@Lunaticのテンプレートをベースにサンプルページを作ってみたのですが、自宅のOpera9（Win）ではこの現象を確認できませんでした。Like@Lunaticの文書型は <abbr title="Extensive HyperText Markup Language">XHTML</abbr>1.0 Strict なので、文書型によって発生条件が変わるのかもしれません。</p>
+
+<p>検証は不十分ですが、Opera/Safariでのみ理解不能な崩れ方をする場合は、この点を確認してみると良いかもしれません。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

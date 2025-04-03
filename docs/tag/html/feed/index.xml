@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>HTML &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/html/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>HTML &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>電話番号入力フォームのmaxlength</title>
+		<link>/2009/07/02_telform_maxlength</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 02 Jul 2009 07:06:44 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Form]]></category>
+		<category><![CDATA[HTML]]></category>
+		<guid isPermaLink="false">/wptest/2009/07/%e9%9b%bb%e8%a9%b1%e7%95%aa%e5%8f%b7%e5%85%a5%e5%8a%9b%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%e3%81%aemaxlength.php</guid>
+
+					<description><![CDATA[電話番号の市外局番は最高5桁だという話。 <a href="/2009/07/02_telform_maxlength">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>次のような電話番号入力フォームは正しくできていると言えるでしょうか？</p>
+
+<pre><code>&lt;input type=&quot;text&quot; size=&quot;20&quot; maxlength=&quot;4&quot; value=&quot;&quot; name=&quot;tel1&quot; id=&quot;tel1&quot; /&gt; -
+&lt;input type=&quot;text&quot; size=&quot;20&quot; maxlength=&quot;4&quot; value=&quot;&quot; name=&quot;tel2&quot; id=&quot;tel2&quot; /&gt; -
+&lt;input type=&quot;text&quot; size=&quot;20&quot; maxlength=&quot;4&quot; value=&quot;&quot; name=&quot;tel3&quot; id=&quot;tel3&quot; /&gt;</code></pre>
+
+<p><q>答えはNo。その理由は <code>maxlength=&quot;5&quot;</code> にすべきだから</q>、と職場の<abbr title="Technical Director">TD</abbr>さんが教えてくれました。5桁の市外局番が存在するなんて、知らなかったです・・・。</p>
+
+<ul class="disclist ref">
+<li>参考1：<a href="http://www.soumu.go.jp/main_sosiki/joho_tsusin/top/tel_number/q_and_a-2001aug.html#q2">電話番号に関するＱ＆Ａ &#8211; 市外局番・市内局番とはどのようなものですか？ </a></li>
+<li>参考2：<a href="http://townpage.goo.ne.jp/SearchKihon.php?maxgyocode=c01&amp;maxgyoname=%A5%B0%A5%EB%A5%E1&amp;gyonext=1&amp;keyword=&amp;prefcode=01&amp;prefname=%CB%CC%B3%A4%C6%BB&amp;citycode=347&amp;cityname=%BB%B3%B1%DB%B7%B4%C4%B9%CB%FC%C9%F4%C4%AE&amp;mapscale=9">グルメ 北海道 山越郡長万部町 &#8211; gooタウンページ</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[memo]Flashより全面に、HTMLの要素を表示したい場合の指定</title>
+		<link>/2008/11/11_memo_flashobjecthtml</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 11 Nov 2008 02:46:02 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[Memo]]></category>
+		<guid isPermaLink="false">/wptest/2008/11/memoflash%e3%82%88%e3%82%8a%e5%85%a8%e9%9d%a2%e3%81%ab%e3%80%81html%e3%81%ae%e8%a6%81%e7%b4%a0%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%97%e3%81%9f%e3%81%84%e5%a0%b4%e5%90%88%e3%81%ae%e6%8c%87%e5%ae%9a.php</guid>
+
+					<description><![CDATA[Flash呼び出しのobjectタグに &#60;param name=&#34;wmode&#34; value=&#34;transparent&#34; /&#62; を加える。あとはz-indexプロパティの調整など。]]></description>
+										<content:encoded><![CDATA[<p>Flash呼び出しのobjectタグに</p>
+
+<pre><code>&lt;param name=&quot;wmode&quot; value=&quot;transparent&quot; /&gt;</code></pre>
+
+<p>を加える。あとはz-indexプロパティの調整など。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>HTML4.01 のコメント記述について</title>
+		<link>/2008/10/02_htmlcomments</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 02 Oct 2008 02:59:26 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[HTML]]></category>
+		<guid isPermaLink="false">/wptest/2008/10/html4-01-%e3%81%ae%e3%82%b3%e3%83%a1%e3%83%b3%e3%83%88%e8%a8%98%e8%bf%b0%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6.php</guid>
+
+					<description><![CDATA[HTML4.01の「3.2.4 Comments」を読んでいて気がついたこと。 <a href="/2008/10/02_htmlcomments">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<blockquote cite="http://www.w3.org/TR/html401/intro/sgmltut.html#h-3.2.4">
+<p>White space is not permitted between the markup declaration open delimiter(&#8220;&lt;!&#8221;) and the comment open delimiter (&#8220;&#8211;&#8220;), but is permitted between the comment close delimiter (&#8220;&#8211;&#8220;) and the markup declaration close delimiter (&#8220;&gt;&#8221;). A common error is to include a string of hyphens (&#8220;&#8212;&#8220;) within a comment. Authors should avoid putting two or more adjacent hyphens inside comments.</p>
+</blockquote>
+
+<p class="cite"><a href="http://www.w3.org/TR/html401/intro/sgmltut.html#h-3.2.4">3.2.4 Comments &#8211; HTML 4.01 Specification</a> から引用</p>
+
+<p>コメント内に二つ以上の連続するハイフン（-）を含むことは避けるべき、というのは割と有名な話。Validationでひっかかりますからね。<br />
+ここで目から鱗なのは、コメント開始の <code>&lt;!</code> と <code>--</code> の間に空白文字を含むことは許されないが、コメント終了の <code>--</code> と <code>&gt;</code> の間に空白文字を含むことが許される、というところ。ということは</p>
+
+<pre><code>&lt;!--
+コメントだよ！！
+--    &gt;</code></pre>
+
+<p>みたいなコードが仕様上はOKということ。<br />
+では実際のユーザーエージェントはこのコメントをどう解釈するんでしょう。 <code>-- &gt;</code> みたいなコードをコメント終了とみなしてくれるのでしょうか。</p>
+
+<p>手元にあるいくつかのブラウザで表示確認したところ</p>
+
+<table class="data-table">
+<caption>○→うまくいく、×→うまくいかない</caption>
+<tr>
+<th scope="row">IE6 / 7</th>
+<td>×</td>
+</tr>
+<tr>
+<th scope="row">Firefox3</th>
+<td>○</td>
+</tr>
+<tr>
+<th scope="row">Safari3</th>
+<td>×</td>
+</tr>
+<tr>
+<th scope="row">Opera9</th>
+<td>×</td>
+</tr>
+</table>
+
+<p>という結果に。ダメだこれは。。<br />
+しかも、大抵のエディタは <code>-- &gt;</code> をコメント終了とみなしてはくれないようで、編集画面のシンタックスハイライトがおかしくなってしまいます。ということで、コメント終了は <code>--&gt;</code> とするのが正解・・・。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

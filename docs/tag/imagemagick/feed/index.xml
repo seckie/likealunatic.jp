@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ImageMagick &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/imagemagick/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:04 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>ImageMagick &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>WinXPローカルでXAMPPを使ってMovable Typeを動かす―2010年3月版 その3</title>
+		<link>/2010/03/xampp_and_mt_3</link>
+					<comments>/2010/03/xampp_and_mt_3#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 14 Mar 2010 03:42:15 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[ImageMagick]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<category><![CDATA[XAMPP]]></category>
+		<guid isPermaLink="false">/?p=629</guid>
+
+					<description><![CDATA[AMPPでMovable Typeを動作させるチュートリアルの第3弾です。今回はImageMagickのインストールと、MovableTypeのインストールを扱い、全3回の記事の最後とします。 <a href="/2010/03/xampp_and_mt_3">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>XAMPPでMovable Typeを動作させるチュートリアルの第3弾です。</p>
+
+<ol>
+<li><a href="/2010/03/xampp_and_mt_1.php">XAMPPのインストール、Apacheの設定</a></li>
+<li><a href="/2010/03/xampp_and_mt_2.php">ActivePerlのインストールと設定、MySQLの設定</a></li>
+<li><em>ImageMagickのインストール、Movable Typeのインストール</em></li>
+</ol>
+
+<p>今回はImageMagickのインストールと、MovableTypeのインストールを扱い、全3回の記事の最後とします。</p>
+
+<ol>
+<li class="step01">
+<p><a href="http://www.imagemagick.org/script/index.php" title="ImageMagick">ImageMagickのダウンロードページ</a>にアクセスし、左に並んでいるメニューの中から「Release→Windows」を選択します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_97.jpg"><img decoding="async" src="/wp-content/uploads/2010/03/20100313_97-150x150.jpg" alt="ImageMagickのダウンロード" title="20100313_97" width="150" height="150" class="alignnone size-thumbnail wp-image-599" /></a></p>
+</li>
+
+<li class="step02">
+<p>「Windows Binary Release」という見出しのページが表示され、ダウンロードできるパッケージの一覧が表示されます。この中から「ImageMagick-6.6.0-3-Q8-windows-dll.exe」を選択します。HTTPとFTPどちらでダウンロードしても構いません。<br />
+<span class="memo"><q>6.6.0-3</q>というところはバージョンを表しているようなので、その時によって最新となるバージョンは異なっているかもしれません。<br />
+また、お使いのマシンが64bitなら「ImageMagick-6.6.0-3-Q16-windows-x64-static.exe」を選んでください。</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_98.jpg"><img decoding="async" src="/wp-content/uploads/2010/03/20100313_98-150x150.jpg" alt="ImageMagickのダウンロード" title="20100313_98" width="150" height="150" class="alignnone size-thumbnail wp-image-600" /></a></p>
+</li>
+
+<li class="step03">
+<p>ダウンロードしたインストーラーファイルを実行します。インストールウィザードが始まります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_99.jpg"><img decoding="async" src="/wp-content/uploads/2010/03/20100313_99-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_99" width="150" height="150" class="alignnone size-thumbnail wp-image-601" /></a></p>
+</li>
+
+<li class="step04">
+<p>ライセンスを読み、「I accept the agreement（ライセンスに同意）」を選択して「Next」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_100.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_100-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_100" width="150" height="150" class="alignnone size-thumbnail wp-image-602" /></a></p>
+</li>
+
+<li class="step05">
+<p>「information」が表示されるので適当に読んで「Next」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_101.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_101-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_101" width="150" height="150" class="alignnone size-thumbnail wp-image-603" /></a></p>
+</li>
+
+<li class="step06">
+<p>インストールするディレクトリを選択する画面になります。適当に変更しても構いませんが、今回はあえてデフォルトのままでいきます。「Next」をクリックします。<br />
+<span class="memo">「Program Files」というようにディレクトリ名に半角スペースが入ると、この後のPerlとの連携でダメになりそうな気がするのですが・・・意外にも大丈夫なんですね。</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_102.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_102-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_102" width="150" height="150" class="alignnone size-thumbnail wp-image-604" /></a></p>
+</li>
+
+<li class="step07">
+<p>スタートメニューになんという名前で登録されるかを設定する画面になります。特に変更せず「Next」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_1031.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_1031-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_103" width="150" height="150" class="alignnone size-thumbnail wp-image-606" /></a></p>
+</li>
+
+<li class="step08">
+<p>インストールの追加オプションを選択する画面になります。ここで忘れずに<strong>「Install PerlMagick for ActiveState Perl v5.10.1 build 1007」を選択します。</strong>これでActivePerlと連携するためのPerlモジュールが一緒にインストールされます。「Next」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_104.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_104-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_104" width="150" height="150" class="alignnone size-thumbnail wp-image-607" /></a></p>
+</li>
+
+<li class="step09">
+<p>これでインストールのための設定は終わりとなります。「Install」をクリックしてしばらく待ちます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_105.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_105-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_105" width="150" height="150" class="alignnone size-thumbnail wp-image-608" /></a></p>
+</li>
+
+<li class="step10">
+<p>もう一度「Information」が表示されます。「Next」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_106.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_106-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_106" width="150" height="150" class="alignnone size-thumbnail wp-image-609" /></a></p>
+</li>
+
+<li class="step11">
+<p>これでインストールは完了となります。「Finish」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_107.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_107-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_107" width="150" height="150" class="alignnone size-thumbnail wp-image-610" /></a></p>
+</li>
+
+<li class="step12">
+<p>さて、正しくインストールできたかどうか、mt-check.cgi（<a href="/2010/03/xampp_and_mt_2.php">前回</a>までの設定を正しく行っていれば <a href="http://site1.localhost/mtos/mt-check.cgi">http://site1.localhost/mtos/mt-check.cgi</a> というURL）にブラウザでアクセスしてみましょう。すると、<q>perl.exe &#8211; コンポーネントが見つかりません</q>というアラートが表示され、正しく実行できなくなっています。さきほどインストールしたImageMagickのdllファイルを呼び出そうとして、失敗していることが分かります。これはImageMagickインストール時に設定された環境変数が、まだシステムに認識されていないために起こる問題なので、Windowsを再起動することで解決します。作業を中断し、ひとまず一旦再起動です。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_108.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_108-150x121.jpg" alt="エラーメッセージ「perl.exe - コンポーネントが見つかりません。 CORE_RL_magick_.dllが見つからなかったため、このアプリケーションを開始できませんでした。アプリケーションをインストールし直すとこの問題は解決される場合があります。」" title="20100313_108" width="150" height="121" class="alignnone size-thumbnail wp-image-611" /></a></p>
+</li>
+
+<li class="step13">
+<p>Windowsが起動したら、忘れずにApacheとMySQLを起動しましょう。デスクトップに追加されたショートカットやスタートメニューから「XAMPP Control Panel」を起動し、ApacheとMySQLの「Start」ボタンをクリックし、「Running」状態にします。<br />
+<span class="memo">ApacheやMySQLをシステムの「サービス」として登録するとWindowsが起動すると同時にこれらも起動するようになりますが、今回はこの設定は行いません。</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_110.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_110.jpg" alt="XAMPPコントロールパネルを起動する" title="20100313_110" width="182" height="113" class="alignnone size-full wp-image-612" /></a>
+<a href="/wp-content/uploads/2010/03/20100313_111.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_111-150x150.jpg" alt="XAMPPコントロールパネル" title="20100313_111" width="150" height="150" class="alignnone size-thumbnail wp-image-613" /></a></p>
+</li>
+
+<li class="step14">
+<p>改めてmt-check.cgiにブラウザでアクセスします。「Image::Magick」項目の黄色いエラー表示が消えていることを確認します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_112.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_112-150x150.jpg" alt="mt-check.cgiにブラウザでアクセス" title="20100313_112" width="150" height="150" class="alignnone size-thumbnail wp-image-605" /></a></p>
+</li>
+
+<li class="step15">
+<p>これでMovable Typeを使う準備がようやく整いましたので、早速インストールを行いましょう。MovableType（ここではMTOS 5.01）のファイルを保存したディレクトリ（<a href="http://site1.localhost/mtos/">http://site1.localhost/mtos/</a>）にブラウザでアクセスし、「サインイン」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_113.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_113-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_113" width="150" height="150" class="alignnone size-thumbnail wp-image-615" /></a></p>
+</li>
+
+<li class="step16">
+<p>するとmt-wizard.cgiというプログラムが実行され、インストールウィザードが始まります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_114.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_114-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_114" width="150" height="150" class="alignnone size-thumbnail wp-image-616" /></a></p>
+</li>
+
+<li class="step17">
+<p>システムチェックが実行され、<q>必要なPerlモジュールはそろっています。Movable Typeのインストールを続行する準備が整いました。</q>と表示されます。<br />
+と同時に<q>オプションのPerlモジュールのうちいくつかが見つかりませんでした。</q>と表示されます。「オプションモジュールを表示」をクリックするとシステムにインストールされていないモジュールの一覧を見ることができます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_119.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_119-150x150.jpg" alt="" title="20100313_119" width="150" height="150" class="alignnone size-thumbnail wp-image-617" /></a></p>
+</li>
+
+<li class="step18">
+<p>Crypt::DSA や IPC::Run といったPerlモジュールがインストールされていないことが分かりますが、今回は使用することはないので「次へ」進みます。必要な場合は一旦インストールウィザードを中断し、<a href="/2010/03/xampp_and_mt_2.php">前回</a>のようにPPMを使ってインストールするといいでしょう。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_120.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_120-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_120" width="150" height="150" class="alignnone size-thumbnail wp-image-618" /></a></p>
+</li>
+
+<li class="step19">
+<p>データベースの設定の画面となります。「データベースの種類」には「MySQLデータベース（推奨）」を選択しましょう。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_122.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_122-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_122" width="150" height="150" class="alignnone size-thumbnail wp-image-619" /></a></p>
+</li>
+
+<li class="step20">
+<p>データベースの設定項目が出現しますので各項目を以下のように設定し、「接続テスト」をクリックします。</p>
+<dl>
+    <dt>データベースサーバ</dt>
+    <dd><kbd>localhost</kbd></dd>
+    <dt>データベース名</dt>
+    <dd><kbd>mtos5</kbd> <span class="memo">（<a href="/2010/03/xampp_and_mt_2.php">前回</a>作成したMySQLデータベース名）</span></dd>
+    <dt>ユーザ名</dt>
+    <dd><kbd>root</kbd></dd>
+    <dt>パスワード</dt>
+    <dd><a href="/2010/03/xampp_and_mt_1.php">前々回</a>設定したMySQL rootユーザーのパスワード</dd>
+</dl>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_123.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_123-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_123" width="150" height="150" class="alignnone size-thumbnail wp-image-620" /></a></p>
+</li>
+
+<li class="step21">
+<p><q>データベースの設定を完了しました。</q>と表示されます。「次へ」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_124.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_124-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_124" width="150" height="150" class="alignnone size-thumbnail wp-image-630" /></a></p>
+</li>
+
+<li class="step22">
+<p>「メール設定」という画面となりますが、今回は特に設定せず「次へ」をクリック。<br />
+<span class="memo">もし必要となった場合、後で設定できます</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_125.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_125-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_125" width="150" height="150" class="alignnone size-thumbnail wp-image-621" /></a></p>
+</li>
+
+<li class="step23">
+<p>「テンポラリディレクトリの設定」画面となります。テンポラリディレクトリはMovable Typeのシステムが画像などのデータやバックアップデータなどを扱う際、一時的にデータ置き場として利用されるディレクトリです。適当なディレクトリを設定しましょう。ここでは <span class="path">C:\Windows\Temp</span> とし、「次へ」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_126.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_126-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_126" width="150" height="150" class="alignnone size-thumbnail wp-image-614" /></a></p>
+</li>
+
+<li class="step24">
+<p>これでMovableTypeの設定ファイル（mt-config.cgi）が生成され、今まで設定した情報が書き込まれます。mt-config.cgiが正しく生成されたことを確認し、「次へ」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_127.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_127-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_127" width="150" height="150" class="alignnone size-thumbnail wp-image-623" /></a></p>
+</li>
+
+<li class="step25">
+<p>Movable Typeにログインするためのアカウントを作成する画面になります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_128.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_128-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_128" width="150" height="150" class="alignnone size-thumbnail wp-image-624" /></a></p>
+<ul>
+<li>ユーザー名</li>
+<li>表示名</li>
+<li>電子メール</li>
+<li>使用言語</li>
+<li>パスワード</li>
+</ul>
+<p>以上の項目を設定できますが、ログインに使用するのは「ユーザー名」と「パスワード」だけです。<br />
+適当に入力したら「次へ」をクリック。<br />
+<span class="memo">ここで設定する項目は後で変更することができます。</span></p>
+</li>
+
+<li class="step26">
+<p>「最初のウェブサイト」を作成という画面となり、Movable Typeで管理するウェブサイトを設定する画面となります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_129.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_129-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_129" width="150" height="150" class="alignnone size-thumbnail wp-image-625" /></a></p>
+<dl>
+    <dt>ウェブサイト名</dt>
+    <dd><kbd>Site1</kbd><br /><span class="memo">（適当なサイト名）</span></dd>
+    <dt>ウェブサイトURL</dt>
+    <dd><kbd class="url">http://site1.localhost/</kbd><br /><span class="memo">（Movable TypeがインストールされたサイトのURL）</span></dd>
+    <dt>公開パス</dt>
+    <dd><kbd class="path">D:\htdocs\site1</kbd><br /><span class="memo">（Movable Typeがインストールされたサイトのディレクトリ。Windows環境だとディレクトリ区切りがバックスラッシュになりますのでご注意を）</span></dd>
+    <dt>テーマ</dt>
+    <dd>クラシックウェブサイト<br /><span class="memo">（どれでもOKです。選択によって設定されるテンプレートが変更されます）</span></dd>
+    <dt>タイムゾーン</dt>
+    <dd>UTC+9（日本標準時）</dd>
+</dl>
+<p>上記のように設定したら、「インストール」をクリックします。<br />
+<span class="memo">「ウェブサイトURL」と「公開パス」は<a href="/2010/03/xampp_and_mt_1.php">前々回</a>にApacheのバーチャルホスト機能で定義した同サイト内であれば、自由に設定できます。ここではサイトのルートとなるディレクトリを指定しています。</span></p>
+</li>
+
+<li class="step27">
+<p>しばらく待つと、<q>インストールを完了しました！</q>と表示されます。「Movable Typeにサインイン」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_131.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_131-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_131" width="150" height="150" class="alignnone size-thumbnail wp-image-626" /></a></p>
+</li>
+
+<li class="step28">
+<p>これでめでたくMovable Typeがインストールされました。ローカルマシン上で自由に使える開発環境のできあがりです！</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_132.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_132-150x150.jpg" alt="Movable Typeに初めてサインインしたところ" title="20100313_132" width="150" height="150" class="alignnone size-thumbnail wp-image-622" /></a></p>
+</li>
+</ol>
+
+<p>以上で全3回に渡る記事を終わります。</p>
+
+<p>Apacheのバーチャルホスト設定とhostsファイルの設定をそれぞれ増やせば、管理するサイトを増やしていくこともできます。WindowsユーザーのWebデザイナーやフロントエンドエンジニアが利用するには、十分な環境となるのではないかと思います。欠点を挙げるとすると、「公開パス」でディレクトリ区切りが（Windows環境なので）バックスラッシュになることだったりします。ローカルで開発したものを本番の（Linux系の）サーバーに乗せる、という場合はこの辺りの設定を修正する必要があるということですね。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2010/03/xampp_and_mt_3/feed</wfw:commentRss>
+			<slash:comments>11</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

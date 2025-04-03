@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>IE &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/ie/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:54 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>IE &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>[IE6]ブロック要素を中央寄せにするために、text-alignを使う件</title>
+		<link>/2008/02/13_centering</link>
+					<comments>/2008/02/13_centering#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 13 Feb 2008 07:06:54 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[IE]]></category>
+		<guid isPermaLink="false">/wptest/2008/02/ie6%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e8%a6%81%e7%b4%a0%e3%82%92%e4%b8%ad%e5%a4%ae%e5%af%84%e3%81%9b%e3%81%ab%e3%81%99%e3%82%8b%e3%81%9f%e3%82%81%e3%81%ab%e3%80%81text-align%e3%82%92%e4%bd%bf.php</guid>
+
+					<description><![CDATA[そこで、IE6互換モードのために親ボックスに text-align:center を適用し、中央寄せにするテクニックが当たり前のように使われています。が、あえて　text-align:center を使わずに中央寄せにするコードをご紹介します。ただし、幅固定レイアウト限定のテクニックです。 <a href="/2008/02/13_centering">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>ブロック要素を中央寄せにレイアウトする場合、左右marginをautoに設定するのが正しい<abbr title="Cascading Style Sheet">CSS</abbr>の書き方ですが、<abbr title="Internet Explorer">IE</abbr>6の過去互換モードではこれが正しく動作しないのは有名です。</p>
+
+<p><img fetchpriority="high" decoding="async" src="/img/2008/02/13_centering1.gif" alt="スクリーンショット：text-align:centerを使わずに中央寄せしようとすると" width="420" height="180" class="ss"  /></p>
+
+<p>そこで、IEのために親ボックスに<code>text-align:center</code>を適用し、中央寄せにするというバッドノウハウと呼べなくもないテクニックが当たり前のように使われています。</p>
+
+<p>text-alignプロパティは継承されますから、親ボックスに<code>text-align:center</code>を設定した場合、子孫ボックスでは<code>text-align:left</code>と改めて設定して値を上書きすることがほとんどです。このtext-alignの上書きが面倒なのはもちろんですが、意図しない子孫要素にまで影響が及んでしまうので、できるならこのテクニックは使いたくないなー、というのが私の考えです。そこで、<code>text-align:center</code>を使わずになんとかしようというアイデアをご紹介します。</p>
+
+<p>親ボックスが div#wrapper で幅400px、中央寄せにしたい子ボックスが div#content で幅300pxという例でコードを考えていきます。次のコードは、<code>text-align:center</code>を使った一般的なものです。</p>
+
+<pre><code>div#wrapper {
+width: 400px;
+text-align: center;
+}
+div#content {
+width: 300px;
+margin: 0 auto;
+text-align: left;
+}</code></pre>
+
+<p>これを以下のようにすることで、<code>text-align:center</code>を使わずに、同じ表現をすることができます。</p>
+
+<pre><code>div#wrapper {
+width: 400px;
+}
+div#content {
+width: 300px;
+margin: 0 auto 0 50px;
+}</code></pre>
+
+<p>実際に中央寄せにした場合に左右に空くmarginを計算し、子ボックスの左marginに設定してやり、右marginはautoにします。これで、<code>text-align:left</code>のまま、主要なブラウザ全てで中央寄せを実現できます。<br />
+このコードをIE6の互換モードで表示したのが、次のスクリーンショットです。（実際は見やすくするために<code>background-color</code>や<code>padding</code>も併用しています）</p>
+
+<p><img decoding="async" src="/img/2008/02/13_centering2.gif" alt="スクリーンショット：text-align:centerを使わずに中央寄せ" width="420" height="180" class="ss"  /></p>
+
+<p>ただし、弱点もあります。<em>親ボックスが幅固定のレイアウトに限って有効なテクニック</em>なので、<em>リキッドレイアウトやエラスティックレイアウトでは使えないのはもちろん、body要素が直接含むボックスには使えない</em>（body要素はウィンドウサイズによって幅が変わるため）という点です。<br />
+幅固定レイアウトでは絶大な（？）威力を発揮します。</p>
+
+<p>ちょっとしたCSSのアイデアなのですが、あまり使ってる人見かけないな?と思ったのでご紹介しようと思いました。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2008/02/13_centering/feed</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>IEのDOMで特徴的だと思ったこと３点</title>
+		<link>/2007/12/11_iedom</link>
+					<comments>/2007/12/11_iedom#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 11 Dec 2007 13:06:04 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[DOM]]></category>
+		<category><![CDATA[IE]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<guid isPermaLink="false">/wptest/2007/12/ie%e3%81%aedom%e3%81%a7%e7%89%b9%e5%be%b4%e7%9a%84%e3%81%a0%e3%81%a8%e6%80%9d%e3%81%a3%e3%81%9f%e3%81%93%e3%81%a8%ef%bc%93%e7%82%b9.php</guid>
+
+					<description><![CDATA[responseXMLされたテキストノードをappendChildしようとするとエラーになる。
+table要素をcreateElementする際、子要素にtbodyを作らないとダメ。
+要素ノードリストのアイテムにインデックス番号を振る際、変数に格納した数値を入れるとエラーになることがある。 <a href="/2007/12/11_iedom">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>最近、職場で勉強がてらJavaScriptでプログラムを書いています。会社の案件では少しjQueryを触ったりしたのですが、こちらではライブラリは極力使わない方針で。<br />
+そんな中、いくつか気づいたことを書き留めておきます。今回は<abbr title="Internet Explorer">IE</abbr>の挙動で、特徴的だと思った点を３点。</p>
+
+<div class="section">
+<h3>responseXMLされたテキストノードをappendChildしようとするとエラーになる</h3>
+<p>Ajax通信したものをresponseXMLで受け取り、そこからテキストノードを抜き出して、createElementしたコンテナ要素にappendChildしようとすると、IEでは何故かエラーになりました。</p>
+<p style="margin-bottom:0">回避方法：</p>
+<pre><code>// hogeが該当のテキストノード
+var fuga = document.createTextNode(hoge.nodeValue)
+container.appendChild(fuga)</code></pre>
+<p>周りくどいですが、<strong>テキストノードのnodeValue（テキストそのもの）を取り出して改めてcreateTextNodeします</strong>。これだけで解決。</p>
+</div>
+
+<div class="section">
+<h3>table要素をcreateElementする際、子要素にtbodyを作らないとダメ</h3>
+<p>FirefoxとかOperaは、こっちがわざわざ作らなくても仮想的にtbodyを作ってDOMツリーを構成してくれます。だけどIEの場合はtbodyもこっちが作らないとダメ。作らなかった場合は不完全な要素ノードとなるため、appendChildとかしても何も表示されません。</p>
+<p>そんな情報を検索している時に発見した、珍しいメソッドが<code>tBodies[]</code>。</p>
+<div class="section ref">
+<p><strong>tBodies[]</strong><br />
+table要素ノードのメソッド。tbody要素をノードリストで返す。<br />
+<code>tableElement.tBodies[0]</code>みたいにして使います。まぁ、<code>tableElement.getElementsByTagName(&quot;tbody&quot;)[0]</code>と書いても同じなわけですけど・・・。</p>
+<p>参考：<a href="http://msdn2.microsoft.com/en-us/library/ms537490.aspx">tBodies Collection (TABLE) &#8211; MSDN</a></p>
+</div>
+</div>
+
+<div class="section">
+<h3>要素ノードリストのアイテムにインデックス番号を振る際、
+変数に格納した数値を入れるとエラーになることがある</h3>
+<p>解決方法：<br />
+<strong>とりあえずitem()メソッドで書けばOK</strong></p>
+<p>他のコードでも書いてみましたが、エラーが再現できず・・・どういう条件が重なると引き起こるのかよく分かりません。</p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2007/12/11_iedom/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>hasLayout問題を解決するzoom:1;の落とし穴</title>
+		<link>/2007/09/16_zoom1</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 16 Sep 2007 07:13:57 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[IE]]></category>
+		<guid isPermaLink="false">/wptest/2007/09/haslayout%e5%95%8f%e9%a1%8c%e3%82%92%e8%a7%a3%e6%b1%ba%e3%81%99%e3%82%8bzoom1%e3%81%ae%e8%90%bd%e3%81%a8%e3%81%97%e7%a9%b4.php</guid>
+
+					<description><![CDATA[スタイルリセットの段階でzoom:1;を書いてしまうと、IEにおいてfloatが意図しないところでclearされてしまうことがあります。制作チーム全員がこの挙動を理解することが必須となるので、複数人でチームを組んで制作・運営をしている大規模サイトの制作においては、スタイルリセットにzoom:1;を組み込むべきではない、と言えます。 <a href="/2007/09/16_zoom1">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><abbr title="Internet Explorer">IE</abbr>のヘンテコな<abbr title="Cascading Style Sheets">CSS</abbr>解釈の原因と言われる<a href="http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/reference/properties/hasLayout.asp">hasLayout</a>プロパティ。<br />
+どうやらこのhasLayoutプロパティの値がfalse（デフォルト値）の場合に、いろいろとまずいことが起こるようです。<abbr title="Internet Explorer">IE</abbr>だけfloatした要素周辺のmarginやpaddingがおかしかったり、相対配置/絶対配置した要素がどこかに消えてしまったりする・・・という経験はcssレイアウトの際に誰もがぶつかる問題です。</p>
+
+<p>また、hasLayoutがTrueとFalseの要素が混在している場合には、<em><abbr title="Internet Explorer">IE</abbr>7のズーム機能を利用した際に、隣あった要素が重なってしまったりします</em>。<br />
+この辺は<a href="http://coliss.com/">コリス</a>さんの<a href="http://coliss.com/articles/build-websites/operation/css/143.html">IEでのCSSのバグを回避するhasLayout</a>に分かりやすい説明があります。</p>
+
+<p>このhasLayoutの問題を解決するためにzoomプロパティが利用されることがあります。（zoomプロパティは<abbr title="Internet Explorer">IE</abbr>の独自拡張であるため、これを使うこと自体どうか、という意見もありますがここでは触れません）<br />
+具体的には次のように、</p>
+
+<pre><code>* {
+margin: 0;
+padding: 0;
+zoom: 1;
+}</code></pre>
+
+<p>ユニバーサルセレクタに指定したり、</p>
+
+<pre><code>body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+margin:0;
+padding: 0;
+zoom:1;
+}</code></pre>
+
+<p>などとして、ブラウザスタイルをリセットする際に同時に指定するのが一般的なようです。しかし、<code>zoom:1;</code>をli要素に指定してしまうと<a href="http://blog.ikesai.com/log/2007/06/zoom.html" title="全称セレクタにzoomを使うとバグる：Blog --- WEBデザインのリンク集 : ikesai.com">マーカーの表示がおかしくなってしまう問題があります</a>。<br />
+これに対しては</p>
+
+<pre><code>li {zoom: normal;}</code></pre>
+
+<p>としてzoomプロパティの値をデフォルトに戻すことで対処をできるようです。</p>
+
+<p>ここまでは前提で、本題はここからです。</p>
+
+<p>そんなわけで実際に業務で、スタイルリセットに<code>zoom:1;</code>を導入してみたのですが、さらなる落とし穴があることに気づいてしまいました。<br />
+<a href="http://stopnlisten.no.land.to/">STOPN&#8217; LISTEN</a>さんの<a href="http://stopnlisten.no.land.to/2006/11/ie7clearfixclear.html">clearfixに関するの記事</a>をご覧いただくとお分かりになると思うのですが・・・そうです。<code>zoom:1;</code>はclearfixにも使われるのです。</p>
+
+<p>つまり、何でもかんでもzoom:1;にしてしまうと、<strong>floatが意図しないところでclearされてしまう恐れがあります</strong>。具体的には次の図のような例で、問題が起こります。</p>
+
+<p class="example" style="width:350px;"><img decoding="async" src="/img/2007/09/16_example01.gif" alt="図: *{zoom:1}で問題の起こるレイアウトの例" width="350" height="150" /></p>
+
+<div class="section">
+<h3><abbr title="Extensible HyperText Markup Language">XHTML</abbr>のコード</h3>
+<pre><code>&lt;p&gt;&lt;img src=&quot;/img/2007/09/16_example_img.gif&quot; alt=&quot;画像&quot; width=&quot;120&quot; height=&quot;90&quot; class=&quot;photo&quot; /&gt; 段落1テキスト段落1テキスト段落1テキスト段落1テキスト段落1テキスト段落1テキスト段落1テキスト段落1テキスト段落1テキスト&lt;/p&gt;
+&lt;p&gt;段落2テキスト段落2テキスト段落2テキスト段落2テキスト段落2テキスト段落2テキスト段落2テキスト段落2テキスト段落2テキスト&lt;/p&gt;</code></pre>
+</div>
+
+<p>最初の段落に含まれている画像に対してfloat:leftを指定し、本文を右側に回りこませているという、何の変哲もないレイアウトです。<em>回り込んでいる本文が途中で段落分けされていることがポイントです</em>。<br />
+ここで<code>* {zoom: 1;}</code>を指定すると、以下の図のようになります。</p>
+
+<p class="example" style="width:350px;"><img loading="lazy" decoding="async" src="/img/2007/09/16_example02.gif" alt="図: *{zoom:1}でレイアウトに問題が起こった状態の例" width="350" height="160" /></p>
+
+<p><a href="/2007/09/16_zoom1_sample.html">図と同じサンプルページも用意しました（<abbr title="Internet Explorer">IE</abbr>6/7で見てくださいね）。</a></p>
+
+<p><em>段落分けされた途端、clearされてしまっている</em>のがお分かりになるかと思います。これは<em>p要素に対して<code>zoom:1;</code>が効いている</em>からです。これを回避するには<em><code>p {zoom:normal;}</code>のようにしてデフォルトの値を上書きする</em>しかありません。個人的にこれは全くナンセンスだと思うのですが・・・。</p>
+
+<p>スタイルリセットの段階で<code>zoom:1;</code>を指定してしまうと、そのサイトのコンテンツは全てがこの挙動になってしまいます。</p>
+
+<p>サイトをリニューアルする際に<code>zoom:1;</code>を新たに導入する、という場合には注意が必要です。今まで正常に表示されていたコンテンツが、先述の例のようにレイアウトが変わってしまうことがあるからです。</p>
+
+<p>サイトを一人で制作し運営していく分には、この挙動を理解した上で制作をすることになるので、全く問題はないと思います。しかし、複数人でチームを組んで一つのサイトを制作・運営する場合には状況が違います。<br />
+制作チーム全員がこの挙動を理解することが必須となるのです。人数の多いチームともなると、これはなかなかに簡単なことではありません。</p>
+
+<p>よって、複数人でチームを組んで制作・運営をしている大規模サイトの制作においては、<strong>スタイルリセットに<code>zoom:1;</code>を組み込むべきではない</strong>、と言えます。</p>
+
+<p>ただ、やはり<code>zoom:1;</code>の便利さは捨てがたいものがあります。idセレクタや子孫セレクタなどを使用して、<strong>特定の領域にだけ限定的に利用する</strong>分には問題はないでしょう。</p>
+
+<p><code>zoom:1;</code>は便利ですが<em>ご利用は計画的に</em>ということです。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>IEの独自拡張を逆手に取って</title>
+		<link>/2007/03/28_msie</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 28 Mar 2007 13:51:40 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[IE]]></category>
+		<guid isPermaLink="false">/wptest/2007/03/ie%e3%81%ae%e7%8b%ac%e8%87%aa%e6%8b%a1%e5%bc%b5%e3%82%92%e9%80%86%e6%89%8b%e3%81%ab%e5%8f%96%e3%81%a3%e3%81%a6.php</guid>
+
+					<description><![CDATA[IEの独自拡張を逆手に取ったコーディングができるようになると、また一味も二味もコーディングの奥深さが違ってくるでしょうね。ただ、独自拡張を使っていくと、W3Cの仕様的にはValidではなくなってしまう点に注意です。 <a href="/2007/03/28_msie">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://css-happylife.com/">CSS HappyLife</a>さんでまた気になる記事を見つけました。</p>
+
+<p class="ref"><cite><a href="http://css-happylife.com/log/bug/000095.shtml"><abbr title="Internet Explorer">IE</abbr>の様々なバグの真相らしきもの</a></cite></p>
+
+<blockquote cite="http://css-happylife.com/log/bug/000095.shtml">
+<p>ソレはhasLayoutというIE独自拡張の一つ。</p>
+<p>・・・中略・・・</p>
+<p>その結果、hasLayoutがIEの様々なバグの元凶（大袈裟？）だったみたいです。</p>
+<p>hasLayoutは、ソコにレイアウトが有るのか無いのかってのを判断しているようで、デフォルトの値がfalseでレイアウト無しになっているので「背景色が指定された要素内でfloatがある時、要素内の文字が消える」とかって現象が起こるっぽいです。</p>
+<p>そして、heightやwidthを指定することでトリガーとなりhasLayoutの値がtrueになり、レイアウトが有るとみなされ表示されるようになると。</p>
+</blockquote>
+
+<p>うへぇー、なるほど。記事内でのお言葉をそのまま使わせていただくと、超<abbr title="Good Job">GJ</abbr>な記事ですよ。目からウロコ落ちまくり。こういった<abbr title="Internet Explorer">IE</abbr>の独自拡張を逆手に取ったコーディングができるようになると、また一味も二味もコーディングの奥深さが違ってくるでしょうね。ただ、独自拡張を使っていくと、<abbr title="World Wide Web Consortium">W3C</abbr>の仕様的にはValidではなくなってしまう点に注意です。</p>
+
+<p>CSS HappyLife 管理人さんがおっしゃる通り、<abbr title="Internet Explorer">IE</abbr>ではこれが仕様だということでしょう。少なくとも、私はそう解釈することで少しでも納得するようにしています。「バグ」と言ってしまうと、プログラム開発者の想定の範囲外で発生する不具合のことであり、ユーザーとしてはそれに遭遇したが最後、どうしようもないわけですから。</p>
+
+<p>Web標準化という大きな流れの中で、Microsoftの独自仕様が鼻に付くようになった、という解釈で良いのではないかと思います。（<abbr title="Internet Explorer">IE</abbr>7のリリースによってMicrosoftもWeb標準に大きく歩み寄ったわけですが）</p>
+
+<p>その記事からリンクのあったMSDN（英語）のリファレンス、ちょっと覗いて見ただけですが、かなりすごいです。天下のMicrosoftだけありますね。</p>
+
+<p class="ref"><a href="http://msdn.microsoft.com/library/default.asp?url=/workshop/author/css/reference/css_ref_entry.asp">MSDN <abbr title="Cascading Style Sheet">CSS</abbr> Reference</a></p>
+
+<p>MSDNを本格的に見始めたりなんかしたら、さながらディベロッパーのようです。コーダーという職種は、デザイナーとディベロッパーの調度中間に位置しているような気がします。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>IE の Stand Alone版</title>
+		<link>/2007/03/25_ie_standalone</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 25 Mar 2007 03:52:15 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[IE]]></category>
+		<guid isPermaLink="false">/wptest/2007/03/ie-%e3%81%ae-stand-alone%e7%89%88.php</guid>
+
+					<description><![CDATA[私のWindowsXP環境では<abbr title="Internet Explorer">IE</abbr>7をインストールしてしまっていますが、<abbr title="Internet Explorer">IE</abbr>6と<abbr title="Internet Explorer">IE</abbr>5はStand Alone版をインストールしています。 <a href="/2007/03/25_ie_standalone">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>ブラウジングに利用しているメインブラウザはFirefoxですが、InternetExplorerでのブラウザチェックを欠かすわけにはいきません。私のWindowsXP環境では<abbr title="Internet Explorer">IE</abbr>7をインストールしてしまっていますが、<abbr title="Internet Explorer">IE</abbr>6と<abbr title="Internet Explorer">IE</abbr>5.5のStand Alone版をインストールしています。</p>
+
+<p>これらはevolt.orgというサイトに<a href="http://browsers.evolt.org/">ブラウザのアーカイブがどかーんとアップされている</a>ので、そこからダウンロードすることができます。<abbr title="Internet Explorer">IE</abbr>のStand Alone版は <span class="note">InternetExplorer &gt; 32bit &gt; standalone</span> の順にクリックしていけばあります。ただこのサイト、ところどころエラーが出たまま放置されているようですので、もう先は長くないのかもしれません。今のうちに必要なブラウザをダウンロードしておいた方がいいでしょう。</p>
+
+<p>このStand Alone版、本当にサイトの表示チェックしかできません。お気に入りは使えない、Cookieも使えない、印刷もできない（印刷プレビューも表示されない）という・・・。公式なものではないだけに仕方ないところでしょうか。ただ、印刷プレビューができないのは痛いところです。「<abbr title="Internet Explorer">IE</abbr>6で印刷するとレイアウトが崩れるんだけど・・・」などというクレームが来た日には、面倒なことになります・・・。</p>
+
+<p>また、このStand Alone版の他に <a href="http://tredosoft.com/Multiple_IE">Install multiple versions of IE on your PC</a> というものがあります。こちらはインターフェイスが全て英語になります。また環境によっては<abbr title="Internet Explorer">IE</abbr>3、<abbr title="Internet Explorer">IE</abbr>4はうまく動かないようです（私の環境もそうでした）。</p>
+
+<p class="lastChild">恥ずかしながら、自宅にMac機がありません。そのうちIntelMacを買って<a href="http://www.proton.co.jp/products/parallels-mac/">Parallels</a>を入れてブラウザチェック環境は完璧だ、イヒヒ・・・などと妄想していたりするのですが・・・。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

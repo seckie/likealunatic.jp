@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>VMWareFusion &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/vmwarefusion/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:13:52 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>VMWareFusion &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>modern.IE×VMWareFusion 試してみた</title>
+		<link>/2013/04/modernie</link>
+					<comments>/2013/04/modernie#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sat, 13 Apr 2013 06:24:23 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[modern.IE]]></category>
+		<category><![CDATA[VMWareFusion]]></category>
+		<guid isPermaLink="false">/?p=1002</guid>
+
+					<description><![CDATA[modern.IE×VMWareFusion 試してみた <a href="/2013/04/modernie">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2013/04/modernie.png" alt="modern.ie" width="600" height="440" class="alignnone size-full wp-image-1003" srcset="/wp-content/uploads/2013/04/modernie.png 600w, /wp-content/uploads/2013/04/modernie-300x220.png 300w, /wp-content/uploads/2013/04/modernie-409x300.png 409w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+
+<p>最初に言ってしまえば、以下の記事をまず読もう。導入手順が詳しく書いてあります。ありがとうございます。
+<a href="http://design-spice.com/2013/04/03/mac-ie-test/">http://design-spice.com/2013/04/03/mac-ie-test/</a></p>
+
+<p><a href="http://www.modern.ie/ja">http://www.modern.ie/ja</a> にアクセスし、<br />
+仮想環境 ＞ Download a Virtual Machine. For Mac, Linux, or Windows. ＞ Get the VM ＞ 目的のOS→Mac ＞ プラットフォーム→VMWareFusion で目的のOSのファイルをダウンロード。ダウンロードした.sfxファイルをターミナルから</p>
+
+<pre><code>$ chmod +x DOWNLOADED_FIKE.sfx
+$ ./DOWNLOADED_FIKE.sfx
+</code></pre>
+
+<p>と実行すると、解凍されてディスクイメージファイルができる。<br />
+で、そのファイルをVMWare Fusionで開いたら実行できた。<a href="http://blog.reybango.com/2013/02/04/making-internet-explorer-testing-easier-with-new-ie-vms/">詳細はこちらにて</a></p>
+
+<p>以下、気づいたこととか。</p>
+
+<ul>
+<li>Windows XPでの英語以外のLanguage Packはサポートされない。（アクティベーションしないと入れられないため）
+
+<ul>
+<li>参考1： <a href="http://blog.reybango.com/2013/02/04/making-internet-explorer-testing-easier-with-new-ie-vms/comment-page-1/#comment-127134">http://blog.reybango.com/2013/02/04/making-internet-explorer-testing-easier-with-new-ie-vms/comment-page-1/#comment-127134</a></li>
+<li>参考2： <a href="http://blog.reybango.com/2013/02/04/making-internet-explorer-testing-easier-with-new-ie-vms/comment-page-1/#comment-127136">http://blog.reybango.com/2013/02/04/making-internet-explorer-testing-easier-with-new-ie-vms/comment-page-1/#comment-127136</a></li>
+</ul></li>
+<li>よってWindowsXP VMはOSレベルで日本語のテキストを表示することができないようだ（なんか惜しい。。）</li>
+<li>Wiondows Updateはできるが、UpdateかけるとIE8がインストールされる。（しかし落ち着いて、コントロールパネルからアンインストールすべし）</li>
+<li><a href="http://blog.reybango.com/2013/02/04/making-internet-explorer-testing-easier-with-new-ie-vms/">公式の人のブログ</a>では<strong>Windows Updateをかけることと、ウィルス対策プログラムを入れることを強く推奨してる</strong></li>
+<li>アクティベーションの関係で一定期間経ったら使えなくなるので、ダウンロード＆インストールしなおす必要あり</li>
+<li>Windows XPのVMは90日で期限切れになる</li>
+<li>Windows VISTA以降のVMは30日で期限切れ。コマンドラインで“slmgr –rearm“ を実行すれば2回、期間を延長可能。計90日使える。</li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2013/04/modernie/feed</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

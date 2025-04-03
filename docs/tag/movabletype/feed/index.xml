@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>MovableType &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/movabletype/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:18:24 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>MovableType &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>[MT]値に日本語が含まれるかどうか判別して条件分岐する</title>
+		<link>/2010/04/mt_regex</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 08 Apr 2010 07:13:25 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<guid isPermaLink="false">/?p=639</guid>
+
+					<description><![CDATA[記事のタイトルが斜体になっているデザインを実装する際、試行錯誤してみた話。 日本語が斜体になると激しく読みにくいので、日本語が含まれている場合は通常の字体で表示したい。そこで慣れない正規表現を使って頑張ってみました。 日本語が斜体になるとどうなるか　# ←読みにくい 日本語が斜体になるとどうなるか　# ←こっちのが当然読みやすい &#60;$mt:EntryTitle setvar=&#34;entry_title&#34;$&#62; &#60;mt:If test=&#34;$entry_title =~ /[^\w\s\-\&#38;\;\:\@\&#124;\\\/\=\(\)\'\%\$\#\!\[\]\{\}\`\*\+\?\&#60;\&#62;]+/&#34;&#62; &#60;$mt:Var name=&#34;entry_title&#34;$&#62; &#60;mt:Else&#62;&#60;i&#62;&#60;$mt:Var name=&#34;entry_title&#34;$&#62;&#60;/i&#62; &#60;/mt:If&#62; 日本語自体を正規表現ではマッチさせることができないので、あらゆるアスキー文字の否定（ある文字以外の文字）という形でマッチさせてみました。マッチすると通常のMTタグが出力され、マッチしないと&#60;i&#62;で囲まれたMTタグが出力されます。 しかし、我ながら稚拙な書き方だと思いますし、これで例外なく正しくマッチできているのかは自信がありません。。。きっともっとスマートなやり方はあるはずです。 ちなみにtestモディファイアは中にPerlの式を書くことができるモディファイアです。 &#60;mt:If&#62;に仕込んでBool値が返るPerl式を記述しておけば、TRUEが返ったときに中身を実行させることができます。]]></description>
+										<content:encoded><![CDATA[<p>記事のタイトルが斜体になっているデザインを実装する際、試行錯誤してみた話。</p>
+
+<p>日本語が斜体になると激しく読みにくいので、日本語が含まれている場合は通常の字体で表示したい。そこで慣れない正規表現を使って頑張ってみました。</p>
+
+<blockquote><p><i>日本語が斜体になるとどうなるか</i>　# ←読みにくい</p>
+<p>日本語が斜体になるとどうなるか　# ←こっちのが当然読みやすい</p>
+</blockquote>
+
+<pre><code>&lt;$mt:EntryTitle setvar=&quot;entry_title&quot;$&gt;
+&lt;mt:If test=&quot;$entry_title =~ /[^\w\s\-\&amp;\;\:\@\|\\\/\=\(\)\'\%\$\#\!\[\]\{\}\`\*\+\?\&lt;\&gt;]+/&quot;&gt;
+&lt;$mt:Var name=&quot;entry_title&quot;$&gt;
+&lt;mt:Else&gt;&lt;i&gt;&lt;$mt:Var name=&quot;entry_title&quot;$&gt;&lt;/i&gt;
+&lt;/mt:If&gt;</code></pre>
+
+<p>日本語自体を正規表現ではマッチさせることができないので、あらゆるアスキー文字の否定（ある文字以外の文字）という形でマッチさせてみました。マッチすると通常のMTタグが出力され、マッチしないと<code>&lt;i&gt;</code>で囲まれたMTタグが出力されます。<br />
+しかし、我ながら稚拙な書き方だと思いますし、これで例外なく正しくマッチできているのかは自信がありません。。。きっともっとスマートなやり方はあるはずです。</p>
+
+<p>ちなみに<a href="http://www.movabletype.jp/documentation/appendices/tags/if.html"><code>test</code>モディファイア</a>は中にPerlの式を書くことができるモディファイアです。<br />
+&lt;mt:If&gt;に仕込んでBool値が返るPerl式を記述しておけば、TRUEが返ったときに中身を実行させることができます。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>WinXPローカルでXAMPPを使ってMovable Typeを動かす―2010年3月版 その3</title>
+		<link>/2010/03/xampp_and_mt_3</link>
+					<comments>/2010/03/xampp_and_mt_3#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 14 Mar 2010 03:42:15 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[ImageMagick]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<category><![CDATA[XAMPP]]></category>
+		<guid isPermaLink="false">/?p=629</guid>
+
+					<description><![CDATA[AMPPでMovable Typeを動作させるチュートリアルの第3弾です。今回はImageMagickのインストールと、MovableTypeのインストールを扱い、全3回の記事の最後とします。 <a href="/2010/03/xampp_and_mt_3">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>XAMPPでMovable Typeを動作させるチュートリアルの第3弾です。</p>
+
+<ol>
+<li><a href="/2010/03/xampp_and_mt_1.php">XAMPPのインストール、Apacheの設定</a></li>
+<li><a href="/2010/03/xampp_and_mt_2.php">ActivePerlのインストールと設定、MySQLの設定</a></li>
+<li><em>ImageMagickのインストール、Movable Typeのインストール</em></li>
+</ol>
+
+<p>今回はImageMagickのインストールと、MovableTypeのインストールを扱い、全3回の記事の最後とします。</p>
+
+<ol>
+<li class="step01">
+<p><a href="http://www.imagemagick.org/script/index.php" title="ImageMagick">ImageMagickのダウンロードページ</a>にアクセスし、左に並んでいるメニューの中から「Release→Windows」を選択します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_97.jpg"><img decoding="async" src="/wp-content/uploads/2010/03/20100313_97-150x150.jpg" alt="ImageMagickのダウンロード" title="20100313_97" width="150" height="150" class="alignnone size-thumbnail wp-image-599" /></a></p>
+</li>
+
+<li class="step02">
+<p>「Windows Binary Release」という見出しのページが表示され、ダウンロードできるパッケージの一覧が表示されます。この中から「ImageMagick-6.6.0-3-Q8-windows-dll.exe」を選択します。HTTPとFTPどちらでダウンロードしても構いません。<br />
+<span class="memo"><q>6.6.0-3</q>というところはバージョンを表しているようなので、その時によって最新となるバージョンは異なっているかもしれません。<br />
+また、お使いのマシンが64bitなら「ImageMagick-6.6.0-3-Q16-windows-x64-static.exe」を選んでください。</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_98.jpg"><img decoding="async" src="/wp-content/uploads/2010/03/20100313_98-150x150.jpg" alt="ImageMagickのダウンロード" title="20100313_98" width="150" height="150" class="alignnone size-thumbnail wp-image-600" /></a></p>
+</li>
+
+<li class="step03">
+<p>ダウンロードしたインストーラーファイルを実行します。インストールウィザードが始まります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_99.jpg"><img decoding="async" src="/wp-content/uploads/2010/03/20100313_99-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_99" width="150" height="150" class="alignnone size-thumbnail wp-image-601" /></a></p>
+</li>
+
+<li class="step04">
+<p>ライセンスを読み、「I accept the agreement（ライセンスに同意）」を選択して「Next」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_100.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_100-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_100" width="150" height="150" class="alignnone size-thumbnail wp-image-602" /></a></p>
+</li>
+
+<li class="step05">
+<p>「information」が表示されるので適当に読んで「Next」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_101.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_101-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_101" width="150" height="150" class="alignnone size-thumbnail wp-image-603" /></a></p>
+</li>
+
+<li class="step06">
+<p>インストールするディレクトリを選択する画面になります。適当に変更しても構いませんが、今回はあえてデフォルトのままでいきます。「Next」をクリックします。<br />
+<span class="memo">「Program Files」というようにディレクトリ名に半角スペースが入ると、この後のPerlとの連携でダメになりそうな気がするのですが・・・意外にも大丈夫なんですね。</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_102.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_102-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_102" width="150" height="150" class="alignnone size-thumbnail wp-image-604" /></a></p>
+</li>
+
+<li class="step07">
+<p>スタートメニューになんという名前で登録されるかを設定する画面になります。特に変更せず「Next」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_1031.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_1031-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_103" width="150" height="150" class="alignnone size-thumbnail wp-image-606" /></a></p>
+</li>
+
+<li class="step08">
+<p>インストールの追加オプションを選択する画面になります。ここで忘れずに<strong>「Install PerlMagick for ActiveState Perl v5.10.1 build 1007」を選択します。</strong>これでActivePerlと連携するためのPerlモジュールが一緒にインストールされます。「Next」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_104.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_104-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_104" width="150" height="150" class="alignnone size-thumbnail wp-image-607" /></a></p>
+</li>
+
+<li class="step09">
+<p>これでインストールのための設定は終わりとなります。「Install」をクリックしてしばらく待ちます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_105.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_105-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_105" width="150" height="150" class="alignnone size-thumbnail wp-image-608" /></a></p>
+</li>
+
+<li class="step10">
+<p>もう一度「Information」が表示されます。「Next」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_106.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_106-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_106" width="150" height="150" class="alignnone size-thumbnail wp-image-609" /></a></p>
+</li>
+
+<li class="step11">
+<p>これでインストールは完了となります。「Finish」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_107.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_107-150x150.jpg" alt="ImageMagickのインストールウィザード" title="20100313_107" width="150" height="150" class="alignnone size-thumbnail wp-image-610" /></a></p>
+</li>
+
+<li class="step12">
+<p>さて、正しくインストールできたかどうか、mt-check.cgi（<a href="/2010/03/xampp_and_mt_2.php">前回</a>までの設定を正しく行っていれば <a href="http://site1.localhost/mtos/mt-check.cgi">http://site1.localhost/mtos/mt-check.cgi</a> というURL）にブラウザでアクセスしてみましょう。すると、<q>perl.exe &#8211; コンポーネントが見つかりません</q>というアラートが表示され、正しく実行できなくなっています。さきほどインストールしたImageMagickのdllファイルを呼び出そうとして、失敗していることが分かります。これはImageMagickインストール時に設定された環境変数が、まだシステムに認識されていないために起こる問題なので、Windowsを再起動することで解決します。作業を中断し、ひとまず一旦再起動です。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_108.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_108-150x121.jpg" alt="エラーメッセージ「perl.exe - コンポーネントが見つかりません。 CORE_RL_magick_.dllが見つからなかったため、このアプリケーションを開始できませんでした。アプリケーションをインストールし直すとこの問題は解決される場合があります。」" title="20100313_108" width="150" height="121" class="alignnone size-thumbnail wp-image-611" /></a></p>
+</li>
+
+<li class="step13">
+<p>Windowsが起動したら、忘れずにApacheとMySQLを起動しましょう。デスクトップに追加されたショートカットやスタートメニューから「XAMPP Control Panel」を起動し、ApacheとMySQLの「Start」ボタンをクリックし、「Running」状態にします。<br />
+<span class="memo">ApacheやMySQLをシステムの「サービス」として登録するとWindowsが起動すると同時にこれらも起動するようになりますが、今回はこの設定は行いません。</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_110.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_110.jpg" alt="XAMPPコントロールパネルを起動する" title="20100313_110" width="182" height="113" class="alignnone size-full wp-image-612" /></a>
+<a href="/wp-content/uploads/2010/03/20100313_111.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_111-150x150.jpg" alt="XAMPPコントロールパネル" title="20100313_111" width="150" height="150" class="alignnone size-thumbnail wp-image-613" /></a></p>
+</li>
+
+<li class="step14">
+<p>改めてmt-check.cgiにブラウザでアクセスします。「Image::Magick」項目の黄色いエラー表示が消えていることを確認します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_112.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_112-150x150.jpg" alt="mt-check.cgiにブラウザでアクセス" title="20100313_112" width="150" height="150" class="alignnone size-thumbnail wp-image-605" /></a></p>
+</li>
+
+<li class="step15">
+<p>これでMovable Typeを使う準備がようやく整いましたので、早速インストールを行いましょう。MovableType（ここではMTOS 5.01）のファイルを保存したディレクトリ（<a href="http://site1.localhost/mtos/">http://site1.localhost/mtos/</a>）にブラウザでアクセスし、「サインイン」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_113.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_113-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_113" width="150" height="150" class="alignnone size-thumbnail wp-image-615" /></a></p>
+</li>
+
+<li class="step16">
+<p>するとmt-wizard.cgiというプログラムが実行され、インストールウィザードが始まります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_114.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_114-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_114" width="150" height="150" class="alignnone size-thumbnail wp-image-616" /></a></p>
+</li>
+
+<li class="step17">
+<p>システムチェックが実行され、<q>必要なPerlモジュールはそろっています。Movable Typeのインストールを続行する準備が整いました。</q>と表示されます。<br />
+と同時に<q>オプションのPerlモジュールのうちいくつかが見つかりませんでした。</q>と表示されます。「オプションモジュールを表示」をクリックするとシステムにインストールされていないモジュールの一覧を見ることができます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_119.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_119-150x150.jpg" alt="" title="20100313_119" width="150" height="150" class="alignnone size-thumbnail wp-image-617" /></a></p>
+</li>
+
+<li class="step18">
+<p>Crypt::DSA や IPC::Run といったPerlモジュールがインストールされていないことが分かりますが、今回は使用することはないので「次へ」進みます。必要な場合は一旦インストールウィザードを中断し、<a href="/2010/03/xampp_and_mt_2.php">前回</a>のようにPPMを使ってインストールするといいでしょう。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_120.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_120-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_120" width="150" height="150" class="alignnone size-thumbnail wp-image-618" /></a></p>
+</li>
+
+<li class="step19">
+<p>データベースの設定の画面となります。「データベースの種類」には「MySQLデータベース（推奨）」を選択しましょう。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_122.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_122-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_122" width="150" height="150" class="alignnone size-thumbnail wp-image-619" /></a></p>
+</li>
+
+<li class="step20">
+<p>データベースの設定項目が出現しますので各項目を以下のように設定し、「接続テスト」をクリックします。</p>
+<dl>
+    <dt>データベースサーバ</dt>
+    <dd><kbd>localhost</kbd></dd>
+    <dt>データベース名</dt>
+    <dd><kbd>mtos5</kbd> <span class="memo">（<a href="/2010/03/xampp_and_mt_2.php">前回</a>作成したMySQLデータベース名）</span></dd>
+    <dt>ユーザ名</dt>
+    <dd><kbd>root</kbd></dd>
+    <dt>パスワード</dt>
+    <dd><a href="/2010/03/xampp_and_mt_1.php">前々回</a>設定したMySQL rootユーザーのパスワード</dd>
+</dl>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_123.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_123-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_123" width="150" height="150" class="alignnone size-thumbnail wp-image-620" /></a></p>
+</li>
+
+<li class="step21">
+<p><q>データベースの設定を完了しました。</q>と表示されます。「次へ」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_124.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_124-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_124" width="150" height="150" class="alignnone size-thumbnail wp-image-630" /></a></p>
+</li>
+
+<li class="step22">
+<p>「メール設定」という画面となりますが、今回は特に設定せず「次へ」をクリック。<br />
+<span class="memo">もし必要となった場合、後で設定できます</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_125.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_125-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_125" width="150" height="150" class="alignnone size-thumbnail wp-image-621" /></a></p>
+</li>
+
+<li class="step23">
+<p>「テンポラリディレクトリの設定」画面となります。テンポラリディレクトリはMovable Typeのシステムが画像などのデータやバックアップデータなどを扱う際、一時的にデータ置き場として利用されるディレクトリです。適当なディレクトリを設定しましょう。ここでは <span class="path">C:\Windows\Temp</span> とし、「次へ」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_126.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_126-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_126" width="150" height="150" class="alignnone size-thumbnail wp-image-614" /></a></p>
+</li>
+
+<li class="step24">
+<p>これでMovableTypeの設定ファイル（mt-config.cgi）が生成され、今まで設定した情報が書き込まれます。mt-config.cgiが正しく生成されたことを確認し、「次へ」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_127.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_127-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_127" width="150" height="150" class="alignnone size-thumbnail wp-image-623" /></a></p>
+</li>
+
+<li class="step25">
+<p>Movable Typeにログインするためのアカウントを作成する画面になります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_128.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_128-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_128" width="150" height="150" class="alignnone size-thumbnail wp-image-624" /></a></p>
+<ul>
+<li>ユーザー名</li>
+<li>表示名</li>
+<li>電子メール</li>
+<li>使用言語</li>
+<li>パスワード</li>
+</ul>
+<p>以上の項目を設定できますが、ログインに使用するのは「ユーザー名」と「パスワード」だけです。<br />
+適当に入力したら「次へ」をクリック。<br />
+<span class="memo">ここで設定する項目は後で変更することができます。</span></p>
+</li>
+
+<li class="step26">
+<p>「最初のウェブサイト」を作成という画面となり、Movable Typeで管理するウェブサイトを設定する画面となります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_129.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_129-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_129" width="150" height="150" class="alignnone size-thumbnail wp-image-625" /></a></p>
+<dl>
+    <dt>ウェブサイト名</dt>
+    <dd><kbd>Site1</kbd><br /><span class="memo">（適当なサイト名）</span></dd>
+    <dt>ウェブサイトURL</dt>
+    <dd><kbd class="url">http://site1.localhost/</kbd><br /><span class="memo">（Movable TypeがインストールされたサイトのURL）</span></dd>
+    <dt>公開パス</dt>
+    <dd><kbd class="path">D:\htdocs\site1</kbd><br /><span class="memo">（Movable Typeがインストールされたサイトのディレクトリ。Windows環境だとディレクトリ区切りがバックスラッシュになりますのでご注意を）</span></dd>
+    <dt>テーマ</dt>
+    <dd>クラシックウェブサイト<br /><span class="memo">（どれでもOKです。選択によって設定されるテンプレートが変更されます）</span></dd>
+    <dt>タイムゾーン</dt>
+    <dd>UTC+9（日本標準時）</dd>
+</dl>
+<p>上記のように設定したら、「インストール」をクリックします。<br />
+<span class="memo">「ウェブサイトURL」と「公開パス」は<a href="/2010/03/xampp_and_mt_1.php">前々回</a>にApacheのバーチャルホスト機能で定義した同サイト内であれば、自由に設定できます。ここではサイトのルートとなるディレクトリを指定しています。</span></p>
+</li>
+
+<li class="step27">
+<p>しばらく待つと、<q>インストールを完了しました！</q>と表示されます。「Movable Typeにサインイン」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_131.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_131-150x150.jpg" alt="Movable Typeのインストールウィザード" title="20100313_131" width="150" height="150" class="alignnone size-thumbnail wp-image-626" /></a></p>
+</li>
+
+<li class="step28">
+<p>これでめでたくMovable Typeがインストールされました。ローカルマシン上で自由に使える開発環境のできあがりです！</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100313_132.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100313_132-150x150.jpg" alt="Movable Typeに初めてサインインしたところ" title="20100313_132" width="150" height="150" class="alignnone size-thumbnail wp-image-622" /></a></p>
+</li>
+</ol>
+
+<p>以上で全3回に渡る記事を終わります。</p>
+
+<p>Apacheのバーチャルホスト設定とhostsファイルの設定をそれぞれ増やせば、管理するサイトを増やしていくこともできます。WindowsユーザーのWebデザイナーやフロントエンドエンジニアが利用するには、十分な環境となるのではないかと思います。欠点を挙げるとすると、「公開パス」でディレクトリ区切りが（Windows環境なので）バックスラッシュになることだったりします。ローカルで開発したものを本番の（Linux系の）サーバーに乗せる、という場合はこの辺りの設定を修正する必要があるということですね。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2010/03/xampp_and_mt_3/feed</wfw:commentRss>
+			<slash:comments>11</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>WinXPローカルでXAMPPを使ってMovable Typeを動かす―2010年3月版 その2</title>
+		<link>/2010/03/xampp_and_mt_2</link>
+					<comments>/2010/03/xampp_and_mt_2#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 09 Mar 2010 15:31:34 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<category><![CDATA[MySQL]]></category>
+		<category><![CDATA[Perl]]></category>
+		<category><![CDATA[XAMPP]]></category>
+		<guid isPermaLink="false">/?p=528</guid>
+
+					<description><![CDATA[3年くらい前に書いたXAMPPとMTの記事に今でもアクセスがそこそこあるので、古い内容を見ていただいてもなぁ・・・と思い、最新の情報で記事を書き直すことにしました。2010年3月7日時点の情報となります。全3記事で、今回第2弾は「ActivePerlのインストールと設定、MySQLの設定」です。 <a href="/2010/03/xampp_and_mt_2">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>前回に引き続き、XAMPPでMovable Typeを動作させるチュートリアルの第2弾です。</p>
+
+<ol>
+<li><a href="/2010/03/xampp_and_mt_1.php">XAMPPのインストール、Apacheの設定</a></li>
+<li><em>ActivePerlのインストールと設定、MySQLの設定</em></li>
+<li><a href="/2010/03/xampp_and_mt_3.php">ImageMagickのインストール、Movable Typeのインストール</a></li>
+</ol>
+
+<p>今回はActivePerlのインストールと設定、MySQLの設定を行います。</p>
+
+<ol>
+<li class="step01">
+<p><a href="http://www.activestate.com/activeperl/">ActivePerl のダウンロードページ</a>にアクセスし「ActivePerl DOWNLOAD NOW」をクリックして次のページに進みましょう。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_51.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_51-150x150.jpg" alt="ActivePerlのダウンロードページ" title="20100310_51" width="150" height="150" class="alignnone size-thumbnail wp-image-560" /></a></p>
+</li>
+
+<li class="step02">
+<p>プラットフォーム別のダウンロードファイルの一覧が表示されます。一番上の<q>Recommended version(s) for your platform</q>にリストアップされている ActivePerl 5.10.1.1007 for Windows (x86) をダウンロードします。<br />
+<span class="memo">お使いのWindowsが64bit版である場合、ActivePerl 5.10.1.1007 for Windows (64-bit, x64) を選択します。</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_52.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_52-150x150.jpg" alt="ActivePerlのダウンロードページ" title="20100310_52" width="150" height="150" class="alignnone size-thumbnail wp-image-561" /></a></p>
+</li>
+
+<li class="step03">
+<p>ダウンロードしたインストーラを実行しましょう。インストールウィザードが開始されます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_53.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_53-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_53" width="150" height="150" class="alignnone size-thumbnail wp-image-562" /></a></p>
+</li>
+
+<li class="step04">
+<p>ライセンス規約に同意（<q>I accept the terms in the License Agreement</q>）を選択し、「Next」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_54.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_54-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_54" width="150" height="150" class="alignnone size-thumbnail wp-image-563" /></a></p>
+</li>
+
+<li class="step05">
+<p>インストールするプログラムと、インストールするディレクトリを設定します。インストールするディレクトリはデフォルトで <span class="path">C:\Perl\</span> になっていますが、これを <span class="path">C:\usr\</span> に変更します。「Browser」をクリック。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_55.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_55-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_55" width="150" height="150" class="alignnone size-thumbnail wp-image-564" /></a></p>
+</li>
+
+<li class="step06">
+<p>ディレクトリの選択画面となるので、「Folder name:」の欄に <span class="path">C:\usr\</span> と入力し、「OK」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_56.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_56-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_56" width="150" height="150" class="alignnone size-thumbnail wp-image-565" /></a></p>
+</li>
+
+<li class="step07">
+<p>「Location:」に <span class="path">C:\urs\</span> が正しく設定されたかを確認し、「Next」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_57.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_57-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_57" width="150" height="150" class="alignnone size-thumbnail wp-image-566" /></a></p>
+</li>
+
+<li class="step08">
+<p>オプションを選択する画面になります。特に変更せず「Next」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_58.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_58-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_58" width="150" height="150" class="alignnone size-thumbnail wp-image-567" /></a></p>
+</li>
+
+<li class="step09">
+<p>これで設定は終わりです。「Install」をクリックしてしばらく待ちます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_59.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_59-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_59" width="150" height="150" class="alignnone size-thumbnail wp-image-570" /></a></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_60.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_60-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_60" width="150" height="150" class="alignnone size-thumbnail wp-image-571" /></a></p>
+</li>
+
+<li class="step10">
+<p>インストールが完了したら、「Finish」をクリックしてインストールウィザードを完了します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_61.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_61-150x150.jpg" alt="ActivePerlのインストールウィザード" title="20100310_61" width="150" height="150" class="alignnone size-thumbnail wp-image-572" /></a></p>
+</li>
+
+<li class="step11">
+<p>さて、<a href="/2010/03/xampp_and_mt_1.php">前回の記事</a>の環境の通り、<span class="path">D:\htdocs\site1</span> というディレクトリを <span class="url">http://site1.localhost/</span> というローカルホストドメインで参照できるようにし、ここで開発を行うことを前提に話を進めましょう。</p>
+<p>サイトのルートディレクトリ（<span class="path">D:\htdocs\site1</span>）に Movable Type（ここではMTOS 5.01） のファイルを展開し、<span class="path">mtos</span> というディレクトリ名をつけます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_134.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_134-150x150.jpg" alt="MTOSのファイルを展開" title="20100310_134" width="150" height="150" class="alignnone size-thumbnail wp-image-569" /></a></p>
+</li>
+
+<li class="step12">
+<p>念のため、インストールしたPerlが正しく動作するか確認してみます。テキストエディタを開いて以下のコードを記述し、<span class="path">C:\test.pl</span> というパスで保存します。（あくまで例です。実際はどんなパスでもOKです）</p>
+<pre><code>#! /usr/bin/perl
+print(&quot;It works!\n&quot;);</code></pre>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_66.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_66-150x150.jpg" alt="Perlのテストプログラムを作成する" title="20100310_66" width="150" height="150" class="alignnone size-thumbnail wp-image-575" /></a></p>
+<p>これをコマンドプロンプト（<a href="#footnote_20100308_1">※1</a>）で以下のように入力し、Enterキーを押して実行します。</p>
+<pre><code>perl c:\test.pl</code></pre>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_63.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_63-150x150.jpg" alt="Perlのテストプログラムをコマンドプロンプトから実行してみる" title="20100310_63" width="150" height="150" class="alignnone size-thumbnail wp-image-573" /></a></p>
+<p>入力の次の行に <q>It works!</q> と表示されれば正しく実行できたということです。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_65.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_65-150x150.jpg" alt="Perlのテストプログラムをコマンドプロンプトから実行してみる" title="20100310_65" width="150" height="150" class="alignnone size-thumbnail wp-image-574" /></a></p>
+<p>ここまでくればMovable TypeのCGIプログラムをひとまず表示はできる環境になっています。（<a href="#footnote_20100308_2">※2</a>）</p>
+</li>
+
+<li class="step13">
+<p><span class="url">http://site1.localhost/mtos/mt-check.cgi</span> にブラウザからアクセスします。ここまでの作業が正しくできていれば、MTのシステムチェック画面が表示されるはずです。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_80.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_80-150x150.jpg" alt="mt-check.cgiでのシステムチェック結果" title="20100310_80" width="150" height="150" class="alignnone size-thumbnail wp-image-576" /></a></p>
+</li>
+
+<li class="step14">
+<p>この時点では <q>Movable Typeの構成ファイルが見つかりませんでした。</q> というメッセージが表示され、まだMovable Typeが正しく動作しないことが分かります。ページをスクロールしていくと、DBD::mysql というPerlモジュールがシステムにインストールされていないことが分かります。これは MySQL データベースを使用するために必要となるモジュールです。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_81.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_81-150x150.jpg" alt="mt-check.cgiでのシステムチェック結果" title="20100310_81" width="150" height="150" class="alignnone size-thumbnail wp-image-568" /></a></p>
+</li>
+
+<li class="step15">
+<p>では DBD::mysql モジュールをインストールしましょう。コマンドプロンプトを起動し、<kbd>ppm</kbd> と入力しEnterキーを押します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_84.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_84-150x150.jpg" alt="コマンドプロンプトでppmを起動する" title="20100310_84" width="150" height="150" class="alignnone size-thumbnail wp-image-578" /></a></p>
+</li>
+
+<li class="step16">
+<p>すると「Perl Package Manager（略称PPM）」が起動します。<q>Synchronizing Database&#8230;（データベースと同期中）</q> とステータス表示されてしばらく固まるので、じっと待ちます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_85.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_85-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_85" width="150" height="150" class="alignnone size-thumbnail wp-image-579" /></a></p>
+</li>
+
+<li class="step17">
+<p>同期が完了して操作できるようになったら、画面左上の「View all packages」アイコンをクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_87.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_87-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_87" width="150" height="150" class="alignnone size-thumbnail wp-image-580" /></a></p>
+</li>
+
+<li class="step18">
+<p>そして画面上部の検索エリアに <kbd>dbd-mysql</kbd> と入力しましょう。すると中央のモジュール一覧に DBD-mysql と表示されるはずです。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_88.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_88-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_88" width="150" height="150" class="alignnone size-thumbnail wp-image-581" /></a></p>
+</li>
+
+<li class="step19">
+<p>リストアップされた DBD-mysql を右クリックし「Install DBD-mysql 4.011 + 」を選択します。これでインストールするモジュールの一覧に登録されます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_89.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_89-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_89" width="150" height="150" class="alignnone size-thumbnail wp-image-582" /></a></p>
+</li>
+
+<li class="step20">
+<p>画面右上の「→（Run marked actions）」アイコンをクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_90.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_90-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_90" width="150" height="150" class="alignnone size-thumbnail wp-image-589" /></a></p>
+<p>すると <q>Ready to install 1 package?</q> とアラート表示されるので「OK」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_91.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_91-150x121.jpg" alt="GUI ppmでインストールの確認アラート" title="20100310_91" width="150" height="121" class="alignnone size-thumbnail wp-image-583" /></a></p>
+</li>
+
+<li class="step21">
+<p>しばらく待つと、DBD::mysqlモジュールのインストールが完了します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_92.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_92-150x150.jpg" alt="GUI ppmの操作画面" title="20100310_92" width="150" height="150" class="alignnone size-thumbnail wp-image-584" /></a></p>
+</li>
+
+<li class="step22">
+<p>もう一度ブラウザで mt-check.cgi にアクセスしてみましょう。<q>サーバーにDBD::mysqlがインストールされています</q> と表示され、エラー表示になっていなければOKです。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_93.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_93-150x150.jpg" alt="mt-check.cgiでのシステムチェック結果" title="20100310_93" width="150" height="150" class="alignnone size-thumbnail wp-image-585" /></a></p>
+</li>
+
+<li class="step23">
+<p>では今度はMySQLの設定を行っていきます。今回インストールするMTOS用のデータベースを作成しましょう。まずXAMPPコントロールパネルでMySQLが「Running」状態になっていることを確認し、「Admin」ボタンをクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_68.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_68-150x150.jpg" alt="XAMPPコントロールパネル" title="20100310_68" width="150" height="150" class="alignnone size-thumbnail wp-image-577" /></a></p>
+</li>
+
+<li class="step24">
+<p>するとブラウザでphpMyAdmin（MySQLデータベースをブラウザから操作できるツール）が開きます。「言語 &#8211; Language」に「日本語 &#8211; Japanese」が設定されていることを確認し、ユーザ名、パスワードを入力してログインしましょう。ここでのユーザ名は <kbd>root</kbd> 、<a href="/2010/03/xampp_and_mt_1.php#20100307_s16">パスワードは前回の記事のStep16</a>でXAMPPの管理画面から設定したパスワードになります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_71.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_71-150x150.jpg" alt="phpMyAdminのログイン画面" title="20100310_71" width="150" height="150" class="alignnone size-thumbnail wp-image-587" /></a></p>
+</li>
+
+<li class="step25">
+<p>phpMyAdminにログインすると、様々なメニューが並んだ画面が表示されます。ページ中ほどにある「新規データベースを作成する」という入力フォームから、今回使用するデータベースを作成しましょう。</p>
+<p>左のフィールドにはデータベース名を入力し（今回は「<kbd>mtos5</kbd>」とします）、隣のプルダウンメニューでデータベースの文字コードを選択します。ここでは「<strong>utf8_general_ci</strong>」を選択してください。このプルダウンメニューが結構長いのですが、一番下の方にあります。そして「作成」ボタンをクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_74.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_74-150x150.jpg" alt="phpMyAdminの操作画面" title="20100310_74" width="150" height="150" class="alignnone size-thumbnail wp-image-588" /></a></p>
+</li>
+
+<li class="step26">
+<p><q>データベース mtos5 を作成しました。</q>　と表示されたら完了です。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100310_75.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100310_75-150x150.jpg" alt="phpMyAdminの操作画面" title="20100310_75" width="150" height="150" class="alignnone size-thumbnail wp-image-586" /></a></p>
+</li>
+</ol>
+
+<p>以上でActivePerlのインストールと設定、MySQLの設定までが完了し、今回の記事はここまでです。次回はImage Magickのインストール、そしていよいよMovable Typeのインストールを取り上げます。</p>
+
+<div class="postscript">
+<ul class="footnote">
+
+<li><a name="footnote_20100308_1" id="footnote_20100308_1">※1</a> コマンドプロンプトは、スタートアップメニューから「ファイル名を指定して実行」（もしくは「Windowsキー + r」）で <kbd>cmd</kbd> と入力してEnterキーを入力すると起動することができます。</li>
+<li><a name="footnote_20100308_2" id="footnote_20100308_2">※2</a> Movable Type を含む、Perl言語で書かれた大抵のCGIプログラムはデフォルトでPerlを <span class="path">/usr/bin/perl</span> というパスで参照するように書かれています。（ファイルの冒頭にPerlのパスが記述されています）Step5～7でActivePerlを <span class="path">C:\usr\</span> というパスを指定してインストールしたことにより、Perl が <span class="path">/usr/bin/perl</span> で参照できるようになります。</li>
+</ul>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2010/03/xampp_and_mt_2/feed</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>WinXPローカルでXAMPPを使ってMovable Typeを動かす―2010年3月版 その1</title>
+		<link>/2010/03/xampp_and_mt_1</link>
+					<comments>/2010/03/xampp_and_mt_1#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sun, 07 Mar 2010 15:16:24 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[apache]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<category><![CDATA[XAMPP]]></category>
+		<guid isPermaLink="false">/?p=478</guid>
+
+					<description><![CDATA[3年くらい前に書いたXAMPPとMTの記事に今でもアクセスがそこそこあるので、古い内容を見ていただいてもなぁ・・・と思い、最新の情報で記事を書き直すことにしました。2010年3月7日時点の情報となります。全3記事で、第1弾は「XAMPPのインストール、Apacheの設定」です。 <a href="/2010/03/xampp_and_mt_1">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p> <a href="/2007/06/04_xampp_mt.php">3年くらい前に書いたXAMPPとMTの記事</a>に今でもアクセスがそこそこあるので、古い内容を見ていただいてもなぁ・・・と思い、最新の情報で記事を書き直すことにしました。2010年3月7日時点の情報となります。</p>
+
+<p>概要は以下となります。</p>
+
+<ul>
+<li>Windows XPのローカル環境にMovable Type 5の開発環境を構築する</li>
+<li>使用するソフトウェアとバージョン（2010年3月時点で最新）<ul>
+    <li><a href="http://www.apachefriends.org/jp/xampp-windows.html">XAMPP for Windows 1.7.3</a></li>
+    <li><a href="http://www.activestate.com/activeperl/">ActivPerl 5.10.1 Build 1007</a></li>
+    <li><a href="http://www.imagemagick.org/">Image Magick 6.6.0 Q8</a></li>
+    <li><a href="http://www.sixapart.jp/movabletype/">Movable Type 5.01</a>（文中の例では<a href="http://www.movabletype.jp/opensource/">MTOS 5.01</a>）</li>
+    </ul></li>
+<li>Apacheのバーチャルホスト機能を使い、複数のサイトを管理できるようにします</li>
+<li>XAMPP内包のPerlは使わず、ActivePerlを使用します</li>
+<li>データベースには、XAMPP内包のMySQLを使用します</li>
+<li>Movable Typeの画像を扱う機能を使うため、Image Magickを導入します</li>
+</ul>
+
+<p>かなり長い記事となってしまうので、3つの記事に分割して投稿します。</p>
+
+<ol>
+<li><em>XAMPPのインストール、Apacheの設定</em></li>
+<li><a href="/2010/03/xampp_and_mt_2.php">ActivePerlのインストールと設定、MySQLの設定</a></li>
+<li><a href="/2010/03/xampp_and_mt_3.php">ImageMagickのインストール、Movable Typeのインストール</a></li>
+</ol>
+
+<p>ではまず「その1」としてXAMPPのインストールから、Apacheの設定までです。</p>
+
+<ol>
+<li class="step01">
+<p class="pic"><a href="http://www.apachefriends.org/jp/xampp-windows.html" title="XAMPP for Windows">http://www.apachefriends.org/jp/xampp-windows.html</a><br />
+<a href="/wp-content/uploads/2010/03/20100307_08.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_08-150x150.jpg" alt="XAMPP for Windowsのサイト" title="20100307_08" width="150" height="150" class="alignnone size-thumbnail wp-image-486" /></a></p>
+<p><a href="http://www.apachefriends.org/jp/xampp-windows.html" title="XAMPP for Windows">XAMPP for Windows ダウンロードページ</a>にアクセスし「XAMPP Windows版 1.7.4, 2009/12/23」のベーシックパッケージをダウンロードします。ここではEXE版を使用します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_09.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_09-150x150.jpg" alt="XAMPP for Windowsのサイト" title="20100307_09" width="150" height="150" class="alignnone size-thumbnail wp-image-487" /></a></p>
+</li>
+
+<li class="step02">
+<p>ダウンロードしたexeファイルを実行しましょう。インストールウィザードが始まります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_10.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_10-150x150.jpg" alt="XAMPP for Windowsのインストールウィザード" title="20100307_10" width="150" height="150" class="alignnone size-thumbnail wp-image-485" /></a></p>
+</li>
+
+<li class="step03">
+<p>「Destination folder」でインストール先のディレクトリを指定することができます。今回はデフォルトの設定（<span class="path">C:\</span>）をそのまま使用します。「Install」をクリックしてしばらく待ちます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_11.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_11-150x150.jpg" alt="XAMPP for Windowsのインストールウィザード" title="20100307_11" width="150" height="150" class="alignnone size-thumbnail wp-image-489" /></a></p>
+</li>
+
+<li class="step04">
+<p>インストール処理が終わると、コマンドプロンプトが立ち上がって初期設定を聞いてきます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_12.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_12-150x150.jpg" alt="コマンドプロンプトでXAMPP for Windowsの初期設定を行っているところ" title="20100307_12" width="150" height="150" class="alignnone size-thumbnail wp-image-490" /></a></p>
+<blockquote>
+<p>「Should I add shortcuts to the startmenu/desktop?」（スタートメニューとデスクトップにショートカットを追加するかい？）</p>
+</blockquote>
+<p>「y」が最初から入力されていますので、そのままEnterを押します。</p>
+</li>
+
+<li class="step05">
+<blockquote>
+<p>「Should I proceed?」（続行する？・・・とかって意味かな）</p>
+</blockquote>
+<p>「y」でEnter。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_13.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_13-150x150.jpg" alt="コマンドプロンプトでXAMPP for Windowsの初期設定を行っているところ" title="20100307_13" width="150" height="150" class="alignnone size-thumbnail wp-image-491" /></a></p>
+</li>
+
+<li class="step06">
+<blockquote>
+<p>「Should I make a portable XAMPP without drive letters?」（ドライブレターを付けないで、XAMPPのポータブル版を作成するかい？）</p>
+</blockquote>
+<p>「n」のままEnter。「y」にするとUSBメモリとかにインストールできるXAMPPのポータブル版になるようですが、それだとドライブレターを付加できないのでWindowsの「サービス」が使えないみたいです。（超適当訳）</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_14.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_14-150x150.jpg" alt="コマンドプロンプトでXAMPP for Windowsの初期設定を行っているところ" title="20100307_14" width="150" height="150" class="alignnone size-thumbnail wp-image-492" /></a></p>
+</li>
+
+<li class="step07">
+<blockquote>
+<p>&#8230;中略<br />
+XAMPP is ready to use.</p>
+</blockquote>
+<p>Enterキーを押します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_16.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_16-150x150.jpg" alt="コマンドプロンプトでXAMPP for Windowsの初期設定を行っているところ" title="20100307_16" width="150" height="150" class="alignnone size-thumbnail wp-image-521" /></a></p>
+</li>
+
+<li class="step08">
+<blockquote>
+<p>「I have set the timezone in &#8216;php.ini&#8217; and &#8216;my.ini&#8217; to &quot;Asia/Tokyo&quot;.<br />
+Yous should correct these values if  my guess was wrong.」<br />
+（php.iniとmy.iniのタイムゾーンを「Asia/Tokyo」に設定したよ。違っていたら修正することができるよ。）</p>
+</blockquote>
+<p>Enterキーを押します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_17.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_17-150x150.jpg" alt="コマンドプロンプトでXAMPP for Windowsの初期設定を行っているところ" title="20100307_17" width="150" height="150" class="alignnone size-thumbnail wp-image-494" /></a></p>
+</li>
+
+<li class="step09">
+<p>これでセットアップは完了となります。「1」を入力してEnterを押します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_19.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_19-150x150.jpg" alt="コマンドプロンプトでXAMPP for Windowsの初期設定を行っているところ" title="20100307_19" width="150" height="150" class="alignnone size-thumbnail wp-image-495" /></a></p>
+</li>
+
+<li class="step10">
+<p>XAMPPのコントロールパネルが起動します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_20.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_20-150x150.jpg" alt="XAMPPのコントロールパネル" title="20100307_20" width="150" height="150" class="alignnone size-thumbnail wp-image-488" /></a></p>
+</li>
+
+<li class="step11">
+<p>ApacheとMySQLの「Start」ボタンをクリックして起動させます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_21.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_21-150x150.jpg" alt="XAMPPのコントロールパネル" title="20100307_21" width="150" height="150" class="alignnone size-thumbnail wp-image-497" /></a></p>
+</li>
+
+<li class="step12">
+<p>Apacheの「Admin」ボタンをクリックします。するとブラウザが立ち上がってXAMPPのスタート画面が表示されます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_22.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_22-150x150.jpg" alt="XAMPPのコントロールパネル" title="20100307_22" width="150" height="150" class="alignnone size-thumbnail wp-image-498" /></a></p>
+</li>
+
+<li class="step13">
+<p>「日本語」をクリックしましょう。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_25.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_25-150x150.jpg" alt="XAMPPの管理画面にアクセス" title="20100307_25" width="150" height="150" class="alignnone size-thumbnail wp-image-499" /></a></p>
+</li>
+
+<li class="step14">
+<p>これがXAMPPの管理画面です。<br />
+一応サーバーソフトウェアなので、万が一のことも考慮して最初にセキュリティの設定を行いましょう。左のメニューから「セキュリティ」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_27.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_27-150x150.jpg" alt="XAMPPの管理画面" title="20100307_27" width="150" height="150" class="alignnone size-thumbnail wp-image-501" /></a></p>
+</li>
+
+<li class="step15">
+<p>最初はなんのセキュリティ対策も施されていない状態なので、5くらいあるステータスが全て「要注意」か「不明」になっています。対策にはXAMPPのツールを使います。ページの中程に<br />
+<a href="http://localhost/security/xamppsecurity.php">http://localhost/security/xamppsecurity.php</a><br />
+というリンクがあるので、クリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_28.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_28-150x150.jpg" alt="XAMPPのセキュリティ管理画面" title="20100307_28" width="150" height="150" class="alignnone size-thumbnail wp-image-502" /></a></p>
+</li>
+
+<li class="step16">
+<p>するとMySQLと、XAMPPのディレクトリにパスワードを設定するためのフォームが現れます。<br />
+「MYSQL項目：&#8221;ROOT&#8221;パスワード」というフォームから、MySQLのrootユーザーのパスワードを設定しましょう。
+なお、（File: <span class="path">C:\XAMPP\security\mysqlrootpasswd.txt</span>）にチェックを入れておくと、変更したパスワードがテキストファイルに書き出されます。万が一パスワードを忘れてしまったときにこれを見ればいい、というわけです。<br />
+<span class="memo">このディレクトリは公開ディレクトリではないので安全なハズ</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_29.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_29-150x150.jpg" alt="XAMPPのセキュリティ管理画面" title="20100307_29" width="150" height="150" class="alignnone size-thumbnail wp-image-496" /></a></p>
+</li>
+
+<li class="step17">
+<p>次に「XAMPPのディレクトリ制御（.htaccess）」でユーザとパスワードを入力します。これで、この管理画面自体にベーシック認証がかかります。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_30.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_30-150x150.jpg" alt="XAMPPのセキュリティ管理画面" title="20100307_30" width="150" height="150" class="alignnone size-thumbnail wp-image-504" /></a></p>
+<p>設定が終わったら、左のメニューの「セキュリティ」をクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_32.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_32-150x150.jpg" alt="XAMPPのセキュリティ管理画面" title="20100307_32" width="150" height="150" class="alignnone size-thumbnail wp-image-505" /></a></p>
+</li>
+
+<li class="step18">
+<p>するとたった今設定したベーシック認証が行われます。ユーザー名とパスワードを入力してログイン。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_33.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_33-150x150.jpg" alt="管理画面にベーシック認証がかかった" title="20100307_33" width="150" height="150" class="alignnone size-thumbnail wp-image-506" /></a></p>
+</li>
+
+<li class="step19">
+<p>今度はセキュリティのステータスの「要注意」が「安全」に変わったことを確認します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_34.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_34-150x150.jpg" alt="XAMPPのセキュリティ管理画面" title="20100307_34" width="150" height="150" class="alignnone size-thumbnail wp-image-507" /></a></p>
+</li>
+
+<li class="step20">
+<p>では実際にWebサーバーのディレクトリにアクセスしてみましょう。ブラウザで、<span class="url">http://localhost/index.html</span> にアクセスします。「It works!」というページが見えたら、正常に動作しています。<br />
+<span class="memo">ちなみに <span class="url">http://localhost/</span> でアクセスしようとすると、XAMPPの管理画面に飛ばされてしまいます。</span></p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_35.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_35-150x150.jpg" alt="http://localhost/index.html にブラウザでアクセス" title="20100307_35" width="150" height="150" class="alignnone size-thumbnail wp-image-508" /></a></p>
+<p>さて、これだけだとWebサーバーを通じて見ることができるのは <span class="path">C:\xampp\htdocs</span> ディレクトリだけです。これをバーチャルホスト機能を使って拡張し、複数のサイトを管理できるように変更します。</p>
+</li>
+
+<li class="step21">
+<p><span class="path">C:\xampp\apache\conf\extra\httpd-vhosts.conf</span> をテキストエディタで開きます。これがバーチャルホスト設定用のファイルです。まず <code>##NameVirtualHost *:80</code> となっている部分の <code>##</code> を削除して、コメントアウトされた状態を解除します。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_37.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_37-150x150.jpg" alt="httpd-vhosts.conf をエディタで開いたところ" title="20100307_37" width="150" height="150" class="alignnone size-thumbnail wp-image-503" /></a></p>
+</li>
+
+<li class="step22">
+<p>このファイルにはコメントアウトされた状態で設定の例文が示されています。このような感じで。</p>
+<pre><code>##&lt;VirtualHost *:80&gt;
+    ##ServerAdmin postmaster@dummy-host2.localhost
+    ##DocumentRoot &quot;C:/xampp/htdocs/dummy-host2.localhost&quot;
+    ##ServerName dummy-host2.localhost
+    ##ServerAlias www.dummy-host2.localhost
+    ##ErrorLog &quot;logs/dummy-host2.localhost-error.log&quot;
+    ##CustomLog &quot;logs/dummy-host2.localhost-access.log&quot; combined
+##&lt;/VirtualHost&gt;</code></pre>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_48.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_48-150x150.jpg" alt="httpd-vhosts.conf ファイルをエディタで編集する" title="20100307_48" width="150" height="150" class="alignnone size-thumbnail wp-image-514" /></a></p>
+<p>ただ、動作させるだけなら <code>DocumentRoot</code>、<code>ServerName</code> を設定するだけで良いようです。仮に <span class="url">site1.localhost</span> というドメインで <span class="path">D:\htdocs\site1</span> ディレクトリを、<span class="url">site2.localhost</span> というドメインで <span class="path">D:\htdocs\site2</span> ディレクトリを参照できるようにしたいとすると、以下のようにファイル末尾に設定を追加します。書き換えたら、上書き保存します。</p>
+<pre><code>&lt;Directory &quot;C:/xampp/htdocs&quot;&gt;
+    Options +ExecCGI
+    AddHandler cgi-script .cgi .pl 
+    order allow,deny
+    Allow from all
+&lt;/Directory&gt;
+&lt;Directory &quot;D:/htdocs&quot;&gt;
+    Options +ExecCGI
+    AddHandler cgi-script .cgi .pl 
+    order allow,deny
+    Allow from all
+&lt;/Directory&gt;
+
+&lt;VirtualHost *:80&gt;
+    DocumentRoot &quot;C:/xampp/htdocs&quot;
+    ServerName localhost
+&lt;/VirtualHost&gt;
+&lt;VirtualHost *:80&gt;
+    DocumentRoot &quot;D:/htdocs/site1&quot;
+    ServerName site1.localhost
+&lt;/VirtualHost&gt;
+&lt;VirtualHost *:80&gt;
+    DocumentRoot &quot;D:/htdocs/site2&quot;
+    ServerName site2.localhost
+&lt;/VirtualHost&gt;</code></pre>
+</li>
+
+<li class="step23">
+<p>今度はそのURLの名前解決をできるようにするための設定を行います。<span class="path">C:\WINDOWS\system32\drivers\etc\hosts</span> （<a href="#footnote_20100307_1">※1</a>）をテキストエディタを開きます。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_44.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_44-150x150.jpg" alt="hostsファイルをエディタで編集する" title="20100307_44" width="150" height="150" class="alignnone size-thumbnail wp-image-511" /></a></p>
+</li>
+
+<li class="step24">
+<pre><code>127.0.0.1 localhost</code></pre>
+となっているところの次に以下の行を追加し、上書き保存します。
+<pre><code>127.0.0.1 site1.localhost
+127.0.0.1 site2.localhost </code></pre>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_45.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_45-150x150.jpg" alt="hostsファイルをエディタで編集する" title="20100307_45" width="150" height="150" class="alignnone size-thumbnail wp-image-512" /></a></p>
+</li>
+
+<li class="step25">
+<p>ここまで行った設定を反映するため、Apacheを再起動します。XAMPPコントロールパネルで Apache の「Stop」ボタンをクリックし、しばらく待ちます。すると左の「Running」表示が消えるので、再度「Start」ボタンをクリックします。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_46.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_46-150x150.jpg" alt="XAMPPコントロールパネルでApacheを再起動" title="20100307_46" width="150" height="150" class="alignnone size-thumbnail wp-image-513" /></a></p>
+</li>
+
+<li class="step26">
+<p>設定したディレクトリにブラウザでアクセスしてみましょう。<span class="path">D:\htdocs\site1\</span> に適当なhtmlファイルを置き、<span class="url">http://site1.localhost/ファイル名</span> としてアクセスし、ページが正常に表示されるか確認します。また、同様に <span class="url">http://site2.localhost/</span> も確認しましょう。</p>
+<p class="pic"><a href="/wp-content/uploads/2010/03/20100307_49.jpg"><img loading="lazy" decoding="async" src="/wp-content/uploads/2010/03/20100307_49-150x150.jpg" alt="バーチャルホストで設定したURLにブラウザでアクセス" title="20100307_49" width="150" height="150" class="alignnone size-thumbnail wp-image-510" /></a></p>
+<p>もしもサーバーエラー画面が表示される場合、httpd-vhosts.conf ファイルの記述が誤っている可能性があります。また、ブラウザのステータスバーに <q>site1.localhost のアドレス解決をしています</q> とか <q>ホストを解決しています</q> とかいうメッセージが表示される場合、hostsファイルの設定が誤っています。それぞれ設定を見直してみましょう。</p>
+</li>
+</ol>
+
+<p>以上でXAMPPのインストールからApacheの設定までが完了です。次回の記事ではActivePerlのインストールと設定、MySQLの設定を取り上げる予定です。</p>
+
+<div class="postscript">
+<ul class="footnote">
+<li><a name="footnote_20100307_1" id="footnote_20100307_1">※1</a> Windows XPの場合。Windows Vistaや7だと、<a href="http://support.microsoft.com/kb/923947/ja">権限の問題で少々めんどくさいみたいです</a>。しかしファイルの置いてある場所は一緒。<span class="path">C:\Windows\System32\drivers\etc\hosts</span> のようですね。</li>
+</ul>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2010/03/xampp_and_mt_1/feed</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>MTのコンテキストについての考察と解説</title>
+		<link>/2009/09/16_mtcontext</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 16 Sep 2009 09:43:23 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<guid isPermaLink="false">/wptest/2009/09/mt%e3%81%ae%e3%82%b3%e3%83%b3%e3%83%86%e3%82%ad%e3%82%b9%e3%83%88%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6%e3%81%ae%e8%80%83%e5%af%9f%e3%81%a8%e8%a7%a3%e8%aa%ac.php</guid>
+
+					<description><![CDATA[MovableTypeのテンプレートを書くにあたってまず理解すべきなのは、MTタグやテンプレートの種類よりも、まずコンテキストなのではないかと思います。このコンテキストについて解説しようと試みます。 <a href="/2009/09/16_mtcontext">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>MovableTypeのテンプレートを書くにあたってまず理解すべきなのは、MTタグやテンプレートの種類よりも、まずコンテキストなのではないかと思います。CSSによるレイアウトを学ぶにあたって、ブロックモデルを理解すべきであるのと一緒です。というわけで、このコンテキストについて解説しようと試みます。</p>
+
+<div class="section">
+<h3>コンテキストとは</h3>
+<p>直訳すれば「文脈」です。ここではテンプレートにおける前後の文脈のことをそう呼びます。自然言語における人間の会話や文章にも前後の文脈というものが存在しますから、会話を例に挙げます。</p>
+<div class="example">
+<dl class="disclist">
+<dt>Aさん：今日は天気がいいですね。</dt>
+<dd>→「今日の天気」のコンテキスト</dd>
+</dl>
+</div>
+<p>MTのテンプレートでは現在のコンテキストに適合しないMTタグを使おうとすると、エラーが出るようになっています。</p>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img loading="lazy" decoding="async" alt="コンテキストに適合しないタグを使おうとするとエラーが出る" src="/images/2009/09/16_mtcontext_1.gif" width="360" height="220" class="mt-image-none" style="" /></span></p>
+<p>人間の会話において、文脈に沿っていない話題や発言をすると会話が成立しなくなるのと同じです。</p>
+<div class="example">
+<dl class="disclist">
+<dt>Aさん：今日は天気がいいですね。</dt>
+<dd>→「今日の天気」のコンテキスト</dd>
+<dt>Bさん：はい、僕はハンバーグが好きです。</dt>
+<dd>→コンテキストに沿っていないのでエラー</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<h3>コンテキストの種類と、テンプレートとの関係</h3>
+<p>MTのコンテキストは大別すると「ブログ記事」・「ブログ記事リスト（アーカイブ）」・「ウェブページ」の3つです。そしてこれはテンプレート一覧の「アーカイブテンプレート」の種類でもあります。これらのテンプレートは、最初から該当のコンテキストを持っており、「ブログ記事」アーカイブは最初から「ブログ記事」コンテキストを持っています。</p>
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/09/16_mtcontext.gif"><img loading="lazy" decoding="async" alt="「アーカイブテンプレート」の一覧の例" src="/images/2009/09/16_mtcontext-thumb-400x118-120.gif" width="400" height="118" class="mt-image-none" style="" /></a></span></p>
+<p>「ブログ記事リスト」では「日付別」・「ユーザー別」・「カテゴリ別」という、大別して3つの分類を「<a href="http://www.movabletype.jp/documentation/designer/archive_mapping.html">アーカイブマッピング</a>」で与えることができます。このテンプレートに該当するコンテキストが与えられるだけでなく、この指定を元にページファイルが生成されます。</p>
+<p>例えば「カテゴリ」アーカイブマッピングを選択したテンプレートでは、最初から「ブログ記事リスト」コンテキストと、「カテゴリ」コンテキストを持ちます。</p>
+</div>
+
+<div class="section">
+<h3>コンテキストの指定方法</h3>
+<p>任意のコンテキストを作り出すために使用するのが<code>MTEntries</code>や、<code>MTArchives</code>、<code>MTPages</code>などのブロックタグです。これらのタグで囲んだ部分はそのタグが表すコンテキストが設定され、指定の回数分繰り返されます。例えば以下の例は、「最新5件の記事のタイトル」を出力します。</p>
+<pre><code>&lt;mt:Entries lastn=&quot;5&quot;&gt;
+&lt;p&gt;&lt;$mt:EntryTitle$&gt;&lt;/p&gt;
+&lt;/mt:Entries&gt;</code></pre>
+<p><code>&lt;mt:Entries&gt;</code>に囲まれた部分が5回繰り返されますが、その内容は「ブログ記事」コンテキストの最新5件であることを<code>&lt;mt:Entries lastn=&quot;5&quot;&gt;</code>が表しています。</p>
+<p>このように、任意のコンテキストを作り出すMTタグは数多く存在しており、その全てはブロックタグです。ブロックタグで囲んだ内容はそのタグの属するコンテキストになる、と覚えておけばよいでしょう。</p>
+</div>
+
+<div class="section">
+<h3>コンテキストは入れ子にできる</h3>
+<p>ブロックタグを入れ子にしたり、特定のアーカイブテンプレート内にブロックタグを記述することによって、コンテキストを入れ子にすることができます。入れ子にしたコンテキストでは、特に指定をしない限り、親のコンテキスト内で対象を絞り込んだものとなります。</p>
+<p>例えば以下は記事ごとに、記事本文に続いてコメント一覧を表示するための記述です。</p>
+<pre><code>&lt;mt:Entries lastn=&quot;5&quot;&gt;
+&lt;div class=&quot;entry&quot;&gt;
+&lt;h3&gt;&lt;$mt:EntryTitle$&gt;&lt;/h3&gt;
+&lt;div class=&quot;entry-body&quot;&gt;
+&lt;$mt:EntryBody$&gt;
+&lt;/div&gt;
+&lt;div class=&quot;comments&quot;&gt;
+&lt;h4&gt;記事へのコメント&lt;/h4&gt;
+&lt;ul&gt;
+&lt;mt:Comments&gt;
+&lt;li&gt;
+&lt;$mt:CommentAuthor$&gt;さんのコメント：&lt;br /&gt;
+&lt;$mt:CommentBody$&gt;
+&lt;/li&gt;
+&lt;/mt:Comments&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/mt:Entries&gt;</code></pre>
+<p><code>&lt;mt:Entries&gt;</code>に<code>&lt;mt:Comments&gt;</code>を入れ子にすることによって、「特定のエントリーへのコメント」に絞り込んで出力させています。なお、特にコンテキストの指定がない状態で<code>&lt;mt:Comments&gt;</code>タグを使用すると、そのブログに対して投稿されたコメント全てが対象となります。</p>
+</div>
+
+<div class="postscript">
+<p>このエントリーの内容はMovableType4（現時点での最新製品版：Version 4.261）におけるものです。まもなく出荷となるMovableType5では<a href="http://www.movabletype.jp/documentation/mt5/about.html">「ウェブサイト」という概念が追加されるそうですし</a>、コンテキストの種類には追加や修正があるかもしれません。</p>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>MTのオペレーションに使うブラウザ：GoogleChrome2→1へのダウングレード</title>
+		<link>/2009/06/22_googlechrome2</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Mon, 22 Jun 2009 13:02:01 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Chrome]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<guid isPermaLink="false">/wptest/2009/06/mt%e3%81%ae%e3%82%aa%e3%83%9a%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ab%e4%bd%bf%e3%81%86%e3%83%96%e3%83%a9%e3%82%a6%e3%82%b6%ef%bc%9agooglechrome2%e2%86%921%e3%81%b8%e3%81%ae%e3%83%80.php</guid>
+
+					<description><![CDATA[GoogleChrome2がMTのオペレーション中によくクラッシュするので、1にダウングレードしてみました。 <a href="/2009/06/22_googlechrome2">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>メインブラウザはFirefox3なのですが、拡張機能をそれなりに入れているのでパフォーマンスは高いとは言えず・・・。<abbr title="MovableType">MT</abbr>のオペレーションには表示が速いGoogleChromeを愛用しています。</p>
+
+<p>ところがこのGoogleChrome、2にバージョンアップしてから、オペレーション中によくクラッシュするようになってしまいました。少なくとも私の環境では。<br />
+発生条件はよく分かりませんが（<a href="#googlechrome2-postscript">※</a>）、ページ遷移をきっかけにハングアップするらしく、こうなると、CPU使用率がグングンあがった状態で一切操作を受け付けなくなります。騙し騙し使っていたのですがもう我慢できなくなり、ダウングレードを決意しました。（他のブラウザを使えばいい話かもしれませんが、Chrome1の環境があまりに快適だったので・・・。）</p>
+
+<p>とは言えひどいことに、Googleでは過去のバージョンを配布するページがありません。調べてみると、以下の記事にたどり着きました。</p>
+
+<p><a href="http://n-yagi.0r2.net/script/2009/06/google_chrome_2.html">Google Chrome バージョン２ アンインストール &#8211; 左脳Script</a></p>
+
+<p>あー、やはり同じような悩みがある人が、いるのですね。どうやら、<a href="http://www.filehippo.com/download_google_chrome/5604/">FileHippo.comにてアーカイブが配布されているようです</a>。</p>
+
+<p>Chrome2をアンインストールして、Chrome1をインストールすると、元の快適な環境に戻りました。めでたしめでたし。</p>
+
+<p>ちなみに、<a href="http://n-yagi.0r2.net/script/2009/06/google_chrome_2.html">左脳Scriptさんでご報告されているように</a>、Chromeをアンインストールした後に以下のような画面がポップアップしてきて、なんでアンインストールしたのかアンケートを入力するように促してきます。入力は任意のようです。</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/06/22_chrome2.gif"><img loading="lazy" decoding="async" alt="Chromeをアンインストールした後に表示されるアンケートフォーム" src="/images/2009/06/22_chrome2-thumb-241x299-62.gif" width="241" height="299" class="mt-image-none" style="" /></a></span></p>
+
+<p>最後に・・・。<br />
+最新版じゃないブラウザを使うということはセキュリティホールも開いてるはずなので、普通のネットサーフィン用途には使わない方が良いです。あくまで特定の用途で使う、という割り切りが必要かと思います。<br />
+って誰に言ってるんでしょうね私は（笑）</p>
+
+<div class="postscript" id="googlechrome2-postscript">
+<p>※もしかしたら職場PCのスペックがショボいことが原因の一つかもしれません。自宅のCore2 Duoマシンではハングアップしたことがないので。</p>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>[memo]MTEntriesタグのlastnモディファイア</title>
+		<link>/2009/05/13_mtentries_lastn</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 13 May 2009 04:12:15 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Memo]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<guid isPermaLink="false">/wptest/2009/05/memomtentries%e3%82%bf%e3%82%b0%e3%81%aelastn%e3%83%a2%e3%83%87%e3%82%a3%e3%83%95%e3%82%a1%e3%82%a4%e3%82%a2.php</guid>
+
+					<description><![CDATA[lastn=&#8221;N&#8221; 出力するブログ記事の件数を制限します。lastn モディファイアは、つねに降順 (新しいものから古いものに並ぶ) で処理します。 &#60;mt:Entries lastn=&#34;5&#34; sort_by=&#34;title&#34; sort_order=&#34;ascend&#34;&#62; サンプルのように、たとえ sort_by モディファイアでタイトル順、かつ、sort_order モディファイアで ascend (昇順) を指定しても、出力する結果は、最新 5 件のブログ記事です。 これは、recently_commented_on モディファイアを同時に設定しているときも同じです。これらは lastn モディファイアと同時に使用しても効果はありません。 MTEntries &#124; テンプレートタグリファレンス ということだそうで、sort_by・sort_order・recently_commented_onモディファイアはlastnモディファイアと同時に指定しても効果がないそうです。これらのモディファイアを使う場合はlastnモディファイアではなくlimitモディファイアと一緒に使いましょう。]]></description>
+										<content:encoded><![CDATA[<blockquote cite="http://www.movabletype.jp/documentation/appendices/tags/entries.html">
+<h3>lastn=&#8221;N&#8221;</h3>
+<p>出力するブログ記事の件数を制限します。lastn モディファイアは、つねに降順 (新しいものから古いものに並ぶ) で処理します。</p>
+<p><code>&lt;mt:Entries lastn=&quot;5&quot; sort_by=&quot;title&quot; sort_order=&quot;ascend&quot;&gt;</code></p>
+<p>サンプルのように、たとえ sort_by モディファイアでタイトル順、かつ、sort_order モディファイアで ascend (昇順) を指定しても、出力する結果は、最新 5 件のブログ記事です。</p>
+<p>これは、recently_commented_on モディファイアを同時に設定しているときも同じです。これらは lastn モディファイアと同時に使用しても効果はありません。</p>
+</blockquote>
+
+<p class="cite"><a href="http://www.movabletype.jp/documentation/appendices/tags/entries.html">MTEntries | テンプレートタグリファレンス</a></p>
+
+<p>ということだそうで、<code>sort_by</code>・<code>sort_order</code>・<code>recently_commented_on</code>モディファイアは<code>lastn</code>モディファイアと同時に指定しても効果がないそうです。これらのモディファイアを使う場合は<code>lastn</code>モディファイアではなく<code>limit</code>モディファイアと一緒に使いましょう。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>PageButeプラグインで静的ページ分割</title>
+		<link>/2009/01/06_pagebute</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 06 Jan 2009 08:09:05 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[MovableType]]></category>
+		<category><![CDATA[Perl]]></category>
+		<category><![CDATA[Plugin]]></category>
+		<guid isPermaLink="false">/wptest/2009/01/pagebute%e3%83%97%e3%83%a9%e3%82%b0%e3%82%a4%e3%83%b3%e3%81%a7%e9%9d%99%e7%9a%84%e3%83%9a%e3%83%bc%e3%82%b8%e5%88%86%e5%89%b2.php</guid>
+
+					<description><![CDATA[MTのアーカイブページを分割するPageButeプラグインを改変し、リンク一覧のリンク番号が降順になるようにしてみました。 <a href="/2009/01/06_pagebute">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>明けましておめでとうございます。<br />
+本年もこのサイトをどうぞよろしくお願いいたします。<br />
+遅ればせながら新年のご挨拶。2009年の初エントリーです。</p>
+
+<p>昨年は転職という大きな転機を迎えましたが無事乗り越え、今に至っております。一昨年に引き続きスクールで講師を務めたり、雑誌に寄稿させてもらうという経験もでき、充実した一年となりました。</p>
+
+<p>さて、年始の挨拶はここまでで・・・ここから本題です。<br />
+昨日MTの案件をやっていたのですが、アーカイブページ分割の作業をすることとなり、いろいろと調べていました。</p>
+
+<p>MTが<code>&lt;MTEntries&gt;</code>で書き出すアーカイブ一覧は、lastnモディファイアなどで設定された値を上限に記事を順番に出力します。ただし、上限値を超える数の記事が登録されていた場合、超えた分の記事は表示されないという不親切な仕様となっています。<br />
+この上限値を超えた分を「次のページへ」などとして参照できるようにするのが<em>ページ分割</em>です。ページ分割を実現するには、専用のプラグインを導入するのが一般的になっています。</p>
+
+<p><a href="http://www.sixapart.jp/movabletype/plugins/mtpaginate.html">MTPaginate</a>プラグインが使えればこのサイトと同じやり方でできるのですが、PHP化はされていないし、商用利用は有料ということでボツに。そこで、<a href="http://www.skyarc.co.jp/engineerblog/entry/2642.html">PageBute</a>プラグイン（現バージョン：3.2.2）を使うことにしました。</p>
+
+<p>このPageButeプラグイン、PHP化していなくても使えるとあって、静的HTMLとしてページを書き出してくれます。例えば「index.html」を分割設定すると、「index_2.html」、「index_3.html」&#8230;というようにページを自動的に増やしてくれるという、素晴らしいプラグインです。</p>
+
+<p>公式ページを見て導入はあっさりできたのですが、シンプルであるが故に任意に設定できる項目が少ない印象を受けました。</p>
+
+<p>このプラグインで書き出す<code>&lt;$MTPageLists$&gt;</code>は、分割後の各ページへのリンク一覧を書き出すMTタグですが、リンクテキストとなるページ番号は必ず昇順（1、2、3&#8230;というように1から始まる）になります。今回の案件ではこの番号を降順（10、9、8&#8230;というように最後の番号から始まる）としなければならなかったので、プラグインを改変して解決しました。</p>
+
+<p class="note">この改変をすると、リンク一覧に並ぶリンクテキスト（ページ番号）が降順になります。<em>順番が入れ替わるのはリンクテキストのみで、記事の並び順自体は変更されません。</em>動作確認をしたのはMovableType 4.23に、改変したPageBute 3.2.2をインストールした環境です。</p>
+
+<p>改変した点は以下の通りです。</p>
+
+<ol class="decimallist">
+<li><p>PageBute.pl の182行目?189行目のforループの部分を以下のように変更</p>
+<pre><code>my $temp_page_count = $lists-&gt;{max_page};
+for (my $i = $lists-&gt;{min_page}; $i &lt;= $lists-&gt;{max_page}; $i++) {
+$page_lists .= $i == $lists-&gt;{min_page} ? '' : $delim;
+$page_lists .= $pb-&gt;{link_start};
+$page_lists .= $i == $page_count
+? "&lt;span class=\"current_page\"&gt;$temp_page_count&lt;/span&gt;"
+: &amp;_create_link($i, $site_url . $filename, $file_ext, $temp_page_count, 'link_page');
+$page_lists .= $pb-&gt;{link_close};
+$temp_page_count--;
+}</code></pre>
+<p>最大ページ数を格納する変数をもう1個作って、ループの度にデクリメントして、リンクの名前として代入してあげます。</p>
+</li>
+<li><p>MTテンプレートの&lt;MTPageContents&gt;タグを以下のように変更。</p>
+<pre><code>&lt;MTPageContents count="10" navi_count="999"&gt;</code></pre>
+<p>countモディファイアには1ページに表示したい数を書きます。navi_countモディファイアはリンク数の上限を表す値です。公式ページには掲載されていないモディファイアですが、改変後はこの値を与えてあげないと特定の条件でうまくいきません。</p>
+</li>
+</ol>
+
+<p>あとは改変後のプラグインをインストールしなおして、該当のアーカイブを再構築すれば完了。</p>
+
+<div class="postscript">
+<p>仕事初めの日からperlを触ったので、これも何かの縁かと考えて今年はperlを学ぼうかと思います。</p>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

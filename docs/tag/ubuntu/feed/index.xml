@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Ubuntu &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/ubuntu/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:17 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Ubuntu &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>VMware Playerのビープ音を止める</title>
+		<link>/2009/11/vmware_beepsound</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2009 02:27:00 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Ubuntu]]></category>
+		<category><![CDATA[VMware]]></category>
+		<guid isPermaLink="false">/wptest/?p=100</guid>
+
+					<description><![CDATA[VMware Player上のUbuntuで、コンソールで操作を誤った際などにパソコン本体から鳴ってしまうビープ音を止める。 <a href="/2009/11/vmware_beepsound">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>こないだインストールしたVMware Player上のUbuntuで、コンソールで操作を誤った際などにパソコン本体からビープ音が鳴ってしまい、鬱陶しいと思っていましたが・・・、ちょっと調べてみたら解決しました。</p>
+
+<p>Google先生で調べて、<a href="http://blogs.yahoo.co.jp/kechi2adomin/19620892.html" title="VMware Playerでビープ音を消す - けち×けち アドミンの覚え書き - Yahoo!ブログ">こちらのページを見つけました。</a><br />
+どうやらこれはサウンドドライバを組み込んでいないと鳴ってしまうとのことですが、preference.iniに<code>mks.noBeep=&quot;TRUE&quot;</code>と書いても解消されませんでしたので、さらに調べてみることに。</p>
+
+<p>今度はVMware側じゃなくて<a href="http://q.hatena.ne.jp/1162559171" title="indowsXPのホームエディションに、VMwarePlayerをインストールしました。 manコマンドで画面をスクロールさせ過ぎたりすると、ビビビーと耳障りなビープ音が鳴ってしまい.. - 人力検索はてな">Ubuntu側での設定方法が書かれたページ</a>を発見。こちらの方法で解決できました。</p>
+
+<p>コンソールを起動して</p>
+
+<pre><code>sudo vi /etc/inputrc</code></pre>
+
+<p>パスワードを聞かれるので、ログインのパスワードを入力。該当のファイルが開くのでVIコマンド <code>/bell-style</code> で文字列検索。頭に<code># </code>とされてコメントアウトされているのでこれをVIコマンドで削除して外す。<code>:wq</code>で保存してVIを終了。</p>
+
+<p>これでUbuntuを再起動させたらビープ音は鳴らなくなりました。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>VMware PlayerでUbuntuを起動すると出るエラー</title>
+		<link>/2009/11/vmware_playerubuntu</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Mon, 02 Nov 2009 12:14:06 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Ubuntu]]></category>
+		<category><![CDATA[VMware]]></category>
+		<guid isPermaLink="false">/wptest/2009/11/vmware-player%e3%81%a7ubuntu%e3%82%92%e8%b5%b7%e5%8b%95%e3%81%99%e3%82%8b%e3%81%a8%e5%87%ba%e3%82%8b%e3%82%a8%e3%83%a9%e3%83%bc.php</guid>
+
+					<description><![CDATA[VMware PlayerからUbuntuを起動する際に出るエラーアラートを、出ないように直してみました。 <a href="/2009/11/vmware_playerubuntu">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>最近VMware Playerを使ってUbuntuを触り始めました。<br />
+Ubuntuの設定や操作について調べたこともポストしていきたいと思います。</p>
+
+<p>とりあえず手始めにVMware PlayerからUbuntuを起動する際に以下のエラーアラートが出るのが気になります。<br />
+<span class="mt-enclosure mt-enclosure-image" style="display: inline;"><a href="/images/2009/11/02_vmwareerror.jpg"><img fetchpriority="high" decoding="async" alt="エラーメッセージ（Ubuntu 8.04 Japanese - VMWare Player）" src="/images/2009/11/02_vmwareerror-thumb-450x112-145.jpg" width="450" height="112" class="mt-image-none" style="" /></a></span></p>
+
+<blockquote><p>この下層マシンで VMware Tools パワーオンスクリプトが正常に実行されませんでした。仮想マシンにカスタムされたパワーオンスクリプトが構成されている場合は、スクリプトにエラーがないか確認してください。それ以外の場合は、サポートにご連絡してください。</p></blockquote>
+
+<p>エラーメッセージでググってみたところ、<a href="http://hatochan.dyndns.org/koedolug/ml/200807.month/23229.html">解決方法を丁寧に解説していらっしゃる</a>方がいましたので、それに乗っ取って解決してみました。ここでは「対策法 4」を取っています。</p>
+
+<ol class="decimallist">
+<li>まず「アプリケーション→アクセサリ→端末」でコンソールを開きます。</li>
+<li><code>ls /etc/vmware-tools/</code> を実行し、該当ディレクトリの中身を（一応）確認</li>
+<li><code>sudo vi -e /etc/vmware-tools/poweron-vm-default</code> を実行。</li>
+<li>パスワードを聞かれるのでログイン中のユーザーのログインパスワードを入力すると、viのファイル編集画面になる</li>
+<li>空のファイルでいいので何も入力せず
+<code>:w</code><br />
+を実行（実際の入力は <code>w&lt;Enter&gt;</code> のみ）してファイルを保存。</li>
+<li><code>:q</code><br />
+で（実際の入力は <code>q&lt;Enter&gt;</code>）ファイル編集を終了。これでコンソールに戻る。</li>
+<li><code>sudo chmod u+x /etc/vmware-tools/poweron-vm-default</code>
+を実行し、先ほどviで作った空のファイルに実行権を付ける。</li>
+<li>もう一度 <code>ls /etc/vmware-tools/</code>
+でファイル一覧を確認すると poweron-vm-default のファイル名の色が変わっていることを確認。（これは現ユーザーが扱えることを表している？）</li>
+</ol>
+
+<div class="section">
+<h3>学んだこと</h3>
+<ul class="disclist">
+<li>コンソールは「アプリケーション→アクセサリ→端末」で起動する</li>
+<li><code>sudo</code>コマンドは続くコマンドをroot権限で実行する</li>
+<li><blockquote cite="https://forums.ubuntulinux.jp/viewtopic.php?pid=1330">
+<p>ubuntuでは原則としてrootでのログインはしないという形が取られています。<br />
+root権限が必要なコマンドを使うときは<br />
+$ sudo hogehoge</p>
+</blockquote>
+<p class="cite"><a href="https://forums.ubuntulinux.jp/viewtopic.php?pid=1330">Ubuntu日本語フォーラム / root権限でのログイン方法が不明</a></p>
+<p>ということだそうで、<code>sudo</code>コマンドを何かと使うことになる模様。</p></li>
+</ul>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

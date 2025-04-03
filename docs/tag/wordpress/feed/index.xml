@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>WordPress &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/wordpress/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:17 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>WordPress &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>WP Pusher による WordPress テーマの自動デプロイ</title>
+		<link>/2017/04/wppusher</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Fri, 14 Apr 2017 10:35:26 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">/?p=1218</guid>
+
+					<description><![CDATA[WP Pusher というプラグインを導入し、GitHub のレポジトリの master ブランチに push したらサイトの WordPress テーマが自動的に更新されるという運用にしてみた。 seckie/likealunatic: Like@Lunatic website source code サイトの静的ファイルがテーマディレクトリの外に散在していた状態だったから、それもできなかったわけだ。今回自作テーマを大幅に整理したことで、テンプレートも静的ファイルもすべて1つのテーマフォルダに収めることができた。（まあ当たり前の状態になったというべきか…） GitHub の Webhooks による自動更新は以前からやりたかったのだが、CI ツールを使ったことのない僕にはハードルが高かった。しかし調べてみると、プラグインでそういうものがある、という情報があった ので導入してみることにした。該当記事の紹介によると、ビルドを Travis CI で行い、その後 dist ブランチに自動的にプッシュ、それを Webhooks で拾って本番にデプロイ、というフローになっている。しかし僕の環境だとビルドはローカルでやっているので Travis CI を使うフローは不要になる。シンプルに GitHub と WP Pusher だけの形で実現できた。 ただしハマったポイントが一つある。 WP Pusher は公式プラグインディレクトリに置いていないので、FTP を使ってアップロードした。すると、該当ファイルとディレクトリのオーナーは当然その FTP ユーザーになる。それによってパーミッションの問題が発生。 このサイトは Nginx + WordPress で動作している。 Nginx を使っている場合、wp-content ディレクトリなどに対して nginx ユーザーに書き込み権限を与えておけば、 WordPress (PHP) から自動更新やらプラグインの追加削除が行えるようになる。そうでない場合、WordPress は FTP 経由でファイルを出し入れしようとして FTP 情報を入力するプロンプト画面を表示する。 WP Pusher による自動デプロイも例外ではなく、パーミッションが適切でないと WordPress がそのページを表示しようとしてしまい、正しく通信できないらしい。 ちなみにエラーは GitHub の 該当 Webhook のページ下方に &#8220;Recent Deliveries&#8221; というセクションがあるのでそこで確認できる。 Webhook を設定すると通信確認のためなのか Recent Deliveries に1つ通信が記録される。それがエラーになっていた場合、Response が &#8220;500&#8221; となっているはず。Body のセクションを確認すると「FTP credentials を入力してください」という感じの HTML が出力されている。 これは正常な状態。 今回のケースでは wp-content 以下すべてのファイル、ディレクトリオーナーを nginx ユーザーに変更したら解決した。 ちなみにこのことは WP Pusher Troubleshooting のページにもちらっと記述があった…。なんだろうこの徒労感。 参考 Github から WordPress のテーマを自動更新するとめちゃくちゃ快適だった。 – Toro&#95;Unit ファイルパーミッションの変更 &#45; WordPress &#8230; <a href="/2017/04/wppusher">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p><a href="http://docs.wppusher.com/">WP Pusher</a> というプラグインを導入し、GitHub のレポジトリの master ブランチに push したらサイトの WordPress テーマが自動的に更新されるという運用にしてみた。</p>
+
+<p><a href="https://github.com/seckie/likealunatic">seckie/likealunatic: Like@Lunatic website source code</a></p>
+
+<p>サイトの静的ファイルがテーマディレクトリの外に散在していた状態だったから、それもできなかったわけだ。今回自作テーマを大幅に整理したことで、テンプレートも静的ファイルもすべて1つのテーマフォルダに収めることができた。（まあ当たり前の状態になったというべきか…）</p>
+
+<p>GitHub の Webhooks による自動更新は以前からやりたかったのだが、CI ツールを使ったことのない僕にはハードルが高かった。しかし調べてみると、<a href="https://torounit.com/blog/2016/01/20/2176/">プラグインでそういうものがある、という情報があった</a> ので導入してみることにした。該当記事の紹介によると、ビルドを Travis CI で行い、その後 dist ブランチに自動的にプッシュ、それを Webhooks で拾って本番にデプロイ、というフローになっている。しかし僕の環境だとビルドはローカルでやっているので Travis CI を使うフローは不要になる。シンプルに GitHub と WP Pusher だけの形で実現できた。</p>
+
+<p>ただしハマったポイントが一つある。</p>
+
+<p>WP Pusher は公式プラグインディレクトリに置いていないので、FTP を使ってアップロードした。すると、該当ファイルとディレクトリのオーナーは当然その FTP ユーザーになる。それによってパーミッションの問題が発生。</p>
+
+<p>このサイトは <a href="https://wpdocs.osdn.jp/Nginx">Nginx + WordPress</a> で動作している。
+Nginx を使っている場合、wp-content ディレクトリなどに対して <strong><code>nginx</code></strong> ユーザーに書き込み権限を与えておけば、 WordPress (PHP) から自動更新やらプラグインの追加削除が行えるようになる。そうでない場合、WordPress は FTP 経由でファイルを出し入れしようとして FTP 情報を入力するプロンプト画面を表示する。<br />
+WP Pusher による自動デプロイも例外ではなく、パーミッションが適切でないと WordPress がそのページを表示しようとしてしまい、正しく通信できないらしい。</p>
+
+<p>ちなみにエラーは GitHub の 該当 Webhook のページ下方に &#8220;Recent Deliveries&#8221; というセクションがあるのでそこで確認できる。
+Webhook を設定すると通信確認のためなのか Recent Deliveries に1つ通信が記録される。それがエラーになっていた場合、Response が &#8220;500&#8221; となっているはず。Body のセクションを確認すると「FTP credentials を入力してください」という感じの HTML が出力されている。</p>
+
+<p><a href="/wp-content/uploads/2017/04/2017-04-14-17.56.49.png"><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2017/04/2017-04-14-17.56.49-300x189.png" alt="GitHub Webhook setting screen" width="300" height="189" class="alignnone size-medium wp-image-1219" srcset="/wp-content/uploads/2017/04/2017-04-14-17.56.49-300x189.png 300w, /wp-content/uploads/2017/04/2017-04-14-17.56.49-768x485.png 768w, /wp-content/uploads/2017/04/2017-04-14-17.56.49-1024x647.png 1024w, /wp-content/uploads/2017/04/2017-04-14-17.56.49-475x300.png 475w, /wp-content/uploads/2017/04/2017-04-14-17.56.49.png 1504w" sizes="(max-width: 300px) 100vw, 300px" /></a><br />
+これは正常な状態。</p>
+
+<p>今回のケースでは wp-content 以下すべてのファイル、ディレクトリオーナーを nginx ユーザーに変更したら解決した。
+ちなみにこのことは <a href="http://docs.wppusher.com/article/30-troubleshooting">WP Pusher Troubleshooting のページにもちらっと記述があった</a>…。なんだろうこの徒労感。</p>
+
+<h2>参考</h2>
+
+<ul>
+<li><a href="https://torounit.com/blog/2016/01/20/2176/">Github から WordPress のテーマを自動更新するとめちゃくちゃ快適だった。 – Toro&#95;Unit</a></li>
+<li><a href="https://wpdocs.osdn.jp/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%91%E3%83%BC%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%A4%89%E6%9B%B4#.E3.83.91.E3.83.BC.E3.83.9F.E3.83.83.E3.82.B7.E3.83.A7.E3.83.B3_777_.E3.81.AE.E5.8D.B1.E9.99.BA.E6.80.A7">ファイルパーミッションの変更 &#45; WordPress Codex 日本語版</a></li>
+<li><a href="http://docs.wppusher.com/article/30-troubleshooting">Troubleshooting &#45; WP Pusher Knowledge Base</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>WordPressに移行</title>
+		<link>/2009/12/wordpress</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 30 Dec 2009 06:07:47 +0000</pubDate>
+				<category><![CDATA[What's New?]]></category>
+		<category><![CDATA[About]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">/wptest/?p=211</guid>
+
+					<description><![CDATA[当サイトのCMSをMTOS4からWordPressに移行しました。 <a href="/2009/12/wordpress">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>当サイトのCMSを<a href="http://www.movabletype.jp/opensource/"><abbr title="Movable Type Open Source">MTOS</abbr></a>4から<a href="http://ja.wordpress.org/">WordPress</a>に移行しました。</p>
+
+<p>今年は仕事において<abbr title="Movable Type">MT</abbr>でサイトを構築する機会に恵まれたおかげもあり、MTはどう使えばいいのか割と勝手がわかってきた、と思っています。それなりにすらすらとテンプレートも書けるようになり、プラグインもこれとこれを使うってやつがある程度決まってきたので、不自由する機会はあまりなくなりました。<br />
+# プラグインを自分で書いて云々っていうレベルには遠く及びませんが</p>
+
+<p>MTがバージョン5になってよりCMSとしてよくなった感があるのだけれど、優等生になってしまった気がしてもう仕事で使えさえすればいいや、という気分になってしまった、と。そこでプライベートではWordPressやろうかってことで移行に至りました。</p>
+
+<p>MTOS４からの移行では、MTOS４から「ブログのエクスポート」を行い、新規インストールしたWordPressのインポート機能で「Movable Type と TypePad」を選択し、記事とコメントのインポートを行いました。</p>
+
+<p>ここでいくつか不都合が発生。</p>
+
+<p>まず1点は、記事毎のパーマリンクの設定（WordPressでは「スラッグ」と呼ぶ）にMTでいう「出力ファイル名（MTEntryBasename）」が引き継がれないこと。「出力ファイル名」の情報は飛んでしまい、代わりにスラッグには記事のタイトルと同じテキストが設定されます。なので記事のタイトルに日本語が使われているとスラッグにも日本語が入ってしまうわけで・・・、パーマリンクの設定をカスタマイズして<code>%postname%</code>を使用していると、URLはかなりひどいことになります。</p>
+
+<p>2点目は「タグ」の設定が引き継がれないこと。WordPressにも「タグ」がありますがここにはMTでいう「キーワード」フィールドの値が引き継がれてしまいました。「タグ」も「キーワード」も役割が似通っているとも言えるのでWordPressではこれを一本化しているのには納得が行きますが、かといってなぜ「タグ（MT）」を「タグ（WordPress）」に引き継がないのか・・・。これは納得がいかない！</p>
+
+<p>このブログは幸いにも（？）記事の総数が大した量ではないため、全て手動で入力しなおすことで解決しましたが。その際、記事一覧の「クイック編集」の機能が重宝しました。これがなかったら嫌になっていたかも・・・。</p>
+
+<p>テーマもオリジナルではなく適当なものを拝借していじったやつだし、まだまだWordPressがなんのこっちゃ分からんという感じなので、ちょっとづつ勉強していきたいと思います。でもまぁ、来年の話ですね（笑）</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

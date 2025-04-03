@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Programming &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/programming/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:15:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Programming &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>JavaScriptの変数についての考察</title>
+		<link>/2011/06/js_variable</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Mon, 06 Jun 2011 11:25:10 +0000</pubDate>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Programming]]></category>
+		<guid isPermaLink="false">/?p=753</guid>
+
+					<description><![CDATA[最近、Code Complete第2版という本を読んでいて、「変数の使用（第10章）」がとても為になる内容だったので、会社のチームメンバーに少しそのことについて話したら、JavaScriptについて興味深い話をすることができた。 <a href="/2011/06/js_variable">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>最近、<a href="http://www.amazon.co.jp/gp/product/489100455X/ref=as_li_qf_sp_asin_tl?ie=UTF8&#038;tag=likealunatic-22&#038;linkCode=as2&#038;camp=247&#038;creative=1211&#038;creativeASIN=489100455X">Code Complete第2版</a><img decoding="async" src="http://www.assoc-amazon.jp/e/ir?t=likealunatic-22&#038;l=as2&#038;o=9&#038;a=489100455X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />という本を読んでいて、「変数の使用（第10章）」がとても為になる内容だったので、会社のチームメンバーに少しそのことについて話したら、JavaScriptについて興味深い話をすることができた。</p>
+
+<p>第10章の内容について、議論の対象となった部分を引用する。</p>
+
+<blockquote>
+<h3>10.3 変数の初期化のガイドライン</h3>
+<h4>変数は最初に使用する場所の近くで初期化する</h4>
+<section>
+<h5>リスト10-2: 悪い初期化（Visual Basic）</h5>
+<pre><code>' すべての変数を宣言する
+Dim accountIndex As Integer
+Dim total As Double
+Dim done As Boolean
+
+' すべての変数を初期化する
+acountIndex = 0;
+total = 0.0
+done = False
+...
+
+' accountIndexを使用するコード
+...
+
+' totalを使用するコード
+...
+
+' doneを使用するコード
+While Not done
+...</code></pre>
+</section>
+&#8230;中略
+<p>リスト10-2の例では、done変数を宣言した後、done変数を使用するコードが実行されるまでに、done変数が変更される可能性がある。</p>
+&#8230;中略
+<p>もう1つの問題は、すべての初期化を1か所にまとめると、done変数は最後の方でしか使用されないにもかかわらず、すべての変数がルーチン全体で使用されるという印象を与えることだ。</p>
+&#8230;中略
+<p>これは、「関連する作業を1つにまとめる」という近接の法則の一例である。</p>
+</blockquote>
+
+<p>なるほどなるほど。しかし僕は普段の業務でプログラミング言語らしきものはJavaScriptしか使わないので、JavaScriptに置き換えて考えよう。</p>
+
+<pre><code>var accountIndex = 0,
+    total = 0,
+    done = false;
+// accountIndexを使用するコード
+...
+
+// totalを使用するコード
+...
+
+// doneを使用するコード
+while(!done) {
+    
+}
+...</code></pre>
+
+<p>これが本書で「悪い例」とされているコードをJavaScriptに置き換えたコードだ。しかし関数の先頭で <code>var hoge = 0, fuga = false;</code> のようにして変数をまとめて宣言（＆初期化）するのはJavaScriptではよく見られるコードだ。あの<a href="http://code.jquery.com/jquery-1.6.1.js">jQuery</a>ですらそのような記法を多用している。<br />
+<a href="http://www.amazon.co.jp/gp/product/4873113911/ref=as_li_tf_tl?ie=UTF8&#038;tag=likealunatic-22&#038;linkCode=as2&#038;camp=247&#038;creative=1211&#038;creativeASIN=4873113911">JavaScript: The Good Parts</a><img decoding="async" src="http://www.assoc-amazon.jp/e/ir?t=likealunatic-22&#038;l=as2&#038;o=9&#038;a=4873113911" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />によると</p>
+
+<blockquote>
+<p>ほとんどの言語では、変数は一般的に最初に利用される場所で定義するのが最も良い方法だ。しかしこれは、ブロックスコープを持たないJavaScriptでは好ましくない。すべての変数は、それぞれの関数の先頭で定義したほうが良い。</p>
+</blockquote>
+
+<p>とある。そう、JavaScriptはブロックスコープを持たない（{}でくくられた部分限定の変数スコープ）といういわゆる変態言語であり、変数のスコープを生成するのは関数ブロックのみだ。それが理由で、変数はまとめて関数の先頭で宣言するという記法がベストプラクティスとされている。</p>
+
+<p>さてしかし、Code Complete第2版による「変数は最初に使用する場所の近くで初期化する」ほうがよいという理屈の続きはこうだ。</p>
+
+<blockquote>
+<h4>10.4.1 変数の参照はまとめて</h4>
+<p>変数を参照してから次に参照するまでのコードは、「脆弱性の窓」（無防備な時間帯）である。その窓では、新しいコードが追加されたり、何気なく変数が変更されたり、変数に含まれていなければならない値が忘れられてしまったりする。変数の参照は、常に近いところにまとめて局所化するのが望ましい。</p>
+&#8230;中略
+<p>これを測定する方法は、変数の「<strong>持続間隔</strong>」を計算することである。</p>
+&#8230;中略
+<section>
+<h5>リスト10-6: 1と0の持続間隔（Java）</h5>
+<pre><code>a = 0;
+b = 0;
+c = 0;
+b = a + 1;
+b = b / c;</code></pre>
+</section>
+<p>この場合、bの1つ目の参照と2つ目の参照の間にコードが1行あるので、その持続間隔は1である。bの2つ目の参照と3つ目の参照の間にはコードがないので、<del>その持続間隔は1である。bの2つ目の参照と3つ目の参照の間にはコードがないので、</del>その持続間隔は0である。</p>
+&#8230;中略
+<p>リスト10-6では、bの<strong>平均持続間隔</strong>は (1 + 0) / 2 = 0.5 である。変数の参照を近くにまとめると、コードの読み手がコードをセクションごとに読んでいけるようになる。</p>
+&#8230;中略
+<br />
+<h4>10.4.2 変数の「寿命」はできるだけ短く</h4>
+<p>変数の持続間隔に関連して、変数の「<strong>寿命</strong>」という概念がある。変数の寿命とは、変数が存続する期間内に存在するステートメントの合計である。</p>
+&#8230;中略
+<p>変数の持続間隔とは異なり、変数の寿命は、最初に参照されてから最後に参照されるまでの変数の使用回数を計算に入れない。変数が最初に1行目で参照され、最後に25行目で参照された場合、変数の寿命は25（ステートメント）である。</p>
+&#8230;中略
+<p>変数の持続間隔と同様に、変数の寿命もできるだけ短くする、つまりステートメントの数を少なくすることが目標となる。持続間隔と同様に、ステートメントの数を少なくすると、脆弱性の窓が小さくなるという利点がある。</p>
+&#8230;中略
+<p>寿命を短くするもう1つの利点は、コードを正確に把握できることである。変数に10行目で値を代入し、45行目まで使用しない場合、2つの参照の間に空いている空間は、変数がその間に使用されていることを暗示する。</p>
+&#8230;中略
+<p>変数の寿命が短いと、コードが読みやすくなる。読み手が一度に頭に入れなければならないコードの行数が少なければ少ないほど、コードは理解しやすい。</p>
+</blockquote>
+
+<p>変数には「<strong>平均持続間隔</strong>」と「<strong>寿命</strong>」という概念があるという。そしてそれらが短くなった方がコードの読み手にとって読みやすいコードになるという。</p>
+
+<p>去年、僕がとある案件で数千行に及ぶJavaScriptを書いた際、最も頭を悩ませたのはコードを頭に入れることだった。機能を追加・修正するために一度に頭に入れなければならないコードが多すぎたため、開発が進めば進む程、コードの修正は困難を極めた。</p>
+
+<p>プログラミング初心者が誰しも一度はぶつかる壁なのかもしれない。コードの分割をはじめとする、コードの設計の重要性を肌で感じた瞬間だった。<br />
+だからこそ、上記の「読み手が一度に頭に入れなければならないコードの行数が少なければ&#8230;」というくだりに深く納得したのだった。</p>
+
+<p>さて、ではJavaScriptにおいて「<strong>変数の寿命を短くする</strong>」ことと「<strong>関数の先頭ですべての変数を宣言する</strong>」ことは両立するのだろうか？これについて隣席の<a href="http://twitter.com/keiskey">@keiskey</a>の意見はこうだった。</p>
+
+<blockquote>関数1つの長さ自体を短くしてしまうのがいいのでは。<a href="http://code.google.com/intl/ja/closure/library/">Google Closure Library</a>のコードを見ていると、中身が2行しかないメソッドに長々とした名前が付いていたりする。そんな長い名前を付けるんだったら直接コードを書いてしまえばいいやん、と思うけど、「変数の寿命」のポリシーをもって書かれていると考えると合点がいく。</blockquote>
+
+<p>なるほど&#8230;と再び納得するとともに、「この話、共有してよかった」と思った。</p>
+
+<p>例えば上述（リスト10-2）のコードを一つの関数だと考えるとこうなる。</p>
+
+<pre><code>function Account() {
+    var accountIndex = 0,
+        total = 0,
+        done = false;
+    // accountIndexを使用するコード
+    ...
+
+    // totalを使用するコード
+    ...
+
+    // doneを使用するコード
+    while(!done) {
+        
+    }
+    ...
+}</code></pre>
+
+<p>この関数をクラス風に書き直し、機能分割するとこういう感じになる。</p>
+
+<pre><code>function Account() {
+    // コンストラクタ
+    ...
+}
+Account.prototype = {
+    getAccountIndex: function() {
+        var accountIndex = 0;
+        // accountIndexを使用するコード
+        ...
+        return accountIndex;
+    },
+    getTotal: function() {
+        var total = 0;
+        // totalを使用するコード
+        ...
+        return total;
+    },
+    checkStatus: function() {
+        var done = false;
+        // doneを使用するコード
+        while(!done) {
+            ...
+        }
+    }
+}</code></pre>
+
+<p>prototypeにぶら下げたメソッド1つ1つを短くまとめて上手に機能分割することが、限りなく正解に近いのではないかと思った次第。</p>
+
+<p>僕はプログラマと呼ばれる職種ではないのだけれど、プログラミングに関わる人間として、こういった考察はとてもおもしろいと感じる。また何か同じような話があったら書いていきたい。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

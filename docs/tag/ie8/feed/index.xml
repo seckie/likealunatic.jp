@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>IE8 &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/ie8/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:18:24 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>IE8 &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>IE8の自動更新はまだ始まっていない・・・のか</title>
+		<link>/2009/05/30_ie8update</link>
+					<comments>/2009/05/30_ie8update#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Sat, 30 May 2009 03:04:07 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[IE8]]></category>
+		<category><![CDATA[Windows]]></category>
+		<guid isPermaLink="false">/wptest/2009/05/ie8%e3%81%ae%e8%87%aa%e5%8b%95%e6%9b%b4%e6%96%b0%e3%81%af%e3%81%be%e3%81%a0%e5%a7%8b%e3%81%be%e3%81%a3%e3%81%a6%e3%81%84%e3%81%aa%e3%81%84%e3%83%bb%e3%83%bb%e3%83%bb%e3%81%ae%e3%81%8b.php</guid>
+
+					<description><![CDATA[日本においては自動更新機能による Internet Explorer 8 の配信を延期しておりましたが、5 月 25 日週よりこれを開始する予定です。 Internet Explorer 8 の自動更新による配布について &#124; Microsoft TechNet と、Microsoft TechNetではアナウンスされていますが、同時に 日本では自動更新機能による IE8 の自動インストール通知の開始は未定となっております。 とも書いてあります。どっちなんでしょうね。 ちなみに、IE7のインストールされたWindowsXPで手動Windows Updateをかけると、IE8が「優先度の高い更新プログラム 」としてリストアップされることは確認しました。 事実上、自動更新も秒読みですね。IE8とIE7は見た目には大して変化がないので、IE7ユーザーにはすんなり受け入れられるのかもしれません。IE7に比べて動作がかなーり軽快になっているので、一般ユーザーでもその辺の改善は体感できるのではないでしょうか。 やばいなぁ・・・最近忙しさにかまけて情報収集を怠っていたんですよ。そろそろ本気で情報収集と対応をしないと。。]]></description>
+										<content:encoded><![CDATA[<blockquote class="http://technet.microsoft.com/ja-jp/updatemanagement/dd365125.aspx"><p>日本においては自動更新機能による Internet Explorer 8 の配信を延期しておりましたが、5 月 25 日週よりこれを開始する予定です。</p></blockquote>
+
+<p class="cite"><a href="http://technet.microsoft.com/ja-jp/updatemanagement/dd365125.aspx">Internet Explorer 8 の自動更新による配布について | Microsoft TechNet</a></p>
+
+<p>と、Microsoft TechNetではアナウンスされていますが、同時に</p>
+
+<blockquote class="http://technet.microsoft.com/ja-jp/updatemanagement/dd365125.aspx"><p>日本では自動更新機能による IE8 の自動インストール通知の開始は未定となっております。</p></blockquote>
+
+<p>とも書いてあります。どっちなんでしょうね。<br />
+ちなみに、IE7のインストールされたWindowsXPで手動Windows Updateをかけると、IE8が「優先度の高い更新プログラム 」としてリストアップされることは確認しました。</p>
+
+<p><span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img fetchpriority="high" decoding="async" alt="手動更新ではIE8がリストアップされる" src="/images/2009/05/30_winxpautoupdate.jpg" width="480" height="360" class="mt-image-none" style="" /></span></p>
+
+<p>事実上、自動更新も秒読みですね。IE8とIE7は見た目には大して変化がないので、IE7ユーザーにはすんなり受け入れられるのかもしれません。IE7に比べて動作がかなーり軽快になっているので、一般ユーザーでもその辺の改善は体感できるのではないでしょうか。</p>
+
+<p>やばいなぁ・・・最近忙しさにかまけて情報収集を怠っていたんですよ。そろそろ本気で情報収集と対応をしないと。。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2009/05/30_ie8update/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

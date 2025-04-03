@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>osc &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/osc/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:13:52 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>osc &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Mac OS / iPhone TouchOSC 間でアドホック通信するためのメモ</title>
+		<link>/2014/03/touchosc-adhoc</link>
+		
+		<dc:creator><![CDATA[Naoki Sekiguchi]]></dc:creator>
+		<pubDate>Mon, 31 Mar 2014 05:46:16 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[network]]></category>
+		<category><![CDATA[osc]]></category>
+		<guid isPermaLink="false">/?p=1057</guid>
+
+					<description><![CDATA[MacOS 設定 共有＞インターネット共有 共有する接続経路: (ウチの環境だと) Display Ethernet 相手のコンピュータが使用するポート: Wi-Fi Wi-Fiオプション: ネットワーク名、パスワードは適当に ネットワーク＞Wi-Fi ネットワークを作成 先述のWi-Fiオプションで設定したものと同じものを設定 自己割当IP が出るのでメモっておく iPhone 設定 設定＞Wi-Fi＞デバイス さっきのネットワークがあるので接続 TouchOSC＞Settings MacOS側の自己割当IP、ポート番号を入力]]></description>
+										<content:encoded><![CDATA[<h2>MacOS 設定</h2>
+
+<h3>共有＞インターネット共有</h3>
+
+<ul>
+<li>共有する接続経路: (ウチの環境だと) Display Ethernet</li>
+<li>相手のコンピュータが使用するポート: Wi-Fi</li>
+<li>Wi-Fiオプション: ネットワーク名、パスワードは適当に</li>
+</ul>
+
+<h3>ネットワーク＞Wi-Fi</h3>
+
+<ul>
+<li>ネットワークを作成</li>
+<li>先述のWi-Fiオプションで設定したものと同じものを設定</li>
+<li>自己割当IP が出るのでメモっておく</li>
+</ul>
+
+<h2>iPhone 設定</h2>
+
+<h3>設定＞Wi-Fi＞デバイス</h3>
+
+<ul>
+<li>さっきのネットワークがあるので接続</li>
+</ul>
+
+<h3>TouchOSC＞Settings</h3>
+
+<ul>
+<li>MacOS側の自己割当IP、ポート番号を入力</li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

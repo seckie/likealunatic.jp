@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>DOM &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/dom/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:39 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>DOM &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>IEのDOMで特徴的だと思ったこと３点</title>
+		<link>/2007/12/11_iedom</link>
+					<comments>/2007/12/11_iedom#comments</comments>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 11 Dec 2007 13:06:04 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[DOM]]></category>
+		<category><![CDATA[IE]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<guid isPermaLink="false">/wptest/2007/12/ie%e3%81%aedom%e3%81%a7%e7%89%b9%e5%be%b4%e7%9a%84%e3%81%a0%e3%81%a8%e6%80%9d%e3%81%a3%e3%81%9f%e3%81%93%e3%81%a8%ef%bc%93%e7%82%b9.php</guid>
+
+					<description><![CDATA[responseXMLされたテキストノードをappendChildしようとするとエラーになる。
+table要素をcreateElementする際、子要素にtbodyを作らないとダメ。
+要素ノードリストのアイテムにインデックス番号を振る際、変数に格納した数値を入れるとエラーになることがある。 <a href="/2007/12/11_iedom">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>最近、職場で勉強がてらJavaScriptでプログラムを書いています。会社の案件では少しjQueryを触ったりしたのですが、こちらではライブラリは極力使わない方針で。<br />
+そんな中、いくつか気づいたことを書き留めておきます。今回は<abbr title="Internet Explorer">IE</abbr>の挙動で、特徴的だと思った点を３点。</p>
+
+<div class="section">
+<h3>responseXMLされたテキストノードをappendChildしようとするとエラーになる</h3>
+<p>Ajax通信したものをresponseXMLで受け取り、そこからテキストノードを抜き出して、createElementしたコンテナ要素にappendChildしようとすると、IEでは何故かエラーになりました。</p>
+<p style="margin-bottom:0">回避方法：</p>
+<pre><code>// hogeが該当のテキストノード
+var fuga = document.createTextNode(hoge.nodeValue)
+container.appendChild(fuga)</code></pre>
+<p>周りくどいですが、<strong>テキストノードのnodeValue（テキストそのもの）を取り出して改めてcreateTextNodeします</strong>。これだけで解決。</p>
+</div>
+
+<div class="section">
+<h3>table要素をcreateElementする際、子要素にtbodyを作らないとダメ</h3>
+<p>FirefoxとかOperaは、こっちがわざわざ作らなくても仮想的にtbodyを作ってDOMツリーを構成してくれます。だけどIEの場合はtbodyもこっちが作らないとダメ。作らなかった場合は不完全な要素ノードとなるため、appendChildとかしても何も表示されません。</p>
+<p>そんな情報を検索している時に発見した、珍しいメソッドが<code>tBodies[]</code>。</p>
+<div class="section ref">
+<p><strong>tBodies[]</strong><br />
+table要素ノードのメソッド。tbody要素をノードリストで返す。<br />
+<code>tableElement.tBodies[0]</code>みたいにして使います。まぁ、<code>tableElement.getElementsByTagName(&quot;tbody&quot;)[0]</code>と書いても同じなわけですけど・・・。</p>
+<p>参考：<a href="http://msdn2.microsoft.com/en-us/library/ms537490.aspx">tBodies Collection (TABLE) &#8211; MSDN</a></p>
+</div>
+</div>
+
+<div class="section">
+<h3>要素ノードリストのアイテムにインデックス番号を振る際、
+変数に格納した数値を入れるとエラーになることがある</h3>
+<p>解決方法：<br />
+<strong>とりあえずitem()メソッドで書けばOK</strong></p>
+<p>他のコードでも書いてみましたが、エラーが再現できず・・・どういう条件が重なると引き起こるのかよく分かりません。</p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/2007/12/11_iedom/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

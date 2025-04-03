@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Twitter &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/twitter/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:18:24 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Twitter &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>「この記事にTwitterでコメント」ボタンを設置してみた</title>
+		<link>/2009/06/09_twitterbutton</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Tue, 09 Jun 2009 11:48:51 +0000</pubDate>
+				<category><![CDATA[What's New?]]></category>
+		<category><![CDATA[About]]></category>
+		<category><![CDATA[Twitter]]></category>
+		<guid isPermaLink="false">/wptest/2009/06/%e3%80%8c%e3%81%93%e3%81%ae%e8%a8%98%e4%ba%8b%e3%81%abtwitter%e3%81%a7%e3%82%b3%e3%83%a1%e3%83%b3%e3%83%88%e3%80%8d%e3%83%9c%e3%82%bf%e3%83%b3%e3%82%92%e8%a8%ad%e7%bd%ae%e3%81%97%e3%81%a6%e3%81%bf.php</guid>
+
+					<description><![CDATA[「この記事にTwitterでコメント」ボタンをつけたよ &#8211; 頭ん中 上記の記事で紹介されているTwitterボタンが気になったので、設置してみました。ただの外部リンクなので、ページが重くならないのが良いですね。]]></description>
+										<content:encoded><![CDATA[<p><a href="http://www.msng.info/archives/2009/04/comment_on_this_entry_on_twitter.php">「この記事にTwitterでコメント」ボタンをつけたよ &#8211; 頭ん中</a><br />
+上記の記事で紹介されているTwitterボタンが気になったので、設置してみました。ただの外部リンクなので、ページが重くならないのが良いですね。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

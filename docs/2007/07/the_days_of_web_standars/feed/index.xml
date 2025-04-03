@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: Web標準の日々に参加しました	</title>
+	<atom:link href="/2007/07/the_days_of_web_standars/feed" rel="self" type="application/rss+xml" />
+	<link>/2007/07/the_days_of_web_standars</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:40 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: ProjectDD Blog		</title>
+		<link>/2007/07/the_days_of_web_standars/comment-page-1#comment-20</link>
+
+		<dc:creator><![CDATA[ProjectDD Blog]]></dc:creator>
+		<pubDate>Fri, 20 Jul 2007 14:51:31 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2007/07/web%e6%a8%99%e6%ba%96%e3%81%ae%e6%97%a5%e3%80%85%e3%81%ab%e5%8f%82%e5%8a%a0%e3%81%97%e3%81%be%e3%81%97%e3%81%9f.php#comment-20</guid>
+
+					<description><![CDATA[&lt;p&gt;&lt;strong&gt;Web標準の日々、終了！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Web標準の日々、２日間お疲れ様でした！・・・てゆーか正直疲れました。 明日から...&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p><strong>Web標準の日々、終了！</strong></p>
+
+<p>Web標準の日々、２日間お疲れ様でした！・・・てゆーか正直疲れました。 明日から&#8230;</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

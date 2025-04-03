@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ToDo &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/todo/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:18:24 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>ToDo &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>サイボウズのToDoリスト</title>
+		<link>/2008/12/11_todolist</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Thu, 11 Dec 2008 06:48:09 +0000</pubDate>
+				<category><![CDATA[LifeHack]]></category>
+		<category><![CDATA[ToDo]]></category>
+		<category><![CDATA[Tool]]></category>
+		<guid isPermaLink="false">/wptest/2008/12/%e3%82%b5%e3%82%a4%e3%83%9c%e3%82%a6%e3%82%ba%e3%81%aetodo%e3%83%aa%e3%82%b9%e3%83%88.php</guid>
+
+					<description><![CDATA[サイボウズのToDo管理ツールが使い勝手がいい件 <a href="/2008/12/11_todolist">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>ToDo管理に使うツールって本当に様々なものがありますし、より良いものがあればそれを使いたいと常に思っているのではありますが・・・。<br />
+結局、職場でToDo管理に使っているのは、サイボウズのToDoリスト機能。仕事の都合上、Firefoxのタブにサイボウズは常に開いているし、シンプルで軽いので、今のところこれで十分だと思っています。</p>
+
+<p>
+<span class="mt-enclosure mt-enclosure-image" style="display: inline;"><img fetchpriority="high" decoding="async" alt="サイボウズのToDoリストのスクリーンショット" src="/images/2008/12/11_todolist.gif" width="359" height="314" class="mt-image-none" style="" /></span><br />
+<span class="caption">なんかモザイクばっかりですいません＞＜</span>
+</p>
+
+<p>ちなみにプライベートでは、手帳、ケータイメール、Gmail、自室のホワイトボードなど、色々なものをToDo管理や、メモ用途に使っています。情報が分散していてあまり良くないと思っているのですが、それぞれのツールには利点と欠点があって、なかなか一本化するのは難しいとは思っています。。。何か素晴らしいツールはないものでしょうか。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

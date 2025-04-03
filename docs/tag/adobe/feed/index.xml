@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Adobe &#8211; Like@Lunatic</title>
+	<atom:link href="/tag/adobe/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:20:54 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/01/cropped-og-32x32.png</url>
+	<title>Adobe &#8211; Like@Lunatic</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Adobe Version Cue は使わないならオフっときましょう</title>
+		<link>/2007/04/25_versioncue</link>
+		
+		<dc:creator><![CDATA[seckie]]></dc:creator>
+		<pubDate>Wed, 25 Apr 2007 12:51:46 +0000</pubDate>
+				<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Adobe]]></category>
+		<guid isPermaLink="false">/wptest/2007/04/adobe-version-cue-%e3%81%af%e4%bd%bf%e3%82%8f%e3%81%aa%e3%81%84%e3%81%aa%e3%82%89%e3%82%aa%e3%83%95%e3%81%a3%e3%81%a8%e3%81%8d%e3%81%be%e3%81%97%e3%82%87%e3%81%86.php</guid>
+
+					<description><![CDATA[Adobe Version Cue について。使いこなしていない or 使う必要がないのであれば、迷わずオフにしてシステムメモリを節約することをお勧めします。 <a href="/2007/04/25_versioncue">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+										<content:encoded><![CDATA[<p>職場では Adobe <abbr title="Creative Suite">CS</abbr>2 を使っているわけですが、いつもタスクトレイに常駐しているこのアイコン、何だろうと思っていました。 </p>
+
+<p><img decoding="async" src="/img/2007/04/25_versioncue.gif" alt="タスクトレイに表示される Version Cue のアイコン" width="109" height="37" /></p>
+
+<p>しかも、タスクマネージャで見てみると、結構な量のメモリを使っていることがわかりました。73<acronym title="Mega">M</acronym>って・・・おいっ！</p>
+
+<p><img decoding="async" src="/img/2007/04/25_taskmanager.gif" alt="タスクマネージャでプロセスを見たところ" width="440" height="70" /></p>
+
+<p>「VersionCueCS2Tray.exe」っていう方は、タスクトレイに常駐表示させていると出現するプロセスです。これでも微量ながらメモリ使ってますね。</p>
+
+<p>一体これが何なのか <a href="http://support.adobe.co.jp/faq/faq/qadoc.sv?225254+002">Adobe のサイト</a>で調べてみました。<a href="http://support.adobe.co.jp/faq/faq/qadoc.sv?224890+002#_mapin4sr9dtn20grlckg110m1221c8449nk885fgggblh10l4220kg_">ほうほう、なるほどなるほど</a>・・・少なくとも今の私の環境では必要なさそう。迷わずオフに・・・と。</p>
+
+<p>この Version cue をもし使いこなしていない or 使う必要がないのであれば、迷わずオフにしてシステムメモリを節約することをお勧めします。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

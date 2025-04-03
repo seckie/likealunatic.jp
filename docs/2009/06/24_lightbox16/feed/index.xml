@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: LightBox系スクリプト 16選	</title>
+	<atom:link href="/2009/06/24_lightbox16/feed" rel="self" type="application/rss+xml" />
+	<link>/2009/06/24_lightbox16</link>
+	<description>Naoki Sekiguchi&#039;s personal Web site.</description>
+	<lastBuildDate>Wed, 01 Jan 2025 10:17:17 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.5</generator>
+	<item>
+		<title>
+		By: 【jQuery】 lightBox風のHTML表示 &#124; For Want Of A Better Word		</title>
+		<link>/2009/06/24_lightbox16/comment-page-1#comment-76465</link>
+
+		<dc:creator><![CDATA[【jQuery】 lightBox風のHTML表示 &#124; For Want Of A Better Word]]></dc:creator>
+		<pubDate>Thu, 12 Mar 2015 19:40:34 +0000</pubDate>
+		<guid isPermaLink="false">/wptest/2009/06/lightbox%e7%b3%bb%e3%82%b9%e3%82%af%e3%83%aa%e3%83%97%e3%83%88-16%e9%81%b8.php#comment-76465</guid>
+
+					<description><![CDATA[&lt;p&gt;[&#8230;] http://highslide.com/ /2009/06/24_lightbox16.php [&#8230;]&lt;/p&gt;
+]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] <a href="http://highslide.com/" rel="nofollow ugc">http://highslide.com/</a> <a href="/2009/06/24_lightbox16.php" rel="ugc">/2009/06/24_lightbox16.php</a> [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>
